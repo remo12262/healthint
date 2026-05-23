@@ -204,12 +204,19 @@ export default function App() {
     return () => cancelAnimationFrame(animRef.current)
   }, [nodes, edges, selected])
 
-  function getNodeAt(mx, my) {
+  function toCanvasCoords(cssX, cssY) {
+    const canvas = canvasRef.current
+    if (!canvas) return {x: cssX, y: cssY}
+    const r = canvas.getBoundingClientRect()
+    return {x: cssX * (canvas.width / r.width), y: cssY * (canvas.height / r.height)}
+  }
+
+  function getNodeAt(cssX, cssY) {
+    const {x, y} = toCanvasCoords(cssX, cssY)
     for (let i = nodes.length-1; i >= 0; i--) {
       const n = nodes[i]; const p = posRef.current[n.id]
       if (!p) continue
-      const dx = mx-p.x, dy = my-p.y
-      if (Math.sqrt(dx*dx+dy*dy) < 18) return n
+      if (Math.sqrt((x-p.x)**2+(y-p.y)**2) < 25) return n
     }
     return null
   }
@@ -227,27 +234,35 @@ export default function App() {
 
   function onMouseDown(e) {
     const r = e.currentTarget.getBoundingClientRect()
-    const mx = e.clientX-r.left, my = e.clientY-r.top
-    const n = getNodeAt(mx, my)
-    if (n) { draggingRef.current = n; const p = posRef.current[n.id]; dragOffRef.current = {x:mx-p.x,y:my-p.y} }
+    const cssX = e.clientX-r.left, cssY = e.clientY-r.top
+    const n = getNodeAt(cssX, cssY)
+    if (n) {
+      draggingRef.current = n
+      const {x, y} = toCanvasCoords(cssX, cssY)
+      const p = posRef.current[n.id]
+      dragOffRef.current = {x: x-p.x, y: y-p.y}
+    }
   }
   function onMouseMove(e) {
     const r = e.currentTarget.getBoundingClientRect()
-    const mx = e.clientX-r.left, my = e.clientY-r.top
+    const cssX = e.clientX-r.left, cssY = e.clientY-r.top
     if (draggingRef.current) {
+      const {x, y} = toCanvasCoords(cssX, cssY)
       const p = posRef.current[draggingRef.current.id]
-      p.x = mx-dragOffRef.current.x; p.y = my-dragOffRef.current.y
+      p.x = x-dragOffRef.current.x; p.y = y-dragOffRef.current.y
       velRef.current[draggingRef.current.id] = {vx:0,vy:0}
     } else {
-      hoveredRef.current = getNodeAt(mx, my)
+      hoveredRef.current = getNodeAt(cssX, cssY)
       e.currentTarget.style.cursor = hoveredRef.current ? "pointer" : "default"
     }
   }
   function onMouseUp(e) {
     const r = e.currentTarget.getBoundingClientRect()
-    const mx = e.clientX-r.left, my = e.clientY-r.top
-    const n = getNodeAt(mx, my)
-    if (!draggingRef.current || Math.abs(mx-(posRef.current[draggingRef.current.id]?.x+dragOffRef.current.x||0)) < 5) {
+    const cssX = e.clientX-r.left, cssY = e.clientY-r.top
+    const n = getNodeAt(cssX, cssY)
+    const {x, y} = toCanvasCoords(cssX, cssY)
+    const dragging = draggingRef.current
+    if (!dragging || Math.hypot(x-(posRef.current[dragging.id]?.x||0)-dragOffRef.current.x, y-(posRef.current[dragging.id]?.y||0)-dragOffRef.current.y) < 5) {
       selectNode(selected === n?.id ? null : n)
     }
     draggingRef.current = null
