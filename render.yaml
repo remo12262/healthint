@@ -10,10 +10,6 @@ services:
         sync: false
       - key: DB_PATH
         value: /data/healthint.db
-    disk:
-      name: healthint-data
-      mountPath: /data
-      sizeGB: 1
 
   - type: web
     name: healthint-frontend
