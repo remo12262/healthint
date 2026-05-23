@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: healthint-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install --upgrade pip && pip install --prefer-binary -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DB_PATH
+        value: /data/healthint.db
+    disk:
+      name: healthint-data
+      mountPath: /data
+      sizeGB: 1
+
+  - type: web
+    name: healthint-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false
