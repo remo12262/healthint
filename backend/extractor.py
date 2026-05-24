@@ -1,6 +1,7 @@
 import anthropic
 import json
 import os
+import re
 from typing import Dict, List
 
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
@@ -11,7 +12,7 @@ Il tuo compito è estrarre entità e relazioni da testi per costruire un knowled
 Tipi di entità:
 - HospitalNetwork: aziende ospedaliere, ASL, AO, IRCCS, policlinici
 - PharmaCompany: aziende farmaceutiche, produttori dispositivi medici
-- RegulatorAgency: AIFA, EMA, ISS, Ministero della Salute, AGENAS
+- RegulatorAgency: AIFA, EMA, ISS, Ministero della Salute, AGENAS, WHO, ECDC
 - RegionalAuthority: regioni, assessorati alla salute
 - ProcurementBody: centrali acquisto (CONSIP, INTERCENT-ER, SORESA, ESTAR)
 - ResearchInstitute: istituti di ricerca, università mediche
@@ -37,8 +38,8 @@ Per ogni relazione calcola un risk_score da 0 a 100:
 - 61-80: rischio alto
 - 81-100: rischio critico
 
-Rischio alto se coinvolge: conflitti di interesse, carenze farmaci, frodi appalti,
-infiltrazioni criminalità organizzata, anomalie nei DRG, mancato rispetto LEA.
+Rischio alto se coinvolge: focolai epidemici attivi, carenze farmaci, frodi appalti,
+conflitti di interesse, infiltrazioni criminalità organizzata, anomalie nei DRG, mancato rispetto LEA.
 
 Rispondi SOLO con JSON valido, nessun testo extra."""
 
@@ -56,7 +57,7 @@ Rispondi con questo JSON esatto:
       "type": "TipoEntità",
       "region": "Sicilia/Lombardia/EU/etc o null",
       "description": "breve descrizione",
-      "risk_score": 0-100
+      "risk_score": 0
     }}
   ],
   "relations": [
@@ -65,7 +66,7 @@ Rispondi con questo JSON esatto:
       "target": "id_entità_2",
       "type": "TIPO_RELAZIONE",
       "fact": "descrizione concisa della relazione",
-      "risk_score": 0-100,
+      "risk_score": 0,
       "date": "YYYY-MM o null"
     }}
   ]
@@ -75,16 +76,68 @@ Rispondi con questo JSON esatto:
 class EntityExtractor:
 
     def _make_slug(self, text: str) -> str:
-        import re
-        return re.sub(r'[^a-z0-9_]', '', text.lower().replace(' ', '_'))[:32]
+        return re.sub(r'[^a-z0-9_]', '', text.lower().replace(' ', '_').replace('-', '_'))[:32]
+
+    def process_recalls(self, recalls: List[Dict]) -> Dict:
+        """Convert OpenFDA enforcement recalls directly into graph entities (no Claude required).
+
+        One PharmaCompany node per unique recalling firm; edges to AIFA or EMA
+        based on distribution pattern. DB upsert keeps the max risk score, so
+        multiple recalls from the same firm collapse to a single high-risk node.
+        """
+        entities: Dict[str, Dict] = {}
+        relations: List[Dict] = []
+
+        for recall in recalls:
+            firm = recall.get("recalling_firm", "").strip()
+            if not firm or len(firm) < 3:
+                continue
+
+            risk_score = recall.get("risk_score", 40)
+            firm_slug = self._make_slug(firm)
+            product_type = recall.get("product_type", "drug")
+            product_label = "farmaceutica" if product_type == "drug" else "dispositivi medici"
+
+            if firm_slug not in entities:
+                entities[firm_slug] = {
+                    "id": firm_slug,
+                    "label": firm,
+                    "type": "PharmaCompany",
+                    "region": recall.get("country", "") or None,
+                    "description": (
+                        f"Azienda {product_label} con recall in Italia/UE. "
+                        f"Prodotto: {recall.get('product_description', '')[:120]}"
+                    ),
+                    "risk_score": 0,
+                }
+            entities[firm_slug]["risk_score"] = max(entities[firm_slug]["risk_score"], risk_score)
+
+            # Route to EMA for worldwide/European distribution, else AIFA
+            dist = recall.get("distribution_pattern", "").lower()
+            target = "ema" if any(kw in dist for kw in ("europe", "worldwide", "international")) else "aifa"
+
+            classification = recall.get("classification", "")
+            reason = recall.get("reason_for_recall", "")[:120]
+            recall_id = recall.get("id", "")
+
+            relations.append({
+                "source": firm_slug,
+                "target": target,
+                "type": "RISCHIO_PER",
+                "fact": f"[{classification}] {recall_id}: {reason}",
+                "risk_score": risk_score,
+                "date": recall.get("report_date", "")[:7] or None,
+            })
+
+        return {"entities": list(entities.values()), "relations": relations}
 
     async def extract(self, text: str, source_id: str = "") -> Dict:
-        """Extract entities and relations from text using Claude."""
+        """Extract entities and relations from text using Claude claude-sonnet-4-6."""
         if not text or len(text.strip()) < 50:
             return {"entities": [], "relations": []}
         try:
             message = client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-sonnet-4-6",
                 max_tokens=2000,
                 system=SYSTEM_PROMPT,
                 messages=[{
@@ -129,20 +182,16 @@ class EntityExtractor:
                 if eid not in all_entities:
                     all_entities[eid] = entity
                 else:
-                    existing = all_entities[eid]
-                    existing["risk_score"] = max(
-                        existing.get("risk_score", 0),
+                    all_entities[eid]["risk_score"] = max(
+                        all_entities[eid].get("risk_score", 0),
                         entity.get("risk_score", 0)
                     )
             all_relations.extend(result.get("relations", []))
 
-        return {
-            "entities": list(all_entities.values()),
-            "relations": all_relations,
-        }
+        return {"entities": list(all_entities.values()), "relations": all_relations}
 
     async def generate_alerts(self, entities: List[Dict], relations: List[Dict]) -> List[Dict]:
-        """Use Claude to generate predictive risk alerts from the health graph."""
+        """Use Claude claude-sonnet-4-6 to generate predictive risk alerts from the health graph."""
         if not entities:
             return []
 
@@ -153,7 +202,7 @@ class EntityExtractor:
 
         try:
             message = client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-sonnet-4-6",
                 max_tokens=1500,
                 messages=[{
                     "role": "user",

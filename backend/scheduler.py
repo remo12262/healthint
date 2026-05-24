@@ -1,7 +1,7 @@
 import asyncio
 from datetime import datetime
 
-REFRESH_INTERVAL = 6 * 60 * 60  # 6 hours in seconds
+REFRESH_INTERVAL = 24 * 60 * 60  # 24 hours, matching the data cache TTL
 
 
 class Scheduler:
@@ -15,20 +15,36 @@ class Scheduler:
     async def run_once(self):
         print(f"[scheduler] Starting data refresh at {datetime.utcnow().isoformat()}")
         try:
+            # 1. Fetch real data from OpenFDA and WHO (24h cached)
             data = await self.scraper.fetch_all()
-            print(f"[scheduler] Fetched: {len(data['news'])} news, {len(data['research'])} research, {len(data['procurement'])} procurement")
+            print(
+                f"[scheduler] Fetched: {len(data['drug_recalls'])} drug recalls, "
+                f"{len(data['device_recalls'])} device recalls, "
+                f"{len(data['who_outbreaks'])} WHO outbreaks"
+            )
 
-            if data["news"]:
-                result = await self.extractor.extract_batch(data["news"], text_field="summary")
+            # 2. Process drug recalls directly into graph (no Claude)
+            if data["drug_recalls"]:
+                result = self.extractor.process_recalls(data["drug_recalls"])
                 await self.db.upsert_entities(result["entities"])
                 await self.db.upsert_relations(result["relations"])
-                print(f"[scheduler] Extracted {len(result['entities'])} entities, {len(result['relations'])} relations from news")
+                print(f"[scheduler] Drug recalls: {len(result['entities'])} entities, {len(result['relations'])} relations")
 
-            if data["research"]:
-                result = await self.extractor.extract_batch(data["research"], text_field="summary")
+            # 3. Process medical device recalls directly into graph (no Claude)
+            if data["device_recalls"]:
+                result = self.extractor.process_recalls(data["device_recalls"])
                 await self.db.upsert_entities(result["entities"])
                 await self.db.upsert_relations(result["relations"])
+                print(f"[scheduler] Device recalls: {len(result['entities'])} entities, {len(result['relations'])} relations")
 
+            # 4. Claude analysis of WHO Disease Outbreak News for additional threat intel
+            if data["who_outbreaks"]:
+                result = await self.extractor.extract_batch(data["who_outbreaks"][:5], text_field="summary")
+                await self.db.upsert_entities(result["entities"])
+                await self.db.upsert_relations(result["relations"])
+                print(f"[scheduler] WHO Claude extraction: {len(result['entities'])} entities, {len(result['relations'])} relations")
+
+            # 5. Generate predictive alerts from the full graph
             nodes = await self.db.get_nodes()
             edges = await self.db.get_edges()
             alerts = await self.extractor.generate_alerts(nodes, edges)

@@ -68,6 +68,12 @@ async def get_stats():
     return await db.get_stats()
 
 
+@app.get("/api/cache-info")
+async def get_cache_info():
+    """Return cache status: when each data source was last fetched and entry counts."""
+    return scraper.get_cache_info()
+
+
 @app.get("/health")
 async def health():
     return {"status": "ok"}
