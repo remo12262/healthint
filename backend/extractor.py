@@ -140,12 +140,13 @@ class EntityExtractor:
                 model="claude-sonnet-4-6",
                 max_tokens=2000,
                 system=SYSTEM_PROMPT,
+                tools=[{"type": "web_search_20250305", "name": "web_search"}],
                 messages=[{
                     "role": "user",
                     "content": EXTRACT_PROMPT.format(text=text[:3000])
                 }]
             )
-            raw = message.content[0].text.strip()
+            raw = next((b.text for b in message.content if hasattr(b, "text")), "").strip()
             if raw.startswith("```"):
                 raw = raw.split("```")[1]
                 if raw.startswith("json"):
@@ -204,6 +205,7 @@ class EntityExtractor:
             message = client.messages.create(
                 model="claude-sonnet-4-6",
                 max_tokens=1500,
+                tools=[{"type": "web_search_20250305", "name": "web_search"}],
                 messages=[{
                     "role": "user",
                     "content": f"""Analizza questo knowledge graph del sistema sanitario e genera alert predittivi.
@@ -227,7 +229,7 @@ Genera 3-5 alert predittivi in formato JSON:
 Rispondi SOLO con JSON valido."""
                 }]
             )
-            raw = message.content[0].text.strip()
+            raw = next((b.text for b in message.content if hasattr(b, "text")), "").strip()
             if raw.startswith("```"):
                 raw = raw.split("```")[1]
                 if raw.startswith("json"):
