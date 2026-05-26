@@ -234,7 +234,19 @@ Rispondi SOLO con JSON valido."""
                 raw = raw.split("```")[1]
                 if raw.startswith("json"):
                     raw = raw[4:]
-            return json.loads(raw)
+            raw = raw.strip()
+            if not raw:
+                print("[extractor] generate_alerts: empty response from Claude")
+                return []
+            try:
+                result = json.loads(raw)
+                if not isinstance(result, list):
+                    print(f"[extractor] generate_alerts: expected list, got {type(result).__name__}")
+                    return []
+                return result
+            except json.JSONDecodeError as je:
+                print(f"[extractor] generate_alerts: JSON parse error: {je} — raw snippet: {raw[:300]}")
+                return []
         except Exception as e:
             print(f"[extractor] Alert generation error: {e}")
             return []
