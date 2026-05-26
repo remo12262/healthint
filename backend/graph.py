@@ -1,69 +1,19 @@
-import asyncpg
 import json
-import os
 from typing import List, Dict, Optional
 from datetime import datetime
 
-DATABASE_URL = os.environ.get("DATABASE_URL", "")
-
 
 class GraphDB:
-    pool: asyncpg.Pool = None
+    def __init__(self):
+        self.nodes: Dict[str, Dict] = {}
+        self.edges: Dict[str, Dict] = {}
+        self.alerts: Dict[str, Dict] = {}
 
     async def init(self):
-        self.pool = await asyncpg.create_pool(DATABASE_URL, min_size=1, max_size=5)
-        async with self.pool.acquire() as conn:
-            async with conn.transaction():
-                await conn.execute("""
-                    CREATE TABLE IF NOT EXISTS nodes (
-                        id TEXT PRIMARY KEY,
-                        label TEXT NOT NULL,
-                        type TEXT NOT NULL,
-                        domain TEXT DEFAULT 'health',
-                        region TEXT,
-                        description TEXT,
-                        risk_score INTEGER DEFAULT 0,
-                        created_at TEXT,
-                        updated_at TEXT
-                    )
-                """)
-                await conn.execute("""
-                    CREATE TABLE IF NOT EXISTS edges (
-                        id TEXT PRIMARY KEY,
-                        source TEXT NOT NULL,
-                        target TEXT NOT NULL,
-                        type TEXT NOT NULL,
-                        fact TEXT,
-                        risk_score INTEGER DEFAULT 0,
-                        source_doc TEXT,
-                        date TEXT,
-                        created_at TEXT
-                    )
-                """)
-                await conn.execute("""
-                    CREATE TABLE IF NOT EXISTS alerts (
-                        id TEXT PRIMARY KEY,
-                        title TEXT NOT NULL,
-                        description TEXT,
-                        severity TEXT DEFAULT 'MEDIUM',
-                        entities_involved TEXT,
-                        predicted_impact TEXT,
-                        timeframe TEXT,
-                        recommendation TEXT,
-                        created_at TEXT,
-                        is_read INTEGER DEFAULT 0
-                    )
-                """)
-                await conn.execute("CREATE INDEX IF NOT EXISTS idx_nodes_type ON nodes(type)")
-                await conn.execute("CREATE INDEX IF NOT EXISTS idx_edges_source ON edges(source)")
-                await conn.execute("CREATE INDEX IF NOT EXISTS idx_edges_target ON edges(target)")
-                await conn.execute("CREATE INDEX IF NOT EXISTS idx_alerts_severity ON alerts(severity)")
+        if not self.nodes:
+            self._seed_baseline()
 
-                count = await conn.fetchval("SELECT COUNT(*) FROM nodes")
-                if count == 0:
-                    await self._seed_baseline(conn)
-
-    async def _seed_baseline(self, conn):
+    def _seed_baseline(self):
         now = datetime.utcnow().isoformat()
         nodes = [
             ("aifa",        "AIFA",                   "RegulatorAgency",   "health", "IT",       "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.", 10),
@@ -97,134 +47,119 @@ class GraphDB:
             ("e12", "humanitas", "aifa",       "REGOLA",        "AIFA certifica i centri Humanitas per sperimentazioni cliniche.", 15, "2010-01"),
             ("e13", "gvm",       "regSicilia", "VINCE_APPALTO", "GVM ha strutture accreditate con SSR siciliano.", 35, "2020-01"),
         ]
-        await conn.executemany(
-            """INSERT INTO nodes
-                   (id,label,type,domain,region,description,risk_score,created_at,updated_at)
-               VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) ON CONFLICT DO NOTHING""",
-            [(n[0], n[1], n[2], n[3], n[4], n[5], n[6], now, now) for n in nodes]
-        )
-        await conn.executemany(
-            """INSERT INTO edges
-                   (id,source,target,type,fact,risk_score,source_doc,date,created_at)
-               VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) ON CONFLICT DO NOTHING""",
-            [(e[0], e[1], e[2], e[3], e[4], e[5], "", e[6], now) for e in edges]
-        )
+        for n in nodes:
+            self.nodes[n[0]] = {
+                "id": n[0], "label": n[1], "type": n[2], "domain": n[3],
+                "region": n[4], "description": n[5], "risk_score": n[6],
+                "created_at": now, "updated_at": now,
+            }
+        for e in edges:
+            self.edges[e[0]] = {
+                "id": e[0], "source": e[1], "target": e[2], "type": e[3],
+                "fact": e[4], "risk_score": e[5], "source_doc": "",
+                "date": e[6], "created_at": now,
+            }
 
     async def get_nodes(self, domain: Optional[str] = None) -> List[Dict]:
-        async with self.pool.acquire() as conn:
-            if domain:
-                rows = await conn.fetch(
-                    "SELECT * FROM nodes WHERE domain=$1 ORDER BY risk_score DESC", domain
-                )
-            else:
-                rows = await conn.fetch("SELECT * FROM nodes ORDER BY risk_score DESC")
-            return [dict(r) for r in rows]
+        nodes = list(self.nodes.values())
+        if domain:
+            nodes = [n for n in nodes if n.get("domain") == domain]
+        return sorted(nodes, key=lambda n: n.get("risk_score", 0), reverse=True)
 
     async def get_edges(self, domain: Optional[str] = None) -> List[Dict]:
-        async with self.pool.acquire() as conn:
-            if domain:
-                rows = await conn.fetch("""
-                    SELECT e.* FROM edges e
-                    JOIN nodes n ON e.source = n.id
-                    WHERE n.domain = $1
-                """, domain)
-            else:
-                rows = await conn.fetch("SELECT * FROM edges ORDER BY risk_score DESC")
-            return [dict(r) for r in rows]
+        edges = list(self.edges.values())
+        if domain:
+            edges = [e for e in edges if self.nodes.get(e["source"], {}).get("domain") == domain]
+        return sorted(edges, key=lambda e: e.get("risk_score", 0), reverse=True)
 
     async def get_node(self, node_id: str) -> Optional[Dict]:
-        async with self.pool.acquire() as conn:
-            row = await conn.fetchrow("SELECT * FROM nodes WHERE id=$1", node_id)
-            return dict(row) if row else None
+        return self.nodes.get(node_id)
 
     async def get_node_relations(self, node_id: str) -> List[Dict]:
-        async with self.pool.acquire() as conn:
-            rows = await conn.fetch("""
-                SELECT e.*,
-                    ns.label as source_label, ns.type as source_type,
-                    nt.label as target_label, nt.type as target_type
-                FROM edges e
-                JOIN nodes ns ON e.source = ns.id
-                JOIN nodes nt ON e.target = nt.id
-                WHERE e.source=$1 OR e.target=$1
-                ORDER BY e.risk_score DESC
-            """, node_id)
-            return [dict(r) for r in rows]
+        results = []
+        for e in self.edges.values():
+            if e["source"] == node_id or e["target"] == node_id:
+                src = self.nodes.get(e["source"], {})
+                tgt = self.nodes.get(e["target"], {})
+                results.append({
+                    **e,
+                    "source_label": src.get("label", ""),
+                    "source_type":  src.get("type", ""),
+                    "target_label": tgt.get("label", ""),
+                    "target_type":  tgt.get("type", ""),
+                })
+        return sorted(results, key=lambda e: e.get("risk_score", 0), reverse=True)
 
     async def get_alerts(self, severity: Optional[str] = None) -> List[Dict]:
-        async with self.pool.acquire() as conn:
-            if severity:
-                rows = await conn.fetch(
-                    "SELECT * FROM alerts WHERE severity=$1 ORDER BY created_at DESC", severity
-                )
-            else:
-                rows = await conn.fetch("SELECT * FROM alerts ORDER BY created_at DESC LIMIT 50")
-            return [dict(r) for r in rows]
+        alerts = list(self.alerts.values())
+        if severity:
+            alerts = [a for a in alerts if a.get("severity") == severity]
+        return sorted(alerts, key=lambda a: a.get("created_at", ""), reverse=True)[:50]
 
     async def get_risk_scores(self) -> List[Dict]:
-        async with self.pool.acquire() as conn:
-            rows = await conn.fetch("""
-                SELECT id, label, type, region, risk_score
-                FROM nodes ORDER BY risk_score DESC LIMIT 20
-            """)
-            return [dict(r) for r in rows]
+        nodes = sorted(self.nodes.values(), key=lambda n: n.get("risk_score", 0), reverse=True)
+        return [
+            {"id": n["id"], "label": n["label"], "type": n["type"],
+             "region": n.get("region"), "risk_score": n.get("risk_score", 0)}
+            for n in nodes[:20]
+        ]
 
     async def get_stats(self) -> Dict:
-        async with self.pool.acquire() as conn:
-            n  = await conn.fetchval("SELECT COUNT(*) FROM nodes")
-            e  = await conn.fetchval("SELECT COUNT(*) FROM edges")
-            a  = await conn.fetchval("SELECT COUNT(*) FROM alerts WHERE is_read=0")
-            cr = await conn.fetchval("SELECT COUNT(*) FROM nodes WHERE risk_score > 60")
-            return {"nodes": n, "edges": e, "unread_alerts": a, "critical_nodes": cr}
+        unread = sum(1 for a in self.alerts.values() if not a.get("is_read"))
+        critical = sum(1 for n in self.nodes.values() if n.get("risk_score", 0) > 60)
+        return {
+            "nodes": len(self.nodes),
+            "edges": len(self.edges),
+            "unread_alerts": unread,
+            "critical_nodes": critical,
+        }
 
     async def upsert_entities(self, entities: List[Dict]):
         now = datetime.utcnow().isoformat()
-        async with self.pool.acquire() as conn:
-            async with conn.transaction():
-                for e in entities:
-                    await conn.execute("""
-                        INSERT INTO nodes
-                            (id,label,type,domain,region,description,risk_score,created_at,updated_at)
-                        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
-                        ON CONFLICT(id) DO UPDATE SET
-                            risk_score = GREATEST(nodes.risk_score, EXCLUDED.risk_score),
-                            updated_at = EXCLUDED.updated_at
-                    """, e.get("id"), e.get("label"), e.get("type", "HospitalNetwork"),
-                         "health", e.get("region"), e.get("description"),
-                         e.get("risk_score", 0), now, now)
+        for e in entities:
+            eid = e.get("id")
+            if not eid:
+                continue
+            if eid in self.nodes:
+                self.nodes[eid]["risk_score"] = max(
+                    self.nodes[eid].get("risk_score", 0), e.get("risk_score", 0)
+                )
+                self.nodes[eid]["updated_at"] = now
+            else:
+                self.nodes[eid] = {
+                    "id": eid, "label": e.get("label", ""),
+                    "type": e.get("type", "HospitalNetwork"), "domain": "health",
+                    "region": e.get("region"), "description": e.get("description", ""),
+                    "risk_score": e.get("risk_score", 0),
+                    "created_at": now, "updated_at": now,
+                }
 
     async def upsert_relations(self, relations: List[Dict]):
         now = datetime.utcnow().isoformat()
-        async with self.pool.acquire() as conn:
-            async with conn.transaction():
-                for r in relations:
-                    rid = f"{r.get('source')}_{r.get('target')}_{r.get('type')}"
-                    await conn.execute("""
-                        INSERT INTO edges
-                            (id,source,target,type,fact,risk_score,source_doc,date,created_at)
-                        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
-                        ON CONFLICT(id) DO UPDATE SET
-                            risk_score = GREATEST(edges.risk_score, EXCLUDED.risk_score)
-                    """, rid, r.get("source"), r.get("target"), r.get("type", "COLLABORA_CON"),
-                         r.get("fact"), r.get("risk_score", 0),
-                         r.get("source_doc", ""), r.get("date"), now)
+        for r in relations:
+            rid = f"{r.get('source')}_{r.get('target')}_{r.get('type')}"
+            if rid in self.edges:
+                self.edges[rid]["risk_score"] = max(
+                    self.edges[rid].get("risk_score", 0), r.get("risk_score", 0)
+                )
+            else:
+                self.edges[rid] = {
+                    "id": rid, "source": r.get("source"), "target": r.get("target"),
+                    "type": r.get("type", "COLLABORA_CON"), "fact": r.get("fact"),
+                    "risk_score": r.get("risk_score", 0),
+                    "source_doc": r.get("source_doc", ""), "date": r.get("date"),
+                    "created_at": now,
+                }
 
     async def upsert_alerts(self, alerts: List[Dict]):
         now = datetime.utcnow().isoformat()
-        async with self.pool.acquire() as conn:
-            async with conn.transaction():
-                for a in alerts:
-                    await conn.execute("""
-                        INSERT INTO alerts
-                            (id,title,description,severity,entities_involved,predicted_impact,
-                             timeframe,recommendation,created_at)
-                        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)
-                        ON CONFLICT(id) DO UPDATE SET
-                            description = EXCLUDED.description,
-                            severity    = EXCLUDED.severity,
-                            created_at  = EXCLUDED.created_at
-                    """, a.get("id", f"alert_{now}"), a.get("title"), a.get("description"),
-                         a.get("severity", "MEDIUM"),
-                         json.dumps(a.get("entities_involved", [])),
-                         a.get("predicted_impact"), a.get("timeframe"),
-                         a.get("recommendation"), now)
+        for a in alerts:
+            aid = a.get("id", f"alert_{now}")
+            self.alerts[aid] = {
+                "id": aid, "title": a.get("title"), "description": a.get("description"),
+                "severity": a.get("severity", "MEDIUM"),
+                "entities_involved": json.dumps(a.get("entities_involved", [])),
+                "predicted_impact": a.get("predicted_impact"),
+                "timeframe": a.get("timeframe"), "recommendation": a.get("recommendation"),
+                "created_at": now, "is_read": False,
+            }
