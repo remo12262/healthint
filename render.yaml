@@ -8,8 +8,6 @@ services:
     envVars:
       - key: ANTHROPIC_API_KEY
         sync: false
-      - key: DATABASE_URL
-        sync: false
 
   - type: web
     name: healthint-frontend
