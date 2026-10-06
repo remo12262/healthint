@@ -1,21 +1,30 @@
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Depends, Header
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 from typing import Optional
-import asyncio
+import hmac
+import os
 from datetime import datetime
 
 from scraper import DataScraper
 from extractor import EntityExtractor
 from graph import GraphDB
 from scheduler import Scheduler
+from limits import rate_limit, ai_usage
 
 app = FastAPI(title="HEALTHINT API", version="1.0.0")
 
+ALLOWED_ORIGINS = [
+    "https://healthint-frontend.onrender.com",
+    "https://healthint.healthhorizon.it",
+    "https://healthhorizon.it",
+    "https://www.healthhorizon.it",
+    "http://localhost:5173",
+] + [o.strip() for o in os.environ.get("CORS_ORIGINS", "").split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
+    allow_origins=ALLOWED_ORIGINS,
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -27,8 +36,8 @@ scheduler = Scheduler(scraper, extractor, db)
 
 @app.on_event("startup")
 async def startup():
+    # Solo caricamento dati (seed.json): nessuna chiamata a Claude all'avvio
     await db.init()
-    asyncio.create_task(scheduler.run())
 
 
 @app.get("/api/graph")
@@ -57,10 +66,26 @@ async def get_risk_scores():
     return await db.get_risk_scores()
 
 
-@app.post("/api/refresh")
-async def trigger_refresh(background_tasks: BackgroundTasks):
+@app.post("/api/refresh", dependencies=[Depends(rate_limit)])
+async def trigger_refresh(
+    background_tasks: BackgroundTasks,
+    x_refresh_key: Optional[str] = Header(default=None),
+):
+    expected = os.environ.get("REFRESH_KEY", "")
+    if not expected:
+        raise HTTPException(403, "Aggiornamento disattivato: REFRESH_KEY non configurata sul server.")
+    if not x_refresh_key or not hmac.compare_digest(x_refresh_key, expected):
+        raise HTTPException(401, "Chiave di aggiornamento non valida.")
+    if scheduler.running:
+        return {"status": "refresh già in corso", "timestamp": datetime.utcnow().isoformat()}
     background_tasks.add_task(scheduler.run_once)
     return {"status": "refresh started", "timestamp": datetime.utcnow().isoformat()}
+
+
+@app.get("/api/export")
+async def export_data():
+    """Dati attuali nello stesso formato di data/seed.json."""
+    return db.export()
 
 
 @app.get("/api/stats")
@@ -76,4 +101,4 @@ async def get_cache_info():
 
 @app.get("/health")
 async def health():
-    return {"status": "ok"}
+    return {"status": "ok", "ai_calls_today": ai_usage()}

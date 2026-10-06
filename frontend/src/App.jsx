@@ -268,10 +268,6 @@ export default function App() {
     draggingRef.current = null
   }
 
-  async function triggerRefresh() {
-    await fetch(`${API}/api/refresh`, {method:"POST"})
-    setTimeout(fetchData, 3000)
-  }
 
   const W = 680, H = 500
 
@@ -292,7 +288,7 @@ export default function App() {
         <div style={{marginLeft:"auto",display:"flex",gap:12,alignItems:"center"}}>
           {stats.unread_alerts > 0 && <span style={{background:"#E24B4A",color:"#fff",borderRadius:10,padding:"2px 8px",fontSize:11}}>{stats.unread_alerts} alert</span>}
           <span style={{fontSize:12,color:"var(--color-text-tertiary)"}}>{stats.nodes} nodi · {stats.edges} relazioni</span>
-          <button onClick={triggerRefresh} style={{fontSize:12,padding:"4px 12px",borderRadius:6,border:"0.5px solid var(--color-border-secondary)",background:"var(--color-background-secondary)",cursor:"pointer",color:"var(--color-text-secondary)"}}>↻ Aggiorna</button>
+          {stats.updated_at && <span style={{fontSize:12,color:"var(--color-text-tertiary)"}}>Aggiornato al {new Date(stats.updated_at + (stats.updated_at.endsWith("Z") ? "" : "Z")).toLocaleDateString("it-IT", {day:"2-digit", month:"long", year:"numeric"})}</span>}
         </div>
       </div>
 
@@ -354,7 +350,7 @@ export default function App() {
       {!loading && tab === "alerts" && (
         <div style={{padding:20,maxWidth:800}}>
           <h2 style={{fontSize:15,fontWeight:500,marginBottom:16}}>Alert predittivi SSN ({alerts.length})</h2>
-          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Nessun alert. Clicca Aggiorna per generare nuovi alert.</p>}
+          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Nessun alert disponibile al momento.</p>}
           {alerts.map((a,i) => (
             <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${SEVERITY_COLOR[a.severity]||"#888"}`,borderRadius:8,padding:"12px 16px",marginBottom:12}}>
               <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>

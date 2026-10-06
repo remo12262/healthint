@@ -1,6 +1,10 @@
 import json
+import os
 from typing import List, Dict, Optional
 from datetime import datetime
+
+SEED_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "seed.json")
+SEED_VERSION = 1
 
 
 class GraphDB:
@@ -8,10 +12,43 @@ class GraphDB:
         self.nodes: Dict[str, Dict] = {}
         self.edges: Dict[str, Dict] = {}
         self.alerts: Dict[str, Dict] = {}
+        self.updated_at: Optional[str] = None
 
     async def init(self):
         if not self.nodes:
-            self._seed_baseline()
+            if not self._load_seed():
+                self._seed_baseline()
+
+    def _load_seed(self) -> bool:
+        """Carica l'istantanea data/seed.json. False se manca o non è valida."""
+        try:
+            with open(SEED_FILE, encoding="utf-8") as f:
+                seed = json.load(f)
+            nodes, edges = seed.get("nodes", []), seed.get("edges", [])
+            if not nodes:
+                return False
+            self.nodes = {n["id"]: n for n in nodes}
+            self.edges = {e["id"]: e for e in edges}
+            self.alerts = {a["id"]: a for a in seed.get("alerts", [])}
+            self.updated_at = seed.get("data_updated_at") or seed.get("exported_at")
+            print(f"[graph] Seed caricato: {len(self.nodes)} nodi, {len(self.edges)} relazioni, {len(self.alerts)} alert")
+            return True
+        except FileNotFoundError:
+            print(f"[graph] Seed non trovato ({SEED_FILE}): uso la baseline")
+        except Exception as e:
+            print(f"[graph] Seed non valido: {e}: uso la baseline")
+        return False
+
+    def export(self) -> Dict:
+        """Istantanea completa nello stesso formato di data/seed.json."""
+        return {
+            "version": SEED_VERSION,
+            "exported_at": datetime.utcnow().isoformat(),
+            "data_updated_at": self.updated_at,
+            "nodes": list(self.nodes.values()),
+            "edges": list(self.edges.values()),
+            "alerts": list(self.alerts.values()),
+        }
 
     def _seed_baseline(self):
         now = datetime.utcnow().isoformat()
@@ -112,6 +149,7 @@ class GraphDB:
             "edges": len(self.edges),
             "unread_alerts": unread,
             "critical_nodes": critical,
+            "updated_at": self.updated_at,
         }
 
     async def upsert_entities(self, entities: List[Dict]):

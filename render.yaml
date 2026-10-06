@@ -8,6 +8,12 @@ services:
     envVars:
       - key: ANTHROPIC_API_KEY
         sync: false
+      - key: REFRESH_KEY
+        sync: false
+      - key: MAX_DAILY_AI_CALLS
+        value: "100"
+      - key: RATE_LIMIT_PER_HOUR
+        value: "10"
 
   - type: web
     name: healthint-frontend

@@ -1,18 +1,29 @@
 import asyncio
 from datetime import datetime
 
-REFRESH_INTERVAL = 24 * 60 * 60  # 24 hours, matching the data cache TTL
-
 
 class Scheduler:
+    """Aggiornamento dati su richiesta (solo via POST /api/refresh, mai automatico)."""
 
     def __init__(self, scraper, extractor, db):
         self.scraper = scraper
         self.extractor = extractor
         self.db = db
         self.last_run = None
+        self.lock = asyncio.Lock()
+
+    @property
+    def running(self) -> bool:
+        return self.lock.locked()
 
     async def run_once(self):
+        if self.lock.locked():
+            print("[scheduler] Refresh già in corso: richiesta ignorata")
+            return
+        async with self.lock:
+            await self._refresh()
+
+    async def _refresh(self):
         print(f"[scheduler] Starting data refresh at {datetime.utcnow().isoformat()}")
         try:
             # 1. Fetch real data from OpenFDA and WHO (24h cached)
@@ -53,12 +64,8 @@ class Scheduler:
                 print(f"[scheduler] Generated {len(alerts)} alerts")
 
             self.last_run = datetime.utcnow().isoformat()
+            self.db.updated_at = self.last_run
             print(f"[scheduler] Refresh complete at {self.last_run}")
 
         except Exception as e:
             print(f"[scheduler] Error during refresh: {e}")
-
-    async def run(self):
-        """Runs once at startup. Use POST /api/refresh to trigger manually."""
-        await self.run_once()
-        # await asyncio.sleep(REFRESH_INTERVAL)  # disabled: manual-only via POST /api/refresh

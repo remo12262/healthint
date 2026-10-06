@@ -4,6 +4,8 @@ import os
 import re
 from typing import Dict, List
 
+from limits import try_consume_ai_call
+
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 SYSTEM_PROMPT = """Sei un sistema di intelligence per il sistema sanitario italiano ed europeo.
@@ -135,6 +137,8 @@ class EntityExtractor:
         """Extract entities and relations from text using Claude claude-sonnet-4-6."""
         if not text or len(text.strip()) < 50:
             return {"entities": [], "relations": []}
+        if not try_consume_ai_call():
+            return {"entities": [], "relations": []}
         try:
             message = client.messages.create(
                 model="claude-haiku-4-5-20251001",
@@ -201,6 +205,8 @@ class EntityExtractor:
     async def generate_alerts(self, entities: List[Dict], relations: List[Dict]) -> List[Dict]:
         """Use Claude claude-sonnet-4-6 to generate predictive risk alerts from the health graph."""
         if not entities:
+            return []
+        if not try_consume_ai_call():
             return []
 
         graph_summary = json.dumps({
