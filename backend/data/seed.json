@@ -1,19 +1,200 @@
 {
  "version": 1,
- "exported_at": "2026-10-08T18:51:30.395767",
- "data_updated_at": "2026-10-08T18:50:59.637088",
+ "exported_at": "2026-10-08T19:33:32.530410",
+ "data_updated_at": "2026-10-08T19:32:01.651024",
  "refresh_info": {
-  "last_success": "2026-10-08T18:50:59.637088",
+  "last_success": "2026-10-08T19:32:01.651024",
+  "contributed": [
+   "openfda_drug",
+   "openfda_device"
+  ],
+  "new": {
+   "nodes": 0,
+   "edges": 80,
+   "alerts": 0
+  },
+  "latest_at_source": {
+   "openfda_drug": "2025-03-26",
+   "openfda_device": "2026-09-30",
+   "who_outbreaks": "2026-10-08"
+  },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20
   },
   "source_errors": {
-   "who_analysis": "analisi AI delle notizie OMS non riuscita: errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqGnizAq6HfAcgrGjVnk'}"
+   "who_analysis": "analisi AI delle notizie OMS non riuscita: errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqKvBxCUWkTTAr9LtWoW'}"
   },
-  "alerts_error": "errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqGnkiqrXBDKviDvyBwz'}",
-  "alerts_attempt": "2026-10-08T18:50:59.637088"
+  "alerts_error": "errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqKvErKbdWP1MUfNGu35'}",
+  "alerts_attempt": "2026-10-08T19:32:01.651024"
+ },
+ "signals": {
+  "generated_at": "2026-10-08T19:32:01.494613",
+  "who": [
+   {
+    "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+    "date": "2026-10-08",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619"
+   },
+   {
+    "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+    "date": "2026-09-25",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON618"
+   },
+   {
+    "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+    "date": "2026-09-10",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON617"
+   },
+   {
+    "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+    "date": "2026-08-28",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON616"
+   },
+   {
+    "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+    "date": "2026-08-14",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON615"
+   },
+   {
+    "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+    "date": "2026-08-01",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614"
+   },
+   {
+    "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+    "date": "2026-07-17",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON613"
+   },
+   {
+    "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+    "date": "2026-07-03",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON612"
+   }
+  ],
+  "recalls": [
+   {
+    "recall": "Z-3233-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "Achieva 3.0T;  Model Numbers (REF): 1. 781177, 2. 781277, 3. 781278, 4. 781344, 5. 781345;",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3233-2026%22"
+   },
+   {
+    "recall": "Z-3251-2026",
+    "class": "Class II",
+    "firm": "Abiomed, Inc.",
+    "product": "Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella Controller, Packaged, CA; Product Code: 0",
+    "reason": "Retrospective report of issues remedied in 2019 with firmware and software patches: 1. Defects in optical bench (OPB) firmware V2.19, which affected the accuracy and stability of the pressure  signal ",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3251-2026%22"
+   },
+   {
+    "recall": "Z-3239-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "Ingenia Elition S and Ingenia Elition X;  Model Numbers (REF): 1. 781357(S), 2. 782106(S), 3. 782137(S), 4. 781358(X), 5. 782107(X), 6. 782119(X), 7. 782136(X),",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3239-2026%22"
+   },
+   {
+    "recall": "Z-3242-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "MR 7700 and Upgrade to MR 7700;  Model Number (REF): 1. 782120, 2. 782153, 3. 782130 (Upgrade);",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3242-2026%22"
+   },
+   {
+    "recall": "Z-3241-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "MR 5300  Model Number (REF): 1. 782110, 2. 782152;",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3241-2026%22"
+   },
+   {
+    "recall": "Z-3258-2026",
+    "class": "Class II",
+    "firm": "INTERVASCULAR, SAS",
+    "product": "Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWROOT0030, 5. HEWROOT0032, 6. HEWROOT0034;",
+    "reason": "Product failed to meet the specified acceptance criteria for Integral Water Permeability (IWP).",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3258-2026%22"
+   },
+   {
+    "recall": "Z-3236-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "Ingenia 1.5T, Ingenia 1.5T CX and Ingenia 1.5T S;  Model Numbers (REF): 1. 781315(1.5T), 2. 781341(1.5T), 3. 781396(1.5T), 4. 782101(1.5T), 5. 782115(1.5T), 6. ",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3236-2026%22"
+   },
+   {
+    "recall": "Z-3215-2026",
+    "class": "Class II",
+    "firm": "Heidelberg Engineering GmbH",
+    "product": "Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, S2000, S1610    multimodal imaging platf",
+    "reason": "Wheels may come loose when module is being pushed or pulled during movement or transportation, affecting stability of the stand. The stand may tip over as a result. Falling stand may cause impact or c",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3215-2026%22"
+   },
+   {
+    "recall": "Z-3234-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "Achieva XR;  Model Numbers (REF): 1. 781153, 2. 781253;",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3234-2026%22"
+   },
+   {
+    "recall": "Z-3214-2026",
+    "class": "Class I",
+    "firm": "Boston Scientific Corporation",
+    "product": "Imager II Angiographic Catheters    M001314001  IMAGER II/5/ST/65/038 BX5;    M001314011  IMAGER II/5/ST/100/038 BX5;    M001314021  IMAGER II/5/ST/65/035 BX 5;",
+    "reason": "Tip may fracture or detach, leading to device fragments remaining within the patient or migrating through the vasculature. Patient impact may include prolonged procedure or life-threatening embolism.",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3214-2026%22"
+   },
+   {
+    "recall": "Z-3235-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "Evolution upgrade 1.5T and Evolution upgrade 3.0T;  Model Numbers (REF): 1. 782116 (1.5T), 2. 782148 (1.5T), 3. 782117 (3.0T), 4. 782143 (3.0T);",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3235-2026%22"
+   },
+   {
+    "recall": "Z-3238-2026",
+    "class": "Class II",
+    "firm": "Philips North America Llc",
+    "product": "Ingenia 3.0T and Ingenia 3.0T CX;  Model Numbers (REF): 1. 781342(3.0T), 2. 781377(3.0T), 3. 782103(3.0T), 4. 781271(3.0T CX), 5. 782105(3.0T CX);",
+    "reason": "A software issue will terminate an examination during the image reconstruction process if the scan parameters are manually adjusted such that reconstruction requirements exceed the available system me",
+    "date": "2026-09-30",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3238-2026%22"
+   }
+  ]
  },
  "nodes": [
   {
@@ -23,9 +204,10 @@
    "domain": "health",
    "region": "United States",
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
-   "risk_score": 85,
+   "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T18:50:58.870856"
+   "updated_at": "2026-10-08T19:32:00.461138",
+   "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
    "id": "qikmoov_llc",
@@ -34,9 +216,10 @@
    "domain": "health",
    "region": "United States",
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
-   "risk_score": 85,
+   "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T18:50:58.870856"
+   "updated_at": "2026-10-08T19:32:00.461138",
+   "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
    "id": "abiomed_inc",
@@ -47,7 +230,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
    "id": "boston_scientific_corporation",
@@ -58,7 +242,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Imager II Angiographic Catheters    M001314001  IMAGER II/5/ST/65/038 BX5;    M001314011  IMAGER II/5/ST/100/038 BX5;   ",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3214-2026 di classe I del 30/09/2026"
   },
   {
    "id": "nova_biomedical_corporation",
@@ -69,7 +254,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: StatStrip Glucose and B- Ketone meter. Model No: 63910. Glucose test system.",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3131-2026 di classe I del 23/09/2026"
   },
   {
    "id": "bd_switzerland_sarl",
@@ -80,7 +266,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: BD Alaris Pump Infusion Sets 10561554*\t10885403232565\t50885403232563\tBD Alaris Pump Infusion Set, 15 Micron Filter, Back",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3080-2026 di classe I del 23/09/2026"
   },
   {
    "id": "given_imaging_ltd",
@@ -91,7 +278,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Bravo CF capsule delivery device, 5-pack, Product Number FGS-0635,     Bravo CF capsule delivery device, 1-pack, Product",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3090-2026 di classe I del 16/09/2026"
   },
   {
    "id": "amgen_inc",
@@ -100,9 +288,10 @@
    "domain": "health",
    "region": "United States",
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
-   "risk_score": 55,
+   "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T18:50:58.870856"
+   "updated_at": "2026-10-08T19:32:00.461138",
+   "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
    "id": "humanrace",
@@ -111,9 +300,10 @@
    "domain": "health",
    "region": "United States",
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
-   "risk_score": 55,
+   "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T18:50:58.870856"
+   "updated_at": "2026-10-08T19:32:00.461138",
+   "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
    "id": "herbal_doctor_remedies",
@@ -122,9 +312,10 @@
    "domain": "health",
    "region": "United States",
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
-   "risk_score": 55,
+   "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T18:50:58.870856"
+   "updated_at": "2026-10-08T19:32:00.461138",
+   "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
    "id": "philips_north_america_llc",
@@ -135,7 +326,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Achieva 3.0T;  Model Numbers (REF): 1. 781177, 2. 781277, 3. 781278, 4. 781344, 5. 781345;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026"
   },
   {
    "id": "intervascular_sas",
@@ -146,7 +338,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
    "id": "heidelberg_engineering_gmbh",
@@ -157,7 +350,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3215-2026 di classe II del 30/09/2026"
   },
   {
    "id": "philips_ultrasound_llc",
@@ -168,7 +362,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips EPIQ Elite Diagnostic Ultrasound System  Model # 795234",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3249-2026 di classe II del 30/09/2026"
   },
   {
    "id": "philips_north_america",
@@ -179,7 +374,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips PIC iX Essentials  REF:867093",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3142-2026 di classe II del 23/09/2026"
   },
   {
    "id": "mirion_technologies_capintec_inc",
@@ -190,7 +386,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Captus 4000e Thyroid Uptake System, Models: 1. 5430-30151, 2. 5430-30152, 3. 5430-30154;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3193-2026 di classe II del 23/09/2026"
   },
   {
    "id": "wilson_cook_medical_inc",
@@ -201,7 +398,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Product Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Model/Catalog Number: HEMO-7, HE",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3177-2026 di classe II del 23/09/2026"
   },
   {
    "id": "maquet_cardiopulmonary_gmbh",
@@ -212,7 +410,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Percutaneous Insertion Kit (PIK), Guidewire 100 cm, Model Numbers: 701053068 (USA), 701047384 (OUS);",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3144-2026 di classe II del 23/09/2026"
   },
   {
    "id": "icu_medical_inc",
@@ -223,7 +422,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: CADD Yellow Medication Cassette Reservoir with NRFit connector    US Product Codes: 21-7600-24, 21-7609-24    OUS Produc",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3212-2026 di classe II del 23/09/2026"
   },
   {
    "id": "ge_medical_systems_information_t",
@@ -234,7 +434,8 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PORTRAIT CORE SERVICES SOFTWARE V1.0.5, Ref# 5697353",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T18:50:58.871219"
+   "updated_at": "2026-10-08T19:32:00.461677",
+   "risk_basis": "Richiamo FDA Z-3038-2026 di classe II del 02/09/2026"
   },
   {
    "id": "regSicilia",
@@ -245,7 +446,8 @@
    "description": "Assessorato alla Salute Regione Sicilia. Gestione SSR siciliano.",
    "risk_score": 35,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "asp_me",
@@ -256,7 +458,8 @@
    "description": "Azienda Sanitaria Provinciale di Messina.",
    "risk_score": 30,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "pfizer",
@@ -267,7 +470,8 @@
    "description": "Multinazionale farmaceutica. Vaccini, oncologia, cardiologia.",
    "risk_score": 30,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "roche",
@@ -278,7 +482,8 @@
    "description": "Farmaceutica svizzera leader in oncologia e diagnostica.",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "gvm",
@@ -289,7 +494,8 @@
    "description": "Gruppo privato ospedaliero italiano. Presenza in più regioni.",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "aospme",
@@ -300,7 +506,8 @@
    "description": "Azienda Ospedaliera Papardo di Messina.",
    "risk_score": 25,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "leadiant_biosciences_inc",
@@ -309,9 +516,10 @@
    "domain": "health",
    "region": "United States",
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
-   "risk_score": 25,
+   "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T18:50:58.870856"
+   "updated_at": "2026-10-08T19:32:00.461138",
+   "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
    "id": "humanitas",
@@ -322,7 +530,8 @@
    "description": "Gruppo ospedaliero privato. Ricerca e clinica ad alta specializzazione.",
    "risk_score": 22,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "consip",
@@ -333,7 +542,8 @@
    "description": "Centrale acquisti nazionale. Gestisce gare farmaci e dispositivi per SSN.",
    "risk_score": 20,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "aouMe",
@@ -344,7 +554,8 @@
    "description": "Azienda Ospedaliera Universitaria di Messina.",
    "risk_score": 20,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "farmindustria",
@@ -355,7 +566,8 @@
    "description": "Associazione industria farmaceutica italiana.",
    "risk_score": 20,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "agenas",
@@ -366,7 +578,8 @@
    "description": "Agenzia Nazionale per i Servizi Sanitari Regionali. Monitoraggio SSN.",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "aifa",
@@ -377,7 +590,8 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "ema",
@@ -388,7 +602,8 @@
    "description": "European Medicines Agency. Autorizzazione farmaci a livello europeo.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "iss",
@@ -399,7 +614,8 @@
    "description": "Istituto Superiore di Sanità. Ricerca e sorveglianza epidemiologica.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "minsalute",
@@ -410,87 +626,11 @@
    "description": "Ministero della Salute italiano. Definisce LEA e politiche sanitarie.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345"
+   "updated_at": "2026-10-06T06:32:00.960345",
+   "risk_basis": "Valore assegnato manualmente"
   }
  ],
  "edges": [
-  {
-   "id": "dr_bernes_whole_health_products_aifa_RISCHIO_PER",
-   "source": "dr_bernes_whole_health_products",
-   "target": "aifa",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] D-0035-2024: CGMP Deviations",
-   "risk_score": 85,
-   "source_doc": "",
-   "date": "2023101",
-   "created_at": "2026-10-06T06:32:01.597586"
-  },
-  {
-   "id": "qikmoov_llc_aifa_RISCHIO_PER",
-   "source": "qikmoov_llc",
-   "target": "aifa",
-   "type": "RISCHIO_PER",
-   "fact": "[Class I] D-0749-2021: Marketed Without An Approved NDA/ANDA: FDA analysis detected the presence of sibutramine.",
-   "risk_score": 85,
-   "source_doc": "",
-   "date": "2021081",
-   "created_at": "2026-10-06T06:32:01.597586"
-  },
-  {
-   "id": "abiomed_inc_ema_RISCHIO_PER",
-   "source": "abiomed_inc",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3251-2026: Retrospective report of issues remedied in 2019 with firmware and software patches: 1. Defects in optical bench (OPB) fi",
-   "risk_score": 85,
-   "source_doc": "",
-   "date": "2026093",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "boston_scientific_corporation_ema_RISCHIO_PER",
-   "source": "boston_scientific_corporation",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class I] Z-3214-2026: Tip may fracture or detach, leading to device fragments remaining within the patient or migrating through the vasculatur",
-   "risk_score": 85,
-   "source_doc": "",
-   "date": "2026093",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "nova_biomedical_corporation_ema_RISCHIO_PER",
-   "source": "nova_biomedical_corporation",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class I] Z-3131-2026: A software synchronization/timing issue in the barcode scanning and patient data processing component that causes the de",
-   "risk_score": 85,
-   "source_doc": "",
-   "date": "2026092",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "bd_switzerland_sarl_aifa_RISCHIO_PER",
-   "source": "bd_switzerland_sarl",
-   "target": "aifa",
-   "type": "RISCHIO_PER",
-   "fact": "[Class I] Z-3080-2026: Due to discrepancies in specific attributes in the performance data for infusion sets, which may lead to inappropriate p",
-   "risk_score": 85,
-   "source_doc": "",
-   "date": "2026092",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "given_imaging_ltd_ema_RISCHIO_PER",
-   "source": "given_imaging_ltd",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class I] Z-3090-2026: Capsule may fail to attach to the esophagus or detach from the delivery device. Risks include patient aspiration/inhalat",
-   "risk_score": 85,
-   "source_doc": "",
-   "date": "2026091",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
   {
    "id": "e11",
    "source": "agenas",
@@ -501,149 +641,6 @@
    "source_doc": "",
    "date": null,
    "created_at": "2026-10-06T06:32:00.960345"
-  },
-  {
-   "id": "amgen_inc_aifa_RISCHIO_PER",
-   "source": "amgen_inc",
-   "target": "aifa",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] D-0285-2025: Stability data does not support expiry: the products have the potential to be out of specification at the time of expiry",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2025032",
-   "created_at": "2026-10-06T06:32:01.597586"
-  },
-  {
-   "id": "humanrace_aifa_RISCHIO_PER",
-   "source": "humanrace",
-   "target": "aifa",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] D-1175-2023: Subpotent Drug: Product does not contain SPF that is declared on the label.",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2023092",
-   "created_at": "2026-10-06T06:32:01.597586"
-  },
-  {
-   "id": "herbal_doctor_remedies_ema_RISCHIO_PER",
-   "source": "herbal_doctor_remedies",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] D-1122-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2020041",
-   "created_at": "2026-10-06T06:32:01.597586"
-  },
-  {
-   "id": "philips_north_america_llc_ema_RISCHIO_PER",
-   "source": "philips_north_america_llc",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3233-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026093",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "intervascular_sas_ema_RISCHIO_PER",
-   "source": "intervascular_sas",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3258-2026: Product failed to meet the specified acceptance criteria for Integral Water Permeability (IWP).",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026093",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "heidelberg_engineering_gmbh_ema_RISCHIO_PER",
-   "source": "heidelberg_engineering_gmbh",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3215-2026: Wheels may come loose when module is being pushed or pulled during movement or transportation, affecting stability of th",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026093",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "philips_ultrasound_llc_ema_RISCHIO_PER",
-   "source": "philips_ultrasound_llc",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3249-2026: Due to software issue with ultrasound system, doppler sample is displayed shallower than its actual measurement location",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026093",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "philips_north_america_ema_RISCHIO_PER",
-   "source": "philips_north_america",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3142-2026: Due to software malfunction, patient information  system may freeze and become unresponsive.",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026092",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "mirion_technologies_capintec_inc_ema_RISCHIO_PER",
-   "source": "mirion_technologies_capintec_inc",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3193-2026: Potential for failure of the tension bolt which would allow the spring arm to unexpectedly fall to its lowest position, ",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026092",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "wilson_cook_medical_inc_ema_RISCHIO_PER",
-   "source": "wilson_cook_medical_inc",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3177-2026: Due to issue with endoscope adherence and inability to spray powder.  Firm will provide an updated Instruction for Use (",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026092",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "maquet_cardiopulmonary_gmbh_ema_RISCHIO_PER",
-   "source": "maquet_cardiopulmonary_gmbh",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3144-2026: The packaging may not consistently maintain sterile barrier integrity.",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026092",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "icu_medical_inc_ema_RISCHIO_PER",
-   "source": "icu_medical_inc",
-   "target": "ema",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3212-2026: Reservoirs may exhibit medication leakage at the joint between luer connector and tubing. Issue could result in delay or",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026092",
-   "created_at": "2026-10-06T06:32:01.598150"
-  },
-  {
-   "id": "ge_medical_systems_information_t_aifa_RISCHIO_PER",
-   "source": "ge_medical_systems_information_t",
-   "target": "aifa",
-   "type": "RISCHIO_PER",
-   "fact": "[Class II] Z-3038-2026: Software issue may result in a loss of patient monitoring at the Hub and Central Viewer. In addition, all alarm settings",
-   "risk_score": 55,
-   "source_doc": "",
-   "date": "2026090",
-   "created_at": "2026-10-06T06:32:01.598150"
   },
   {
    "id": "e13",
@@ -677,17 +674,6 @@
    "source_doc": "",
    "date": "2009-01",
    "created_at": "2026-10-06T06:32:00.960345"
-  },
-  {
-   "id": "leadiant_biosciences_inc_aifa_RISCHIO_PER",
-   "source": "leadiant_biosciences_inc",
-   "target": "aifa",
-   "type": "RISCHIO_PER",
-   "fact": "[Class III] D-0034-2021: Subpotent Drug: Product testing identified a decreased level of the active ingredient, Cysteamine HCl.",
-   "risk_score": 25,
-   "source_doc": "",
-   "date": "2020102",
-   "created_at": "2026-10-06T06:32:01.597586"
   },
   {
    "id": "e8",
@@ -787,6 +773,886 @@
    "source_doc": "",
    "date": "1958-01",
    "created_at": "2026-10-06T06:32:00.960345"
+  },
+  {
+   "id": "recall_D-0285-2025",
+   "source": "amgen_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-0285-2025: Stability data does not support expiry: the products have the potential to be out of specification at the time of expiry",
+   "risk_score": 55,
+   "source_doc": "D-0285-2025",
+   "date": "2025-03-26",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0286-2025",
+   "source": "amgen_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-0286-2025: Stability data does not support expiry: the products have the potential to be out of specification at the time of expiry",
+   "risk_score": 55,
+   "source_doc": "D-0286-2025",
+   "date": "2025-03-26",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0035-2024",
+   "source": "dr_bernes_whole_health_products",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-0035-2024: CGMP Deviations",
+   "risk_score": 55,
+   "source_doc": "D-0035-2024",
+   "date": "2023-10-11",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0034-2024",
+   "source": "dr_bernes_whole_health_products",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-0034-2024: CGMP Deviations",
+   "risk_score": 55,
+   "source_doc": "D-0034-2024",
+   "date": "2023-10-11",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0036-2024",
+   "source": "dr_bernes_whole_health_products",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-0036-2024: CGMP Deviations",
+   "risk_score": 55,
+   "source_doc": "D-0036-2024",
+   "date": "2023-10-11",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0033-2024",
+   "source": "dr_bernes_whole_health_products",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-0033-2024: CGMP Deviations",
+   "risk_score": 55,
+   "source_doc": "D-0033-2024",
+   "date": "2023-10-11",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0037-2024",
+   "source": "dr_bernes_whole_health_products",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] D-0037-2024: Non-Sterility",
+   "risk_score": 85,
+   "source_doc": "D-0037-2024",
+   "date": "2023-10-11",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1175-2023",
+   "source": "humanrace",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1175-2023: Subpotent Drug: Product does not contain SPF that is declared on the label.",
+   "risk_score": 55,
+   "source_doc": "D-1175-2023",
+   "date": "2023-09-27",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1176-2023",
+   "source": "humanrace",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1176-2023: Subpotent Drug: Product does not contain SPF that is declared on the label.",
+   "risk_score": 55,
+   "source_doc": "D-1176-2023",
+   "date": "2023-09-27",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0749-2021",
+   "source": "qikmoov_llc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] D-0749-2021: Marketed Without An Approved NDA/ANDA: FDA analysis detected the presence of sibutramine.",
+   "risk_score": 85,
+   "source_doc": "D-0749-2021",
+   "date": "2021-08-11",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-0034-2021",
+   "source": "leadiant_biosciences_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class III] D-0034-2021: Subpotent Drug: Product testing identified a decreased level of the active ingredient, Cysteamine HCl.",
+   "risk_score": 25,
+   "source_doc": "D-0034-2021",
+   "date": "2020-10-21",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1122-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1122-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1122-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1120-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1120-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1120-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1132-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1132-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1132-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1117-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1117-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1117-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1106-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1106-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1106-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1150-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1150-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1150-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1163-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1163-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1163-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1167-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1167-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1167-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1147-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1147-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1147-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1141-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1141-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1141-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1108-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1108-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1108-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1166-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1166-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1166-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1125-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1125-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1125-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1161-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1161-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1161-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1128-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1128-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1128-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1105-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1105-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1105-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1123-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1123-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1123-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1173-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1173-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1173-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1144-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1144-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1144-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1172-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1172-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1172-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1137-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1137-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1137-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1158-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1158-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1158-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1127-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1127-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1127-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1148-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1148-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1148-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1170-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1170-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1170-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1168-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1168-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1168-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1146-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1146-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1146-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1160-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1160-2020: CGMP Deviations: These products have been found to be misbranded as  unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1160-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_D-1115-2020",
+   "source": "herbal_doctor_remedies",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] D-1115-2020: CGMP Deviations: These products have been found to be misbranded as unapproved new drugs",
+   "risk_score": 55,
+   "source_doc": "D-1115-2020",
+   "date": "2020-04-15",
+   "created_at": "2026-10-08T19:32:00.461157"
+  },
+  {
+   "id": "recall_Z-3233-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3233-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3233-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3251-2026",
+   "source": "abiomed_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3251-2026: Retrospective report of issues remedied in 2019 with firmware and software patches: 1. Defects in optical bench (OPB) fi",
+   "risk_score": 55,
+   "source_doc": "Z-3251-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3239-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3239-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3239-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3242-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3242-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3242-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3241-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3241-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3241-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3258-2026",
+   "source": "intervascular_sas",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3258-2026: Product failed to meet the specified acceptance criteria for Integral Water Permeability (IWP).",
+   "risk_score": 55,
+   "source_doc": "Z-3258-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3236-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3236-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3236-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3215-2026",
+   "source": "heidelberg_engineering_gmbh",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3215-2026: Wheels may come loose when module is being pushed or pulled during movement or transportation, affecting stability of th",
+   "risk_score": 55,
+   "source_doc": "Z-3215-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3234-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3234-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3234-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3214-2026",
+   "source": "boston_scientific_corporation",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3214-2026: Tip may fracture or detach, leading to device fragments remaining within the patient or migrating through the vasculatur",
+   "risk_score": 85,
+   "source_doc": "Z-3214-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3235-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3235-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3235-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3238-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3238-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3238-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3249-2026",
+   "source": "philips_ultrasound_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3249-2026: Due to software issue with ultrasound system, doppler sample is displayed shallower than its actual measurement location",
+   "risk_score": 55,
+   "source_doc": "Z-3249-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3240-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3240-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3240-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3237-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3237-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3237-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3232-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3232-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3232-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3243-2026",
+   "source": "philips_north_america_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3243-2026: A software issue will terminate an examination during the image reconstruction process if the scan parameters are manual",
+   "risk_score": 55,
+   "source_doc": "Z-3243-2026",
+   "date": "2026-09-30",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3131-2026",
+   "source": "nova_biomedical_corporation",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3131-2026: A software synchronization/timing issue in the barcode scanning and patient data processing component that causes the de",
+   "risk_score": 85,
+   "source_doc": "Z-3131-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3148-2026",
+   "source": "abiomed_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3148-2026: The potential for purge cassette recognition issues due to the failure of the purge flag component of the purge pressure",
+   "risk_score": 85,
+   "source_doc": "Z-3148-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3130-2026",
+   "source": "nova_biomedical_corporation",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3130-2026: A software synchronization/timing issue in the barcode scanning and patient data processing component that causes the de",
+   "risk_score": 85,
+   "source_doc": "Z-3130-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3128-2026",
+   "source": "nova_biomedical_corporation",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3128-2026: A software synchronization/timing issue in the barcode scanning and patient data processing component that causes the de",
+   "risk_score": 85,
+   "source_doc": "Z-3128-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3142-2026",
+   "source": "philips_north_america",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3142-2026: Due to software malfunction, patient information  system may freeze and become unresponsive.",
+   "risk_score": 55,
+   "source_doc": "Z-3142-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3193-2026",
+   "source": "mirion_technologies_capintec_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3193-2026: Potential for failure of the tension bolt which would allow the spring arm to unexpectedly fall to its lowest position, ",
+   "risk_score": 55,
+   "source_doc": "Z-3193-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3177-2026",
+   "source": "wilson_cook_medical_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3177-2026: Due to issue with endoscope adherence and inability to spray powder.  Firm will provide an updated Instruction for Use (",
+   "risk_score": 55,
+   "source_doc": "Z-3177-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3144-2026",
+   "source": "maquet_cardiopulmonary_gmbh",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3144-2026: The packaging may not consistently maintain sterile barrier integrity.",
+   "risk_score": 55,
+   "source_doc": "Z-3144-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3149-2026",
+   "source": "abiomed_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3149-2026: The potential for purge cassette recognition issues due to the failure of the purge flag component of the purge pressure",
+   "risk_score": 85,
+   "source_doc": "Z-3149-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3188-2026",
+   "source": "boston_scientific_corporation",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3188-2026: A subset of power adapters used with the connect console may exhibit higher-than-expected resistance in the electrical g",
+   "risk_score": 55,
+   "source_doc": "Z-3188-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3150-2026",
+   "source": "abiomed_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3150-2026: The potential for purge cassette recognition issues due to the failure of the purge flag component of the purge pressure",
+   "risk_score": 85,
+   "source_doc": "Z-3150-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3145-2026",
+   "source": "maquet_cardiopulmonary_gmbh",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3145-2026: The packaging may not consistently maintain sterile barrier integrity.",
+   "risk_score": 55,
+   "source_doc": "Z-3145-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3132-2026",
+   "source": "nova_biomedical_corporation",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3132-2026: A software synchronization/timing issue in the barcode scanning and patient data processing component that causes the de",
+   "risk_score": 85,
+   "source_doc": "Z-3132-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3080-2026",
+   "source": "bd_switzerland_sarl",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3080-2026: Due to discrepancies in specific attributes in the performance data for infusion sets, which may lead to inappropriate p",
+   "risk_score": 85,
+   "source_doc": "Z-3080-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3141-2026",
+   "source": "philips_north_america",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3141-2026: Due to software malfunction, patient information  system may freeze and become unresponsive.",
+   "risk_score": 55,
+   "source_doc": "Z-3141-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3129-2026",
+   "source": "nova_biomedical_corporation",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3129-2026: A software synchronization/timing issue in the barcode scanning and patient data processing component that causes the de",
+   "risk_score": 85,
+   "source_doc": "Z-3129-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3212-2026",
+   "source": "icu_medical_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3212-2026: Reservoirs may exhibit medication leakage at the joint between luer connector and tubing. Issue could result in delay or",
+   "risk_score": 55,
+   "source_doc": "Z-3212-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3146-2026",
+   "source": "maquet_cardiopulmonary_gmbh",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3146-2026: The packaging may not consistently maintain sterile barrier integrity.",
+   "risk_score": 55,
+   "source_doc": "Z-3146-2026",
+   "date": "2026-09-23",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3090-2026",
+   "source": "given_imaging_ltd",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-3090-2026: Capsule may fail to attach to the esophagus or detach from the delivery device. Risks include patient aspiration/inhalat",
+   "risk_score": 85,
+   "source_doc": "Z-3090-2026",
+   "date": "2026-09-16",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3038-2026",
+   "source": "ge_medical_systems_information_t",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3038-2026: Software issue may result in a loss of patient monitoring at the Hub and Central Viewer. In addition, all alarm settings",
+   "risk_score": 55,
+   "source_doc": "Z-3038-2026",
+   "date": "2026-09-02",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3037-2026",
+   "source": "ge_medical_systems_information_t",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3037-2026: Software issue may result in a loss of patient monitoring at the Hub and Central Viewer. In addition, all alarm settings",
+   "risk_score": 55,
+   "source_doc": "Z-3037-2026",
+   "date": "2026-09-02",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3039-2026",
+   "source": "ge_medical_systems_information_t",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3039-2026: Software issue may result in a loss of patient monitoring at the Hub and Central Viewer. In addition, all alarm settings",
+   "risk_score": 55,
+   "source_doc": "Z-3039-2026",
+   "date": "2026-09-02",
+   "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "recall_Z-3036-2026",
+   "source": "ge_medical_systems_information_t",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-3036-2026: Software issue may result in a loss of patient monitoring at the Hub and Central Viewer. In addition, all alarm settings",
+   "risk_score": 55,
+   "source_doc": "Z-3036-2026",
+   "date": "2026-09-02",
+   "created_at": "2026-10-08T19:32:00.461699"
   }
  ],
  "alerts": []
