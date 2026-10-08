@@ -128,13 +128,17 @@ class EntityExtractor:
             reason = recall.get("reason_for_recall", "")[:120]
             recall_id = recall.get("id", "")
 
+            # Una relazione per richiamo: un nuovo richiamo di un'azienda già nota resta visibile
+            rd = recall.get("report_date", "")
             relations.append({
+                "id": f"recall_{recall_id}" if recall_id else None,
                 "source": firm_slug,
                 "target": target,
                 "type": "RISCHIO_PER",
                 "fact": f"[{classification}] {recall_id}: {reason}",
                 "risk_score": risk_score,
-                "date": recall.get("report_date", "")[:7] or None,
+                "source_doc": recall_id,
+                "date": f"{rd[:4]}-{rd[4:6]}-{rd[6:8]}" if len(rd) == 8 else None,
             })
 
         return {"entities": list(entities.values()), "relations": relations}

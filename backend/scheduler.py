@@ -32,6 +32,8 @@ class Scheduler:
         started = datetime.utcnow().isoformat()
         self.last_attempt = started
         print(f"[scheduler] Starting data refresh at {started}")
+        # Ultima versione funzionante: si ripristina se l'aggiornamento produce dati non validi
+        snap = self.db.snapshot()
         try:
             # 1. Fonti esterne, senza cache: openFDA e OMS
             data = await self.scraper.fetch_all(force=True)
@@ -46,7 +48,8 @@ class Scheduler:
                 raise RuntimeError("nessuna fonte raggiungibile: " + "; ".join(
                     f"{k}: {v}" for k, v in source_errors.items()))
 
-            # 2. Richiami openFDA direttamente nel grafo (senza Claude)
+            # 2. Richiami openFDA direttamente nel grafo (senza Claude), uno per relazione
+            self.db.drop_legacy_recall_edges()
             for key in ("drug_recalls", "device_recalls"):
                 if data[key]:
                     result = self.extractor.process_recalls(data[key])
@@ -63,7 +66,15 @@ class Scheduler:
                 if result["errors"] and len(result["errors"]) == min(5, len(data["who_outbreaks"])):
                     source_errors["who_analysis"] = "analisi AI delle notizie OMS non riuscita: " + result["errors"][0]
 
-            # 4. Alert predittivi: se falliscono restano quelli precedenti e l'errore è visibile
+            # 4. Verifica: relazioni orfane eliminate, grafo non valido -> si scarta tutto
+            orphans = self.db.drop_orphan_edges()
+            if orphans:
+                print(f"[scheduler] Scartate {orphans} relazioni che puntavano a nodi inesistenti")
+            problems = self.db.validate(len(snap["nodes"]))
+            if problems:
+                raise ValueError("dati nuovi non validi, mantenuta la versione precedente: " + "; ".join(problems))
+
+            # 5. Alert generati dall'AI: se falliscono restano quelli precedenti e l'errore è visibile
             nodes = await self.db.get_nodes()
             edges = await self.db.get_edges()
             alerts_error = None
@@ -75,10 +86,27 @@ class Scheduler:
                 alerts_error = str(e)
                 print(f"[scheduler] ERRORE generazione alert: {alerts_error}")
 
+            # Novità rispetto alla versione precedente e data del dato più recente alla fonte
+            new = {
+                "nodes": len(set(self.db.nodes) - set(snap["nodes"])),
+                "edges": len(set(self.db.edges) - set(snap["edges"])),
+                "alerts": len(set(self.db.alerts) - set(snap["alerts"])),
+            }
+            rd = lambda items: max((r.get("report_date", "") for r in items), default="")
+            iso = lambda d: f"{d[:4]}-{d[4:6]}-{d[6:8]}" if len(d) == 8 else None
+            latest = {
+                "openfda_drug": iso(rd(data["drug_recalls"])),
+                "openfda_device": iso(rd(data["device_recalls"])),
+                "who_outbreaks": max((o.get("published", "") for o in data["who_outbreaks"]), default="") or None,
+            }
+            print(f"[scheduler] Novità: {new}; dato più recente alla fonte: {latest}")
+
             finished = datetime.utcnow().isoformat()
             self.db.updated_at = finished
             self.db.refresh_info = {
                 "last_success": finished,
+                "new": new,
+                "latest_at_source": latest,
                 "counts": counts,
                 "source_errors": source_errors,
                 "alerts_error": alerts_error,
@@ -89,8 +117,9 @@ class Scheduler:
             return True
 
         except Exception as e:
+            self.db.restore(snap)
             self.last_error = f"{type(e).__name__}: {e}"
-            print(f"[scheduler] ERRORE durante il refresh: {self.last_error}")
+            print(f"[scheduler] ERRORE durante il refresh, ripristinata l'ultima versione funzionante: {self.last_error}")
             return False
 
     def status(self) -> dict:
@@ -104,4 +133,6 @@ class Scheduler:
             "alerts_error": info.get("alerts_error"),
             "alerts_attempt": info.get("alerts_attempt"),
             "counts": info.get("counts") or {},
+            "new": info.get("new"),
+            "latest_at_source": info.get("latest_at_source") or {},
         }

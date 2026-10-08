@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 from typing import List, Dict, Optional
@@ -101,6 +102,53 @@ class GraphDB:
                 "date": e[6], "created_at": now,
             }
 
+    # --- Protezione dell'aggiornamento: istantanea, verifica, ripristino
+
+    def snapshot(self) -> Dict:
+        return copy.deepcopy({"nodes": self.nodes, "edges": self.edges, "alerts": self.alerts,
+                              "updated_at": self.updated_at, "refresh_info": self.refresh_info})
+
+    def restore(self, snap: Dict):
+        self.nodes, self.edges, self.alerts = snap["nodes"], snap["edges"], snap["alerts"]
+        self.updated_at, self.refresh_info = snap["updated_at"], snap["refresh_info"]
+
+    def drop_legacy_recall_edges(self) -> int:
+        """Relazioni di richiamo del vecchio formato (una per azienda): sostituite da una per richiamo."""
+        legacy = [k for k, e in self.edges.items()
+                  if e.get("type") == "RISCHIO_PER" and not k.startswith("recall_")
+                  and str(e.get("fact", "")).startswith("[Class")]
+        for k in legacy:
+            del self.edges[k]
+        return len(legacy)
+
+    def drop_orphan_edges(self) -> int:
+        """Elimina le relazioni che puntano a nodi inesistenti; restituisce quante."""
+        orphans = [k for k, e in self.edges.items()
+                   if e.get("source") not in self.nodes or e.get("target") not in self.nodes]
+        for k in orphans:
+            del self.edges[k]
+        return len(orphans)
+
+    def validate(self, previous_nodes: int) -> List[str]:
+        """Problemi che rendono il grafo inutilizzabile dal frontend (lista vuota = valido)."""
+        problems = []
+        if not self.nodes:
+            problems.append("il grafo non contiene nodi")
+        if previous_nodes and len(self.nodes) < previous_nodes // 2:
+            problems.append(f"i nodi sono scesi da {previous_nodes} a {len(self.nodes)}")
+        for nid, n in self.nodes.items():
+            if not nid or n.get("id") != nid or not n.get("label") or not n.get("type"):
+                problems.append(f"nodo {nid!r} senza id, etichetta o tipo")
+            elif not isinstance(n.get("risk_score"), (int, float)) or not 0 <= n["risk_score"] <= 100:
+                problems.append(f"nodo {nid!r} con risk_score non valido: {n.get('risk_score')!r}")
+            if len(problems) >= 5:
+                break
+        for k, e in self.edges.items():
+            if e.get("source") not in self.nodes or e.get("target") not in self.nodes:
+                problems.append(f"relazione {k!r} verso nodi inesistenti")
+                break
+        return problems
+
     async def get_nodes(self, domain: Optional[str] = None) -> List[Dict]:
         nodes = list(self.nodes.values())
         if domain:
@@ -179,7 +227,7 @@ class GraphDB:
     async def upsert_relations(self, relations: List[Dict]):
         now = datetime.utcnow().isoformat()
         for r in relations:
-            rid = f"{r.get('source')}_{r.get('target')}_{r.get('type')}"
+            rid = r.get("id") or f"{r.get('source')}_{r.get('target')}_{r.get('type')}"
             if rid in self.edges:
                 self.edges[rid]["risk_score"] = max(
                     self.edges[rid].get("risk_score", 0), r.get("risk_score", 0)

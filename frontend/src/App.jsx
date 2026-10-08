@@ -29,6 +29,8 @@ function formatDateTime(iso) {
     " alle " + d.toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"})
 }
 
+const zoomBtn = {width:24,height:24,border:"0.5px solid var(--color-border-tertiary)",borderRadius:4,background:"var(--color-background-secondary)",cursor:"pointer",fontSize:14,lineHeight:"20px"}
+
 function riskColor(score) {
   if (score >= 80) return "#E24B4A"
   if (score >= 60) return "#EF9F27"
@@ -49,34 +51,40 @@ export default function App() {
   const [status, setStatus] = useState(null)
   const [refreshing, setRefreshing] = useState(false)
   const [notice, setNotice] = useState(null)   // {kind: "info"|"error"|"ok", text}
+  const [loadError, setLoadError] = useState(null)
+  const [zoom, setZoom] = useState(100)
   const posRef = useRef({})
   const velRef = useRef({})
   const animRef = useRef(null)
   const hoveredRef = useRef(null)
   const draggingRef = useRef(null)
   const dragOffRef = useRef({x:0,y:0})
+  // Vista del grafo: zoom e spostamento, in pixel del canvas
+  const viewRef = useRef({scale:1, x:0, y:0})
+  const panRef = useRef(null)
 
   const fetchData = useCallback(async () => {
+    // Il backend Render può impiegare fino a un minuto a svegliarsi
+    const get = path => fetch(`${API}${path}`, {signal: AbortSignal.timeout(60000)}).then(r => {
+      if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`)
+      return r.json()
+    })
     try {
-      const [gRes, aRes, sRes, stRes] = await Promise.all([
-        fetch(`${API}/api/graph`),
-        fetch(`${API}/api/alerts`),
-        fetch(`${API}/api/stats`),
-        fetch(`${API}/api/status`),
+      const [g, a, s, st] = await Promise.all([
+        get("/api/graph"), get("/api/alerts"), get("/api/stats"), get("/api/status").catch(() => null),
       ])
-      const g = await gRes.json()
-      const a = await aRes.json()
-      const s = await sRes.json()
-      setNodes(g.nodes || [])
-      setEdges(g.edges || [])
-      setAlerts(a || [])
+      if (!Array.isArray(g?.nodes) || g.nodes.length === 0) throw new Error("il grafo ricevuto non contiene nodi")
+      setNodes(g.nodes)
+      setEdges(Array.isArray(g.edges) ? g.edges : [])
+      setAlerts(Array.isArray(a) ? a : [])
       setStats(s || {})
-      if (stRes.ok) setStatus(await stRes.json())
-      setLoading(false)
+      if (st) setStatus(st)
+      setLoadError(null)
     } catch (e) {
-      console.error(e)
-      setLoading(false)
+      console.error("[HEALTHINT] caricamento dati non riuscito:", e)
+      setLoadError(e.message || String(e))
     }
+    setLoading(false)
   }, [])
 
   useEffect(() => { fetchData() }, [fetchData])
@@ -131,7 +139,7 @@ export default function App() {
         velRef.current[n.id] = { vx:0, vy:0 }
       }
     })
-  }, [nodes])
+  }, [nodes, loading, tab])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -182,7 +190,10 @@ export default function App() {
     }
 
     function draw() {
+      ctx.setTransform(1, 0, 0, 1, 0, 0)
       ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const view = viewRef.current
+      ctx.setTransform(view.scale, 0, 0, view.scale, view.x, view.y)
       const sel = selected
       const hov = hoveredRef.current
 
@@ -249,21 +260,63 @@ export default function App() {
     }
     animRef.current = requestAnimationFrame(loop)
     return () => cancelAnimationFrame(animRef.current)
-  }, [nodes, edges, selected])
+  }, [nodes, edges, selected, loading, tab])
 
-  function toCanvasCoords(cssX, cssY) {
+  // Zoom con la rotella attorno al puntatore (listener non passivo per bloccare lo scroll della pagina)
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    function onWheel(e) {
+      e.preventDefault()
+      const r = canvas.getBoundingClientRect()
+      const px = (e.clientX - r.left) * canvas.width / r.width
+      const py = (e.clientY - r.top) * canvas.height / r.height
+      zoomAt(Math.exp(-e.deltaY * 0.0015), px, py)
+    }
+    canvas.addEventListener("wheel", onWheel, {passive: false})
+    return () => canvas.removeEventListener("wheel", onWheel)
+  }, [nodes, loading, tab])
+
+  function zoomAt(factor, px, py) {
+    const v = viewRef.current
+    const scale = Math.min(4, Math.max(0.4, v.scale * factor))
+    const k = scale / v.scale
+    v.x = px - (px - v.x) * k
+    v.y = py - (py - v.y) * k
+    v.scale = scale
+    setZoom(Math.round(scale * 100))
+  }
+
+  function zoomButton(factor) {
+    const canvas = canvasRef.current
+    if (canvas) zoomAt(factor, canvas.width / 2, canvas.height / 2)
+  }
+
+  function resetView() {
+    viewRef.current = {scale:1, x:0, y:0}
+    setZoom(100)
+  }
+
+  function toCanvasPixels(cssX, cssY) {
     const canvas = canvasRef.current
     if (!canvas) return {x: cssX, y: cssY}
     const r = canvas.getBoundingClientRect()
     return {x: cssX * (canvas.width / r.width), y: cssY * (canvas.height / r.height)}
   }
 
+  function toCanvasCoords(cssX, cssY) {
+    const {x, y} = toCanvasPixels(cssX, cssY)
+    const v = viewRef.current
+    return {x: (x - v.x) / v.scale, y: (y - v.y) / v.scale}
+  }
+
   function getNodeAt(cssX, cssY) {
     const {x, y} = toCanvasCoords(cssX, cssY)
+    const hit = Math.max(10, 25 / viewRef.current.scale)
     for (let i = nodes.length-1; i >= 0; i--) {
       const n = nodes[i]; const p = posRef.current[n.id]
       if (!p) continue
-      if (Math.sqrt((x-p.x)**2+(y-p.y)**2) < 25) return n
+      if (Math.sqrt((x-p.x)**2+(y-p.y)**2) < hit) return n
     }
     return null
   }
@@ -288,6 +341,9 @@ export default function App() {
       const {x, y} = toCanvasCoords(cssX, cssY)
       const p = posRef.current[n.id]
       dragOffRef.current = {x: x-p.x, y: y-p.y}
+    } else {
+      const start = toCanvasPixels(cssX, cssY)
+      panRef.current = {x: start.x, y: start.y, moved: 0}
     }
   }
   function onMouseMove(e) {
@@ -298,6 +354,14 @@ export default function App() {
       const p = posRef.current[draggingRef.current.id]
       p.x = x-dragOffRef.current.x; p.y = y-dragOffRef.current.y
       velRef.current[draggingRef.current.id] = {vx:0,vy:0}
+    } else if (panRef.current) {
+      const now = toCanvasPixels(cssX, cssY)
+      const v = viewRef.current
+      v.x += now.x - panRef.current.x
+      v.y += now.y - panRef.current.y
+      panRef.current.moved += Math.abs(now.x - panRef.current.x) + Math.abs(now.y - panRef.current.y)
+      panRef.current.x = now.x; panRef.current.y = now.y
+      e.currentTarget.style.cursor = "grabbing"
     } else {
       hoveredRef.current = getNodeAt(cssX, cssY)
       e.currentTarget.style.cursor = hoveredRef.current ? "pointer" : "default"
@@ -309,6 +373,9 @@ export default function App() {
     const n = getNodeAt(cssX, cssY)
     const {x, y} = toCanvasCoords(cssX, cssY)
     const dragging = draggingRef.current
+    const panned = panRef.current && panRef.current.moved > 5
+    panRef.current = null
+    if (panned) return
     if (!dragging || Math.hypot(x-(posRef.current[dragging.id]?.x||0)-dragOffRef.current.x, y-(posRef.current[dragging.id]?.y||0)-dragOffRef.current.y) < 5) {
       selectNode(selected === n?.id ? null : n)
     }
@@ -334,7 +401,7 @@ export default function App() {
         </div>
         <div style={{marginLeft:"auto",display:"flex",gap:12,alignItems:"center"}}>
           {stats.unread_alerts > 0 && <span style={{background:"#E24B4A",color:"#fff",borderRadius:10,padding:"2px 8px",fontSize:11}}>{stats.unread_alerts} alert</span>}
-          <span style={{fontSize:12,color:"var(--color-text-tertiary)"}}>{stats.nodes} nodi · {stats.edges} relazioni</span>
+          {stats.nodes != null && <span style={{fontSize:12,color:"var(--color-text-tertiary)"}}>{stats.nodes} nodi · {stats.edges} relazioni</span>}
           <button onClick={refreshNow} disabled={refreshing}
             style={{fontSize:12,padding:"5px 12px",borderRadius:6,border:"0.5px solid #1D9E75",background:refreshing?"var(--color-background-secondary)":"#1D9E75",color:refreshing?"var(--color-text-secondary)":"#fff",cursor:refreshing?"default":"pointer"}}>
             {refreshing ? "Aggiornamento…" : "Aggiorna dati"}
@@ -355,6 +422,15 @@ export default function App() {
           ))}
           {status?.sources?.length > 0 && " · analisi AI: Claude (Anthropic)"}
         </span>
+        {status?.new && (
+          <span>
+            <strong style={{fontWeight:500}}>Novità dell'ultimo aggiornamento:</strong>{" "}
+            {status.new.nodes} nodi, {status.new.edges} relazioni, {status.new.alerts} alert
+            {Object.values(status.latest_at_source || {}).some(Boolean) && <>{" · dato più recente: "}
+              {(status.sources || []).filter(s => status.latest_at_source[s.key]).map(s =>
+                `${s.label.split(" (")[0]} ${new Date(status.latest_at_source[s.key]).toLocaleDateString("it-IT")}`).join(" · ")}</>}
+          </span>
+        )}
       </div>
       {notice && (
         <div role="status" style={{padding:"8px 20px",fontSize:13,
@@ -371,8 +447,16 @@ export default function App() {
 
       {loading && <div style={{padding:40,textAlign:"center",color:"var(--color-text-secondary)"}}>Caricamento grafo sanitario...</div>}
 
+      {!loading && loadError && (
+        <div role="alert" style={{margin:20,padding:"24px 20px",textAlign:"center",background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8}}>
+          <div style={{fontSize:15,fontWeight:500,marginBottom:6}}>Dati non disponibili, riprova tra poco.</div>
+          <div style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:14}}>Il servizio potrebbe essere in fase di avvio. Dettaglio: {loadError}</div>
+          <button onClick={()=>{setLoading(true); fetchData()}} style={{fontSize:13,padding:"6px 14px",borderRadius:6,border:"0.5px solid #1D9E75",background:"#1D9E75",color:"#fff",cursor:"pointer"}}>Riprova</button>
+        </div>
+      )}
+
       {/* Graph tab */}
-      {!loading && tab === "graph" && (
+      {!loading && !loadError && tab === "graph" && (
         <div style={{display:"flex",gap:0}}>
           <div style={{flex:1,position:"relative"}}>
             <div style={{position:"absolute",top:12,left:12,zIndex:10,background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"8px 12px",display:"flex",flexWrap:"wrap",gap:"6px 12px",maxWidth:460}}>
@@ -386,8 +470,17 @@ export default function App() {
             <canvas ref={canvasRef} width={W} height={H}
               style={{width:"100%",height:500,display:"block"}}
               onMouseDown={onMouseDown} onMouseMove={onMouseMove} onMouseUp={onMouseUp}
-              onMouseLeave={()=>{draggingRef.current=null;hoveredRef.current=null}}
+              onMouseLeave={()=>{draggingRef.current=null;hoveredRef.current=null;panRef.current=null}}
             />
+            <div style={{position:"absolute",bottom:12,left:12,zIndex:10,display:"flex",gap:4,alignItems:"center",background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"4px 6px",fontSize:12}}>
+              <button onClick={()=>zoomButton(1.25)} aria-label="Ingrandisci" style={zoomBtn}>+</button>
+              <button onClick={()=>zoomButton(0.8)} aria-label="Riduci" style={zoomBtn}>−</button>
+              <button onClick={resetView} style={{...zoomBtn,width:"auto",padding:"0 8px"}}>Adatta</button>
+              <span style={{color:"var(--color-text-tertiary)",padding:"0 4px"}}>Zoom {zoom}%</span>
+            </div>
+            <div style={{position:"absolute",bottom:12,right:12,zIndex:10,fontSize:11,color:"var(--color-text-tertiary)"}}>
+              Rotella: zoom · trascina lo sfondo: sposta · clic su un nodo: dettagli
+            </div>
           </div>
 
           {/* Side panel */}
@@ -424,7 +517,7 @@ export default function App() {
       )}
 
       {/* Alerts tab */}
-      {!loading && tab === "alerts" && (
+      {!loading && !loadError && tab === "alerts" && (
         <div style={{padding:20,maxWidth:800}}>
           <h2 style={{fontSize:15,fontWeight:500,marginBottom:16}}>Alert predittivi SSN ({alerts.length})</h2>
           {status?.alerts_error && (
@@ -449,7 +542,7 @@ export default function App() {
       )}
 
       {/* Risk scores tab */}
-      {!loading && tab === "risk" && (
+      {!loading && !loadError && tab === "risk" && (
         <div style={{padding:20,maxWidth:700}}>
           <h2 style={{fontSize:15,fontWeight:500,marginBottom:16}}>Risk Score — Entità ad alto rischio SSN</h2>
           <div style={{display:"grid",gap:8}}>
