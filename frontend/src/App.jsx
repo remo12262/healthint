@@ -114,7 +114,7 @@ export default function App() {
       setStatus(st)
       await fetchData()
       setRefreshing(false)
-      if (st.last_error) setNotice({kind:"error", text:`Aggiornamento non riuscito: ${st.last_error}`})
+      if (st.last_error) setNotice({kind:"error", text:`Aggiornamento non riuscito, restano i dati precedenti: ${st.last_error}`})
       else if (st.alerts_error) setNotice({kind:"error", text:`Dati aggiornati, ma gli alert non sono stati generati: ${st.alerts_error}`})
       else setNotice({kind:"ok", text:"Dati aggiornati."})
       return

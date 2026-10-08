@@ -48,13 +48,20 @@ class Scheduler:
                 raise RuntimeError("nessuna fonte raggiungibile: " + "; ".join(
                     f"{k}: {v}" for k, v in source_errors.items()))
 
-            # 2. Richiami openFDA direttamente nel grafo (senza Claude), uno per relazione
-            self.db.drop_legacy_recall_edges()
-            for key in ("drug_recalls", "device_recalls"):
+            # Fonti che hanno davvero portato dati nel grafo: senza almeno una,
+            # l'aggiornamento non conta come riuscito e la data non cambia
+            contributed = []
+
+            # 2. Richiami openFDA direttamente nel grafo (senza Claude), uno per relazione.
+            # Le relazioni del vecchio formato si tolgono solo se arrivano entrambe le liste
+            if data["drug_recalls"] and data["device_recalls"]:
+                self.db.drop_legacy_recall_edges()
+            for key, source in (("drug_recalls", "openfda_drug"), ("device_recalls", "openfda_device")):
                 if data[key]:
                     result = self.extractor.process_recalls(data[key])
                     await self.db.upsert_entities(result["entities"])
                     await self.db.upsert_relations(result["relations"])
+                    contributed.append(source)
 
             # 3. Notizie OMS analizzate da Claude
             if data["who_outbreaks"]:
@@ -65,6 +72,12 @@ class Scheduler:
                       f"{len(result['relations'])} relations, {len(result['errors'])} errori")
                 if result["errors"] and len(result["errors"]) == min(5, len(data["who_outbreaks"])):
                     source_errors["who_analysis"] = "analisi AI delle notizie OMS non riuscita: " + result["errors"][0]
+                else:
+                    contributed.append("who_outbreaks")
+
+            if not contributed:
+                raise RuntimeError("nessun dato nuovo è entrato nel grafo: " + "; ".join(
+                    f"{k}: {str(v).splitlines()[0][:160]}" for k, v in source_errors.items()))
 
             # 4. Verifica: relazioni orfane eliminate, grafo non valido -> si scarta tutto
             orphans = self.db.drop_orphan_edges()
@@ -105,6 +118,7 @@ class Scheduler:
             self.db.updated_at = finished
             self.db.refresh_info = {
                 "last_success": finished,
+                "contributed": contributed,
                 "new": new,
                 "latest_at_source": latest,
                 "counts": counts,
