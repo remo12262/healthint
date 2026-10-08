@@ -1,7 +1,20 @@
 {
  "version": 1,
- "exported_at": "2026-10-06T17:12:52.806928",
- "data_updated_at": "2026-10-06T17:12:52.806928",
+ "exported_at": "2026-10-08T18:51:30.395767",
+ "data_updated_at": "2026-10-08T18:50:59.637088",
+ "refresh_info": {
+  "last_success": "2026-10-08T18:50:59.637088",
+  "counts": {
+   "openfda_drug": 40,
+   "openfda_device": 40,
+   "who_outbreaks": 20
+  },
+  "source_errors": {
+   "who_analysis": "analisi AI delle notizie OMS non riuscita: errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqGnizAq6HfAcgrGjVnk'}"
+  },
+  "alerts_error": "errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqGnkiqrXBDKviDvyBwz'}",
+  "alerts_attempt": "2026-10-08T18:50:59.637088"
+ },
  "nodes": [
   {
    "id": "dr_bernes_whole_health_products",
@@ -12,7 +25,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-06T17:05:13.008030"
+   "updated_at": "2026-10-08T18:50:58.870856"
   },
   {
    "id": "qikmoov_llc",
@@ -23,7 +36,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-06T17:05:13.008030"
+   "updated_at": "2026-10-08T18:50:58.870856"
   },
   {
    "id": "abiomed_inc",
@@ -34,7 +47,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "boston_scientific_corporation",
@@ -45,7 +58,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Imager II Angiographic Catheters    M001314001  IMAGER II/5/ST/65/038 BX5;    M001314011  IMAGER II/5/ST/100/038 BX5;   ",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "nova_biomedical_corporation",
@@ -56,7 +69,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: StatStrip Glucose and B- Ketone meter. Model No: 63910. Glucose test system.",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "bd_switzerland_sarl",
@@ -67,7 +80,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: BD Alaris Pump Infusion Sets 10561554*\t10885403232565\t50885403232563\tBD Alaris Pump Infusion Set, 15 Micron Filter, Back",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "given_imaging_ltd",
@@ -78,7 +91,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Bravo CF capsule delivery device, 5-pack, Product Number FGS-0635,     Bravo CF capsule delivery device, 1-pack, Product",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "amgen_inc",
@@ -89,7 +102,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-06T17:05:13.008030"
+   "updated_at": "2026-10-08T18:50:58.870856"
   },
   {
    "id": "humanrace",
@@ -100,7 +113,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-06T17:05:13.008030"
+   "updated_at": "2026-10-08T18:50:58.870856"
   },
   {
    "id": "herbal_doctor_remedies",
@@ -111,7 +124,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-06T17:05:13.008030"
+   "updated_at": "2026-10-08T18:50:58.870856"
   },
   {
    "id": "philips_north_america_llc",
@@ -122,7 +135,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Achieva 3.0T;  Model Numbers (REF): 1. 781177, 2. 781277, 3. 781278, 4. 781344, 5. 781345;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "intervascular_sas",
@@ -133,7 +146,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "heidelberg_engineering_gmbh",
@@ -144,7 +157,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "philips_ultrasound_llc",
@@ -155,7 +168,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips EPIQ Elite Diagnostic Ultrasound System  Model # 795234",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "philips_north_america",
@@ -166,7 +179,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips PIC iX Essentials  REF:867093",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "mirion_technologies_capintec_inc",
@@ -177,7 +190,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Captus 4000e Thyroid Uptake System, Models: 1. 5430-30151, 2. 5430-30152, 3. 5430-30154;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "wilson_cook_medical_inc",
@@ -188,7 +201,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Product Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Model/Catalog Number: HEMO-7, HE",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "maquet_cardiopulmonary_gmbh",
@@ -199,7 +212,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Percutaneous Insertion Kit (PIK), Guidewire 100 cm, Model Numbers: 701053068 (USA), 701047384 (OUS);",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "icu_medical_inc",
@@ -210,7 +223,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: CADD Yellow Medication Cassette Reservoir with NRFit connector    US Product Codes: 21-7600-24, 21-7609-24    OUS Produc",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "ge_medical_systems_information_t",
@@ -221,7 +234,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PORTRAIT CORE SERVICES SOFTWARE V1.0.5, Ref# 5697353",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-06T17:05:13.008498"
+   "updated_at": "2026-10-08T18:50:58.871219"
   },
   {
    "id": "regSicilia",
@@ -298,7 +311,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 25,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-06T17:05:13.008030"
+   "updated_at": "2026-10-08T18:50:58.870856"
   },
   {
    "id": "humanitas",
