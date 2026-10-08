@@ -31,6 +31,56 @@ function formatDateTime(iso) {
 
 const zoomBtn = {width:24,height:24,border:"0.5px solid var(--color-border-tertiary)",borderRadius:4,background:"var(--color-background-secondary)",cursor:"pointer",fontSize:14,lineHeight:"20px"}
 
+// Tipo di relazione in italiano, dal punto di vista del nodo selezionato
+const REL_LABEL = {
+  FORNISCE:      ["fornisce", "riceve forniture da"],
+  CONTROLLA:     ["controlla", "è controllato da"],
+  FINANZIA:      ["finanzia", "è finanziato da"],
+  ACCREDITA:     ["accredita", "è accreditato da"],
+  COLLABORA_CON: ["collabora con", "collabora con"],
+  RISCHIO_PER:   ["è un fattore di rischio per", "è esposto a un rischio da"],
+  MEMBRO_DI:     ["fa parte di", "comprende"],
+  REGOLA:        ["regola", "è regolato da"],
+  VINCE_APPALTO: ["vince appalti di", "assegna appalti a"],
+  INDAGA_SU:     ["indaga su", "è oggetto di indagine da"],
+}
+
+const NODE_TYPE_LABEL = {
+  HospitalNetwork: "Azienda sanitaria o ospedaliera", PharmaCompany: "Azienda farmaceutica o di dispositivi",
+  RegulatorAgency: "Ente regolatore", RegionalAuthority: "Regione", ProcurementBody: "Centrale acquisti / associazione",
+  ResearchInstitute: "Istituto di ricerca", PrivateGroup: "Gruppo sanitario privato", InsuranceBody: "Fondo / assicurazione",
+  Person: "Persona",
+}
+
+function formatDay(d) {
+  if (!d) return ""
+  const m = String(d).match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/)
+  if (!m) return String(d)
+  return m[3] ? `${m[3]}/${m[2]}/${m[1]}` : `${m[2]}/${m[1]}`
+}
+
+// Da dove viene una relazione: richiamo FDA, notizia OMS o inserimento manuale
+function relationOrigin(r) {
+  const recall = (r.id || "").startsWith("recall_") ? r.id.slice(7) : null
+  if (recall) {
+    const kind = recall.startsWith("Z-") ? "device" : "drug"
+    return {kind: "fda", recall,
+      url: `https://api.fda.gov/${kind}/enforcement.json?search=recall_number:%22${encodeURIComponent(recall)}%22`}
+  }
+  if ((r.source_doc || "").includes("DON")) {
+    return {kind: "who", url: `https://www.who.int/emergencies/disease-outbreak-news/item/${r.source_doc}`}
+  }
+  return {kind: "manual"}
+}
+
+// "[Class II] Z-3233-2026: motivo" -> classe e motivo leggibili
+function parseRecallFact(fact) {
+  const m = String(fact || "").match(/^\[Class (I{1,3})\]\s*[^:]*:\s*(.*)$/)
+  return m ? {cls: m[1], reason: m[2]} : null
+}
+
+const CLASS_TEXT = {I: "Classe I (rischio grave)", II: "Classe II (rischio moderato)", III: "Classe III (rischio basso)"}
+
 function riskColor(score) {
   if (score >= 80) return "#E24B4A"
   if (score >= 60) return "#EF9F27"
@@ -43,6 +93,7 @@ export default function App() {
   const [nodes, setNodes] = useState([])
   const [edges, setEdges] = useState([])
   const [alerts, setAlerts] = useState([])
+  const [signals, setSignals] = useState(null)
   const [stats, setStats] = useState({})
   const [selected, setSelected] = useState(null)
   const [nodeDetails, setNodeDetails] = useState(null)
@@ -70,8 +121,9 @@ export default function App() {
       return r.json()
     })
     try {
-      const [g, a, s, st] = await Promise.all([
+      const [g, a, s, st, sig] = await Promise.all([
         get("/api/graph"), get("/api/alerts"), get("/api/stats"), get("/api/status").catch(() => null),
+        get("/api/signals").catch(() => null),
       ])
       if (!Array.isArray(g?.nodes) || g.nodes.length === 0) throw new Error("il grafo ricevuto non contiene nodi")
       setNodes(g.nodes)
@@ -79,6 +131,7 @@ export default function App() {
       setAlerts(Array.isArray(a) ? a : [])
       setStats(s || {})
       if (st) setStatus(st)
+      setSignals(sig)
       setLoadError(null)
     } catch (e) {
       console.error("[HEALTHINT] caricamento dati non riuscito:", e)
@@ -484,27 +537,54 @@ export default function App() {
           </div>
 
           {/* Side panel */}
-          <div style={{width:240,borderLeft:"0.5px solid var(--color-border-tertiary)",background:"var(--color-background-primary)",padding:16,overflowY:"auto",maxHeight:500}}>
+          <div style={{width:320,borderLeft:"0.5px solid var(--color-border-tertiary)",background:"var(--color-background-primary)",padding:16,overflowY:"auto",maxHeight:500}}>
             {!nodeDetails && <p style={{fontSize:12,color:"var(--color-text-tertiary)"}}>Clicca un nodo per dettagli</p>}
             {nodeDetails && (
               <div>
                 <div style={{display:"flex",justifyContent:"space-between",marginBottom:8}}>
-                  <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:NODE_COLORS[nodeDetails.node?.type]+"22",color:NODE_COLORS[nodeDetails.node?.type],fontWeight:500}}>{nodeDetails.node?.type}</span>
-                  <span style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:riskColor(nodeDetails.node?.risk_score)+"22",color:riskColor(nodeDetails.node?.risk_score),fontWeight:500}}>Risk {nodeDetails.node?.risk_score}</span>
+                  <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:NODE_COLORS[nodeDetails.node?.type]+"22",color:NODE_COLORS[nodeDetails.node?.type],fontWeight:500}}>{NODE_TYPE_LABEL[nodeDetails.node?.type] || nodeDetails.node?.type}</span>
+                  <span title="Punteggio di rischio da 0 a 100" style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:riskColor(nodeDetails.node?.risk_score)+"22",color:riskColor(nodeDetails.node?.risk_score),fontWeight:500}}>Rischio {nodeDetails.node?.risk_score}/100</span>
                 </div>
                 <div style={{fontSize:15,fontWeight:500,marginBottom:6}}>{nodeDetails.node?.label}</div>
                 {nodeDetails.node?.region && <div style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:8}}>📍 {nodeDetails.node.region}</div>}
-                <div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.5,marginBottom:12}}>{nodeDetails.node?.description}</div>
+                <div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.5,marginBottom:8}}>{nodeDetails.node?.description}</div>
+                {(() => {
+                  const origins = new Set((nodeDetails.relations || []).map(r => relationOrigin(r).kind))
+                  const text = origins.has("fda") ? "Presente nei richiami pubblicati dalla FDA (openFDA)."
+                    : origins.has("who") ? "Ricavato dalle notizie OMS sui focolai."
+                    : "Nodo di base inserito manualmente: non proviene da una fonte aggiornata in automatico."
+                  return <div style={{fontSize:11,color:"var(--color-text-tertiary)",marginBottom:12,fontStyle:"italic"}}>Origine: {text}</div>
+                })()}
                 {nodeDetails.relations?.length > 0 && (
                   <>
                     <div style={{fontSize:11,fontWeight:500,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>Relazioni ({nodeDetails.relations.length})</div>
                     {nodeDetails.relations.map((r,i) => {
                       const isSource = r.source === nodeDetails.node?.id
                       const other = isSource ? r.target_label : r.source_label
+                      const origin = relationOrigin(r)
+                      const verb = origin.kind === "fda"
+                        ? (r.target === "ema" ? "ha un richiamo FDA con distribuzione europea o mondiale (ambito di" : "ha un richiamo FDA con distribuzione in Italia (ambito di")
+                        : (REL_LABEL[r.type] || [r.type, r.type])[isSource ? 0 : 1]
+                      const recall = origin.kind === "fda" ? parseRecallFact(r.fact) : null
                       return (
-                        <div key={i} style={{fontSize:12,padding:"6px 8px",borderRadius:6,background:"var(--color-background-secondary)",marginBottom:4}}>
-                          <div style={{color:"var(--color-text-primary)",fontWeight:500}}>{isSource?"→":"←"} {other}</div>
-                          <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{r.type}</div>
+                        <div key={r.id || i} style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",border:"0.5px solid var(--color-border-tertiary)",marginBottom:6,lineHeight:1.45}}>
+                          <div style={{display:"flex",justifyContent:"space-between",gap:8,alignItems:"baseline"}}>
+                            <span style={{color:"var(--color-text-secondary)"}}>
+                              {nodeDetails.node?.label} <em>{verb}</em> <strong style={{color:"var(--color-text-primary)",fontWeight:500}}>{other}</strong>{origin.kind === "fda" && ")"}
+                            </span>
+                            {r.risk_score != null && <span title="Rischio della relazione (0-100)" style={{flexShrink:0,fontSize:11,fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}</span>}
+                          </div>
+                          {recall ? (
+                            <div style={{marginTop:4}}>
+                              <div><strong style={{fontWeight:500}}>Richiamo FDA {origin.recall}</strong> · {CLASS_TEXT[recall.cls] || "Classe " + recall.cls}</div>
+                              {recall.reason && <div style={{color:"var(--color-text-secondary)"}}>Motivo: {recall.reason}</div>}
+                            </div>
+                          ) : (r.fact && <div style={{marginTop:4,color:"var(--color-text-primary)"}}>{r.fact}</div>)}
+                          <div style={{marginTop:4,fontSize:11,color:"var(--color-text-tertiary)"}}>
+                            {r.date && <>{origin.kind === "fda" ? "Pubblicato dalla FDA il " : "Data: "}{formatDay(r.date)} · </>}
+                            {origin.kind === "manual" ? "Dato inserito manualmente"
+                              : <a href={origin.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>{origin.kind === "fda" ? "Vedi il richiamo su openFDA" : "Vedi la notizia OMS"}</a>}
+                          </div>
                         </div>
                       )
                     })}
@@ -519,7 +599,37 @@ export default function App() {
       {/* Alerts tab */}
       {!loading && !loadError && tab === "alerts" && (
         <div style={{padding:20,maxWidth:800}}>
-          <h2 style={{fontSize:15,fontWeight:500,marginBottom:16}}>Alert predittivi SSN ({alerts.length})</h2>
+          <h2 style={{fontSize:15,fontWeight:500,marginBottom:4}}>Segnalazioni dalle fonti</h2>
+          <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:12}}>Dati reali scaricati a ogni aggiornamento, senza elaborazione dell'AI.</p>
+          {!signals?.who?.length && !signals?.recalls?.length && (
+            <p style={{fontSize:13,color:"var(--color-text-tertiary)",marginBottom:16}}>Le segnalazioni compariranno dopo il prossimo aggiornamento dei dati.</p>
+          )}
+          {signals?.who?.length > 0 && (
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:12,fontWeight:500,marginBottom:6}}>Ultimi focolai segnalati dall'OMS</div>
+              {signals.who.map((o,i) => (
+                <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:"3px solid #378ADD",borderRadius:8,padding:"8px 14px",marginBottom:6,fontSize:13}}>
+                  <a href={o.url} target="_blank" rel="noopener noreferrer" style={{color:"var(--color-text-primary)",textDecoration:"none",fontWeight:500}}>{o.title}</a>
+                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>Pubblicato dall'OMS il {formatDay(o.date)}</div>
+                </div>
+              ))}
+            </div>
+          )}
+          {signals?.recalls?.length > 0 && (
+            <div style={{marginBottom:24}}>
+              <div style={{fontSize:12,fontWeight:500,marginBottom:6}}>Richiami FDA più recenti con distribuzione in Italia</div>
+              {signals.recalls.map((r,i) => (
+                <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${r.class === "Class I" ? "#E24B4A" : r.class === "Class II" ? "#EF9F27" : "#1D9E75"}`,borderRadius:8,padding:"8px 14px",marginBottom:6,fontSize:13,lineHeight:1.45}}>
+                  <div><strong style={{fontWeight:500}}>{r.firm}</strong> · {CLASS_TEXT[(r.class || "").replace("Class ", "")] || r.class} · {r.kind === "device" ? "dispositivo medico" : "farmaco"}</div>
+                  <div style={{color:"var(--color-text-secondary)"}}>{r.product}</div>
+                  <div style={{color:"var(--color-text-secondary)"}}>Motivo: {r.reason}</div>
+                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>Richiamo {r.recall} · pubblicato dalla FDA il {formatDay(r.date)} · <a href={r.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>vedi alla fonte</a></div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <h2 style={{fontSize:15,fontWeight:500,marginBottom:12}}>Alert generati dall'AI ({alerts.length})</h2>
           {status?.alerts_error && (
             <div role="alert" style={{background:"#E24B4A1A",border:"0.5px solid #E24B4A",borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:"#A32D2D"}}>
               La generazione degli alert non è riuscita ({formatDateTime(status.alerts_attempt)}): {status.alerts_error}.
@@ -544,7 +654,11 @@ export default function App() {
       {/* Risk scores tab */}
       {!loading && !loadError && tab === "risk" && (
         <div style={{padding:20,maxWidth:700}}>
-          <h2 style={{fontSize:15,fontWeight:500,marginBottom:16}}>Risk Score — Entità ad alto rischio SSN</h2>
+          <h2 style={{fontSize:15,fontWeight:500,marginBottom:4}}>Risk Score — entità con il rischio più alto</h2>
+          <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:16,lineHeight:1.5}}>
+            Per le aziende con richiami FDA il punteggio è ricalcolato a ogni aggiornamento: gravità del richiamo (classe I 85, II 55, III 25)
+            pesata per la sua recenza (100% entro 90 giorni, 75% entro un anno, 50% oltre). Gli enti di base hanno un valore assegnato manualmente.
+          </p>
           <div style={{display:"grid",gap:8}}>
             {nodes.sort((a,b)=>b.risk_score-a.risk_score).slice(0,15).map((n,i) => (
               <div key={n.id} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"10px 16px",display:"flex",alignItems:"center",gap:12}}>
@@ -552,11 +666,12 @@ export default function App() {
                 <div style={{width:8,height:8,borderRadius:"50%",background:NODE_COLORS[n.type]||"#888"}}/>
                 <div style={{flex:1}}>
                   <div style={{fontWeight:500,fontSize:13}}>{n.label}</div>
-                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{n.type} · {n.region||"—"}</div>
+                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{NODE_TYPE_LABEL[n.type] || n.type} · {n.region||"—"}</div>
+                  {n.risk_basis && <div style={{fontSize:11,color:"var(--color-text-secondary)"}}>Motivo: {n.risk_basis}</div>}
                 </div>
                 <div style={{textAlign:"right"}}>
                   <div style={{fontSize:14,fontWeight:500,color:riskColor(n.risk_score)}}>{n.risk_score}</div>
-                  <div style={{fontSize:10,color:"var(--color-text-tertiary)"}}>risk score</div>
+                  <div style={{fontSize:10,color:"var(--color-text-tertiary)"}}>su 100</div>
                 </div>
                 <div style={{width:80,height:6,background:"var(--color-background-secondary)",borderRadius:3,overflow:"hidden"}}>
                   <div style={{width:`${n.risk_score}%`,height:"100%",background:riskColor(n.risk_score),borderRadius:3}}/>

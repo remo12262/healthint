@@ -45,6 +45,7 @@ _last_manual_refresh = 0.0
 async def startup():
     # Solo caricamento dati (seed.json): nessuna chiamata a Claude all'avvio
     await db.init()
+    db.recompute_recall_risk()
 
 
 @app.get("/api/graph")
@@ -66,6 +67,12 @@ async def get_node(node_id: str):
 @app.get("/api/alerts")
 async def get_alerts(severity: Optional[str] = None):
     return await db.get_alerts(severity)
+
+
+@app.get("/api/signals")
+async def get_signals():
+    """Ultimi focolai OMS e richiami FDA recenti, direttamente dalle fonti (senza AI)."""
+    return db.signals or {"who": [], "recalls": []}
 
 
 @app.get("/api/risk-scores")

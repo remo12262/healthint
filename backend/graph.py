@@ -1,4 +1,5 @@
 import copy
+import re
 import json
 import os
 from typing import List, Dict, Optional
@@ -6,6 +7,7 @@ from datetime import datetime
 
 SEED_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "seed.json")
 SEED_VERSION = 1
+CLASS_RISK = {"I": 85, "II": 55, "III": 25}
 
 
 class GraphDB:
@@ -16,6 +18,8 @@ class GraphDB:
         self.updated_at: Optional[str] = None
         # Esito dell'ultimo aggiornamento riuscito (errori fonti/alert), salvato nel seed
         self.refresh_info: Dict = {}
+        # Segnalazioni dalle fonti (ultimi focolai OMS, richiami FDA recenti), senza AI
+        self.signals: Dict = {}
 
     async def init(self):
         if not self.nodes:
@@ -35,6 +39,7 @@ class GraphDB:
             self.alerts = {a["id"]: a for a in seed.get("alerts", [])}
             self.updated_at = seed.get("data_updated_at") or seed.get("exported_at")
             self.refresh_info = seed.get("refresh_info") or {}
+            self.signals = seed.get("signals") or {}
             print(f"[graph] Seed caricato: {len(self.nodes)} nodi, {len(self.edges)} relazioni, {len(self.alerts)} alert")
             return True
         except FileNotFoundError:
@@ -50,6 +55,7 @@ class GraphDB:
             "exported_at": datetime.utcnow().isoformat(),
             "data_updated_at": self.updated_at,
             "refresh_info": self.refresh_info,
+            "signals": self.signals,
             "nodes": list(self.nodes.values()),
             "edges": list(self.edges.values()),
             "alerts": list(self.alerts.values()),
@@ -80,14 +86,14 @@ class GraphDB:
             ("e3",  "iss",       "minsalute",  "COLLABORA_CON", "ISS fornisce supporto scientifico al Ministero della Salute.", 8, "1958-01"),
             ("e4",  "agenas",    "minsalute",  "MEMBRO_DI",     "AGENAS è agenzia tecnica del Ministero della Salute.", 10, "2003-01"),
             ("e5",  "consip",    "minsalute",  "COLLABORA_CON", "CONSIP gestisce gare nazionali farmaci per conto del MEF/Salute.", 15, "2003-01"),
-            ("e6",  "regSicilia","minsalute",  "MEMBRO_DI",     "Regione Sicilia recepisce LEA e piani nazionali SSN.", 20, "2001-01"),
-            ("e7",  "asp_me",    "regSicilia", "CONTROLLA",     "ASP Messina è sotto il controllo della Regione Sicilia.", 25, "2009-01"),
-            ("e8",  "aospme",    "regSicilia", "CONTROLLA",     "AO Papardo dipende dall'assessorato alla salute siciliano.", 22, "2009-01"),
+            ("e6",   "minsalute", "regSicilia", "REGOLA",        "La Regione Sicilia recepisce i LEA e i piani nazionali definiti dal Ministero della Salute.", 20, "2001-01"),
+            ("e7",  "regSicilia","asp_me",     "CONTROLLA",     "La Regione Sicilia controlla l'ASP di Messina.", 25, "2009-01"),
+            ("e8",  "regSicilia","aospme",     "CONTROLLA",     "L'AO Papardo di Messina dipende dall'assessorato alla salute siciliano.", 22, "2009-01"),
             ("e9",  "pfizer",    "aifa",       "REGOLA",        "AIFA monitora e autorizza i farmaci Pfizer in Italia.", 12, "2004-01"),
             ("e10", "consip",    "pfizer",     "VINCE_APPALTO", "Pfizer aggiudicataria di gare CONSIP per vaccini e antibiotici.", 30, "2023-01"),
-            ("e11", "regSicilia","agenas",     "RISCHIO_PER",   "Sicilia sotto piano di rientro: monitorata da AGENAS per LEA.", 68, "2019-01"),
+            ("e11",  "agenas",    "regSicilia", "CONTROLLA",     "La Sicilia è in piano di rientro dal disavanzo sanitario: AGENAS monitora l'erogazione dei LEA.", 68, None),
             ("e12", "humanitas", "aifa",       "REGOLA",        "AIFA certifica i centri Humanitas per sperimentazioni cliniche.", 15, "2010-01"),
-            ("e13", "gvm",       "regSicilia", "VINCE_APPALTO", "GVM ha strutture accreditate con SSR siciliano.", 35, "2020-01"),
+            ("e13", "regSicilia","gvm",        "ACCREDITA",     "GVM ha strutture accreditate con il servizio sanitario regionale siciliano.", 35, "2020-01"),
         ]
         for n in nodes:
             self.nodes[n[0]] = {
@@ -106,11 +112,13 @@ class GraphDB:
 
     def snapshot(self) -> Dict:
         return copy.deepcopy({"nodes": self.nodes, "edges": self.edges, "alerts": self.alerts,
-                              "updated_at": self.updated_at, "refresh_info": self.refresh_info})
+                              "updated_at": self.updated_at, "refresh_info": self.refresh_info,
+                              "signals": self.signals})
 
     def restore(self, snap: Dict):
         self.nodes, self.edges, self.alerts = snap["nodes"], snap["edges"], snap["alerts"]
         self.updated_at, self.refresh_info = snap["updated_at"], snap["refresh_info"]
+        self.signals = snap.get("signals", {})
 
     def drop_legacy_recall_edges(self) -> int:
         """Relazioni di richiamo del vecchio formato (una per azienda): sostituite da una per richiamo."""
@@ -120,6 +128,40 @@ class GraphDB:
         for k in legacy:
             del self.edges[k]
         return len(legacy)
+
+    def recompute_recall_risk(self, today: Optional[datetime] = None) -> int:
+        """Rischio delle aziende con richiami FDA: gravità della classe x recenza del richiamo.
+
+        Ricalcolato a ogni aggiornamento (non solo in aumento): un richiamo vecchio pesa meno.
+        Classe I 85, II 55, III 25; peso 100% entro 90 giorni, 75% entro un anno, 50% oltre.
+        """
+        today = today or datetime.utcnow()
+        best: Dict[str, tuple] = {}
+        for k, e in self.edges.items():
+            if not k.startswith("recall_"):
+                continue
+            m = re.match(r"\[Class (I{1,3})\]", str(e.get("fact", "")))
+            if not m:
+                continue
+            cls = m.group(1)
+            try:
+                when = datetime.strptime(e.get("date") or "", "%Y-%m-%d")
+                age = (today - when).days
+                factor = 1.0 if age <= 90 else 0.75 if age <= 365 else 0.5
+                day = when.strftime("%d/%m/%Y")
+            except ValueError:
+                factor, day = 0.5, "data non indicata"
+            score = round(CLASS_RISK[cls] * factor)
+            basis = f"Richiamo FDA {k[7:]} di classe {cls} del {day}"
+            if e["source"] not in best or score > best[e["source"]][0]:
+                best[e["source"]] = (score, basis)
+        for nid, (score, basis) in best.items():
+            if nid in self.nodes:
+                self.nodes[nid]["risk_score"] = score
+                self.nodes[nid]["risk_basis"] = basis
+        for n in self.nodes.values():
+            n.setdefault("risk_basis", "Valore assegnato manualmente")
+        return len(best)
 
     def drop_orphan_edges(self) -> int:
         """Elimina le relazioni che puntano a nodi inesistenti; restituisce quante."""
@@ -189,7 +231,8 @@ class GraphDB:
         nodes = sorted(self.nodes.values(), key=lambda n: n.get("risk_score", 0), reverse=True)
         return [
             {"id": n["id"], "label": n["label"], "type": n["type"],
-             "region": n.get("region"), "risk_score": n.get("risk_score", 0)}
+             "region": n.get("region"), "risk_score": n.get("risk_score", 0),
+             "risk_basis": n.get("risk_basis")}
             for n in nodes[:20]
         ]
 
@@ -214,6 +257,8 @@ class GraphDB:
                 self.nodes[eid]["risk_score"] = max(
                     self.nodes[eid].get("risk_score", 0), e.get("risk_score", 0)
                 )
+                if e.get("risk_basis"):
+                    self.nodes[eid]["risk_basis"] = e["risk_basis"]
                 self.nodes[eid]["updated_at"] = now
             else:
                 self.nodes[eid] = {
@@ -223,6 +268,8 @@ class GraphDB:
                     "risk_score": e.get("risk_score", 0),
                     "created_at": now, "updated_at": now,
                 }
+                if e.get("risk_basis"):
+                    self.nodes[eid]["risk_basis"] = e["risk_basis"]
 
     async def upsert_relations(self, relations: List[Dict]):
         now = datetime.utcnow().isoformat()

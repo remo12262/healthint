@@ -66,6 +66,8 @@ class Scheduler:
             # 3. Notizie OMS analizzate da Claude
             if data["who_outbreaks"]:
                 result = await self.extractor.extract_batch(data["who_outbreaks"][:5], text_field="summary")
+                for ent in result["entities"]:
+                    ent["risk_basis"] = "Stima dell'AI dalle notizie OMS"
                 await self.db.upsert_entities(result["entities"])
                 await self.db.upsert_relations(result["relations"])
                 print(f"[scheduler] WHO Claude extraction: {len(result['entities'])} entities, "
@@ -78,6 +80,12 @@ class Scheduler:
             if not contributed:
                 raise RuntimeError("nessun dato nuovo è entrato nel grafo: " + "; ".join(
                     f"{k}: {str(v).splitlines()[0][:160]}" for k, v in source_errors.items()))
+
+            # Rischio delle aziende ricalcolato da gravità e recenza dei richiami
+            self.db.recompute_recall_risk()
+
+            # Segnalazioni dalle fonti, senza AI: se una fonte non risponde restano le precedenti
+            self.db.signals = self._signals(data, snap.get("signals") or {})
 
             # 4. Verifica: relazioni orfane eliminate, grafo non valido -> si scarta tutto
             orphans = self.db.drop_orphan_edges()
@@ -135,6 +143,27 @@ class Scheduler:
             self.last_error = f"{type(e).__name__}: {e}"
             print(f"[scheduler] ERRORE durante il refresh, ripristinata l'ultima versione funzionante: {self.last_error}")
             return False
+
+    @staticmethod
+    def _signals(data: dict, previous: dict) -> dict:
+        def iso(d):
+            return f"{d[:4]}-{d[4:6]}-{d[6:8]}" if len(d or "") == 8 else None
+
+        who = [{"title": o["title"], "date": o.get("published"), "url": o.get("url")}
+               for o in data["who_outbreaks"][:8]] or previous.get("who", [])
+        recalls = []
+        for key, kind in (("drug_recalls", "drug"), ("device_recalls", "device")):
+            for r in data[key]:
+                recalls.append({
+                    "recall": r.get("id"), "class": r.get("classification"), "firm": r.get("recalling_firm"),
+                    "product": r.get("product_description", "")[:160], "reason": r.get("reason_for_recall", "")[:200],
+                    "date": iso(r.get("report_date", "")), "kind": kind,
+                    "url": f"https://api.fda.gov/{kind}/enforcement.json?search=recall_number:%22{r.get('id')}%22",
+                })
+        recalls.sort(key=lambda r: r["date"] or "", reverse=True)
+        if not recalls:
+            recalls = previous.get("recalls", [])
+        return {"generated_at": datetime.utcnow().isoformat(), "who": who, "recalls": recalls[:12]}
 
     def status(self) -> dict:
         info = self.db.refresh_info or {}
