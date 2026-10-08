@@ -21,6 +21,14 @@ const SEVERITY_COLOR = {
   LOW:      "#1D9E75",
 }
 
+// Le date dal backend sono in UTC senza fuso: si aggiunge la Z prima di convertirle
+function formatDateTime(iso) {
+  if (!iso) return ""
+  const d = new Date(iso + (/(Z|[+-]\d\d:\d\d)$/.test(iso) ? "" : "Z"))
+  return d.toLocaleDateString("it-IT", {day:"numeric", month:"long", year:"numeric"}) +
+    " alle " + d.toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"})
+}
+
 function riskColor(score) {
   if (score >= 80) return "#E24B4A"
   if (score >= 60) return "#EF9F27"
@@ -38,6 +46,9 @@ export default function App() {
   const [nodeDetails, setNodeDetails] = useState(null)
   const [tab, setTab] = useState("graph")
   const [loading, setLoading] = useState(true)
+  const [status, setStatus] = useState(null)
+  const [refreshing, setRefreshing] = useState(false)
+  const [notice, setNotice] = useState(null)   // {kind: "info"|"error"|"ok", text}
   const posRef = useRef({})
   const velRef = useRef({})
   const animRef = useRef(null)
@@ -47,10 +58,11 @@ export default function App() {
 
   const fetchData = useCallback(async () => {
     try {
-      const [gRes, aRes, sRes] = await Promise.all([
+      const [gRes, aRes, sRes, stRes] = await Promise.all([
         fetch(`${API}/api/graph`),
         fetch(`${API}/api/alerts`),
         fetch(`${API}/api/stats`),
+        fetch(`${API}/api/status`),
       ])
       const g = await gRes.json()
       const a = await aRes.json()
@@ -59,6 +71,7 @@ export default function App() {
       setEdges(g.edges || [])
       setAlerts(a || [])
       setStats(s || {})
+      if (stRes.ok) setStatus(await stRes.json())
       setLoading(false)
     } catch (e) {
       console.error(e)
@@ -67,6 +80,40 @@ export default function App() {
   }, [])
 
   useEffect(() => { fetchData() }, [fetchData])
+
+  async function refreshNow() {
+    setNotice(null)
+    let res
+    try {
+      res = await fetch(`${API}/api/refresh/manual`, {method: "POST"})
+    } catch {
+      setNotice({kind:"error", text:"Server non raggiungibile: riprova tra poco."})
+      return
+    }
+    if (res.status !== 202) {
+      const body = await res.json().catch(() => ({}))
+      setNotice({kind: res.status === 429 ? "info" : "error", text: body.detail || `Errore ${res.status}`})
+      return
+    }
+    setRefreshing(true)
+    setNotice({kind:"info", text:"Aggiornamento in corso: scarico le fonti e rigenero gli alert, ci vuole circa un minuto…"})
+    const before = status?.last_attempt
+    // Si attende che il server finisca (massimo 5 minuti)
+    for (let i = 0; i < 60; i++) {
+      await new Promise(r => setTimeout(r, 5000))
+      const st = await fetch(`${API}/api/status`).then(r => r.json()).catch(() => null)
+      if (!st || st.running || st.last_attempt === before) continue
+      setStatus(st)
+      await fetchData()
+      setRefreshing(false)
+      if (st.last_error) setNotice({kind:"error", text:`Aggiornamento non riuscito: ${st.last_error}`})
+      else if (st.alerts_error) setNotice({kind:"error", text:`Dati aggiornati, ma gli alert non sono stati generati: ${st.alerts_error}`})
+      else setNotice({kind:"ok", text:"Dati aggiornati."})
+      return
+    }
+    setRefreshing(false)
+    setNotice({kind:"error", text:"L'aggiornamento sta impiegando più del previsto: ricarica la pagina tra qualche minuto."})
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -274,7 +321,7 @@ export default function App() {
   return (
     <div style={{fontFamily:"var(--font-sans,sans-serif)",color:"var(--color-text-primary)",minHeight:"100vh",background:"var(--color-background-tertiary)"}}>
       {/* Header */}
-      <div style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"12px 20px",display:"flex",alignItems:"center",gap:16}}>
+      <div style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"12px 20px",display:"flex",alignItems:"center",gap:16,flexWrap:"wrap"}}>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
           <div style={{width:8,height:8,borderRadius:"50%",background:"#1D9E75"}}/>
           <span style={{fontWeight:500,fontSize:16}}>HEALTHINT</span>
@@ -288,9 +335,39 @@ export default function App() {
         <div style={{marginLeft:"auto",display:"flex",gap:12,alignItems:"center"}}>
           {stats.unread_alerts > 0 && <span style={{background:"#E24B4A",color:"#fff",borderRadius:10,padding:"2px 8px",fontSize:11}}>{stats.unread_alerts} alert</span>}
           <span style={{fontSize:12,color:"var(--color-text-tertiary)"}}>{stats.nodes} nodi · {stats.edges} relazioni</span>
-          {stats.updated_at && <span style={{fontSize:12,color:"var(--color-text-tertiary)"}}>Aggiornato al {new Date(stats.updated_at + (stats.updated_at.endsWith("Z") ? "" : "Z")).toLocaleDateString("it-IT", {day:"2-digit", month:"long", year:"numeric"})}</span>}
+          <button onClick={refreshNow} disabled={refreshing}
+            style={{fontSize:12,padding:"5px 12px",borderRadius:6,border:"0.5px solid #1D9E75",background:refreshing?"var(--color-background-secondary)":"#1D9E75",color:refreshing?"var(--color-text-secondary)":"#fff",cursor:refreshing?"default":"pointer"}}>
+            {refreshing ? "Aggiornamento…" : "Aggiorna dati"}
+          </button>
         </div>
       </div>
+
+      {/* Data dell'ultimo aggiornamento riuscito e fonti */}
+      <div style={{background:"var(--color-background-secondary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",display:"flex",flexWrap:"wrap",gap:"4px 16px"}}>
+        <span>
+          <strong style={{fontWeight:500}}>Ultimo aggiornamento:</strong>{" "}
+          {status?.updated_at ? formatDateTime(status.updated_at) : (stats.updated_at ? formatDateTime(stats.updated_at) : "—")}
+        </span>
+        <span>
+          <strong style={{fontWeight:500}}>Fonti:</strong>{" "}
+          {(status?.sources || []).map((src, i) => (
+            <span key={src.key}>{i > 0 && " · "}<a href={src.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>{src.label}</a></span>
+          ))}
+          {status?.sources?.length > 0 && " · analisi AI: Claude (Anthropic)"}
+        </span>
+      </div>
+      {notice && (
+        <div role="status" style={{padding:"8px 20px",fontSize:13,
+          background: notice.kind === "error" ? "#E24B4A1A" : notice.kind === "ok" ? "#1D9E751A" : "#378ADD1A",
+          color: notice.kind === "error" ? "#A32D2D" : "var(--color-text-primary)"}}>
+          {notice.text}
+        </div>
+      )}
+      {!notice && status?.last_error && (
+        <div role="status" style={{padding:"8px 20px",fontSize:13,background:"#E24B4A1A",color:"#A32D2D"}}>
+          L'ultimo tentativo di aggiornamento ({formatDateTime(status.last_attempt)}) non è riuscito: {status.last_error}. Sono mostrati i dati dell'ultimo aggiornamento riuscito.
+        </div>
+      )}
 
       {loading && <div style={{padding:40,textAlign:"center",color:"var(--color-text-secondary)"}}>Caricamento grafo sanitario...</div>}
 
@@ -350,7 +427,13 @@ export default function App() {
       {!loading && tab === "alerts" && (
         <div style={{padding:20,maxWidth:800}}>
           <h2 style={{fontSize:15,fontWeight:500,marginBottom:16}}>Alert predittivi SSN ({alerts.length})</h2>
-          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Nessun alert disponibile al momento.</p>}
+          {status?.alerts_error && (
+            <div role="alert" style={{background:"#E24B4A1A",border:"0.5px solid #E24B4A",borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:"#A32D2D"}}>
+              La generazione degli alert non è riuscita ({formatDateTime(status.alerts_attempt)}): {status.alerts_error}.
+              {alerts.length > 0 && " Sono mostrati gli alert della generazione precedente."}
+            </div>
+          )}
+          {alerts.length === 0 && !status?.alerts_error && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Nessun alert generato finora: usa "Aggiorna dati" o attendi il prossimo aggiornamento automatico.</p>}
           {alerts.map((a,i) => (
             <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${SEVERITY_COLOR[a.severity]||"#888"}`,borderRadius:8,padding:"12px 16px",marginBottom:12}}>
               <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>

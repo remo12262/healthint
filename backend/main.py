@@ -3,9 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 import hmac
 import os
+import time
 from datetime import datetime
 
-from scraper import DataScraper
+from scraper import DataScraper, SOURCES
 from extractor import EntityExtractor
 from graph import GraphDB
 from scheduler import Scheduler
@@ -32,6 +33,11 @@ db = GraphDB()
 scraper = DataScraper()
 extractor = EntityExtractor()
 scheduler = Scheduler(scraper, extractor, db)
+
+# Pulsante "Aggiorna dati": al massimo un aggiornamento manuale ogni MANUAL_REFRESH_SECONDS
+# (globale, non per utente) per contenere i costi dell'API Anthropic
+MANUAL_REFRESH_SECONDS = int(os.environ.get("MANUAL_REFRESH_SECONDS", "3600"))
+_last_manual_refresh = 0.0
 
 
 @app.on_event("startup")
@@ -69,17 +75,50 @@ async def get_risk_scores():
 @app.post("/api/refresh", dependencies=[Depends(rate_limit)])
 async def trigger_refresh(
     background_tasks: BackgroundTasks,
+    wait: bool = False,
     x_refresh_key: Optional[str] = Header(default=None),
 ):
+    """Aggiornamento programmato (GitHub Actions). Con wait=true risponde a lavoro finito."""
     expected = os.environ.get("REFRESH_KEY", "")
     if not expected:
         raise HTTPException(403, "Aggiornamento disattivato: REFRESH_KEY non configurata sul server.")
     if not x_refresh_key or not hmac.compare_digest(x_refresh_key, expected):
         raise HTTPException(401, "Chiave di aggiornamento non valida.")
     if scheduler.running:
-        return {"status": "refresh già in corso", "timestamp": datetime.utcnow().isoformat()}
+        raise HTTPException(409, "Aggiornamento già in corso.")
+    if not wait:
+        background_tasks.add_task(scheduler.run_once)
+        return {"status": "refresh started", "timestamp": datetime.utcnow().isoformat()}
+    ok = await scheduler.run_once()
+    if not ok:
+        raise HTTPException(500, f"Aggiornamento non riuscito: {scheduler.last_error}")
+    return scheduler.status()
+
+
+@app.post("/api/refresh/manual", status_code=202, dependencies=[Depends(rate_limit)])
+async def manual_refresh(background_tasks: BackgroundTasks):
+    """Pulsante "Aggiorna dati": pubblico, al massimo uno ogni MANUAL_REFRESH_SECONDS."""
+    global _last_manual_refresh
+    if scheduler.running:
+        raise HTTPException(409, "Un aggiornamento è già in corso: attendi qualche minuto.")
+    wait_s = _last_manual_refresh + MANUAL_REFRESH_SECONDS - time.time()
+    if wait_s > 0:
+        minutes = int(wait_s // 60) + 1
+        raise HTTPException(
+            429,
+            f"I dati sono già stati aggiornati da poco. Per contenere i costi è possibile "
+            f"un aggiornamento manuale all'ora: riprova tra {minutes} minuti.",
+        )
+    _last_manual_refresh = time.time()
     background_tasks.add_task(scheduler.run_once)
-    return {"status": "refresh started", "timestamp": datetime.utcnow().isoformat()}
+    return {"status": "refresh started"}
+
+
+@app.get("/api/status")
+async def get_status():
+    """Data dell'ultimo aggiornamento riuscito, fonti ed eventuali errori."""
+    next_manual = max(0, int(_last_manual_refresh + MANUAL_REFRESH_SECONDS - time.time()))
+    return {**scheduler.status(), "sources": SOURCES, "manual_available_in_s": next_manual}
 
 
 @app.get("/api/export")

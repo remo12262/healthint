@@ -1,12 +1,17 @@
 import anthropic
+import asyncio
 import json
 import os
 import re
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 from limits import try_consume_ai_call
 
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+
+
+class AIError(Exception):
+    """Chiamata a Claude non riuscita o risposta inutilizzabile."""
 
 SYSTEM_PROMPT = """Sei un sistema di intelligence per il sistema sanitario italiano ed europeo.
 Il tuo compito è estrarre entità e relazioni da testi per costruire un knowledge graph sanitario.
@@ -133,55 +138,69 @@ class EntityExtractor:
 
         return {"entities": list(entities.values()), "relations": relations}
 
+    async def _ask(self, prompt: str, max_tokens: int, system: Optional[str] = None) -> str:
+        """Chiama Claude (senza ricerca web) e restituisce il testo della risposta.
+
+        Solleva AIError se il tetto giornaliero è raggiunto o la chiamata fallisce.
+        """
+        if not try_consume_ai_call():
+            raise AIError("tetto giornaliero di chiamate AI raggiunto")
+        kwargs = {
+            "model": "claude-haiku-4-5-20251001",
+            "max_tokens": max_tokens,
+            "messages": [{"role": "user", "content": prompt}],
+        }
+        if system:
+            kwargs["system"] = system
+        try:
+            # Il client è sincrono: lo si esegue in un thread per non bloccare il server
+            message = await asyncio.to_thread(client.messages.create, **kwargs)
+        except anthropic.APIError as e:
+            raise AIError(f"errore API Anthropic: {e}") from e
+        if message.stop_reason == "max_tokens":
+            raise AIError("risposta troncata (max_tokens)")
+        return "".join(b.text for b in message.content if getattr(b, "type", "") == "text")
+
+    @staticmethod
+    def _parse_json(raw: str):
+        """Primo valore JSON nel testo, anche se racchiuso in ```json ... ``` o preceduto da testo."""
+        starts = [i for i in (raw.find("["), raw.find("{")) if i >= 0]
+        if not starts:
+            raise AIError(f"nessun JSON nella risposta: {raw[:200]!r}")
+        try:
+            value, _ = json.JSONDecoder().raw_decode(raw[min(starts):])
+        except json.JSONDecodeError as e:
+            raise AIError(f"JSON non valido ({e}): {raw[:200]!r}") from e
+        return value
+
     async def extract(self, text: str, source_id: str = "") -> Dict:
-        """Extract entities and relations from text using Claude claude-sonnet-4-6."""
+        """Estrae entità e relazioni da un testo. In caso di errore restituisce la chiave "error"."""
         if not text or len(text.strip()) < 50:
             return {"entities": [], "relations": []}
-        if not try_consume_ai_call():
-            return {"entities": [], "relations": []}
         try:
-            message = client.messages.create(
-                model="claude-haiku-4-5-20251001",
-                max_tokens=2000,
-                system=SYSTEM_PROMPT,
-                tools=[{"type": "web_search_20250305", "name": "web_search"}],
-                messages=[{
-                    "role": "user",
-                    "content": EXTRACT_PROMPT.format(text=text[:3000])
-                }]
-            )
-            raw = ""
-            for block in message.content:
-                if hasattr(block, "text") and block.text.strip().startswith("["):
-                    raw = block.text.strip()
-                    break
-                elif hasattr(block, "text") and block.text.strip().startswith("{"):
-                    raw = block.text.strip()
-                    break
-            if raw.startswith("```"):
-                raw = raw.split("```")[1]
-                if raw.startswith("json"):
-                    raw = raw[4:]
-            result = json.loads(raw)
-            for e in result.get("entities", []):
-                if not e.get("id"):
-                    e["id"] = self._make_slug(e.get("label", "unknown"))
-            for r in result.get("relations", []):
-                r["source_doc"] = source_id
-            return result
-        except Exception as e:
-            print(f"[extractor] Error: {e}")
-            return {"entities": [], "relations": []}
+            raw = await self._ask(EXTRACT_PROMPT.format(text=text[:3000]), 2000, SYSTEM_PROMPT)
+            result = self._parse_json(raw)
+            if not isinstance(result, dict):
+                raise AIError(f"atteso un oggetto JSON, ricevuto {type(result).__name__}")
+        except AIError as e:
+            print(f"[extractor] ERRORE estrazione {source_id}: {e}")
+            return {"entities": [], "relations": [], "error": str(e)}
+        for e in result.get("entities", []):
+            if not e.get("id"):
+                e["id"] = self._make_slug(e.get("label", "unknown"))
+        for r in result.get("relations", []):
+            r["source_doc"] = source_id
+        return {"entities": result.get("entities", []), "relations": result.get("relations", [])}
 
     async def extract_batch(self, items: List[Dict], text_field: str = "summary") -> Dict:
-        """Extract from multiple items and merge results."""
-        import asyncio
+        """Estrae da più testi in parallelo e unisce i risultati; "errors" elenca i testi falliti."""
         all_entities: Dict[str, Dict] = {}
         all_relations: List[Dict] = []
+        errors: List[str] = []
 
         tasks = [
             self.extract(
-                item.get(text_field, "") + " " + item.get("title", ""),
+                item.get("title", "") + ". " + item.get(text_field, ""),
                 source_id=item.get("id", "")
             )
             for item in items[:10]
@@ -189,6 +208,8 @@ class EntityExtractor:
         results = await asyncio.gather(*tasks)
 
         for result in results:
+            if result.get("error"):
+                errors.append(result["error"])
             for entity in result.get("entities", []):
                 eid = entity["id"]
                 if eid not in all_entities:
@@ -200,28 +221,19 @@ class EntityExtractor:
                     )
             all_relations.extend(result.get("relations", []))
 
-        return {"entities": list(all_entities.values()), "relations": all_relations}
+        return {"entities": list(all_entities.values()), "relations": all_relations, "errors": errors}
 
     async def generate_alerts(self, entities: List[Dict], relations: List[Dict]) -> List[Dict]:
-        """Use Claude claude-sonnet-4-6 to generate predictive risk alerts from the health graph."""
+        """Genera alert predittivi dal grafo. Solleva AIError se non riesce a produrne."""
         if not entities:
-            return []
-        if not try_consume_ai_call():
-            return []
+            raise AIError("grafo vuoto: nessuna entità da analizzare")
 
         graph_summary = json.dumps({
             "high_risk_entities": [e for e in entities if e.get("risk_score", 0) > 60][:10],
             "high_risk_relations": [r for r in relations if r.get("risk_score", 0) > 60][:10],
-        }, indent=2)
+        }, indent=2, ensure_ascii=False)
 
-        try:
-            message = client.messages.create(
-                model="claude-haiku-4-5-20251001",
-                max_tokens=1500,
-                tools=[{"type": "web_search_20250305", "name": "web_search"}],
-                messages=[{
-                    "role": "user",
-                    "content": f"""Analizza questo knowledge graph del sistema sanitario e genera alert predittivi.
+        raw = await self._ask(f"""Analizza questo knowledge graph del sistema sanitario e genera alert predittivi.
 
 {graph_summary}
 
@@ -239,34 +251,11 @@ Genera 3-5 alert predittivi in formato JSON:
   }}
 ]
 
-Rispondi SOLO con JSON valido."""
-                }]
-            )
-            raw = ""
-            for block in message.content:
-                if hasattr(block, "text") and block.text.strip().startswith("["):
-                    raw = block.text.strip()
-                    break
-                elif hasattr(block, "text") and block.text.strip().startswith("{"):
-                    raw = block.text.strip()
-                    break
-            if raw.startswith("```"):
-                raw = raw.split("```")[1]
-                if raw.startswith("json"):
-                    raw = raw[4:]
-            raw = raw.strip()
-            if not raw:
-                print("[extractor] generate_alerts: empty response from Claude")
-                return []
-            try:
-                result = json.loads(raw)
-                if not isinstance(result, list):
-                    print(f"[extractor] generate_alerts: expected list, got {type(result).__name__}")
-                    return []
-                return result
-            except json.JSONDecodeError as je:
-                print(f"[extractor] generate_alerts: JSON parse error: {je} — raw snippet: {raw[:300]}")
-                return []
-        except Exception as e:
-            print(f"[extractor] Alert generation error: {e}")
-            return []
+Rispondi SOLO con JSON valido.""", 3000)
+        result = self._parse_json(raw)
+        if not isinstance(result, list):
+            raise AIError(f"attesa una lista di alert, ricevuto {type(result).__name__}")
+        alerts = [a for a in result if isinstance(a, dict) and a.get("title")]
+        if not alerts:
+            raise AIError("la risposta non contiene alert validi")
+        return alerts

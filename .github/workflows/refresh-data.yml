@@ -1,0 +1,68 @@
+name: Aggiorna dati HEALTHINT
+
+# Due volte al giorno: 05:15 e 17:15 UTC (07:15 e 19:15 ora legale italiana).
+# Funziona anche se il servizio Render dorme: la prima richiesta lo sveglia.
+on:
+  schedule:
+    - cron: "15 5,17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+env:
+  API: https://healthint-api.onrender.com
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sveglia il servizio
+        run: |
+          for i in $(seq 1 10); do
+            if curl -sf --max-time 60 "$API/health"; then echo; exit 0; fi
+            echo "Tentativo $i: servizio non ancora pronto"; sleep 20
+          done
+          echo "::error::Il servizio $API non risponde"; exit 1
+
+      - name: Aggiorna i dati
+        env:
+          REFRESH_KEY: ${{ secrets.HEALTHINT_REFRESH_KEY }}
+        run: |
+          code=$(curl -s -o result.json -w '%{http_code}' --max-time 900 \
+            -X POST "$API/api/refresh?wait=true" -H "X-Refresh-Key: $REFRESH_KEY")
+          cat result.json; echo
+          if [ "$code" != 200 ]; then echo "::error::Aggiornamento non riuscito (HTTP $code)"; exit 1; fi
+          python3 - <<'EOF'
+          import json
+          s = json.load(open("result.json"))
+          for k, v in (s.get("source_errors") or {}).items():
+              print(f"::warning::Fonte {k}: {v}")
+          if s.get("alerts_error"):
+              print(f"::warning::Alert non generati: {s['alerts_error']}")
+          EOF
+
+      - name: Salva l'istantanea dei dati nel repository
+        run: |
+          curl -sf --max-time 120 "$API/api/export" -o export.json
+          python3 - <<'EOF'
+          import json
+          d = json.load(open("export.json", encoding="utf-8"))
+          assert d.get("nodes"), "esportazione senza nodi"
+          with open("backend/data/seed.json", "w", encoding="utf-8") as f:
+              json.dump(d, f, ensure_ascii=False, indent=1)
+              f.write("\n")
+          print(f"{len(d['nodes'])} nodi, {len(d['edges'])} relazioni, {len(d['alerts'])} alert, dati al {d['data_updated_at']}")
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add backend/data/seed.json
+          git commit -m "Dati HEALTHINT aggiornati al $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "Nessuna modifica ai dati"
+          git push

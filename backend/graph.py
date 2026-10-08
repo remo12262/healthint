@@ -13,6 +13,8 @@ class GraphDB:
         self.edges: Dict[str, Dict] = {}
         self.alerts: Dict[str, Dict] = {}
         self.updated_at: Optional[str] = None
+        # Esito dell'ultimo aggiornamento riuscito (errori fonti/alert), salvato nel seed
+        self.refresh_info: Dict = {}
 
     async def init(self):
         if not self.nodes:
@@ -31,6 +33,7 @@ class GraphDB:
             self.edges = {e["id"]: e for e in edges}
             self.alerts = {a["id"]: a for a in seed.get("alerts", [])}
             self.updated_at = seed.get("data_updated_at") or seed.get("exported_at")
+            self.refresh_info = seed.get("refresh_info") or {}
             print(f"[graph] Seed caricato: {len(self.nodes)} nodi, {len(self.edges)} relazioni, {len(self.alerts)} alert")
             return True
         except FileNotFoundError:
@@ -45,6 +48,7 @@ class GraphDB:
             "version": SEED_VERSION,
             "exported_at": datetime.utcnow().isoformat(),
             "data_updated_at": self.updated_at,
+            "refresh_info": self.refresh_info,
             "nodes": list(self.nodes.values()),
             "edges": list(self.edges.values()),
             "alerts": list(self.alerts.values()),
@@ -188,6 +192,11 @@ class GraphDB:
                     "source_doc": r.get("source_doc", ""), "date": r.get("date"),
                     "created_at": now,
                 }
+
+    async def replace_alerts(self, alerts: List[Dict]):
+        """Gli alert sono una previsione sul grafo attuale: ogni generazione sostituisce la precedente."""
+        self.alerts = {}
+        await self.upsert_alerts(alerts)
 
     async def upsert_alerts(self, alerts: List[Dict]):
         now = datetime.utcnow().isoformat()
