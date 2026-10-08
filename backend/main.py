@@ -11,6 +11,7 @@ from extractor import EntityExtractor
 from graph import GraphDB
 from scheduler import Scheduler
 from limits import rate_limit, ai_usage
+import costs
 
 app = FastAPI(title="HEALTHINT API", version="1.0.0")
 
@@ -136,6 +137,12 @@ async def get_stats():
 async def get_cache_info():
     """Return cache status: when each data source was last fetched and entry counts."""
     return scraper.get_cache_info()
+
+
+@app.get("/api/ai-costs")
+async def get_ai_costs():
+    """Registro dei costi giornalieri delle chiamate a Claude."""
+    return costs.report()
 
 
 @app.get("/health")

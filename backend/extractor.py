@@ -6,6 +6,7 @@ import re
 from typing import Dict, List, Optional
 
 from limits import try_consume_ai_call
+import costs
 
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
@@ -157,6 +158,7 @@ class EntityExtractor:
             message = await asyncio.to_thread(client.messages.create, **kwargs)
         except anthropic.APIError as e:
             raise AIError(f"errore API Anthropic: {e}") from e
+        costs.record(kwargs["model"], message, "healthint")
         if message.stop_reason == "max_tokens":
             raise AIError("risposta troncata (max_tokens)")
         return "".join(b.text for b in message.content if getattr(b, "type", "") == "text")

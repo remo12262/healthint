@@ -3,3 +3,4 @@ dist/
 __pycache__/
 *.pyc
 healthint_cache.json
+ai_costs.json
