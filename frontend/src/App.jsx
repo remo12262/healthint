@@ -81,6 +81,8 @@ function parseRecallFact(fact) {
 
 const CLASS_TEXT = {I: "Classe I (rischio grave)", II: "Classe II (rischio moderato)", III: "Classe III (rischio basso)"}
 
+const ITALY_COLOR = {ALTA: "#E24B4A", MEDIA: "#EF9F27", BASSA: "#378ADD", NESSUNA: "#1D9E75"}
+
 function riskColor(score) {
   if (score >= 80) return "#E24B4A"
   if (score >= 60) return "#EF9F27"
@@ -637,14 +639,24 @@ export default function App() {
             </div>
           )}
           {alerts.length === 0 && !status?.alerts_error && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Nessun alert generato finora: usa "Aggiorna dati" o attendi il prossimo aggiornamento automatico.</p>}
-          {alerts.map((a,i) => (
+          {[...alerts].sort((x, y) => ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(x.italy_relevance) - ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(y.italy_relevance)).map((a,i) => (
             <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${SEVERITY_COLOR[a.severity]||"#888"}`,borderRadius:8,padding:"12px 16px",marginBottom:12}}>
               <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
                 <span style={{fontSize:11,fontWeight:500,padding:"2px 8px",borderRadius:4,background:SEVERITY_COLOR[a.severity]+"22",color:SEVERITY_COLOR[a.severity]}}>{a.severity}</span>
                 <span style={{fontSize:14,fontWeight:500}}>{a.title}</span>
               </div>
               <p style={{fontSize:13,color:"var(--color-text-secondary)",marginBottom:8,lineHeight:1.5}}>{a.description}</p>
-              {a.timeframe && <div style={{fontSize:12,color:"var(--color-text-tertiary)"}}>⏱ Timeframe: {a.timeframe}</div>}
+              {(a.italy_impact || a.italy_relevance) && (
+                <div style={{fontSize:13,lineHeight:1.5,marginBottom:8,padding:"8px 10px",borderRadius:6,background:"#378ADD12",border:"0.5px solid #378ADD55"}}>
+                  <div style={{marginBottom:2}}>
+                    <strong style={{fontWeight:500}}>🇮🇹 Impatto per l'Italia</strong>
+                    {a.italy_relevance && <span style={{marginLeft:8,fontSize:11,fontWeight:500,padding:"1px 8px",borderRadius:4,
+                      background:(ITALY_COLOR[a.italy_relevance]||"#888")+"22",color:ITALY_COLOR[a.italy_relevance]||"#888"}}>rilevanza {a.italy_relevance.toLowerCase()}</span>}
+                  </div>
+                  {a.italy_impact && <div style={{color:"var(--color-text-secondary)"}}>{a.italy_impact}</div>}
+                </div>
+              )}
+              {a.timeframe && <div style={{fontSize:12,color:"var(--color-text-tertiary)"}}>⏱ Orizzonte: {a.timeframe}</div>}
               {a.recommendation && <div style={{fontSize:12,color:"var(--color-text-secondary)",marginTop:6,padding:"6px 8px",background:"var(--color-background-secondary)",borderRadius:4}}>💡 {a.recommendation}</div>}
             </div>
           ))}

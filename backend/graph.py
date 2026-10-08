@@ -302,6 +302,8 @@ class GraphDB:
                 "severity": a.get("severity", "MEDIUM"),
                 "entities_involved": json.dumps(a.get("entities_involved", [])),
                 "predicted_impact": a.get("predicted_impact"),
+                "italy_relevance": (a.get("italy_relevance") or "").upper() or None,
+                "italy_impact": a.get("italy_impact"),
                 "timeframe": a.get("timeframe"), "recommendation": a.get("recommendation"),
                 "created_at": now, "is_read": False,
             }

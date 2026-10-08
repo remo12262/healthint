@@ -230,34 +230,50 @@ class EntityExtractor:
         return {"entities": list(all_entities.values()), "relations": all_relations, "errors": errors}
 
     async def generate_alerts(self, entities: List[Dict], relations: List[Dict]) -> List[Dict]:
-        """Genera alert predittivi dal grafo. Solleva AIError se non riesce a produrne."""
+        """Genera alert dal grafo con la valutazione dell'impatto sull'Italia. Solleva AIError se non riesce."""
         if not entities:
             raise AIError("grafo vuoto: nessuna entità da analizzare")
 
+        # Richiami FDA più recenti con distribuzione in Italia (relazioni verso AIFA)
+        italy_recalls = sorted(
+            [r for r in relations if str(r.get("id", "")).startswith("recall_") and r.get("target") == "aifa"],
+            key=lambda r: r.get("date") or "", reverse=True,
+        )[:8]
         graph_summary = json.dumps({
             "high_risk_entities": [e for e in entities if e.get("risk_score", 0) > 60][:10],
             "high_risk_relations": [r for r in relations if r.get("risk_score", 0) > 60][:10],
+            "recent_recalls_distributed_in_italy": [
+                {"firm": r.get("source"), "date": r.get("date"), "fact": r.get("fact")} for r in italy_recalls
+            ],
         }, indent=2, ensure_ascii=False)
 
-        raw = await self._ask(f"""Analizza questo knowledge graph del sistema sanitario e genera alert predittivi.
+        raw = await self._ask(f"""Analizza questo knowledge graph e genera alert per chi lavora nel Servizio Sanitario Nazionale italiano.
 
 {graph_summary}
 
-Genera 3-5 alert predittivi in formato JSON:
+Per ogni alert valuta in modo esplicito l'impatto sull'Italia e sul SSN:
+- per un focolaio all'estero indica le vie concrete con cui potrebbe riguardare l'Italia (viaggi e voli, rientri di operatori sanitari o cooperanti, sorveglianza ai punti di ingresso, preparazione di ospedali e laboratori di riferimento) e dì chiaramente se il rischio per l'Italia è basso;
+- per un richiamo di farmaci o dispositivi distribuiti in Italia indica quali strutture o pazienti italiani potrebbero essere coinvolti e cosa dovrebbero verificare farmacie ospedaliere e ingegneria clinica;
+- non inventare numeri, casi o date che non siano nei dati; se un'informazione manca, dillo.
+Includi almeno un alert sui richiami distribuiti in Italia, se ce ne sono.
+
+Genera 3-5 alert in formato JSON:
 [
   {{
     "id": "alert_slug",
     "title": "Titolo breve alert",
-    "description": "Descrizione dettagliata del rischio e previsione",
+    "description": "Descrizione del rischio basata sui dati",
     "severity": "CRITICAL|HIGH|MEDIUM|LOW",
     "entities_involved": ["id1", "id2"],
-    "predicted_impact": "descrizione impatto atteso su SSN/pazienti",
+    "italy_relevance": "ALTA|MEDIA|BASSA|NESSUNA",
+    "italy_impact": "impatto concreto per l'Italia e il SSN, con le vie di esposizione",
+    "predicted_impact": "impatto atteso su pazienti e servizi",
     "timeframe": "es. 3-6 mesi",
-    "recommendation": "azione consigliata per autorità sanitarie"
+    "recommendation": "azione consigliata alle autorità e alle aziende sanitarie italiane"
   }}
 ]
 
-Rispondi SOLO con JSON valido.""", 3000)
+Rispondi SOLO con JSON valido.""", 4000)
         result = self._parse_json(raw)
         if not isinstance(result, list):
             raise AIError(f"attesa una lista di alert, ricevuto {type(result).__name__}")
