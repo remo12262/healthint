@@ -1,17 +1,18 @@
 {
  "version": 1,
- "exported_at": "2026-10-08T19:33:32.530410",
- "data_updated_at": "2026-10-08T19:32:01.651024",
+ "exported_at": "2026-10-08T21:00:37.121681",
+ "data_updated_at": "2026-10-08T21:00:36.907228",
  "refresh_info": {
-  "last_success": "2026-10-08T19:32:01.651024",
+  "last_success": "2026-10-08T21:00:36.907228",
   "contributed": [
    "openfda_drug",
-   "openfda_device"
+   "openfda_device",
+   "who_outbreaks"
   ],
   "new": {
-   "nodes": 0,
-   "edges": 80,
-   "alerts": 0
+   "nodes": 23,
+   "edges": 25,
+   "alerts": 5
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
@@ -23,14 +24,12 @@
    "openfda_device": 40,
    "who_outbreaks": 20
   },
-  "source_errors": {
-   "who_analysis": "analisi AI delle notizie OMS non riuscita: errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqKvBxCUWkTTAr9LtWoW'}"
-  },
-  "alerts_error": "errore API Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfqKvErKbdWP1MUfNGu35'}",
-  "alerts_attempt": "2026-10-08T19:32:01.651024"
+  "source_errors": {},
+  "alerts_error": null,
+  "alerts_attempt": "2026-10-08T21:00:36.907228"
  },
  "signals": {
-  "generated_at": "2026-10-08T19:32:01.494613",
+  "generated_at": "2026-10-08T21:00:11.981148",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
@@ -206,7 +205,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T19:32:00.461138",
+   "updated_at": "2026-10-08T20:59:57.037723",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -218,7 +217,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T19:32:00.461138",
+   "updated_at": "2026-10-08T20:59:57.037723",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -230,7 +229,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -242,7 +241,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Imager II Angiographic Catheters    M001314001  IMAGER II/5/ST/65/038 BX5;    M001314011  IMAGER II/5/ST/100/038 BX5;   ",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3214-2026 di classe I del 30/09/2026"
   },
   {
@@ -254,7 +253,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: StatStrip Glucose and B- Ketone meter. Model No: 63910. Glucose test system.",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3131-2026 di classe I del 23/09/2026"
   },
   {
@@ -266,7 +265,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: BD Alaris Pump Infusion Sets 10561554*\t10885403232565\t50885403232563\tBD Alaris Pump Infusion Set, 15 Micron Filter, Back",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3080-2026 di classe I del 23/09/2026"
   },
   {
@@ -278,7 +277,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Bravo CF capsule delivery device, 5-pack, Product Number FGS-0635,     Bravo CF capsule delivery device, 1-pack, Product",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3090-2026 di classe I del 16/09/2026"
   },
   {
@@ -290,7 +289,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T19:32:00.461138",
+   "updated_at": "2026-10-08T20:59:57.037723",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -302,7 +301,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T19:32:00.461138",
+   "updated_at": "2026-10-08T20:59:57.037723",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -314,7 +313,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T19:32:00.461138",
+   "updated_at": "2026-10-08T20:59:57.037723",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -326,7 +325,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Achieva 3.0T;  Model Numbers (REF): 1. 781177, 2. 781277, 3. 781278, 4. 781344, 5. 781345;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026"
   },
   {
@@ -338,7 +337,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -350,7 +349,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3215-2026 di classe II del 30/09/2026"
   },
   {
@@ -362,7 +361,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips EPIQ Elite Diagnostic Ultrasound System  Model # 795234",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3249-2026 di classe II del 30/09/2026"
   },
   {
@@ -374,7 +373,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips PIC iX Essentials  REF:867093",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3142-2026 di classe II del 23/09/2026"
   },
   {
@@ -386,7 +385,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Captus 4000e Thyroid Uptake System, Models: 1. 5430-30151, 2. 5430-30152, 3. 5430-30154;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3193-2026 di classe II del 23/09/2026"
   },
   {
@@ -398,7 +397,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Product Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Model/Catalog Number: HEMO-7, HE",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3177-2026 di classe II del 23/09/2026"
   },
   {
@@ -410,7 +409,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Percutaneous Insertion Kit (PIK), Guidewire 100 cm, Model Numbers: 701053068 (USA), 701047384 (OUS);",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3144-2026 di classe II del 23/09/2026"
   },
   {
@@ -422,7 +421,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: CADD Yellow Medication Cassette Reservoir with NRFit connector    US Product Codes: 21-7600-24, 21-7609-24    OUS Produc",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3212-2026 di classe II del 23/09/2026"
   },
   {
@@ -434,7 +433,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PORTRAIT CORE SERVICES SOFTWARE V1.0.5, Ref# 5697353",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-08T19:32:00.461677",
+   "updated_at": "2026-10-08T20:59:57.038029",
    "risk_basis": "Richiamo FDA Z-3038-2026 di classe II del 02/09/2026"
   },
   {
@@ -518,7 +517,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-08T19:32:00.461138",
+   "updated_at": "2026-10-08T20:59:57.037723",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -628,6 +627,282 @@
    "created_at": "2026-10-06T06:32:00.960345",
    "updated_at": "2026-10-06T06:32:00.960345",
    "risk_basis": "Valore assegnato manualmente"
+  },
+  {
+   "id": "who_global",
+   "label": "World Health Organization",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": null,
+   "description": "Organizzazione mondiale della sanità - informata del caso confermato di virus Bundibugyo",
+   "risk_score": 0,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "drc_health",
+   "label": "Democratic Republic of the Congo - Health System",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Sistema sanitario della Repubblica Democratica del Congo - epicentro dell'epidemia di Bundibugyo",
+   "risk_score": 95,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "kenya_health",
+   "label": "Kenya - Health System",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Kenya",
+   "description": "Sistema sanitario del Kenya - ha ospedalizzato e trattato il caso importato",
+   "risk_score": 75,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "uganda_health",
+   "label": "Uganda - Health System",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Uganda",
+   "description": "Sistema sanitario dell'Uganda - coinvolto nella tracciatura contatti",
+   "risk_score": 70,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "north_kivu_zone",
+   "label": "Alimbongo Health Zone",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "North Kivu, DRC",
+   "description": "Zona sanitaria di Alimbongo in North Kivu - nuova area colpita da epidemia Bundibugyo",
+   "risk_score": 90,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "drc_bundibugyo_outbreak_2026",
+   "label": "Epidemia Bundibugyo - Repubblica Democratica del Congo",
+   "type": "EpidemicEvent",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Focolaio di febbre emorragica da virus Bundibugyo con 6757 casi confermati e 3267 morti (CFR 48.3%) distribuiti su 61 zone sanitarie in 6 province della RDC",
+   "risk_score": 95,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "drc_ministry_health",
+   "label": "Ministero della Salute - Repubblica Democratica del Congo",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Autorità sanitaria nazionale della RDC responsabile della gestione dell'epidemia",
+   "risk_score": 75,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "north_kivu_health_zone",
+   "label": "Zone Sanitarie Nord Kivu e aree colpite",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Strutture sanitarie nelle 6 province colpite (Bas-Uélé, Haut-Uélé, Ituri, North Kivu, South Kivu, Tshopo)",
+   "risk_score": 90,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "who_emergency_committee",
+   "label": "WHO Emergency Committee",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": null,
+   "description": "Organo dell'OMS che ha dichiarato l'epidemia di Ebola come emergenza sanitaria pubblica di portata internazionale",
+   "risk_score": 85,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "drc_health_system",
+   "label": "Democratic Republic of the Congo - Health System",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Sistema sanitario della Repubblica Democratica del Congo interessato dall'epidemia di Ebola da virus Bundibugyo",
+   "risk_score": 95,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "bas_uelle_province",
+   "label": "Provincia Bas-Uélé",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Provincia della RDC colpita dall'epidemia, con focolai in zone sanitarie di Ganga e Viadana",
+   "risk_score": 90,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "north_kivu_province",
+   "label": "Provincia North Kivu",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Provincia della RDC colpita dall'epidemia, con focolai in zone sanitarie di Biena, Manguredjipa e Mutwanga",
+   "risk_score": 90,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "south_kivu_province",
+   "label": "Provincia South Kivu",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Provincia della RDC colpita dall'epidemia di Ebola",
+   "risk_score": 85,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "ituri_province",
+   "label": "Provincia Ituri",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Provincia della RDC colpita dall'epidemia di Ebola",
+   "risk_score": 95,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "haut_uelle_province",
+   "label": "Provincia Haut-Uélé",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Provincia della RDC colpita dall'epidemia di Ebola",
+   "risk_score": 85,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "tshopo_province",
+   "label": "Provincia Tshopo",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Provincia della RDC colpita dall'epidemia, con focolai nella zona sanitaria di Tshopo",
+   "risk_score": 90,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "drc_health_ministry",
+   "label": "Ministero della Salute - Repubblica Democratica del Congo",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Autorità sanitaria nazionale della Repubblica Democratica del Congo responsabile della risposta all'epidemia di Ebola",
+   "risk_score": 85,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "who_afro",
+   "label": "WHO - Ufficio Regionale per l'Africa",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "Africa",
+   "description": "Organizzazione Mondiale della Sanità - Ufficio regionale africano coordinatore della risposta globale",
+   "risk_score": 75,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "ecdc",
+   "label": "ECDC - Centro Europeo per la Prevenzione e il Controllo delle Malattie",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Agenzia europea di sorveglianza epidemiologica delle malattie infettive",
+   "risk_score": 65,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "haut_uelé_province",
+   "label": "Provincia dell'Haut-Uélé",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Provincia della DRC interessata dall'epidemia con casi confermati",
+   "risk_score": 88,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "bas_uelé_province",
+   "label": "Provincia del Bas-Uélé",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Provincia della DRC più recentemente interessata con caso confermato nella zona sanitaria di Buta",
+   "risk_score": 82,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "mongbwalu_health_zone",
+   "label": "Zona Sanitaria di Mongbwalu",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Zona sanitaria dell'Ituri Province dove l'epidemia di Ebola è inizialmente confinata",
+   "risk_score": 92,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "buta_health_zone",
+   "label": "Zona Sanitaria di Buta",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Zona sanitaria del Bas-Uélé province con caso confermato di Ebola",
+   "risk_score": 90,
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-08T21:00:11.980138",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
   }
  ],
  "edges": [
@@ -1653,7 +1928,343 @@
    "source_doc": "Z-3036-2026",
    "date": "2026-09-02",
    "created_at": "2026-10-08T19:32:00.461699"
+  },
+  {
+   "id": "who_global_drc_health_INDAGA_SU",
+   "source": "who_global",
+   "target": "drc_health",
+   "type": "INDAGA_SU",
+   "fact": "WHO informata del focolaio epidemico confermato di virus Bundibugyo nella Repubblica Democratica del Congo",
+   "risk_score": 85,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_kenya_health_RISCHIO_PER",
+   "source": "drc_health",
+   "target": "kenya_health",
+   "type": "RISCHIO_PER",
+   "fact": "Caso importato da DRC a Kenya rappresenta rischio epidemiologico - paziente deceduto dopo ospedalizzazione",
+   "risk_score": 88,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "kenya_health_uganda_health_COLLABORA_CON",
+   "source": "kenya_health",
+   "target": "uganda_health",
+   "type": "COLLABORA_CON",
+   "fact": "Kenya e Uganda collaborano in misure di risposta pubblica e tracciatura contatti per caso importato",
+   "risk_score": 70,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_north_kivu_zone_RISCHIO_PER",
+   "source": "drc_health",
+   "target": "north_kivu_zone",
+   "type": "RISCHIO_PER",
+   "fact": "Espansione dell'epidemia Bundibugyo in Alimbongo health zone aggrava la situazione nella regione",
+   "risk_score": 92,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "who_global_kenya_health_CONTROLLA",
+   "source": "who_global",
+   "target": "kenya_health",
+   "type": "CONTROLLA",
+   "fact": "WHO monitora e supervisiona la risposta sanitaria al caso importato in Kenya",
+   "risk_score": 60,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_bundibugyo_outbreak_2026_drc_ministry_health_RISCHIO_PER",
+   "source": "drc_bundibugyo_outbreak_2026",
+   "target": "drc_ministry_health",
+   "type": "RISCHIO_PER",
+   "fact": "L'epidemia di Bundibugyo rappresenta un rischio critico per il sistema sanitario della RDC con alta mortalità e diffusione geografica continuata",
+   "risk_score": 95,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "who_global_drc_bundibugyo_outbreak_2026_INDAGA_SU",
+   "source": "who_global",
+   "target": "drc_bundibugyo_outbreak_2026",
+   "type": "INDAGA_SU",
+   "fact": "L'OMS monitora e pubblica rapporti sulla progressione dell'epidemia di Bundibugyo nella RDC",
+   "risk_score": 30,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_bundibugyo_outbreak_2026_north_kivu_health_zone_RISCHIO_PER",
+   "source": "drc_bundibugyo_outbreak_2026",
+   "target": "north_kivu_health_zone",
+   "type": "RISCHIO_PER",
+   "fact": "L'epidemia colpisce direttamente le strutture sanitarie con ritardi nella rilevazione dei casi e problemi di accesso alle cure, favorendo la trasmissione nosocomiale",
+   "risk_score": 92,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "who_emergency_committee_drc_health_system_INDAGA_SU",
+   "source": "who_emergency_committee",
+   "target": "drc_health_system",
+   "type": "INDAGA_SU",
+   "fact": "WHO Emergency Committee ha dichiarato l'epidemia di Ebola in RDC come emergenza sanitaria pubblica di portata internazionale",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-18",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_system_bas_uelle_province_CONTROLLA",
+   "source": "drc_health_system",
+   "target": "bas_uelle_province",
+   "type": "CONTROLLA",
+   "fact": "Il sistema sanitario della RDC è responsabile della gestione dell'epidemia nella provincia Bas-Uélé",
+   "risk_score": 90,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_system_north_kivu_province_CONTROLLA",
+   "source": "drc_health_system",
+   "target": "north_kivu_province",
+   "type": "CONTROLLA",
+   "fact": "Il sistema sanitario della RDC è responsabile della gestione dell'epidemia nella provincia North Kivu",
+   "risk_score": 90,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_system_south_kivu_province_CONTROLLA",
+   "source": "drc_health_system",
+   "target": "south_kivu_province",
+   "type": "CONTROLLA",
+   "fact": "Il sistema sanitario della RDC è responsabile della gestione dell'epidemia nella provincia South Kivu",
+   "risk_score": 85,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_system_ituri_province_CONTROLLA",
+   "source": "drc_health_system",
+   "target": "ituri_province",
+   "type": "CONTROLLA",
+   "fact": "Il sistema sanitario della RDC è responsabile della gestione dell'epidemia nella provincia Ituri",
+   "risk_score": 85,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_system_haut_uelle_province_CONTROLLA",
+   "source": "drc_health_system",
+   "target": "haut_uelle_province",
+   "type": "CONTROLLA",
+   "fact": "Il sistema sanitario della RDC è responsabile della gestione dell'epidemia nella provincia Haut-Uélé",
+   "risk_score": 85,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_system_tshopo_province_CONTROLLA",
+   "source": "drc_health_system",
+   "target": "tshopo_province",
+   "type": "CONTROLLA",
+   "fact": "Il sistema sanitario della RDC è responsabile della gestione dell'epidemia nella provincia Tshopo",
+   "risk_score": 90,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "bas_uelle_province_drc_health_system_RISCHIO_PER",
+   "source": "bas_uelle_province",
+   "target": "drc_health_system",
+   "type": "RISCHIO_PER",
+   "fact": "Focolaio attivo di Ebola in Bas-Uélé con diffusione in 2 zone sanitarie rappresenta rischio critico per il sistema sanitario nazionale",
+   "risk_score": 92,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "north_kivu_province_drc_health_system_RISCHIO_PER",
+   "source": "north_kivu_province",
+   "target": "drc_health_system",
+   "type": "RISCHIO_PER",
+   "fact": "Focolaio attivo di Ebola in North Kivu con diffusione in 3 zone sanitarie rappresenta rischio critico per il sistema sanitario nazionale",
+   "risk_score": 92,
+   "source_doc": "2026-DON616",
+   "date": "2026-08-26",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "who_afro_drc_health_ministry_COLLABORA_CON",
+   "source": "who_afro",
+   "target": "drc_health_ministry",
+   "type": "COLLABORA_CON",
+   "fact": "WHO coordina con il Ministero della Salute della DRC nella risposta all'epidemia di Ebola",
+   "risk_score": 75,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "ecdc_drc_health_ministry_COLLABORA_CON",
+   "source": "ecdc",
+   "target": "drc_health_ministry",
+   "type": "COLLABORA_CON",
+   "fact": "ECDC fornisce sorveglianza epidemiologica e supporto tecnico alla risposta globale dell'epidemia",
+   "risk_score": 70,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "ituri_province_mongbwalu_health_zone_CONTROLLA",
+   "source": "ituri_province",
+   "target": "mongbwalu_health_zone",
+   "type": "CONTROLLA",
+   "fact": "La provincia dell'Ituri supervisiona la zona sanitaria di Mongbwalu epicentro iniziale dell'epidemia",
+   "risk_score": 90,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "ituri_province_north_kivu_province_RISCHIO_PER",
+   "source": "ituri_province",
+   "target": "north_kivu_province",
+   "type": "RISCHIO_PER",
+   "fact": "L'epidemia in Ituri rappresenta rischio di trasmissione cross-border verso Nord Kivu e altre province",
+   "risk_score": 92,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "mongbwalu_health_zone_ituri_province_RISCHIO_PER",
+   "source": "mongbwalu_health_zone",
+   "target": "ituri_province",
+   "type": "RISCHIO_PER",
+   "fact": "Focolaio attivo di Ebola in Mongbwalu con trasmissione sostenuta verso 54 zone sanitarie",
+   "risk_score": 95,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "haut_uelé_province_bas_uelé_province_RISCHIO_PER",
+   "source": "haut_uelé_province",
+   "target": "bas_uelé_province",
+   "type": "RISCHIO_PER",
+   "fact": "Trasmissione cross-border da Haut-Uélé a Bas-Uélé con caso confermato in Buta con storia di viaggio",
+   "risk_score": 88,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "drc_health_ministry_ituri_province_REGOLA",
+   "source": "drc_health_ministry",
+   "target": "ituri_province",
+   "type": "REGOLA",
+   "fact": "Ministero della Salute della DRC coordina la risposta sanitaria all'epidemia di Ebola",
+   "risk_score": 80,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
+  },
+  {
+   "id": "who_afro_ituri_province_INDAGA_SU",
+   "source": "who_afro",
+   "target": "ituri_province",
+   "type": "INDAGA_SU",
+   "fact": "WHO monitora epidemia di Ebola nelle province della DRC con trasmissione sostenuta e alta mortalità",
+   "risk_score": 85,
+   "source_doc": "2026-DON615",
+   "date": "2026-08",
+   "created_at": "2026-10-08T21:00:11.980170"
   }
  ],
- "alerts": []
+ "alerts": [
+  {
+   "id": "alert_geographic_expansion_risk",
+   "title": "Rischio di espansione geografica dell'epidemia Bundibugyo oltre le 6 province attuali",
+   "description": "L'epidemia di febbre emorragica Bundibugyo mostra pattern di diffusione cross-border da Ituri verso North Kivu e potenziale propagazione verso Sud Kivu, Kasai e regioni limitrofe. Con CFR del 48.3% e 6757 casi confermati distribuiti su 61 zone sanitarie, il virus ha dimostrato capacità di trasmissione sostenuta. L'insufficienza delle infrastrutture sanitarie nelle aree remote e i movimenti di popolazione favoriscono ulteriore espansione territoriale.",
+   "severity": "CRITICAL",
+   "entities_involved": "[\"drc_bundibugyo_outbreak_2026\", \"ituri_province\", \"north_kivu_province\", \"tshopo_province\", \"bas_uelle_province\", \"drc_health_system\"]",
+   "predicted_impact": "Potenziale raggiungimento di 15,000-20,000 casi cumulativi entro 6 mesi con coinvolgimento di 8-10 province. Rischio di saturazione completa delle capacità ospedaliere regionali e nazionale, collasso dei servizi di sanità pubblica, crisi umanitaria su larga scala.",
+   "timeframe": "3-6 mesi",
+   "recommendation": "Implementare cordoni sanitari mobili nelle zone di confine tra province. Rafforzare sorveglianza epidemiologica in tempo reale con laboratori diagnostici mobili. Pre-posizionare équipe di risposta rapida nelle province non ancora colpite. Coordinare con paesi confinanti (Uganda, Sud Sudan, Congo-Brazzaville) per sorveglianza transfrontaliera.",
+   "created_at": "2026-10-08T21:00:36.907088",
+   "is_read": false
+  },
+  {
+   "id": "alert_healthcare_system_collapse_risk",
+   "title": "Rischio critico di collasso del sistema sanitario della RDC per saturazione risorse",
+   "description": "Il sistema sanitario della RDC presenta capacità critica di risposta limitata. Con 3267 morti già registrate e tassi di trasmissione nosocomiale elevati nelle zone sanitarie di Mongbwalu, Alimbongo e altre aree, la domanda di posti letto in isolamento, DPI, ossigeno e personale sanitario supera significativamente l'offerta disponibile. La mortalità del 48.3% riflette anche insufficienze nella gestione clinica legata a risorse limitate.",
+   "severity": "CRITICAL",
+   "entities_involved": "[\"drc_health_system\", \"mongbwalu_health_zone\", \"north_kivu_health_zone\", \"drc_ministry_health\"]",
+   "predicted_impact": "Collasso operativo di strutture sanitarie regionali entro 2-3 mesi con interruzione di servizi essenziali (maternità, chirurgia d'urgenza, cure pediatriche). Aumento della mortalità per cause non-Ebola. Fuga di personale sanitario verso paesi limitrofi. Perdita di fiducia pubblica nelle istituzioni sanitarie con riduzione della compliance vaccinale e tracciamento contatti.",
+   "timeframe": "2-3 mesi",
+   "recommendation": "Attivare supporto internazionale massiccio per rifornimento DPI, ventilatori e ossigeno medicale. Reclutare personale sanitario da paesi CEDEAO con contratti d'emergenza. Stabilire field hospital aggiuntivi in aree critiche (Ituri, North Kivu). Implementare telemedicina per supporto diagnostico remoto da centri di eccellenza africani ed europei.",
+   "created_at": "2026-10-08T21:00:36.907088",
+   "is_read": false
+  },
+  {
+   "id": "alert_nosocomial_transmission_acceleration",
+   "title": "Accelerazione della trasmissione nosocomiale nelle strutture sanitarie attive",
+   "description": "La trasmissione nosocomcomiale rappresenta driver chiave dell'epidemia nelle zone sanitarie di Mongbwalu, Alimbongo e Biena. Protocolli di prevenzione e controllo dell'infezione insufficienti, personale sanitario non adeguatamente equipaggiato e triaging inefficace creano amplificazione secondaria dei casi. La diffusione verso 54 zone sanitarie collegate suggerisce reti di referenza contaminate e movimenti di pazienti non controllati.",
+   "severity": "CRITICAL",
+   "entities_involved": "[\"mongbwalu_health_zone\", \"north_kivu_zone\", \"north_kivu_health_zone\", \"drc_bundibugyo_outbreak_2026\"]",
+   "predicted_impact": "Raddoppio dei casi nosocomiali nel prossimo trimestre con moltiplicazione della mortalità tra operatori sanitari (deplezione ulteriore di personale). Contaminazione di ambulanze e strutture periferiche creando focolai secondari difficili da controllare. CFR aumenterà oltre il 48.3% a causa di degrado della qualità dell'assistenza.",
+   "timeframe": "1-3 mesi",
+   "recommendation": "Implementare audit immediati su protocolli IPC in tutte le 61 zone sanitarie interessate. Fornire formazione accelerata (2-3 giorni) su donning/doffing e disinfestazione. Istituire 'zone rosso' dedicate con staffing monouso per ogni struttura. Monitorare settimanale di indicatori IPC (infezioni acquisite, exposure degli operatori). Considerare isolamento ospedaliero domiciliare controllato per casi lievi in aree con strutture insufficienti.",
+   "created_at": "2026-10-08T21:00:36.907088",
+   "is_read": false
+  },
+  {
+   "id": "alert_cross_border_spillover_risk",
+   "title": "Rischio di spillover transfrontaliero verso Uganda e Sud Sudan",
+   "description": "Le province di Ituri, Bas-Uélé e North Kivu confermano direttamente con Uganda (distretto di Arua) e Sud Sudan (Upper Nile). Movimenti di popolazione, commercio transfrontaliero e mobilità pastorale nei conflitti regionali creano condizioni ideali per spillover virale. Assenza di sorveglianza robusta nei paesi confinanti aumenta probabilità di rilevamento tardivo di casi importati.",
+   "severity": "HIGH",
+   "entities_involved": "[\"ituri_province\", \"bas_uelle_province\", \"north_kivu_province\", \"drc_bundibugyo_outbreak_2026\", \"who_emergency_committee\"]",
+   "predicted_impact": "Introduzione del virus in Uganda e Sud Sudan porterebbe l'epidemia a scala regionale con 5-7 paesi potenzialmente coinvolti entro 6 mesi. Destabilizzazione dei sistemi sanitari fragili regionali. Diffusione potenziale verso zone urbane ad alta densità (Kampala, Juba) con trasmissione comunitaria incontrollata e rischio globale.",
+   "timeframe": "2-4 mesi",
+   "recommendation": "Attivare corridoi di sorveglianza epidemiologica con Uganda e Sud Sudan con sharing dati in tempo reale. Pre-posizionare laboratori di diagnostica a Arua e Juba. Organizzare briefing settimanali con ministeri della salute limitrofi e OAFRIC. Implementare screening ai valichi di frontiera con formazione rapida di agenti doganali. Coordinamento WHO AFRO per allerta regionale precoce.",
+   "created_at": "2026-10-08T21:00:36.907088",
+   "is_read": false
+  },
+  {
+   "id": "alert_vaccine_deployment_window_closing",
+   "title": "Finestra di opportunità per vaccinazione d'emergenza in chiusura per ritardi logistici",
+   "description": "La vaccinazione anulare rappresenta l'intervento più efficace per contenimento dell'epidemia Bundibugyo. Tuttavia, dati sui ritardi logistici nella distribuzione di vaccine, difficoltà di raggiungimento nelle aree remote, bassa accettazione iniziale e criticità di cold-chain nel contesto della RDC suggeriscono che la finestra di intervento ottimale (prime 8-12 settimane dall'epidemia) sta per chiudersi. Ritardi ulteriori renderanno il controllo vaccinale inefficace su popolazione ampiamente esposta.",
+   "severity": "HIGH",
+   "entities_involved": "[\"drc_bundibugyo_outbreak_2026\", \"drc_health_system\", \"drc_ministry_health\", \"who_emergency_committee\"]",
+   "predicted_impact": "Se non implementata entro 4-6 settimane, vaccinazione anulare avrà efficacia ridotta dal 90% a 40-50%. Perdita di 5,000-8,000 vite prevenibili. Necessità di transizione verso controllo basato su isolamento pazienti e tracciamento contatti (meno efficace, più costoso) con durata epidemia estesa a 18-24 mesi.",
+   "timeframe": "4-6 settimane (URGENTE)",
+   "recommendation": "Dichiarare stato di emergenza vaccinale con autorizzazione d'uso d'urgenza di vaccine Bundibugyo in RDC. Implementare hub di vaccinazione mobile nelle 6 province con équipe dedicate. Coinvolgere leader comunitari e religiosi per messaging sulla accettazione. Garantire cold-chain con generatori solari e frigoriferi batch-indipendenti. Tracciare copertura vaccinale settimanale con target >80% dei contatti identificati entro 30 giorni dal rilevamento caso.",
+   "created_at": "2026-10-08T21:00:36.907088",
+   "is_read": false
+  }
+ ]
 }
