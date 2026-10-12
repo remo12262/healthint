@@ -1,17 +1,17 @@
 {
  "version": 1,
- "exported_at": "2026-10-11T20:57:58.832135",
- "data_updated_at": "2026-10-11T20:57:58.661999",
+ "exported_at": "2026-10-12T13:06:49.601113",
+ "data_updated_at": "2026-10-12T13:06:49.465268",
  "refresh_info": {
-  "last_success": "2026-10-11T20:57:58.661999",
+  "last_success": "2026-10-12T13:06:49.465268",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "who_outbreaks"
   ],
   "new": {
-   "nodes": 9,
-   "edges": 20,
+   "nodes": 3,
+   "edges": 19,
    "alerts": 5
   },
   "latest_at_source": {
@@ -26,10 +26,10 @@
   },
   "source_errors": {},
   "alerts_error": null,
-  "alerts_attempt": "2026-10-11T20:57:58.661999"
+  "alerts_attempt": "2026-10-12T13:06:49.465268"
  },
  "signals": {
-  "generated_at": "2026-10-11T20:57:24.411662",
+  "generated_at": "2026-10-12T13:06:19.152454",
   "who": [
    {
     "title": "Pneumonia of undetermined etiology - the Russian Federation",
@@ -205,7 +205,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-11T20:57:09.267140",
+   "updated_at": "2026-10-12T13:06:03.684404",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -217,7 +217,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-11T20:57:09.267140",
+   "updated_at": "2026-10-12T13:06:03.684404",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -229,7 +229,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -241,7 +241,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Imager II Angiographic Catheters    M001314001  IMAGER II/5/ST/65/038 BX5;    M001314011  IMAGER II/5/ST/100/038 BX5;   ",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3214-2026 di classe I del 30/09/2026"
   },
   {
@@ -253,7 +253,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: StatStrip Glucose and B- Ketone meter. Model No: 63910. Glucose test system.",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3131-2026 di classe I del 23/09/2026"
   },
   {
@@ -265,7 +265,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: BD Alaris Pump Infusion Sets 10561554*\t10885403232565\t50885403232563\tBD Alaris Pump Infusion Set, 15 Micron Filter, Back",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3080-2026 di classe I del 23/09/2026"
   },
   {
@@ -277,7 +277,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Bravo CF capsule delivery device, 5-pack, Product Number FGS-0635,     Bravo CF capsule delivery device, 1-pack, Product",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3090-2026 di classe I del 16/09/2026"
   },
   {
@@ -289,7 +289,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-11T20:57:09.267140",
+   "updated_at": "2026-10-12T13:06:03.684404",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -301,7 +301,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-11T20:57:09.267140",
+   "updated_at": "2026-10-12T13:06:03.684404",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -313,7 +313,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-11T20:57:09.267140",
+   "updated_at": "2026-10-12T13:06:03.684404",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -325,7 +325,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Achieva 3.0T;  Model Numbers (REF): 1. 781177, 2. 781277, 3. 781278, 4. 781344, 5. 781345;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026"
   },
   {
@@ -337,7 +337,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -349,7 +349,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3215-2026 di classe II del 30/09/2026"
   },
   {
@@ -361,7 +361,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips EPIQ Elite Diagnostic Ultrasound System  Model # 795234",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3249-2026 di classe II del 30/09/2026"
   },
   {
@@ -373,7 +373,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips PIC iX Essentials  REF:867093",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3142-2026 di classe II del 23/09/2026"
   },
   {
@@ -385,7 +385,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Captus 4000e Thyroid Uptake System, Models: 1. 5430-30151, 2. 5430-30152, 3. 5430-30154;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3193-2026 di classe II del 23/09/2026"
   },
   {
@@ -397,7 +397,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Product Name: HEMOSPRAY ENDOSCOPIC HEMOSTAT  Model/Catalog Number: HEMO-7, HE",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3177-2026 di classe II del 23/09/2026"
   },
   {
@@ -409,7 +409,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Percutaneous Insertion Kit (PIK), Guidewire 100 cm, Model Numbers: 701053068 (USA), 701047384 (OUS);",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3144-2026 di classe II del 23/09/2026"
   },
   {
@@ -421,7 +421,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: CADD Yellow Medication Cassette Reservoir with NRFit connector    US Product Codes: 21-7600-24, 21-7609-24    OUS Produc",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3212-2026 di classe II del 23/09/2026"
   },
   {
@@ -433,7 +433,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PORTRAIT CORE SERVICES SOFTWARE V1.0.5, Ref# 5697353",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-11T20:57:09.267449",
+   "updated_at": "2026-10-12T13:06:03.684967",
    "risk_basis": "Richiamo FDA Z-3038-2026 di classe II del 02/09/2026"
   },
   {
@@ -517,7 +517,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-11T20:57:09.267140",
+   "updated_at": "2026-10-12T13:06:03.684404",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -637,7 +637,7 @@
    "description": "Organizzazione mondiale della sanità - informata del caso confermato di virus Bundibugyo",
    "risk_score": 0,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -685,7 +685,7 @@
    "description": "Zona sanitaria di Alimbongo in North Kivu - nuova area colpita da epidemia Bundibugyo",
    "risk_score": 92,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -709,7 +709,7 @@
    "description": "Autorità sanitaria nazionale della RDC responsabile della gestione dell'epidemia",
    "risk_score": 85,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-10T20:33:53.999476",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -733,7 +733,7 @@
    "description": "Organo dell'OMS che ha dichiarato l'epidemia di Ebola come emergenza sanitaria pubblica di portata internazionale",
    "risk_score": 85,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -745,7 +745,7 @@
    "description": "Sistema sanitario della Repubblica Democratica del Congo interessato dall'epidemia di Ebola da virus Bundibugyo",
    "risk_score": 95,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -769,7 +769,7 @@
    "description": "Provincia della RDC colpita dall'epidemia, con focolai in zone sanitarie di Biena, Manguredjipa e Mutwanga",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -781,7 +781,7 @@
    "description": "Provincia della RDC colpita dall'epidemia di Ebola",
    "risk_score": 90,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -793,7 +793,7 @@
    "description": "Provincia della RDC colpita dall'epidemia di Ebola",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T11:22:50.866977",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -817,7 +817,7 @@
    "description": "Provincia della RDC colpita dall'epidemia, con focolai nella zona sanitaria di Tshopo",
    "risk_score": 91,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-11T11:22:50.866977",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1021,7 +1021,7 @@
    "description": "Focolaio epidemico di virus Bundibugyo in RDC con 6757 casi confermati e 3267 morti al 7 settembre 2026",
    "risk_score": 98,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-10T11:09:17.216440",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1177,7 +1177,7 @@
    "description": "Provincia della Repubblica Democratica del Congo colpita dall'epidemia di Bundibugyo virus disease",
    "risk_score": 92,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-11T11:22:50.866977",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1189,7 +1189,7 @@
    "description": "Provincia della Repubblica Democratica del Congo con caso confermato in Buta health zone con esordio sintomi il 4 agosto 2026",
    "risk_score": 92,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-11T11:22:50.866977",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1211,9 +1211,9 @@
    "domain": "health",
    "region": null,
    "description": "Agenzia internazionale di sanità pubblica che monitora focolai epidemici globali",
-   "risk_score": 0,
+   "risk_score": 15,
    "created_at": "2026-10-09T11:52:13.327465",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1225,7 +1225,7 @@
    "description": "Sistema sanitario del Kenya che ha ospedalizzato caso importato confermato di virus Bundibugyo",
    "risk_score": 85,
    "created_at": "2026-10-09T11:52:13.327465",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1237,7 +1237,7 @@
    "description": "Sistema sanitario dell'Uganda coinvolto in risposta al caso di virus Bundibugyo",
    "risk_score": 80,
    "created_at": "2026-10-09T11:52:13.327465",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1285,7 +1285,7 @@
    "description": "Area sanitaria in North Kivu recentemente colpita dall'epidemia di Ebola",
    "risk_score": 92,
    "created_at": "2026-10-09T21:39:25.753318",
-   "updated_at": "2026-10-10T11:09:17.216440",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1345,7 +1345,7 @@
    "description": "Punto focale nazionale russo per le Norme sanitarie internazionali",
    "risk_score": 15,
    "created_at": "2026-10-10T20:33:53.999476",
-   "updated_at": "2026-10-10T20:33:53.999476",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1357,7 +1357,7 @@
    "description": "Istituto di ricerca nel fiume Siberia e Estremo Oriente, Russia. Laboratorio dove si è verificata l'esposizione occupazionale",
    "risk_score": 75,
    "created_at": "2026-10-10T20:33:53.999476",
-   "updated_at": "2026-10-11T20:57:24.410019",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1367,9 +1367,9 @@
    "domain": "health",
    "region": null,
    "description": "Regione amministrativa della Russia, area dell'incidente",
-   "risk_score": 20,
+   "risk_score": 65,
    "created_at": "2026-10-10T20:33:53.999476",
-   "updated_at": "2026-10-11T11:22:50.866977",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1538,6 +1538,42 @@
    "risk_score": 95,
    "created_at": "2026-10-11T20:57:24.410019",
    "updated_at": "2026-10-11T20:57:24.410019",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "deceased_employee",
+   "label": "Dipendente APRI Irkutsk (deceduto)",
+   "type": "Person",
+   "domain": "health",
+   "region": null,
+   "description": "Impiegato dell'APRI deceduto il 2 ottobre 2026 per polmonite severa con sospetta peste polmonare",
+   "risk_score": 85,
+   "created_at": "2026-10-12T13:06:19.150499",
+   "updated_at": "2026-10-12T13:06:19.150499",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "hospital_treatment",
+   "label": "Struttura Ospedaliera - Irkutsk",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": null,
+   "description": "Ospedale dove il paziente è stato ricoverato il 29 settembre e sottoposto a quarantena",
+   "risk_score": 60,
+   "created_at": "2026-10-12T13:06:19.150499",
+   "updated_at": "2026-10-12T13:06:19.150499",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "ebola_outbreak_drc",
+   "label": "Epidemia Ebola RDC 2026",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "Democratic Republic of the Congo",
+   "description": "Focolaio attivo di Ebola causato dal virus Bundibugyo in RDC con 5794 casi confermati e 2786 decessi al 26 agosto 2026, interessa 60 zone sanitarie in 6 province",
+   "risk_score": 95,
+   "created_at": "2026-10-12T13:06:19.150499",
+   "updated_at": "2026-10-12T13:06:19.150499",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   }
  ],
@@ -3561,7 +3597,7 @@
    "target": "drc_ministry_health",
    "type": "COLLABORA_CON",
    "fact": "WHO collabora con autorità RDC nel monitoraggio dell'epidemia di Ebola e trasmissione dati",
-   "risk_score": 15,
+   "risk_score": 75,
    "source_doc": "2026-DON617",
    "date": "2026-09",
    "created_at": "2026-10-09T21:39:25.753364"
@@ -3946,7 +3982,7 @@
    "target": "drc_health_system",
    "type": "INDAGA_SU",
    "fact": "WHO monitora e riceve segnalazioni dal focolaio di Ebola Bundibugyo nella Repubblica Democratica del Congo",
-   "risk_score": 80,
+   "risk_score": 85,
    "source_doc": "2026-DON619",
    "date": "2026-10",
    "created_at": "2026-10-10T20:33:53.999519"
@@ -4434,77 +4470,286 @@
    "source_doc": "2026-DON616",
    "date": "2026-08",
    "created_at": "2026-10-11T20:57:24.410072"
+  },
+  {
+   "id": "russia_nfp_who_org_COLLABORA_CON",
+   "source": "russia_nfp",
+   "target": "who_org",
+   "type": "COLLABORA_CON",
+   "fact": "NFP russo ha confermato il decesso e comunicato i risultati degli esami a WHO",
+   "risk_score": 15,
+   "source_doc": "2026-DON620",
+   "date": "2026-10",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "apri_irkutsk_deceased_employee_RISCHIO_PER",
+   "source": "apri_irkutsk",
+   "target": "deceased_employee",
+   "type": "RISCHIO_PER",
+   "fact": "Esposizione occupazionale in laboratorio ha causato infezione fatale",
+   "risk_score": 90,
+   "source_doc": "2026-DON620",
+   "date": "2026-09",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "deceased_employee_hospital_treatment_CONTROLLA",
+   "source": "deceased_employee",
+   "target": "hospital_treatment",
+   "type": "CONTROLLA",
+   "fact": "Paziente ricoverato presso struttura ospedaliera il 29 settembre con polmonite severa",
+   "risk_score": 75,
+   "source_doc": "2026-DON620",
+   "date": "2026-09",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "irkutsk_oblast_apri_irkutsk_REGOLA",
+   "source": "irkutsk_oblast",
+   "target": "apri_irkutsk",
+   "type": "REGOLA",
+   "fact": "Autorità regionali responsabili della supervisione e implementazione misure di controllo",
+   "risk_score": 55,
+   "source_doc": "2026-DON620",
+   "date": "2026-10",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "hospital_treatment_apri_irkutsk_COLLABORA_CON",
+   "source": "hospital_treatment",
+   "target": "apri_irkutsk",
+   "type": "COLLABORA_CON",
+   "fact": "Ospedale ha implementato quarantena e follow-up medico dei contatti dell'APRI",
+   "risk_score": 65,
+   "source_doc": "2026-DON620",
+   "date": "2026-10",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "drc_health_system_bundibugyo_virus_outbreak_RISCHIO_PER",
+   "source": "drc_health_system",
+   "target": "bundibugyo_virus_outbreak",
+   "type": "RISCHIO_PER",
+   "fact": "Focolaio epidemico attivo nella DRC rappresenta rischio critico con 8728 casi e mortalità del 48.2%",
+   "risk_score": 98,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "kenya_health_system_bundibugyo_virus_outbreak_RISCHIO_PER",
+   "source": "kenya_health_system",
+   "target": "bundibugyo_virus_outbreak",
+   "type": "RISCHIO_PER",
+   "fact": "Caso importato confermato di Bundibugyo virus disease in Kenya con esito fatale",
+   "risk_score": 90,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "uganda_health_system_bundibugyo_virus_outbreak_RISCHIO_PER",
+   "source": "uganda_health_system",
+   "target": "bundibugyo_virus_outbreak",
+   "type": "RISCHIO_PER",
+   "fact": "Uganda ha avviato misure di contact tracing a seguito del caso importato da DRC via Uganda",
+   "risk_score": 82,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "who_org_bundibugyo_virus_outbreak_INDAGA_SU",
+   "source": "who_org",
+   "target": "bundibugyo_virus_outbreak",
+   "type": "INDAGA_SU",
+   "fact": "WHO monitora e pubblica rapporti sullo stato del focolaio epidemico di Ebola Bundibugyo in RDC",
+   "risk_score": 78,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "kayna_health_zone_north_kivu_zone_RISCHIO_PER",
+   "source": "kayna_health_zone",
+   "target": "north_kivu_zone",
+   "type": "RISCHIO_PER",
+   "fact": "Espansione geografica del virus Bundibugyo da zona di Kayna a Nord Kivu aumenta rischio di trasmissione",
+   "risk_score": 88,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "bundibugyo_virus_outbreak_north_kivu_zone_RISCHIO_PER",
+   "source": "bundibugyo_virus_outbreak",
+   "target": "north_kivu_zone",
+   "type": "RISCHIO_PER",
+   "fact": "Trasmissione sostenuta del virus negli ambienti ospedalieri e comunitari nella zona Nord Kivu",
+   "risk_score": 94,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "who_emergency_committee_ebola_outbreak_drc_INDAGA_SU",
+   "source": "who_emergency_committee",
+   "target": "ebola_outbreak_drc",
+   "type": "INDAGA_SU",
+   "fact": "WHO Emergency Committee ha dichiarato l'epidemia di Ebola in RDC come emergenza sanitaria pubblica di interesse internazionale il 18 agosto 2026",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "drc_ministry_health_ebola_outbreak_drc_CONTROLLA",
+   "source": "drc_ministry_health",
+   "target": "ebola_outbreak_drc",
+   "type": "CONTROLLA",
+   "fact": "Ministero della Salute RDC gestisce la risposta all'epidemia di Ebola e ne monitora la propagazione",
+   "risk_score": 90,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "ebola_outbreak_drc_bas_uele_province_RISCHIO_PER",
+   "source": "ebola_outbreak_drc",
+   "target": "bas_uele_province",
+   "type": "RISCHIO_PER",
+   "fact": "Epidemia di Ebola colpisce Bas-Uélé con espansione a nuove zone sanitarie (Ganga e Viadana)",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "ebola_outbreak_drc_haut_uele_province_RISCHIO_PER",
+   "source": "ebola_outbreak_drc",
+   "target": "haut_uele_province",
+   "type": "RISCHIO_PER",
+   "fact": "Epidemia di Ebola colpisce Haut-Uélé",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "ebola_outbreak_drc_ituri_province_RISCHIO_PER",
+   "source": "ebola_outbreak_drc",
+   "target": "ituri_province",
+   "type": "RISCHIO_PER",
+   "fact": "Epidemia di Ebola colpisce Ituri",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "ebola_outbreak_drc_north_kivu_province_RISCHIO_PER",
+   "source": "ebola_outbreak_drc",
+   "target": "north_kivu_province",
+   "type": "RISCHIO_PER",
+   "fact": "Epidemia di Ebola colpisce North Kivu con casi in Biena, Manguredjipa e Mutwanga health zones",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "ebola_outbreak_drc_south_kivu_province_RISCHIO_PER",
+   "source": "ebola_outbreak_drc",
+   "target": "south_kivu_province",
+   "type": "RISCHIO_PER",
+   "fact": "Epidemia di Ebola colpisce South Kivu",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
+  },
+  {
+   "id": "ebola_outbreak_drc_tshopo_province_RISCHIO_PER",
+   "source": "ebola_outbreak_drc",
+   "target": "tshopo_province",
+   "type": "RISCHIO_PER",
+   "fact": "Epidemia di Ebola colpisce Tshopo con casi in Tshopo health zone",
+   "risk_score": 95,
+   "source_doc": "2026-DON616",
+   "date": "2026-08",
+   "created_at": "2026-10-12T13:06:19.150561"
   }
  ],
  "alerts": [
   {
-   "id": "alert_bundibugyo_outbreak_international_spread",
-   "title": "Epidemia Ebola Bundibugyo in RDC - Rischio di diffusione internazionale",
-   "description": "Focolaio epidemico attivo di virus Bundibugyo in Repubblica Democratica del Congo con 8.728 casi confermati e 4.205 morti (CFR 48,2%) distribuiti su 64 zone sanitarie in 7 province. L'epidemia è monitorata dall'OMS come emergenza sanitaria pubblica di interesse internazionale. Trasmissione intensa documentata in province di North Kivu, Ituri e zone sanitarie critiche al confine con Sud Sudan.",
-   "severity": "CRITICAL",
-   "entities_involved": "[\"ebola_bundibugyo_outbreak\", \"bundibugyo_outbreak_drc\", \"north_kivu_province\", \"ituri_province\", \"drc_health\", \"who_global\"]",
-   "predicted_impact": "Se importato: ospedalizzazione in reparti di malattie infettive ad alta sicurezza, isolamento biologico, notevole carico organizzativo. Rischio di trasmissione nosocomiale se non gestito correttamente. Impatto psicologico sulla popolazione italiana e sugli operatori sanitari.",
-   "italy_relevance": "MEDIA",
-   "italy_impact": "Rischio di importazione in Italia attraverso: (1) viaggiatori provenienti dalle zone endemiche (principalmente operatori umanitari, cooperanti, personale ONG); (2) rientro di cittadini italiani dalla RDC o dai paesi confinanti; (3) rotte aeree internazionali con hub in Europa. Italia deve potenziare: sorveglianza presso gli aeroporti internazionali (screening epidemiologico nei ritorni dalla RDC), identificazione e isolamento di casi sospetti in pronto soccorso, notifica immediata ai Dipartimenti di Prevenzione regionali. L'assenza di link epidemiologici diretti con l'Italia e la bassa frequenza di viaggio dalla RDC rendono il rischio immediato di trasmissione BASSO, ma non negligibile per operatori sanitari e umanitari. Nessun vaccino specifico disponibile.",
-   "timeframe": "3-6 mesi",
-   "recommendation": "Il Ministero della Salute e l'ISS devono: (1) attivare protocolli di sorveglianza rafforzata per passeggeri provenienti da RDC, North Kivu, Ituri; (2) verificare la preparazione dei centri di malattie infettive designati (INMI Lazzaro Spallanzani Roma, ospedali regionali di riferimento) per l'isolamento biologico di livello 4; (3) distribuire agli ospedali le linee guida per il riconoscimento clinico della febbre emorragica da Bundibugyo; (4) sensibilizzare medici di medicina generale e pronto soccorso; (5) coordinare con l'OMS e i sistemi europei di allerta; (6) informare le strutture dove operano cooperanti/operatori umanitari che rientrano dalla RDC.",
-   "created_at": "2026-10-11T20:57:58.661840",
-   "is_read": false
-  },
-  {
-   "id": "alert_ge_medical_systems_patient_monitoring_loss",
-   "title": "Richiamo Class II - GE Medical Systems: Perdita di monitoraggio paziente (4 referenze)",
-   "description": "GE Medical Systems ha emesso 4 richiami di classe II (Z-3036-2026, Z-3037-2026, Z-3038-2026, Z-3039-2026) datati 2 settembre 2026. Il difetto riguarda un problema software che può causare perdita di monitoraggio paziente presso Hub e Central Viewer, con disattivazione di allarmi. Distribuito in Italia.",
+   "id": "alert_bundibugyo_outbreak_italy",
+   "title": "Epidemia Bundibugyo RDC - Rischio di importazione in Italia",
+   "description": "Focolaio epidemico attivo di virus Bundibugyo nella Repubblica Democratica del Congo con 8728 casi confermati, 4205 morti e CFR del 48.2%, distribuito su 64 zone sanitarie. WHO monitora come emergenza sanitaria pubblica di interesse internazionale.",
    "severity": "HIGH",
-   "entities_involved": "[\"ge_medical_systems_information_t\"]",
-   "predicted_impact": "Rischio di mancata rilevazione di aritmie critiche, desaturazione ossimetrica, ipotensione, altre emergenze. Potenziale danno ai pazienti critici. Necessaria implementazione immediata di compensi procedurali (monitoraggio manuale potenziato, check-list frequenti).",
-   "italy_relevance": "ALTA",
-   "italy_impact": "Le strutture sanitarie italiane (ospedali pubblici e privati accreditati) dotate di sistemi di monitoraggio paziente GE Medical Systems sono potenzialmente coinvolte. L'impatto riguarda direttamente: (1) Reparti di terapia intensiva (ICU/UTI), (2) Reparti di cardiologia e unità coronariche, (3) Sale operatorie con monitoraggio anestesiologico, (4) Reparti di emergenza. Il bug software determina la disattivazione dei sistemi di allarme, espone i pazienti a mancata rilevazione di variazioni critiche dei parametri vitali. Nessun dato su quale sia il numero di strutture italiane coinvolte.",
-   "timeframe": "Immediato - patch software da implementare",
-   "recommendation": "L'Agenzia Italiana del Farmaco (AIFA) e i Dipartimenti di Ingegneria Clinica regionali devono: (1) Verificare l'inventario di sistemi GE Medical Systems presenti negli ospedali italiani con i numeri di lotto interessati dai richiami; (2) Contattare le aziende sanitarie per identificare i reparti critici coinvolti; (3) Sollecitare GE per la disponibilità immediata della patch software; (4) In attesa della patch, implementare procedure di compenso (monitoraggio manuale aggiuntivo, frequenza di check vitali aumentata); (5) Aggiornare il registro dei dispositivi medici con la segnalazione; (6) Emettere comunicazione alle direzioni sanitarie regionali.",
-   "created_at": "2026-10-11T20:57:58.661840",
+   "entities_involved": "[\"bundibugyo_outbreak_drc\", \"ebola_bundibugyo_outbreak\", \"drc_health\", \"north_kivu_province\", \"ituri_province\"]",
+   "predicted_impact": "Se confermato un caso importato in Italia: isolamento presso IRCCS ad alta biosicurezza, attivazione protocolli di tracciamento contatti, possibile coinvolgimento del Dipartimento della Protezione Civile. Impatto su personale sanitario esposto con necessità di profilassi post-esposizione. Carico diagnostico su laboratori di riferimento.",
+   "italy_relevance": "MEDIA",
+   "italy_impact": "Rischio concreto di importazione in Italia attraverso: (1) rientro di cooperanti e operatori sanitari italiani attivi in RDC che potrebbero portare il virus nei 14-21 giorni di incubazione; (2) passeggeri da voli internazionali RDC-Europa-Italia; (3) necessità di potenziamento della sorveglianza ai punti di ingresso (Fiumicino, Malpensa, Venezia) con screening epidemiologico dei viaggiatori provenienti da aree colpite. Impatto SSN: i Centri di Riferimento Nazionale per le Malattie Infettive ad alta contenzione (Istituto Spallanzani Roma, IRCCS San Raffaele Milano) devono implementare protocolli di isolamento e diagnostica PCR real-time per Bundibugyo.",
+   "timeframe": "3-6 mesi",
+   "recommendation": "ISS-Istituto Superiore di Sanità: aggiornare circolare su sorveglianza febbri emorragiche in viaggiatori; rafforzare formazione presso porti e aeroporti internazionali. Ministero Salute: contattare OMS per accesso a diagnostica Bundibugyo e protocoli clinici. INMI Spallanzani e San Raffaele: verificare disponibilità DPI, isolatori a pressione negativa, reagenti PCR, antivirali sperimentali. Aziende Sanitarie: informare medici di medicina generale e pronto soccorso su sintomi (febbre emorragica 2-21 gg post-esposizione).",
+   "created_at": "2026-10-12T13:06:49.465105",
    "is_read": false
   },
   {
-   "id": "alert_bd_switzerland_infusion_sets_class_i",
-   "title": "Richiamo Class I - BD Switzerland: Discrepanze nelle linee di infusione (Z-3080-2026)",
-   "description": "BD Switzerland SARL ha emesso richiamo di classe I (Z-3080-2026) datato 23 settembre 2026 per set di infusione. Il difetto riguarda discrepanze in attributi specifici nei dati di prestazione, che possono portare a somministrazione inappropriata di farmaci/fluidi. Distribuito in Italia.",
+   "id": "alert_ge_patient_monitoring_systems",
+   "title": "Richiamo dispositivi monitoraggio pazienti GE - Perdita allarmi in ICU",
+   "description": "GE Medical Systems ha distribuito in Italia almeno 4 richiami di classe II (Z-3036-2026, Z-3037-2026, Z-3038-2026, Z-3039-2026) per problematiche software che comportano perdita di monitoraggio pazienti al Hub e Central Viewer con conseguente malfunzionamento degli allarmi.",
    "severity": "CRITICAL",
-   "entities_involved": "[\"bd_switzerland_sarl\"]",
-   "predicted_impact": "Rischio di: (1) Sottoinfusione o sovrainfusione di farmaci critici, (2) Alterazione della terapia in pazienti con margini stretti di sicurezza (farmaci antiaritmici, vasoattivi, chemioterapici), (3) Danno ai pazienti in terapia intensiva. L'impatto è alto per acuità e criticità dei pazienti coinvolti.",
+   "entities_involved": "[\"ge_medical_systems_information_t\"]",
+   "predicted_impact": "Pazienti in terapia intensiva potrebbero non ricevere notifiche di desaturazione O2, aritmie, ipertensione/ipotensione critiche, con ritardo diagnostico e terapeutico potenzialmente fatale. Impatto su continuità assistenziale e responsabilità civile ospedaliera.",
    "italy_relevance": "ALTA",
-   "italy_impact": "I set di infusione sono dispositivi medici ubiquitari negli ospedali, reparti di terapia intensiva, ambulatori, farmacie ospedaliere italiane. Sono utilizzati per la somministrazione di farmaci endovenosi, nutrizione parenterale, emoderivati. Il difetto nelle caratteristiche di prestazione (portata di flusso, velocità, compatibilità con pompe infusionali) può determinare somministrazione scorretta di dosi e velocità infusionali, con danni ai pazienti. Le farmacie ospedaliere e i magazzini centrali devono verificare immediatamente l'inventario dei lotti interessati.",
-   "timeframe": "Immediato - ritiro dei lotti",
-   "recommendation": "Le aziende sanitarie italiane devono: (1) Contattare immediatamente BD Switzerland per ottenere i numeri di lotto interessati dal richiamo; (2) Ispezionare le farmacie ospedaliere, i magazzini centrali, i reparti di terapia intensiva, cardiologia, anestesia per identificare il materiale; (3) Segregare e contrassegnare i set di infusione interessati; (4) Notificare ai clinici di non utilizzo fino alla risoluzione; (5) Registrare l'evento su NSIS (Sistema Nazionale Segnalazione Reazioni Avverse); (6) Contattare i pazienti recentemente trattati con i lotti interessati se identificati e valutare se ha causato conseguenze cliniche. L'Agenzia Italiana del Farmaco deve coordinare il ritiro su scala nazionale.",
-   "created_at": "2026-10-11T20:57:58.661840",
+   "italy_impact": "Diretto: Ospedali e strutture di degenza intensive italiane che utilizzano sistemi GE patient monitoring (Hub e Central Viewer) sono potenzialmente coinvolti. Il rischio è la perdita di monitoraggio vitale in reparti critici (Terapia Intensiva, Cardiologia, Neurointensiva), con impossibilità di ricevere allarmi critici e conseguente ritardo negli interventi salvavita. Ingegneria Clinica e Farmacie Ospedaliere devono: verificare inventario dispositivi GE con modelli interessati, consultare SOP di installazione, verificare configurazione software nelle loro strutture.",
+   "timeframe": "Immediato - attivo",
+   "recommendation": "AIFA - Direzione Dispositivi Medici: contattare immediatamente GE per dettagli su modelli/versioni software interessati e distribuzione in Italia. Ogni Azienda Sanitaria (Direzione Ingegneria Clinica): identificare e testare tutti gli Hub e Central Viewer GE presso strutture critiche, verificare versioni software, applicare patch secondo indicazioni GE, mantenere log di verifica. Farmacie Ospedaliere: coordinare con Ingegneria su timeline rimedi. Reparti clinici: implementare monitoraggio manuale aggiuntivo fino a risoluzione, verificare funzionamento allarmi giornalmente.",
+   "created_at": "2026-10-12T13:06:49.465105",
    "is_read": false
   },
   {
-   "id": "alert_amgen_stability_expiry_data_2025",
-   "title": "Richiamo Class II - Amgen: Dati di stabilità insufficienti per scadenza (D-0285-2025, D-0286-2025)",
-   "description": "Amgen Inc. ha emesso 2 richiami di classe II (D-0285-2025 e D-0286-2025) datati 26 marzo 2025. Il difetto riguarda dati di stabilità insufficienti: i prodotti hanno potenziale di non conformità alle specifiche alla data di scadenza. Prodotti distribuiti in Italia.",
+   "id": "alert_bd_infusion_sets_italy",
+   "title": "Richiamo infusori BD - Discrepanze dati prestazioni",
+   "description": "BD Switzerland SARL ha distribuito in Italia un richiamo di classe I (Z-3080-2026 del 23 settembre 2026) per discrepanze negli attributi di performance specifici degli infusori, con potenziale inappropriatezza d'uso.",
+   "severity": "HIGH",
+   "entities_involved": "[\"bd_switzerland_sarl\"]",
+   "predicted_impact": "Possibile somministrazione di terapie infusionali con parametri non idonei al paziente (velocità, pressione, volume) con conseguente sottodosaggio, sovradosaggio, o interruzione non intenzionata della terapia farmacologica. Pazienti oncologici, cardiologici, neurologici e pediatrici risultano ad aumentato rischio di complicanze.",
+   "italy_relevance": "ALTA",
+   "italy_impact": "Pazienti italiani in terapia con infusori BD sono potenzialmente interessati. Ospedali, clinic ambulatoriali e strutture di riabilitazione distribuiscono questi dispositivi. Farmacie Ospedaliere devono: identificare tutti i lotti Z-3080-2026 ricevuti, verificare date di distribuzione al settembre 2026, consultare elenco seriali interessati presso BD Italia. Ingegneria Clinica deve verificare eventuali unità già installate presso postazioni infusionali.",
+   "timeframe": "Immediato - richiamo attivo",
+   "recommendation": "AIFA - Direzione Dispositivi Medici: acquisire da BD lista completa lotti interessati, numeri di serie e ospedali distributori in Italia. Farmacie Ospedaliere: bloccare immediatamente utilizzo lotto Z-3080-2026, comunicare ai reparti clinici, predisporre sostituzione con infusori conformi. Reparti clinici: verificare pazienti attivi su infusori BD, controllare eventuali anomalie cliniche correlate, documentare e segnalare a farmacovigilanza locale. BD Italia: fornire entro 48h lista distributori primari e ospedalieri.",
+   "created_at": "2026-10-12T13:06:49.465105",
+   "is_read": false
+  },
+  {
+   "id": "alert_amgen_stability_italy",
+   "title": "Richiamo farmaci Amgen - Dati stabilità insufficienti",
+   "description": "Amgen Inc. ha distribuito in Italia due richiami di classe II (D-0285-2025 e D-0286-2025 del 26 marzo 2025) per dati di stabilità insufficienti: i prodotti hanno potenziale di essere fuori specifica al termine della data di scadenza.",
    "severity": "HIGH",
    "entities_involved": "[\"amgen_inc\"]",
-   "predicted_impact": "Rischio di: (1) Perdita di efficacia terapeutica in pazienti oncologici/ematologici, (2) Progressione tumorale o malattia ematologica, (3) Necessità di ripresa di terapia, (4) Impatto sulla continuità di cura. Il danno è principalmente di efficacia terapeutica più che di sicurezza acuta, ma comunque significativo.",
+   "predicted_impact": "Potenziale somministrazione di farmaci biologici degradati (farmaci Amgen tipicamente includono inibitori di proteasi, fattori di crescita ematopoietici, anticorpi monoclonali) con ridotta efficacia terapeutica o potenziale aumento effetti avversi. Pazienti oncologici e immunocompromessi esposti a rischio di progressione malattia o mancanza di controllo sintomatico.",
    "italy_relevance": "ALTA",
-   "italy_impact": "Amgen produce farmaci di importanza critica (biologici ricombinanti, fattori di crescita ematopoietici, oncologici). Se i prodotti richiamati sono farmaci biologici oncologici o ematologici distribuiti in Italia, il coinvolgimento riguarda: (1) Farmacie ospedaliere, (2) Reparti di oncologia, (3) Reparti di ematologia, (4) Pazienti con patologie ematologiche e tumorali in terapia al momento del richiamo. La perdita di potenza di farmaci biologici compromette l'efficacia della terapia e può causare progressione della malattia. Non sono disponibili specifiche sul nome commerciale e sui lotti interessati nei dati forniti.",
-   "timeframe": "Medio termine - dipende da quanti pazienti hanno ricevuto i lotti interessati e dalla progressione della loro malattia",
-   "recommendation": "Le farmacie ospedaliere italiane devono: (1) Ottenere da Amgen l'elenco dei numeri di lotto e dei nomi commerciali interessati dal richiamo; (2) Consultare i registri dei farmaci dispensati per identificare i pazienti trattati; (3) Coordinare con i clinici responsabili dei reparti di oncologia e ematologia per valutare se è necessaria rivalutazione clinica dei pazienti trattati; (4) Registrare l'evento su NSIS. L'Agenzia Italiana del Farmaco deve: (1) Coordinare il ritiro su scala nazionale, (2) Richiedere ad Amgen chiarimenti sulla entità temporale del difetto di stabilità, (3) Considerare azioni con EMA se ritenute necessarie.",
-   "created_at": "2026-10-11T20:57:58.661840",
+   "italy_impact": "Pazienti italiani in terapia con farmaci Amgen interessati (dati di scadenza 2025 indicano lotti ancora potenzialmente in uso in reparti oncologici, cardiologici e per malattie autoimmuni). Farmacie Ospedaliere e territoriali devono: verificare magazzini per presenza lotti D-0285-2025 e D-0286-2025, controllare date scadenza, consultare numero di serie presso Amgen Italia. Reparti clinici (Oncologia, Ematologia, Malattie Autoimmuni) devono verificare pazienti trattati con questi lotti.",
+   "timeframe": "Retrospettivo (marzo 2025) e attuale - verificare uso residuo",
+   "recommendation": "AIFA - Farmacovigilanza: acquisire da Amgen elenco esatto lotti e date scadenza in Italia, identificare ospedali e farmacie territoriali interessati. Farmacie Ospedaliere e Territoriali: audit immediato scorte, identificare pazienti che hanno ricevuto lotti interessati, consultare clinici su monitoraggio. Reparti clinici: valutare pazienti trattati (efficacia clinica, tolleranza, progressione malattia), segnalare sospetti eventi avversi a farmacovigilanza AIFA. Pazienti: contattare per informazione su lotti ricevuti e possibile necessità follow-up clinico intensificato.",
+   "created_at": "2026-10-12T13:06:49.465105",
    "is_read": false
   },
   {
-   "id": "alert_dr_bernes_non_sterility_2023",
-   "title": "Richiamo Class I - Dr. Bernes Whole Health Products: Non-Sterilità (D-0037-2024)",
-   "description": "Dr. Bernes Whole Health Products ha emesso richiamo di classe I (D-0037-2024) datato 11 ottobre 2023 per mancanza di sterilità. Trattasi di prodotto con potenziale distribuzione in Italia.",
-   "severity": "CRITICAL",
-   "entities_involved": "[\"dr_bernes_whole_health_products\"]",
-   "predicted_impact": "Rischio di infezioni batteriche opportunistiche. La gravità dipende dalla natura del prodotto e dall'uso (uso topico vs. invasivo).",
-   "italy_relevance": "ALTA",
-   "italy_impact": "Prodotti non sterili rappresentano rischio infettivo critico. Senza maggiori dettagli sulla natura del prodotto (dispositivo medico impiantabile, farmaco iniettabile, benda, altro) non è possibile specificare il coinvolgimento, ma il richiamo riguarda potenzialmente: (1) Ospedali e cliniche, (2) Farmacie, (3) Pazienti immunocompromessi. La mancanza di sterilità può causare infezioni anche gravi (sepsi, infezioni nosocomiali).",
-   "timeframe": "Il richiamo è stato emesso nel 2023 - è presumibile che l'azione sia già stata attuata, ma verificare completezza del ritiro in Italia",
-   "recommendation": "Verificare con AIFA e farmacie ospedaliere italiane se il prodotto Dr. Bernes è stato completamente ritirato dal mercato italiano e dalle scorte. In caso di residui, procedere al ritiro immediato e comunicazione ai pazienti potenzialmente coinvolti.",
-   "created_at": "2026-10-11T20:57:58.661840",
+   "id": "alert_drc_health_system_collapse_risk",
+   "title": "Crollo sistema sanitario RDC - Implicazioni per operatori italiani",
+   "description": "Il sistema sanitario della Repubblica Democratica del Congo è sottoposto a stress critico dall'epidemia di Bundibugyo (8728 casi, 64 zone sanitarie interessate, CFR 48.2%). Rischio di saturazione capacità diagnostica, isolamento e terapia intensiva nel paese.",
+   "severity": "MEDIUM",
+   "entities_involved": "[\"drc_health\", \"bundibugyo_outbreak_drc\", \"north_kivu_province\", \"ituri_province\"]",
+   "predicted_impact": "Potenziale rientro di operatore italiano infetto durante periodo di viremia con rischio di trasmissione in comunità o strutture ospedaliere durante evacuazione/trasporto. Necessità di risorse intensive presso centri di isolamento italiano. Impatto psicologico e occupazionale su personale cooperante.",
+   "italy_relevance": "MEDIA",
+   "italy_impact": "Cooperanti, missionari medici, operatori sanitari italiani attivi in ospedali e ONG della RDC (Nord Kivu, Ituri) sono esposti a rischio occupazionale molto elevato per infezione da Bundibugyo in contesti di scarpe protezione, mancanza DPI, carico di lavoro estremo. Ministero Affari Esteri e AICS coordinano presenze italiane. Possibile necessità di evacuazione e rimpatrio di personale infetto con isolamento presso centri di contenimento italiano (Spallanzani). Aumentato rischio di esposizione non protetta a campioni biologici e contatti con pazienti.",
+   "timeframe": "3-6 mesi (evoluzione epidemia)",
+   "recommendation": "Ministero Affari Esteri e AICS: valutare contingency plan per evacuazione e isolamento personale italiano infetto, coordinare con INMI Spallanzani su capacità di isolamento e terapia. Ufficio Risorse Umane organizzazioni umanitarie italiane: rinforzare protocolli DPI, formazione pre-partenza su febbri emorragiche, assicurazione sanitaria internazionale con copertura evacuazione. INMI Spallanzani: preparare posti di isolamento e coordinare con WHO su protocolli terapeutici sperimentali per Bundibugyo. Operatori in RDC: segnalare sintomatologia febbrile immediatamente a coordinatori misssione con contact tracing verso Italia.",
+   "created_at": "2026-10-12T13:06:49.465105",
    "is_read": false
   }
  ]
