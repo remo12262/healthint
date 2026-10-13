@@ -29,7 +29,7 @@ function formatDateTime(iso) {
     " alle " + d.toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"})
 }
 
-const zoomBtn = {width:24,height:24,border:"0.5px solid var(--color-border-tertiary)",borderRadius:4,background:"var(--color-background-secondary)",cursor:"pointer",fontSize:14,lineHeight:"20px"}
+const zoomBtn = {width:34,height:34,border:"0.5px solid var(--color-border-tertiary)",borderRadius:4,background:"var(--color-background-secondary)",cursor:"pointer",fontSize:18,lineHeight:"30px"}
 
 // Tipo di relazione in italiano, dal punto di vista del nodo selezionato
 const REL_LABEL = {
@@ -47,10 +47,18 @@ const REL_LABEL = {
 
 const NODE_TYPE_LABEL = {
   HospitalNetwork: "Azienda sanitaria o ospedaliera", PharmaCompany: "Azienda farmaceutica o di dispositivi",
-  RegulatorAgency: "Ente regolatore", RegionalAuthority: "Regione", ProcurementBody: "Centrale acquisti / associazione",
+  RegulatorAgency: "Ente regolatore", RegionalAuthority: "Regione o autorità sanitaria territoriale", ProcurementBody: "Centrale acquisti / associazione",
   ResearchInstitute: "Istituto di ricerca", PrivateGroup: "Gruppo sanitario privato", InsuranceBody: "Fondo / assicurazione",
   Person: "Persona",
 }
+// Tipi senza colore dedicato (eventi e minacce sanitarie estratti dalle notizie)
+const OTHER_COLOR = "#888780"
+const OTHER_LABEL = "Evento o minaccia sanitaria"
+
+// Spazio fisso in cui si dispone il grafo; la vista lo adatta allo schermo
+const WORLD_W = 680, WORLD_H = 500
+
+const NO_SOURCE = "Fonte da verificare"
 
 function formatDay(d) {
   if (!d) return ""
@@ -59,18 +67,50 @@ function formatDay(d) {
   return m[3] ? `${m[3]}/${m[2]}/${m[1]}` : `${m[2]}/${m[1]}`
 }
 
-// Da dove viene una relazione: richiamo FDA, notizia OMS o inserimento manuale
-function relationOrigin(r) {
-  const recall = (r.id || "").startsWith("recall_") ? r.id.slice(7) : null
+// Fonte di una relazione: richiamo FDA o notizia OMS, con link e data; altrimenti nessuna fonte.
+// donIndex: notizie OMS scaricate (id DON -> titolo e data di pubblicazione)
+function relationOrigin(r, donIndex = {}) {
+  const doc = r.source_doc || ""
+  const recall = /^[DZ]-\d+-\d+$/.test(doc) ? doc : (r.id || "").startsWith("recall_") ? r.id.slice(7) : null
   if (recall) {
     const kind = recall.startsWith("Z-") ? "device" : "drug"
-    return {kind: "fda", recall,
+    return {kind: "fda", recall, date: r.date, label: `Richiamo FDA ${recall} (openFDA)`,
       url: `https://api.fda.gov/${kind}/enforcement.json?search=recall_number:%22${encodeURIComponent(recall)}%22`}
   }
-  if ((r.source_doc || "").includes("DON")) {
-    return {kind: "who", url: `https://www.who.int/emergencies/disease-outbreak-news/item/${r.source_doc}`}
+  if (/^\d{4}-DON\d+$/.test(doc)) {
+    const don = donIndex[doc]
+    return {kind: "who", doc, date: don?.date || r.date, published: !!don?.date,
+      label: don?.title ? `OMS – ${don.title}` : `OMS – Disease Outbreak News ${doc}`,
+      url: `https://www.who.int/emergencies/disease-outbreak-news/item/${doc}`}
   }
   return {kind: "manual"}
+}
+
+// Fonti di un nodo, ricavate dai dati che lo hanno generato:
+// - azienda con richiamo FDA: i suoi richiami;
+// - entità estratta dall'AI dalle notizie OMS: le notizie delle sue relazioni;
+// - enti di base inseriti a mano e nodi senza relazioni: nessuna fonte.
+function nodeOrigin(node, relations, donIndex) {
+  const basis = node?.risk_basis || ""
+  const kind = basis.startsWith("Richiamo FDA") ? "fda" : basis.startsWith("Stima dell'AI") ? "who" : "manual"
+  if (kind === "manual") return {kind, sources: []}
+  const seen = new Map()
+  relations.forEach(r => {
+    const o = relationOrigin(r, donIndex)
+    if (o.kind === kind && (kind === "who" || r.source === node.id) && !seen.has(o.url)) seen.set(o.url, o)
+  })
+  const sources = [...seen.values()].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))
+  return {kind, sources}
+}
+
+function SourceLinks({sources}) {
+  if (!sources.length) return <span style={{color:"#A32D2D",fontWeight:500}}>{NO_SOURCE}</span>
+  return sources.map(s => (
+    <div key={s.url} style={{marginTop:2}}>
+      <a href={s.url} target="_blank" rel="noopener noreferrer" style={{color:"#0F6E56"}}>{s.label}</a>
+      {s.date && <span> · {s.kind === "fda" ? "richiamo del " : s.published ? "pubblicata il " : "data: "}{formatDay(s.date)}</span>}
+    </div>
+  ))
 }
 
 // "[Class II] Z-3233-2026: motivo" -> classe e motivo leggibili
@@ -106,6 +146,15 @@ export default function App() {
   const [notice, setNotice] = useState(null)   // {kind: "info"|"error"|"ok", text}
   const [loadError, setLoadError] = useState(null)
   const [zoom, setZoom] = useState(100)
+  const [selectedEdge, setSelectedEdge] = useState(null)
+  // Dimensione reale del canvas in pixel CSS e layout stretto (telefono)
+  const [size, setSize] = useState({w: WORLD_W, h: WORLD_H})
+  const [narrow, setNarrow] = useState(() => typeof window !== "undefined" && window.innerWidth < 760)
+  const wrapRef = useRef(null)
+  const detailsRef = useRef(null)
+  const pointersRef = useRef(new Map())
+  const pinchRef = useRef(null)
+  const fitRef = useRef(1)
   const posRef = useRef({})
   const velRef = useRef({})
   const animRef = useRef(null)
@@ -144,6 +193,57 @@ export default function App() {
 
   useEffect(() => { fetchData() }, [fetchData])
 
+  // Notizie OMS scaricate, per titolo e data di pubblicazione delle fonti
+  const donIndex = {}
+  ;(signals?.who || []).forEach(s => {
+    const id = String(s.url || "").split("/").pop()
+    if (id) donIndex[id] = s
+  })
+  const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]))
+  const relationsOf = id => edges.filter(e => e.source === id || e.target === id).map(e => ({
+    ...e, source_label: nodeById[e.source]?.label || e.source, target_label: nodeById[e.target]?.label || e.target,
+  })).sort((a, b) => (b.risk_score || 0) - (a.risk_score || 0))
+  // Quante informazioni del grafo hanno una fonte con link
+  const coverage = (() => {
+    const nodesWith = nodes.filter(n => nodeOrigin(n, relationsOf(n.id), donIndex).sources.length > 0).length
+    const edgesWith = edges.filter(e => relationOrigin(e, donIndex).kind !== "manual").length
+    return {nodesWith, edgesWith}
+  })()
+  const presentTypes = new Set(nodes.map(n => n.type))
+  const updatedAt = status?.updated_at || stats.updated_at
+
+  // Il canvas segue la larghezza del suo contenitore; la vista adatta il grafo allo spazio disponibile
+  useEffect(() => {
+    function onResize() { setNarrow(window.innerWidth < 760) }
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [])
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+    const ro = new ResizeObserver(() => {
+      const w = Math.max(260, Math.round(el.clientWidth))
+      const h = narrow ? Math.round(Math.min(520, Math.max(360, w * 1.1))) : 500
+      setSize(s => (s.w === w && s.h === h) ? s : {w, h})
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [loading, loadError, tab, narrow])
+  // Al primo disegno la vista si adatta; se poi cambia la dimensione si conservano zoom e posizione
+  const prevSizeRef = useRef(null)
+  useEffect(() => {
+    const prev = prevSizeRef.current
+    prevSizeRef.current = size
+    if (!prev) { resetView(); return }
+    const fit = Math.min(size.w / WORLD_W, size.h / WORLD_H)
+    const k = fit / fitRef.current
+    const v = viewRef.current
+    v.x = (v.x - prev.w / 2) * k + size.w / 2
+    v.y = (v.y - prev.h / 2) * k + size.h / 2
+    v.scale *= k
+    fitRef.current = fit
+  }, [size.w, size.h])
+
   async function refreshNow() {
     setNotice(null)
     let res
@@ -181,7 +281,7 @@ export default function App() {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas || nodes.length === 0) return
-    const W = canvas.width, H = canvas.height
+    const W = WORLD_W, H = WORLD_H
     const cx = W / 2, cy = H / 2
     nodes.forEach((n, i) => {
       if (!posRef.current[n.id]) {
@@ -203,8 +303,7 @@ export default function App() {
     let tick = 0
 
     function force() {
-      const W = canvas.width, H = canvas.height
-      const cx = W/2, cy = H/2
+      const cx = WORLD_W/2, cy = WORLD_H/2
       nodes.forEach(a => {
         const pa = posRef.current[a.id]
         if (!pa) return
@@ -239,8 +338,8 @@ export default function App() {
         const v = velRef.current[n.id]
         if (!p || !v) return
         v.vx *= 0.75; v.vy *= 0.75
-        p.x = Math.max(50, Math.min(canvas.width-50, p.x + v.vx))
-        p.y = Math.max(40, Math.min(canvas.height-40, p.y + v.vy))
+        p.x = Math.max(50, Math.min(WORLD_W-50, p.x + v.vx))
+        p.y = Math.max(40, Math.min(WORLD_H-40, p.y + v.vy))
       })
     }
 
@@ -250,17 +349,20 @@ export default function App() {
       const view = viewRef.current
       ctx.setTransform(view.scale, 0, 0, view.scale, view.x, view.y)
       const sel = selected
+      const selEdge = selectedEdge
+      const selEdgeObj = selEdge && edges.find(e => e.id === selEdge)
       const hov = hoveredRef.current
 
       edges.forEach(e => {
         const ps = posRef.current[e.source], pt = posRef.current[e.target]
         if (!ps || !pt) return
-        const isHl = sel && (e.source === sel || e.target === sel)
+        const isEdgeSel = selEdge && e.id === selEdge
+        const isHl = isEdgeSel || (sel && (e.source === sel || e.target === sel))
         ctx.beginPath()
         ctx.moveTo(ps.x, ps.y)
         ctx.lineTo(pt.x, pt.y)
-        ctx.strokeStyle = isHl ? "rgba(29,158,117,0.7)" : "rgba(128,128,128,0.12)"
-        ctx.lineWidth = isHl ? 2 : 0.8
+        ctx.strokeStyle = isEdgeSel ? "rgba(216,90,48,0.9)" : isHl ? "rgba(29,158,117,0.7)" : "rgba(128,128,128,0.12)"
+        ctx.lineWidth = isEdgeSel ? 3.5 : isHl ? 2 : 0.8
         ctx.stroke()
         if (isHl) {
           const mx = (ps.x+pt.x)/2, my = (ps.y+pt.y)/2
@@ -278,11 +380,12 @@ export default function App() {
       nodes.forEach(n => {
         const p = posRef.current[n.id]
         if (!p) return
-        const color = NODE_COLORS[n.type] || "#888"
+        const color = NODE_COLORS[n.type] || OTHER_COLOR
         const isSel = n.id === sel
         const isHov = hov && n.id === hov.id
-        const isConn = sel && edges.some(e => (e.source===sel&&e.target===n.id)||(e.target===sel&&e.source===n.id))
-        const alpha = sel && !isSel && !isConn ? 0.2 : 1
+        const isConn = (sel && edges.some(e => (e.source===sel&&e.target===n.id)||(e.target===sel&&e.source===n.id)))
+          || (selEdgeObj && (selEdgeObj.source === n.id || selEdgeObj.target === n.id))
+        const alpha = (sel || selEdgeObj) && !isSel && !isConn ? 0.2 : 1
         const r = isSel ? 14 : isHov ? 12 : Math.max(7, Math.min(12, n.risk_score/10))
 
         ctx.save()
@@ -300,10 +403,12 @@ export default function App() {
           ctx.strokeStyle = riskColor(n.risk_score)+"88"; ctx.lineWidth = 1; ctx.stroke()
         }
 
-        ctx.font = `${isSel ? "500" : "400"} 11px sans-serif`
+        // Le scritte crescono meno dello zoom: leggibili a grafo intero, non enormi da vicino
+        const fontPx = 11 / Math.sqrt(viewRef.current.scale)
+        ctx.font = `${isSel ? "500" : "400"} ${fontPx.toFixed(1)}px sans-serif`
         ctx.fillStyle = "rgba(0,0,0,0.75)"
         ctx.textAlign = "center"
-        ctx.fillText(n.label, p.x, p.y + r + 13)
+        ctx.fillText(n.label, p.x, p.y + r + 2 + fontPx)
         ctx.restore()
       })
     }
@@ -315,7 +420,7 @@ export default function App() {
     }
     animRef.current = requestAnimationFrame(loop)
     return () => cancelAnimationFrame(animRef.current)
-  }, [nodes, edges, selected, loading, tab])
+  }, [nodes, edges, selected, selectedEdge, loading, tab, size])
 
   // Zoom con la rotella attorno al puntatore (listener non passivo per bloccare lo scroll della pagina)
   useEffect(() => {
@@ -330,16 +435,18 @@ export default function App() {
     }
     canvas.addEventListener("wheel", onWheel, {passive: false})
     return () => canvas.removeEventListener("wheel", onWheel)
-  }, [nodes, loading, tab])
+  }, [nodes, loading, tab, size])
 
+  // Zoom relativo alla vista "adattata" allo schermo (100% = tutto il grafo visibile)
   function zoomAt(factor, px, py) {
     const v = viewRef.current
-    const scale = Math.min(4, Math.max(0.4, v.scale * factor))
+    const fit = fitRef.current
+    const scale = Math.min(fit * 6, Math.max(fit * 0.5, v.scale * factor))
     const k = scale / v.scale
     v.x = px - (px - v.x) * k
     v.y = py - (py - v.y) * k
     v.scale = scale
-    setZoom(Math.round(scale * 100))
+    setZoom(Math.round(scale / fit * 100))
   }
 
   function zoomButton(factor) {
@@ -348,7 +455,9 @@ export default function App() {
   }
 
   function resetView() {
-    viewRef.current = {scale:1, x:0, y:0}
+    const fit = Math.min(size.w / WORLD_W, size.h / WORLD_H)
+    fitRef.current = fit
+    viewRef.current = {scale: fit, x: (size.w - WORLD_W * fit) / 2, y: (size.h - WORLD_H * fit) / 2}
     setZoom(100)
   }
 
@@ -365,45 +474,95 @@ export default function App() {
     return {x: (x - v.x) / v.scale, y: (y - v.y) / v.scale}
   }
 
-  function getNodeAt(cssX, cssY) {
+  // Raggio di tocco in pixel dello schermo: più largo per il dito
+  function hitRadius(touch) {
+    return (touch ? 24 : 14) / viewRef.current.scale
+  }
+
+  function getNodeAt(cssX, cssY, touch) {
     const {x, y} = toCanvasCoords(cssX, cssY)
-    const hit = Math.max(10, 25 / viewRef.current.scale)
-    for (let i = nodes.length-1; i >= 0; i--) {
-      const n = nodes[i]; const p = posRef.current[n.id]
+    const hit = hitRadius(touch)
+    let best = null, bestD = Infinity
+    for (const n of nodes) {
+      const p = posRef.current[n.id]
       if (!p) continue
-      if (Math.sqrt((x-p.x)**2+(y-p.y)**2) < hit) return n
+      const d = Math.hypot(x - p.x, y - p.y)
+      if (d < hit && d < bestD) { best = n; bestD = d }
     }
-    return null
+    return best
   }
 
-  async function selectNode(n) {
+  // Relazione più vicina al punto toccato (distanza dal segmento)
+  function getEdgeAt(cssX, cssY, touch) {
+    const {x, y} = toCanvasCoords(cssX, cssY)
+    const hit = hitRadius(touch) * 0.6
+    let best = null, bestD = Infinity
+    for (const e of edges) {
+      const a = posRef.current[e.source], b = posRef.current[e.target]
+      if (!a || !b) continue
+      const dx = b.x - a.x, dy = b.y - a.y
+      const len2 = dx * dx + dy * dy || 1
+      const t = Math.max(0, Math.min(1, ((x - a.x) * dx + (y - a.y) * dy) / len2))
+      const d = Math.hypot(x - (a.x + t * dx), y - (a.y + t * dy))
+      if (d < hit && d < bestD) { best = e; bestD = d }
+    }
+    return best
+  }
+
+  function selectNode(n) {
+    setSelectedEdge(null)
     setSelected(n ? n.id : null)
-    if (n) {
-      const res = await fetch(`${API}/api/node/${n.id}`)
-      const data = await res.json()
-      setNodeDetails(data)
-    } else {
-      setNodeDetails(null)
-    }
+    setNodeDetails(n ? {node: n, relations: relationsOf(n.id)} : null)
   }
 
-  function onMouseDown(e) {
-    const r = e.currentTarget.getBoundingClientRect()
-    const cssX = e.clientX-r.left, cssY = e.clientY-r.top
-    const n = getNodeAt(cssX, cssY)
+  function selectEdge(e) {
+    setSelected(null)
+    setNodeDetails(null)
+    setSelectedEdge(e ? e.id : null)
+  }
+
+  function localPoint(ev) {
+    const r = ev.currentTarget.getBoundingClientRect()
+    return {cssX: ev.clientX - r.left, cssY: ev.clientY - r.top}
+  }
+
+  function onPointerDown(ev) {
+    ev.currentTarget.setPointerCapture?.(ev.pointerId)
+    const {cssX, cssY} = localPoint(ev)
+    pointersRef.current.set(ev.pointerId, {cssX, cssY})
+    if (pointersRef.current.size === 2) {
+      // Due dita: zoom, si annullano trascinamenti in corso
+      const [a, b] = [...pointersRef.current.values()]
+      pinchRef.current = {dist: Math.hypot(a.cssX - b.cssX, a.cssY - b.cssY) || 1}
+      draggingRef.current = null
+      panRef.current = null
+      return
+    }
+    if (pointersRef.current.size > 2) return
+    const touch = ev.pointerType !== "mouse"
+    const n = getNodeAt(cssX, cssY, touch)
     if (n) {
       draggingRef.current = n
       const {x, y} = toCanvasCoords(cssX, cssY)
       const p = posRef.current[n.id]
-      dragOffRef.current = {x: x-p.x, y: y-p.y}
+      dragOffRef.current = {x: x-p.x, y: y-p.y, startX: cssX, startY: cssY}
     } else {
       const start = toCanvasPixels(cssX, cssY)
       panRef.current = {x: start.x, y: start.y, moved: 0}
     }
   }
-  function onMouseMove(e) {
-    const r = e.currentTarget.getBoundingClientRect()
-    const cssX = e.clientX-r.left, cssY = e.clientY-r.top
+
+  function onPointerMove(ev) {
+    const {cssX, cssY} = localPoint(ev)
+    if (pointersRef.current.has(ev.pointerId)) pointersRef.current.set(ev.pointerId, {cssX, cssY})
+    if (pinchRef.current && pointersRef.current.size === 2) {
+      const [a, b] = [...pointersRef.current.values()]
+      const dist = Math.hypot(a.cssX - b.cssX, a.cssY - b.cssY) || 1
+      const mid = toCanvasPixels((a.cssX + b.cssX) / 2, (a.cssY + b.cssY) / 2)
+      zoomAt(dist / pinchRef.current.dist, mid.x, mid.y)
+      pinchRef.current.dist = dist
+      return
+    }
     if (draggingRef.current) {
       const {x, y} = toCanvasCoords(cssX, cssY)
       const p = posRef.current[draggingRef.current.id]
@@ -416,29 +575,48 @@ export default function App() {
       v.y += now.y - panRef.current.y
       panRef.current.moved += Math.abs(now.x - panRef.current.x) + Math.abs(now.y - panRef.current.y)
       panRef.current.x = now.x; panRef.current.y = now.y
-      e.currentTarget.style.cursor = "grabbing"
-    } else {
-      hoveredRef.current = getNodeAt(cssX, cssY)
-      e.currentTarget.style.cursor = hoveredRef.current ? "pointer" : "default"
+      ev.currentTarget.style.cursor = "grabbing"
+    } else if (ev.pointerType === "mouse") {
+      hoveredRef.current = getNodeAt(cssX, cssY, false)
+      ev.currentTarget.style.cursor = hoveredRef.current || getEdgeAt(cssX, cssY, false) ? "pointer" : "default"
     }
   }
-  function onMouseUp(e) {
-    const r = e.currentTarget.getBoundingClientRect()
-    const cssX = e.clientX-r.left, cssY = e.clientY-r.top
-    const n = getNodeAt(cssX, cssY)
-    const {x, y} = toCanvasCoords(cssX, cssY)
+
+  function onPointerUp(ev) {
+    const {cssX, cssY} = localPoint(ev)
+    pointersRef.current.delete(ev.pointerId)
+    if (pinchRef.current) {
+      // Fine dello zoom a due dita: nessuna selezione
+      if (pointersRef.current.size === 0) pinchRef.current = null
+      draggingRef.current = null
+      panRef.current = null
+      return
+    }
+    const touch = ev.pointerType !== "mouse"
     const dragging = draggingRef.current
-    const panned = panRef.current && panRef.current.moved > 5
+    const panned = panRef.current && panRef.current.moved > (touch ? 10 : 5)
     panRef.current = null
-    if (panned) return
-    if (!dragging || Math.hypot(x-(posRef.current[dragging.id]?.x||0)-dragOffRef.current.x, y-(posRef.current[dragging.id]?.y||0)-dragOffRef.current.y) < 5) {
-      selectNode(selected === n?.id ? null : n)
-    }
     draggingRef.current = null
+    ev.currentTarget.style.cursor = "default"
+    if (panned) return
+    if (dragging) {
+      const moved = Math.hypot(cssX - dragOffRef.current.startX, cssY - dragOffRef.current.startY)
+      if (moved < (touch ? 10 : 5)) selectNode(selected === dragging.id ? null : dragging)
+      return
+    }
+    const e = getEdgeAt(cssX, cssY, touch)
+    if (e) selectEdge(selectedEdge === e.id ? null : e)
+    else selectNode(null)
   }
 
+  function onPointerCancel(ev) {
+    pointersRef.current.delete(ev.pointerId)
+    if (pointersRef.current.size < 2) pinchRef.current = null
+    draggingRef.current = null
+    panRef.current = null
+    hoveredRef.current = null
+  }
 
-  const W = 680, H = 500
 
   return (
     <div style={{fontFamily:"var(--font-sans,sans-serif)",color:"var(--color-text-primary)",minHeight:"100vh",background:"var(--color-background-tertiary)"}}>
@@ -464,12 +642,18 @@ export default function App() {
         </div>
       </div>
 
-      {/* Data dell'ultimo aggiornamento riuscito e fonti */}
-      <div style={{background:"var(--color-background-secondary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",display:"flex",flexWrap:"wrap",gap:"4px 16px"}}>
-        <span>
-          <strong style={{fontWeight:500}}>Ultimo aggiornamento:</strong>{" "}
-          {status?.updated_at ? formatDateTime(status.updated_at) : (stats.updated_at ? formatDateTime(stats.updated_at) : "—")}
+      {/* Data dell'ultimo aggiornamento del grafo, ben visibile */}
+      <div role="status" style={{background:"#E1F5EE",borderBottom:"1px solid #5DCAA5",padding:"10px 20px",display:"flex",flexWrap:"wrap",alignItems:"baseline",gap:"2px 12px"}}>
+        <span style={{fontSize:16,fontWeight:600,color:"#0F6E56"}}>
+          Grafo aggiornato al {updatedAt ? formatDateTime(updatedAt) : "—"}
         </span>
+        <span style={{fontSize:12,color:"#04342C"}}>
+          Controllo automatico delle fonti due volte al giorno: la data cambia quando entrano nuovi dati.
+        </span>
+      </div>
+
+      {/* Fonti */}
+      <div style={{background:"var(--color-background-secondary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",display:"flex",flexWrap:"wrap",gap:"4px 16px"}}>
         <span>
           <strong style={{fontWeight:500}}>Fonti:</strong>{" "}
           {(status?.sources || []).map((src, i) => (
@@ -512,88 +696,146 @@ export default function App() {
 
       {/* Graph tab */}
       {!loading && !loadError && tab === "graph" && (
-        <div style={{display:"flex",gap:0}}>
-          <div style={{flex:1,position:"relative"}}>
-            <div style={{position:"absolute",top:12,left:12,zIndex:10,background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"8px 12px",display:"flex",flexWrap:"wrap",gap:"6px 12px",maxWidth:460}}>
-              {Object.entries(NODE_COLORS).map(([type,color]) => (
-                <div key={type} style={{display:"flex",alignItems:"center",gap:4,fontSize:11,color:"var(--color-text-secondary)"}}>
-                  <div style={{width:7,height:7,borderRadius:"50%",background:color}}/>
-                  {type}
-                </div>
+        <div>
+          {/* Legenda */}
+          <details open={!narrow} style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.6}}>
+            <summary style={{cursor:"pointer",fontWeight:500,color:"var(--color-text-primary)"}}>Come leggere il grafo</summary>
+            <div style={{display:"flex",flexWrap:"wrap",gap:"4px 14px",margin:"6px 0"}}>
+              {Object.entries(NODE_COLORS).filter(([type]) => presentTypes.has(type)).map(([type,color]) => (
+                <span key={type} style={{display:"inline-flex",alignItems:"center",gap:5}}>
+                  <span style={{width:9,height:9,borderRadius:"50%",background:color,display:"inline-block"}}/>{NODE_TYPE_LABEL[type] || type}
+                </span>
               ))}
+              {[...presentTypes].some(t => !NODE_COLORS[t]) && (
+                <span style={{display:"inline-flex",alignItems:"center",gap:5}}>
+                  <span style={{width:9,height:9,borderRadius:"50%",background:OTHER_COLOR,display:"inline-block"}}/>{OTHER_LABEL}
+                </span>
+              )}
             </div>
-            <canvas ref={canvasRef} width={W} height={H}
-              style={{width:"100%",height:500,display:"block"}}
-              onMouseDown={onMouseDown} onMouseMove={onMouseMove} onMouseUp={onMouseUp}
-              onMouseLeave={()=>{draggingRef.current=null;hoveredRef.current=null;panRef.current=null}}
-            />
-            <div style={{position:"absolute",bottom:12,left:12,zIndex:10,display:"flex",gap:4,alignItems:"center",background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"4px 6px",fontSize:12}}>
-              <button onClick={()=>zoomButton(1.25)} aria-label="Ingrandisci" style={zoomBtn}>+</button>
-              <button onClick={()=>zoomButton(0.8)} aria-label="Riduci" style={zoomBtn}>−</button>
-              <button onClick={resetView} style={{...zoomBtn,width:"auto",padding:"0 8px"}}>Adatta</button>
-              <span style={{color:"var(--color-text-tertiary)",padding:"0 4px"}}>Zoom {zoom}%</span>
-            </div>
-            <div style={{position:"absolute",bottom:12,right:12,zIndex:10,fontSize:11,color:"var(--color-text-tertiary)"}}>
-              Rotella: zoom · trascina lo sfondo: sposta · clic su un nodo: dettagli
-            </div>
-          </div>
+            <div><strong style={{fontWeight:500}}>Nodi</strong>: enti, aziende ed eventi sanitari; il colore indica il tipo, la dimensione il punteggio di rischio (0-100), l'anello esterno un rischio superiore a 60.</div>
+            <div><strong style={{fontWeight:500}}>Linee</strong>: relazioni tra due nodi (es. richiamo FDA che riguarda un'azienda, collaborazione, controllo); quando sono evidenziate, la freccia ne indica il verso.</div>
+            <div><strong style={{fontWeight:500}}>Fonti</strong>: tocca un nodo o una linea per vedere fonte, link e data. Hanno una fonte con link {coverage.nodesWith} nodi su {nodes.length} e {coverage.edgesWith} relazioni su {edges.length}; gli altri sono indicati come «{NO_SOURCE}».</div>
+          </details>
 
-          {/* Side panel */}
-          <div style={{width:320,borderLeft:"0.5px solid var(--color-border-tertiary)",background:"var(--color-background-primary)",padding:16,overflowY:"auto",maxHeight:500}}>
-            {!nodeDetails && <p style={{fontSize:12,color:"var(--color-text-tertiary)"}}>Clicca un nodo per dettagli</p>}
-            {nodeDetails && (
-              <div>
-                <div style={{display:"flex",justifyContent:"space-between",marginBottom:8}}>
-                  <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:NODE_COLORS[nodeDetails.node?.type]+"22",color:NODE_COLORS[nodeDetails.node?.type],fontWeight:500}}>{NODE_TYPE_LABEL[nodeDetails.node?.type] || nodeDetails.node?.type}</span>
-                  <span title="Punteggio di rischio da 0 a 100" style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:riskColor(nodeDetails.node?.risk_score)+"22",color:riskColor(nodeDetails.node?.risk_score),fontWeight:500}}>Rischio {nodeDetails.node?.risk_score}/100</span>
-                </div>
-                <div style={{fontSize:15,fontWeight:500,marginBottom:6}}>{nodeDetails.node?.label}</div>
-                {nodeDetails.node?.region && <div style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:8}}>📍 {nodeDetails.node.region}</div>}
-                <div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.5,marginBottom:8}}>{nodeDetails.node?.description}</div>
-                {(() => {
-                  const origins = new Set((nodeDetails.relations || []).map(r => relationOrigin(r).kind))
-                  const text = origins.has("fda") ? "Presente nei richiami pubblicati dalla FDA (openFDA)."
-                    : origins.has("who") ? "Ricavato dalle notizie OMS sui focolai."
-                    : "Nodo di base inserito manualmente: non proviene da una fonte aggiornata in automatico."
-                  return <div style={{fontSize:11,color:"var(--color-text-tertiary)",marginBottom:12,fontStyle:"italic"}}>Origine: {text}</div>
-                })()}
-                {nodeDetails.relations?.length > 0 && (
-                  <>
-                    <div style={{fontSize:11,fontWeight:500,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>Relazioni ({nodeDetails.relations.length})</div>
-                    {nodeDetails.relations.map((r,i) => {
-                      const isSource = r.source === nodeDetails.node?.id
-                      const other = isSource ? r.target_label : r.source_label
-                      const origin = relationOrigin(r)
-                      const verb = origin.kind === "fda"
-                        ? (r.target === "ema" ? "ha un richiamo FDA con distribuzione europea o mondiale (ambito di" : "ha un richiamo FDA con distribuzione in Italia (ambito di")
-                        : (REL_LABEL[r.type] || [r.type, r.type])[isSource ? 0 : 1]
-                      const recall = origin.kind === "fda" ? parseRecallFact(r.fact) : null
-                      return (
-                        <div key={r.id || i} style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",border:"0.5px solid var(--color-border-tertiary)",marginBottom:6,lineHeight:1.45}}>
-                          <div style={{display:"flex",justifyContent:"space-between",gap:8,alignItems:"baseline"}}>
-                            <span style={{color:"var(--color-text-secondary)"}}>
-                              {nodeDetails.node?.label} <em>{verb}</em> <strong style={{color:"var(--color-text-primary)",fontWeight:500}}>{other}</strong>{origin.kind === "fda" && ")"}
-                            </span>
-                            {r.risk_score != null && <span title="Rischio della relazione (0-100)" style={{flexShrink:0,fontSize:11,fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}</span>}
-                          </div>
-                          {recall ? (
-                            <div style={{marginTop:4}}>
-                              <div><strong style={{fontWeight:500}}>Richiamo FDA {origin.recall}</strong> · {CLASS_TEXT[recall.cls] || "Classe " + recall.cls}</div>
-                              {recall.reason && <div style={{color:"var(--color-text-secondary)"}}>Motivo: {recall.reason}</div>}
-                            </div>
-                          ) : (r.fact && <div style={{marginTop:4,color:"var(--color-text-primary)"}}>{r.fact}</div>)}
-                          <div style={{marginTop:4,fontSize:11,color:"var(--color-text-tertiary)"}}>
-                            {r.date && <>{origin.kind === "fda" ? "Pubblicato dalla FDA il " : "Data: "}{formatDay(r.date)} · </>}
-                            {origin.kind === "manual" ? "Dato inserito manualmente"
-                              : <a href={origin.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>{origin.kind === "fda" ? "Vedi il richiamo su openFDA" : "Vedi la notizia OMS"}</a>}
-                          </div>
-                        </div>
-                      )
-                    })}
-                  </>
-                )}
+          <div style={{display:"flex",flexDirection:narrow ? "column" : "row"}}>
+            <div ref={wrapRef} style={{flex:1,minWidth:0,position:"relative"}}>
+              <canvas ref={canvasRef} width={size.w} height={size.h}
+                style={{width:"100%",height:size.h,display:"block",touchAction:"none"}}
+                onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}
+                onPointerCancel={onPointerCancel}
+                onPointerLeave={ev => { if (ev.pointerType === "mouse") hoveredRef.current = null }}
+              />
+              <div style={{position:"absolute",bottom:10,left:10,zIndex:10,display:"flex",gap:6,alignItems:"center",background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"4px 6px",fontSize:12}}>
+                <button onClick={()=>zoomButton(1.25)} aria-label="Ingrandisci" style={zoomBtn}>+</button>
+                <button onClick={()=>zoomButton(0.8)} aria-label="Riduci" style={zoomBtn}>−</button>
+                <button onClick={resetView} style={{...zoomBtn,width:"auto",padding:"0 10px"}}>Adatta</button>
+                <span style={{color:"var(--color-text-tertiary)",padding:"0 4px"}}>{zoom}%</span>
               </div>
-            )}
+              {narrow && (selected || selectedEdge) && (
+                <button onClick={() => detailsRef.current?.scrollIntoView({behavior:"smooth", block:"start"})}
+                  style={{position:"absolute",top:10,right:10,zIndex:10,fontSize:13,padding:"8px 12px",borderRadius:8,border:"none",background:"#1D9E75",color:"#fff",cursor:"pointer",boxShadow:"0 1px 4px rgba(0,0,0,0.2)"}}>
+                  Dettagli e fonte ↓
+                </button>
+              )}
+            </div>
+
+            {/* Pannello dei dettagli */}
+            <div ref={detailsRef} style={{width:narrow ? "auto" : 340,borderLeft:narrow ? "none" : "0.5px solid var(--color-border-tertiary)",borderTop:narrow ? "0.5px solid var(--color-border-tertiary)" : "none",background:"var(--color-background-primary)",padding:16,overflowY:narrow ? "visible" : "auto",maxHeight:narrow ? "none" : size.h}}>
+              <p style={{fontSize:11,color:"var(--color-text-tertiary)",marginBottom:10}}>
+                {narrow ? "Due dita: zoom · trascina: sposta · tocca un nodo o una linea: dettagli e fonte"
+                  : "Rotella: zoom · trascina lo sfondo: sposta · clic su un nodo o una linea: dettagli e fonte"}
+              </p>
+              {!nodeDetails && !selectedEdge && <p style={{fontSize:12,color:"var(--color-text-tertiary)"}}>Nessun elemento selezionato.</p>}
+
+              {selectedEdge && (() => {
+                const r = edges.find(e => e.id === selectedEdge)
+                if (!r) return null
+                const origin = relationOrigin(r, donIndex)
+                const recall = origin.kind === "fda" ? parseRecallFact(r.fact) : null
+                const src = nodeById[r.source], tgt = nodeById[r.target]
+                return (
+                  <div>
+                    <div style={{fontSize:11,fontWeight:500,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>Relazione</div>
+                    <div style={{fontSize:14,lineHeight:1.45,marginBottom:8}}>
+                      <strong style={{fontWeight:500}}>{src?.label || r.source}</strong>{" "}
+                      <em>{origin.kind === "fda" ? "ha un richiamo FDA che riguarda l'ambito di" : (REL_LABEL[r.type] || [r.type])[0]}</em>{" "}
+                      <strong style={{fontWeight:500}}>{tgt?.label || r.target}</strong>
+                    </div>
+                    {recall ? (
+                      <div style={{fontSize:12,marginBottom:8}}>
+                        <div><strong style={{fontWeight:500}}>Richiamo FDA {origin.recall}</strong> · {CLASS_TEXT[recall.cls] || "Classe " + recall.cls}</div>
+                        {recall.reason && <div style={{color:"var(--color-text-secondary)"}}>Motivo: {recall.reason}</div>}
+                      </div>
+                    ) : (r.fact && <div style={{fontSize:12,color:"var(--color-text-secondary)",marginBottom:8,lineHeight:1.5}}>{r.fact}</div>)}
+                    {r.risk_score != null && <div style={{fontSize:12,marginBottom:8}}>Rischio della relazione: <strong style={{fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}/100</strong></div>}
+                    <div style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",lineHeight:1.5}}>
+                      <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
+                      <SourceLinks sources={origin.kind === "manual" ? [] : [origin]}/>
+                      {origin.kind === "manual" && r.date && <div>Data indicata: {formatDay(r.date)}</div>}
+                      {origin.kind === "who" && <div style={{color:"var(--color-text-tertiary)"}}>Relazione estratta dall'AI da questa notizia.</div>}
+                    </div>
+                  </div>
+                )
+              })()}
+
+              {nodeDetails && (() => {
+                const node = nodeDetails.node
+                const origin = nodeOrigin(node, nodeDetails.relations, donIndex)
+                return (
+                  <div>
+                    <div style={{display:"flex",justifyContent:"space-between",gap:8,marginBottom:8}}>
+                      <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:(NODE_COLORS[node.type]||OTHER_COLOR)+"22",color:NODE_COLORS[node.type]||OTHER_COLOR,fontWeight:500}}>{NODE_TYPE_LABEL[node.type] || OTHER_LABEL}</span>
+                      <span title="Punteggio di rischio da 0 a 100" style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:riskColor(node.risk_score)+"22",color:riskColor(node.risk_score),fontWeight:500,flexShrink:0}}>Rischio {node.risk_score}/100</span>
+                    </div>
+                    <div style={{fontSize:15,fontWeight:500,marginBottom:6}}>{node.label}</div>
+                    {node.region && <div style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:8}}>📍 {node.region}</div>}
+                    <div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.5,marginBottom:8}}>{node.description}</div>
+                    {node.risk_basis && <div style={{fontSize:11,color:"var(--color-text-secondary)",marginBottom:8}}>Base del rischio: {node.risk_basis}</div>}
+                    <div style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",lineHeight:1.5,marginBottom:12}}>
+                      <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
+                      <SourceLinks sources={origin.sources}/>
+                      {origin.kind === "who" && origin.sources.length > 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI da queste notizie; il rischio è una stima dell'AI.</div>}
+                      {origin.kind === "manual" && <div style={{color:"var(--color-text-tertiary)"}}>Ente di base inserito manualmente, con rischio assegnato a mano.</div>}
+                      {origin.kind === "who" && origin.sources.length === 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI dalle notizie OMS, senza relazioni che indichino la notizia d'origine.</div>}
+                    </div>
+                    {nodeDetails.relations.length > 0 && (
+                      <>
+                        <div style={{fontSize:11,fontWeight:500,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>Relazioni ({nodeDetails.relations.length})</div>
+                        {nodeDetails.relations.map((r,i) => {
+                          const isSource = r.source === node.id
+                          const other = isSource ? r.target_label : r.source_label
+                          const ro = relationOrigin(r, donIndex)
+                          const verb = ro.kind === "fda"
+                            ? (r.target === "ema" ? "ha un richiamo FDA con distribuzione europea o mondiale (ambito di" : "ha un richiamo FDA con distribuzione in Italia (ambito di")
+                            : (REL_LABEL[r.type] || [r.type, r.type])[isSource ? 0 : 1]
+                          const recall = ro.kind === "fda" ? parseRecallFact(r.fact) : null
+                          return (
+                            <div key={r.id || i} style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",border:"0.5px solid var(--color-border-tertiary)",marginBottom:6,lineHeight:1.45}}>
+                              <div style={{display:"flex",justifyContent:"space-between",gap:8,alignItems:"baseline"}}>
+                                <span style={{color:"var(--color-text-secondary)"}}>
+                                  {node.label} <em>{verb}</em> <strong style={{color:"var(--color-text-primary)",fontWeight:500}}>{other}</strong>{ro.kind === "fda" && ")"}
+                                </span>
+                                {r.risk_score != null && <span title="Rischio della relazione (0-100)" style={{flexShrink:0,fontSize:11,fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}</span>}
+                              </div>
+                              {recall ? (
+                                <div style={{marginTop:4}}>
+                                  <div><strong style={{fontWeight:500}}>Richiamo FDA {ro.recall}</strong> · {CLASS_TEXT[recall.cls] || "Classe " + recall.cls}</div>
+                                  {recall.reason && <div style={{color:"var(--color-text-secondary)"}}>Motivo: {recall.reason}</div>}
+                                </div>
+                              ) : (r.fact && <div style={{marginTop:4,color:"var(--color-text-primary)"}}>{r.fact}</div>)}
+                              <div style={{marginTop:4,fontSize:11,color:"var(--color-text-tertiary)"}}>
+                                Fonte: <SourceLinks sources={ro.kind === "manual" ? [] : [ro]}/>
+                                {ro.kind === "manual" && r.date && <span> · data indicata: {formatDay(r.date)}</span>}
+                              </div>
+                            </div>
+                          )
+                        })}
+                      </>
+                    )}
+                  </div>
+                )
+              })()}
+            </div>
           </div>
         </div>
       )}
@@ -672,7 +914,7 @@ export default function App() {
             pesata per la sua recenza (100% entro 90 giorni, 75% entro un anno, 50% oltre). Gli enti di base hanno un valore assegnato manualmente.
           </p>
           <div style={{display:"grid",gap:8}}>
-            {nodes.sort((a,b)=>b.risk_score-a.risk_score).slice(0,15).map((n,i) => (
+            {[...nodes].sort((a,b)=>b.risk_score-a.risk_score).slice(0,15).map((n,i) => (
               <div key={n.id} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"10px 16px",display:"flex",alignItems:"center",gap:12}}>
                 <span style={{fontSize:12,color:"var(--color-text-tertiary)",minWidth:20}}>#{i+1}</span>
                 <div style={{width:8,height:8,borderRadius:"50%",background:NODE_COLORS[n.type]||"#888"}}/>
