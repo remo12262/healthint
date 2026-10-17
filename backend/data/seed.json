@@ -1,17 +1,17 @@
 {
  "version": 1,
- "exported_at": "2026-10-17T09:18:44.532752",
- "data_updated_at": "2026-10-17T09:18:44.318679",
+ "exported_at": "2026-10-17T19:21:31.565101",
+ "data_updated_at": "2026-10-17T19:21:31.406546",
  "refresh_info": {
-  "last_success": "2026-10-17T09:18:44.318679",
+  "last_success": "2026-10-17T19:21:31.406546",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "who_outbreaks"
   ],
   "new": {
-   "nodes": 4,
-   "edges": 20,
+   "nodes": 2,
+   "edges": 5,
    "alerts": 0
   },
   "latest_at_source": {
@@ -26,10 +26,10 @@
   },
   "source_errors": {},
   "alerts_error": "risposta troncata (max_tokens)",
-  "alerts_attempt": "2026-10-17T09:18:44.318679"
+  "alerts_attempt": "2026-10-17T19:21:31.406546"
  },
  "signals": {
-  "generated_at": "2026-10-17T09:18:06.267616",
+  "generated_at": "2026-10-17T19:20:51.084397",
   "who": [
    {
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
@@ -205,7 +205,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-17T09:17:53.283961",
+   "updated_at": "2026-10-17T19:20:35.291646",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -217,7 +217,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-17T09:17:53.283961",
+   "updated_at": "2026-10-17T19:20:35.291646",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -229,7 +229,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -289,7 +289,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-17T09:17:53.283961",
+   "updated_at": "2026-10-17T19:20:35.291646",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -301,7 +301,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-17T09:17:53.283961",
+   "updated_at": "2026-10-17T19:20:35.291646",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -313,7 +313,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-17T09:17:53.283961",
+   "updated_at": "2026-10-17T19:20:35.291646",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -325,7 +325,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Achieva 3.0T;  Model Numbers (REF): 1. 781177, 2. 781277, 3. 781278, 4. 781344, 5. 781345;",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026"
   },
   {
@@ -337,7 +337,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -349,7 +349,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3215-2026 di classe II del 30/09/2026"
   },
   {
@@ -373,7 +373,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips PIC iX Essentials  REF:867093",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3142-2026 di classe II del 23/09/2026"
   },
   {
@@ -517,7 +517,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-17T09:17:53.283961",
+   "updated_at": "2026-10-17T19:20:35.291646",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -685,7 +685,7 @@
    "description": "Zona sanitaria di Alimbongo in North Kivu - nuova area colpita da epidemia Bundibugyo",
    "risk_score": 92,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -745,7 +745,7 @@
    "description": "Sistema sanitario della Repubblica Democratica del Congo interessato dall'epidemia di Ebola da virus Bundibugyo",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -769,7 +769,7 @@
    "description": "Provincia della RDC colpita dall'epidemia, con focolai in zone sanitarie di Biena, Manguredjipa e Mutwanga",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-16T19:55:52.584500",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -913,7 +913,7 @@
    "description": "Paese africano epicentro del focolaio di virus Bundibugyo con 8728 casi confermati",
    "risk_score": 95,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-16T09:43:55.963074",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -925,7 +925,7 @@
    "description": "Paese che ha identificato primo caso importato confermato di BVD da DRC",
    "risk_score": 85,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-16T09:43:55.963074",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -937,7 +937,7 @@
    "description": "Paese di transito del paziente con viaggio DRC-Uganda-Kenya, ha attivato misure di risposta",
    "risk_score": 80,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-16T09:43:55.963074",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -949,7 +949,7 @@
    "description": "Focolaio epidemico attivo di virus Bundibugyo nella regione orientale DRC",
    "risk_score": 100,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-13T12:40:30.306772",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1021,7 +1021,7 @@
    "description": "Focolaio epidemico di virus Bundibugyo in RDC con 6757 casi confermati e 3267 morti al 7 settembre 2026",
    "risk_score": 100,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1213,7 +1213,7 @@
    "description": "Agenzia internazionale di sanità pubblica che monitora focolai epidemici globali",
    "risk_score": 15,
    "created_at": "2026-10-09T11:52:13.327465",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1285,7 +1285,7 @@
    "description": "Area sanitaria in North Kivu recentemente colpita dall'epidemia di Ebola",
    "risk_score": 95,
    "created_at": "2026-10-09T21:39:25.753318",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1357,7 +1357,7 @@
    "description": "Istituto di ricerca nel fiume Siberia e Estremo Oriente, Russia. Laboratorio dove si è verificata l'esposizione occupazionale",
    "risk_score": 78,
    "created_at": "2026-10-10T20:33:53.999476",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1381,7 +1381,7 @@
    "description": "Ospedale dove il paziente è stato ricoverato e sottoposto a quarantena",
    "risk_score": 70,
    "created_at": "2026-10-10T20:33:53.999476",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1441,7 +1441,7 @@
    "description": "Autorità nazionale russa per le segnalazioni epidemiologiche internazionali",
    "risk_score": 20,
    "created_at": "2026-10-11T20:57:24.410019",
-   "updated_at": "2026-10-15T20:19:04.940468",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1453,7 +1453,7 @@
    "description": "Autorità sanitaria regionale russa responsabile della gestione del focolaio",
    "risk_score": 45,
    "created_at": "2026-10-11T20:57:24.410019",
-   "updated_at": "2026-10-16T19:55:52.584500",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -1633,7 +1633,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1645,7 +1645,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1657,7 +1657,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1669,7 +1669,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1681,7 +1681,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1693,7 +1693,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1705,7 +1705,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-17T09:17:53.284475",
+   "updated_at": "2026-10-17T19:20:35.292106",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2185,7 +2185,7 @@
    "description": "Focolaio epidemico attivo di MERS-CoV con 8 casi confermati e 1 decesso tra gennaio e ottobre 2026",
    "risk_score": 75,
    "created_at": "2026-10-17T09:18:06.265505",
-   "updated_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   },
   {
@@ -2222,6 +2222,30 @@
    "risk_score": 92,
    "created_at": "2026-10-17T09:18:06.265505",
    "updated_at": "2026-10-17T09:18:06.265505",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "ksa_health_authority",
+   "label": "Kingdom of Saudi Arabia - Health Authority",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "Middle East",
+   "description": "Autorità sanitaria del Regno dell'Arabia Saudita responsabile della segnalazione e gestione di MERS-CoV",
+   "risk_score": 45,
+   "created_at": "2026-10-17T19:20:51.079332",
+   "updated_at": "2026-10-17T19:20:51.079332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "WHO",
+   "label": "World Health Organization",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Organizzazione Mondiale della Sanità che monitora e coordina la risposta a malattie infettive globali",
+   "risk_score": 0,
+   "created_at": "2026-10-17T19:20:51.079332",
+   "updated_at": "2026-10-17T19:20:51.079332",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
   }
  ],
@@ -4498,7 +4522,7 @@
    "target": "kayna_health_zone",
    "type": "RISCHIO_PER",
    "fact": "Epidemia Ebola si è espansa a Kayna zone sanitaria con trasmissione in corso",
-   "risk_score": 92,
+   "risk_score": 94,
    "source_doc": "2026-DON617",
    "date": "2026-09",
    "created_at": "2026-10-10T11:09:17.216484"
@@ -5400,7 +5424,7 @@
    "target": "bundibugyo_virus",
    "type": "RISCHIO_PER",
    "fact": "Uganda ha implementato contact tracing per virus Bundibugyo su rotta di transito",
-   "risk_score": 70,
+   "risk_score": 75,
    "source_doc": "2026-DON619",
    "date": "2026-10",
    "created_at": "2026-10-12T23:36:45.294497"
@@ -7769,6 +7793,61 @@
    "source_doc": "2026-DON617",
    "date": "2026-09",
    "created_at": "2026-10-17T09:18:06.265569"
+  },
+  {
+   "id": "ksa_health_authority_mers_cov_outbreak_2026_INDAGA_SU",
+   "source": "ksa_health_authority",
+   "target": "mers_cov_outbreak_2026",
+   "type": "INDAGA_SU",
+   "fact": "L'autorità sanitaria saudita ha segnalato e indagato 8 casi confermati di MERS-CoV con 1 decesso tra gennaio-ottobre 2026",
+   "risk_score": 72,
+   "source_doc": "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
+   "date": "2026-01-10",
+   "created_at": "2026-10-17T19:20:51.079377"
+  },
+  {
+   "id": "mers_cov_outbreak_2026_WHO_RISCHIO_PER",
+   "source": "mers_cov_outbreak_2026",
+   "target": "WHO",
+   "type": "RISCHIO_PER",
+   "fact": "Focolaio epidemico attivo di MERS-CoV rappresenta potenziale rischio per la salute pubblica globale tramite WHO",
+   "risk_score": 78,
+   "source_doc": "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
+   "date": "2026-10-05",
+   "created_at": "2026-10-17T19:20:51.079377"
+  },
+  {
+   "id": "irkutsk_oblast_health_apri_irkutsk_CONTROLLA",
+   "source": "irkutsk_oblast_health",
+   "target": "apri_irkutsk",
+   "type": "CONTROLLA",
+   "fact": "Autorità regionali controllano implementazione misure di prevenzione presso istituto",
+   "risk_score": 45,
+   "source_doc": "2026-DON620",
+   "date": "2026-10",
+   "created_at": "2026-10-17T19:20:51.079377"
+  },
+  {
+   "id": "who_org_drc_health_system_REGOLA",
+   "source": "who_org",
+   "target": "drc_health_system",
+   "type": "REGOLA",
+   "fact": "WHO monitora e segnala l'epidemia di Ebola nella RDC attraverso Disease Outbreak News",
+   "risk_score": 45,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-17T19:20:51.079377"
+  },
+  {
+   "id": "kayna_health_zone_north_kivu_province_MEMBRO_DI",
+   "source": "kayna_health_zone",
+   "target": "north_kivu_province",
+   "type": "MEMBRO_DI",
+   "fact": "Kayna è una zona sanitaria della provincia del Nord Kivu interessata dall'epidemia",
+   "risk_score": 92,
+   "source_doc": "2026-DON617",
+   "date": "2026-09",
+   "created_at": "2026-10-17T19:20:51.079377"
   }
  ],
  "alerts": [
