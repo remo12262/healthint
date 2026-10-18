@@ -66,7 +66,7 @@ REGIONS = [
      ["provincia autonoma di trento", "pa trento", "provincia di trento"], ["provincia autonoma di trento"]),
 ]
 
-# Principali centrali acquisti regionali (soggetti aggregatori): id, etichetta, nome completo, regione, sito
+# Principali centrali acquisti regionali per la sanità: id, etichetta, nome completo, regione, sito
 PROCUREMENT = [
     ("aria_lombardia", "ARIA S.p.A.", "Azienda Regionale per l'Innovazione e gli Acquisti (Lombardia)", "reg_lombardia",
      "https://www.ariaspa.it/"),
@@ -140,7 +140,7 @@ def nucleus():
         edge(rid, "conferenza_sr", "MEMBRO_DI",
              f"{label} partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.", *LAW["dlgs281"])
     for pid, label, full, rid, site in PROCUREMENT:
-        edge(rid, pid, "CONTROLLA", f"{label} è la centrale acquisti (soggetto aggregatore) della regione.",
+        edge(rid, pid, "CONTROLLA", f"{label} svolge acquisti centralizzati per il servizio sanitario della regione.",
              site, f"{full} – sito istituzionale")
     return nodes, edges
 
