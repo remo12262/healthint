@@ -55,8 +55,23 @@ const NODE_TYPE_LABEL = {
 const OTHER_COLOR = "#888780"
 const OTHER_LABEL = "Evento o minaccia sanitaria"
 
-// Spazio fisso in cui si dispone il grafo; la vista lo adatta allo schermo
-const WORLD_W = 680, WORLD_H = 500
+// Layout a forze (stesso schema di d3-force): repulsione tra i nodi, molle sulle relazioni,
+// gravità debole verso il centro e collisione tra nodi. Nessun limite rigido ai bordi:
+// è la vista ("Adatta") a inquadrare il grafo, qualunque sia la sua estensione.
+const SIM = {
+  charge: -110, chargeMax: 420,   // repulsione e distanza oltre cui non agisce
+  linkDist: 55,                   // lunghezza a riposo delle relazioni
+  gravity: 0.07,                  // richiamo verso il centro (tiene vicini i nodi isolati)
+  collidePad: 7,                  // spazio minimo tra i bordi di due nodi
+  velocityDecay: 0.4, alphaDecay: 0.0228, alphaMin: 0.002,
+}
+// Etichette sempre visibili: rischio alto (anello, > 60) o nodi con molte relazioni.
+// Le altre compaiono al passaggio del mouse, con la selezione o ingrandendo.
+const LABEL_RISK = 60, LABEL_HUB_DEGREE = 8, LABEL_ZOOM = 1.6, LABEL_MAX = 30
+
+function nodeRadius(n) { return Math.max(7, Math.min(12, (n.risk_score || 0) / 10)) }
+
+function shortLabel(s) { return s.length > LABEL_MAX ? s.slice(0, LABEL_MAX - 1).trimEnd() + "…" : s }
 
 const NO_SOURCE = "Fonte da verificare"
 
@@ -148,7 +163,7 @@ export default function App() {
   const [zoom, setZoom] = useState(100)
   const [selectedEdge, setSelectedEdge] = useState(null)
   // Dimensione reale del canvas in pixel CSS e layout stretto (telefono)
-  const [size, setSize] = useState({w: WORLD_W, h: WORLD_H})
+  const [size, setSize] = useState({w: 800, h: 600})
   const [narrow, setNarrow] = useState(() => typeof window !== "undefined" && window.innerWidth < 760)
   const wrapRef = useRef(null)
   const detailsRef = useRef(null)
@@ -164,6 +179,10 @@ export default function App() {
   // Vista del grafo: zoom e spostamento, in pixel del canvas
   const viewRef = useRef({scale:1, x:0, y:0})
   const panRef = useRef(null)
+  // Temperatura della simulazione (1 = appena avviata, sotto alphaMin = ferma)
+  const alphaRef = useRef(1)
+  // Finché l'utente non sposta o ingrandisce, la vista segue il grafo mentre si assesta
+  const autoFitRef = useRef(true)
 
   const fetchData = useCallback(async () => {
     // Il backend Render può impiegare fino a un minuto a svegliarsi
@@ -223,25 +242,22 @@ export default function App() {
     if (!el) return
     const ro = new ResizeObserver(() => {
       const w = Math.max(260, Math.round(el.clientWidth))
-      const h = narrow ? Math.round(Math.min(520, Math.max(360, w * 1.1))) : 500
+      const h = Math.max(300, Math.round(el.clientHeight))
       setSize(s => (s.w === w && s.h === h) ? s : {w, h})
     })
     ro.observe(el)
     return () => ro.disconnect()
   }, [loading, loadError, tab, narrow])
-  // Al primo disegno la vista si adatta; se poi cambia la dimensione si conservano zoom e posizione
+  // Se cambia la dimensione: con la vista automatica si reinquadra, altrimenti resta centrata
   const prevSizeRef = useRef(null)
   useEffect(() => {
     const prev = prevSizeRef.current
     prevSizeRef.current = size
-    if (!prev) { resetView(); return }
-    const fit = Math.min(size.w / WORLD_W, size.h / WORLD_H)
-    const k = fit / fitRef.current
+    // Con la vista automatica il grafo si riassesta sulle nuove proporzioni
+    if (!prev || autoFitRef.current) { alphaRef.current = Math.max(alphaRef.current, 0.3); fitView(); return }
     const v = viewRef.current
-    v.x = (v.x - prev.w / 2) * k + size.w / 2
-    v.y = (v.y - prev.h / 2) * k + size.h / 2
-    v.scale *= k
-    fitRef.current = fit
+    v.x += (size.w - prev.w) / 2
+    v.y += (size.h - prev.h) / 2
   }, [size.w, size.h])
 
   async function refreshNow() {
@@ -278,69 +294,87 @@ export default function App() {
     setNotice({kind:"error", text:"L'aggiornamento sta impiegando più del previsto: ricarica la pagina tra qualche minuto."})
   }
 
+  // Posizioni iniziali a spirale (fillotassi) attorno al centro; i nodi già presenti restano dove sono
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas || nodes.length === 0) return
-    const W = WORLD_W, H = WORLD_H
-    const cx = W / 2, cy = H / 2
+    if (nodes.length === 0) return
+    let added = 0
     nodes.forEach((n, i) => {
       if (!posRef.current[n.id]) {
-        const angle = (i / nodes.length) * Math.PI * 2
-        const r = Math.min(W, H) * 0.3
-        posRef.current[n.id] = {
-          x: cx + Math.cos(angle) * r + (Math.random()-0.5)*80,
-          y: cy + Math.sin(angle) * r + (Math.random()-0.5)*80,
-        }
-        velRef.current[n.id] = { vx:0, vy:0 }
+        const radius = 18 * Math.sqrt(0.5 + i), angle = i * Math.PI * (3 - Math.sqrt(5))
+        posRef.current[n.id] = {x: Math.cos(angle) * radius, y: Math.sin(angle) * radius}
+        velRef.current[n.id] = {vx: 0, vy: 0}
+        added++
       }
     })
-  }, [nodes, loading, tab])
+    // Si riscalda la simulazione: del tutto se i nodi sono nuovi, poco se è cambiato solo qualcosa
+    alphaRef.current = Math.max(alphaRef.current, added > nodes.length / 2 ? 1 : 0.4)
+  }, [nodes])
+
+  // Un passo della simulazione a forze
+  function simTick(alpha) {
+    const pos = posRef.current, vel = velRef.current
+    const list = nodes.filter(n => pos[n.id]).map(n => ({id: n.id, p: pos[n.id], v: vel[n.id] || (vel[n.id] = {vx: 0, vy: 0}), r: nodeRadius(n)}))
+    const maxD2 = SIM.chargeMax * SIM.chargeMax
+    for (let i = 0; i < list.length; i++) {
+      const a = list[i]
+      for (let j = i + 1; j < list.length; j++) {
+        const b = list[j]
+        let dx = b.p.x - a.p.x, dy = b.p.y - a.p.y
+        let l2 = dx * dx + dy * dy
+        if (l2 === 0) { dx = (Math.random() - 0.5) * 1e-3; dy = (Math.random() - 0.5) * 1e-3; l2 = dx * dx + dy * dy }
+        // Repulsione (decresce con la distanza)
+        if (l2 < maxD2) {
+          const w = SIM.charge * alpha / Math.max(l2, 1)
+          a.v.vx += dx * w; a.v.vy += dy * w
+          b.v.vx -= dx * w; b.v.vy -= dy * w
+        }
+        // Collisione: due nodi non si sovrappongono mai
+        const rr = a.r + b.r + SIM.collidePad
+        if (l2 < rr * rr) {
+          const l = Math.sqrt(l2)
+          const m = (rr - l) / l * 0.5
+          a.v.vx -= dx * m; a.v.vy -= dy * m
+          b.v.vx += dx * m; b.v.vy += dy * m
+        }
+      }
+    }
+    // Molle sulle relazioni, più deboli verso i nodi con molti collegamenti
+    const count = {}
+    edges.forEach(e => { count[e.source] = (count[e.source] || 0) + 1; count[e.target] = (count[e.target] || 0) + 1 })
+    edges.forEach(e => {
+      const ps = pos[e.source], pt = pos[e.target]
+      if (!ps || !pt || e.source === e.target) return
+      const vs = vel[e.source], vt = vel[e.target]
+      const dx = pt.x + vt.vx - ps.x - vs.vx, dy = pt.y + vt.vy - ps.y - vs.vy
+      const l = Math.sqrt(dx * dx + dy * dy) || 1
+      const k = (l - SIM.linkDist) / l * alpha / Math.min(count[e.source], count[e.target])
+      const bias = count[e.source] / (count[e.source] + count[e.target])
+      vt.vx -= dx * k * bias; vt.vy -= dy * k * bias
+      vs.vx += dx * k * (1 - bias); vs.vy += dy * k * (1 - bias)
+    })
+    // La gravità segue le proporzioni del riquadro: su uno schermo largo il grafo si allarga
+    const aspect = Math.min(2, Math.max(0.5, size.w / size.h))
+    list.forEach(o => {
+      o.v.vx -= o.p.x * SIM.gravity / aspect * alpha
+      o.v.vy -= o.p.y * SIM.gravity * aspect * alpha
+      if (o.id === draggingRef.current?.id) { o.v.vx = 0; o.v.vy = 0; return }
+      o.v.vx *= 1 - SIM.velocityDecay; o.v.vy *= 1 - SIM.velocityDecay
+      o.p.x += o.v.vx; o.p.y += o.v.vy
+    })
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas || nodes.length === 0) return
     const ctx = canvas.getContext("2d")
-    let tick = 0
+    const degree = {}
+    edges.forEach(e => { degree[e.source] = (degree[e.source] || 0) + 1; degree[e.target] = (degree[e.target] || 0) + 1 })
 
-    function force() {
-      const cx = WORLD_W/2, cy = WORLD_H/2
-      nodes.forEach(a => {
-        const pa = posRef.current[a.id]
-        if (!pa) return
-        const vel = velRef.current[a.id] || {vx:0,vy:0}
-        nodes.forEach(b => {
-          if (a.id === b.id) return
-          const pb = posRef.current[b.id]
-          if (!pb) return
-          const dx = pa.x - pb.x, dy = pa.y - pb.y
-          const dist = Math.sqrt(dx*dx + dy*dy) || 1
-          const f = 5000 / (dist*dist)
-          vel.vx += (dx/dist)*f; vel.vy += (dy/dist)*f
-        })
-        vel.vx += (cx - pa.x)*0.004
-        vel.vy += (cy - pa.y)*0.004
-        velRef.current[a.id] = vel
-      })
-      edges.forEach(e => {
-        const ps = posRef.current[e.source], pt = posRef.current[e.target]
-        if (!ps || !pt) return
-        const vs = velRef.current[e.source] || {vx:0,vy:0}
-        const vt = velRef.current[e.target] || {vx:0,vy:0}
-        const dx = pt.x - ps.x, dy = pt.y - ps.y
-        const dist = Math.sqrt(dx*dx + dy*dy) || 1
-        const f = (dist - 130) * 0.015
-        vs.vx += (dx/dist)*f; vs.vy += (dy/dist)*f
-        vt.vx -= (dx/dist)*f; vt.vy -= (dy/dist)*f
-      })
-      nodes.forEach(n => {
-        if (n.id === draggingRef.current?.id) return
-        const p = posRef.current[n.id]
-        const v = velRef.current[n.id]
-        if (!p || !v) return
-        v.vx *= 0.75; v.vy *= 0.75
-        p.x = Math.max(50, Math.min(WORLD_W-50, p.x + v.vx))
-        p.y = Math.max(40, Math.min(WORLD_H-40, p.y + v.vy))
-      })
+    // Primo avvio: si fa assestare il grafo prima di mostrarlo
+    if (alphaRef.current >= 1) {
+      let alpha = 1
+      for (let i = 0; i < 120; i++) { simTick(alpha); alpha *= 1 - SIM.alphaDecay }
+      alphaRef.current = alpha
     }
 
     function draw() {
@@ -361,8 +395,8 @@ export default function App() {
         ctx.beginPath()
         ctx.moveTo(ps.x, ps.y)
         ctx.lineTo(pt.x, pt.y)
-        ctx.strokeStyle = isEdgeSel ? "rgba(216,90,48,0.9)" : isHl ? "rgba(29,158,117,0.7)" : "rgba(128,128,128,0.12)"
-        ctx.lineWidth = isEdgeSel ? 3.5 : isHl ? 2 : 0.8
+        ctx.strokeStyle = isEdgeSel ? "rgba(216,90,48,0.9)" : isHl ? "rgba(29,158,117,0.7)" : "rgba(128,128,128,0.16)"
+        ctx.lineWidth = (isEdgeSel ? 3.5 : isHl ? 2 : 0.8) / Math.sqrt(view.scale)
         ctx.stroke()
         if (isHl) {
           const mx = (ps.x+pt.x)/2, my = (ps.y+pt.y)/2
@@ -377,6 +411,9 @@ export default function App() {
         }
       })
 
+      // Etichette candidate, in ordine di priorità: selezione e passaggio del mouse, poi rischio e collegamenti
+      const zoomedIn = view.scale / fitRef.current >= LABEL_ZOOM
+      const labels = []
       nodes.forEach(n => {
         const p = posRef.current[n.id]
         if (!p) return
@@ -385,11 +422,11 @@ export default function App() {
         const isHov = hov && n.id === hov.id
         const isConn = (sel && edges.some(e => (e.source===sel&&e.target===n.id)||(e.target===sel&&e.source===n.id)))
           || (selEdgeObj && (selEdgeObj.source === n.id || selEdgeObj.target === n.id))
-        const alpha = (sel || selEdgeObj) && !isSel && !isConn ? 0.2 : 1
-        const r = isSel ? 14 : isHov ? 12 : Math.max(7, Math.min(12, n.risk_score/10))
+        const dimmed = (sel || selEdgeObj) && !isSel && !isConn
+        const r = isSel ? 14 : isHov ? 12 : nodeRadius(n)
 
         ctx.save()
-        ctx.globalAlpha = alpha
+        ctx.globalAlpha = dimmed ? 0.2 : 1
         if (isSel || isHov) {
           ctx.beginPath(); ctx.arc(p.x, p.y, r+6, 0, Math.PI*2)
           ctx.fillStyle = color+"33"; ctx.fill()
@@ -402,19 +439,42 @@ export default function App() {
           ctx.beginPath(); ctx.arc(p.x, p.y, r+3, 0, Math.PI*2)
           ctx.strokeStyle = riskColor(n.risk_score)+"88"; ctx.lineWidth = 1; ctx.stroke()
         }
-
-        // Le scritte crescono meno dello zoom: leggibili a grafo intero, non enormi da vicino
-        const fontPx = 11 / Math.sqrt(viewRef.current.scale)
-        ctx.font = `${isSel ? "500" : "400"} ${fontPx.toFixed(1)}px sans-serif`
-        ctx.fillStyle = "rgba(0,0,0,0.75)"
-        ctx.textAlign = "center"
-        ctx.fillText(n.label, p.x, p.y + r + 2 + fontPx)
         ctx.restore()
+
+        const forced = isSel || isHov || isConn
+        const important = n.risk_score > LABEL_RISK || (degree[n.id] || 0) >= LABEL_HUB_DEGREE
+        if (dimmed || !(forced || important || zoomedIn)) return
+        labels.push({n, p, r, forced, isSel, priority: forced ? 1000 : (important ? 200 : 0) + n.risk_score + (degree[n.id] || 0)})
+      })
+
+      // Le etichette si disegnano a dimensione fissa sullo schermo, saltando quelle che si sovrapporrebbero
+      ctx.setTransform(1, 0, 0, 1, 0, 0)
+      ctx.textAlign = "center"
+      ctx.textBaseline = "top"
+      ctx.lineJoin = "round"
+      const placed = []
+      labels.sort((a, b) => b.priority - a.priority).forEach(({n, p, r, forced, isSel}) => {
+        const text = forced ? n.label : shortLabel(n.label)
+        ctx.font = `${isSel ? "600" : "400"} 12px sans-serif`
+        const w = ctx.measureText(text).width
+        const x = p.x * view.scale + view.x, y = p.y * view.scale + view.y + (r + 3) * view.scale + 2
+        const box = {x1: x - w / 2 - 2, x2: x + w / 2 + 2, y1: y - 1, y2: y + 14}
+        if (box.x2 < 0 || box.x1 > canvas.width || box.y2 < 0 || box.y1 > canvas.height) return
+        if (!forced && placed.some(b => box.x1 < b.x2 && box.x2 > b.x1 && box.y1 < b.y2 && box.y2 > b.y1)) return
+        placed.push(box)
+        ctx.strokeStyle = "rgba(255,255,255,0.9)"; ctx.lineWidth = 3
+        ctx.strokeText(text, x, y)
+        ctx.fillStyle = "rgba(0,0,0,0.8)"
+        ctx.fillText(text, x, y)
       })
     }
 
     function loop() {
-      if (tick < 300) { force(); tick++ }
+      if (alphaRef.current > SIM.alphaMin || draggingRef.current) {
+        simTick(Math.max(alphaRef.current, draggingRef.current ? 0.1 : 0))
+        alphaRef.current *= 1 - SIM.alphaDecay
+        if (autoFitRef.current) fitView()
+      }
       draw()
       animRef.current = requestAnimationFrame(loop)
     }
@@ -446,6 +506,7 @@ export default function App() {
     v.x = px - (px - v.x) * k
     v.y = py - (py - v.y) * k
     v.scale = scale
+    autoFitRef.current = false
     setZoom(Math.round(scale / fit * 100))
   }
 
@@ -454,11 +515,23 @@ export default function App() {
     if (canvas) zoomAt(factor, canvas.width / 2, canvas.height / 2)
   }
 
-  function resetView() {
-    const fit = Math.min(size.w / WORLD_W, size.h / WORLD_H)
-    fitRef.current = fit
-    viewRef.current = {scale: fit, x: (size.w - WORLD_W * fit) / 2, y: (size.h - WORLD_H * fit) / 2}
+  // Inquadra tutti i nodi nello spazio disponibile (100% di zoom)
+  function fitView() {
+    const pts = nodes.map(n => posRef.current[n.id]).filter(Boolean)
+    if (!pts.length) return
+    const xs = pts.map(p => p.x), ys = pts.map(p => p.y)
+    const x1 = Math.min(...xs), x2 = Math.max(...xs), y1 = Math.min(...ys), y2 = Math.max(...ys)
+    // Margine per nodi ed etichette ai bordi
+    const mx = 70, my = 40
+    const scale = Math.min(2, (size.w - 2 * mx) / Math.max(x2 - x1, 1), (size.h - 2 * my - 16) / Math.max(y2 - y1, 1))
+    fitRef.current = scale
+    viewRef.current = {scale, x: size.w / 2 - (x1 + x2) / 2 * scale, y: (size.h - 16) / 2 - (y1 + y2) / 2 * scale}
     setZoom(100)
+  }
+
+  function resetView() {
+    autoFitRef.current = true
+    fitView()
   }
 
   function toCanvasPixels(cssX, cssY) {
@@ -568,11 +641,14 @@ export default function App() {
       const p = posRef.current[draggingRef.current.id]
       p.x = x-dragOffRef.current.x; p.y = y-dragOffRef.current.y
       velRef.current[draggingRef.current.id] = {vx:0,vy:0}
+      autoFitRef.current = false
+      alphaRef.current = Math.max(alphaRef.current, 0.1)
     } else if (panRef.current) {
       const now = toCanvasPixels(cssX, cssY)
       const v = viewRef.current
       v.x += now.x - panRef.current.x
       v.y += now.y - panRef.current.y
+      autoFitRef.current = false
       panRef.current.moved += Math.abs(now.x - panRef.current.x) + Math.abs(now.y - panRef.current.y)
       panRef.current.x = now.x; panRef.current.y = now.y
       ev.currentTarget.style.cursor = "grabbing"
@@ -618,8 +694,12 @@ export default function App() {
   }
 
 
+  // Da computer la pagina del grafo occupa esattamente la finestra: il grafo prende tutto lo spazio libero
+  const fullPage = tab === "graph" && !narrow && !loading && !loadError
+
   return (
-    <div style={{fontFamily:"var(--font-sans,sans-serif)",color:"var(--color-text-primary)",minHeight:"100vh",background:"var(--color-background-tertiary)"}}>
+    <div style={{fontFamily:"var(--font-sans,sans-serif)",color:"var(--color-text-primary)",minHeight:"100vh",background:"var(--color-background-tertiary)",
+      ...(fullPage ? {height:"100vh",display:"flex",flexDirection:"column"} : {})}}>
       {/* Header */}
       <div style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"12px 20px",display:"flex",alignItems:"center",gap:16,flexWrap:"wrap"}}>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
@@ -696,7 +776,7 @@ export default function App() {
 
       {/* Graph tab */}
       {!loading && !loadError && tab === "graph" && (
-        <div>
+        <div style={fullPage ? {flex:1,minHeight:0,display:"flex",flexDirection:"column"} : undefined}>
           {/* Legenda */}
           <details open={!narrow} style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.6}}>
             <summary style={{cursor:"pointer",fontWeight:500,color:"var(--color-text-primary)"}}>Come leggere il grafo</summary>
@@ -717,10 +797,11 @@ export default function App() {
             <div><strong style={{fontWeight:500}}>Fonti</strong>: tocca un nodo o una linea per vedere fonte, link e data. Hanno una fonte con link {coverage.nodesWith} nodi su {nodes.length} e {coverage.edgesWith} relazioni su {edges.length}; gli altri sono indicati come «{NO_SOURCE}».</div>
           </details>
 
-          <div style={{display:"flex",flexDirection:narrow ? "column" : "row"}}>
-            <div ref={wrapRef} style={{flex:1,minWidth:0,position:"relative"}}>
+          <div style={{display:"flex",flexDirection:narrow ? "column" : "row",...(fullPage ? {flex:1,minHeight:420} : {})}}>
+            <div ref={wrapRef} style={{flex:1,minWidth:0,position:"relative",overflow:"hidden",
+              height:narrow ? "min(78vh, 640px)" : "auto",minHeight:narrow ? 360 : 420}}>
               <canvas ref={canvasRef} width={size.w} height={size.h}
-                style={{width:"100%",height:size.h,display:"block",touchAction:"none"}}
+                style={{position:"absolute",inset:0,width:"100%",height:"100%",display:"block",touchAction:"none"}}
                 onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}
                 onPointerCancel={onPointerCancel}
                 onPointerLeave={ev => { if (ev.pointerType === "mouse") hoveredRef.current = null }}
@@ -740,7 +821,7 @@ export default function App() {
             </div>
 
             {/* Pannello dei dettagli */}
-            <div ref={detailsRef} style={{width:narrow ? "auto" : 340,borderLeft:narrow ? "none" : "0.5px solid var(--color-border-tertiary)",borderTop:narrow ? "0.5px solid var(--color-border-tertiary)" : "none",background:"var(--color-background-primary)",padding:16,overflowY:narrow ? "visible" : "auto",maxHeight:narrow ? "none" : size.h}}>
+            <div ref={detailsRef} style={{width:narrow ? "auto" : 320,flexShrink:0,boxSizing:"border-box",borderLeft:narrow ? "none" : "0.5px solid var(--color-border-tertiary)",borderTop:narrow ? "0.5px solid var(--color-border-tertiary)" : "none",background:"var(--color-background-primary)",padding:16,overflowY:narrow ? "visible" : "auto",minHeight:0}}>
               <p style={{fontSize:11,color:"var(--color-text-tertiary)",marginBottom:10}}>
                 {narrow ? "Due dita: zoom · trascina: sposta · tocca un nodo o una linea: dettagli e fonte"
                   : "Rotella: zoom · trascina lo sfondo: sposta · clic su un nodo o una linea: dettagli e fonte"}
