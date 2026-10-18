@@ -81,6 +81,12 @@ class Scheduler:
                 raise RuntimeError("nessun dato nuovo è entrato nel grafo: " + "; ".join(
                     f"{k}: {str(v).splitlines()[0][:160]}" for k, v in source_errors.items()))
 
+            # Stessa entità con nomi diversi (WHO/OMS, province, eventi...): un solo nodo, in codice
+            merged = self.db.merge_duplicates()
+            if merged["nodes_after"] < merged["nodes_before"]:
+                print(f"[scheduler] Accorpati doppioni: nodi {merged['nodes_before']} -> {merged['nodes_after']}, "
+                      f"relazioni {merged['edges_before']} -> {merged['edges_after']}")
+
             # Rischio delle aziende ricalcolato da gravità e recenza dei richiami
             self.db.recompute_recall_risk()
 

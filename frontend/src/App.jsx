@@ -49,7 +49,7 @@ const NODE_TYPE_LABEL = {
   HospitalNetwork: "Azienda sanitaria o ospedaliera", PharmaCompany: "Azienda farmaceutica o di dispositivi",
   RegulatorAgency: "Ente regolatore", RegionalAuthority: "Regione o autorità sanitaria territoriale", ProcurementBody: "Centrale acquisti / associazione",
   ResearchInstitute: "Istituto di ricerca", PrivateGroup: "Gruppo sanitario privato", InsuranceBody: "Fondo / assicurazione",
-  Person: "Persona",
+  Person: "Persona", EpidemicEvent: "Evento epidemico",
 }
 // Tipi senza colore dedicato (eventi e minacce sanitarie estratti dalle notizie)
 const OTHER_COLOR = "#888780"
@@ -82,23 +82,35 @@ function formatDay(d) {
   return m[3] ? `${m[3]}/${m[2]}/${m[1]}` : `${m[2]}/${m[1]}`
 }
 
-// Fonte di una relazione: richiamo FDA o notizia OMS, con link e data; altrimenti nessuna fonte.
+// Fonte di un documento citato da una relazione: richiamo FDA o notizia OMS, con link e data.
 // donIndex: notizie OMS scaricate (id DON -> titolo e data di pubblicazione)
-function relationOrigin(r, donIndex = {}) {
-  const doc = r.source_doc || ""
+function docOrigin(doc, r, donIndex = {}) {
   const recall = /^[DZ]-\d+-\d+$/.test(doc) ? doc : (r.id || "").startsWith("recall_") ? r.id.slice(7) : null
   if (recall) {
     const kind = recall.startsWith("Z-") ? "device" : "drug"
     return {kind: "fda", recall, date: r.date, label: `Richiamo FDA ${recall} (openFDA)`,
       url: `https://api.fda.gov/${kind}/enforcement.json?search=recall_number:%22${encodeURIComponent(recall)}%22`}
   }
-  if (/^\d{4}-DON\d+$/.test(doc)) {
+  // Notizie OMS: id "2026-DON599" oppure, per le più vecchie, il nome della pagina
+  if (/^\d{4}-DON\d+$/.test(doc) || /^[a-z0-9]+(-[a-z0-9]+){3,}$/.test(doc)) {
     const don = donIndex[doc]
     return {kind: "who", doc, date: don?.date || r.date, published: !!don?.date,
       label: don?.title ? `OMS – ${don.title}` : `OMS – Disease Outbreak News ${doc}`,
       url: `https://www.who.int/emergencies/disease-outbreak-news/item/${doc}`}
   }
   return {kind: "manual"}
+}
+
+// Tutte le fonti di una relazione: dopo l'accorpamento dei doppioni possono essere più d'una
+function relationSources(r, donIndex) {
+  const docs = [...new Set([r.source_doc, ...(r.source_docs || [])].filter(Boolean))]
+  if (!docs.length && (r.id || "").startsWith("recall_")) docs.push(r.id.slice(7))
+  return docs.map(d => docOrigin(d, r, donIndex)).filter(o => o.kind !== "manual")
+}
+
+// Fonte principale (tipo e link) di una relazione
+function relationOrigin(r, donIndex = {}) {
+  return relationSources(r, donIndex)[0] || {kind: "manual"}
 }
 
 // Fonti di un nodo, ricavate dai dati che lo hanno generato:
@@ -110,10 +122,9 @@ function nodeOrigin(node, relations, donIndex) {
   const kind = basis.startsWith("Richiamo FDA") ? "fda" : basis.startsWith("Stima dell'AI") ? "who" : "manual"
   if (kind === "manual") return {kind, sources: []}
   const seen = new Map()
-  relations.forEach(r => {
-    const o = relationOrigin(r, donIndex)
+  relations.forEach(r => relationSources(r, donIndex).forEach(o => {
     if (o.kind === kind && (kind === "who" || r.source === node.id) && !seen.has(o.url)) seen.set(o.url, o)
-  })
+  }))
   const sources = [...seen.values()].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))
   return {kind, sources}
 }
@@ -851,9 +862,9 @@ export default function App() {
                     {r.risk_score != null && <div style={{fontSize:12,marginBottom:8}}>Rischio della relazione: <strong style={{fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}/100</strong></div>}
                     <div style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",lineHeight:1.5}}>
                       <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
-                      <SourceLinks sources={origin.kind === "manual" ? [] : [origin]}/>
+                      <SourceLinks sources={relationSources(r, donIndex)}/>
                       {origin.kind === "manual" && r.date && <div>Data indicata: {formatDay(r.date)}</div>}
-                      {origin.kind === "who" && <div style={{color:"var(--color-text-tertiary)"}}>Relazione estratta dall'AI da questa notizia.</div>}
+                      {origin.kind === "who" && <div style={{color:"var(--color-text-tertiary)"}}>Relazione estratta dall'AI {relationSources(r, donIndex).length > 1 ? "da queste notizie" : "da questa notizia"}.</div>}
                     </div>
                   </div>
                 )
@@ -868,7 +879,13 @@ export default function App() {
                       <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:(NODE_COLORS[node.type]||OTHER_COLOR)+"22",color:NODE_COLORS[node.type]||OTHER_COLOR,fontWeight:500}}>{NODE_TYPE_LABEL[node.type] || OTHER_LABEL}</span>
                       <span title="Punteggio di rischio da 0 a 100" style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:riskColor(node.risk_score)+"22",color:riskColor(node.risk_score),fontWeight:500,flexShrink:0}}>Rischio {node.risk_score}/100</span>
                     </div>
-                    <div style={{fontSize:15,fontWeight:500,marginBottom:6}}>{node.label}</div>
+                    <div style={{fontSize:15,fontWeight:500,marginBottom:node.full_name && node.full_name !== node.label ? 2 : 6}}>{node.label}</div>
+                    {node.full_name && node.full_name !== node.label && <div style={{fontSize:12,color:"var(--color-text-secondary)",marginBottom:6}}>{node.full_name}</div>}
+                    {node.aliases?.length > 0 && (
+                      <div style={{fontSize:11,color:"var(--color-text-tertiary)",marginBottom:8,lineHeight:1.45}}>
+                        Anche indicato nelle fonti come: {node.aliases.join(" · ")}
+                      </div>
+                    )}
                     {node.region && <div style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:8}}>📍 {node.region}</div>}
                     <div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.5,marginBottom:8}}>{node.description}</div>
                     {node.risk_basis && <div style={{fontSize:11,color:"var(--color-text-secondary)",marginBottom:8}}>Base del rischio: {node.risk_basis}</div>}
@@ -905,7 +922,7 @@ export default function App() {
                                 </div>
                               ) : (r.fact && <div style={{marginTop:4,color:"var(--color-text-primary)"}}>{r.fact}</div>)}
                               <div style={{marginTop:4,fontSize:11,color:"var(--color-text-tertiary)"}}>
-                                Fonte: <SourceLinks sources={ro.kind === "manual" ? [] : [ro]}/>
+                                Fonte: <SourceLinks sources={relationSources(r, donIndex)}/>
                                 {ro.kind === "manual" && r.date && <span> · data indicata: {formatDay(r.date)}</span>}
                               </div>
                             </div>

@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 healthint_cache.json
 ai_costs.json
+backend/data/seed.backup-*.json
