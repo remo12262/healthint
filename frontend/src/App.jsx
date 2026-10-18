@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react"
+import { useState, useEffect, useRef, useCallback, useMemo } from "react"
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:8000"
 
@@ -38,6 +38,7 @@ const REL_LABEL = {
   FINANZIA:      ["finanzia", "è finanziato da"],
   ACCREDITA:     ["accredita", "è accreditato da"],
   COLLABORA_CON: ["collabora con", "collabora con"],
+  COMUNICA_SU:   ["pubblica atti o comunicati che riguardano", "è citato in atti o comunicati di"],
   RISCHIO_PER:   ["è un fattore di rischio per", "è esposto a un rischio da"],
   MEMBRO_DI:     ["fa parte di", "comprende"],
   REGOLA:        ["regola", "è regolato da"],
@@ -98,6 +99,11 @@ function docOrigin(doc, r, donIndex = {}) {
       label: don?.title ? `OMS – ${don.title}` : `OMS – Disease Outbreak News ${doc}`,
       url: `https://www.who.int/emergencies/disease-outbreak-news/item/${doc}`}
   }
+  if (/^https?:\/\//.test(doc)) {
+    const title = r.doc_titles?.[doc]
+    return {kind: "web", url: doc, date: r.date,
+      published: true, label: title || new URL(doc).hostname}
+  }
   return {kind: "manual"}
 }
 
@@ -117,16 +123,20 @@ function relationOrigin(r, donIndex = {}) {
 // - azienda con richiamo FDA: i suoi richiami;
 // - entità estratta dall'AI dalle notizie OMS: le notizie delle sue relazioni;
 // - enti di base inseriti a mano e nodi senza relazioni: nessuna fonte.
+// - enti del nucleo fisso italiano: il sito istituzionale.
 function nodeOrigin(node, relations, donIndex) {
   const basis = node?.risk_basis || ""
-  const kind = basis.startsWith("Richiamo FDA") ? "fda" : basis.startsWith("Stima dell'AI") ? "who" : "manual"
-  if (kind === "manual") return {kind, sources: []}
+  const kind = basis.startsWith("Richiamo FDA") ? "fda" : basis.startsWith("Stima dell'AI") ? "who"
+    : basis.startsWith("Ente del nucleo") ? "nucleus" : "manual"
+  const site = node?.website ? [{kind: "site", url: node.website, label: `Sito istituzionale – ${node.full_name || node.label}`}] : []
+  if (kind === "manual" || kind === "nucleus") return {kind, sources: site}
   const seen = new Map()
   relations.forEach(r => relationSources(r, donIndex).forEach(o => {
-    if (o.kind === kind && (kind === "who" || r.source === node.id) && !seen.has(o.url)) seen.set(o.url, o)
+    const ok = kind === "fda" ? o.kind === "fda" && r.source === node.id : (o.kind === "who" || o.kind === "web") && r.type !== "COMUNICA_SU"
+    if (ok && !seen.has(o.url)) seen.set(o.url, o)
   }))
   const sources = [...seen.values()].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))
-  return {kind, sources}
+  return {kind, sources: [...site, ...sources]}
 }
 
 function SourceLinks({sources}) {
@@ -134,7 +144,7 @@ function SourceLinks({sources}) {
   return sources.map(s => (
     <div key={s.url} style={{marginTop:2}}>
       <a href={s.url} target="_blank" rel="noopener noreferrer" style={{color:"#0F6E56"}}>{s.label}</a>
-      {s.date && <span> · {s.kind === "fda" ? "richiamo del " : s.published ? "pubblicata il " : "data: "}{formatDay(s.date)}</span>}
+      {s.date && <span> · {s.kind === "fda" ? "richiamo del " : s.published ? "pubblicato il " : "data: "}{formatDay(s.date)}</span>}
     </div>
   ))
 }
@@ -158,8 +168,19 @@ function riskColor(score) {
 
 export default function App() {
   const canvasRef = useRef(null)
-  const [nodes, setNodes] = useState([])
-  const [edges, setEdges] = useState([])
+  const [allNodes, setNodes] = useState([])
+  const [allEdges, setEdges] = useState([])
+  // Filtro del grafo: tutto, solo Italia (enti italiani e aziende con richiami distribuiti in Italia), internazionale
+  // (si può aprire direttamente con ?vista=italia o ?vista=internazionale)
+  const [scope, setScope] = useState(() => ({italia: "it", internazionale: "int"})[
+    typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("vista") : ""] || "all")
+  const nodes = useMemo(() => scope === "all" ? allNodes
+    : allNodes.filter(n => scope === "it" ? n.italy || n.italy_related : !n.italy), [allNodes, scope])
+  const edges = useMemo(() => {
+    if (scope === "all") return allEdges
+    const ids = new Set(nodes.map(n => n.id))
+    return allEdges.filter(e => ids.has(e.source) && ids.has(e.target))
+  }, [allEdges, nodes, scope])
   const [alerts, setAlerts] = useState([])
   const [signals, setSignals] = useState(null)
   const [stats, setStats] = useState({})
@@ -229,8 +250,8 @@ export default function App() {
     const id = String(s.url || "").split("/").pop()
     if (id) donIndex[id] = s
   })
-  const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]))
-  const relationsOf = id => edges.filter(e => e.source === id || e.target === id).map(e => ({
+  const nodeById = Object.fromEntries(allNodes.map(n => [n.id, n]))
+  const relationsOf = id => allEdges.filter(e => e.source === id || e.target === id).map(e => ({
     ...e, source_label: nodeById[e.source]?.label || e.source, target_label: nodeById[e.target]?.label || e.target,
   })).sort((a, b) => (b.risk_score || 0) - (a.risk_score || 0))
   // Quante informazioni del grafo hanno una fonte con link
@@ -788,6 +809,19 @@ export default function App() {
       {/* Graph tab */}
       {!loading && !loadError && tab === "graph" && (
         <div style={fullPage ? {flex:1,minHeight:0,display:"flex",flexDirection:"column"} : undefined}>
+          {/* Filtro Italia / internazionale */}
+          <div role="group" aria-label="Filtro del grafo" style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",display:"flex",flexWrap:"wrap",alignItems:"center",gap:"6px 10px",fontSize:12}}>
+            <span style={{color:"var(--color-text-secondary)"}}>Mostra:</span>
+            <div style={{display:"inline-flex",border:"0.5px solid #1D9E75",borderRadius:6,overflow:"hidden"}}>
+              {[["all","Tutto"],["it","Solo Italia"],["int","Internazionale"]].map(([k,v]) => (
+                <button key={k} onClick={() => { setScope(k); selectNode(null); autoFitRef.current = true }} aria-pressed={scope === k}
+                  style={{fontSize:12,padding:"5px 12px",border:"none",cursor:"pointer",background:scope === k ? "#1D9E75" : "transparent",color:scope === k ? "#fff" : "var(--color-text-primary)"}}>{v}</button>
+              ))}
+            </div>
+            <span style={{color:"var(--color-text-tertiary)"}}>{nodes.length} nodi · {edges.length} relazioni
+              {scope === "it" && " · enti italiani e aziende con richiami FDA distribuiti in Italia"}</span>
+          </div>
+
           {/* Legenda */}
           <details open={!narrow} style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.6}}>
             <summary style={{cursor:"pointer",fontWeight:500,color:"var(--color-text-primary)"}}>Come leggere il grafo</summary>
@@ -864,6 +898,7 @@ export default function App() {
                       <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
                       <SourceLinks sources={relationSources(r, donIndex)}/>
                       {origin.kind === "manual" && r.date && <div>Data indicata: {formatDay(r.date)}</div>}
+                      {origin.kind === "web" && r.type === "COMUNICA_SU" && <div style={{color:"var(--color-text-tertiary)"}}>Collegamento ricavato in automatico (senza AI): il documento cita l'ente.</div>}
                       {origin.kind === "who" && <div style={{color:"var(--color-text-tertiary)"}}>Relazione estratta dall'AI {relationSources(r, donIndex).length > 1 ? "da queste notizie" : "da questa notizia"}.</div>}
                     </div>
                   </div>
@@ -892,9 +927,10 @@ export default function App() {
                     <div style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",lineHeight:1.5,marginBottom:12}}>
                       <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
                       <SourceLinks sources={origin.sources}/>
-                      {origin.kind === "who" && origin.sources.length > 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI da queste notizie; il rischio è una stima dell'AI.</div>}
-                      {origin.kind === "manual" && <div style={{color:"var(--color-text-tertiary)"}}>Ente di base inserito manualmente, con rischio assegnato a mano.</div>}
-                      {origin.kind === "who" && origin.sources.length === 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI dalle notizie OMS, senza relazioni che indichino la notizia d'origine.</div>}
+                      {origin.kind === "who" && origin.sources.length > 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI da questi documenti; il rischio è una stima dell'AI.</div>}
+                      {origin.kind === "manual" && <div style={{color:"var(--color-text-tertiary)"}}>{node.website ? "Ente con sito istituzionale; il punteggio di rischio è stato assegnato a mano, senza fonte." : "Ente di base inserito manualmente, con rischio assegnato a mano."}</div>}
+                      {origin.kind === "nucleus" && <div style={{color:"var(--color-text-tertiary)"}}>Ente del nucleo fisso italiano, sempre presente nel grafo; il rischio non è stimato. Le relazioni riportano la norma o il documento da cui derivano.</div>}
+                      {origin.kind === "who" && origin.sources.length === 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI dalle notizie, senza relazioni che indichino il documento d'origine.</div>}
                     </div>
                     {nodeDetails.relations.length > 0 && (
                       <>
@@ -943,7 +979,19 @@ export default function App() {
         <div style={{padding:20,maxWidth:800}}>
           <h2 style={{fontSize:15,fontWeight:500,marginBottom:4}}>Segnalazioni dalle fonti</h2>
           <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:12}}>Dati reali scaricati a ogni aggiornamento, senza elaborazione dell'AI.</p>
-          {!signals?.who?.length && !signals?.recalls?.length && (
+          {signals?.italy?.length > 0 && (
+            <div style={{marginBottom:16}}>
+              <div style={{fontSize:12,fontWeight:500,marginBottom:6}}>Ultime dalle fonti italiane (Ministero della Salute in Gazzetta Ufficiale, AIFA, ISS, AGENAS)</div>
+              {signals.italy.map((o,i) => (
+                <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:"3px solid #1D9E75",borderRadius:8,padding:"8px 14px",marginBottom:6,fontSize:13,lineHeight:1.45}}>
+                  <a href={o.url} target="_blank" rel="noopener noreferrer" style={{color:"var(--color-text-primary)",textDecoration:"none",fontWeight:500}}>{o.title}</a>
+                  {o.source === "Gazzetta Ufficiale" && o.summary && <div style={{color:"var(--color-text-secondary)"}}>{o.summary}</div>}
+                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{o.source}{o.date && ` · ${formatDay(o.date)}`}</div>
+                </div>
+              ))}
+            </div>
+          )}
+          {!signals?.who?.length && !signals?.recalls?.length && !signals?.italy?.length && (
             <p style={{fontSize:13,color:"var(--color-text-tertiary)",marginBottom:16}}>Le segnalazioni compariranno dopo il prossimo aggiornamento dei dati.</p>
           )}
           {signals?.who?.length > 0 && (

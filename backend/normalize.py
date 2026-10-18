@@ -18,6 +18,8 @@ import re
 import unicodedata
 from typing import Dict, Optional
 
+import italy
+
 # --- Testo normalizzato -------------------------------------------------------------------
 
 def norm(text: str) -> str:
@@ -134,6 +136,12 @@ AGENCIES = {
                     "africa centers for disease control and prevention"]),
 }
 _AGENCY_ALIAS = {a: aid for aid, (*_, al) in AGENCIES.items() for a in al}
+
+# Nucleo fisso italiano (Regioni, Conferenza Stato-Regioni, centrali acquisti): stessi criteri degli enti noti
+_ITALY_NODES = {n["id"]: n for n in italy.nucleus()[0]}
+for _nid, _aliases in italy.ALIASES.items():
+    for _a in _aliases:
+        _AGENCY_ALIAS.setdefault(norm(_a), _nid)
 
 
 def match_agency(label: str) -> Optional[str]:
@@ -264,9 +272,13 @@ def resolve(label: str, etype: str = "", region: Optional[str] = None, events: O
     t = norm(label)
 
     agency = match_agency(label)
-    if agency:
+    if agency in AGENCIES:
         name, full, typ, reg, _ = AGENCIES[agency]
         return {"id": agency, "key": f"agency:{agency}", "label": name, "type": typ, "region": reg, "full_name": full}
+    if agency:
+        n = _ITALY_NODES[agency]
+        return {"id": agency, "key": f"agency:{agency}", "label": n["label"], "type": n["type"], "region": n["region"],
+                "full_name": n["full_name"]}
 
     disease = find_disease(label)
     if disease and _is_event(label, etype):

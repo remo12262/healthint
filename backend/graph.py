@@ -5,11 +5,15 @@ import os
 from typing import List, Dict, Optional
 from datetime import datetime
 
+import italy
 import normalize
 
 SEED_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "seed.json")
 SEED_VERSION = 1
 CLASS_RISK = {"I": 85, "II": 55, "III": 25}
+NUCLEUS_BASIS = "Ente del nucleo fisso italiano: rischio non stimato"
+# Documenti delle fonti ricordati come già analizzati (i più recenti)
+MAX_PROCESSED_DOCS = 1000
 
 
 class GraphDB:
@@ -22,6 +26,8 @@ class GraphDB:
         self.refresh_info: Dict = {}
         # Segnalazioni dalle fonti (ultimi focolai OMS, richiami FDA recenti), senza AI
         self.signals: Dict = {}
+        # Documenti già passati a Claude: non si rianalizzano a ogni aggiornamento
+        self.processed_docs: List[str] = []
 
     async def init(self):
         if not self.nodes:
@@ -42,6 +48,8 @@ class GraphDB:
             self.updated_at = seed.get("data_updated_at") or seed.get("exported_at")
             self.refresh_info = seed.get("refresh_info") or {}
             self.signals = seed.get("signals") or {}
+            self.processed_docs = seed.get("processed_docs") or sorted(
+                {d for e in self.edges.values() for d in self._edge_docs(e) if not str(e.get("id", "")).startswith("recall_")})
             print(f"[graph] Seed caricato: {len(self.nodes)} nodi, {len(self.edges)} relazioni, {len(self.alerts)} alert")
             return True
         except FileNotFoundError:
@@ -58,6 +66,7 @@ class GraphDB:
             "data_updated_at": self.updated_at,
             "refresh_info": self.refresh_info,
             "signals": self.signals,
+            "processed_docs": self.processed_docs,
             "nodes": list(self.nodes.values()),
             "edges": list(self.edges.values()),
             "alerts": list(self.alerts.values()),
@@ -115,12 +124,50 @@ class GraphDB:
     def snapshot(self) -> Dict:
         return copy.deepcopy({"nodes": self.nodes, "edges": self.edges, "alerts": self.alerts,
                               "updated_at": self.updated_at, "refresh_info": self.refresh_info,
-                              "signals": self.signals})
+                              "signals": self.signals, "processed_docs": self.processed_docs})
 
     def restore(self, snap: Dict):
         self.nodes, self.edges, self.alerts = snap["nodes"], snap["edges"], snap["alerts"]
         self.updated_at, self.refresh_info = snap["updated_at"], snap["refresh_info"]
         self.signals = snap.get("signals", {})
+        self.processed_docs = snap.get("processed_docs", [])
+
+    def mark_processed(self, docs: List[str]):
+        self.processed_docs = (self.processed_docs + [d for d in docs if d and d not in self.processed_docs])[-MAX_PROCESSED_DOCS:]
+
+    def ensure_nucleus(self) -> int:
+        """Nucleo fisso italiano sempre presente (italy.py); restituisce i nodi aggiunti.
+
+        Da chiamare dopo merge_duplicates: i vecchi nodi (es. "Regione Sicilia") sono già
+        confluiti nell'id del nucleo e qui ricevono sito, nome completo e fonti.
+        """
+        now = datetime.utcnow().isoformat()
+        nodes, edges = italy.nucleus()
+        for k in italy.SUPERSEDED_EDGES:
+            self.edges.pop(k, None)
+        added = 0
+        for n in nodes:
+            cur = self.nodes.get(n["id"])
+            if cur is None:
+                self.nodes[n["id"]] = {**n, "domain": "health", "description": n["full_name"], "risk_score": 10,
+                                       "risk_basis": NUCLEUS_BASIS, "italy": True, "created_at": now, "updated_at": now}
+                added += 1
+                continue
+            if cur.get("label") != n["label"]:
+                cur["aliases"] = sorted((set(cur.get("aliases", [])) | {cur["label"]}) - {n["label"]})
+                cur["label"] = n["label"]
+            cur.update({k: n[k] for k in ("full_name", "type", "region", "website")}, italy=True)
+            if not cur.get("description"):
+                cur["description"] = n["full_name"]
+            if not cur.get("risk_basis"):
+                cur["risk_basis"] = NUCLEUS_BASIS
+        for e in edges:
+            if e["id"] in self.edges:
+                self._absorb_edge(self.edges[e["id"]], e)
+                self.edges[e["id"]]["fact"] = e["fact"]
+            else:
+                self.edges[e["id"]] = {**e, "created_at": now}
+        return added
 
     def drop_legacy_recall_edges(self) -> int:
         """Relazioni di richiamo del vecchio formato (una per azienda): sostituite da una per richiamo."""
@@ -193,8 +240,18 @@ class GraphDB:
                 break
         return problems
 
+    def _italy_flags(self) -> Dict[str, tuple]:
+        """Per ogni nodo: (ente italiano, legato all'Italia da un richiamo FDA distribuito in Italia)."""
+        recalls_it = {e["source"] for k, e in self.edges.items() if k.startswith("recall_") and e.get("target") == "aifa"}
+        flags = {}
+        for nid, n in self.nodes.items():
+            it = italy.is_italian(n) or normalize.find_country(n.get("region") or "") == "it"
+            flags[nid] = (it, nid in recalls_it)
+        return flags
+
     async def get_nodes(self, domain: Optional[str] = None) -> List[Dict]:
-        nodes = list(self.nodes.values())
+        flags = self._italy_flags()
+        nodes = [{**n, "italy": flags[n["id"]][0], "italy_related": flags[n["id"]][1]} for n in self.nodes.values()]
         if domain:
             nodes = [n for n in nodes if n.get("domain") == domain]
         return sorted(nodes, key=lambda n: n.get("risk_score", 0), reverse=True)
@@ -371,6 +428,9 @@ class GraphDB:
         edge["source_doc"] = docs[0] if docs else ""
         if len(docs) > 1:
             edge["source_docs"] = docs
+        titles = {**(other.get("doc_titles") or {}), **(edge.get("doc_titles") or {})}
+        if titles:
+            edge["doc_titles"] = titles
         edge["created_at"] = min(filter(None, [edge.get("created_at"), other.get("created_at")]), default=None)
 
     async def upsert_relations(self, relations: List[Dict]):
@@ -389,6 +449,8 @@ class GraphDB:
                 "source_doc": r.get("source_doc", ""), "date": r.get("date"),
                 "created_at": now,
             }
+            if r.get("doc_titles"):
+                incoming["doc_titles"] = r["doc_titles"]
             if rid in self.edges:
                 self._absorb_edge(self.edges[rid], incoming)
             else:

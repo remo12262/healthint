@@ -45,6 +45,9 @@ _last_manual_refresh = 0.0
 async def startup():
     # Solo caricamento dati (seed.json): nessuna chiamata a Claude all'avvio
     await db.init()
+    # Doppioni accorpati e nucleo fisso italiano, in codice
+    db.merge_duplicates()
+    db.ensure_nucleus()
     db.recompute_recall_risk()
 
 

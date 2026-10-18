@@ -1,7 +1,16 @@
 import asyncio
 from datetime import datetime
 
-from extractor import AIError
+from extractor import AIError, RISK_WORDS_IT
+import normalize
+
+# Testi passati a Claude per aggiornamento (una chiamata ciascuno), come prima delle fonti italiane:
+# solo documenti mai analizzati, prima le notizie OMS nuove (max 3), poi le italiane più rilevanti
+AI_TEXTS_PER_REFRESH = 5
+AI_WHO_MAX = 3
+# Atti di routine della Gazzetta (autorizzazioni dei singoli medicinali): solo come segnalazioni
+ROUTINE_IT = ("modifica dell autorizzazione", "classificazione ai sensi", "decadenza", "rettifica",
+              "aggiornamento sezione", "liste di trasparenza", "diario di bordo")
 
 
 class Scheduler:
@@ -35,16 +44,17 @@ class Scheduler:
         # Ultima versione funzionante: si ripristina se l'aggiornamento produce dati non validi
         snap = self.db.snapshot()
         try:
-            # 1. Fonti esterne, senza cache: openFDA e OMS
+            # 1. Fonti esterne, senza cache: openFDA, OMS e fonti italiane
             data = await self.scraper.fetch_all(force=True)
             source_errors = data["errors"]
             counts = {
                 "openfda_drug": len(data["drug_recalls"]),
                 "openfda_device": len(data["device_recalls"]),
                 "who_outbreaks": len(data["who_outbreaks"]),
+                "italy": len(data["italy"]),
             }
             print(f"[scheduler] Fetched: {counts}; errori fonti: {source_errors or 'nessuno'}")
-            if len(source_errors) == len(counts):
+            if not any(counts.values()):
                 raise RuntimeError("nessuna fonte raggiungibile: " + "; ".join(
                     f"{k}: {v}" for k, v in source_errors.items()))
 
@@ -63,19 +73,42 @@ class Scheduler:
                     await self.db.upsert_relations(result["relations"])
                     contributed.append(source)
 
-            # 3. Notizie OMS analizzate da Claude
-            if data["who_outbreaks"]:
-                result = await self.extractor.extract_batch(data["who_outbreaks"][:5], text_field="summary")
+            # 3. Fonti italiane collegate in codice ai nodi del nucleo (senza Claude)
+            it_relations = self.extractor.process_italy(data["italy"])
+            await self.db.upsert_relations(it_relations)
+            if data["italy"]:
+                contributed.append("italy")
+            print(f"[scheduler] Fonti italiane: {len(data['italy'])} documenti, {len(it_relations)} relazioni con il nucleo")
+
+            # 4. Claude solo sui documenti mai analizzati, entro AI_TEXTS_PER_REFRESH testi
+            done = set(self.db.processed_docs)
+            # Come prima: solo le 5 notizie OMS più recenti; quelle già analizzate non si ripetono
+            who_new = [o for o in data["who_outbreaks"][:AI_TEXTS_PER_REFRESH] if o.get("id") and o["id"] not in done]
+            it_new = [i for i in data["italy"] if i["id"] not in done and self._relevant_it(i)]
+            who_pick = who_new[:AI_WHO_MAX]
+            it_pick = it_new[:AI_TEXTS_PER_REFRESH - len(who_pick)]
+            who_pick += who_new[len(who_pick):len(who_pick) + AI_TEXTS_PER_REFRESH - len(who_pick) - len(it_pick)]
+            for items, basis, key in ((who_pick, "Stima dell'AI dalle notizie OMS", "who_outbreaks"),
+                                      (it_pick, "Stima dell'AI dalle fonti italiane", "italy")):
+                if not items:
+                    continue
+                result = await self.extractor.extract_batch(items, text_field="summary")
+                titles = {i["id"]: f"{i.get('source', 'OMS')} – {i['title']}" for i in items}
                 for ent in result["entities"]:
-                    ent["risk_basis"] = "Stima dell'AI dalle notizie OMS"
+                    ent["risk_basis"] = basis
+                for rel in result["relations"]:
+                    if str(rel.get("source_doc", "")).startswith("http"):
+                        rel["doc_titles"] = {rel["source_doc"]: titles.get(rel["source_doc"], "")}
                 await self.db.upsert_entities(result["entities"])
                 await self.db.upsert_relations(result["relations"])
-                print(f"[scheduler] WHO Claude extraction: {len(result['entities'])} entities, "
-                      f"{len(result['relations'])} relations, {len(result['errors'])} errori")
-                if result["errors"] and len(result["errors"]) == min(5, len(data["who_outbreaks"])):
-                    source_errors["who_analysis"] = "analisi AI delle notizie OMS non riuscita: " + result["errors"][0]
+                print(f"[scheduler] Claude ({key}): {len(items)} testi, {len(result['entities'])} entità, "
+                      f"{len(result['relations'])} relazioni, {len(result['errors'])} errori")
+                if result["errors"] and len(result["errors"]) == len(items):
+                    source_errors[f"{key}_analysis"] = "analisi AI non riuscita: " + result["errors"][0]
                 else:
-                    contributed.append("who_outbreaks")
+                    self.db.mark_processed([i["id"] for i in items])
+                    if key not in contributed:
+                        contributed.append(key)
 
             if not contributed:
                 raise RuntimeError("nessun dato nuovo è entrato nel grafo: " + "; ".join(
@@ -86,6 +119,9 @@ class Scheduler:
             if merged["nodes_after"] < merged["nodes_before"]:
                 print(f"[scheduler] Accorpati doppioni: nodi {merged['nodes_before']} -> {merged['nodes_after']}, "
                       f"relazioni {merged['edges_before']} -> {merged['edges_after']}")
+
+            # Nucleo fisso italiano sempre presente, con le sue fonti
+            self.db.ensure_nucleus()
 
             # Rischio delle aziende ricalcolato da gravità e recenza dei richiami
             self.db.recompute_recall_risk()
@@ -125,6 +161,7 @@ class Scheduler:
                 "openfda_drug": iso(rd(data["drug_recalls"])),
                 "openfda_device": iso(rd(data["device_recalls"])),
                 "who_outbreaks": max((o.get("published", "") for o in data["who_outbreaks"]), default="") or None,
+                "italy": max((i.get("published") or "" for i in data["italy"]), default="") or None,
             }
             print(f"[scheduler] Novità: {new}; dato più recente alla fonte: {latest}")
 
@@ -169,7 +206,20 @@ class Scheduler:
         recalls.sort(key=lambda r: r["date"] or "", reverse=True)
         if not recalls:
             recalls = previous.get("recalls", [])
-        return {"generated_at": datetime.utcnow().isoformat(), "who": who, "recalls": recalls[:12]}
+        italy = [{"title": i["title"], "date": i.get("published"), "url": i["url"], "source": i.get("source"),
+                  "summary": (i.get("summary") or "")[:280]}
+                 for i in data.get("italy", [])[:20]] or previous.get("italy", [])
+        return {"generated_at": datetime.utcnow().isoformat(), "who": who, "recalls": recalls[:12], "italy": italy}
+
+    @staticmethod
+    def _relevant_it(item: dict) -> bool:
+        """Documento italiano da far leggere a Claude: non di routine, con un tema di rischio."""
+        if item.get("source") == "ISS – RespiVirNet":
+            return False
+        text = f" {normalize.norm(item.get('title', '') + ' ' + item.get('summary', ''))} "
+        if any(r in text for r in ROUTINE_IT) or len(text) < 80:
+            return False
+        return any(f" {w}" in text for w in RISK_WORDS_IT)
 
     def status(self) -> dict:
         info = self.db.refresh_info or {}

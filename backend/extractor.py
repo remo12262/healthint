@@ -7,6 +7,12 @@ from typing import Dict, List, Optional
 
 from limits import try_consume_ai_call
 import costs
+import italy
+import normalize
+
+# Parole che segnalano un rischio nei testi delle fonti italiane (inizio di parola, testo normalizzato)
+RISK_WORDS_IT = ["carenz", "ritir", "richiam", "revoc", "sospens", "allert", "focola", "epidemi", "emergenz",
+                 "casi confermati", "decessi", "contraffa", "infezion", "west nile", "dengue", "morbillo"]
 
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
@@ -142,6 +148,33 @@ class EntityExtractor:
             })
 
         return {"entities": list(entities.values()), "relations": relations}
+
+    def process_italy(self, items: List[Dict]) -> List[Dict]:
+        """Atti e comunicati delle fonti italiane collegati ai nodi del nucleo fisso (senza Claude).
+
+        Relazione COMUNICA_SU dall'ente che pubblica a ogni ente del nucleo citato nel testo
+        (Regioni, Ministero, ISS, AIFA, AGENAS, centrali acquisti), con il documento come fonte.
+        """
+        relations = []
+        for it in items:
+            pub = it.get("publisher")
+            text = f" {normalize.norm(it.get('title', '') + ' ' + it.get('summary', ''))} "
+            targets = {nid for phrase, nid in italy.MENTIONS.items() if f" {phrase} " in text} - {pub}
+            if not pub or not targets:
+                continue
+            risky = any(f" {w}" in text for w in RISK_WORDS_IT)
+            title = it.get("title", "")
+            subject = (it.get("summary") or "")[:220] if it.get("source") == "Gazzetta Ufficiale" else ""
+            for t in sorted(targets):
+                relations.append({
+                    "source": pub, "target": t, "type": "COMUNICA_SU",
+                    "fact": f"{title}{': ' + subject if subject else ''}"[:300],
+                    "risk_score": 40 if risky else 15,
+                    "source_doc": it["url"] if it.get("url", "").startswith("http") else it.get("id", ""),
+                    "doc_titles": {it.get("url") or it.get("id"): f"{it.get('source')} – {title}"},
+                    "date": it.get("published"),
+                })
+        return relations
 
     async def _ask(self, prompt: str, max_tokens: int, system: Optional[str] = None) -> str:
         """Chiama Claude (senza ricerca web) e restituisce il testo della risposta.
