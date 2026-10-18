@@ -29,6 +29,19 @@ function formatDateTime(iso) {
     " alle " + d.toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"})
 }
 
+// Etichette brevi per la legenda compatta
+const LEGEND_SHORT = {
+  HospitalNetwork: "Azienda sanitaria", PharmaCompany: "Farmaci e dispositivi", RegulatorAgency: "Ente regolatore",
+  RegionalAuthority: "Regione o territorio", ProcurementBody: "Centrale acquisti", ResearchInstitute: "Ricerca",
+  PrivateGroup: "Gruppo privato", InsuranceBody: "Fondo sanitario", Person: "Persona",
+}
+
+// Riquadri appoggiati sopra il grafo
+const overlayCard = {position:"absolute",zIndex:10,background:"var(--color-background-primary, #fff)",border:"0.5px solid #D3D1C7",borderRadius:8,boxShadow:"0 2px 8px rgba(0,0,0,0.12)"}
+const closeBtn = {width:28,height:28,border:"none",background:"transparent",fontSize:20,lineHeight:"26px",cursor:"pointer",color:"#5F5E5A",borderRadius:4}
+
+function fold(s) { return String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() }
+
 const zoomBtn = {width:34,height:34,border:"0.5px solid var(--color-border-tertiary)",borderRadius:4,background:"var(--color-background-secondary)",cursor:"pointer",fontSize:18,lineHeight:"30px"}
 
 // Tipo di relazione in italiano, dal punto di vista del nodo selezionato
@@ -62,8 +75,9 @@ const OTHER_LABEL = "Evento o minaccia sanitaria"
 const SIM = {
   charge: -110, chargeMax: 420,   // repulsione e distanza oltre cui non agisce
   linkDist: 55,                   // lunghezza a riposo delle relazioni
-  gravity: 0.07,                  // richiamo verso il centro (tiene vicini i nodi isolati)
+  gravity: 0.08,                  // richiamo verso il centro (tiene vicini i nodi isolati)
   collidePad: 7,                  // spazio minimo tra i bordi di due nodi
+  isolatedGravity: 3,             // richiamo verso il centro, moltiplicato, per i nodi isolati
   velocityDecay: 0.4, alphaDecay: 0.0228, alphaMin: 0.002,
 }
 // Etichette sempre visibili: rischio alto (anello, > 60) o nodi con molte relazioni.
@@ -211,6 +225,10 @@ export default function App() {
   // Vista del grafo: zoom e spostamento, in pixel del canvas
   const viewRef = useRef({scale:1, x:0, y:0})
   const panRef = useRef(null)
+  const [query, setQuery] = useState("")
+  const [legendOpen, setLegendOpen] = useState(() => typeof window === "undefined" || window.innerWidth >= 760)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const canFullscreen = typeof document !== "undefined" && !!document.fullscreenEnabled
   // Temperatura della simulazione (1 = appena avviata, sotto alphaMin = ferma)
   const alphaRef = useRef(1)
   // Finché l'utente non sposta o ingrandisce, la vista segue il grafo mentre si assesta
@@ -387,8 +405,10 @@ export default function App() {
     // La gravità segue le proporzioni del riquadro: su uno schermo largo il grafo si allarga
     const aspect = Math.min(2, Math.max(0.5, size.w / size.h))
     list.forEach(o => {
-      o.v.vx -= o.p.x * SIM.gravity / aspect * alpha
-      o.v.vy -= o.p.y * SIM.gravity * aspect * alpha
+      // I nodi senza relazioni non hanno molle: un richiamo più forte li tiene vicini al grafo
+      const g = SIM.gravity * (count[o.id] ? 1 : SIM.isolatedGravity) * alpha
+      o.v.vx -= o.p.x * g / aspect
+      o.v.vy -= o.p.y * g * aspect
       if (o.id === draggingRef.current?.id) { o.v.vx = 0; o.v.vy = 0; return }
       o.v.vx *= 1 - SIM.velocityDecay; o.v.vy *= 1 - SIM.velocityDecay
       o.p.x += o.v.vx; o.p.y += o.v.vy
@@ -427,7 +447,8 @@ export default function App() {
         ctx.beginPath()
         ctx.moveTo(ps.x, ps.y)
         ctx.lineTo(pt.x, pt.y)
-        ctx.strokeStyle = isEdgeSel ? "rgba(216,90,48,0.9)" : isHl ? "rgba(29,158,117,0.7)" : "rgba(128,128,128,0.16)"
+        ctx.strokeStyle = isEdgeSel ? "rgba(216,90,48,0.9)" : isHl ? "rgba(29,158,117,0.7)"
+          : (sel || selEdgeObj) ? "rgba(128,128,128,0.05)" : "rgba(128,128,128,0.16)"
         ctx.lineWidth = (isEdgeSel ? 3.5 : isHl ? 2 : 0.8) / Math.sqrt(view.scale)
         ctx.stroke()
         if (isHl) {
@@ -458,7 +479,7 @@ export default function App() {
         const r = isSel ? 14 : isHov ? 12 : nodeRadius(n)
 
         ctx.save()
-        ctx.globalAlpha = dimmed ? 0.2 : 1
+        ctx.globalAlpha = dimmed ? 0.12 : 1
         if (isSel || isHov) {
           ctx.beginPath(); ctx.arc(p.x, p.y, r+6, 0, Math.PI*2)
           ctx.fillStyle = color+"33"; ctx.fill()
@@ -473,10 +494,13 @@ export default function App() {
         }
         ctx.restore()
 
-        const forced = isSel || isHov || isConn
+        // Sempre visibile l'etichetta del nodo selezionato o sotto il mouse; i vicini hanno la precedenza
+        // sugli altri ma, come tutte, si saltano se si sovrappongono
+        const forced = isSel || isHov
         const important = n.risk_score > LABEL_RISK || (degree[n.id] || 0) >= LABEL_HUB_DEGREE
-        if (dimmed || !(forced || important || zoomedIn)) return
-        labels.push({n, p, r, forced, isSel, priority: forced ? 1000 : (important ? 200 : 0) + n.risk_score + (degree[n.id] || 0)})
+        if (dimmed || !(forced || isConn || important || zoomedIn)) return
+        labels.push({n, p, r, forced, isSel, priority: forced ? 1000 : isConn ? 500 + n.risk_score
+          : (important ? 200 : 0) + n.risk_score + (degree[n.id] || 0)})
       })
 
       // Le etichette si disegnano a dimensione fissa sullo schermo, saltando quelle che si sovrapporrebbero
@@ -553,17 +577,67 @@ export default function App() {
     if (!pts.length) return
     const xs = pts.map(p => p.x), ys = pts.map(p => p.y)
     const x1 = Math.min(...xs), x2 = Math.max(...xs), y1 = Math.min(...ys), y2 = Math.max(...ys)
-    // Margine per nodi ed etichette ai bordi
-    const mx = 70, my = 40
-    const scale = Math.min(2, (size.w - 2 * mx) / Math.max(x2 - x1, 1), (size.h - 2 * my - 16) / Math.max(y2 - y1, 1))
+    // Margini: etichette ai lati, riquadro di filtro e ricerca in alto, comandi in basso
+    const mx = narrow ? 24 : 110, top = 120, bottom = 70
+    const scale = Math.min(2, (size.w - 2 * mx) / Math.max(x2 - x1, 1), (size.h - top - bottom) / Math.max(y2 - y1, 1))
     fitRef.current = scale
-    viewRef.current = {scale, x: size.w / 2 - (x1 + x2) / 2 * scale, y: (size.h - 16) / 2 - (y1 + y2) / 2 * scale}
+    viewRef.current = {scale, x: size.w / 2 - (x1 + x2) / 2 * scale, y: top + (size.h - top - bottom) / 2 - (y1 + y2) / 2 * scale}
     setZoom(100)
   }
 
   function resetView() {
     autoFitRef.current = true
     fitView()
+  }
+
+  // Ricerca per nome (anche nome completo e nomi alternativi), senza accenti né maiuscole
+  const searchResults = useMemo(() => {
+    const q = fold(query.trim())
+    if (q.length < 2) return []
+    const hit = n => [n.label, n.full_name, ...(n.aliases || [])].some(t => t && fold(t).includes(q))
+    return allNodes.filter(hit)
+      .sort((a, b) => (fold(b.label).startsWith(q) - fold(a.label).startsWith(q)) || (b.risk_score || 0) - (a.risk_score || 0))
+      .slice(0, 8)
+  }, [query, allNodes])
+
+  // Centra il grafo su un nodo trovato con la ricerca e lo seleziona
+  function focusNode(n) {
+    setQuery("")
+    if (!nodes.some(x => x.id === n.id)) setScope("all")
+    selectNode(n)
+    setTimeout(() => {
+      const p = posRef.current[n.id], canvas = canvasRef.current
+      if (!p || !canvas) return
+      const v = viewRef.current
+      const scale = Math.max(v.scale, fitRef.current * 2)
+      // Il punto di arrivo resta libero dal pannello dei dettagli
+      const cx = narrow ? canvas.width / 2 : (canvas.width - 360) / 2
+      const cy = narrow ? canvas.height * 0.3 : canvas.height / 2
+      viewRef.current = {scale, x: cx - p.x * scale, y: cy - p.y * scale}
+      autoFitRef.current = false
+      setZoom(Math.round(scale / fitRef.current * 100))
+    }, 80)
+  }
+
+  // Link diretto a un nodo: ?nodo=<id> lo seleziona e lo centra dopo che il grafo si è assestato
+  const deepLinkDone = useRef(false)
+  useEffect(() => {
+    if (deepLinkDone.current || !allNodes.length || typeof window === "undefined") return
+    const id = new URLSearchParams(window.location.search).get("nodo")
+    const n = id && allNodes.find(x => x.id === id)
+    deepLinkDone.current = true
+    if (n) setTimeout(() => focusNode(n), 600)
+  }, [allNodes])
+
+  useEffect(() => {
+    const onChange = () => setIsFullscreen(!!document.fullscreenElement)
+    document.addEventListener("fullscreenchange", onChange)
+    return () => document.removeEventListener("fullscreenchange", onChange)
+  }, [])
+
+  function toggleFullscreen() {
+    if (document.fullscreenElement) document.exitFullscreen?.()
+    else wrapRef.current?.requestFullscreen?.().catch(() => {})
   }
 
   function toCanvasPixels(cssX, cssY) {
@@ -726,12 +800,12 @@ export default function App() {
   }
 
 
-  // Da computer la pagina del grafo occupa esattamente la finestra: il grafo prende tutto lo spazio libero
-  const fullPage = tab === "graph" && !narrow && !loading && !loadError
+  // La pagina del grafo occupa esattamente la finestra: il grafo prende tutto lo spazio sotto l'intestazione
+  const fullPage = tab === "graph" && !loading && !loadError
 
   return (
     <div style={{fontFamily:"var(--font-sans,sans-serif)",color:"var(--color-text-primary)",minHeight:"100vh",background:"var(--color-background-tertiary)",
-      ...(fullPage ? {height:"100vh",display:"flex",flexDirection:"column"} : {})}}>
+      ...(fullPage ? {height:"100dvh",display:"flex",flexDirection:"column"} : {})}}>
       {/* Header */}
       <div style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"12px 20px",display:"flex",alignItems:"center",gap:16,flexWrap:"wrap"}}>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
@@ -759,13 +833,13 @@ export default function App() {
         <span style={{fontSize:16,fontWeight:600,color:"#0F6E56"}}>
           Grafo aggiornato al {updatedAt ? formatDateTime(updatedAt) : "—"}
         </span>
-        <span style={{fontSize:12,color:"#04342C"}}>
+        {!(narrow && tab === "graph") && <span style={{fontSize:12,color:"#04342C"}}>
           Controllo automatico delle fonti due volte al giorno: la data cambia quando entrano nuovi dati.
-        </span>
+        </span>}
       </div>
 
-      {/* Fonti */}
-      <div style={{background:"var(--color-background-secondary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",display:"flex",flexWrap:"wrap",gap:"4px 16px"}}>
+      {/* Fonti (nella scheda Grafo sono nella legenda) */}
+      {tab !== "graph" && <div style={{background:"var(--color-background-secondary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",display:"flex",flexWrap:"wrap",gap:"4px 16px"}}>
         <span>
           <strong style={{fontWeight:500}}>Fonti:</strong>{" "}
           {(status?.sources || []).map((src, i) => (
@@ -782,7 +856,7 @@ export default function App() {
                 `${s.label.split(" (")[0]} ${new Date(status.latest_at_source[s.key]).toLocaleDateString("it-IT")}`).join(" · ")}</>}
           </span>
         )}
-      </div>
+      </div>}
       {notice && (
         <div role="status" style={{padding:"8px 20px",fontSize:13,
           background: notice.kind === "error" ? "#E24B4A1A" : notice.kind === "ok" ? "#1D9E751A" : "#378ADD1A",
@@ -806,72 +880,103 @@ export default function App() {
         </div>
       )}
 
-      {/* Graph tab */}
+      {/* Graph tab: il grafo occupa tutto lo spazio; comandi, legenda e dettagli sono riquadri sopra il grafo */}
       {!loading && !loadError && tab === "graph" && (
-        <div style={fullPage ? {flex:1,minHeight:0,display:"flex",flexDirection:"column"} : undefined}>
-          {/* Filtro Italia / internazionale */}
-          <div role="group" aria-label="Filtro del grafo" style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",display:"flex",flexWrap:"wrap",alignItems:"center",gap:"6px 10px",fontSize:12}}>
-            <span style={{color:"var(--color-text-secondary)"}}>Mostra:</span>
-            <div style={{display:"inline-flex",border:"0.5px solid #1D9E75",borderRadius:6,overflow:"hidden"}}>
+        <div ref={wrapRef} style={{flex:1,minHeight:360,position:"relative",overflow:"hidden",background:"var(--color-background-primary, #fff)"}}>
+          <canvas ref={canvasRef} width={size.w} height={size.h}
+            style={{position:"absolute",inset:0,width:"100%",height:"100%",display:"block",touchAction:"none"}}
+            onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}
+            onPointerCancel={onPointerCancel}
+            onPointerLeave={ev => { if (ev.pointerType === "mouse") hoveredRef.current = null }}
+          />
+
+          {/* In alto a sinistra: filtro e ricerca */}
+          <div style={{...overlayCard,top:10,left:10,padding:8,display:"flex",flexDirection:"column",gap:6,width:narrow ? "calc(100% - 20px)" : 320,boxSizing:"border-box"}}>
+            <div role="group" aria-label="Filtro del grafo" style={{display:"flex",border:"0.5px solid #1D9E75",borderRadius:6,overflow:"hidden"}}>
               {[["all","Tutto"],["it","Solo Italia"],["int","Internazionale"]].map(([k,v]) => (
                 <button key={k} onClick={() => { setScope(k); selectNode(null); autoFitRef.current = true }} aria-pressed={scope === k}
-                  style={{fontSize:12,padding:"5px 12px",border:"none",cursor:"pointer",background:scope === k ? "#1D9E75" : "transparent",color:scope === k ? "#fff" : "var(--color-text-primary)"}}>{v}</button>
+                  style={{flex:1,fontSize:12,padding:"5px 8px",border:"none",cursor:"pointer",background:scope === k ? "#1D9E75" : "transparent",color:scope === k ? "#fff" : "var(--color-text-primary)"}}>{v}</button>
               ))}
             </div>
-            <span style={{color:"var(--color-text-tertiary)"}}>{nodes.length} nodi · {edges.length} relazioni
-              {scope === "it" && " · enti italiani e aziende con richiami FDA distribuiti in Italia"}</span>
+            <div style={{position:"relative"}}>
+              <input type="search" value={query} placeholder="Cerca un nodo per nome…" aria-label="Cerca un nodo"
+                onChange={e => setQuery(e.target.value)}
+                onKeyDown={e => { if (e.key === "Enter" && searchResults[0]) focusNode(searchResults[0]); if (e.key === "Escape") setQuery("") }}
+                style={{width:"100%",boxSizing:"border-box",fontSize:13,padding:"6px 8px",border:"0.5px solid #B4B2A9",borderRadius:6}}/>
+              {query.trim().length >= 2 && (
+                <div role="listbox" style={{...overlayCard,top:"100%",left:0,right:0,marginTop:4,maxHeight:260,overflowY:"auto",zIndex:30}}>
+                  {searchResults.length === 0 && <div style={{padding:"8px 10px",fontSize:12,color:"var(--color-text-tertiary)"}}>Nessun nodo trovato.</div>}
+                  {searchResults.map(n => (
+                    <button key={n.id} role="option" onClick={() => focusNode(n)}
+                      style={{display:"flex",alignItems:"center",gap:8,width:"100%",textAlign:"left",padding:"7px 10px",border:"none",borderBottom:"0.5px solid #E5E4DE",background:"transparent",cursor:"pointer",fontSize:12}}>
+                      <span style={{width:9,height:9,borderRadius:"50%",flexShrink:0,background:NODE_COLORS[n.type] || OTHER_COLOR}}/>
+                      <span style={{flex:1}}>{n.label}</span>
+                      <span style={{color:riskColor(n.risk_score),fontWeight:500}}>{n.risk_score}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>
+              {nodes.length} nodi · {edges.length} relazioni{scope === "it" && " · enti italiani e aziende con richiami FDA distribuiti in Italia"}
+            </div>
           </div>
 
-          {/* Legenda */}
-          <details open={!narrow} style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"8px 20px",fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.6}}>
-            <summary style={{cursor:"pointer",fontWeight:500,color:"var(--color-text-primary)"}}>Come leggere il grafo</summary>
-            <div style={{display:"flex",flexWrap:"wrap",gap:"4px 14px",margin:"6px 0"}}>
-              {Object.entries(NODE_COLORS).filter(([type]) => presentTypes.has(type)).map(([type,color]) => (
-                <span key={type} style={{display:"inline-flex",alignItems:"center",gap:5}}>
-                  <span style={{width:9,height:9,borderRadius:"50%",background:color,display:"inline-block"}}/>{NODE_TYPE_LABEL[type] || type}
-                </span>
-              ))}
-              {[...presentTypes].some(t => !NODE_COLORS[t]) && (
-                <span style={{display:"inline-flex",alignItems:"center",gap:5}}>
-                  <span style={{width:9,height:9,borderRadius:"50%",background:OTHER_COLOR,display:"inline-block"}}/>{OTHER_LABEL}
-                </span>
-              )}
-            </div>
-            <div><strong style={{fontWeight:500}}>Nodi</strong>: enti, aziende ed eventi sanitari; il colore indica il tipo, la dimensione il punteggio di rischio (0-100), l'anello esterno un rischio superiore a 60.</div>
-            <div><strong style={{fontWeight:500}}>Linee</strong>: relazioni tra due nodi (es. richiamo FDA che riguarda un'azienda, collaborazione, controllo); quando sono evidenziate, la freccia ne indica il verso.</div>
-            <div><strong style={{fontWeight:500}}>Fonti</strong>: tocca un nodo o una linea per vedere fonte, link e data. Hanno una fonte con link {coverage.nodesWith} nodi su {nodes.length} e {coverage.edgesWith} relazioni su {edges.length}; gli altri sono indicati come «{NO_SOURCE}».</div>
-          </details>
-
-          <div style={{display:"flex",flexDirection:narrow ? "column" : "row",...(fullPage ? {flex:1,minHeight:420} : {})}}>
-            <div ref={wrapRef} style={{flex:1,minWidth:0,position:"relative",overflow:"hidden",
-              height:narrow ? "min(78vh, 640px)" : "auto",minHeight:narrow ? 360 : 420}}>
-              <canvas ref={canvasRef} width={size.w} height={size.h}
-                style={{position:"absolute",inset:0,width:"100%",height:"100%",display:"block",touchAction:"none"}}
-                onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}
-                onPointerCancel={onPointerCancel}
-                onPointerLeave={ev => { if (ev.pointerType === "mouse") hoveredRef.current = null }}
-              />
-              <div style={{position:"absolute",bottom:10,left:10,zIndex:10,display:"flex",gap:6,alignItems:"center",background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"4px 6px",fontSize:12}}>
-                <button onClick={()=>zoomButton(1.25)} aria-label="Ingrandisci" style={zoomBtn}>+</button>
-                <button onClick={()=>zoomButton(0.8)} aria-label="Riduci" style={zoomBtn}>−</button>
-                <button onClick={resetView} style={{...zoomBtn,width:"auto",padding:"0 10px"}}>Adatta</button>
-                <span style={{color:"var(--color-text-tertiary)",padding:"0 4px"}}>{zoom}%</span>
+          {/* In basso a sinistra: legenda richiudibile e comandi della vista */}
+          <div style={{position:"absolute",left:10,bottom:10,zIndex:10,display:"flex",flexDirection:"column",alignItems:"flex-start",gap:6,maxWidth:"calc(100% - 20px)"}}>
+            {legendOpen && (
+              <div style={{...overlayCard,position:"relative",padding:"10px 12px",fontSize:11,lineHeight:1.5,color:"var(--color-text-secondary)",width:narrow ? "calc(100vw - 40px)" : 330,boxSizing:"border-box",maxHeight:"45vh",overflowY:"auto"}}>
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}}>
+                  <strong style={{fontWeight:500,fontSize:12,color:"var(--color-text-primary)"}}>Legenda</strong>
+                  <button onClick={() => setLegendOpen(false)} aria-label="Chiudi la legenda" style={closeBtn}>×</button>
+                </div>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"1px 10px",marginBottom:4}}>
+                  {Object.entries(NODE_COLORS).filter(([type]) => presentTypes.has(type)).map(([type,color]) => (
+                    <span key={type} style={{display:"inline-flex",alignItems:"center",gap:5,whiteSpace:"nowrap"}}>
+                      <span style={{width:8,height:8,borderRadius:"50%",background:color,flexShrink:0}}/>{LEGEND_SHORT[type] || type}
+                    </span>
+                  ))}
+                  {[...presentTypes].some(t => !NODE_COLORS[t]) && (
+                    <span style={{display:"inline-flex",alignItems:"center",gap:5,whiteSpace:"nowrap"}}>
+                      <span style={{width:8,height:8,borderRadius:"50%",background:OTHER_COLOR,flexShrink:0}}/>Evento sanitario
+                    </span>
+                  )}
+                </div>
+                <div>Dimensione = rischio · anello = rischio &gt; 60 · {narrow ? "tocca" : "clic su"} un nodo o una linea per fonte e dettagli</div>
+                <details style={{marginTop:4}}>
+                  <summary style={{cursor:"pointer"}}>Fonti e copertura</summary>
+                  <div>{narrow ? "Due dita: zoom · trascina: sposta." : "Rotella: zoom · trascina lo sfondo: sposta."} Etichette visibili per i nodi principali; le altre al passaggio del mouse o ingrandendo.</div>
+                  <div>Hanno una fonte con link {coverage.nodesWith} nodi su {nodes.length} e {coverage.edgesWith} relazioni su {edges.length}; gli altri sono indicati come «{NO_SOURCE}».</div>
+                  {status?.sources?.length > 0 && (
+                    <div style={{marginTop:2}}>
+                      {status.sources.map((src, i) => (
+                        <span key={src.key}>{i > 0 && " · "}<a href={src.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>{src.label}</a></span>
+                      ))} · analisi AI: Claude (Anthropic)
+                    </div>
+                  )}
+                </details>
               </div>
-              {narrow && (selected || selectedEdge) && (
-                <button onClick={() => detailsRef.current?.scrollIntoView({behavior:"smooth", block:"start"})}
-                  style={{position:"absolute",top:10,right:10,zIndex:10,fontSize:13,padding:"8px 12px",borderRadius:8,border:"none",background:"#1D9E75",color:"#fff",cursor:"pointer",boxShadow:"0 1px 4px rgba(0,0,0,0.2)"}}>
-                  Dettagli e fonte ↓
+            )}
+            <div style={{...overlayCard,position:"relative",display:"flex",gap:6,alignItems:"center",padding:"4px 6px",fontSize:12,flexWrap:"wrap"}}>
+              <button onClick={()=>zoomButton(1.25)} aria-label="Ingrandisci" style={zoomBtn}>+</button>
+              <button onClick={()=>zoomButton(0.8)} aria-label="Riduci" style={zoomBtn}>−</button>
+              <button onClick={resetView} style={{...zoomBtn,width:"auto",padding:"0 10px",fontSize:13}}>Adatta</button>
+              {canFullscreen && (
+                <button onClick={toggleFullscreen} style={{...zoomBtn,width:"auto",padding:"0 10px",fontSize:13}}>
+                  {isFullscreen ? "Esci da schermo intero" : "Schermo intero"}
                 </button>
               )}
+              {!legendOpen && <button onClick={() => setLegendOpen(true)} style={{...zoomBtn,width:"auto",padding:"0 10px",fontSize:13}}>Legenda</button>}
+              <span style={{color:"var(--color-text-tertiary)",padding:"0 4px"}}>{zoom}%</span>
             </div>
+          </div>
 
-            {/* Pannello dei dettagli */}
-            <div ref={detailsRef} style={{width:narrow ? "auto" : 320,flexShrink:0,boxSizing:"border-box",borderLeft:narrow ? "none" : "0.5px solid var(--color-border-tertiary)",borderTop:narrow ? "0.5px solid var(--color-border-tertiary)" : "none",background:"var(--color-background-primary)",padding:16,overflowY:narrow ? "visible" : "auto",minHeight:0}}>
-              <p style={{fontSize:11,color:"var(--color-text-tertiary)",marginBottom:10}}>
-                {narrow ? "Due dita: zoom · trascina: sposta · tocca un nodo o una linea: dettagli e fonte"
-                  : "Rotella: zoom · trascina lo sfondo: sposta · clic su un nodo o una linea: dettagli e fonte"}
-              </p>
-              {!nodeDetails && !selectedEdge && <p style={{fontSize:12,color:"var(--color-text-tertiary)"}}>Nessun elemento selezionato.</p>}
+          {/* Pannello dei dettagli: si apre solo con un nodo o una linea selezionati */}
+          {(nodeDetails || selectedEdge) && (
+            <div ref={detailsRef} role="dialog" aria-label="Dettagli e fonte"
+              style={{...overlayCard,zIndex:20,padding:"38px 16px 16px",overflowY:"auto",boxSizing:"border-box",
+                ...(narrow ? {left:8,right:8,bottom:8,maxHeight:"60%"} : {top:10,right:10,bottom:10,width:340})}}>
+              <button onClick={() => selectNode(null)} aria-label="Chiudi i dettagli" style={{...closeBtn,position:"absolute",top:8,right:8}}>×</button>
 
               {selectedEdge && (() => {
                 const r = edges.find(e => e.id === selectedEdge)
@@ -970,7 +1075,7 @@ export default function App() {
                 )
               })()}
             </div>
-          </div>
+          )}
         </div>
       )}
 
