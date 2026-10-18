@@ -1,35 +1,37 @@
 {
  "version": 1,
- "exported_at": "2026-10-18T15:37:56.710298",
- "data_updated_at": "2026-10-18T15:24:27.787820",
+ "exported_at": "2026-10-18T19:25:38.273508",
+ "data_updated_at": "2026-10-18T19:25:38.062427",
  "refresh_info": {
-  "last_success": "2026-10-18T15:24:27.787820",
+  "last_success": "2026-10-18T19:25:38.062427",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "who_outbreaks"
+   "italy"
   ],
   "new": {
-   "nodes": 7,
-   "edges": 21,
+   "nodes": 12,
+   "edges": 24,
    "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-10-07",
-   "who_outbreaks": "2026-10-15"
+   "who_outbreaks": "2026-10-15",
+   "italy": "2026-10-17"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
-   "who_outbreaks": 20
+   "who_outbreaks": 20,
+   "italy": 46
   },
   "source_errors": {},
   "alerts_error": "risposta troncata (max_tokens)",
-  "alerts_attempt": "2026-10-18T15:24:27.787820"
+  "alerts_attempt": "2026-10-18T19:25:38.062427"
  },
  "signals": {
-  "generated_at": "2026-10-18T15:23:47.515940",
+  "generated_at": "2026-10-18T19:24:58.620358",
   "who": [
    {
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
@@ -193,6 +195,155 @@
     "kind": "device",
     "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3323-2026%22"
    }
+  ],
+  "italy": [
+   {
+    "title": "MINISTERO DELLA SALUTE - COMUNICATO",
+    "date": "2026-10-17",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/17/26A05456/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Avviso pubblico per l'assegnazione delle risorse, per l'anno 2026, ai policlinici universitari non costituiti in azienda, che operano nel perseguimento di attivita' istituzionali non in regime di impresa. (26A05456)"
+   },
+   {
+    "title": "AIFA a Genova: il valore dell’innovazione farmaceutica al centro del confronto con le Regioni",
+    "date": "2026-10-16",
+    "url": "https://www.aifa.gov.it/-/aifa-genova-valore-innovazione-farmaceutica-al-centro-confronto-con-regioni",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "Si è svolto a Genova, presso il Palazzo Ducale, il convegno “Misurare il valore dell’innovazione - Dalla valutazione del farmaco agli esiti di salute”, organizzato dall'Agenzia Italiana del Farmaco (AIFA) con il patrocinio della Regione Liguria."
+   },
+   {
+    "title": "AGENAS pubblica le Linee di indirizzo per la telemedicina nei Punti nascita e in Neonatologia",
+    "date": "2026-10-16",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2814-agenas-pubblica-le-linee-di-indirizzo-per-la-telemedicina-nei-punti-nascita-e-in-neonatologia",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS pubblica il documento “ Linee di indirizzo organizzative per l’implementazione della telemedicina e l’ottimizzazione dell’assistenza ai casi più complessi nell’ambito della Rete dei Punti nascita e della Neonatologia ”."
+   },
+   {
+    "title": "Bollettino 180 fase 3",
+    "date": "2026-10-16",
+    "url": "https://www.iss.it/-/bollettino-180-fase-3",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Impatto • Al 14/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (375 ricoverati), stabile rispetto alla settimana precedente (0,6% al 07/10/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (11 ricoverati), risp"
+   },
+   {
+    "title": "Sindrome di Prader-Willi e farmaci per il controllo dell’appetito, la ricerca esplora nuove terapie",
+    "date": "2026-10-16",
+    "url": "https://www.iss.it/-/sindrome-di-prader-willi-e-farmaci-per-il-controllo-dell-appetito-la-ricerca-esplora-nuove-terapie",
+    "source": "ISS – Comunicati stampa",
+    "summary": "La ricerca farmacologica sta esplorando nuove strategie per il controllo dell’appetito e la gestione dell’obesità nella sindrome di Prader-Willi, una rara malattia genetica. Tra le molecole di interesse vi sono semaglutide, appartenente alla classe degli agonisti del recettore de"
+   },
+   {
+    "title": "Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti",
+    "date": "2026-10-15",
+    "url": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "Via libera a nuove opzioni terapeutiche per l'oncologia, l'infezione da HIV-1, la salute mentale negli adolescenti e le malattie rare."
+   },
+   {
+    "title": "Conclusi i lavori per la definizione dei Modelli di Riferimento per la definizione dei Percorsi Preventivi Diagnostici Terapeutici Assistenziali (PPDTA) su Diabete mellito, Asma grave e BPCO nell'adulto",
+    "date": "2026-10-15",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2813-conclusi-i-lavori-per-la-definizione-dei-modelli-di-riferimento-per-la-definizione-dei-percorsi-preventivi-diagnostici-terapeutici-assistenziali-ppdta-su-diabete-mellito,-asma-grave-e-bpco-nell-adulto",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS comunica il completamento dei lavori per la realizzazione dei Modelli di riferimento per la definizione di tre Percorsi Preventivi Diagnostici Terapeutici Assistenziali (PPDTA) dedicati al paziente adulto con Diabete Mellito, Asma Grave e BPCO in una prospettiva tecnico-sc"
+   },
+   {
+    "title": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+    "date": "2026-10-15",
+    "url": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+    "source": "ISS – Comunicati stampa",
+    "summary": "In Italia il 43% degli adulti e il 54% degli over 65 è in eccesso ponderale (è quindi o sovrappeso o obeso), un dato sostanzialmente stabile per entrambe le fasce d’età e che vede le regioni del Sud con prevalenze più alte. Lo affermano i dati relativi al biennio 2024-2025 delle "
+   },
+   {
+    "title": "Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile",
+    "date": "2026-10-15",
+    "url": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Dal 1 gennaio al 13 ottobre 2026 al sistema di sorveglianza nazionale coordinata dall’ISS risultano - 357 casi confermati di Dengue: 70 di questi sono autoctoni mentre tutti gli altri casi sono associati a viaggi all’estero (52% con luogo di esposizione Maldive), nessun decesso. "
+   },
+   {
+    "title": "Nel mondo meno di metà delle bambine e dei bambini allattato in modo esclusivo, esperti di 33 paesi a confronto su ospedali e comunità ‘Baby-Friendly’",
+    "date": "2026-10-14",
+    "url": "https://www.iss.it/-/babyfriendly26",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Il 14 e 15 ottobre delegazioni da tutto il mondo insieme a rappresentanti dell'Organizzazione Mondiale della Sanità e dell'UNICEF, per fare il punto sull'attuazione della Baby-friendly Initiative negli ospedali, nelle unità neonatali e nei servizi di comunità. L’allattamento escl"
+   },
+   {
+    "title": "AIFA nella Piattaforma Digitale Nazionale Dati",
+    "date": "2026-10-13",
+    "url": "https://www.aifa.gov.it/-/aifa-nella-piattaforma-digitale-nazionale-dati",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "Un passo avanti nel processo di trasformazione digitale della sanità pubblica, che rende il patrimonio informativo dell'AIFA sui medicinali più facilmente accessibile."
+   },
+   {
+    "title": "Bollettino 179 fase 3",
+    "date": "2026-10-12",
+    "url": "https://www.iss.it/-/bollettino-179-fase-3",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Impatto • Al 7/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (349 ricoverati), stabile rispetto alla settimana precedente (0,5% al 30/09/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (13 ricoverati), rispe"
+   },
+   {
+    "title": "AIFA a Genova. Il 16 ottobre confronto sul valore dell’innovazione farmaceutica",
+    "date": "2026-10-01",
+    "url": "https://www.aifa.gov.it/-/aifa-a-genova.-il-16-ottobre-confronto-sul-valore-dell-innovazione-farmaceutica",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "L’incontro “Misurare il valore dell’innovazione - Dalla valutazione del farmaco agli esiti di salute”, promosso dall’Agenzia Italiana del Farmaco venerdì 16 ottobre, a partire dalle 9.30, nella Sala del Maggior Consiglio di Palazzo Ducale a Genova."
+   },
+   {
+    "title": "Malattie rare, l’Europa a confronto su innovazione e accesso alle terapie",
+    "date": "2026-09-25",
+    "url": "https://www.aifa.gov.it/-/malattie-rare-l-europa-a-confronto-su-innovazione-e-accesso-alle-terapie",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "A Roma i lavori del Committee for Orphan Medicinal Products (COMP) dell’EMA. Al centro del confronto ricerca, regolamentazione e accesso alle terapie per le malattie rare."
+   },
+   {
+    "title": "Via libera dal CdA di AIFA alla rimborsabilità di 2 nuovi medicinali orfani e 7 estensioni di indicazione terapeutica",
+    "date": "2026-09-24",
+    "url": "https://www.aifa.gov.it/-/via-libera-dal-cda-di-aifa-alla-rimborsabilita-di-2-nuovi-medicinali",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "Tra i medicinali che saranno rimborsati anche due farmaci orfani per il trattamento dei neurofibromi plessiformi nella neurofibromatosi di tipo 1 e del cancro delle vie biliari."
+   },
+   {
+    "title": "Sanità Territoriale e Telemedicina: pubblicate le linee di indirizzo Agenas per l’erogazione dei servizi nelle farmacie convenzionate",
+    "date": "2026-09-10",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2801-sanit%C3%A0-territoriale-e-telemedicina-pubblicate-le-linee-di-indirizzo-agenas-per-l%E2%80%99erogazione-dei-servizi-nelle-farmacie-convenzionate",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS ha pubblicato in consultazione le “Linee di indirizzo per l'erogazione di servizi di telemedicina nelle farmacie convenzionate” ."
+   },
+   {
+    "title": "Protocollo d’Intesa AGENAS–Università di Udine per promuovere l’umanizzazione delle cure",
+    "date": "2026-09-08",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2800-protocollo-d%E2%80%99intesa-agenas%E2%80%93universit%C3%A0-di-udine-per-promuovere-l%E2%80%99umanizzazione-delle-cure",
+    "source": "AGENAS – Notizie",
+    "summary": "Agenas e l’Università di Udine hanno sottoscritto un Protocollo d’Intesa triennale per rafforzare la collaborazione scientifica, formativa e istituzionale sul tema dell’umanizzazione delle cure e della centralità della persona nei sistemi sanitari."
+   },
+   {
+    "title": "Case della Comunità: il documento AGENAS sulla partecipazione di pazienti, cittadini e comunità",
+    "date": "2026-09-08",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2802-case-della-comunit%C3%A0-il-documento-agenas-sulla-partecipazione-di-pazienti%2C-cittadini-e-comunit%C3%A0",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS rende disponibile il “ Documento di indirizzo contenente indicazioni per la promozione della partecipazione/co-produzione dei pazienti, dei cittadini e della comunità nell’ambito delle Case della Comunità ”."
+   },
+   {
+    "title": "Consultazione pubblica sul Documento di Indirizzo per lo sviluppo e la gestione della Teleradiologia",
+    "date": "2026-08-05",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2799-consultazione-pubblica-sul-documento-di-indirizzo-per-lo-sviluppo-e-la-gestione-della-teleradiologia",
+    "source": "AGENAS – Notizie",
+    "summary": "Dal 07 agosto 2026 è aperta la consultazione pubblica sul “Documento di Indirizzo per lo sviluppo e la gestione della Teleradiologia”, predisposto da un Gruppo di Lavoro istituito presso Agenas con delibera direttoriale n. 245 del 10 maggio 2024."
+   },
+   {
+    "title": "Agenas pubblica le Linee di indirizzo sulle équipe multiprofessionali nelle Case della Comunità",
+    "date": "2026-07-28",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2795-agenas-pubblica-le-linee-di-indirizzo-sulle-%C3%A9quipe-multiprofessionali-nelle-case-della-comunit%C3%A0",
+    "source": "AGENAS – Notizie",
+    "summary": "Agenas pubblica le Linee di indirizzo tecniche \"Le équipe multiprofessionali e multidisciplinari nelle Case della Comunità\" , il documento che traduce in indicazioni operative uno dei requisiti cardine previsti dal Decreto ministeriale 77 del 2022 per l'organizzazione dell'assist"
+   },
+   {
+    "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
+    "date": "2026-03-06",
+    "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
+    "source": "ISS – RespiVirNet",
+    "summary": "Da questa settimana le Regioni/PPAA hanno sospeso i flussi dati che alimentano la sorveglianza integrata RespiVirNet, in attesa di una regolamentazione in linea con quanto previsto dalle norme vigenti per la gestione dei dati personali. A tal proposito si comunica che dalla pross"
+   }
   ]
  },
  "processed_docs": [
@@ -202,7 +353,9 @@
   "2026-DON618",
   "2026-DON619",
   "2026-DON620",
-  "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia"
+  "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
+  "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+  "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile"
  ],
  "nodes": [
   {
@@ -214,7 +367,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T15:23:36.802894",
+   "updated_at": "2026-10-18T19:24:50.902765",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -226,7 +379,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T15:23:36.802894",
+   "updated_at": "2026-10-18T19:24:50.902765",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -238,7 +391,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -298,7 +451,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T15:23:36.802894",
+   "updated_at": "2026-10-18T19:24:50.902765",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -310,7 +463,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T15:23:36.802894",
+   "updated_at": "2026-10-18T19:24:50.902765",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -322,7 +475,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T15:23:36.802894",
+   "updated_at": "2026-10-18T19:24:50.902765",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -331,10 +484,10 @@
    "type": "PharmaCompany",
    "domain": "health",
    "region": "United States",
-   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Achieva 3.0T;  Model Numbers (REF): 1. 781177, 2. 781277, 3. 781278, 4. 781344, 5. 781345;",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -349,7 +502,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -361,7 +514,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3215-2026 di classe II del 30/09/2026"
   },
   {
@@ -450,7 +603,9 @@
    "aliases": [
     "Regione Sicilia"
    ],
-   "full_name": "Regione Siciliana"
+   "full_name": "Regione Siciliana",
+   "website": "https://www.regione.sicilia.it/",
+   "italy": true
   },
   {
    "id": "asp_me",
@@ -521,7 +676,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T15:23:36.802894",
+   "updated_at": "2026-10-18T19:24:50.902765",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -550,7 +705,9 @@
    "aliases": [
     "CONSIP"
    ],
-   "full_name": "Consip S.p.A. – centrale acquisti nazionale"
+   "full_name": "Consip S.p.A. – centrale acquisti nazionale",
+   "website": "https://www.consip.it/",
+   "italy": true
   },
   {
    "id": "aouMe",
@@ -587,7 +744,9 @@
    "created_at": "2026-10-06T06:32:00.960345",
    "updated_at": "2026-10-06T06:32:00.960345",
    "risk_basis": "Valore assegnato manualmente",
-   "full_name": "Agenzia Nazionale per i Servizi Sanitari Regionali"
+   "full_name": "Agenzia Nazionale per i Servizi Sanitari Regionali",
+   "website": "https://www.agenas.gov.it/",
+   "italy": true
   },
   {
    "id": "aifa",
@@ -598,9 +757,11 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
+   "updated_at": "2026-10-18T19:24:58.559516",
    "risk_basis": "Valore assegnato manualmente",
-   "full_name": "Agenzia Italiana del Farmaco"
+   "full_name": "Agenzia Italiana del Farmaco",
+   "website": "https://www.aifa.gov.it/",
+   "italy": true
   },
   {
    "id": "ema",
@@ -622,11 +783,16 @@
    "domain": "health",
    "region": "IT",
    "description": "Istituto Superiore di Sanità. Ricerca e sorveglianza epidemiologica.",
-   "risk_score": 10,
+   "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente",
-   "full_name": "Istituto Superiore di Sanità"
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "full_name": "Istituto Superiore di Sanità",
+   "website": "https://www.iss.it/",
+   "italy": true,
+   "aliases": [
+    "ISS - Istituto Superiore di Sanità"
+   ]
   },
   {
    "id": "minsalute",
@@ -639,7 +805,9 @@
    "created_at": "2026-10-06T06:32:00.960345",
    "updated_at": "2026-10-06T06:32:00.960345",
    "risk_basis": "Valore assegnato manualmente",
-   "full_name": "Ministero della Salute (Italia)"
+   "full_name": "Ministero della Salute",
+   "website": "https://www.salute.gov.it/",
+   "italy": true
   },
   {
    "id": "who",
@@ -1131,7 +1299,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1143,7 +1311,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1155,7 +1323,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1167,7 +1335,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1179,7 +1347,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1191,7 +1359,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1203,7 +1371,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T15:23:36.803259",
+   "updated_at": "2026-10-18T19:24:50.936799",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -1472,6 +1640,582 @@
    "created_at": "2026-10-18T09:31:52.975006",
    "updated_at": "2026-10-18T09:31:52.975006",
    "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "conferenza_sr",
+   "label": "Conferenza Stato-Regioni",
+   "full_name": "Conferenza permanente per i rapporti tra lo Stato, le Regioni e le Province autonome di Trento e di Bolzano",
+   "type": "RegulatorAgency",
+   "region": "IT",
+   "website": "https://www.statoregioni.it/",
+   "domain": "health",
+   "description": "Conferenza permanente per i rapporti tra lo Stato, le Regioni e le Province autonome di Trento e di Bolzano",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_abruzzo",
+   "label": "Regione Abruzzo",
+   "full_name": "Regione Abruzzo",
+   "type": "RegionalAuthority",
+   "region": "Abruzzo",
+   "website": "https://www.regione.abruzzo.it/",
+   "domain": "health",
+   "description": "Regione Abruzzo",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_basilicata",
+   "label": "Regione Basilicata",
+   "full_name": "Regione Basilicata",
+   "type": "RegionalAuthority",
+   "region": "Basilicata",
+   "website": "https://www.regione.basilicata.it/",
+   "domain": "health",
+   "description": "Regione Basilicata",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_calabria",
+   "label": "Regione Calabria",
+   "full_name": "Regione Calabria",
+   "type": "RegionalAuthority",
+   "region": "Calabria",
+   "website": "https://www.regione.calabria.it/",
+   "domain": "health",
+   "description": "Regione Calabria",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_campania",
+   "label": "Regione Campania",
+   "full_name": "Regione Campania",
+   "type": "RegionalAuthority",
+   "region": "Campania",
+   "website": "https://www.regione.campania.it/",
+   "domain": "health",
+   "description": "Regione Campania",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_emilia_romagna",
+   "label": "Regione Emilia-Romagna",
+   "full_name": "Regione Emilia-Romagna",
+   "type": "RegionalAuthority",
+   "region": "Emilia-Romagna",
+   "website": "https://www.regione.emilia-romagna.it/",
+   "domain": "health",
+   "description": "Regione Emilia-Romagna",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_fvg",
+   "label": "Regione Friuli Venezia Giulia",
+   "full_name": "Regione Friuli Venezia Giulia",
+   "type": "RegionalAuthority",
+   "region": "Friuli Venezia Giulia",
+   "website": "https://www.regione.fvg.it/",
+   "domain": "health",
+   "description": "Regione Friuli Venezia Giulia",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_lazio",
+   "label": "Regione Lazio",
+   "full_name": "Regione Lazio",
+   "type": "RegionalAuthority",
+   "region": "Lazio",
+   "website": "https://www.regione.lazio.it/",
+   "domain": "health",
+   "description": "Regione Lazio",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_liguria",
+   "label": "Regione Liguria",
+   "full_name": "Regione Liguria",
+   "type": "RegionalAuthority",
+   "region": "Liguria",
+   "website": "https://www.regione.liguria.it/",
+   "domain": "health",
+   "description": "Regione Liguria",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_lombardia",
+   "label": "Regione Lombardia",
+   "full_name": "Regione Lombardia",
+   "type": "RegionalAuthority",
+   "region": "Lombardia",
+   "website": "https://www.regione.lombardia.it/",
+   "domain": "health",
+   "description": "Regione Lombardia",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_marche",
+   "label": "Regione Marche",
+   "full_name": "Regione Marche",
+   "type": "RegionalAuthority",
+   "region": "Marche",
+   "website": "https://www.regione.marche.it/",
+   "domain": "health",
+   "description": "Regione Marche",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_molise",
+   "label": "Regione Molise",
+   "full_name": "Regione Molise",
+   "type": "RegionalAuthority",
+   "region": "Molise",
+   "website": "https://www.regione.molise.it/",
+   "domain": "health",
+   "description": "Regione Molise",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_piemonte",
+   "label": "Regione Piemonte",
+   "full_name": "Regione Piemonte",
+   "type": "RegionalAuthority",
+   "region": "Piemonte",
+   "website": "https://www.regione.piemonte.it/",
+   "domain": "health",
+   "description": "Regione Piemonte",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_puglia",
+   "label": "Regione Puglia",
+   "full_name": "Regione Puglia",
+   "type": "RegionalAuthority",
+   "region": "Puglia",
+   "website": "https://www.regione.puglia.it/",
+   "domain": "health",
+   "description": "Regione Puglia",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_sardegna",
+   "label": "Regione Sardegna",
+   "full_name": "Regione Sardegna",
+   "type": "RegionalAuthority",
+   "region": "Sardegna",
+   "website": "https://www.regione.sardegna.it/",
+   "domain": "health",
+   "description": "Regione Sardegna",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_toscana",
+   "label": "Regione Toscana",
+   "full_name": "Regione Toscana",
+   "type": "RegionalAuthority",
+   "region": "Toscana",
+   "website": "https://www.regione.toscana.it/",
+   "domain": "health",
+   "description": "Regione Toscana",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_umbria",
+   "label": "Regione Umbria",
+   "full_name": "Regione Umbria",
+   "type": "RegionalAuthority",
+   "region": "Umbria",
+   "website": "https://www.regione.umbria.it/home",
+   "domain": "health",
+   "description": "Regione Umbria",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_vda",
+   "label": "Regione Valle d'Aosta",
+   "full_name": "Regione Valle d'Aosta",
+   "type": "RegionalAuthority",
+   "region": "Valle d'Aosta",
+   "website": "https://www.regione.vda.it/",
+   "domain": "health",
+   "description": "Regione Valle d'Aosta",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_veneto",
+   "label": "Regione Veneto",
+   "full_name": "Regione Veneto",
+   "type": "RegionalAuthority",
+   "region": "Veneto",
+   "website": "https://www.regione.veneto.it/",
+   "domain": "health",
+   "description": "Regione Veneto",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "pa_bolzano",
+   "label": "Provincia autonoma di Bolzano",
+   "full_name": "Provincia autonoma di Bolzano",
+   "type": "RegionalAuthority",
+   "region": "Provincia autonoma di Bolzano",
+   "website": "https://www.provincia.bz.it/",
+   "domain": "health",
+   "description": "Provincia autonoma di Bolzano",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "pa_trento",
+   "label": "Provincia autonoma di Trento",
+   "full_name": "Provincia autonoma di Trento",
+   "type": "RegionalAuthority",
+   "region": "Provincia autonoma di Trento",
+   "website": "https://www.provincia.tn.it/",
+   "domain": "health",
+   "description": "Provincia autonoma di Trento",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "aria_lombardia",
+   "label": "ARIA S.p.A.",
+   "full_name": "Azienda Regionale per l'Innovazione e gli Acquisti (Lombardia)",
+   "type": "ProcurementBody",
+   "region": "Lombardia",
+   "website": "https://www.ariaspa.it/",
+   "domain": "health",
+   "description": "Azienda Regionale per l'Innovazione e gli Acquisti (Lombardia)",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "intercent_er",
+   "label": "Intercent-ER",
+   "full_name": "Agenzia regionale di sviluppo dei mercati telematici (Emilia-Romagna)",
+   "type": "ProcurementBody",
+   "region": "Emilia-Romagna",
+   "website": "https://intercenter.regione.emilia-romagna.it/",
+   "domain": "health",
+   "description": "Agenzia regionale di sviluppo dei mercati telematici (Emilia-Romagna)",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "soresa",
+   "label": "So.Re.Sa.",
+   "full_name": "Società Regionale per la Sanità (Campania)",
+   "type": "ProcurementBody",
+   "region": "Campania",
+   "website": "https://www.soresa.it/",
+   "domain": "health",
+   "description": "Società Regionale per la Sanità (Campania)",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "estar",
+   "label": "ESTAR",
+   "full_name": "Ente di Supporto Tecnico-Amministrativo Regionale (Toscana)",
+   "type": "ProcurementBody",
+   "region": "Toscana",
+   "website": "https://www.estar.toscana.it/",
+   "domain": "health",
+   "description": "Ente di Supporto Tecnico-Amministrativo Regionale (Toscana)",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "azienda_zero",
+   "label": "Azienda Zero",
+   "full_name": "Azienda Zero (Veneto)",
+   "type": "ProcurementBody",
+   "region": "Veneto",
+   "website": "https://www.azero.veneto.it/",
+   "domain": "health",
+   "description": "Azienda Zero (Veneto)",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "scr_piemonte",
+   "label": "SCR Piemonte",
+   "full_name": "Società di Committenza Regione Piemonte",
+   "type": "ProcurementBody",
+   "region": "Piemonte",
+   "website": "https://www.scr.piemonte.it/",
+   "domain": "health",
+   "description": "Società di Committenza Regione Piemonte",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "arcs_fvg",
+   "label": "ARCS",
+   "full_name": "Azienda Regionale di Coordinamento per la Salute (Friuli Venezia Giulia)",
+   "type": "ProcurementBody",
+   "region": "Friuli Venezia Giulia",
+   "website": "https://arcs.sanita.fvg.it/",
+   "domain": "health",
+   "description": "Azienda Regionale di Coordinamento per la Salute (Friuli Venezia Giulia)",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
+   "italy": true,
+   "created_at": "2026-10-18T15:38:53.728256",
+   "updated_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "farmaco_orfano_nuovo",
+   "label": "Farmaco orfano nuovo",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Nuovo farmaco orfano approvato per la rimborsabilità",
+   "risk_score": 0,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "estensioni_indicazione_pediatrico",
+   "label": "Estensioni indicazione pediatrico",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "6 estensioni di indicazione terapeutica in ambito pediatrico approvate",
+   "risk_score": 0,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "farmaci_equivalenti",
+   "label": "Farmaci equivalenti",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "3 farmaci equivalenti approvati per la rimborsabilità",
+   "risk_score": 0,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "oncologia_terapia",
+   "label": "Opzioni terapeutiche oncologia",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Nuove opzioni terapeutiche per oncologia approvate",
+   "risk_score": 0,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "hiv1_terapia",
+   "label": "Terapie HIV-1",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Nuove opzioni terapeutiche per infezione da HIV-1 approvate",
+   "risk_score": 0,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "salute_mentale_adolescenti",
+   "label": "Salute mentale adolescenti",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Nuove opzioni terapeutiche per salute mentale negli adolescenti approvate",
+   "risk_score": 0,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "malattie_rare_terapia",
+   "label": "Terapie malattie rare",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Nuove opzioni terapeutiche per malattie rare approvate",
+   "risk_score": 0,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "evt_dengue",
+   "label": "Epidemia di dengue",
+   "type": "EpidemicEvent",
+   "domain": "health",
+   "region": null,
+   "description": "5 focolai di trasmissione locale di Dengue in Italia, 70 casi autoctoni confermati",
+   "risk_score": 72,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "aliases": [
+    "Focolai Dengue Autoctoni"
+   ],
+   "disease": "dengue"
+  },
+  {
+   "id": "evt_chikungunya",
+   "label": "Epidemia di chikungunya",
+   "type": "EpidemicEvent",
+   "domain": "health",
+   "region": null,
+   "description": "1 caso autoctono confermato di Chikungunya in Italia",
+   "risk_score": 35,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "aliases": [
+    "Focolaio Chikungunya Autoctono"
+   ],
+   "disease": "chikungunya"
+  },
+  {
+   "id": "evt_west_nile",
+   "label": "Epidemia di West Nile",
+   "type": "EpidemicEvent",
+   "domain": "health",
+   "region": null,
+   "description": "770 casi confermati di WNV, 411 forme neuroinvasive, 61 decessi, letalità 14,8%",
+   "risk_score": 85,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "aliases": [
+    "Epidemia West Nile Virus"
+   ],
+   "disease": "west_nile"
+  },
+  {
+   "id": "italian_health_system",
+   "label": "Sistema Sanitario Nazionale Italiano",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": null,
+   "description": "Sistema sanitario impattato da focolai arbovirali attivi",
+   "risk_score": 72,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "blood_donation_system",
+   "label": "Sistema Trasfusionale Italiano",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": null,
+   "description": "96 casi asintomatici di WNV identificati in donatori di sangue",
+   "risk_score": 68,
+   "created_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
   }
  ],
  "edges": [
@@ -1535,11 +2279,14 @@
    "source": "minsalute",
    "target": "reg_sicilia",
    "type": "REGOLA",
-   "fact": "La Regione Sicilia recepisce i LEA e i piani nazionali definiti dal Ministero della Salute.",
+   "fact": "Regione Siciliana organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
    "risk_score": 20,
-   "source_doc": "",
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
    "date": "2001-01",
-   "created_at": "2026-10-06T06:32:00.960345"
+   "created_at": "2026-10-06T06:32:00.960345",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   }
   },
   {
    "id": "consip_minsalute_COLLABORA_CON",
@@ -4922,6 +5669,1056 @@
    "source_doc": "2026-DON620",
    "date": "2026-10",
    "created_at": "2026-10-18T15:23:47.514323"
+  },
+  {
+   "id": "minsalute_aifa_CONTROLLA",
+   "source": "minsalute",
+   "target": "aifa",
+   "type": "CONTROLLA",
+   "fact": "L'AIFA opera sotto la vigilanza del Ministero della Salute (e del MEF).",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2003-09-30;269~art48",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2003-09-30;269~art48": "D.L. 30 settembre 2003, n. 269, art. 48 – istituzione dell'AIFA (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_iss_CONTROLLA",
+   "source": "minsalute",
+   "target": "iss",
+   "type": "CONTROLLA",
+   "fact": "L'ISS è un ente vigilato dal Ministero della Salute.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2012-06-28;106",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2012-06-28;106": "D.Lgs. 28 giugno 2012, n. 106 – riorganizzazione degli enti vigilati dal Ministero della Salute (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_agenas_CONTROLLA",
+   "source": "minsalute",
+   "target": "agenas",
+   "type": "CONTROLLA",
+   "fact": "AGENAS è un ente vigilato dal Ministero della Salute.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1993-06-30;266",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1993-06-30;266": "D.Lgs. 30 giugno 1993, n. 266 – Agenzia per i servizi sanitari regionali (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_abruzzo_REGOLA",
+   "source": "minsalute",
+   "target": "reg_abruzzo",
+   "type": "REGOLA",
+   "fact": "Regione Abruzzo organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_abruzzo_conferenza_sr_MEMBRO_DI",
+   "source": "reg_abruzzo",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Abruzzo partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_basilicata_REGOLA",
+   "source": "minsalute",
+   "target": "reg_basilicata",
+   "type": "REGOLA",
+   "fact": "Regione Basilicata organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_basilicata_conferenza_sr_MEMBRO_DI",
+   "source": "reg_basilicata",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Basilicata partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_calabria_REGOLA",
+   "source": "minsalute",
+   "target": "reg_calabria",
+   "type": "REGOLA",
+   "fact": "Regione Calabria organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_calabria_conferenza_sr_MEMBRO_DI",
+   "source": "reg_calabria",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Calabria partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_campania_REGOLA",
+   "source": "minsalute",
+   "target": "reg_campania",
+   "type": "REGOLA",
+   "fact": "Regione Campania organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_campania_conferenza_sr_MEMBRO_DI",
+   "source": "reg_campania",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Campania partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_emilia_romagna_REGOLA",
+   "source": "minsalute",
+   "target": "reg_emilia_romagna",
+   "type": "REGOLA",
+   "fact": "Regione Emilia-Romagna organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_emilia_romagna_conferenza_sr_MEMBRO_DI",
+   "source": "reg_emilia_romagna",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Emilia-Romagna partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_fvg_REGOLA",
+   "source": "minsalute",
+   "target": "reg_fvg",
+   "type": "REGOLA",
+   "fact": "Regione Friuli Venezia Giulia organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_fvg_conferenza_sr_MEMBRO_DI",
+   "source": "reg_fvg",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Friuli Venezia Giulia partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_lazio_REGOLA",
+   "source": "minsalute",
+   "target": "reg_lazio",
+   "type": "REGOLA",
+   "fact": "Regione Lazio organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_lazio_conferenza_sr_MEMBRO_DI",
+   "source": "reg_lazio",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Lazio partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_liguria_REGOLA",
+   "source": "minsalute",
+   "target": "reg_liguria",
+   "type": "REGOLA",
+   "fact": "Regione Liguria organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_liguria_conferenza_sr_MEMBRO_DI",
+   "source": "reg_liguria",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Liguria partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_lombardia_REGOLA",
+   "source": "minsalute",
+   "target": "reg_lombardia",
+   "type": "REGOLA",
+   "fact": "Regione Lombardia organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_lombardia_conferenza_sr_MEMBRO_DI",
+   "source": "reg_lombardia",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Lombardia partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_marche_REGOLA",
+   "source": "minsalute",
+   "target": "reg_marche",
+   "type": "REGOLA",
+   "fact": "Regione Marche organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_marche_conferenza_sr_MEMBRO_DI",
+   "source": "reg_marche",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Marche partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_molise_REGOLA",
+   "source": "minsalute",
+   "target": "reg_molise",
+   "type": "REGOLA",
+   "fact": "Regione Molise organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_molise_conferenza_sr_MEMBRO_DI",
+   "source": "reg_molise",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Molise partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_piemonte_REGOLA",
+   "source": "minsalute",
+   "target": "reg_piemonte",
+   "type": "REGOLA",
+   "fact": "Regione Piemonte organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_piemonte_conferenza_sr_MEMBRO_DI",
+   "source": "reg_piemonte",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Piemonte partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_puglia_REGOLA",
+   "source": "minsalute",
+   "target": "reg_puglia",
+   "type": "REGOLA",
+   "fact": "Regione Puglia organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_puglia_conferenza_sr_MEMBRO_DI",
+   "source": "reg_puglia",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Puglia partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_sardegna_REGOLA",
+   "source": "minsalute",
+   "target": "reg_sardegna",
+   "type": "REGOLA",
+   "fact": "Regione Sardegna organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_sardegna_conferenza_sr_MEMBRO_DI",
+   "source": "reg_sardegna",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Sardegna partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_sicilia_conferenza_sr_MEMBRO_DI",
+   "source": "reg_sicilia",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Siciliana partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_toscana_REGOLA",
+   "source": "minsalute",
+   "target": "reg_toscana",
+   "type": "REGOLA",
+   "fact": "Regione Toscana organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_toscana_conferenza_sr_MEMBRO_DI",
+   "source": "reg_toscana",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Toscana partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_umbria_REGOLA",
+   "source": "minsalute",
+   "target": "reg_umbria",
+   "type": "REGOLA",
+   "fact": "Regione Umbria organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_umbria_conferenza_sr_MEMBRO_DI",
+   "source": "reg_umbria",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Umbria partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_vda_REGOLA",
+   "source": "minsalute",
+   "target": "reg_vda",
+   "type": "REGOLA",
+   "fact": "Regione Valle d'Aosta organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_vda_conferenza_sr_MEMBRO_DI",
+   "source": "reg_vda",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Valle d'Aosta partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_reg_veneto_REGOLA",
+   "source": "minsalute",
+   "target": "reg_veneto",
+   "type": "REGOLA",
+   "fact": "Regione Veneto organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_veneto_conferenza_sr_MEMBRO_DI",
+   "source": "reg_veneto",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Regione Veneto partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_pa_bolzano_REGOLA",
+   "source": "minsalute",
+   "target": "pa_bolzano",
+   "type": "REGOLA",
+   "fact": "Provincia autonoma di Bolzano organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "pa_bolzano_conferenza_sr_MEMBRO_DI",
+   "source": "pa_bolzano",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Provincia autonoma di Bolzano partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "minsalute_pa_trento_REGOLA",
+   "source": "minsalute",
+   "target": "pa_trento",
+   "type": "REGOLA",
+   "fact": "Provincia autonoma di Trento organizza il servizio sanitario regionale nel quadro dei livelli essenziali di assistenza nazionali.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-30;502": "D.Lgs. 30 dicembre 1992, n. 502 – Riordino della disciplina in materia sanitaria (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "pa_trento_conferenza_sr_MEMBRO_DI",
+   "source": "pa_trento",
+   "target": "conferenza_sr",
+   "type": "MEMBRO_DI",
+   "fact": "Provincia autonoma di Trento partecipa alla Conferenza Stato-Regioni, sede delle intese sulla sanità.",
+   "risk_score": 10,
+   "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281",
+   "doc_titles": {
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1997-08-28;281": "D.Lgs. 28 agosto 1997, n. 281 – Conferenza Stato-Regioni (Normattiva)"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_lombardia_aria_lombardia_CONTROLLA",
+   "source": "reg_lombardia",
+   "target": "aria_lombardia",
+   "type": "CONTROLLA",
+   "fact": "ARIA S.p.A. svolge acquisti centralizzati per il servizio sanitario della regione.",
+   "risk_score": 10,
+   "source_doc": "https://www.ariaspa.it/",
+   "doc_titles": {
+    "https://www.ariaspa.it/": "Azienda Regionale per l'Innovazione e gli Acquisti (Lombardia) – sito istituzionale"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_emilia_romagna_intercent_er_CONTROLLA",
+   "source": "reg_emilia_romagna",
+   "target": "intercent_er",
+   "type": "CONTROLLA",
+   "fact": "Intercent-ER svolge acquisti centralizzati per il servizio sanitario della regione.",
+   "risk_score": 10,
+   "source_doc": "https://intercenter.regione.emilia-romagna.it/",
+   "doc_titles": {
+    "https://intercenter.regione.emilia-romagna.it/": "Agenzia regionale di sviluppo dei mercati telematici (Emilia-Romagna) – sito istituzionale"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_campania_soresa_CONTROLLA",
+   "source": "reg_campania",
+   "target": "soresa",
+   "type": "CONTROLLA",
+   "fact": "So.Re.Sa. svolge acquisti centralizzati per il servizio sanitario della regione.",
+   "risk_score": 10,
+   "source_doc": "https://www.soresa.it/",
+   "doc_titles": {
+    "https://www.soresa.it/": "Società Regionale per la Sanità (Campania) – sito istituzionale"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_toscana_estar_CONTROLLA",
+   "source": "reg_toscana",
+   "target": "estar",
+   "type": "CONTROLLA",
+   "fact": "ESTAR svolge acquisti centralizzati per il servizio sanitario della regione.",
+   "risk_score": 10,
+   "source_doc": "https://www.estar.toscana.it/",
+   "doc_titles": {
+    "https://www.estar.toscana.it/": "Ente di Supporto Tecnico-Amministrativo Regionale (Toscana) – sito istituzionale"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_veneto_azienda_zero_CONTROLLA",
+   "source": "reg_veneto",
+   "target": "azienda_zero",
+   "type": "CONTROLLA",
+   "fact": "Azienda Zero svolge acquisti centralizzati per il servizio sanitario della regione.",
+   "risk_score": 10,
+   "source_doc": "https://www.azero.veneto.it/",
+   "doc_titles": {
+    "https://www.azero.veneto.it/": "Azienda Zero (Veneto) – sito istituzionale"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_piemonte_scr_piemonte_CONTROLLA",
+   "source": "reg_piemonte",
+   "target": "scr_piemonte",
+   "type": "CONTROLLA",
+   "fact": "SCR Piemonte svolge acquisti centralizzati per il servizio sanitario della regione.",
+   "risk_score": 10,
+   "source_doc": "https://www.scr.piemonte.it/",
+   "doc_titles": {
+    "https://www.scr.piemonte.it/": "Società di Committenza Regione Piemonte – sito istituzionale"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "reg_fvg_arcs_fvg_CONTROLLA",
+   "source": "reg_fvg",
+   "target": "arcs_fvg",
+   "type": "CONTROLLA",
+   "fact": "ARCS svolge acquisti centralizzati per il servizio sanitario della regione.",
+   "risk_score": 10,
+   "source_doc": "https://arcs.sanita.fvg.it/",
+   "doc_titles": {
+    "https://arcs.sanita.fvg.it/": "Azienda Regionale di Coordinamento per la Salute (Friuli Venezia Giulia) – sito istituzionale"
+   },
+   "date": null,
+   "created_at": "2026-10-18T15:38:53.728256"
+  },
+  {
+   "id": "aifa_reg_liguria_COMUNICA_SU",
+   "source": "aifa",
+   "target": "reg_liguria",
+   "type": "COMUNICA_SU",
+   "fact": "AIFA a Genova: il valore dell’innovazione farmaceutica al centro del confronto con le Regioni",
+   "risk_score": 15,
+   "source_doc": "https://www.aifa.gov.it/-/aifa-genova-valore-innovazione-farmaceutica-al-centro-confronto-con-regioni",
+   "date": "2026-10-16",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/aifa-genova-valore-innovazione-farmaceutica-al-centro-confronto-con-regioni": "AIFA – Comunicati stampa – AIFA a Genova: il valore dell’innovazione farmaceutica al centro del confronto con le Regioni"
+   }
+  },
+  {
+   "id": "iss_pa_bolzano_COMUNICA_SU",
+   "source": "iss",
+   "target": "pa_bolzano",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "iss_pa_trento_COMUNICA_SU",
+   "source": "iss",
+   "target": "pa_trento",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "iss_reg_calabria_COMUNICA_SU",
+   "source": "iss",
+   "target": "reg_calabria",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "iss_reg_campania_COMUNICA_SU",
+   "source": "iss",
+   "target": "reg_campania",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "iss_reg_molise_COMUNICA_SU",
+   "source": "iss",
+   "target": "reg_molise",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "iss_reg_piemonte_COMUNICA_SU",
+   "source": "iss",
+   "target": "reg_piemonte",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "iss_reg_sardegna_COMUNICA_SU",
+   "source": "iss",
+   "target": "reg_sardegna",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "iss_reg_sicilia_COMUNICA_SU",
+   "source": "iss",
+   "target": "reg_sicilia",
+   "type": "COMUNICA_SU",
+   "fact": "Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+   "date": "2026-10-15",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
+   }
+  },
+  {
+   "id": "agenas_minsalute_COMUNICA_SU",
+   "source": "agenas",
+   "target": "minsalute",
+   "type": "COMUNICA_SU",
+   "fact": "Ricerca Corrente Agenas 2025-2027 - Al via il nuovo programma per rafforzare qualità dell'assistenza, innovazione e rete degli IRCCS",
+   "risk_score": 15,
+   "source_doc": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2793-ricerca-corrente-agenas-2025-2027",
+   "date": "2026-07-13",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2793-ricerca-corrente-agenas-2025-2027": "AGENAS – Notizie – Ricerca Corrente Agenas 2025-2027 - Al via il nuovo programma per rafforzare qualità dell'assistenza, innovazione e rete degli IRCCS"
+   }
+  },
+  {
+   "id": "iss_minsalute_COMUNICA_SU",
+   "source": "iss",
+   "target": "minsalute",
+   "type": "COMUNICA_SU",
+   "fact": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
+   "risk_score": 40,
+   "source_doc": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
+   "date": "2026-03-06",
+   "created_at": "2026-10-18T19:24:50.964057",
+   "doc_titles": {
+    "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx": "ISS – RespiVirNet – RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026"
+   }
+  },
+  {
+   "id": "aifa_farmaco_orfano_nuovo_REGOLA",
+   "source": "aifa",
+   "target": "farmaco_orfano_nuovo",
+   "type": "REGOLA",
+   "fact": "AIFA approva la rimborsabilità del nuovo farmaco orfano",
+   "risk_score": 0,
+   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+   "date": null,
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
+   }
+  },
+  {
+   "id": "aifa_estensioni_indicazione_pediatrico_REGOLA",
+   "source": "aifa",
+   "target": "estensioni_indicazione_pediatrico",
+   "type": "REGOLA",
+   "fact": "AIFA approva 6 estensioni di indicazione terapeutica in ambito pediatrico",
+   "risk_score": 0,
+   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+   "date": null,
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
+   }
+  },
+  {
+   "id": "aifa_farmaci_equivalenti_REGOLA",
+   "source": "aifa",
+   "target": "farmaci_equivalenti",
+   "type": "REGOLA",
+   "fact": "AIFA approva 3 farmaci equivalenti per la rimborsabilità",
+   "risk_score": 0,
+   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+   "date": null,
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
+   }
+  },
+  {
+   "id": "aifa_oncologia_terapia_REGOLA",
+   "source": "aifa",
+   "target": "oncologia_terapia",
+   "type": "REGOLA",
+   "fact": "AIFA approva nuove opzioni terapeutiche per l'oncologia",
+   "risk_score": 0,
+   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+   "date": null,
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
+   }
+  },
+  {
+   "id": "aifa_hiv1_terapia_REGOLA",
+   "source": "aifa",
+   "target": "hiv1_terapia",
+   "type": "REGOLA",
+   "fact": "AIFA approva nuove opzioni terapeutiche per infezione da HIV-1",
+   "risk_score": 0,
+   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+   "date": null,
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
+   }
+  },
+  {
+   "id": "aifa_salute_mentale_adolescenti_REGOLA",
+   "source": "aifa",
+   "target": "salute_mentale_adolescenti",
+   "type": "REGOLA",
+   "fact": "AIFA approva nuove opzioni terapeutiche per salute mentale negli adolescenti",
+   "risk_score": 0,
+   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+   "date": null,
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
+   }
+  },
+  {
+   "id": "aifa_malattie_rare_terapia_REGOLA",
+   "source": "aifa",
+   "target": "malattie_rare_terapia",
+   "type": "REGOLA",
+   "fact": "AIFA approva nuove opzioni terapeutiche per malattie rare",
+   "risk_score": 0,
+   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
+   "date": null,
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
+   }
+  },
+  {
+   "id": "iss_evt_dengue_INDAGA_SU",
+   "source": "iss",
+   "target": "evt_dengue",
+   "type": "INDAGA_SU",
+   "fact": "ISS coordina sorveglianza dei 5 focolai autoctoni di Dengue con 70 casi confermati",
+   "risk_score": 65,
+   "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+   "date": "2026-01",
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
+   }
+  },
+  {
+   "id": "iss_evt_west_nile_INDAGA_SU",
+   "source": "iss",
+   "target": "evt_west_nile",
+   "type": "INDAGA_SU",
+   "fact": "ISS coordina sorveglianza dell'epidemia di West Nile Virus con 770 casi e 61 decessi",
+   "risk_score": 78,
+   "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+   "date": "2026-01",
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
+   }
+  },
+  {
+   "id": "iss_evt_chikungunya_INDAGA_SU",
+   "source": "iss",
+   "target": "evt_chikungunya",
+   "type": "INDAGA_SU",
+   "fact": "ISS coordina sorveglianza del caso autoctono confermato di Chikungunya",
+   "risk_score": 45,
+   "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+   "date": "2026-01",
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
+   }
+  },
+  {
+   "id": "evt_dengue_italian_health_system_RISCHIO_PER",
+   "source": "evt_dengue",
+   "target": "italian_health_system",
+   "type": "RISCHIO_PER",
+   "fact": "5 focolai autoctoni di Dengue rappresentano rischio per il sistema sanitario nazionale",
+   "risk_score": 72,
+   "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+   "date": "2026-10",
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
+   }
+  },
+  {
+   "id": "evt_west_nile_italian_health_system_RISCHIO_PER",
+   "source": "evt_west_nile",
+   "target": "italian_health_system",
+   "type": "RISCHIO_PER",
+   "fact": "Epidemia WNV attiva con 770 casi confermati, 61 decessi e form neuroinvasive critiche",
+   "risk_score": 88,
+   "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+   "date": "2026-10",
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
+   }
+  },
+  {
+   "id": "evt_west_nile_blood_donation_system_RISCHIO_PER",
+   "source": "evt_west_nile",
+   "target": "blood_donation_system",
+   "type": "RISCHIO_PER",
+   "fact": "96 casi asintomatici di WNV rilevati in donatori di sangue comportano rischio trasmissione",
+   "risk_score": 74,
+   "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+   "date": "2026-10",
+   "created_at": "2026-10-18T19:24:58.566871",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
+   }
   }
  ],
  "alerts": [
