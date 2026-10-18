@@ -10,7 +10,8 @@ AI_TEXTS_PER_REFRESH = 5
 AI_WHO_MAX = 3
 # Atti di routine della Gazzetta (autorizzazioni dei singoli medicinali): solo come segnalazioni
 ROUTINE_IT = ("modifica dell autorizzazione", "classificazione ai sensi", "decadenza", "rettifica",
-              "aggiornamento sezione", "liste di trasparenza", "diario di bordo")
+              "aggiornamento sezione", "liste di trasparenza", "diario di bordo", "contrattazione integrativa",
+              "atti di concessione", "tipologie di procedimenti", "modalita di accesso ai servizi online")
 
 
 class Scheduler:
@@ -206,9 +207,17 @@ class Scheduler:
         recalls.sort(key=lambda r: r["date"] or "", reverse=True)
         if not recalls:
             recalls = previous.get("recalls", [])
+        # Atti della Gazzetta: al massimo 5 e non di routine, per lasciare spazio a comunicati e notizie
+        useful = [i for i in data.get("italy", [])
+                  if not any(r in normalize.norm(i.get("title", "") + " " + i.get("summary", "")) for r in ROUTINE_IT)]
+        gu = [i for i in useful if i.get("source") == "Gazzetta Ufficiale"][:5]
+        other = [i for i in useful if i.get("source") != "Gazzetta Ufficiale"]
+        picked = sorted(gu + other, key=lambda i: i.get("published") or "", reverse=True)[:20]
+        # Stato di RespiVirNet sempre visibile, anche se l'ultimo rapporto è vecchio
+        picked += [i for i in other if i.get("source") == "ISS – RespiVirNet" and i not in picked]
         italy = [{"title": i["title"], "date": i.get("published"), "url": i["url"], "source": i.get("source"),
                   "summary": (i.get("summary") or "")[:280]}
-                 for i in data.get("italy", [])[:20]] or previous.get("italy", [])
+                 for i in picked] or previous.get("italy", [])
         return {"generated_at": datetime.utcnow().isoformat(), "who": who, "recalls": recalls[:12], "italy": italy}
 
     @staticmethod
