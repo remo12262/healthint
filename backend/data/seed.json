@@ -1,24 +1,24 @@
 {
  "version": 1,
- "exported_at": "2026-10-18T19:25:38.273508",
- "data_updated_at": "2026-10-18T19:25:38.062427",
+ "exported_at": "2026-10-19T10:43:00.867490",
+ "data_updated_at": "2026-10-19T10:43:00.579492",
  "refresh_info": {
-  "last_success": "2026-10-18T19:25:38.062427",
+  "last_success": "2026-10-19T10:43:00.579492",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 12,
-   "edges": 24,
-   "alerts": 0
+   "nodes": 0,
+   "edges": 0,
+   "alerts": 5
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-10-07",
    "who_outbreaks": "2026-10-15",
-   "italy": "2026-10-17"
+   "italy": "2026-10-19"
   },
   "counts": {
    "openfda_drug": 40,
@@ -27,11 +27,11 @@
    "italy": 46
   },
   "source_errors": {},
-  "alerts_error": "risposta troncata (max_tokens)",
-  "alerts_attempt": "2026-10-18T19:25:38.062427"
+  "alerts_error": null,
+  "alerts_attempt": "2026-10-19T10:43:00.579492"
  },
  "signals": {
-  "generated_at": "2026-10-18T19:24:58.620358",
+  "generated_at": "2026-10-19T10:42:26.172245",
   "who": [
    {
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
@@ -198,6 +198,20 @@
   ],
   "italy": [
    {
+    "title": "Spesa farmaceutica gennaio-marzo 2026: monitoraggio AIFA",
+    "date": "2026-10-19",
+    "url": "https://www.aifa.gov.it/-/spesa-farmaceutica-gennaio-marzo-2026-monitoraggio-aifa",
+    "source": "AIFA – Notizie",
+    "summary": "Nel primo trimestre del 2026 la spesa farmaceutica pubblica complessiva (convenzionata, acquisti diretti e ossigeno) ammonta a 6.775,6 milioni di euro, registrando un’incidenza sul FSN (valore provvisorio 2026 comunicato dal MdS con nota prot. n. 12829 del 27 luglio 2026) pari al"
+   },
+   {
+    "title": "Salute, cambiamenti climatici e nuove sfide ambientali, fino al 10 dicembre disponibili i corsi Fad SABiC dell'Iss",
+    "date": "2026-10-19",
+    "url": "https://www.iss.it/-/salute-cambiamenti-climatici-e-nuove-sfide-ambientali-fino-al-10-dicembre-disponibili-i-corsi-fad-sabic-dell-iss",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Le ripercussioni dei cambiamenti climatici sulla salute umana e sugli ecosistemi, sono sempre più evidenti. Per approfondire il legame tra temperature in aumento, eventi estremi e altre sfide ambientali e salute umana, e acquisire strumenti utili a contrastarne gli impatti, sono "
+   },
+   {
     "title": "MINISTERO DELLA SALUTE - COMUNICATO",
     "date": "2026-10-17",
     "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/17/26A05456/SG",
@@ -275,13 +289,6 @@
     "summary": "Un passo avanti nel processo di trasformazione digitale della sanità pubblica, che rende il patrimonio informativo dell'AIFA sui medicinali più facilmente accessibile."
    },
    {
-    "title": "Bollettino 179 fase 3",
-    "date": "2026-10-12",
-    "url": "https://www.iss.it/-/bollettino-179-fase-3",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Impatto • Al 7/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (349 ricoverati), stabile rispetto alla settimana precedente (0,5% al 30/09/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (13 ricoverati), rispe"
-   },
-   {
     "title": "AIFA a Genova. Il 16 ottobre confronto sul valore dell’innovazione farmaceutica",
     "date": "2026-10-01",
     "url": "https://www.aifa.gov.it/-/aifa-a-genova.-il-16-ottobre-confronto-sul-valore-dell-innovazione-farmaceutica",
@@ -331,13 +338,6 @@
     "summary": "Dal 07 agosto 2026 è aperta la consultazione pubblica sul “Documento di Indirizzo per lo sviluppo e la gestione della Teleradiologia”, predisposto da un Gruppo di Lavoro istituito presso Agenas con delibera direttoriale n. 245 del 10 maggio 2024."
    },
    {
-    "title": "Agenas pubblica le Linee di indirizzo sulle équipe multiprofessionali nelle Case della Comunità",
-    "date": "2026-07-28",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2795-agenas-pubblica-le-linee-di-indirizzo-sulle-%C3%A9quipe-multiprofessionali-nelle-case-della-comunit%C3%A0",
-    "source": "AGENAS – Notizie",
-    "summary": "Agenas pubblica le Linee di indirizzo tecniche \"Le équipe multiprofessionali e multidisciplinari nelle Case della Comunità\" , il documento che traduce in indicazioni operative uno dei requisiti cardine previsti dal Decreto ministeriale 77 del 2022 per l'organizzazione dell'assist"
-   },
-   {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
     "date": "2026-03-06",
     "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
@@ -367,7 +367,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T19:24:50.902765",
+   "updated_at": "2026-10-19T10:42:25.999077",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -379,7 +379,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T19:24:50.902765",
+   "updated_at": "2026-10-19T10:42:25.999077",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -391,7 +391,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -451,7 +451,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T19:24:50.902765",
+   "updated_at": "2026-10-19T10:42:25.999077",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -463,7 +463,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T19:24:50.902765",
+   "updated_at": "2026-10-19T10:42:25.999077",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -475,7 +475,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T19:24:50.902765",
+   "updated_at": "2026-10-19T10:42:25.999077",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -487,7 +487,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -502,7 +502,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -514,7 +514,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3215-2026 di classe II del 30/09/2026"
   },
   {
@@ -676,7 +676,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-18T19:24:50.902765",
+   "updated_at": "2026-10-19T10:42:25.999077",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -1299,7 +1299,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1311,7 +1311,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1323,7 +1323,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1335,7 +1335,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1347,7 +1347,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1359,7 +1359,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1371,7 +1371,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-18T19:24:50.936799",
+   "updated_at": "2026-10-19T10:42:26.025839",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -6723,73 +6723,73 @@
  ],
  "alerts": [
   {
-   "id": "alert_bundibugyo_international_spread",
-   "title": "Epidemia Ebola Bundibugyo in RDC - Rischio di importazione in Italia",
-   "description": "Focolaio attivo di virus Ebola Bundibugyo in RDC con 6757-8728 casi confermati e 3267-4205 morti (CFR 48.1-48.3%) distribuiti su 61-64 zone sanitarie in 6 province. WHO ha dichiarato emergenza sanitaria pubblica di rilevanza internazionale il 18 agosto 2026. Trasmissione sostenuta in strutture sanitarie.",
+   "id": "alert_ebola_bundibugyo_international_spread",
+   "title": "Epidemia Ebola Bundibugyo RDC – Rischio di diffusione internazionale",
+   "description": "Focolaio epidemico di Ebola causato da virus Bundibugyo in Repubblica Democratica del Congo con 5794 casi confermati e 2786 decessi (CFR 48.1%) distribuiti in 60 zone sanitarie e 6 province (Nord Kivu, Sud Kivu, Ituri, Haut-Uélé, Bas-Uélé, Tshopo). Dichiarato il 18 agosto 2026 come emergenza sanitaria pubblica di rilevanza internazionale dal Comitato di Emergenza OMS.",
    "severity": "CRITICAL",
-   "entities_involved": "[\"evt_ebola_cd\", \"prov_cd_nord_kivu\", \"prov_cd_ituri\", \"country_cd\"]",
-   "predicted_impact": "Se il virus fosse importato: grave sovraccarico dei reparti di malattie infettive, necessità di isolamento rigoroso, alto tasso di mortalità tra i casi, rischio di trasmissione nosocomiale se non correttamente identificato, impatto psicologico e mediatico significativo.",
+   "entities_involved": "[\"evt_ebola_cd\", \"country_cd\", \"who_emergency_committee\", \"prov_cd_nord_kivu\", \"prov_cd_ituri\", \"prov_cd_sud_kivu\"]",
+   "predicted_impact": "In caso di importazione: i laboratori di virologia di riferimento (Istituto Spallanzani Roma, INMI) dovrebbero essere preparati per test diagnostici; reparti di malattie infettive e terapia intensiva dovrebbero attuare protocolli di isolamento per pazienti con febbre e storia di viaggio; operatori sanitari esposti avrebbero necessità di sorveglianza sintomatologica per 21 giorni.",
    "italy_relevance": "MEDIA",
-   "italy_impact": "Sebbene il rischio diretto di casi in Italia sia attualmente basso, il SSN deve prepararsi a: (1) Sorveglianza rafforzata ai punti di ingresso (aeroporti, stazioni) per passeggeri da RDC, con screening febbrile e indagini epidemiologiche; (2) Rientro di cooperanti, operatori sanitari e diplomatici dalla RDC - verificare sintomi e contatti nei 21 giorni successivi; (3) Identificazione di ospedali di riferimento con reparti di isolamento per malattie infettive ad alta contenzione e laboratori dotati di biosicurezza livello 4; (4) Aggiornamento protocolli diagnostici e PPE nelle strutture sanitarie; (5) Comunicazione con viaggiatori in partenza dalla RDC.",
-   "timeframe": "Monitoraggio continuo nei prossimi 6-12 mesi; massima allerta se si registrasse espansione verso aree con maggior mobilità internazionale",
-   "recommendation": "Emettere circolare urgente alle regioni con indicazioni su: (1) Attivazione sorveglianza attiva ai confini; (2) Preparazione reparti di isolamento Livello 4; (3) Formazione staff su precauzioni Ebola; (4) Definizione procedure diagnostiche rapid (PCR real-time); (5) Coordinamento con Protezione Civile e Ministero Esteri per soggetti in rientro da RDC; (6) Stock adeguato di PPE (livello 4) presso ospedali hub nazionali.",
-   "created_at": "2026-10-18T09:32:26.803564",
+   "italy_impact": "Sebbene non siano stati segnalati casi in Italia, il rischio di importazione esiste attraverso: (1) viaggiatori da RDC verso aeroporti italiani (Milano Malpensa, Fiumicino Roma, Bergamo) – il virus ha CFR 48.1% e periodo di incubazione fino a 21 giorni; (2) operatori sanitari e cooperanti italiani che rientrano dalle zone colpite (Nord Kivu, Sud Kivu, Ituri); (3) personale diplomatico e ONG italiane attive in RDC. Il rischio attuale per l'Italia è BASSO ma richiede preparazione dei punti di ingresso e dei laboratori di riferimento.",
+   "timeframe": "3-6 mesi",
+   "recommendation": "Il Ministero della Salute e l'INMI dovrebbero: (1) attivare sorveglianza rafforzata presso aeroporti internazionali italiani per sintomi compatibili con Ebola in viaggiatori da RDC; (2) preparare reparti di isolamento presso ospedali di riferimento secondo protocolli OMS; (3) informare e formare il personale dei Pronto Soccorso sull'identificazione precoce di casi sospetti; (4) coordinare con ECDC e OMS per aggiornamenti epidemiologici; (5) garantire disponibilità di DPI e dispositivi di protezione respiratoria (FFP3) presso strutture di riferimento; (6) testare piani di risposta a epidemie di alto impatto.",
+   "created_at": "2026-10-19T10:43:00.579258",
    "is_read": false
   },
   {
-   "id": "alert_draeger_class_i_recall",
-   "title": "[Class I] Richiamo Draeger Z-3252-2026 - Rischio critico per dispositivi respiratori",
-   "description": "Distributore Draeger Inc ha richiamato in data 7 ottobre 2026 dispositivi medici Classe I con difetto potenziale: crepe nei tubi di insufflazione che possono provocare perdite o distacco del tubo con conseguente interruzione della terapia respiratoria.",
+   "id": "alert_draeger_hose_crack_class_i",
+   "title": "Richiamo Classe I – Draeger: Crepe in tubi con rischio di perdita",
+   "description": "Richiamo di Classe I distribuito in Italia il 7 ottobre 2026 per dispositivo Draeger Inc. Z-3252-2026. Problema: crepe potenziali in tubi che potrebbero causare perdita di fluido o distacco del tubo.",
    "severity": "CRITICAL",
    "entities_involved": "[\"draeger_inc\"]",
-   "predicted_impact": "Potenziale decesso per ipossemia se il tubo si stacca durante ventilazione; necessità di ispezione immediata di tutti i dispositivi in uso; possibile paralisi di reparti ICU se la non conformità è diffusa; evento sentinella con elevato potenziale di danno.",
+   "predicted_impact": "Pazienti sottoposti a ventilazione meccanica, anestesia generale o supporto respiratorio potrebbero subire perdita improvvisa di pressione positiva o del circuito anestesiologico, con rischio di ipossia, arresto cardiaco o morte se non rilevato e gestito tempestivamente.",
    "italy_relevance": "ALTA",
-   "italy_impact": "Il richiamo Classe I interessa equipaggiamento distribuito in Italia (tubi di insufflazione respiratoria, possibilmente ventilatori Draeger o accessori correlati). Strutture italiane interessate: (1) Reparti di Terapia Intensiva (tutti gli ospedali); (2) Reparti di anestesia; (3) Unità di Rianimazione; (4) Servizi di emergenza-urgenza; (5) Ospedali con funzioni di hub per il COVID-19. Pazienti a rischio: quelli in ventilazione meccanica invasiva o non invasiva. Rischio concreto di disconnessione durante ventilazione con ipossiemia acuta e necessità di rianimazione manuale d'emergenza.",
-   "timeframe": "Azione immediata entro 48-72 ore",
-   "recommendation": "Emettere allerta urgente a: (1) Assessorati Sanità regionali; (2) Direttori di Anestesia/Rianimazione; (3) Ingegneria Clinica ospedaliera; (4) Farmacie ospedaliere. Azioni richieste: - Identificare tutti i lotti Draeger Z-3252-2026 in uso; - Ispezionare visivamente ogni tubo per crepe prima di ogni utilizzo; - Verificare integrità connessioni; - Segnalare eventuali episodi di distacco al fabbricante e alle autorità (AIFA/Vigilanza); - Contattare Draeger per procedure di sostituzione/rimborso; - Implementare controllo qualità giornaliero fino a risoluzione; - Formare staff su verifica visiva preliminare.",
-   "created_at": "2026-10-18T09:32:26.803564",
+   "italy_impact": "Il richiamo è stato distribuito in Italia. I tubi Draeger sono utilizzati in strutture critiche (reparti di anestesia, terapia intensiva, sale operatorie). L'ingegneria clinica e le farmacie ospedaliere di tutti gli ospedali italiani che utilizzano apparecchiature Draeger devono verificare se dispongono del lotto Z-3252-2026 e controllare ogni tubo per crepe visibili. Una perdita di fluido potrebbe compromettere la ventilazione o l'anestesia durante un intervento chirurgico o il supporto critico.",
+   "timeframe": "Immediato",
+   "recommendation": "Tutte le Aziende Ospedaliere e Strutture Sanitarie italiane devono: (1) contattare immediatamente i loro fornitori Draeger per identificare presenza del lotto Z-3252-2026; (2) verificare fisicamente ogni tubo interessato per crepe prima dell'uso; (3) segregare e non utilizzare dispositivi del lotto affetto fino a verifica/sostituzione; (4) notificare a Ministero della Salute e AIFA se identificati; (5) informare anestesisti, intensivisti e infermieri di sala operatoria della situazione; (6) implementare ispezione visiva pre-uso su tutti i tubi Draeger fino a comunicazione di conclusione richiamo.",
+   "created_at": "2026-10-19T10:43:00.579258",
    "is_read": false
   },
   {
-   "id": "alert_ge_medical_monitoring_systems",
-   "title": "[Class II] Richiamo GE Medical Systems Z-3036/3037/3038/3039-2026 - Perdita monitoraggio paziente",
-   "description": "GE Medical Systems Information Technologies ha richiamato in data 2 settembre 2026 quattro lotti di software per sistemi di monitoraggio centrale (Hub e Central Viewer, riferimenti Z-3036, 3037, 3038, 3039). Difetto: problema software che può causare perdita della visualizzazione del monitoraggio paziente su Hub e Central Viewer, con disattivazione degli allarmi.",
-   "severity": "CRITICAL",
+   "id": "alert_ge_monitoring_software_class_ii",
+   "title": "Richiamo Classe II – GE Medical: Perdita di monitoraggio paziente in Hub/Viewer",
+   "description": "Richiami di Classe II distribuiti in Italia il 2 settembre 2026 per più versioni software di GE Medical Systems Information Technology (Z-3036-2026, Z-3037-2026, Z-3038-2026, Z-3039-2026). Problema: difetto software può causare perdita di monitoraggio paziente su Hub e Central Viewer, con perdita di impostazioni allarmi.",
+   "severity": "HIGH",
    "entities_involved": "[\"ge_medical_systems_information_t\"]",
-   "predicted_impact": "Potenziale mancata diagnosi di eventi critici; delay nell'intervento per complicanze; aumento della mortalità se non rilevati prontamente eventi avversi; necessità di monitoraggio manuale compensatorio; disruption organizzativa dei reparti; possibili eventi avversi gravi.",
+   "predicted_impact": "Pazienti in Terapia Intensiva, monitorati centralmente, potrebbero subire complicazioni cardiovascolari o respiratorie non rilevate per periodi prolungati durante il difetto software. Ritardo nella rilevazione di eventi critici aumenta morbilità e mortalità.",
    "italy_relevance": "ALTA",
-   "italy_impact": "I sistemi GE di monitoraggio centralizzato sono ampiamente distribuiti negli ospedali italiani. Strutture interessate: (1) Reparti ICU/Terapia Intensiva; (2) Unità Coronarica; (3) Pronto Soccorso; (4) Sale Operatorie; (5) Ospedali Hub regionali. Pazienti a rischio: quelli critici con monitoraggio centralizzato remoto (frequenza cardiaca, pressione, saturazione O2, ECG). Rischio concreto: cecità informativa del team medico rispetto allo stato clinico del paziente, mancata rilevazione di aritmie, crisi ipertensive, desaturazione, con ritardi nella risposta clinica.",
-   "timeframe": "Azione entro 1-2 settimane; patch software urgente o workaround",
-   "recommendation": "Allerta immediata a: (1) Assessorati Sanità e Direzioni Aziendali Sanitarie; (2) Responsabili Ingegneria Clinica; (3) Direttori ICU/Anestesia. Azioni: - Identificare tutti i sistemi GE Hub/Central Viewer interessati nei reparti critici; - Verificare versione software installata (verificare se rientra nei 4 lotti richiamati); - Contattare GE per patch urgente o update; - Implementare compensazione con monitoraggio al letto del paziente fino a risoluzione; - Formare staff su alert manuali locali; - Effettuare test di rollback/patch in ambiente controllato prima di deployment; - Documentare tutti i pazienti e i tempi di vulnerabilità del sistema; - Segnalare eventuali mancate diagnosi al fabbricante e alle autorità; - Considerare switch a sistemi alternativi se patch non disponibile rapidamente.",
-   "created_at": "2026-10-18T09:32:26.803564",
+   "italy_impact": "I sistemi GE di monitoraggio centrale sono ampiamente distribuiti in ospedali italiani, soprattutto in Unità di Terapia Intensiva, reparti di cardiologia e area critica. L'ingegneria clinica deve verificare se i propri sistemi di monitoraggio Hub e Central Viewer dispongono dei software versioni affette (Z-3036, Z-3037, Z-3038, Z-3039). Una perdita di monitoraggio paziente in tempo reale impedisce ai clinici di rilevare alterazioni critiche (arritmie, desaturazione, ipotensione) fino al ripristino.",
+   "timeframe": "Immediato (aprile-luglio 2026, ma richiamo distribuito a settembre)",
+   "recommendation": "Tutte le strutture sanitarie italiane con sistemi GE di monitoraggio centrale devono: (1) contattare GE Medical per identificare versioni software installate; (2) verificare se i sistemi Hub e Central Viewer dispongono di versioni Z-3036/3037/3038/3039; (3) implementare immediatamente patch software fornite da GE se disponibili; (4) fino alla correzione, intensificare monitoraggio manuale e bedside nei reparti critici; (5) informare medici e infermieri di UTI della situazione e della necessità di vigilanza aumentata; (6) testare funzionalità Hub e Viewer dopo patch; (7) segnalare a AIFA se identificati problemi durante la correzione.",
+   "created_at": "2026-10-19T10:43:00.579258",
    "is_read": false
   },
   {
-   "id": "alert_bd_infusion_sets_class_i",
-   "title": "[Class I] Richiamo BD Switzerland SARL Z-3080-2026 - Discrepanze set infusione",
-   "description": "BD Switzerland SARL ha richiamato in data 23 settembre 2026 set infusione (Classe I) per discrepanze negli attributi di performance documentati. Il richiamo indica che le caratteristiche di performance del set non corrispondono ai dati dichiarati, con potenziale inappropriatezza della somministrazione.",
+   "id": "alert_bd_infusion_sets_performance_data_class_i",
+   "title": "Richiamo Classe I – BD: Discrepanze dati prestazioni in infusion sets",
+   "description": "Richiamo di Classe I distribuito in Italia il 23 settembre 2026 per BD Switzerland SARL Z-3080-2026. Problema: discrepanze in attributi specifici nei dati di prestazione per infusion sets che potrebbero portare a uso inappropriato.",
    "severity": "HIGH",
    "entities_involved": "[\"bd_switzerland_sarl\"]",
-   "predicted_impact": "Somministrazione inappropriata di farmaci critici (oncologici, sedativi); danni tissutali da extravasazione; occlusione del catetere; necessità di reinserimento; allungamento degenze; danno potenziale al paziente con farmaci ad alto rischio.",
+   "predicted_impact": "Pazienti ricoverati che ricevano infusioni endovenose potrebbero subire complicanze locali (flebite, infiltrazione) o sistemiche (embolia, overdose di farmaco) se i dati di prestazione degli infusion sets non rispecchiano le caratteristiche reali del dispositivo.",
    "italy_relevance": "ALTA",
-   "italy_impact": "Set infusione BD sono distribuiti capillarmente in tutte le strutture sanitarie italiane. Coinvolti: (1) Reparti di medicina interna; (2) Oncologia (terapie infusive); (3) Pediatria; (4) Emergenza-Urgenza; (5) Terapia Intensiva; (6) Farmacie ospedaliere e ospedaliere; (7) Strutture territoriali. Pazienti a rischio: chiunque riceva terapia infusiva endovenosa (farmaci chemioterapici, antibiotici, emotrasfusioni, nutrizione parenterale, fluidi). Rischio concreto: somministrazione con velocità o pressione non idonea; occlusion; extravasazione; embolismo; incompatibilità farmaco-dispositivo non prevista.",
-   "timeframe": "Azione entro 1 settimana; identificazione e quarantena stock",
-   "recommendation": "Comunicazione urgente a: (1) Farmacie ospedaliere; (2) Ingegneria Clinica; (3) Reparti di somministrazione terapie. Azioni: - Identificare numero lotto e serie set BD Z-3080-2026 in magazzino; - Quarantena immediata dei set interessati; - Contattare BD per sostituzione; - Verificare liste pazienti che hanno ricevuto set da lotti compromessi (controllare cartelle cliniche per complicanze infusive non spiegate); - Segnalare qualsiasi evento avverso all'AIFA/Vigilanza; - Implementare controllo qualità pre-utilizzo su tutti i set BD fino a chiarimento; - Formare staff su identificazione lotti e procedure di sostituzione; - Considerare switch temporaneo a fornitori alternativi per set infusione se stock compromesso.",
-   "created_at": "2026-10-18T09:32:26.803564",
+   "italy_impact": "Gli infusion sets BD sono utilizzati massiccialmente in ospedali italiani per infusioni endovenose di farmaci, nutrizione parenterale e fluidi. La farmacia ospedaliera deve verificare se è in possesso di lotti Z-3080-2026 e se sono stati distribuiti ai reparti. L'uso inappropriato di infusion sets dovuto a dati di prestazione errati potrebbe causare: infiltrazione, flebite, embolizzazione accidentale, o infusione non controllata di farmaci critici.",
+   "timeframe": "Immediato",
+   "recommendation": "Tutte le Aziende Ospedaliere italiane devono: (1) contattare distributore BD per identificare se è stato ricevuto lotto Z-3080-2026; (2) la farmacia ospedaliera deve verificare giacenze e localizzazione esatta; (3) segregare lotto Z-3080-2026 e non distribuire ai reparti fino a sostituzione; (4) notificare a AIFA; (5) informare i reparti di infusionistica (oncologia, rianimazione, medicina interna) del richiamo; (6) sostituire con lotti corretti quanto prima; (7) verificare nei pazienti che hanno ricevuto infusion sets del lotto interessato se presentano complicanze infusionali.",
+   "created_at": "2026-10-19T10:43:00.579258",
    "is_read": false
   },
   {
-   "id": "alert_amgen_stability_data",
-   "title": "[Class II] Richiamo Amgen Inc D-0285/0286-2025 - Dati stabilità insufficienti",
-   "description": "Amgen Inc ha richiamato in data 26 marzo 2025 due lotti di farmaci (Classe II) per cui i dati di stabilità non supportano la data di scadenza dichiarata. I prodotti hanno il potenziale di risultare non conformi alle specifiche prima della scadenza indicata.",
+   "id": "alert_drc_healthcare_transmission_preparedness",
+   "title": "Trasmissione ospedaliera sostenuta Ebola RDC – Preparazione strutture Italia",
+   "description": "La relazione OMS evidenzia trasmissione sostenuta e intensa del virus Bundibugyo in strutture sanitarie della RDC a causa di ritardi nel rilevamento precoce dei casi e accesso limitato a cure adeguate. 61 zone sanitarie in 6 province sono coinvolte con CFR 48.3%.",
    "severity": "HIGH",
-   "entities_involved": "[\"amgen_inc\"]",
-   "predicted_impact": "Fallimento terapeutico con progressione di neoplasie, emopatie, malattie infiammatorie; necessità di switch terapeutico d'emergenza; danno clinico per pazienti già fragili; possibili ricoveri d'emergenza; contenzioso medico-legale.",
+   "entities_involved": "[\"evt_ebola_cd\", \"healthcare_settings_drc\", \"country_cd\"]",
+   "predicted_impact": "Operatori sanitari italiani in RDC esposti a virus Bundibugyo potrebbero sviluppare malattia durante la missione o dopo il rientro (periodo incubazione fino a 21 giorni). Caso di operatore infetto importato in Italia comporterebbe isolamento ospedaliero e necessità di tracciamento dei contatti stretti nel contesto aeroportuale e ospedaliero.",
    "italy_relevance": "MEDIA",
-   "italy_impact": "Farmaci Amgen interessati potrebbero includere biologici (fattori di crescita ematopoietici, oncologici, reumatologici, cardiovascolari) distribuiti in Italia. Strutture coinvolte: (1) Farmacie ospedaliere oncologia; (2) Reparti di ematologia; (3) Reparti di reumatologia; (4) Reparti di cardiologia; (5) Strutture territoriali (farmacie convenzionate). Pazienti a rischio: oncologici, ematologici, affetti da patologie immunomediate, cardiovasculari in terapia con biologici Amgen. Rischio: perdita di efficacia farmacologica del farmaco se somministrato dopo scadenza apparente; sotto-dosaggio biologico; fallimento terapeutico; progressione di malattia.",
-   "timeframe": "Azione entro 2-3 settimane; identificazione lotti",
-   "recommendation": "Allerta a: (1) Farmacie ospedaliere (soprattutto oncologia/ematologia); (2) Reparti clinici prescrittori; (3) Farmacie territoriali convenzionate. Azioni: - Identificare lotti Amgen D-0285-2025 e D-0286-2025 in magazzino e in uso; - Quarantena immediata; - Contattare Amgen per sostituzione e rimborso; - Verificare pazienti che hanno ricevuto dosi da lotti interessati negli ultimi 6 mesi (controllare efficacia clinica, risposte biologiche); - Effettuare controlli di efficacia farmacologica se paziente continua in terapia (markers biologici, imaging); - Segnalare eventuali fallimenti terapeutici inspiegati all'AIFA; - Implementare sistema di tracciabilità lotto-paziente per monitoraggio; - Riprogrammare pazienti con progressione di malattia; - Formare staff sulla verifica data scadenza e della stabilità prima della somministrazione.",
-   "created_at": "2026-10-18T09:32:26.803564",
+   "italy_impact": "Sebbene il rischio diretto per l'Italia sia basso, gli operatori sanitari italiani (medici, infermieri, epidemiologi) che operano in RDC in progetti ONG/OMS hanno rischio occupazionale elevato di esposizione nosocomiale al virus. Il tasso di trasmissione ospedaliera testimonia insufficienti misure di prevenzione e controllo delle infezioni. Operatori esposti che rientrano in Italia richiedono sorveglianza sanitaria rigorosa. Il rischio per il SSN aumenterebbe se un operatore italiano venisse importato infetto.",
+   "timeframe": "3-6 mesi",
+   "recommendation": "Il Ministero della Salute, INMI, e strutture con progetti ONG/OMS in RDC devono: (1) contattare operatori italiani in RDC per informarli di rischio trasmissione ospedaliera e raccomandare DPI rigorosi (FFP3, protezione oculare, guanti, grembiuli impermeabili); (2) implementare screening sintomatologico giornaliero per operatori esposti; (3) preparare protocollo di rientro per operatori: test diagnostico pre-rientro se esposti nelle 3 settimane precedenti, sorveglianza 21 giorni post-rientro; (4) verificare con strutture della RDC adeguatezza misure di prevenzione nosocomiale e offrire supporto; (5) informare Pronto Soccorso di ospedali dove lavorano operatori al rientro; (6) garantire accesso rapido a test Ebola presso laboratori di riferimento per operatori con febbre entro 21 giorni dal rientro.",
+   "created_at": "2026-10-19T10:43:00.579258",
    "is_read": false
   }
  ]
