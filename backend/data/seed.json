@@ -1,37 +1,37 @@
 {
  "version": 1,
- "exported_at": "2026-10-20T10:00:10.445095",
- "data_updated_at": "2026-10-20T10:00:10.299599",
+ "exported_at": "2026-10-20T20:34:06.959626",
+ "data_updated_at": "2026-10-20T20:34:06.569363",
  "refresh_info": {
-  "last_success": "2026-10-20T10:00:10.299599",
+  "last_success": "2026-10-20T20:34:06.569363",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 0,
-   "edges": 0,
-   "alerts": 5
+   "nodes": 1,
+   "edges": 1,
+   "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-10-07",
    "who_outbreaks": "2026-10-15",
-   "italy": "2026-10-19"
+   "italy": "2026-10-20"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 41
+   "italy": 49
   },
   "source_errors": {},
-  "alerts_error": null,
-  "alerts_attempt": "2026-10-20T10:00:10.299599"
+  "alerts_error": "risposta troncata (max_tokens)",
+  "alerts_attempt": "2026-10-20T20:34:06.569363"
  },
  "signals": {
-  "generated_at": "2026-10-20T09:59:29.752606",
+  "generated_at": "2026-10-20T20:33:24.541622",
   "who": [
    {
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
@@ -198,18 +198,39 @@
   ],
   "italy": [
    {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-19",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/19/26A05435/SG",
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-20",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05472/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Cerazette». (26A05435)"
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Imfinzi». (Determina n. 46/2026). (26A05472)"
    },
    {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-19",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/19/26A05436/SG",
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-20",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05473/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Cialis». (26A05436)"
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Keytruda». (Determina n. 47/2026). (26A05473)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-20",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05474/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Libtayo». (Determina n. 48/2026). (26A05474)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-20",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05475/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Opdivo». (Determina n. 49/2026). (26A05475)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-20",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05476/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Tecentriq». (Determina n. 50/2026). (26A05476)"
    },
    {
     "title": "Carvykti® (ciltacabtagene autoleucel). Disponibile il report tecnico-scientifico",
@@ -293,7 +314,7 @@
     "date": "2026-10-14",
     "url": "https://www.iss.it/-/babyfriendly26",
     "source": "ISS – Comunicati stampa",
-    "summary": "Il 14 e 15 ottobre delegazioni da tutto il mondo insieme a rappresentanti dell'Organizzazione Mondiale della Sanità e dell'UNICEF, per fare il punto sull'attuazione della Baby-friendly Initiative negli ospedali, nelle unità neonatali e nei servizi di comunità. L’allattamento escl"
+    "summary": "Edited 14/10/2026 Il 14 e 15 ottobre delegazioni da tutto il mondo insieme a rappresentanti dell'Organizzazione Mondiale della Sanità e dell'UNICEF, per fare il punto sull'attuazione della Baby-friendly Initiative negli ospedali, nelle unità neonatali e nei servizi di comunità. L"
    },
    {
     "title": "AIFA nella Piattaforma Digitale Nazionale Dati",
@@ -317,27 +338,6 @@
     "summary": "A Roma i lavori del Committee for Orphan Medicinal Products (COMP) dell’EMA. Al centro del confronto ricerca, regolamentazione e accesso alle terapie per le malattie rare."
    },
    {
-    "title": "Via libera dal CdA di AIFA alla rimborsabilità di 2 nuovi medicinali orfani e 7 estensioni di indicazione terapeutica",
-    "date": "2026-09-24",
-    "url": "https://www.aifa.gov.it/-/via-libera-dal-cda-di-aifa-alla-rimborsabilita-di-2-nuovi-medicinali",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "Tra i medicinali che saranno rimborsati anche due farmaci orfani per il trattamento dei neurofibromi plessiformi nella neurofibromatosi di tipo 1 e del cancro delle vie biliari."
-   },
-   {
-    "title": "Sanità Territoriale e Telemedicina: pubblicate le linee di indirizzo Agenas per l’erogazione dei servizi nelle farmacie convenzionate",
-    "date": "2026-09-10",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2801-sanit%C3%A0-territoriale-e-telemedicina-pubblicate-le-linee-di-indirizzo-agenas-per-l%E2%80%99erogazione-dei-servizi-nelle-farmacie-convenzionate",
-    "source": "AGENAS – Notizie",
-    "summary": "AGENAS ha pubblicato in consultazione le “Linee di indirizzo per l'erogazione di servizi di telemedicina nelle farmacie convenzionate” ."
-   },
-   {
-    "title": "Protocollo d’Intesa AGENAS–Università di Udine per promuovere l’umanizzazione delle cure",
-    "date": "2026-09-08",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2800-protocollo-d%E2%80%99intesa-agenas%E2%80%93universit%C3%A0-di-udine-per-promuovere-l%E2%80%99umanizzazione-delle-cure",
-    "source": "AGENAS – Notizie",
-    "summary": "Agenas e l’Università di Udine hanno sottoscritto un Protocollo d’Intesa triennale per rafforzare la collaborazione scientifica, formativa e istituzionale sul tema dell’umanizzazione delle cure e della centralità della persona nei sistemi sanitari."
-   },
-   {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
     "date": "2026-03-06",
     "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
@@ -355,7 +355,8 @@
   "2026-DON620",
   "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
   "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-  "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile"
+  "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05423/SG"
  ],
  "nodes": [
   {
@@ -367,7 +368,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-20T09:59:29.516342",
+   "updated_at": "2026-10-20T20:33:21.452297",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -379,7 +380,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-20T09:59:29.516342",
+   "updated_at": "2026-10-20T20:33:21.452297",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -391,7 +392,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -451,7 +452,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-20T09:59:29.516342",
+   "updated_at": "2026-10-20T20:33:21.452297",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -463,7 +464,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-20T09:59:29.516342",
+   "updated_at": "2026-10-20T20:33:21.452297",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -475,7 +476,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-20T09:59:29.516342",
+   "updated_at": "2026-10-20T20:33:21.452297",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -487,7 +488,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -502,7 +503,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -514,7 +515,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: Heidelberg Engineering GmbH  Product Name: SPECTRALIS with Flex Module  Model/Catalog Number: S3610, S2610, ",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3215-2026 di classe II del 30/09/2026"
   },
   {
@@ -676,7 +677,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-20T09:59:29.516342",
+   "updated_at": "2026-10-20T20:33:21.452297",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -757,11 +758,14 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-18T19:24:58.559516",
+   "updated_at": "2026-10-20T20:33:24.426410",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
-   "italy": true
+   "italy": true,
+   "aliases": [
+    "Agenzia Italiana del Farmaco"
+   ]
   },
   {
    "id": "ema",
@@ -1299,7 +1303,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1311,7 +1315,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1323,7 +1327,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1335,7 +1339,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1347,7 +1351,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1359,7 +1363,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1371,7 +1375,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-20T09:59:29.543632",
+   "updated_at": "2026-10-20T20:33:21.462422",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2215,6 +2219,18 @@
    "risk_score": 68,
    "created_at": "2026-10-18T19:24:58.559516",
    "updated_at": "2026-10-18T19:24:58.559516",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "cinacalcet_doc",
+   "label": "Cinacalcet DOC",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano - formulazione generica di Cinacalcet",
+   "risk_score": 15,
+   "created_at": "2026-10-20T20:33:24.426410",
+   "updated_at": "2026-10-20T20:33:24.426410",
    "risk_basis": "Stima dell'AI dalle fonti italiane"
   }
  ],
@@ -6718,6 +6734,20 @@
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
+   }
+  },
+  {
+   "id": "aifa_cinacalcet_doc_REGOLA",
+   "source": "aifa",
+   "target": "cinacalcet_doc",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio del medicinale Cinacalcet DOC",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05423/SG",
+   "date": null,
+   "created_at": "2026-10-20T20:33:24.435846",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05423/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
    }
   }
  ],
