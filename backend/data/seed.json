@@ -1,18 +1,18 @@
 {
  "version": 1,
- "exported_at": "2026-10-21T10:05:23.132292",
- "data_updated_at": "2026-10-21T10:05:23.000988",
+ "exported_at": "2026-10-21T20:36:42.252751",
+ "data_updated_at": "2026-10-21T20:36:42.010023",
  "refresh_info": {
-  "last_success": "2026-10-21T10:05:23.000988",
+  "last_success": "2026-10-21T20:36:42.010023",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 2,
-   "edges": 2,
-   "alerts": 5
+   "nodes": 6,
+   "edges": 7,
+   "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
@@ -24,14 +24,14 @@
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 49
+   "italy": 50
   },
   "source_errors": {},
-  "alerts_error": null,
-  "alerts_attempt": "2026-10-21T10:05:23.000988"
+  "alerts_error": "risposta troncata (max_tokens)",
+  "alerts_attempt": "2026-10-21T20:36:42.010023"
  },
  "signals": {
-  "generated_at": "2026-10-21T10:04:47.474474",
+  "generated_at": "2026-10-21T20:36:03.156571",
   "who": [
    {
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
@@ -198,60 +198,88 @@
   ],
   "italy": [
    {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05495/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Cometriq». (Determina n. 52/2026). (26A05495)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05496/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Farydak». (Determina n. 53/2026). (26A05496)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05497/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Raxone». (Determina n. 54/2026). (26A05497)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05498/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Xalkori». (Determina n. 55/2026). (26A05498)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
+    "date": "2026-10-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05499/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Zydelig». (Determina n. 56/2026). (26A05499)"
+   },
+   {
+    "title": "Aggiornamento Registro di monitoraggio YERVOY NSCLC",
+    "date": "2026-10-21",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-yervoy-nsclc",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, è stato aggiornato il Registro di Monitoraggio di YERVOY (ipilimumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
+   },
+   {
+    "title": "Aggiornamento Registro di monitoraggio TECENTRIQ NSCLC",
+    "date": "2026-10-21",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-tecentriq-nsclc",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, è stato aggiornato il Registro di Monitoraggio di TECENTRIQ (atezolizumab) dedicato al monitoraggio di due specifiche indicazioni terapeutiche."
+   },
+   {
+    "title": "Aggiornamento Registro di monitoraggio OPDIVO NSCLC",
+    "date": "2026-10-21",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-opdivo-nsclc",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, è stato aggiornato il Registro di Monitoraggio di OPDIVO (nivolumab) dedicato al monitoraggio di due specifiche indicazioni terapeutiche."
+   },
+   {
+    "title": "Aggiornamento Registri di monitoraggio LIBTAYO NSCLC",
+    "date": "2026-10-21",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registri-di-monitoraggio-libtayo-nsclc",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, sono stati aggiornati i Registri di Monitoraggio di LIBTAYO (cemiplimab) dedicati al monitoraggio di due specifiche indicazioni terapeutiche."
+   },
+   {
+    "title": "Aggiornamento Registro di monitoraggio KEYTRUDA NSCLC",
+    "date": "2026-10-21",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-keytruda-nsclc",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, è stato aggiornato il Registro di Monitoraggio di KEYTRUDA (pembrolizumab) dedicato al monitoraggio di quattro specifiche indicazioni terapeutiche."
+   },
+   {
+    "title": "Aggiornamento Registro di monitoraggio IMFINZI NSCLC",
+    "date": "2026-10-21",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-imfinzi-nsclc",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, è stato aggiornato il Registro di Monitoraggio di IMFINZI (durvalumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
+   },
+   {
     "title": "Notifica dei provvedimenti - Ufficio Ispezioni e Autorizzazioni GMP Medicinali",
     "date": "2026-10-21",
     "url": "https://www.aifa.gov.it/-/notifica-dei-provvedimenti-ufficio-ispezioni-e-autorizzazioni-gmp-medicinali-123",
     "source": "AIFA – Notizie",
     "summary": "Modalità di notifica dei documenti prodotti dall’Ufficio Ispezioni e Autorizzazioni GMP Medicinali (prodotti in formato cartaceo e prodotti in formato elettronico e firmati digitalmente)."
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
-    "date": "2026-10-20",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05472/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Imfinzi». (Determina n. 46/2026). (26A05472)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
-    "date": "2026-10-20",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05473/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Keytruda». (Determina n. 47/2026). (26A05473)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
-    "date": "2026-10-20",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05474/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Libtayo». (Determina n. 48/2026). (26A05474)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
-    "date": "2026-10-20",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05475/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Opdivo». (Determina n. 49/2026). (26A05475)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 6 ottobre 2026",
-    "date": "2026-10-20",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05476/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Modifica delle condizioni e modalita' di monitoraggio nell'ambito dei registri AIFA del medicinale per uso umano «Tecentriq». (Determina n. 50/2026). (26A05476)"
-   },
-   {
-    "title": "Carvykti® (ciltacabtagene autoleucel). Disponibile il report tecnico-scientifico",
-    "date": "2026-10-19",
-    "url": "https://www.aifa.gov.it/-/carvykti-ciltacabtagene-autoleucel-disponibile-report-tecnico-scientifico",
-    "source": "AIFA – Notizie",
-    "summary": "L’Agenzia Italiana del Farmaco rende disponibile un report tecnico-scientifico sul medicinale Carvykti® (ciltacabtagene autoleucel)."
-   },
-   {
-    "title": "Spesa farmaceutica gennaio-marzo 2026: monitoraggio AIFA",
-    "date": "2026-10-19",
-    "url": "https://www.aifa.gov.it/-/spesa-farmaceutica-gennaio-marzo-2026-monitoraggio-aifa",
-    "source": "AIFA – Notizie",
-    "summary": "Nel primo trimestre del 2026 la spesa farmaceutica pubblica complessiva (convenzionata, acquisti diretti e ossigeno) ammonta a 6.775,6 milioni di euro, registrando un’incidenza sul FSN (valore provvisorio 2026 comunicato dal MdS con nota prot. n. 12829 del 27 luglio 2026) pari al"
    },
    {
     "title": "Salute, cambiamenti climatici e nuove sfide ambientali, fino al 10 dicembre disponibili i corsi Fad SABiC dell'Iss",
@@ -310,34 +338,6 @@
     "summary": "In Italia il 43% degli adulti e il 54% degli over 65 è in eccesso ponderale (è quindi o sovrappeso o obeso), un dato sostanzialmente stabile per entrambe le fasce d’età e che vede le regioni del Sud con prevalenze più alte. Lo affermano i dati relativi al biennio 2024-2025 delle "
    },
    {
-    "title": "Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile",
-    "date": "2026-10-15",
-    "url": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Dal 1 gennaio al 13 ottobre 2026 al sistema di sorveglianza nazionale coordinata dall’ISS risultano - 357 casi confermati di Dengue: 70 di questi sono autoctoni mentre tutti gli altri casi sono associati a viaggi all’estero (52% con luogo di esposizione Maldive), nessun decesso. "
-   },
-   {
-    "title": "Nel mondo meno di metà delle bambine e dei bambini allattato in modo esclusivo, esperti di 33 paesi a confronto su ospedali e comunità ‘Baby-Friendly’",
-    "date": "2026-10-14",
-    "url": "https://www.iss.it/-/babyfriendly26",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Il 14 e 15 ottobre delegazioni da tutto il mondo insieme a rappresentanti dell'Organizzazione Mondiale della Sanità e dell'UNICEF, per fare il punto sull'attuazione della Baby-friendly Initiative negli ospedali, nelle unità neonatali e nei servizi di comunità. L’allattamento escl"
-   },
-   {
-    "title": "AIFA nella Piattaforma Digitale Nazionale Dati",
-    "date": "2026-10-13",
-    "url": "https://www.aifa.gov.it/-/aifa-nella-piattaforma-digitale-nazionale-dati",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "Un passo avanti nel processo di trasformazione digitale della sanità pubblica, che rende il patrimonio informativo dell'AIFA sui medicinali più facilmente accessibile."
-   },
-   {
-    "title": "AIFA a Genova. Il 16 ottobre confronto sul valore dell’innovazione farmaceutica",
-    "date": "2026-10-01",
-    "url": "https://www.aifa.gov.it/-/aifa-a-genova.-il-16-ottobre-confronto-sul-valore-dell-innovazione-farmaceutica",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "L’incontro “Misurare il valore dell’innovazione - Dalla valutazione del farmaco agli esiti di salute”, promosso dall’Agenzia Italiana del Farmaco venerdì 16 ottobre, a partire dalle 9.30, nella Sala del Maggior Consiglio di Palazzo Ducale a Genova."
-   },
-   {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
     "date": "2026-03-06",
     "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
@@ -356,7 +356,11 @@
   "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
   "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
   "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
-  "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05423/SG"
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/20/26A05423/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05437/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05438/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG"
  ],
  "nodes": [
   {
@@ -368,7 +372,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-21T10:04:47.235183",
+   "updated_at": "2026-10-21T20:35:58.192619",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -380,7 +384,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-21T10:04:47.235183",
+   "updated_at": "2026-10-21T20:35:58.192619",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -392,7 +396,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -452,7 +456,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-21T10:04:47.235183",
+   "updated_at": "2026-10-21T20:35:58.192619",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -464,7 +468,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-21T10:04:47.235183",
+   "updated_at": "2026-10-21T20:35:58.192619",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -476,7 +480,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-21T10:04:47.235183",
+   "updated_at": "2026-10-21T20:35:58.192619",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -488,7 +492,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -503,7 +507,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -677,7 +681,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-21T10:04:47.235183",
+   "updated_at": "2026-10-21T20:35:58.192619",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -758,7 +762,7 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-20T20:33:24.426410",
+   "updated_at": "2026-10-21T20:36:03.052084",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -1303,7 +1307,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1315,7 +1319,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1327,7 +1331,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1339,7 +1343,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1351,7 +1355,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1363,7 +1367,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1375,7 +1379,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2242,7 +2246,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-0078-2027 di classe II del 14/10/2026"
   },
   {
@@ -2254,8 +2258,80 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-21T10:04:47.273882",
+   "updated_at": "2026-10-21T20:35:58.209436",
    "risk_basis": "Richiamo FDA Z-0082-2027 di classe II del 14/10/2026"
+  },
+  {
+   "id": "lacrilube_med",
+   "label": "Lacrilube",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano, soggetto a revoca dell'autorizzazione all'immissione in commercio",
+   "risk_score": 15,
+   "created_at": "2026-10-21T20:36:03.052084",
+   "updated_at": "2026-10-21T20:36:03.052084",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "carbamazepina_zentiva",
+   "label": "Carbamazepina Zentiva",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano - anticonvulsivante a base di carbamazepina",
+   "risk_score": 15,
+   "created_at": "2026-10-21T20:36:03.052084",
+   "updated_at": "2026-10-21T20:36:03.052084",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "zentiva",
+   "label": "Zentiva",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Titolare dell'autorizzazione all'immissione in commercio del medicinale Carbamazepina Zentiva",
+   "risk_score": 20,
+   "created_at": "2026-10-21T20:36:03.052084",
+   "updated_at": "2026-10-21T20:36:03.052084",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "zentiva_italia",
+   "label": "Zentiva Italia",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "IT",
+   "description": "Azienda farmaceutica produttrice di Paracetamolo Zentiva Italia",
+   "risk_score": 15,
+   "created_at": "2026-10-21T20:36:03.052084",
+   "updated_at": "2026-10-21T20:36:03.052084",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "paracetamolo_zentiva",
+   "label": "Paracetamolo Zentiva Italia",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "IT",
+   "description": "Medicinale per uso umano - autorizzazione revocata su rinuncia",
+   "risk_score": 20,
+   "created_at": "2026-10-21T20:36:03.052084",
+   "updated_at": "2026-10-21T20:36:03.052084",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "zentiva_generics",
+   "label": "Zentiva Generics",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "EU",
+   "description": "Azienda farmaceutica produttrice di farmaci generici",
+   "risk_score": 15,
+   "created_at": "2026-10-21T20:36:03.052084",
+   "updated_at": "2026-10-21T20:36:03.052084",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
   }
  ],
  "edges": [
@@ -6795,6 +6871,109 @@
    "source_doc": "Z-0082-2027",
    "date": "2026-10-14",
    "created_at": "2026-10-21T10:04:47.302741"
+  },
+  {
+   "id": "aifa_lacrilube_med_REGOLA",
+   "source": "aifa",
+   "target": "lacrilube_med",
+   "type": "REGOLA",
+   "fact": "AIFA revoca, su rinuncia, l'autorizzazione all'immissione in commercio del medicinale Lacrilube",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05437/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05437/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_carbamazepina_zentiva_REGOLA",
+   "source": "aifa",
+   "target": "carbamazepina_zentiva",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio del medicinale Carbamazepina Zentiva",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05438/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05438/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "zentiva_carbamazepina_zentiva_FORNISCE",
+   "source": "zentiva",
+   "target": "carbamazepina_zentiva",
+   "type": "FORNISCE",
+   "fact": "Zentiva è titolare dell'autorizzazione per il medicinale Carbamazepina Zentiva che viene revocato su rinuncia",
+   "risk_score": 30,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05438/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05438/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_paracetamolo_zentiva_REGOLA",
+   "source": "aifa",
+   "target": "paracetamolo_zentiva",
+   "type": "REGOLA",
+   "fact": "AIFA revoca l'autorizzazione all'immissione in commercio del medicinale su rinuncia del produttore",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   },
+   "source_docs": [
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG"
+   ]
+  },
+  {
+   "id": "zentiva_italia_paracetamolo_zentiva_FORNISCE",
+   "source": "zentiva_italia",
+   "target": "paracetamolo_zentiva",
+   "type": "FORNISCE",
+   "fact": "Zentiva Italia produce e distribuisce Paracetamolo Zentiva Italia - autorizzazione revocata",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "zentiva_generics_paracetamolo_zentiva_FORNISCE",
+   "source": "zentiva_generics",
+   "target": "paracetamolo_zentiva",
+   "type": "FORNISCE",
+   "fact": "Zentiva Generics è titolare dell'autorizzazione al commercio del medicinale Paracetamolo Zentiva Generics",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_zentiva_generics_CONTROLLA",
+   "source": "aifa",
+   "target": "zentiva_generics",
+   "type": "CONTROLLA",
+   "fact": "AIFA esercita controllo regolatorio sui medicinali prodotti da Zentiva Generics",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
   }
  ],
  "alerts": [
