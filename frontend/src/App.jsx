@@ -95,10 +95,12 @@ const SSN_STRUCTURE = "Struttura istituzionale del SSN"
 // rispondono all'emergenza, non la subiscono, quindi restano nel grafo ma non nella classifica
 const RESPONDER_TYPES = new Set(["RegulatorAgency"])
 
-// Rischio non calcolato: valore assegnato a mano o ente del nucleo fisso senza stima
+// Origine del punteggio: solo la formula FDA e la stima dell'AI producono un rischio.
+// Tutto il resto (valore assegnato a mano, ente del nucleo fisso, origine mancante o sconosciuta)
+// è "rischio non calcolato": resta nel grafo ma non entra mai in classifica
 function riskNotComputed(n) {
   const basis = n?.risk_basis || ""
-  return basis === "Valore assegnato manualmente" || basis.startsWith("Ente del nucleo")
+  return !basis.startsWith("Richiamo FDA") && !basis.startsWith("Stima dell'AI")
 }
 
 // Motivo del punteggio in parole chiare: la stima dell'AI misura la rilevanza rispetto all'evento
