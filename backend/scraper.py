@@ -132,6 +132,8 @@ class DataScraper:
                 "report_date": item.get("report_date", ""),
                 "status": item.get("status", ""),
                 "product_type": product_type,
+                # Record openFDA integrale, senza tagli né rielaborazioni (pannello "Record originale FDA")
+                "raw": item,
             })
         return recalls
 

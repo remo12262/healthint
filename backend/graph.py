@@ -12,6 +12,8 @@ SEED_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "se
 SEED_VERSION = 1
 CLASS_RISK = {"I": 85, "II": 55, "III": 25}
 NUCLEUS_BASIS = "Ente del nucleo fisso italiano: rischio non stimato"
+# Provenienza di un punteggio stimato dall'AI: documento, data del documento, data di assegnazione
+RISK_PROVENANCE = ("risk_doc", "risk_doc_date", "risk_assigned_at")
 # Documenti delle fonti ricordati come già analizzati (i più recenti)
 MAX_PROCESSED_DOCS = 1000
 
@@ -352,8 +354,17 @@ class GraphDB:
             node["risk_score"] = other["risk_score"]
             if other.get("risk_basis"):
                 node["risk_basis"] = other["risk_basis"]
+            # Il punteggio cambia: con lui la sua provenienza (anche assente)
+            for k in RISK_PROVENANCE:
+                if other.get(k):
+                    node[k] = other[k]
+                else:
+                    node.pop(k, None)
         if not node.get("risk_basis") and other.get("risk_basis"):
             node["risk_basis"] = other["risk_basis"]
+            for k in RISK_PROVENANCE:
+                if other.get(k) and not node.get(k):
+                    node[k] = other[k]
         if not node.get("region") and other.get("region"):
             node["region"] = other["region"]
         # La descrizione scritta a mano degli enti di base non si sostituisce
@@ -404,6 +415,9 @@ class GraphDB:
             }
             if e.get("risk_basis"):
                 incoming["risk_basis"] = e["risk_basis"]
+            for k in RISK_PROVENANCE:
+                if e.get(k):
+                    incoming[k] = e[k]
             if cid in self.nodes:
                 self._absorb(self.nodes[cid], incoming)
                 self.nodes[cid]["updated_at"] = now
@@ -435,6 +449,8 @@ class GraphDB:
         titles = {**(other.get("doc_titles") or {}), **(edge.get("doc_titles") or {})}
         if titles:
             edge["doc_titles"] = titles
+        if other.get("record"):
+            edge["record"] = other["record"]
         edge["created_at"] = min(filter(None, [edge.get("created_at"), other.get("created_at")]), default=None)
 
     async def upsert_relations(self, relations: List[Dict]):
@@ -455,6 +471,8 @@ class GraphDB:
             }
             if r.get("doc_titles"):
                 incoming["doc_titles"] = r["doc_titles"]
+            if r.get("record"):
+                incoming["record"] = r["record"]
             if rid in self.edges:
                 self._absorb_edge(self.edges[rid], incoming)
             else:

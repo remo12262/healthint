@@ -95,8 +95,13 @@ class Scheduler:
                     continue
                 result = await self.extractor.extract_batch(items, text_field="summary")
                 titles = {i["id"]: f"{i.get('source', 'OMS')} – {i['title']}" for i in items}
+                published = {i["id"]: i.get("published") for i in items}
+                assigned = datetime.utcnow().isoformat()
                 for ent in result["entities"]:
                     ent["risk_basis"] = basis
+                    # Provenienza della stima: documento, sua data di pubblicazione, data di assegnazione
+                    ent["risk_doc_date"] = published.get(ent.get("risk_doc"))
+                    ent["risk_assigned_at"] = assigned
                 for rel in result["relations"]:
                     if str(rel.get("source_doc", "")).startswith("http"):
                         rel["doc_titles"] = {rel["source_doc"]: titles.get(rel["source_doc"], "")}

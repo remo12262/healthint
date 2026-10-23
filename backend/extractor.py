@@ -191,6 +191,7 @@ class EntityExtractor:
                     "risk_score": risk_score,
                     "source_doc": recall_id,
                     "date": f"{rd[:4]}-{rd[4:6]}-{rd[6:8]}" if len(rd) == 8 else None,
+                    "record": recall.get("raw"),
                 })
 
         return {"entities": list(entities.values()), "relations": relations}
@@ -273,6 +274,8 @@ class EntityExtractor:
         for e in result.get("entities", []):
             if not e.get("id"):
                 e["id"] = self._make_slug(e.get("label", "unknown"))
+            # Documento da cui deriva la stima del punteggio
+            e["risk_doc"] = source_id
         for r in result.get("relations", []):
             r["source_doc"] = source_id
         return {"entities": result.get("entities", []), "relations": result.get("relations", [])}
@@ -297,13 +300,9 @@ class EntityExtractor:
                 errors.append(result["error"])
             for entity in result.get("entities", []):
                 eid = entity["id"]
-                if eid not in all_entities:
+                # La stessa entità in più testi: vale il punteggio più alto, con il suo documento
+                if eid not in all_entities or entity.get("risk_score", 0) > all_entities[eid].get("risk_score", 0):
                     all_entities[eid] = entity
-                else:
-                    all_entities[eid]["risk_score"] = max(
-                        all_entities[eid].get("risk_score", 0),
-                        entity.get("risk_score", 0)
-                    )
             all_relations.extend(result.get("relations", []))
 
         return {"entities": list(all_entities.values()), "relations": all_relations, "errors": errors}
