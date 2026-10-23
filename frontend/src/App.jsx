@@ -987,7 +987,7 @@ export default function App() {
           Grafo aggiornato al {updatedAt ? formatDateTime(updatedAt) : "—"}
         </span>
         {!(narrow && tab === "graph") && <span style={{fontSize:12,color:"#04342C"}}>
-          Controllo automatico delle fonti due volte al giorno: la data cambia quando entrano nuovi dati.
+          Aggiornamento solo a richiesta, con il pulsante «Aggiorna dati»: la data cambia quando entrano nuovi dati.
         </span>}
       </div>
 

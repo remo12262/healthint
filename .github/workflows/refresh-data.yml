@@ -1,10 +1,11 @@
 name: Aggiorna dati HEALTHINT
 
-# Due volte al giorno: 05:15 e 17:15 UTC (07:15 e 19:15 ora legale italiana).
+# Esecuzione automatica SOSPESA dal 23/10/2026 fino a dopo il 28/10: aggiornamento solo a clic
+# (pulsante "Aggiorna dati" o avvio a mano da GitHub, Actions > Run workflow).
+# Per riattivarla, due volte al giorno alle 05:15 e 17:15 UTC, togliere il commento alla riga "schedule".
 # Funziona anche se il servizio Render dorme: la prima richiesta lo sveglia.
 on:
-  schedule:
-    - cron: "15 5,17 * * *"
+  # schedule: [{cron: "15 5,17 * * *"}]
   workflow_dispatch:
 
 permissions:
