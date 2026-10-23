@@ -159,12 +159,14 @@ function docOrigin(doc, r, donIndex = {}) {
     return {kind: "fda", recall, date: r.date, label: `Richiamo FDA ${recall} (openFDA)`,
       url: `https://api.fda.gov/${kind}/enforcement.json?search=recall_number:%22${encodeURIComponent(recall)}%22`}
   }
-  // Notizie OMS: id "2026-DON599" oppure, per le più vecchie, il nome della pagina
+  // Notizie OMS: id "2026-DON599" oppure, per le più vecchie, il nome della pagina.
+  // Il link è solo l'URL salvato nelle segnalazioni: un indirizzo ricostruito dal codice può portare
+  // a un'altra notizia (2026-DON618 viene reindirizzato a 2026-DON621), quindi senza URL salvato niente link
   if (/^\d{4}-DON\d+$/.test(doc) || /^[a-z0-9]+(-[a-z0-9]+){3,}$/.test(doc)) {
     const don = donIndex[doc]
     return {kind: "who", doc, date: don?.date || r.date, published: !!don?.date,
       label: don?.title ? `OMS – ${don.title}` : `OMS – Disease Outbreak News ${doc}`,
-      url: `https://www.who.int/emergencies/disease-outbreak-news/item/${doc}`}
+      url: don?.url || null}
   }
   if (/^https?:\/\//.test(doc)) {
     const title = r.doc_titles?.[doc]
@@ -200,7 +202,7 @@ function nodeOrigin(node, relations, donIndex) {
   const seen = new Map()
   relations.forEach(r => relationSources(r, donIndex).forEach(o => {
     const ok = kind === "fda" ? o.kind === "fda" && r.source === node.id : (o.kind === "who" || o.kind === "web") && r.type !== "COMUNICA_SU"
-    if (ok && !seen.has(o.url)) seen.set(o.url, o)
+    if (ok && !seen.has(o.url || o.label)) seen.set(o.url || o.label, o)
   }))
   const sources = [...seen.values()].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")))
   return {kind, sources: [...site, ...sources]}
@@ -210,8 +212,10 @@ function SourceLinks({sources, structure}) {
   if (!sources.length && structure) return <span>{structure}</span>
   if (!sources.length) return <span style={{color:"#A32D2D",fontWeight:500}}>{NO_SOURCE}</span>
   return sources.map(s => (
-    <div key={s.url} style={{marginTop:2}}>
-      <a href={s.url} target="_blank" rel="noopener noreferrer" style={{color:"#0F6E56"}}>{s.label}</a>
+    <div key={s.url || s.label} style={{marginTop:2}}>
+      {s.kind === "who" || s.kind === "web"
+        ? <>{s.label}{s.url && <> · <a href={s.url} target="_blank" rel="noopener noreferrer" style={{color:"#0F6E56"}}>Fonte originale</a></>}</>
+        : <a href={s.url} target="_blank" rel="noopener noreferrer" style={{color:"#0F6E56"}}>{s.label}</a>}
       {s.date && <span> · {s.kind === "fda" ? "richiamo del " : s.published ? "pubblicato il " : "data: "}{formatDay(s.date)}</span>}
     </div>
   ))
@@ -328,8 +332,8 @@ export default function App() {
   })).sort((a, b) => (b.risk_score || 0) - (a.risk_score || 0))
   // Quante informazioni del grafo hanno una fonte con link
   const coverage = (() => {
-    const nodesWith = nodes.filter(n => nodeOrigin(n, relationsOf(n.id), donIndex).sources.length > 0).length
-    const edgesWith = edges.filter(e => relationOrigin(e, donIndex).kind !== "manual").length
+    const nodesWith = nodes.filter(n => nodeOrigin(n, relationsOf(n.id), donIndex).sources.some(s => s.url)).length
+    const edgesWith = edges.filter(e => relationSources(e, donIndex).some(s => s.url)).length
     return {nodesWith, edgesWith}
   })()
   const presentTypes = new Set(nodes.map(n => n.type))
@@ -867,6 +871,8 @@ export default function App() {
       <div style={{background:"var(--color-background-primary)",borderBottom:"0.5px solid var(--color-border-tertiary)",padding:"12px 20px",display:"flex",alignItems:"center",gap:16,flexWrap:"wrap"}}>
         <div style={{display:"flex",alignItems:"center",gap:8}}>
           <div style={{width:8,height:8,borderRadius:"50%",background:"#1D9E75"}}/>
+          <a href="https://healthhorizon.it" style={{fontSize:13,color:"var(--color-text-secondary)",textDecoration:"none"}}>HealthHorizon</a>
+          <span style={{fontSize:13,color:"var(--color-text-tertiary)"}}>·</span>
           <span style={{fontWeight:500,fontSize:16}}>HEALTHINT</span>
           <span style={{fontSize:12,color:"var(--color-text-tertiary)",background:"var(--color-background-secondary)",padding:"2px 8px",borderRadius:4}}>Health System Intelligence Graph</span>
         </div>
@@ -1142,7 +1148,7 @@ export default function App() {
                 <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:"3px solid #1D9E75",borderRadius:8,padding:"8px 14px",marginBottom:6,fontSize:13,lineHeight:1.45}}>
                   <a href={o.url} target="_blank" rel="noopener noreferrer" style={{color:"var(--color-text-primary)",textDecoration:"none",fontWeight:500}}>{o.title}</a>
                   {o.source === "Gazzetta Ufficiale" && o.summary && <div style={{color:"var(--color-text-secondary)"}}>{o.summary}</div>}
-                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{o.source}{o.date && ` · ${formatDay(o.date)}`}</div>
+                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{o.source}{o.date && ` · ${formatDay(o.date)}`}{o.url && <> · <a href={o.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>Fonte originale</a></>}</div>
                 </div>
               ))}
             </div>
@@ -1156,7 +1162,7 @@ export default function App() {
               {signals.who.map((o,i) => (
                 <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:"3px solid #378ADD",borderRadius:8,padding:"8px 14px",marginBottom:6,fontSize:13}}>
                   <a href={o.url} target="_blank" rel="noopener noreferrer" style={{color:"var(--color-text-primary)",textDecoration:"none",fontWeight:500}}>{o.title}</a>
-                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>Pubblicato dall'OMS il {formatDay(o.date)}</div>
+                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>Pubblicato dall'OMS il {formatDay(o.date)}{o.url && <> · <a href={o.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit"}}>Fonte originale</a></>}</div>
                 </div>
               ))}
             </div>
