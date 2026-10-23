@@ -1,18 +1,19 @@
 {
  "version": 1,
- "exported_at": "2026-10-23T10:01:01.108726",
- "data_updated_at": "2026-10-23T10:01:00.929977",
+ "exported_at": "2026-10-23T17:07:40.906260",
+ "data_updated_at": "2026-10-23T17:07:40.657041",
  "refresh_info": {
-  "last_success": "2026-10-23T10:01:00.929977",
+  "last_success": "2026-10-23T17:07:40.657041",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "italy"
+   "italy",
+   "who_outbreaks"
   ],
   "new": {
-   "nodes": 0,
-   "edges": 0,
-   "alerts": 0
+   "nodes": 10,
+   "edges": 12,
+   "alerts": 6
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
@@ -26,14 +27,12 @@
    "who_outbreaks": 20,
    "italy": 46
   },
-  "source_errors": {
-   "who_outbreaks_analysis": "analisi AI non riuscita: risposta troncata (max_tokens)"
-  },
-  "alerts_error": "risposta troncata (max_tokens)",
-  "alerts_attempt": "2026-10-23T10:01:00.929977"
+  "source_errors": {},
+  "alerts_error": null,
+  "alerts_attempt": "2026-10-23T17:07:40.657041"
  },
  "signals": {
-  "generated_at": "2026-10-23T10:00:20.941132",
+  "generated_at": "2026-10-23T17:07:17.956280",
   "who": [
    {
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
@@ -200,6 +199,41 @@
   ],
   "italy": [
    {
+    "title": "Esiti runione Commissione Scientifica e Economica del Farmaco (CSE)",
+    "date": "2026-10-23",
+    "url": "https://www.aifa.gov.it/-/esiti-cse",
+    "source": "AIFA – Notizie",
+    "summary": "L'Agenzia Italiana del Farmaco rende disponibile gli esiti dei lavori della riunione della Commissione Scientifica e Economica (CSE) del 12-16 ottobre 2026."
+   },
+   {
+    "title": "World Polio Day: l'eradicazione è a portata di mano, no a passi indietro",
+    "date": "2026-10-23",
+    "url": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+    "source": "ISS – Comunicati stampa",
+    "summary": "\"L'eradicazione della poliomielite è a portata di mano\". Lo ricordano gli esperti della Global Polio Eradication Initiative (GPEI) in occasione del World Polio Day, che si celebra ogni anno il 24 ottobre. I successi della vaccinazione, ricorda il sito dedicato alla giornata, sono"
+   },
+   {
+    "title": "HPV: un contest SITI per il miglior progetto per la diffusione della vaccinazione",
+    "date": "2026-10-23",
+    "url": "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Un contest lanciato dalla SITI. la Società Italiana di Igiene, Medicina Preventiva e Sanità Pubblica, cercherà il progetto più innovativo per aumentare la diffusione della vaccinazione contro l'HPV tra i più giovani. L'iniziativa, che si inserisce tra le attività previste da 'Tra"
+   },
+   {
+    "title": "Bollettino 181 fase 3",
+    "date": "2026-10-23",
+    "url": "https://www.iss.it/-/bollettino-181-fase-3",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Impatto • Al 21/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (373 ricoverati), stabile rispetto alla settimana precedente (0,6% al 14/10/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (12 ricoverati), risp"
+   },
+   {
+    "title": "Una vita dietro ogni azione: JACARDI mette le persone al centro della prevenzione delle malattie cardiovascolari e del diabete",
+    "date": "2026-10-23",
+    "url": "https://www.iss.it/-/una-vita-dietro-ogni-azione-jacardi-mette-le-persone-al-centro-della-prevenzione-delle-malattie-cardiovascolari-e-del-diabete",
+    "source": "ISS – Comunicati stampa",
+    "summary": "In occasione della sua quarta Assemblea generale a Poznań, JACARDI, Joint Action europea coordinata dall’Istituto Superiore di Sanità (ISS), ha offerto un’occasione per condividere le esperienze delle persone e i risultati dei progetti pilota, favorendo momenti di confronto con d"
+   },
+   {
     "title": "MINISTERO DELLA SALUTE - DECRETO 17 settembre 2026",
     "date": "2026-10-22",
     "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/22/26A05532/SG",
@@ -235,6 +269,13 @@
     "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Enterogermina» (26A05519)"
    },
    {
+    "title": "Chiusura Registro di monitoraggio XALKORI",
+    "date": "2026-10-22",
+    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
+   },
+   {
     "title": "Chiusura Registro di monitoraggio COMETRIQ",
     "date": "2026-10-22",
     "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-cometriq",
@@ -256,39 +297,11 @@
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro FARYDAK per una specifica indicazione terapeutica."
    },
    {
-    "title": "Aggiornamento Registro di monitoraggio HETRONIFLY",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-hetronifly",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di Monitoraggio di HETRONIFLY (serplulimab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Chiusura Registro di monitoraggio XALKORI",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
-   },
-   {
     "title": "Chiusura Registro di monitoraggio RAXONE",
     "date": "2026-10-22",
     "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-raxone",
     "source": "AIFA – Notizie",
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro RAXONE per una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Esito avviso per il conferimento del posto di funzione dirigenziale di livello non generale di direzione di struttura complessa (Ufficio valutazioni cliniche)",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/esito-avviso-conferimento-posto-funzione-dirigenziale-livello-non-generale-direzione-struttura-complessa-ufficio-valutazioni-cliniche",
-    "source": "AIFA – Notizie",
-    "summary": "Con riferimento all’avviso di interpello per il conferimento del posto di funzione dirigenziale di livello non generale di direzione dell’Ufficio Valutazioni cliniche, si informa che è in corso la procedura di conferimento del relativo incarico dirigenziale alla dott.ssa Elisabet"
-   },
-   {
-    "title": "Esito avviso per il conferimento del posto di funzione dirigenziale di livello non generale di direzione di struttura complessa (Ufficio valutazioni economiche)",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/esito-avviso-per-il-conferimento-del-posto-di-funzione-dirigenziale-di-livello-non-generale-di-direzione-di-struttura-complessa-ufficio-valutazioni-economiche-",
-    "source": "AIFA – Notizie",
-    "summary": "Esito avviso per il conferimento del posto di funzione dirigenziale di livello non generale di direzione di struttura complessa (Ufficio valutazioni economiche)"
    },
    {
     "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
@@ -302,7 +315,7 @@
     "date": "2026-10-22",
     "url": "https://www.iss.it/-/antimicrobico-resistenza-anche-l-iss-tra-i-vincitori-del-data-challenge-di-vivli-con-un-progetto-per-sfruttare-meglio-i-dati-incompleti",
     "source": "ISS – Comunicati stampa",
-    "summary": "Edited 22/10/2026 Vivli ha annunciato i sei team vincitori della \"Vivli AMR Surveillance Data Challenge\" del 2026, premiando ricerche che utilizzano dati di sorveglianza condivisi per affrontare questioni che spaziano dalle politiche nazionali sull'antimicrobico-resistenza (AMR) "
+    "summary": "Vivli ha annunciato i sei team vincitori della \"Vivli AMR Surveillance Data Challenge\" del 2026, premiando ricerche che utilizzano dati di sorveglianza condivisi per affrontare questioni che spaziano dalle politiche nazionali sull'antimicrobico-resistenza (AMR) e la vaccinazione,"
    },
    {
     "title": "Promuovere la salute pubblica a scuola, 34 progetti Iss per la “Mappa della città educante” di Roma",
@@ -312,32 +325,18 @@
     "summary": "Dalla prevenzione agli stili di vita all’inclusione alla cittadinanza scientifica, sono 34 quest’anno le proposte dell’Iss per il progetto ‘Mappa della Città Educante’ promosso da Roma Capitale per le scuole della città, che ogni anno offre un catalogo di iniziative didattico-for"
    },
    {
-    "title": "RaraMente n. 117",
-    "date": "2026-10-22",
-    "url": "https://www.iss.it/-/raramente-n.-117",
-    "source": "ISS – Comunicati stampa",
-    "summary": "In questo numero : Giuseppe Feltrin , Direttore Generale Centro Nazionale Trapianti, Istituto Superiore di Sanità, e Silvia Deaglio , Dipartimento di Scienze Mediche, Università di Torino e SC di Immunogenetica e Biologia dei Trapianti, AOU Città della Salute e della Scienza di T"
+    "title": "AIFA a Genova: il valore dell’innovazione farmaceutica al centro del confronto con le Regioni",
+    "date": "2026-10-16",
+    "url": "https://www.aifa.gov.it/-/aifa-genova-valore-innovazione-farmaceutica-al-centro-confronto-con-regioni",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "Si è svolto a Genova, presso il Palazzo Ducale, il convegno “Misurare il valore dell’innovazione - Dalla valutazione del farmaco agli esiti di salute”, organizzato dall'Agenzia Italiana del Farmaco (AIFA) con il patrocinio della Regione Liguria."
    },
    {
-    "title": "Arbovirosi: 363 casi confermati di Dengue, 30 di Chikungunya, 777 di West Nile",
-    "date": "2026-10-22",
-    "url": "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Dal 1 gennaio al 20 ottobre 2026 al sistema di sorveglianza nazionale coordinata dall’ISS risultano - 363 casi confermati di Dengue: 73 di questi sono autoctoni mentre tutti gli altri casi sono associati a viaggi all’estero (51% con luogo di esposizione Maldive), nessun decesso. "
-   },
-   {
-    "title": "Screening: in Italia mammografia per il 77% delle donne, record ma con forti differenze Nord-Sud",
-    "date": "2026-10-22",
-    "url": "https://www.iss.it/-/in-italia-screening-per-il-tumore-al-seno-per-il-77-delle-donne-ma-forte-gradiente-nord-sud",
-    "source": "ISS – Comunicati stampa",
-    "summary": "In Italia il 77% delle donne fra i 50 e i 69 anni si è sottoposto a mammografia a scopo preventivo, nei tempi raccomandati, ma l'adesione alla procedura ha forti variazioni regionali, con un netto gradiente Nord-Sud. Lo affermano i dati , relativi al biennio 2024-2025, della Sorv"
-   },
-   {
-    "title": "Salute, cambiamenti climatici e nuove sfide ambientali, fino al 10 dicembre disponibili i corsi Fad SABiC dell'Iss",
-    "date": "2026-10-19",
-    "url": "https://www.iss.it/-/salute-cambiamenti-climatici-e-nuove-sfide-ambientali-fino-al-10-dicembre-disponibili-i-corsi-fad-sabic-dell-iss",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Le ripercussioni dei cambiamenti climatici sulla salute umana e sugli ecosistemi, sono sempre più evidenti. Per approfondire il legame tra temperature in aumento, eventi estremi e altre sfide ambientali e salute umana, e acquisire strumenti utili a contrastarne gli impatti, sono "
+    "title": "AGENAS pubblica le Linee di indirizzo per la telemedicina nei Punti nascita e in Neonatologia",
+    "date": "2026-10-16",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2814-agenas-pubblica-le-linee-di-indirizzo-per-la-telemedicina-nei-punti-nascita-e-in-neonatologia",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS pubblica il documento “ Linee di indirizzo organizzative per l’implementazione della telemedicina e l’ottimizzazione dell’assistenza ai casi più complessi nell’ambito della Rete dei Punti nascita e della Neonatologia ”."
    },
    {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
@@ -363,7 +362,10 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05438/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG",
-  "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile"
+  "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile",
+  "2026-DON621",
+  "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+  "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione"
  ],
  "nodes": [
   {
@@ -375,7 +377,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T10:00:05.315678",
+   "updated_at": "2026-10-23T17:06:52.842986",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -387,7 +389,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T10:00:05.315678",
+   "updated_at": "2026-10-23T17:06:52.842986",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -399,7 +401,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -459,7 +461,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T10:00:05.315678",
+   "updated_at": "2026-10-23T17:06:52.842986",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -471,7 +473,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T10:00:05.315678",
+   "updated_at": "2026-10-23T17:06:52.842986",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -483,7 +485,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T10:00:05.315678",
+   "updated_at": "2026-10-23T17:06:52.842986",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -495,7 +497,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -510,7 +512,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -684,7 +686,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T10:00:05.315678",
+   "updated_at": "2026-10-23T17:06:52.842986",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -793,10 +795,10 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "IT",
-   "description": "Istituto Superiore di Sanità. Ricerca e sorveglianza epidemiologica.",
+   "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-22T20:33:10.769539",
+   "updated_at": "2026-10-23T17:07:17.861567",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -830,7 +832,7 @@
    "description": "Agenzia internazionale che monitora e coordina la risposta alla epidemia di Ebola in Repubblica Democratica del Congo",
    "risk_score": 75,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-10-23T17:07:17.861567",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "WHO - Organizzazione Mondiale della Sanità",
@@ -848,7 +850,7 @@
    "description": "Autorità sanitaria della Repubblica Democratica del Congo responsabile della gestione dell'epidemia di Ebola Bundibugyo",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Democratic Republic of the Congo",
@@ -913,7 +915,7 @@
    "description": "Focolaio epidemico di Ebola causato da virus Bundibugyo nella Repubblica Democratica del Congo con 5794 casi confermati e 2786 decessi (CFR 48.1%) a partire dal 26 agosto 2026, diffuso in 60 zone sanitarie e 6 province",
    "risk_score": 100,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Bundibugyo Virus Outbreak",
@@ -984,7 +986,7 @@
    "description": "Provincia della Repubblica Democratica del Congo con caso confermato in Buta health zone con esordio sintomi il 4 agosto 2026",
    "risk_score": 95,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-16T19:55:52.584500",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Bas-Uélé",
@@ -1054,10 +1056,10 @@
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Repubblica Democratica del Congo",
-   "description": "Provincia della Repubblica Democratica del Congo colpita dall'epidemia di Bundibugyo virus disease",
+   "description": "Provincia della DRC con Dungu health zone affetta, confina con Sud Sudan con rischio trasmissione transfrontaliera.",
    "risk_score": 95,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Haut-Uélé",
@@ -1107,10 +1109,10 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "EU",
-   "description": "Centro europeo per la prevenzione e il controllo delle malattie, coordina risposta internazionale",
+   "description": "Agenzia europea di prevenzione e controllo malattie che monitora rischi epidemiologici transfrontalieri.",
    "risk_score": 65,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "ECDC - Centro Europeo per la Prevenzione e il Controllo delle Malattie",
@@ -1154,10 +1156,10 @@
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Repubblica Democratica del Congo",
-   "description": "Provincia nord-occidentale della DRC con nuova zona sanitaria colpita (Bulu)",
+   "description": "Provincia nord-ovest della DRC con Bulu health zone neo-interessata dall'epidemia Ebola.",
    "risk_score": 92,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Sud Ubangi Province"
@@ -1169,10 +1171,10 @@
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Sud Sudan",
-   "description": "Paese confinante con provincia Haut-Uélé, a rischio trasmissione transfrontaliera",
+   "description": "Paese confinante con Haut-Uélé, rischio di trasmissione transfrontaliera del virus Bundibugyo.",
    "risk_score": 85,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-18T09:31:52.975006",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "South Sudan"
@@ -1311,7 +1313,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1323,7 +1325,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1335,7 +1337,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1347,7 +1349,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1359,7 +1361,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1371,7 +1373,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1383,7 +1385,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2252,7 +2254,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-0078-2027 di classe II del 14/10/2026"
   },
   {
@@ -2264,7 +2266,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-23T10:00:05.357786",
+   "updated_at": "2026-10-23T17:06:52.856110",
    "risk_basis": "Richiamo FDA Z-0082-2027 di classe II del 14/10/2026"
   },
   {
@@ -2349,6 +2351,126 @@
    "risk_score": 25,
    "created_at": "2026-10-22T20:33:10.769539",
    "updated_at": "2026-10-22T20:33:10.769539",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "health_facility_network_drc",
+   "label": "Health Facility Network - DRC",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Rete ospedaliera della DRC con accesso tardivo ai pazienti e capacità diagnostica limitata nella gestione Ebola.",
+   "risk_score": 88,
+   "created_at": "2026-10-23T17:07:09.049695",
+   "updated_at": "2026-10-23T17:07:09.049695",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "ituri_north_kivu_provinces",
+   "label": "Ituri, North Kivu, South Kivu, Tshopo Provinces",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "DRC",
+   "description": "Province della DRC con zone sanitarie affette da epidemia Ebola Bundibugyo attiva.",
+   "risk_score": 92,
+   "created_at": "2026-10-23T17:07:09.049695",
+   "updated_at": "2026-10-23T17:07:09.049695",
+   "risk_basis": "Stima dell'AI dalle notizie OMS"
+  },
+  {
+   "id": "gpei",
+   "label": "Global Polio Eradication Initiative",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": null,
+   "description": "Iniziativa globale per l'eradicazione della poliomielite, coordina programmi vaccinali internazionali.",
+   "risk_score": 5,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "pakistan",
+   "label": "Pakistan",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Asia",
+   "description": "Paese dove la poliomielite rimane endemica nel 2026 con trasmissione attiva.",
+   "risk_score": 75,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "afghanistan",
+   "label": "Afghanistan",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Asia",
+   "description": "Paese dove la poliomielite rimane endemica nel 2026 con trasmissione attiva.",
+   "risk_score": 75,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "europa",
+   "label": "Europa",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "EU",
+   "description": "Continente dichiarato 'Polio free' dal 2002 grazie a programmi vaccinali.",
+   "risk_score": 5,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "operatori_sanitari",
+   "label": "Operatori Sanitari",
+   "type": "Person",
+   "domain": "health",
+   "region": null,
+   "description": "Professionisti impegnati nella distribuzione e somministrazione vaccini antipolio.",
+   "risk_score": 10,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "donatori",
+   "label": "Donatori Internazionali",
+   "type": "InsuranceBody",
+   "domain": "health",
+   "region": null,
+   "description": "Enti che finanziano programmi globali di eradicazione della poliomielite.",
+   "risk_score": 15,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "siti_org",
+   "label": "SITI - Società Italiana di Igiene, Medicina Preventiva e Sanità Pubblica",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": null,
+   "description": "Società scientifica italiana che promuove igiene e sanità pubblica, ha lanciato contest HPV per vaccinazione giovanile.",
+   "risk_score": 15,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
+   "risk_basis": "Stima dell'AI dalle fonti italiane"
+  },
+  {
+   "id": "traguardo_zero_proj",
+   "label": "Traguardo Zero",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": null,
+   "description": "Manifesto di intenti per aumentare vaccinazione HPV tra giovani, frutto collaborazione SITI-ISS.",
+   "risk_score": 20,
+   "created_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-23T17:07:17.861567",
    "risk_basis": "Stima dell'AI dalle fonti italiane"
   }
  ],
@@ -3469,7 +3591,8 @@
     "2026-DON618",
     "2026-DON619",
     "2026-DON616",
-    "2026-DON615"
+    "2026-DON615",
+    "2026-DON621"
    ]
   },
   {
@@ -3693,7 +3816,8 @@
     "2026-DON619",
     "2026-DON617",
     "2026-DON616",
-    "2026-DON618"
+    "2026-DON618",
+    "2026-DON621"
    ]
   },
   {
@@ -3761,7 +3885,8 @@
     "2026-DON618",
     "2026-DON616",
     "2026-DON615",
-    "2026-DON617"
+    "2026-DON617",
+    "2026-DON621"
    ]
   },
   {
@@ -3790,18 +3915,26 @@
    "risk_score": 94,
    "source_doc": "2026-DON618",
    "date": "2026-09",
-   "created_at": "2026-10-08T21:08:03.951824"
+   "created_at": "2026-10-08T21:08:03.951824",
+   "source_docs": [
+    "2026-DON618",
+    "2026-DON621"
+   ]
   },
   {
    "id": "prov_cd_haut_uele_country_ss_RISCHIO_PER",
    "source": "prov_cd_haut_uele",
    "target": "country_ss",
    "type": "RISCHIO_PER",
-   "fact": "Health zone Dungu in Haut-Uélé confina con Sud Sudan, rischio elevato di trasmissione transfrontaliera",
-   "risk_score": 88,
+   "fact": "Trasmissione transfrontaliera ad alto rischio tra Dungu health zone e Sud Sudan.",
+   "risk_score": 92,
    "source_doc": "2026-DON618",
    "date": "2026-09",
-   "created_at": "2026-10-08T21:08:03.951824"
+   "created_at": "2026-10-08T21:08:03.951824",
+   "source_docs": [
+    "2026-DON618",
+    "2026-DON621"
+   ]
   },
   {
    "id": "evt_ebola_cd_prov_cd_nord_kivu_RISCHIO_PER",
@@ -3985,7 +4118,8 @@
    "created_at": "2026-10-09T11:52:13.327519",
    "source_docs": [
     "2026-DON618",
-    "2026-DON617"
+    "2026-DON617",
+    "2026-DON621"
    ]
   },
   {
@@ -4259,15 +4393,16 @@
    "source": "ecdc",
    "target": "evt_ebola_cd",
    "type": "INDAGA_SU",
-   "fact": "ECDC monitora il rischio di trasmissione transfrontaliera dalla RDC verso i paesi limitrofi",
-   "risk_score": 65,
+   "fact": "ECDC monitora rischio di diffusione transfrontaliera dell'epidemia Ebola verso l'Europa.",
+   "risk_score": 68,
    "source_doc": "2026-DON616",
    "date": "2026-08",
    "created_at": "2026-10-10T20:33:53.999519",
    "source_docs": [
     "2026-DON616",
     "2026-DON618",
-    "2026-DON617"
+    "2026-DON617",
+    "2026-DON621"
    ]
   },
   {
@@ -7100,63 +7235,250 @@
    "doc_titles": {
     "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 363 casi confermati di Dengue, 30 di Chikungunya, 777 di West Nile"
    }
+  },
+  {
+   "id": "evt_ebola_cd_health_facility_network_drc_RISCHIO_PER",
+   "source": "evt_ebola_cd",
+   "target": "health_facility_network_drc",
+   "type": "RISCHIO_PER",
+   "fact": "Sistema sanitario DRC con carenze diagnostiche e ritardi nel trattamento dei casi Ebola.",
+   "risk_score": 91,
+   "source_doc": "2026-DON621",
+   "date": "2026-09",
+   "created_at": "2026-10-23T17:07:09.061486"
+  },
+  {
+   "id": "evt_ebola_cd_ituri_north_kivu_provinces_RISCHIO_PER",
+   "source": "evt_ebola_cd",
+   "target": "ituri_north_kivu_provinces",
+   "type": "RISCHIO_PER",
+   "fact": "Province Ituri, North Kivu, South Kivu e Tshopo con trasmissione comunitaria persistente.",
+   "risk_score": 94,
+   "source_doc": "2026-DON621",
+   "date": "2026-09",
+   "created_at": "2026-10-23T17:07:09.061486"
+  },
+  {
+   "id": "country_ss_ecdc_RISCHIO_PER",
+   "source": "country_ss",
+   "target": "ecdc",
+   "type": "RISCHIO_PER",
+   "fact": "Rischio epidemico transfrontaliero verso Sud Sudan e potenziale espansione globale.",
+   "risk_score": 82,
+   "source_doc": "2026-DON621",
+   "date": "2026-09",
+   "created_at": "2026-10-23T17:07:09.061486"
+  },
+  {
+   "id": "gpei_pakistan_INDAGA_SU",
+   "source": "gpei",
+   "target": "pakistan",
+   "type": "INDAGA_SU",
+   "fact": "GPEI monitora trasmissione endemica di poliovirus in Pakistan con 48 casi confermati.",
+   "risk_score": 75,
+   "source_doc": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro": "ISS – Comunicati stampa – World Polio Day: l'eradicazione è a portata di mano, no a passi indietro"
+   }
+  },
+  {
+   "id": "gpei_afghanistan_INDAGA_SU",
+   "source": "gpei",
+   "target": "afghanistan",
+   "type": "INDAGA_SU",
+   "fact": "GPEI monitora trasmissione endemica di poliovirus in Afghanistan nel 2026.",
+   "risk_score": 75,
+   "source_doc": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro": "ISS – Comunicati stampa – World Polio Day: l'eradicazione è a portata di mano, no a passi indietro"
+   }
+  },
+  {
+   "id": "who_europa_CONTROLLA",
+   "source": "who",
+   "target": "europa",
+   "type": "CONTROLLA",
+   "fact": "WHO ha certificato l'Europa come 'Polio free' dal 2002 grazie a programmi vaccinali.",
+   "risk_score": 5,
+   "source_doc": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+   "date": "2002",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro": "ISS – Comunicati stampa – World Polio Day: l'eradicazione è a portata di mano, no a passi indietro"
+   }
+  },
+  {
+   "id": "gpei_operatori_sanitari_COLLABORA_CON",
+   "source": "gpei",
+   "target": "operatori_sanitari",
+   "type": "COLLABORA_CON",
+   "fact": "GPEI collabora con operatori sanitari per distribuzione vaccini contro poliomielite.",
+   "risk_score": 10,
+   "source_doc": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro": "ISS – Comunicati stampa – World Polio Day: l'eradicazione è a portata di mano, no a passi indietro"
+   }
+  },
+  {
+   "id": "donatori_gpei_FINANZIA",
+   "source": "donatori",
+   "target": "gpei",
+   "type": "FINANZIA",
+   "fact": "Donatori finanziano programmi GPEI per eradicazione poliomielite globale.",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro": "ISS – Comunicati stampa – World Polio Day: l'eradicazione è a portata di mano, no a passi indietro"
+   }
+  },
+  {
+   "id": "pakistan_europa_RISCHIO_PER",
+   "source": "pakistan",
+   "target": "europa",
+   "type": "RISCHIO_PER",
+   "fact": "Focolaio endemico in Pakistan rappresenta rischio importazione virus in Europa.",
+   "risk_score": 65,
+   "source_doc": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro": "ISS – Comunicati stampa – World Polio Day: l'eradicazione è a portata di mano, no a passi indietro"
+   }
+  },
+  {
+   "id": "siti_org_traguardo_zero_proj_COLLABORA_CON",
+   "source": "siti_org",
+   "target": "traguardo_zero_proj",
+   "type": "COLLABORA_CON",
+   "fact": "SITI ha sviluppato il manifesto Traguardo Zero insieme all'ISS per promozione vaccinazione HPV.",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione": "ISS – Comunicati stampa – HPV: un contest SITI per il miglior progetto per la diffusione della vaccinazione"
+   }
+  },
+  {
+   "id": "iss_traguardo_zero_proj_COLLABORA_CON",
+   "source": "iss",
+   "target": "traguardo_zero_proj",
+   "type": "COLLABORA_CON",
+   "fact": "ISS collabora con SITI nel manifesto Traguardo Zero per aumentare copertura vaccinale HPV.",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione": "ISS – Comunicati stampa – HPV: un contest SITI per il miglior progetto per la diffusione della vaccinazione"
+   }
+  },
+  {
+   "id": "siti_org_iss_COLLABORA_CON",
+   "source": "siti_org",
+   "target": "iss",
+   "type": "COLLABORA_CON",
+   "fact": "SITI e ISS collaborano nella giuria paritetica per valutazione progetti contest HPV.",
+   "risk_score": 10,
+   "source_doc": "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione",
+   "date": "2026",
+   "created_at": "2026-10-23T17:07:17.871401",
+   "doc_titles": {
+    "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione": "ISS – Comunicati stampa – HPV: un contest SITI per il miglior progetto per la diffusione della vaccinazione"
+   }
   }
  ],
  "alerts": [
   {
-   "id": "alert_ebola_bundibugyo_pheic",
-   "title": "Epidemia Ebola Bundibugyo in RDC dichiarata PHEIC - Rischio importazione in Italia",
-   "description": "L'OMS ha dichiarato il 18 agosto 2026 l'epidemia di virus Bundibugyo in Repubblica Democratica del Congo come Public Health Emergency of International Concern (PHEIC). Al 18 ottobre 2026 sono confermati 5794 casi con 2786 decessi (CFR 48.1%) distribuiti in 60 zone sanitarie di 6 province (Nord Kivu, Sud Kivu, Ituri, Haut-Uélé, Bas-Uélé, Tshopo). La trasmissione è sostenuta in strutture sanitarie.",
+   "id": "alert_ebola_bundibugyo_rdc",
+   "title": "Epidemia Ebola Bundibugyo in RDC - PHEIC dichiarata",
+   "description": "Epidemia attiva di virus Bundibugyo in Repubblica Democratica del Congo con 6757 casi confermati, CFR 48,3% e espansione a 61 zone sanitarie. WHO ha dichiarato emergenza sanitaria pubblica di rilevanza internazionale il 18 agosto 2026. Trasmissione sostenuta in strutture sanitarie.",
    "severity": "CRITICAL",
-   "entities_involved": "[\"evt_ebola_cd\", \"who_emergency_committee\", \"country_cd\", \"prov_cd_nord_kivu\", \"prov_cd_ituri\", \"healthcare_settings_drc\"]",
-   "predicted_impact": "In caso di importazione di anche un singolo caso non rilevato ai punti di ingresso, il SSN dovrebbe gestire: (1) isolamento in strutture ad alta biosicurezza (disponibili presso INMI Roma e pochi altri centri); (2) tracciamento epidemiologico di contatti con capacità limitata; (3) possibile trasmissione nosocomiale se protocolli non sono rispettati; (4) pressione su laboratori di riferimento (Centro di Riferimento Nazionale per le Febbri Emorragiche) per conferma diagnostica; (5) impatto psicosociale e media-mediato panico.",
+   "entities_involved": "[\"evt_ebola_cd\", \"country_cd\", \"who_emergency_committee\", \"healthcare_settings_drc\"]",
+   "predicted_impact": "Possibile importazione di casi in Italia con ritardo diagnostico. Impatto su capacità isolamento ospedaliero, personale sanitario, disponibilità dispositivi protezione.",
    "italy_relevance": "MEDIA",
-   "italy_impact": "Benché non vi siano casi confermati in Italia, il rischio di importazione del virus è concreto attraverso: (1) operatori sanitari e cooperanti italiani che operano in RDC e rientrano in Italia; (2) cittadini italiani residenti in RDC in rientro; (3) passeggeri in transito su voli dalle aree colpite; (4) contatti di casi importati. Le vie di esposizione primarie sono i voli dai principali hub africani (Kinshasa, Goma) verso Roma Fiumicino e Milano Malpensa, con possibile trasmissione secondaria in ambienti ospedalieri se non è attuata corretta sorveglianza. Il rischio per l'Italia è BASSO ma non nullo.",
-   "timeframe": "3-12 mesi - finché l'epidemia rimane attiva in RDC",
-   "recommendation": "Il SSN e le Regioni devono: (1) potenziare la sorveglianza sindromica ai confini (aeroporti internazionali, terminal) per rilevare passeggeri con febbre da aree colpite; (2) emettere circolare nazionale a strutture ospedaliere con criteri diagnostici per febbre emorragica e procedure di isolamento precauzionale; (3) verificare operatività di reparti isolamento ad altissima biosicurezza (BSL-4) presso centri di riferimento nazionale; (4) formare team di risposta rapida presso ogni azienda sanitaria; (5) coordinare con Ministero Salute e ISS un protocollo di gestione casi sospetti/confermati; (6) comunicare ai cittadini linee guida per chi rientra dalla RDC (autoisolamento se sintomi, hotline contatti).",
-   "created_at": "2026-10-22T10:07:57.112525",
+   "italy_impact": "Rischio per l'Italia tramite: rientri di cooperanti e operatori sanitari da RDC, viaggiatori con contatti in zone colpite, flussi aeroportuali internazionali. SSN deve implementare sorveglianza ai porti di ingresso e negli hub aeroportuali. Necessaria preparazione di reparti di isolamento presso ospedali di riferimento e laboratori per test diagnostici.",
+   "timeframe": "3-12 mesi",
+   "recommendation": "Attivare protocolli di screening ai porti/aeroporti per passeggeri da RDC. Coinvolgere Lazzaretto/INMI Roma e centri di riferimento regionali. Verificare disponibilità DPI e posti isolamento. Formare personale su riconoscimento clinico. Coordinamento con Ministero Salute e ISS.",
+   "created_at": "2026-10-23T17:07:40.656813",
    "is_read": false
   },
   {
-   "id": "alert_dpc_draeger_class_i_recall",
-   "title": "[URGENTE] Richiamo Class I Draeger Z-3252-2026 - Rischio distacco tubazioni ossigeno/ventilazione",
-   "description": "La ditta Draeger ha emesso richiamo Class I (massima gravità) il 7 ottobre 2026 per modello Z-3252-2026. Problema: potenziali fessure nelle tubazioni che possono causare perdite o distacco della tubazione stessa. Distribuito in Italia.",
+   "id": "alert_ebola_healthcare_transmission",
+   "title": "Trasmissione sostenuta Ebola in strutture sanitarie RDC",
+   "description": "Focolaio attivo con trasmissione documentata in healthcare settings della RDC dovuta a ritardi nella rilevazione dei casi e accesso limitato a cure adeguate. Interessa Nord Kivu, Ituri, Sud Kivu e Bas-Uélé con rischio critico per personale sanitario.",
+   "severity": "CRITICAL",
+   "entities_involved": "[\"evt_ebola_cd\", \"healthcare_settings_drc\", \"prov_cd_nord_kivu\", \"prov_cd_ituri\"]",
+   "predicted_impact": "Contagio possibile di personale italiano in RDC con successivo rientro. Impatto su risorse di quarantena e monitoraggio presso strutture ospedaliere nazionali.",
+   "italy_relevance": "MEDIA",
+   "italy_impact": "Rischio per operatori sanitari italiani in missione in RDC e per strutture accademiche che collaborano. Possibile esposizione professionale al virus durante attività di cooperazione sanitaria. SSN deve coordinare con ONG sanitarie italiane operanti in loco.",
+   "timeframe": "2-6 mesi",
+   "recommendation": "Comunicare ai rappresentanti di ONG sanitarie italiane i protocolli di protezione richiesti. Fornire consulenza preventiva a personale italiano che si reca in RDC. Attivare sorveglianza medica al rientro. Coordinamento con Ministero Esteri e strutture competenti.",
+   "created_at": "2026-10-23T17:07:40.656813",
+   "is_read": false
+  },
+  {
+   "id": "alert_ebola_geographic_expansion",
+   "title": "Espansione epidemia Ebola a 61 zone sanitarie RDC",
+   "description": "L'epidemia di Bundibugyo virus in RDC colpisce 61 zone sanitarie con trasmissione sostenuta e espansione geografica continua. Interessate province di Nord Kivu, Ituri, Sud Kivu e Bas-Uélé con rischio critico per sistemi sanitari regionali.",
+   "severity": "HIGH",
+   "entities_involved": "[\"evt_ebola_cd\", \"country_cd\", \"prov_cd_nord_kivu\", \"drc_health_zones\"]",
+   "predicted_impact": "Bassa probabilità di importazione di casi multipli. Impatto principalmente su capacità diagnostica e isolamento presso centri di riferimento nazionali.",
+   "italy_relevance": "BASSA",
+   "italy_impact": "Espansione geografica aumenta probabilità di casi importati in Europa via hub internazionali (Bruxelles, Parigi, Addis Abeba) con potenziale coinvolgimento dell'Italia come destinazione secondaria. Rischio epidemiologico per SSN resta basso grazie a infrastrutture di sorveglianza consolidate, ma richiede attenzione.",
+   "timeframe": "6-12 mesi",
+   "recommendation": "Mantener alto livello di allerta nei DEA e reparti di malattie infettive. Coordinare con autorità aeroportuali sulla segnalazione di passeggeri febbrili provenienti da RDC. Aggiornare protocolli diagnostici differenziali. Monitorare evoluzione epidemia via canali OMS.",
+   "created_at": "2026-10-23T17:07:40.656813",
+   "is_read": false
+  },
+  {
+   "id": "draeger_hose_crack_recall",
+   "title": "Crepe in tubi Dräger: rischio perdita gas",
+   "description": "[Class I] Richiamo Dräger Inc. per potenziali crepe nei tubi che potrebbero causare perdite o distacco del tubo durante la ventilazione.",
    "severity": "CRITICAL",
    "entities_involved": "[\"draeger_inc\"]",
-   "predicted_impact": "Potenziale decesso di pazienti ventilati se la tubazione si distacca e non rilevata immediatamente. Danno grave se accade in sala operatoria durante intervento. Impatto su ospedali con utilizzo intensivo di questi sistemi (ospedali di livello III, reparti COVID ancora attivi, centri cardiochirurgici).",
+   "predicted_impact": "Perdita di gas medicali, interruzione ventilazione, potenziale danno grave o fatale per pazienti critici in ventilazione assistita.",
    "italy_relevance": "ALTA",
-   "italy_impact": "Le tubazioni Draeger Z-3252-2026 sono utilizzate negli ospedali italiani per: (1) sistemi di ventilazione meccanica in ICU e reparti COVID; (2) somministrazione di ossigeno in ambienti ospedalieri; (3) anestesia in sale operatorie. Il distacco di una tubazione durante ventilazione meccanica espone il paziente a: ipossia acuta, arresto respiratorio, decesso. Pazienti ad alto rischio: intubati in ICU, post-operatori in PACU, pazienti fragili con compromissione respiratoria.",
-   "timeframe": "IMMEDIATO - il richiamo è già diffuso dal 7 ottobre 2026",
-   "recommendation": "AZIONI IMMEDIATE: (1) ogni azienda sanitaria italiana deve identificare tutti i dispositivi Draeger Z-3252-2026 in magazzino e in uso (coordinare con ingegneria clinica e farmacie ospedaliere); (2) verificare visivamente ogni tubazione per crepe/fessure prima dell'uso; (3) in caso di dubbio, RITIRARE dal servizio e marcare come non conforme; (4) contattare Draeger per programma sostituzione/riparazione con priorità per tubazioni in uso; (5) comunicare ai reparti (ICU, sala operatoria, anestesia) il rischio con memo urgente; (6) implementare doppio controllo pre-utilizzo per tubazioni fino a sostituzione completa; (7) segnalare al Centro Nazionale di Farmacovigilanza (CNF) e AIFA eventuali incidenti correlati; (8) comunicare con pazienti/familiari circa verifica della sicurezza se ricoverati con questo dispositivo.",
-   "created_at": "2026-10-22T10:07:57.112525",
+   "italy_impact": "Dispositivi Dräger sono ampiamente distribuiti in ospedali italiani per ventilazione meccanica. Reparti di terapia intensiva, anestesia e pneumologia potrebbero avere apparecchiature interessate. Rischio immediato per pazienti ventilati dipendenti.",
+   "timeframe": "Immediato - verificare entro 7 giorni",
+   "recommendation": "Ingegneria clinica nazionale verifichi inventari Dräger; reparti di rianimazione controllino numero di serie tubi; contattare Dräger Italia per specifiche lotti interessati e sostituzione urgente.",
+   "created_at": "2026-10-23T17:07:40.656813",
    "is_read": false
   },
   {
-   "id": "alert_ge_medical_monitoring_class_ii_recall",
-   "title": "[URGENTE] Richiamo Class II GE Medical Systems - Perdita monitoraggio paziente Hub/Viewer",
-   "description": "GE Medical Systems Information Technologies ha emesso 4 richiami Class II identici (Z-3036, Z-3037, Z-3038, Z-3039) il 2 settembre 2026. Problema: bug software che causa perdita di monitoraggio paziente su Hub e Central Viewer, con disattivazione di allarmi critici. Distribuito in Italia.",
-   "severity": "CRITICAL",
+   "id": "ge_monitoring_software_critical",
+   "title": "Perdita monitoraggio pazienti GE: 4 richiami software",
+   "description": "[Class II] GE Medical Systems richiama 4 versioni software con bug che causa perdita monitoraggio paziente e perdita impostazioni allarmi nei sistemi Hub e Central Viewer.",
+   "severity": "HIGH",
    "entities_involved": "[\"ge_medical_systems_information_t\"]",
-   "predicted_impact": "Ritardo di ore nella rilevazione di deterioramento del paziente. Potenziale morte di paziente non monitorato. Contenzioso medico-legale se monitoraggio è fallito durante evento avverso. Impatto su ospedali con sistemi GE installati (diffuso in Italia, particolarmente in grandi ospedali).",
+   "predicted_impact": "Perdita temporanea di visibilità clinica su pazienti critici, allarmi non funzionanti, ritardo diagnostico, rischio evento avverso grave.",
    "italy_relevance": "ALTA",
-   "italy_impact": "I sistemi GE Hub e Central Viewer sono utilizzati in ospedali italiani per: (1) monitoraggio centralizzato di pazienti critici in ICU; (2) trasmissione dati di telemetria cardiaca, pressione, saturazione O2; (3) gestione degli allarmi su infermieri/medici. Se il software smette di monitorare un paziente, il team clinico rimane cieco sulla situazione emodinamica del paziente. Questo è particolarmente pericoloso in: ICU, reparti COVID, post-operatorio, cardiologia, nefrologia. Il disablement degli allarmi significa che un paziente in arresto cardiaco, shock settico o collasso emodinamico potrebbe non essere rilevato.",
-   "timeframe": "IMMEDIATO - il richiamo è stato emesso il 2 settembre 2026, quindi è attivo da oltre 1 mese",
-   "recommendation": "AZIONI IMMEDIATE: (1) responsabile IT ospedaliero deve verificare versione software del sistema GE Hub/Viewer installata; se è versione vulnerabile, deve ottenere patch urgente da GE (contattare support GE direttamente); (2) ingegneria clinica deve testare la patch in ambiente di staging prima di implementazione su sistema di produzione; (3) durante implementazione patch, le ICU devono avere personale dedicato che verifica manualmente ogni paziente ogni 5-10 minuti come backup al monitoraggio automatico; (4) comunicare ai reparti il rischio con memo urgente e procedura di contingency (monitoraggio manuale intensivo); (5) documentare ogni episodio di perdita monitoraggio come incident; (6) verificare che i sistemi di allarme alternativi (campanelli manuali, pulse ox standalone) siano operativi; (7) segnalare al Centro Nazionale di Farmacovigilanza e AIFA; (8) richiedere a GE timeline certificata per patch e garanzia di funzionamento post-patch.",
-   "created_at": "2026-10-22T10:07:57.112525",
+   "italy_impact": "Ospedali italiani con sistemi di monitoraggio centralizzato GE sono esposti. Potrebbero interessare reparti di terapia intensiva, cardiologia e pneumologia dove il monitoraggio centralizzato è critico per la sicurezza del paziente.",
+   "timeframe": "1-2 mesi per aggiornamento software",
+   "recommendation": "Direzioni sanitarie richiedano patch software a GE Italia; IT ospedaliero pianifichi aggiornamento in finestra di manutenzione; reparti preparino protocolli di monitoraggio manuale durante patch.",
+   "created_at": "2026-10-23T17:07:40.656813",
    "is_read": false
   },
   {
-   "id": "alert_bd_switzerland_infusion_set_class_i",
-   "title": "[URGENTE] Richiamo Class I BD Switzerland - Inaccuratezza dati performance set infusione",
-   "description": "BD Switzerland SARL ha emesso richiamo Class I il 23 settembre 2026 (Z-3080-2026). Problema: discrepanze negli attributi di performance dei set di infusione che possono portare a dosaggio inappropriato. Distribuito in Italia.",
+   "id": "bd_infusion_sets_performance",
+   "title": "Set infusione BD: dati prestazionali discordanti",
+   "description": "[Class I] BD Switzerland ritira set infusione per discrepanze nei dati di prestazione che potrebbero portare a dosaggio improprio di farmaci.",
    "severity": "CRITICAL",
    "entities_involved": "[\"bd_switzerland_sarl\"]",
-   "predicted_impact": "Sovradosaggio acuto di farmaco (ipoglicemia grave se insulina, emorragia se anticoagulanti, shock se vasoattivi). Sottotrattamento con fallimento terapeutico e complicazioni cliniche. Danno grave e decessi possibili, specialmente in neonatologia.",
+   "predicted_impact": "Somministrazione farmaci a dosaggio improprio, sottotrattamento o sovradosaggio, rischio tossicità acuta o inefficacia terapeutica in pazienti vulnerabili.",
    "italy_relevance": "ALTA",
-   "italy_impact": "I set di infusione BD sono utilizzati in tutti gli ospedali italiani per: (1) somministrazione di farmaci IV critici (insulina, eparina, vasoattivi, antibiotici); (2) infusioni in pediatria e neonatologia; (3) nutrizione parenterale. Se i dati di performance (flow rate, drop factor, pressione massima) sono inesatti, il paziente potrebbe ricevere: (1) dose eccessiva di farmaco con tossicità; (2) dose insufficiente con fallimento terapeutico; (3) sovraccarico di volumi in pazienti fragili (anziani, cardiopatici). Ad alto rischio: neonati in ICN, pediatria, pazienti in infusione di vasoattivi in ICU.",
-   "timeframe": "IMMEDIATO - il richiamo è attivo dal 23 settembre 2026",
-   "recommendation": "AZIONI IMMEDIATE: (1) farmacie ospedaliere e ingegneria clinica devono identificare tutti i set di infusione BD Z-3080-2026 in stock e in uso; (2) verificare numero di lotto per identificare lotti specifici interessati (contattare BD per elenco lotti); (3) RITIRARE immediatamente dalla circolazione tutti i set dell'azienda BD con questo modello fino a identificazione precisa; (4) utilizzare fornitori alternativi (Terumo, Smiths Medical, altri) per set di infusione; (5) comunicare urgentemente a reparti (ICU, pediatria, ICN, anestesia) del potenziale rischio di dosaggio inesatto; (6) per pazienti attualmente in infusione con questi set: verificare manualmente flow rate con misurazioni dirette (contare gocce, misurare volume erogato in 1 minuto) e confrontare con quanto atteso; (7) ricalcolare dosi somministrate se set è stato utilizzato; (8) segnalare al Centro di Farmacovigilanza (CNF) e AIFA ogni evento avverso correlato (ipoglicemia inaspettata, emorragia, etc.); (9) richiedere a BD certificazione di accuratezza degli eventuali lotti sostitutivi.",
-   "created_at": "2026-10-22T10:07:57.112525",
+   "italy_impact": "Set infusione BD sono consumabili comuni in ospedali e farmaci territoriali italiani. Interessa pazienti in terapia infusionale (oncologia, antibiotici, nutrizione parenterale). Farmacie ospedaliere devono verificare stock.",
+   "timeframe": "Immediato - verificare stock nei prossimi giorni",
+   "recommendation": "Farmacie ospedaliere italiane blocchino immediato utilizzo lotti BD interessati; verifichino numero di lotto con distributore; avviino ricerca pazienti trattati negli ultimi 30 giorni per monitoraggio.",
+   "created_at": "2026-10-23T17:07:40.656813",
    "is_read": false
   }
  ]
