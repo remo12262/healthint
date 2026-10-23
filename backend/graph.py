@@ -201,7 +201,7 @@ class GraphDB:
             except ValueError:
                 factor, day = 0.5, "data non indicata"
             score = round(CLASS_RISK[cls] * factor)
-            basis = f"Richiamo FDA {k[7:]} di classe {cls} del {day}"
+            basis = f"Richiamo FDA {e.get('source_doc') or k[7:]} di classe {cls} del {day}"
             if e["source"] not in best or score > best[e["source"]][0]:
                 best[e["source"]] = (score, basis)
         for nid, (score, basis) in best.items():

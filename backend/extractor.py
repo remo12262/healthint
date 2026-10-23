@@ -14,6 +14,10 @@ import normalize
 RISK_WORDS_IT = ["carenz", "ritir", "richiam", "revoc", "sospens", "allert", "focola", "epidemi", "emergenz",
                  "casi confermati", "decessi", "contraffa", "infezion", "west nile", "dengue", "morbillo"]
 
+# Italia citata nella distribuzione di un richiamo FDA, senza distinguere maiuscole e minuscole:
+# "Italy", "ITALY", "Italy/San Marino", "Italia"
+ITALY_RE = re.compile(r"\bital(y|ia|ian)\b", re.IGNORECASE)
+
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 
@@ -163,26 +167,31 @@ class EntityExtractor:
                 }
             entities[firm_slug]["risk_score"] = max(entities[firm_slug]["risk_score"], risk_score)
 
-            # Route to EMA for worldwide/European distribution, else AIFA
+            # Distribuzione europea o mondiale: EMA. Italia citata nella distribuzione: anche AIFA,
+            # come collegamento aggiuntivo (un richiamo mondiale riguarda entrambe le autorità).
+            # Senza nessuna delle due indicazioni: AIFA, come prima
             dist = recall.get("distribution_pattern", "").lower()
-            target = "ema" if any(kw in dist for kw in ("europe", "worldwide", "international")) else "aifa"
+            worldwide = any(kw in dist for kw in ("europe", "worldwide", "international"))
+            targets = (["ema"] if worldwide else []) + (["aifa"] if ITALY_RE.search(dist) or not worldwide else [])
 
             classification = recall.get("classification", "")
             reason = recall.get("reason_for_recall", "")[:120]
             recall_id = recall.get("id", "")
 
-            # Una relazione per richiamo: un nuovo richiamo di un'azienda già nota resta visibile
+            # Una relazione per richiamo e autorità: un nuovo richiamo di un'azienda già nota resta visibile.
+            # La prima ha id recall_<numero>; quella aggiuntiva verso AIFA recall_<numero>_it
             rd = recall.get("report_date", "")
-            relations.append({
-                "id": f"recall_{recall_id}" if recall_id else None,
-                "source": firm_slug,
-                "target": target,
-                "type": "RISCHIO_PER",
-                "fact": f"[{classification}] {recall_id}: {reason}",
-                "risk_score": risk_score,
-                "source_doc": recall_id,
-                "date": f"{rd[:4]}-{rd[4:6]}-{rd[6:8]}" if len(rd) == 8 else None,
-            })
+            for i, target in enumerate(targets):
+                relations.append({
+                    "id": (f"recall_{recall_id}" + ("_it" if i else "")) if recall_id else None,
+                    "source": firm_slug,
+                    "target": target,
+                    "type": "RISCHIO_PER",
+                    "fact": f"[{classification}] {recall_id}: {reason}",
+                    "risk_score": risk_score,
+                    "source_doc": recall_id,
+                    "date": f"{rd[:4]}-{rd[4:6]}-{rd[6:8]}" if len(rd) == 8 else None,
+                })
 
         return {"entities": list(entities.values()), "relations": relations}
 
