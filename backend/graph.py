@@ -287,7 +287,11 @@ class GraphDB:
         return sorted(alerts, key=lambda a: a.get("created_at", ""), reverse=True)[:50]
 
     async def get_risk_scores(self) -> List[Dict]:
-        nodes = sorted(self.nodes.values(), key=lambda n: n.get("risk_score", 0), reverse=True)
+        """Classifica come nella scheda Risk Score: senza enti regolatori e di risposta né rischi non calcolati."""
+        ranked = [n for n in self.nodes.values() if n.get("type") != "RegulatorAgency"
+                  and n.get("risk_basis") != "Valore assegnato manualmente"
+                  and not str(n.get("risk_basis") or "").startswith("Ente del nucleo")]
+        nodes = sorted(ranked, key=lambda n: n.get("risk_score", 0), reverse=True)
         return [
             {"id": n["id"], "label": n["label"], "type": n["type"],
              "region": n.get("region"), "risk_score": n.get("risk_score", 0),

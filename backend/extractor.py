@@ -84,7 +84,44 @@ Rispondi con questo JSON esatto:
       "date": "YYYY-MM o null"
     }}
   ]
-}}"""
+}}
+
+Sii sintetico: al massimo 10 entità e 12 relazioni (le più importanti), "description" e "fact" in una frase breve (massimo 20 parole)."""
+
+# Token di risposta: con un tetto basso le notizie OMS lunghe venivano troncate
+EXTRACT_MAX_TOKENS = 4000
+ALERT_MAX_TOKENS = 6000
+# Dati passati al modello per ciascuna chiamata degli alert
+ALERT_MAX_ITEMS = 8
+
+ALERT_PROMPT = """Analizza questi dati di un knowledge graph sanitario e genera alert per chi lavora nel Servizio Sanitario Nazionale italiano.
+{focus}
+
+{data}
+
+Per ogni alert valuta in modo esplicito l'impatto sull'Italia e sul SSN:
+- per un focolaio all'estero indica le vie concrete con cui potrebbe riguardare l'Italia (viaggi e voli, rientri di operatori sanitari o cooperanti, sorveglianza ai punti di ingresso, preparazione di ospedali e laboratori di riferimento) e dì chiaramente se il rischio per l'Italia è basso;
+- per un richiamo di farmaci o dispositivi distribuiti in Italia indica quali strutture o pazienti italiani potrebbero essere coinvolti e cosa dovrebbero verificare farmacie ospedaliere e ingegneria clinica;
+- non inventare numeri, casi o date che non siano nei dati; se un'informazione manca, dillo.
+
+Genera da 1 a 3 alert, con testi brevi: "title" al massimo 12 parole, "description", "italy_impact" e "recommendation" al massimo 40 parole ciascuno, "predicted_impact" al massimo 25 parole, al massimo 4 "entities_involved".
+Formato JSON:
+[
+  {{
+    "id": "alert_slug",
+    "title": "Titolo breve alert",
+    "description": "Descrizione del rischio basata sui dati",
+    "severity": "CRITICAL|HIGH|MEDIUM|LOW",
+    "entities_involved": ["id1", "id2"],
+    "italy_relevance": "ALTA|MEDIA|BASSA|NESSUNA",
+    "italy_impact": "impatto concreto per l'Italia e il SSN, con le vie di esposizione",
+    "predicted_impact": "impatto atteso su pazienti e servizi",
+    "timeframe": "es. 3-6 mesi",
+    "recommendation": "azione consigliata alle autorità e alle aziende sanitarie italiane"
+  }}
+]
+
+Rispondi SOLO con JSON valido."""
 
 
 class EntityExtractor:
@@ -217,7 +254,7 @@ class EntityExtractor:
         if not text or len(text.strip()) < 50:
             return {"entities": [], "relations": []}
         try:
-            raw = await self._ask(EXTRACT_PROMPT.format(text=text[:3000]), 2000, SYSTEM_PROMPT)
+            raw = await self._ask(EXTRACT_PROMPT.format(text=text[:3000]), EXTRACT_MAX_TOKENS, SYSTEM_PROMPT)
             result = self._parse_json(raw)
             if not isinstance(result, dict):
                 raise AIError(f"atteso un oggetto JSON, ricevuto {type(result).__name__}")
@@ -263,7 +300,12 @@ class EntityExtractor:
         return {"entities": list(all_entities.values()), "relations": all_relations, "errors": errors}
 
     async def generate_alerts(self, entities: List[Dict], relations: List[Dict]) -> List[Dict]:
-        """Genera alert dal grafo con la valutazione dell'impatto sull'Italia. Solleva AIError se non riesce."""
+        """Genera alert dal grafo con la valutazione dell'impatto sull'Italia. Solleva AIError se non riesce.
+
+        Due chiamate piccole invece di una grande (eventi sanitari, richiami distribuiti in Italia):
+        la risposta resta corta e non si tronca. Se una delle due fallisce si solleva AIError e
+        restano gli alert dell'aggiornamento precedente, mai un insieme a metà.
+        """
         if not entities:
             raise AIError("grafo vuoto: nessuna entità da analizzare")
 
@@ -271,46 +313,45 @@ class EntityExtractor:
         italy_recalls = sorted(
             [r for r in relations if str(r.get("id", "")).startswith("recall_") and r.get("target") == "aifa"],
             key=lambda r: r.get("date") or "", reverse=True,
-        )[:8]
-        graph_summary = json.dumps({
-            "high_risk_entities": [e for e in entities if e.get("risk_score", 0) > 60][:10],
-            "high_risk_relations": [r for r in relations if r.get("risk_score", 0) > 60][:10],
-            "recent_recalls_distributed_in_italy": [
-                {"firm": r.get("source"), "date": r.get("date"), "fact": r.get("fact")} for r in italy_recalls
-            ],
-        }, indent=2, ensure_ascii=False)
+        )[:ALERT_MAX_ITEMS]
+        # Eventi e focolai: entità e relazioni ad alto rischio che non vengono dai richiami
+        events = {
+            "high_risk_entities": [
+                {k: e.get(k) for k in ("id", "label", "type", "region", "risk_score")}
+                for e in entities if e.get("risk_score", 0) > 60 and e.get("type") != "PharmaCompany"
+            ][:ALERT_MAX_ITEMS],
+            "high_risk_relations": [
+                {"source": r.get("source"), "target": r.get("target"), "type": r.get("type"),
+                 "fact": (r.get("fact") or "")[:200], "date": r.get("date")}
+                for r in relations if r.get("risk_score", 0) > 60 and not str(r.get("id", "")).startswith("recall_")
+            ][:ALERT_MAX_ITEMS],
+        }
+        groups = []
+        if events["high_risk_entities"] or events["high_risk_relations"]:
+            groups.append(("Concentrati su focolai ed eventi sanitari.", events))
+        if italy_recalls:
+            groups.append(("Concentrati sui richiami FDA di farmaci e dispositivi distribuiti in Italia.", {
+                "recent_recalls_distributed_in_italy": [
+                    {"firm": r.get("source"), "date": r.get("date"), "fact": (r.get("fact") or "")[:200]}
+                    for r in italy_recalls
+                ]}))
+        if not groups:
+            raise AIError("nessun dato ad alto rischio da analizzare")
 
-        raw = await self._ask(f"""Analizza questo knowledge graph e genera alert per chi lavora nel Servizio Sanitario Nazionale italiano.
-
-{graph_summary}
-
-Per ogni alert valuta in modo esplicito l'impatto sull'Italia e sul SSN:
-- per un focolaio all'estero indica le vie concrete con cui potrebbe riguardare l'Italia (viaggi e voli, rientri di operatori sanitari o cooperanti, sorveglianza ai punti di ingresso, preparazione di ospedali e laboratori di riferimento) e dì chiaramente se il rischio per l'Italia è basso;
-- per un richiamo di farmaci o dispositivi distribuiti in Italia indica quali strutture o pazienti italiani potrebbero essere coinvolti e cosa dovrebbero verificare farmacie ospedaliere e ingegneria clinica;
-- non inventare numeri, casi o date che non siano nei dati; se un'informazione manca, dillo.
-Includi almeno un alert sui richiami distribuiti in Italia, se ce ne sono.
-
-Genera 3-5 alert in formato JSON:
-[
-  {{
-    "id": "alert_slug",
-    "title": "Titolo breve alert",
-    "description": "Descrizione del rischio basata sui dati",
-    "severity": "CRITICAL|HIGH|MEDIUM|LOW",
-    "entities_involved": ["id1", "id2"],
-    "italy_relevance": "ALTA|MEDIA|BASSA|NESSUNA",
-    "italy_impact": "impatto concreto per l'Italia e il SSN, con le vie di esposizione",
-    "predicted_impact": "impatto atteso su pazienti e servizi",
-    "timeframe": "es. 3-6 mesi",
-    "recommendation": "azione consigliata alle autorità e alle aziende sanitarie italiane"
-  }}
-]
-
-Rispondi SOLO con JSON valido.""", 4000)
-        result = self._parse_json(raw)
-        if not isinstance(result, list):
-            raise AIError(f"attesa una lista di alert, ricevuto {type(result).__name__}")
-        alerts = [a for a in result if isinstance(a, dict) and a.get("title")]
+        alerts: List[Dict] = []
+        for focus, data in groups:
+            prompt = ALERT_PROMPT.format(focus=focus, data=json.dumps(data, indent=1, ensure_ascii=False))
+            result = self._parse_json(await self._ask(prompt, ALERT_MAX_TOKENS))
+            if not isinstance(result, list):
+                raise AIError(f"attesa una lista di alert, ricevuto {type(result).__name__}")
+            alerts += [a for a in result if isinstance(a, dict) and a.get("title")]
         if not alerts:
             raise AIError("la risposta non contiene alert validi")
+        # Id unici anche se le due chiamate ne propongono uno uguale
+        seen = set()
+        for a in alerts:
+            aid, i = a.get("id") or "alert", 2
+            while a.get("id") in seen or not a.get("id"):
+                a["id"], i = f"{aid}_{i}", i + 1
+            seen.add(a["id"])
         return alerts

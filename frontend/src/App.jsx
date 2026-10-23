@@ -89,6 +89,57 @@ function nodeRadius(n) { return Math.max(7, Math.min(12, (n.risk_score || 0) / 1
 function shortLabel(s) { return s.length > LABEL_MAX ? s.slice(0, LABEL_MAX - 1).trimEnd() + "…" : s }
 
 const NO_SOURCE = "Fonte da verificare"
+const SSN_STRUCTURE = "Struttura istituzionale del SSN"
+
+// Enti regolatori e organismi di risposta (OMS, ECDC, ministeri, AIFA, ISS, EMA, AGENAS...):
+// rispondono all'emergenza, non la subiscono, quindi restano nel grafo ma non nella classifica
+const RESPONDER_TYPES = new Set(["RegulatorAgency"])
+
+// Rischio non calcolato: valore assegnato a mano o ente del nucleo fisso senza stima
+function riskNotComputed(n) {
+  const basis = n?.risk_basis || ""
+  return basis === "Valore assegnato manualmente" || basis.startsWith("Ente del nucleo")
+}
+
+// Motivo del punteggio in parole chiare: la stima dell'AI misura la rilevanza rispetto all'evento
+function basisText(basis) {
+  if (basis === "Stima dell'AI dalle notizie OMS")
+    return "Stima dell'AI della rilevanza rispetto all'evento descritto nelle notizie OMS (non è una misura del rischio dell'ente)"
+  if (basis === "Stima dell'AI dalle fonti italiane")
+    return "Stima dell'AI della rilevanza rispetto all'evento descritto nelle fonti italiane (non è una misura del rischio dell'ente)"
+  return basis
+}
+
+// Relazione di organizzazione tra enti pubblici italiani del SSN (inserita a mano, senza documento)
+const STRUCTURAL_TYPES = new Set(["CONTROLLA", "MEMBRO_DI", "COLLABORA_CON", "REGOLA", "ACCREDITA"])
+const PUBLIC_TYPES = new Set(["HospitalNetwork", "RegionalAuthority", "RegulatorAgency", "ProcurementBody"])
+// (Farmindustria è un'associazione di imprese, non un ente del SSN)
+function isSsnEntity(n) { return !!n && n.italy && PUBLIC_TYPES.has(n.type) && n.id !== "farmindustria" }
+function isSsnStructure(r, nodeById) {
+  return STRUCTURAL_TYPES.has(r.type) && isSsnEntity(nodeById[r.source]) && isSsnEntity(nodeById[r.target])
+}
+
+// "23 ottobre, ore 12:01" (ora italiana)
+function formatShort(iso) {
+  if (!iso) return ""
+  const d = new Date(iso + (/(Z|[+-]\d\d:\d\d)$/.test(iso) ? "" : "Z"))
+  const tz = {timeZone: "Europe/Rome"}
+  return d.toLocaleDateString("it-IT", {...tz, day: "numeric", month: "long"}) +
+    ", ore " + d.toLocaleTimeString("it-IT", {...tz, hour: "2-digit", minute: "2-digit"})
+}
+
+// Filtro Tutto / Solo Italia / Internazionale, uguale nel grafo e nel Risk Score
+const SCOPES = [["all","Tutto"],["it","Solo Italia"],["int","Internazionale"]]
+function ScopeFilter({value, onChange, label}) {
+  return (
+    <div role="group" aria-label={label} style={{display:"flex",border:"0.5px solid #1D9E75",borderRadius:6,overflow:"hidden"}}>
+      {SCOPES.map(([k,v]) => (
+        <button key={k} onClick={() => onChange(k)} aria-pressed={value === k}
+          style={{flex:1,fontSize:12,padding:"5px 8px",border:"none",cursor:"pointer",background:value === k ? "#1D9E75" : "transparent",color:value === k ? "#fff" : "var(--color-text-primary)"}}>{v}</button>
+      ))}
+    </div>
+  )
+}
 
 function formatDay(d) {
   if (!d) return ""
@@ -153,7 +204,8 @@ function nodeOrigin(node, relations, donIndex) {
   return {kind, sources: [...site, ...sources]}
 }
 
-function SourceLinks({sources}) {
+function SourceLinks({sources, structure}) {
+  if (!sources.length && structure) return <span>{structure}</span>
   if (!sources.length) return <span style={{color:"#A32D2D",fontWeight:500}}>{NO_SOURCE}</span>
   return sources.map(s => (
     <div key={s.url} style={{marginTop:2}}>
@@ -279,6 +331,9 @@ export default function App() {
     return {nodesWith, edgesWith}
   })()
   const presentTypes = new Set(nodes.map(n => n.type))
+  // Classifica Risk Score: nodi del filtro attivo, senza enti di risposta né rischi non calcolati
+  const riskRanking = nodes.filter(n => !RESPONDER_TYPES.has(n.type) && !riskNotComputed(n))
+    .sort((a, b) => (b.risk_score || 0) - (a.risk_score || 0)).slice(0, 15)
   const updatedAt = status?.updated_at || stats.updated_at
 
   // Il canvas segue la larghezza del suo contenitore; la vista adatta il grafo allo spazio disponibile
@@ -335,8 +390,8 @@ export default function App() {
       setStatus(st)
       await fetchData()
       setRefreshing(false)
-      if (st.last_error) setNotice({kind:"error", text:`Aggiornamento non riuscito, restano i dati precedenti: ${st.last_error}`})
-      else if (st.alerts_error) setNotice({kind:"error", text:`Dati aggiornati, ma gli alert non sono stati generati: ${st.alerts_error}`})
+      if (st.last_error) setNotice({kind:"info", text:"Aggiornamento non riuscito: restano i dati dell'ultimo aggiornamento riuscito."})
+      else if (st.alerts_error) setNotice({kind:"ok", text:"Dati aggiornati. Gli alert sono quelli dell'aggiornamento precedente."})
       else setNotice({kind:"ok", text:"Dati aggiornati."})
       return
     }
@@ -819,7 +874,7 @@ export default function App() {
           ))}
         </div>
         <div style={{marginLeft:"auto",display:"flex",gap:12,alignItems:"center"}}>
-          {stats.unread_alerts > 0 && <span style={{background:"#E24B4A",color:"#fff",borderRadius:10,padding:"2px 8px",fontSize:11}}>{stats.unread_alerts} alert</span>}
+          {alerts.length > 0 && <span style={{background:"#E24B4A",color:"#fff",borderRadius:10,padding:"2px 8px",fontSize:11}}>{alerts.length} alert</span>}
           {stats.nodes != null && <span style={{fontSize:12,color:"var(--color-text-tertiary)"}}>{stats.nodes} nodi · {stats.edges} relazioni</span>}
           <button onClick={refreshNow} disabled={refreshing}
             style={{fontSize:12,padding:"5px 12px",borderRadius:6,border:"0.5px solid #1D9E75",background:refreshing?"var(--color-background-secondary)":"#1D9E75",color:refreshing?"var(--color-text-secondary)":"#fff",cursor:refreshing?"default":"pointer"}}>
@@ -866,7 +921,7 @@ export default function App() {
       )}
       {!notice && status?.last_error && (
         <div role="status" style={{padding:"8px 20px",fontSize:13,background:"#E24B4A1A",color:"#A32D2D"}}>
-          L'ultimo tentativo di aggiornamento ({formatDateTime(status.last_attempt)}) non è riuscito: {status.last_error}. Sono mostrati i dati dell'ultimo aggiornamento riuscito.
+          L'ultimo tentativo di aggiornamento ({formatDateTime(status.last_attempt)}) non è riuscito: sono mostrati i dati dell'ultimo aggiornamento riuscito.
         </div>
       )}
 
@@ -892,12 +947,7 @@ export default function App() {
 
           {/* In alto a sinistra: filtro e ricerca */}
           <div style={{...overlayCard,top:10,left:10,padding:8,display:"flex",flexDirection:"column",gap:6,width:narrow ? "calc(100% - 20px)" : 320,boxSizing:"border-box"}}>
-            <div role="group" aria-label="Filtro del grafo" style={{display:"flex",border:"0.5px solid #1D9E75",borderRadius:6,overflow:"hidden"}}>
-              {[["all","Tutto"],["it","Solo Italia"],["int","Internazionale"]].map(([k,v]) => (
-                <button key={k} onClick={() => { setScope(k); selectNode(null); autoFitRef.current = true }} aria-pressed={scope === k}
-                  style={{flex:1,fontSize:12,padding:"5px 8px",border:"none",cursor:"pointer",background:scope === k ? "#1D9E75" : "transparent",color:scope === k ? "#fff" : "var(--color-text-primary)"}}>{v}</button>
-              ))}
-            </div>
+            <ScopeFilter value={scope} label="Filtro del grafo" onChange={k => { setScope(k); selectNode(null); autoFitRef.current = true }}/>
             <div style={{position:"relative"}}>
               <input type="search" value={query} placeholder="Cerca un nodo per nome…" aria-label="Cerca un nodo"
                 onChange={e => setQuery(e.target.value)}
@@ -911,7 +961,7 @@ export default function App() {
                       style={{display:"flex",alignItems:"center",gap:8,width:"100%",textAlign:"left",padding:"7px 10px",border:"none",borderBottom:"0.5px solid #E5E4DE",background:"transparent",cursor:"pointer",fontSize:12}}>
                       <span style={{width:9,height:9,borderRadius:"50%",flexShrink:0,background:NODE_COLORS[n.type] || OTHER_COLOR}}/>
                       <span style={{flex:1}}>{n.label}</span>
-                      <span style={{color:riskColor(n.risk_score),fontWeight:500}}>{n.risk_score}</span>
+                      {!riskNotComputed(n) && <span style={{color:riskColor(n.risk_score),fontWeight:500}}>{n.risk_score}</span>}
                     </button>
                   ))}
                 </div>
@@ -946,7 +996,7 @@ export default function App() {
                 <details style={{marginTop:4}}>
                   <summary style={{cursor:"pointer"}}>Fonti e copertura</summary>
                   <div>{narrow ? "Due dita: zoom · trascina: sposta." : "Rotella: zoom · trascina lo sfondo: sposta."} Etichette visibili per i nodi principali; le altre al passaggio del mouse o ingrandendo.</div>
-                  <div>Hanno una fonte con link {coverage.nodesWith} nodi su {nodes.length} e {coverage.edgesWith} relazioni su {edges.length}; gli altri sono indicati come «{NO_SOURCE}».</div>
+                  <div>Hanno una fonte con link {coverage.nodesWith} nodi su {nodes.length} e {coverage.edgesWith} relazioni su {edges.length}; gli altri sono indicati come «{SSN_STRUCTURE}» (enti e relazioni di organizzazione del SSN) o «{NO_SOURCE}».</div>
                   {status?.sources?.length > 0 && (
                     <div style={{marginTop:2}}>
                       {status.sources.map((src, i) => (
@@ -998,11 +1048,10 @@ export default function App() {
                         {recall.reason && <div style={{color:"var(--color-text-secondary)"}}>Motivo: {recall.reason}</div>}
                       </div>
                     ) : (r.fact && <div style={{fontSize:12,color:"var(--color-text-secondary)",marginBottom:8,lineHeight:1.5}}>{r.fact}</div>)}
-                    {r.risk_score != null && <div style={{fontSize:12,marginBottom:8}}>Rischio della relazione: <strong style={{fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}/100</strong></div>}
+                    {r.risk_score != null && origin.kind !== "manual" && <div style={{fontSize:12,marginBottom:8}}>Rischio della relazione: <strong style={{fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}/100</strong></div>}
                     <div style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",lineHeight:1.5}}>
                       <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
-                      <SourceLinks sources={relationSources(r, donIndex)}/>
-                      {origin.kind === "manual" && r.date && <div>Data indicata: {formatDay(r.date)}</div>}
+                      <SourceLinks sources={relationSources(r, donIndex)} structure={isSsnStructure(r, nodeById) && `${SSN_STRUCTURE}: relazione di organizzazione`}/>
                       {origin.kind === "web" && r.type === "COMUNICA_SU" && <div style={{color:"var(--color-text-tertiary)"}}>Collegamento ricavato in automatico (senza AI): il documento cita l'ente.</div>}
                       {origin.kind === "who" && <div style={{color:"var(--color-text-tertiary)"}}>Relazione estratta dall'AI {relationSources(r, donIndex).length > 1 ? "da queste notizie" : "da questa notizia"}.</div>}
                     </div>
@@ -1017,7 +1066,9 @@ export default function App() {
                   <div>
                     <div style={{display:"flex",justifyContent:"space-between",gap:8,marginBottom:8}}>
                       <span style={{fontSize:11,padding:"2px 8px",borderRadius:4,background:(NODE_COLORS[node.type]||OTHER_COLOR)+"22",color:NODE_COLORS[node.type]||OTHER_COLOR,fontWeight:500}}>{NODE_TYPE_LABEL[node.type] || OTHER_LABEL}</span>
-                      <span title="Punteggio di rischio da 0 a 100" style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:riskColor(node.risk_score)+"22",color:riskColor(node.risk_score),fontWeight:500,flexShrink:0}}>Rischio {node.risk_score}/100</span>
+                      {riskNotComputed(node)
+                        ? <span style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:"var(--color-background-secondary)",color:"var(--color-text-secondary)",fontWeight:500,flexShrink:0}}>Rischio non calcolato</span>
+                        : <span title="Punteggio di rischio da 0 a 100" style={{fontSize:12,padding:"2px 8px",borderRadius:4,background:riskColor(node.risk_score)+"22",color:riskColor(node.risk_score),fontWeight:500,flexShrink:0}}>Rischio {node.risk_score}/100</span>}
                     </div>
                     <div style={{fontSize:15,fontWeight:500,marginBottom:node.full_name && node.full_name !== node.label ? 2 : 6}}>{node.label}</div>
                     {node.full_name && node.full_name !== node.label && <div style={{fontSize:12,color:"var(--color-text-secondary)",marginBottom:6}}>{node.full_name}</div>}
@@ -1028,12 +1079,12 @@ export default function App() {
                     )}
                     {node.region && <div style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:8}}>📍 {node.region}</div>}
                     <div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.5,marginBottom:8}}>{node.description}</div>
-                    {node.risk_basis && <div style={{fontSize:11,color:"var(--color-text-secondary)",marginBottom:8}}>Base del rischio: {node.risk_basis}</div>}
+                    {node.risk_basis && !riskNotComputed(node) && <div style={{fontSize:11,color:"var(--color-text-secondary)",marginBottom:8}}>Base del rischio: {basisText(node.risk_basis)}</div>}
                     <div style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",lineHeight:1.5,marginBottom:12}}>
                       <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
-                      <SourceLinks sources={origin.sources}/>
-                      {origin.kind === "who" && origin.sources.length > 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI da questi documenti; il rischio è una stima dell'AI.</div>}
-                      {origin.kind === "manual" && <div style={{color:"var(--color-text-tertiary)"}}>{node.website ? "Ente con sito istituzionale; il punteggio di rischio è stato assegnato a mano, senza fonte." : "Ente di base inserito manualmente, con rischio assegnato a mano."}</div>}
+                      <SourceLinks sources={origin.sources} structure={isSsnEntity(node) && SSN_STRUCTURE}/>
+                      {origin.kind === "who" && origin.sources.length > 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI da questi documenti; il punteggio è una stima dell'AI della rilevanza rispetto all'evento, non una misura del rischio dell'ente.</div>}
+                      {origin.kind === "manual" && <div style={{color:"var(--color-text-tertiary)"}}>{node.website ? "Ente con sito istituzionale; il rischio non è calcolato." : "Ente di base inserito manualmente; il rischio non è calcolato."}</div>}
                       {origin.kind === "nucleus" && <div style={{color:"var(--color-text-tertiary)"}}>Ente del nucleo fisso italiano, sempre presente nel grafo; il rischio non è stimato. Le relazioni riportano la norma o il documento da cui derivano.</div>}
                       {origin.kind === "who" && origin.sources.length === 0 && <div style={{color:"var(--color-text-tertiary)"}}>Entità estratta dall'AI dalle notizie, senza relazioni che indichino il documento d'origine.</div>}
                     </div>
@@ -1054,7 +1105,6 @@ export default function App() {
                                 <span style={{color:"var(--color-text-secondary)"}}>
                                   {node.label} <em>{verb}</em> <strong style={{color:"var(--color-text-primary)",fontWeight:500}}>{other}</strong>{ro.kind === "fda" && ")"}
                                 </span>
-                                {r.risk_score != null && <span title="Rischio della relazione (0-100)" style={{flexShrink:0,fontSize:11,fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}</span>}
                               </div>
                               {recall ? (
                                 <div style={{marginTop:4}}>
@@ -1063,8 +1113,7 @@ export default function App() {
                                 </div>
                               ) : (r.fact && <div style={{marginTop:4,color:"var(--color-text-primary)"}}>{r.fact}</div>)}
                               <div style={{marginTop:4,fontSize:11,color:"var(--color-text-tertiary)"}}>
-                                Fonte: <SourceLinks sources={relationSources(r, donIndex)}/>
-                                {ro.kind === "manual" && r.date && <span> · data indicata: {formatDay(r.date)}</span>}
+                                Fonte: <SourceLinks sources={relationSources(r, donIndex)} structure={isSsnStructure(r, nodeById) && `${SSN_STRUCTURE}: relazione di organizzazione`}/>
                               </div>
                             </div>
                           )
@@ -1125,13 +1174,12 @@ export default function App() {
           )}
 
           <h2 style={{fontSize:15,fontWeight:500,marginBottom:12}}>Alert generati dall'AI ({alerts.length})</h2>
-          {status?.alerts_error && (
-            <div role="alert" style={{background:"#E24B4A1A",border:"0.5px solid #E24B4A",borderRadius:8,padding:"10px 14px",marginBottom:16,fontSize:13,color:"#A32D2D"}}>
-              La generazione degli alert non è riuscita ({formatDateTime(status.alerts_attempt)}): {status.alerts_error}.
-              {alerts.length > 0 && " Sono mostrati gli alert della generazione precedente."}
-            </div>
+          {status?.alerts_error && alerts.length > 0 && (
+            <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginTop:-6,marginBottom:12}}>
+              Alert dell'aggiornamento precedente ({formatShort(alerts.map(a => a.created_at || "").sort().pop())})
+            </p>
           )}
-          {alerts.length === 0 && !status?.alerts_error && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Nessun alert generato finora: usa "Aggiorna dati" o attendi il prossimo aggiornamento automatico.</p>}
+          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Gli alert saranno disponibili dopo il prossimo aggiornamento dei dati.</p>}
           {[...alerts].sort((x, y) => ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(x.italy_relevance) - ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(y.italy_relevance)).map((a,i) => (
             <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${SEVERITY_COLOR[a.severity]||"#888"}`,borderRadius:8,padding:"12px 16px",marginBottom:12}}>
               <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
@@ -1160,19 +1208,25 @@ export default function App() {
       {!loading && !loadError && tab === "risk" && (
         <div style={{padding:20,maxWidth:700}}>
           <h2 style={{fontSize:15,fontWeight:500,marginBottom:4}}>Risk Score — entità con il rischio più alto</h2>
-          <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:16,lineHeight:1.5}}>
+          <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:12,lineHeight:1.5}}>
             Per le aziende con richiami FDA il punteggio è ricalcolato a ogni aggiornamento: gravità del richiamo (classe I 85, II 55, III 25)
-            pesata per la sua recenza (100% entro 90 giorni, 75% entro un anno, 50% oltre). Gli enti di base hanno un valore assegnato manualmente.
+            pesata per la sua recenza (100% entro 90 giorni, 75% entro un anno, 50% oltre). Per le entità estratte dalle notizie il punteggio
+            è una stima dell'AI della rilevanza rispetto all'evento. Non sono in classifica gli enti regolatori e di risposta
+            (OMS, ECDC, ministeri, AIFA, ISS, EMA, AGENAS…) né gli enti con rischio non calcolato: restano visibili nel grafo.
           </p>
+          <div style={{maxWidth:360,marginBottom:12}}>
+            <ScopeFilter value={scope} label="Filtro della classifica" onChange={setScope}/>
+          </div>
+          {riskRanking.length === 0 && <p style={{fontSize:13,color:"var(--color-text-tertiary)"}}>Nessuna entità con rischio calcolato in questa vista.</p>}
           <div style={{display:"grid",gap:8}}>
-            {[...nodes].sort((a,b)=>b.risk_score-a.risk_score).slice(0,15).map((n,i) => (
+            {riskRanking.map((n,i) => (
               <div key={n.id} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"10px 16px",display:"flex",alignItems:"center",gap:12}}>
                 <span style={{fontSize:12,color:"var(--color-text-tertiary)",minWidth:20}}>#{i+1}</span>
                 <div style={{width:8,height:8,borderRadius:"50%",background:NODE_COLORS[n.type]||"#888"}}/>
                 <div style={{flex:1}}>
                   <div style={{fontWeight:500,fontSize:13}}>{n.label}</div>
-                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{NODE_TYPE_LABEL[n.type] || n.type} · {n.region||"—"}</div>
-                  {n.risk_basis && <div style={{fontSize:11,color:"var(--color-text-secondary)"}}>Motivo: {n.risk_basis}</div>}
+                  <div style={{fontSize:11,color:"var(--color-text-tertiary)"}}>{NODE_TYPE_LABEL[n.type] || OTHER_LABEL} · {n.region||"—"}</div>
+                  {n.risk_basis && <div style={{fontSize:11,color:"var(--color-text-secondary)"}}>Motivo: {basisText(n.risk_basis)}</div>}
                 </div>
                 <div style={{textAlign:"right"}}>
                   <div style={{fontSize:14,fontWeight:500,color:riskColor(n.risk_score)}}>{n.risk_score}</div>

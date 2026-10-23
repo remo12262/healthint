@@ -138,7 +138,7 @@ class Scheduler:
             if problems:
                 raise ValueError("dati nuovi non validi, mantenuta la versione precedente: " + "; ".join(problems))
 
-            # 5. Alert generati dall'AI: se falliscono restano quelli precedenti e l'errore è visibile
+            # 5. Alert generati dall'AI: se falliscono restano quelli precedenti (l'errore resta nei log e in /api/status)
             nodes = await self.db.get_nodes()
             edges = await self.db.get_edges()
             alerts_error = None
@@ -146,7 +146,7 @@ class Scheduler:
                 alerts = await self.extractor.generate_alerts(nodes, edges)
                 await self.db.replace_alerts(alerts)
                 print(f"[scheduler] Generated {len(alerts)} alerts")
-            except AIError as e:
+            except Exception as e:
                 alerts_error = str(e)
                 print(f"[scheduler] ERRORE generazione alert: {alerts_error}")
 
