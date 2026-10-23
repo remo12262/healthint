@@ -1,24 +1,24 @@
 {
  "version": 1,
- "exported_at": "2026-10-22T20:33:51.418212",
- "data_updated_at": "2026-10-22T20:33:51.275926",
+ "exported_at": "2026-10-23T10:01:01.108726",
+ "data_updated_at": "2026-10-23T10:01:00.929977",
  "refresh_info": {
-  "last_success": "2026-10-22T20:33:51.275926",
+  "last_success": "2026-10-23T10:01:00.929977",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 1,
-   "edges": 4,
+   "nodes": 0,
+   "edges": 0,
    "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-10-14",
    "who_outbreaks": "2026-10-15",
-   "italy": "2026-10-22"
+   "italy": "2026-10-23"
   },
   "counts": {
    "openfda_drug": 40,
@@ -30,10 +30,10 @@
    "who_outbreaks_analysis": "analisi AI non riuscita: risposta troncata (max_tokens)"
   },
   "alerts_error": "risposta troncata (max_tokens)",
-  "alerts_attempt": "2026-10-22T20:33:51.275926"
+  "alerts_attempt": "2026-10-23T10:01:00.929977"
  },
  "signals": {
-  "generated_at": "2026-10-22T20:33:10.878348",
+  "generated_at": "2026-10-23T10:00:20.941132",
   "who": [
    {
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
@@ -256,18 +256,18 @@
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro FARYDAK per una specifica indicazione terapeutica."
    },
    {
-    "title": "Chiusura Registro di monitoraggio XALKORI",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
-   },
-   {
     "title": "Aggiornamento Registro di monitoraggio HETRONIFLY",
     "date": "2026-10-22",
     "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-hetronifly",
     "source": "AIFA – Notizie",
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di Monitoraggio di HETRONIFLY (serplulimab) dedicato al monitoraggio di una specifica indicazione terapeutica."
+   },
+   {
+    "title": "Chiusura Registro di monitoraggio XALKORI",
+    "date": "2026-10-22",
+    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
    },
    {
     "title": "Chiusura Registro di monitoraggio RAXONE",
@@ -291,13 +291,6 @@
     "summary": "Esito avviso per il conferimento del posto di funzione dirigenziale di livello non generale di direzione di struttura complessa (Ufficio valutazioni economiche)"
    },
    {
-    "title": "MFA per i Servizi Online AIFA: indicazioni operative e assistenza",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/mfa-per-i-servizi-online-aifa-indicazioni-operative-e-assistenza",
-    "source": "AIFA – Notizie",
-    "summary": "AIFA sta intervenendo per risolvere le criticità segnalate dagli utenti delle aziende farmaceutiche e degli enti del SSN nonché dalle associazioni di categoria Farmindustria ed Egualia."
-   },
-   {
     "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
     "date": "2026-10-22",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2816-online-il-bollettino-trimestrale-agenas-sul-monitoraggio-delle-liste-di-attesa",
@@ -309,21 +302,21 @@
     "date": "2026-10-22",
     "url": "https://www.iss.it/-/antimicrobico-resistenza-anche-l-iss-tra-i-vincitori-del-data-challenge-di-vivli-con-un-progetto-per-sfruttare-meglio-i-dati-incompleti",
     "source": "ISS – Comunicati stampa",
-    "summary": "Vivli ha annunciato i sei team vincitori della \"Vivli AMR Surveillance Data Challenge\" del 2026, premiando ricerche che utilizzano dati di sorveglianza condivisi per affrontare questioni che spaziano dalle politiche nazionali sull'antimicrobico-resistenza (AMR) e la vaccinazione,"
+    "summary": "Edited 22/10/2026 Vivli ha annunciato i sei team vincitori della \"Vivli AMR Surveillance Data Challenge\" del 2026, premiando ricerche che utilizzano dati di sorveglianza condivisi per affrontare questioni che spaziano dalle politiche nazionali sull'antimicrobico-resistenza (AMR) "
    },
    {
     "title": "Promuovere la salute pubblica a scuola, 34 progetti Iss per la “Mappa della città educante” di Roma",
     "date": "2026-10-22",
     "url": "https://www.iss.it/-/promuovere-la-salute-pubblica-a-scuola-34-progetti-iss-per-la-mappa-della-citt%C3%A0-educante-di-roma",
     "source": "ISS – Comunicati stampa",
-    "summary": "Edited 22/10/2026 Dalla prevenzione agli stili di vita all’inclusione alla cittadinanza scientifica, sono 34 quest’anno le proposte dell’Iss per il progetto ‘Mappa della Città Educante’ promosso da Roma Capitale per le scuole della città, che ogni anno offre un catalogo di inizia"
+    "summary": "Dalla prevenzione agli stili di vita all’inclusione alla cittadinanza scientifica, sono 34 quest’anno le proposte dell’Iss per il progetto ‘Mappa della Città Educante’ promosso da Roma Capitale per le scuole della città, che ogni anno offre un catalogo di iniziative didattico-for"
    },
    {
     "title": "RaraMente n. 117",
     "date": "2026-10-22",
     "url": "https://www.iss.it/-/raramente-n.-117",
     "source": "ISS – Comunicati stampa",
-    "summary": "Edited 22/10/2026 In questo numero : Giuseppe Feltrin , Direttore Generale Centro Nazionale Trapianti, Istituto Superiore di Sanità, e Silvia Deaglio , Dipartimento di Scienze Mediche, Università di Torino e SC di Immunogenetica e Biologia dei Trapianti, AOU Città della Salute e "
+    "summary": "In questo numero : Giuseppe Feltrin , Direttore Generale Centro Nazionale Trapianti, Istituto Superiore di Sanità, e Silvia Deaglio , Dipartimento di Scienze Mediche, Università di Torino e SC di Immunogenetica e Biologia dei Trapianti, AOU Città della Salute e della Scienza di T"
    },
    {
     "title": "Arbovirosi: 363 casi confermati di Dengue, 30 di Chikungunya, 777 di West Nile",
@@ -338,6 +331,13 @@
     "url": "https://www.iss.it/-/in-italia-screening-per-il-tumore-al-seno-per-il-77-delle-donne-ma-forte-gradiente-nord-sud",
     "source": "ISS – Comunicati stampa",
     "summary": "In Italia il 77% delle donne fra i 50 e i 69 anni si è sottoposto a mammografia a scopo preventivo, nei tempi raccomandati, ma l'adesione alla procedura ha forti variazioni regionali, con un netto gradiente Nord-Sud. Lo affermano i dati , relativi al biennio 2024-2025, della Sorv"
+   },
+   {
+    "title": "Salute, cambiamenti climatici e nuove sfide ambientali, fino al 10 dicembre disponibili i corsi Fad SABiC dell'Iss",
+    "date": "2026-10-19",
+    "url": "https://www.iss.it/-/salute-cambiamenti-climatici-e-nuove-sfide-ambientali-fino-al-10-dicembre-disponibili-i-corsi-fad-sabic-dell-iss",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Le ripercussioni dei cambiamenti climatici sulla salute umana e sugli ecosistemi, sono sempre più evidenti. Per approfondire il legame tra temperature in aumento, eventi estremi e altre sfide ambientali e salute umana, e acquisire strumenti utili a contrastarne gli impatti, sono "
    },
    {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
@@ -375,7 +375,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-22T20:32:47.111654",
+   "updated_at": "2026-10-23T10:00:05.315678",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -387,7 +387,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-22T20:32:47.111654",
+   "updated_at": "2026-10-23T10:00:05.315678",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -399,7 +399,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -459,7 +459,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-22T20:32:47.111654",
+   "updated_at": "2026-10-23T10:00:05.315678",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -471,7 +471,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-22T20:32:47.111654",
+   "updated_at": "2026-10-23T10:00:05.315678",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -483,7 +483,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-22T20:32:47.111654",
+   "updated_at": "2026-10-23T10:00:05.315678",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -495,7 +495,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -510,7 +510,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -684,7 +684,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-22T20:32:47.111654",
+   "updated_at": "2026-10-23T10:00:05.315678",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -1311,7 +1311,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1323,7 +1323,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1335,7 +1335,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1347,7 +1347,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1359,7 +1359,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1371,7 +1371,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1383,7 +1383,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2252,7 +2252,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-0078-2027 di classe II del 14/10/2026"
   },
   {
@@ -2264,7 +2264,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-22T20:32:47.124974",
+   "updated_at": "2026-10-23T10:00:05.357786",
    "risk_basis": "Richiamo FDA Z-0082-2027 di classe II del 14/10/2026"
   },
   {
