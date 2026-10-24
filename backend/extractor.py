@@ -109,13 +109,12 @@ a un campo di uno dei record qui sopra. Dove il record non dice una cosa, non la
 portata di un dato: non generalizzare il tipo di prodotto, non dedurre reparti, setting di cura, popolazioni di
 pazienti, aree geografiche, numeri, date o urgenze che il record non nomina.
 
-Descrizione e impatto per l'Italia li compone il sistema con il testo del record tra virgolette: tu scrivi solo
+Titolo, descrizione e impatto per l'Italia li compone il sistema con il testo del record tra virgolette: tu scrivi solo
 le chiavi qui sotto.
 {rules}
 
 Genera un alert per ciascun record, uno solo per record. Per ogni alert:
 - "source_id": l'id esatto del record da cui nasce (uno solo);
-- "title": al massimo 12 parole, solo fatti scritti nel record;
 - "severity": CRITICAL|HIGH|MEDIUM|LOW;
 - "italy_relevance": ALTA|MEDIA|BASSA|NESSUNA;
 - "recommendation": al massimo 30 parole, verifiche concrete che usano solo i campi del record, senza nominare
@@ -123,7 +122,6 @@ Genera un alert per ciascun record, uno solo per record. Per ogni alert:
 Rispondi SOLO con JSON valido: una lista di oggetti con queste chiavi."""
 
 ALERT_RULES_RECALLS = """I record sono richiami FDA di farmaci e dispositivi con l'Italia nella distribuzione.
-- Nel titolo usa il nome del prodotto come è scritto in product_description, non una categoria più ampia.
 - In "recommendation" indica di verificare la presenza del prodotto con i codici del campo code_info."""
 
 ALERT_RULES_WHO = """I record sono le notizie OMS Disease Outbreak News più recenti, una per evento: usa solo il campo summary.
@@ -385,7 +383,7 @@ class EntityExtractor:
             if not isinstance(result, list):
                 raise AIError(f"attesa una lista di alert, ricevuto {type(result).__name__}")
             for a in result:
-                if not isinstance(a, dict) or not a.get("title"):
+                if not isinstance(a, dict):
                     continue
                 sid = a.get("source_id")
                 if kind == "recall" and sid in recalls:
@@ -394,6 +392,9 @@ class EntityExtractor:
                     a["description"] = (f"Richiamo FDA {sid}. Prodotto: \"{squash(rec['product_description'])}\" "
                                         f"Motivo: \"{squash(rec.get('reason_for_recall'))}\"")
                     a["italy_impact"] = ITALY_IMPACT_RECALL
+                    # Nome del prodotto: product_description fino al primo ";" o ". "
+                    name = re.split(r";|\. ", squash(rec["product_description"]), maxsplit=1)[0].strip()[:90]
+                    a["title"] = f"Richiamo FDA {rec.get('classification') or ''}: \"{name}\"".replace("  ", " ")
                     a["entities_involved"] = [recalls[sid]["firm_id"]]
                 elif kind == "who" and sid in who:
                     doc = who[sid]
@@ -416,6 +417,7 @@ class EntityExtractor:
                         continue
                     a["description"] = (f"OMS, Disease Outbreak News {sid} del {doc.get('published')}: "
                                         + " ".join(f"\"{q}\"" for q in quotes))
+                    a["title"] = f"OMS: \"{doc.get('title')}\""
                     a["italy_impact"] = (ITALY_IMPACT_WHO if not ITALY_RE.search(source_text)
                                          else "Il documento OMS nomina l'Italia: vedi il testo citato e la fonte.")
                     a["entities_involved"] = []
