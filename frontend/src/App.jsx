@@ -8,9 +8,9 @@ const NODE_COLORS = {
   RegulatorAgency:   "#378ADD",
   RegionalAuthority: "#D85A30",
   ProcurementBody:   "#BA7517",
-  ResearchInstitute: "#5A9E8A",
+  ResearchInstitute: "#2B9CB0",
   PrivateGroup:      "#A32D2D",
-  InsuranceBody:     "#888780",
+  InsuranceBody:     "#97A03A",
   Person:            "#D4537E",
 }
 
@@ -326,11 +326,12 @@ export default function App() {
   const [allNodes, setNodes] = useState([])
   const [allEdges, setEdges] = useState([])
   // Filtro del grafo: tutto, solo Italia (enti italiani e aziende con richiami distribuiti in Italia), internazionale
+  // (il complemento esatto di solo Italia)
   // (si può aprire direttamente con ?vista=italia o ?vista=internazionale)
   const [scope, setScope] = useState(() => ({italia: "it", internazionale: "int"})[
     typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("vista") : ""] || "all")
   const nodes = useMemo(() => scope === "all" ? allNodes
-    : allNodes.filter(n => scope === "it" ? n.italy || n.italy_related : !n.italy), [allNodes, scope])
+    : allNodes.filter(n => scope === "it" ? n.italy || n.italy_related : !(n.italy || n.italy_related)), [allNodes, scope])
   const edges = useMemo(() => {
     if (scope === "all") return allEdges
     const ids = new Set(nodes.map(n => n.id))
@@ -1099,7 +1100,7 @@ export default function App() {
                     </span>
                   )}
                 </div>
-                <div>Dimensione = rischio · anello = rischio &gt; 60 · {narrow ? "tocca" : "clic su"} un nodo o una linea per fonte e dettagli</div>
+                <div>Dimensione = rischio · anello = rischio &gt; 60 · rischio non calcolato: dimensione minima, nessun anello · {narrow ? "tocca" : "clic su"} un nodo o una linea per fonte e dettagli</div>
                 <details style={{marginTop:4}}>
                   <summary style={{cursor:"pointer"}}>Fonti e copertura</summary>
                   <div>{narrow ? "Due dita: zoom · trascina: sposta." : "Rotella: zoom · trascina lo sfondo: sposta."} Etichette visibili per i nodi principali; le altre al passaggio del mouse o ingrandendo.</div>
@@ -1266,7 +1267,36 @@ export default function App() {
       {/* Alerts tab */}
       {!loading && !loadError && tab === "alerts" && (
         <div style={{padding:20,maxWidth:800}}>
-          <h2 style={{fontSize:15,fontWeight:500,marginBottom:4}}>Segnalazioni dalle fonti</h2>
+          <h2 style={{fontSize:15,fontWeight:500,marginBottom:12}}>Alert generati dall'AI ({alerts.length})</h2>
+          {status?.alerts_error && alerts.length > 0 && (
+            <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginTop:-6,marginBottom:12}}>
+              Alert dell'aggiornamento precedente ({formatShort(alerts.map(a => a.created_at || "").sort().pop())})
+            </p>
+          )}
+          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Gli alert saranno disponibili dopo il prossimo aggiornamento dei dati.</p>}
+          {[...alerts].sort((x, y) => ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(x.italy_relevance) - ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(y.italy_relevance)).map((a,i) => (
+            <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${SEVERITY_COLOR[a.severity]||"#888"}`,borderRadius:8,padding:"12px 16px",marginBottom:12}}>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
+                <span style={{fontSize:11,fontWeight:500,padding:"2px 8px",borderRadius:4,background:SEVERITY_COLOR[a.severity]+"22",color:SEVERITY_COLOR[a.severity]}}>{a.severity}</span>
+                <span style={{fontSize:14,fontWeight:500}}>{a.title}</span>
+              </div>
+              <p style={{fontSize:13,color:"var(--color-text-secondary)",marginBottom:8,lineHeight:1.5}}>{a.description}</p>
+              {(a.italy_impact || a.italy_relevance) && (
+                <div style={{fontSize:13,lineHeight:1.5,marginBottom:8,padding:"8px 10px",borderRadius:6,background:"#378ADD12",border:"0.5px solid #378ADD55"}}>
+                  <div style={{marginBottom:2}}>
+                    <strong style={{fontWeight:500}}>🇮🇹 Impatto per l'Italia</strong>
+                    {a.italy_relevance && <span style={{marginLeft:8,fontSize:11,fontWeight:500,padding:"1px 8px",borderRadius:4,
+                      background:(ITALY_COLOR[a.italy_relevance]||"#888")+"22",color:ITALY_COLOR[a.italy_relevance]||"#888"}}>rilevanza {a.italy_relevance.toLowerCase()}</span>}
+                  </div>
+                  {a.italy_impact && <div style={{color:"var(--color-text-secondary)"}}>{a.italy_impact}</div>}
+                </div>
+              )}
+              {a.timeframe && <div style={{fontSize:12,color:"var(--color-text-tertiary)"}}>⏱ Orizzonte: {a.timeframe}</div>}
+              {a.recommendation && <div style={{fontSize:12,color:"var(--color-text-secondary)",marginTop:6,padding:"6px 8px",background:"var(--color-background-secondary)",borderRadius:4}}>💡 {a.recommendation}</div>}
+            </div>
+          ))}
+
+          <h2 style={{fontSize:15,fontWeight:500,marginTop:24,marginBottom:4}}>Segnalazioni dalle fonti</h2>
           <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:12}}>Dati reali scaricati a ogni aggiornamento, senza elaborazione dell'AI.</p>
           {signals?.italy?.length > 0 && (
             <div style={{marginBottom:16}}>
@@ -1308,35 +1338,6 @@ export default function App() {
               ))}
             </div>
           )}
-
-          <h2 style={{fontSize:15,fontWeight:500,marginBottom:12}}>Alert generati dall'AI ({alerts.length})</h2>
-          {status?.alerts_error && alerts.length > 0 && (
-            <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginTop:-6,marginBottom:12}}>
-              Alert dell'aggiornamento precedente ({formatShort(alerts.map(a => a.created_at || "").sort().pop())})
-            </p>
-          )}
-          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Gli alert saranno disponibili dopo il prossimo aggiornamento dei dati.</p>}
-          {[...alerts].sort((x, y) => ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(x.italy_relevance) - ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(y.italy_relevance)).map((a,i) => (
-            <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${SEVERITY_COLOR[a.severity]||"#888"}`,borderRadius:8,padding:"12px 16px",marginBottom:12}}>
-              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
-                <span style={{fontSize:11,fontWeight:500,padding:"2px 8px",borderRadius:4,background:SEVERITY_COLOR[a.severity]+"22",color:SEVERITY_COLOR[a.severity]}}>{a.severity}</span>
-                <span style={{fontSize:14,fontWeight:500}}>{a.title}</span>
-              </div>
-              <p style={{fontSize:13,color:"var(--color-text-secondary)",marginBottom:8,lineHeight:1.5}}>{a.description}</p>
-              {(a.italy_impact || a.italy_relevance) && (
-                <div style={{fontSize:13,lineHeight:1.5,marginBottom:8,padding:"8px 10px",borderRadius:6,background:"#378ADD12",border:"0.5px solid #378ADD55"}}>
-                  <div style={{marginBottom:2}}>
-                    <strong style={{fontWeight:500}}>🇮🇹 Impatto per l'Italia</strong>
-                    {a.italy_relevance && <span style={{marginLeft:8,fontSize:11,fontWeight:500,padding:"1px 8px",borderRadius:4,
-                      background:(ITALY_COLOR[a.italy_relevance]||"#888")+"22",color:ITALY_COLOR[a.italy_relevance]||"#888"}}>rilevanza {a.italy_relevance.toLowerCase()}</span>}
-                  </div>
-                  {a.italy_impact && <div style={{color:"var(--color-text-secondary)"}}>{a.italy_impact}</div>}
-                </div>
-              )}
-              {a.timeframe && <div style={{fontSize:12,color:"var(--color-text-tertiary)"}}>⏱ Orizzonte: {a.timeframe}</div>}
-              {a.recommendation && <div style={{fontSize:12,color:"var(--color-text-secondary)",marginTop:6,padding:"6px 8px",background:"var(--color-background-secondary)",borderRadius:4}}>💡 {a.recommendation}</div>}
-            </div>
-          ))}
         </div>
       )}
 
@@ -1352,17 +1353,22 @@ export default function App() {
             <ScopeFilter value={scope} label="Filtro della classifica" onChange={setScope}/>
           </div>
           {[["Richiami di prodotti — punteggio calcolato", fdaRanking,
-             "Gravità del richiamo FDA (classe I 85, II 55, III 25) pesata per la sua recenza (100% entro 90 giorni, 75% entro un anno, 50% oltre), ricalcolata a ogni aggiornamento." + (drugNote ? " " + drugNote : "")],
+             "Gravità del richiamo FDA (classe I 85, II 55, III 25) pesata per la sua recenza (100% entro 90 giorni, 75% entro un anno, 50% oltre), ricalcolata a ogni aggiornamento." + (drugNote ? " " + drugNote : ""),
+             scope === "int" && "Nessun richiamo in questa vista: il sistema raccoglie da openFDA i richiami con distribuzione in Italia, quindi tutti i richiami monitorati oggi hanno un legame italiano."],
             ["Eventi sanitari segnalati — stima dell'AI", aiRanking,
              "Stima dell'AI della rilevanza rispetto all'evento descritto nel documento, assegnata quando il documento è stato analizzato e poi non più ricalcolata: non è una misura del rischio dell'ente."],
-          ].map(([title, list, note]) => (
+          ].map(([title, list, note, emptyText]) => (
           <div key={title} style={{marginBottom:24}}>
           <h3 style={{fontSize:14,fontWeight:500,marginBottom:4}}>{title}</h3>
           <p style={{fontSize:12,color:"var(--color-text-tertiary)",marginBottom:10,lineHeight:1.5}}>{note}</p>
-          {list.length === 0 && <p style={{fontSize:13,color:"var(--color-text-tertiary)"}}>Nessuna entità in questa vista.</p>}
+          {list.length === 0 && <p style={{fontSize:13,color:"var(--color-text-tertiary)"}}>{emptyText || "Nessuna entità in questa vista."}</p>}
           <div style={{display:"grid",gap:8}}>
             {list.map((n,i) => (
-              <div key={n.id} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"10px 16px",display:"flex",alignItems:"center",gap:12}}>
+              // Clic: apre l'entità nel grafo, con dettagli, richiami e record FDA
+              <div key={n.id} role="button" tabIndex={0} title="Apri nel grafo: dettagli e fonte"
+                onClick={() => { setTab("graph"); setTimeout(() => focusNode(n), 600) }}
+                onKeyDown={ev => { if (ev.key === "Enter") { setTab("graph"); setTimeout(() => focusNode(n), 600) } }}
+                style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:8,padding:"10px 16px",display:"flex",alignItems:"center",gap:12,cursor:"pointer"}}>
                 <span style={{fontSize:12,color:"var(--color-text-tertiary)",minWidth:20}}>#{i+1}</span>
                 <div style={{width:8,height:8,borderRadius:"50%",background:NODE_COLORS[n.type]||"#888"}}/>
                 <div style={{flex:1}}>
