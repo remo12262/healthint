@@ -1273,7 +1273,7 @@ export default function App() {
               Alert dell'aggiornamento precedente ({formatShort(alerts.map(a => a.created_at || "").sort().pop())})
             </p>
           )}
-          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Gli alert saranno disponibili dopo il prossimo aggiornamento dei dati.</p>}
+          {alerts.length === 0 && <p style={{color:"var(--color-text-tertiary)",fontSize:13}}>Nessun alert disponibile: si generano con l'aggiornamento dei dati (pulsante «Aggiorna dati»).</p>}
           {[...alerts].sort((x, y) => ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(x.italy_relevance) - ["ALTA","MEDIA","BASSA","NESSUNA"].indexOf(y.italy_relevance)).map((a,i) => (
             <div key={i} style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderLeft:`3px solid ${SEVERITY_COLOR[a.severity]||"#888"}`,borderRadius:8,padding:"12px 16px",marginBottom:12}}>
               <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
@@ -1311,7 +1311,7 @@ export default function App() {
             </div>
           )}
           {!signals?.who?.length && !signals?.recalls?.length && !signals?.italy?.length && (
-            <p style={{fontSize:13,color:"var(--color-text-tertiary)",marginBottom:16}}>Le segnalazioni compariranno dopo il prossimo aggiornamento dei dati.</p>
+            <p style={{fontSize:13,color:"var(--color-text-tertiary)",marginBottom:16}}>Nessuna segnalazione disponibile: si scaricano con l'aggiornamento dei dati (pulsante «Aggiorna dati»).</p>
           )}
           {signals?.who?.length > 0 && (
             <div style={{marginBottom:16}}>
