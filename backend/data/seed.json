@@ -1,19 +1,18 @@
 {
  "version": 1,
- "exported_at": "2026-10-23T18:31:42.557009",
- "data_updated_at": "2026-10-23T18:31:42.222563",
+ "exported_at": "2026-10-24T08:48:58.420020",
+ "data_updated_at": "2026-10-24T08:48:58.293149",
  "refresh_info": {
-  "last_success": "2026-10-23T18:31:42.222563",
+  "last_success": "2026-10-24T08:48:58.293149",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "italy",
-   "who_outbreaks"
+   "italy"
   ],
   "new": {
-   "nodes": 5,
-   "edges": 9,
-   "alerts": 6
+   "nodes": 0,
+   "edges": 0,
+   "alerts": 4
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
@@ -25,14 +24,14 @@
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 46
+   "italy": 43
   },
   "source_errors": {},
   "alerts_error": null,
-  "alerts_attempt": "2026-10-23T18:31:42.222563"
+  "alerts_attempt": "2026-10-24T08:48:58.293149"
  },
  "signals": {
-  "generated_at": "2026-10-23T18:31:18.110125",
+  "generated_at": "2026-10-24T08:48:36.093631",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -199,6 +198,41 @@
   ],
   "italy": [
    {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-10-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/23/26A05540/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di cefixima, «Cefibact» (26A05540)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-10-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/23/26A05541/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di cefixima, «Cefixima Pharmacare». (26A05541)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-10-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/23/26A05542/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di cefixima, «Nazoma» (26A05542)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-10-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/23/26A05543/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di cefixima, «Cefixima P-Care» (26A05543)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-10-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/23/26A05544/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Fosavance» (26A05544)"
+   },
+   {
     "title": "Esiti runione Commissione Scientifica e Economica del Farmaco (CSE)",
     "date": "2026-10-23",
     "url": "https://www.aifa.gov.it/-/esiti-cse",
@@ -234,39 +268,11 @@
     "summary": "In occasione della sua quarta Assemblea generale a Poznań, JACARDI, Joint Action europea coordinata dall’Istituto Superiore di Sanità (ISS), ha offerto un’occasione per condividere le esperienze delle persone e i risultati dei progetti pilota, favorendo momenti di confronto con d"
    },
    {
-    "title": "MINISTERO DELLA SALUTE - DECRETO 17 settembre 2026",
+    "title": "Chiusura Registro di monitoraggio XALKORI",
     "date": "2026-10-22",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/22/26A05532/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Caratteristiche e contenuti delle prescrizioni transfrontaliere - ID Monitor 96. (26A05532)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-22",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/22/26A05516/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Nurofenkid febbre e dolore». (26A05516)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-22",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/22/26A05517/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Buscopan Compositum». (26A05517)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-22",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/22/26A05518/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Slinda» (26A05518)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-22",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/22/26A05519/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Enterogermina» (26A05519)"
+    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
    },
    {
     "title": "Chiusura Registro di monitoraggio COMETRIQ",
@@ -276,11 +282,18 @@
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro COMETRIQ per una specifica indicazione terapeutica."
    },
    {
-    "title": "Chiusura Registro di monitoraggio XALKORI",
+    "title": "Chiusura Registri di monitoraggio ZYDELIG",
     "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
+    "url": "https://www.aifa.gov.it/-/chiusura-registri-di-monitoraggio-zydelig",
     "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro ZYDELIG per specifiche indicazioni terapeutiche."
+   },
+   {
+    "title": "Chiusura Registro di monitoraggio FARYDAK",
+    "date": "2026-10-22",
+    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-farydak",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro FARYDAK per una specifica indicazione terapeutica."
    },
    {
     "title": "Chiusura Registro di monitoraggio RAXONE",
@@ -288,20 +301,6 @@
     "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-raxone",
     "source": "AIFA – Notizie",
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro RAXONE per una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Aggiornamento Registro di monitoraggio HETRONIFLY",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-hetronifly",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di Monitoraggio di HETRONIFLY (serplulimab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Chiusura Registri di monitoraggio ZYDELIG",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registri-di-monitoraggio-zydelig",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro ZYDELIG per specifiche indicazioni terapeutiche."
    },
    {
     "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
@@ -378,7 +377,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T18:31:04.925099",
+   "updated_at": "2026-10-24T08:48:35.973903",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -390,7 +389,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T18:31:04.925099",
+   "updated_at": "2026-10-24T08:48:35.973903",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -402,7 +401,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -462,7 +461,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T18:31:04.925099",
+   "updated_at": "2026-10-24T08:48:35.973903",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -474,7 +473,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T18:31:04.925099",
+   "updated_at": "2026-10-24T08:48:35.973903",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -486,7 +485,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T18:31:04.925099",
+   "updated_at": "2026-10-24T08:48:35.973903",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -498,7 +497,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -513,7 +512,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -687,7 +686,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-23T18:31:04.925099",
+   "updated_at": "2026-10-24T08:48:35.973903",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -1379,7 +1378,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1391,7 +1390,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1403,7 +1402,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1415,7 +1414,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1427,7 +1426,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1439,7 +1438,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1451,7 +1450,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2418,7 +2417,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-0078-2027 di classe II del 14/10/2026"
   },
   {
@@ -2430,7 +2429,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-23T18:31:04.936870",
+   "updated_at": "2026-10-24T08:48:35.986434",
    "risk_basis": "Richiamo FDA Z-0082-2027 di classe II del 14/10/2026"
   },
   {
@@ -14435,86 +14434,86 @@
  "alerts": [
   {
    "id": "alert_ebola_bundibugyo_rdc_2026",
-   "title": "Epidemia Ebola Bundibugyo in RDC – Emergenza OMS",
-   "description": "Epidemia attiva di virus Bundibugyo in Repubblica Democratica del Congo dichiarata emergenza sanitaria pubblica di rilevanza internazionale il 18 agosto 2026. 6757 casi confermati con CFR 48,3%. Trasmissione sostenuta in strutture sanitarie e espansione a 61 zone sanitarie incluse Nord Kivu, Sud Kivu, Ituri e Bas-Uélé.",
+   "title": "Epidemia Ebola Bundibugyo – RDC: rischio importazione",
+   "description": "Epidemia attiva di virus Bundibugyo in RDC con 6757 casi, CFR 48.3%, espansione a 61 zone sanitarie e trasmissione sostenuta in strutture sanitarie. OMS ha dichiarato emergenza internazionale il 18 agosto 2026.",
    "severity": "CRITICAL",
    "entities_involved": "[\"evt_ebola_cd\", \"country_cd\", \"who_emergency_committee\", \"healthcare_settings_drc\"]",
-   "predicted_impact": "Identificazione precoce di sospetti casi importati; attivazione protocolli isolamento; stress su reparti malattie infettive; necessità PPE specializzati.",
+   "predicted_impact": "Un caso importato potrebbe causare trasmissione nosocominale data la mancanza di esperienza clinica in Italia e rischi di ritardi diagnostici.",
    "italy_relevance": "MEDIA",
-   "italy_impact": "Rischio per Italia via: (1) rientri di cooperanti sanitari e ONG operanti in RDC; (2) viaggi da aree endemiche verso hub europei; (3) potenziali casi importati con manifestazione clinica tardiva. Richiede sorveglianza attiva ai porti/aeroporti internazionali e presso ospedali di riferimento per malattie infettive.",
-   "timeframe": "3-12 mesi, fino a controllo epidemia RDC",
-   "recommendation": "Allertare Ministero Salute e Regioni. Aggiornare protocolli ospedalieri per Ebola. Intensificare sorveglianza sindromica febbre emorragica presso DEA. Verificare scorte PPE e reagenti diagnostici presso laboratori di riferimento (ISS, Spallanzani).",
-   "created_at": "2026-10-23T18:31:42.220977",
+   "italy_impact": "Rischio importazione via voli internazionali da RDC e paesi confinanti; rientri di cooperanti e operatori umanitari; possibile accesso di casi sospetti nei nosocomi italiani. Impatto su laboratori di riferimento (INMI Spallanzani, IZS) e reparti malattie infettive. Screening ai punti di ingresso (aeroporti, porti) è critico.",
+   "timeframe": "Immediato (epidemia in corso) – 6-12 mesi",
+   "recommendation": "Attivare sorveglianza rafforzata ai valichi; aggiornare protocolli isolamento in reparti infettivi; verificare disponibilità DPI e biosicurezza laboratori; allertare operatori sanitari su sintomi Ebola; coordinare con OMS e autorità consolari per tracciamento viaggiatori da zone colpite.",
+   "created_at": "2026-10-24T08:48:58.292854",
    "is_read": false
   },
   {
-   "id": "alert_healthcare_infection_control_drc",
-   "title": "Trasmissione sostenuta in strutture sanitarie RDC",
-   "description": "Trasmissione virale sostenuta documentata in healthcare settings della RDC dovuta a ritardi nella rilevazione di casi e accesso limitato a cure adeguate. Questo amplifica il rischio di esposizione per operatori sanitari e aumenta la probabilità di casi secondari.",
+   "id": "alert_ebola_healthcare_transmission_rdc",
+   "title": "Trasmissione Ebola in strutture sanitarie RDC: rischi per cooperanti",
+   "description": "Trasmissione sostenuta del virus Bundibugyo in healthcare settings RDC dovuta a ritardi rilevazione casi e accesso limitato a cure adeguate. Alto rischio espositivo per operatori sanitari in loco.",
    "severity": "HIGH",
    "entities_involved": "[\"evt_ebola_cd\", \"healthcare_settings_drc\", \"prov_cd_nord_kivu\", \"prov_cd_ituri\"]",
-   "predicted_impact": "Cluster di casi correlati a esposizione occupazionale; coinvolgimento di strutture ospedaliere per isolamento; impatto psicosociale su personale esposto.",
+   "predicted_impact": "Casi importati potrebbero manifestarsi entro 3 settimane dal rientro in Italia, con conseguente allerta epidemiologica e ricerca contatti.",
    "italy_relevance": "MEDIA",
-   "italy_impact": "Aumentato rischio di esposizione occupazionale per cooperanti sanitari italiani e personale ONG presenti in strutture sanitarie RDC. Al rientro in Italia, maggiore probabilità di identificazione tardiva di infezione. Necessaria sorveglianza dedicata per questo gruppo.",
-   "timeframe": "Immediato, finché perdura trasmissione in RDC",
-   "recommendation": "Comunicare rischio specifico a Ministero Esteri, cooperanti ONG e organizzazioni sanitarie internazionali con personale in RDC. Definire protocolli di rientro sicuro con quarantena monitorata. Predisporre test diagnostici molecolari rapidi presso laboratori di riferimento.",
-   "created_at": "2026-10-23T18:31:42.220977",
+   "italy_impact": "Operatori umanitari, cooperanti e personale medico italiano in RDC esposto a trasmissione nosocominale. Rischio rientro di soggetti esposti o infetti in Italia entro periodo di incubazione (2-21 giorni). SSN deve predisporre sorveglianza attiva per rientri da zone colpite.",
+   "timeframe": "Immediato – 3 mesi",
+   "recommendation": "Notificare a Ministero Esteri e ONG italiane operative in RDC i rischi; implementare pre-partenza e post-rientro screening clinico e monitoring; attivare protocolli isolamento presso INMI Spallanzani e centri regionali riferimento; coordinare con Centro Operativo Emergenze SSN.",
+   "created_at": "2026-10-24T08:48:58.292854",
    "is_read": false
   },
   {
-   "id": "alert_geographical_expansion_ebola",
-   "title": "Espansione geografica rapida Ebola in 61 zone RDC",
-   "description": "Epidemia di Bundibugyo virus in espansione continua verso molteplici province (Nord Kivu, Sud Kivu, Ituri, Bas-Uélé) con interessamento di 61 zone sanitarie. Trasmissione sostenuta suggerisce difficoltà di contenimento e potenziale ulteriore propagazione geografica.",
+   "id": "alert_ebola_geographic_expansion_monitoring",
+   "title": "Espansione geografica Ebola RDC: preparazione sorveglianza nazionale",
+   "description": "Epidemia Bundibugyo in espansione continua (61 zone sanitarie coinvolte, Nord Kivu, Ituri, Sud Kivu, Bas-Uélé). Alto rischio diffusione transfrontaliera a paesi confinanti con connessioni migratorie verso Europa.",
    "severity": "HIGH",
    "entities_involved": "[\"evt_ebola_cd\", \"prov_cd_nord_kivu\", \"prov_cd_sud_kivu\", \"prov_cd_ituri\"]",
-   "predicted_impact": "Preparazione ospedaliera per scenario peggiore; aggiornamento simulazioni da tavoli di crisi; verifica capacità laboratoristica BSL-4.",
-   "italy_relevance": "BASSA",
-   "italy_impact": "Rischio Italia contenuto ma non nullo: allargamento della base di casi aumenta probabilità di esportazione verso Africa occidentale e conseguenti viaggi internazionali. Italia rimane potenziale meta secondaria. Monitoraggio strategico della situazione epidemiologica utile per pianificazione capacità diagnostica e isolamento.",
-   "timeframe": "2-6 mesi",
-   "recommendation": "Coinvolgere Protezione Civile e direzioni ospedaliere nella pianificazione scenario di caso importato. Verificare presso laboratori di riferimento disponibilità test PCR per Bundibugyo virus. Aggiornare linee guida regionali sulla diagnosi differenziale di febbre emorragica.",
-   "created_at": "2026-10-23T18:31:42.220977",
+   "predicted_impact": "Allerta epidemiologica nazionale, attivazione protocolli di isolamento, tensione su risorse diagnostiche e DPI in ambito ospedaliero.",
+   "italy_relevance": "MEDIA",
+   "italy_impact": "Se epidemia si espande verso Congo, Uganda o altri paesi con rotte migratorie verso Europa, rischio aumenta. Italia potrebbe ricevere casi via rotte secondarie (attraversamenti irregolari, transiti). Impatto su pronto soccorso, diagnostica e logistica ospedaliera.",
+   "timeframe": "3-6 mesi",
+   "recommendation": "Istituire task force intersettoriale (Ministero Salute, Regioni, INMI, ISS) per monitoraggio epidemiologico continuo; rafforzare capacità diagnostica PCR-Ebola nei laboratori regionali; predisporre posti letto isolamento pressurizzato in tutti gli ospedali hub; coordinare comunicazione con medici medicina generale su sospetti da segnalare.",
+   "created_at": "2026-10-24T08:48:58.292854",
    "is_read": false
   },
   {
    "id": "philips_ct_software_artifacts",
-   "title": "Difetti software Philips Spectral CT distribuiti in Italia",
-   "description": "Richiamo Class II FDA Z-0078-2027: problemi software nei sistemi Spectral CT Philips possono causare artefatti nelle immagini compromettendo sicurezza e performance diagnostica.",
+   "title": "Difetti software Philips Spectral CT: artefatti immagini",
+   "description": "Richiamo Class II FDA Z-0078-2027 per problemi software nei sistemi Spectral CT Philips che possono causare artefatti nelle immagini e compromettere sicurezza e performance diagnostica.",
    "severity": "HIGH",
-   "entities_involved": "[\"philips_medical_systems\", \"imaging_departments\", \"radiology_centers\"]",
-   "predicted_impact": "Rischio di diagnosi errate in oncologia, cardiologia e neuroimaging. Potenziale impatto su pazienti già sottoposti a CT con artefatti non rilevati.",
+   "entities_involved": "[\"philips_medical_systems\", \"strutture_diagnostica_imaging_italia\", \"ingegneria_clinica_ospedali\"]",
+   "predicted_impact": "Ritardi diagnostici, possibili diagnosi errate in pazienti oncologici e vascolari, necessità di reimaging con espositivi radiazioni aggiuntivi.",
    "italy_relevance": "ALTA",
-   "italy_impact": "Ospedali e centri diagnostici italiani con sistemi Philips Spectral CT devono verificare immediatamente l'inventario. Ingegneria clinica deve contattare Philips per patch software. Reparti radiologia potrebbero necessitare verifica retrospettiva di scansioni critiche eseguite con versioni software vulnerabili.",
-   "timeframe": "1-2 mesi per implementazione patch",
-   "recommendation": "Farmacie ospedaliere e ingegneria clinica: verificare presenza sistemi Philips Spectral CT; contattare Philips per aggiornamento software; sospendere studi critici fino a patch; notificare strutture regionali e Ministero della Salute.",
-   "created_at": "2026-10-23T18:31:42.220977",
+   "italy_impact": "Ospedali italiani dotati di Spectral CT Philips potrebbero produrre immagini diagnostiche compromesse. Ingegneria clinica e radiologia devono verificare versioni software installate e validare qualità immagini in corso di utilizzo.",
+   "timeframe": "Immediato",
+   "recommendation": "Contattare Philips per patch software. Verificare inventario dispositivi in Italia. Implementare controlli QA immagini. Informare radiologi su possibili artefatti fino a risoluzione.",
+   "created_at": "2026-10-24T08:48:58.292854",
    "is_read": false
   },
   {
-   "id": "draeger_hose_leakage_class_i",
-   "title": "Crepe tubo Draeger classe I: rischio perdita o distacco",
-   "description": "Richiamo Class I FDA Z-3252-2026: potenziali crepe nei tubi Draeger possono causare perdite di gas o distacco del tubo durante ventilazione meccanica.",
+   "id": "philips_mri_dti_export_issues",
+   "title": "Errori export DTI MRI Philips: dati diffusione corrotti",
+   "description": "Richiami multipli Class II FDA (Z-3308, Z-3309, Z-3313-2026) per problemi nella esportazione scansioni DTI da sistemi MR Philips in formato Enhanced MR DICOM.",
+   "severity": "HIGH",
+   "entities_involved": "[\"philips_north_america\", \"centri_neuroimaging_italia\", \"ospedali_neurochirurgia\"]",
+   "predicted_impact": "Perdita dati diagnostici critici, rivalutazione neurochirurgica ritardata, potenziale impatto su pianificazione interventi neurochirurgici.",
+   "italy_relevance": "ALTA",
+   "italy_impact": "Centri italiani di neurochirurgia e neuroradiologia che esportano DTI potrebbero trasmettere dati corrotti. Ingegneria clinica deve testare funzionalità export DICOM. Verificare studi già acquisiti per pazienti ictus, tumori cerebrali.",
+   "timeframe": "Immediato",
+   "recommendation": "Contattare Philips per aggiornamento software. Testare esportazioni DTI-DICOM. Verificare archivi pazienti affetti negli ultimi mesi. Avvisare neurochirurghi di possibili anomalie dati.",
+   "created_at": "2026-10-24T08:48:58.292854",
+   "is_read": false
+  },
+  {
+   "id": "draeger_ipv_hose_safety",
+   "title": "Crepe tubo ventilatore Dräger IPV: rischio disconnessione",
+   "description": "Richiamo Class I FDA Z-3252-2026 per potenziali crepe nei tubi del sistema IPV Dräger che possono causare perdite o distacco durante ventilazione percussiva intrapulmonare.",
    "severity": "CRITICAL",
-   "entities_involved": "[\"draeger_inc\", \"intensive_care_units\", \"respiratory_care\"]",
-   "predicted_impact": "Rischio di ipossiemia acuta, disconnessione della ventilazione, compromissione delle vie aeree in pazienti critici. Potenziale mortalità in UTI.",
+   "entities_involved": "[\"draeger_inc\", \"terapia_intensiva_italia\", \"ospedali_respiratori\"]",
+   "predicted_impact": "Disconnessione improvvisa ventilazione, ipossiemia acuta, peggioramento paziente, necessità intervento emergente in pazienti critici con insufficienza respiratoria.",
    "italy_relevance": "ALTA",
-   "italy_impact": "Unità di terapia intensiva e reparti di ventilazione meccanica in Italia devono ispezionare immediatamente tubi Draeger in uso. Ingegneria clinica deve verificare lotti e seriali. Rischio diretto di compromissione della via aerea in pazienti critici ventilati.",
-   "timeframe": "Immediato - azione entro 48 ore",
-   "recommendation": "Ingegneria clinica: ispezione immediata tubi Draeger; ritiro dai lotti interessati; sostituzione con dispositivi sicuri; notifica a direzioni ospedaliere, anestesia e terapia intensiva. Coordinamento con Ministero della Salute.",
-   "created_at": "2026-10-23T18:31:42.220977",
-   "is_read": false
-  },
-  {
-   "id": "philips_mri_dti_export_format",
-   "title": "Export DTI da MR Philips compromessi con formato Enhanced DICOM",
-   "description": "Richiami Class II FDA Z-3308/3309/3313-2026: esportazione scansioni DTI da sistemi MR Philips con formato Enhanced MR DICOM risulta corrotta o incompleta.",
-   "severity": "HIGH",
-   "entities_involved": "[\"philips_north_america\", \"mri_centers\", \"neuroradiology_departments\"]",
-   "predicted_impact": "Scansioni DTI non utilizzabili per pianificazione neurochirurgica, stroke imaging, ricerca neuroscientifica. Potenziale necessità ripetizione studi con esposizione radiologica aggiuntiva.",
-   "italy_relevance": "ALTA",
-   "italy_impact": "Centri di neuroradiologia e ricerca italiana utilizzanti MR Philips con export DTI devono verificare integrità dati esportati. Reparti neurochirurgia e neurologia potrebbero aver ricevuto scansioni non diagnostic-quality. Ingegneria clinica deve contattare Philips per software patch e verificare archivi DICOM.",
-   "timeframe": "2-4 settimane per implementazione fix",
-   "recommendation": "Ingegneria clinica MR: verificare versione software e applicare patch Philips; controllare export DTI recenti; notificare neuroradiologia su possibili dati compromessi; implementare verifica qualità export in protocollo QA.",
-   "created_at": "2026-10-23T18:31:42.220977",
+   "italy_impact": "Reparti terapia intensiva e pneumologia italiani con sistemi IPV Dräger potrebbero avere apparecchiature non sicure. Ingegneria clinica deve ispezionare tutti i tubi in uso per crepe e sostituire lotti affetti.",
+   "timeframe": "Immediato",
+   "recommendation": "Ispezionare immediatamente tutti tubi IPV Dräger in uso. Contattare fornitore per replacement tubing. Sospendere uso se crepe rilevate. Formare staff su controllo visivo tubi prima uso.",
+   "created_at": "2026-10-24T08:48:58.292854",
    "is_read": false
   }
  ]
