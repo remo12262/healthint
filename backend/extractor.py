@@ -116,7 +116,6 @@ le chiavi qui sotto.
 Genera un alert per ciascun record, uno solo per record. Per ogni alert:
 - "source_id": l'id esatto del record da cui nasce (uno solo);
 - "severity": CRITICAL|HIGH|MEDIUM|LOW;
-- "italy_relevance": ALTA|MEDIA|BASSA|NESSUNA;
 - "recommendation": al massimo 30 parole, verifiche concrete che usano solo i campi del record, senza nominare
   reparti, esami, setting o popolazioni che il record non nomina;
 Rispondi SOLO con JSON valido: una lista di oggetti con queste chiavi."""
@@ -131,6 +130,7 @@ ALERT_RULES_WHO = """I record sono le notizie OMS Disease Outbreak News più rec
 # Impatto per l'Italia composto dal sistema: solo ciò che il record dice
 ITALY_IMPACT_RECALL = "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia."
 ITALY_IMPACT_WHO = "Il documento OMS non nomina l'Italia."
+FDA_CLASS_SEVERITY = {"Class I": "CRITICAL", "Class II": "HIGH", "Class III": "MEDIUM"}
 QUOTE_CHARS = str.maketrans({"’": "'", "‘": "'", "“": '"', "”": '"'})
 
 
@@ -396,6 +396,8 @@ class EntityExtractor:
                     name = re.split(r";|\. ", squash(rec["product_description"]), maxsplit=1)[0].strip()[:90]
                     a["title"] = f"Richiamo FDA {rec.get('classification') or ''}: \"{name}\"".replace("  ", " ")
                     a["entities_involved"] = [recalls[sid]["firm_id"]]
+                    # Gravità dalla classe FDA del record
+                    a["severity"] = FDA_CLASS_SEVERITY.get(rec.get("classification"), a.get("severity"))
                 elif kind == "who" and sid in who:
                     doc = who[sid]
                     source_text = squash(doc["summary"])
@@ -427,6 +429,8 @@ class EntityExtractor:
                 # Nessun record (richiamo o notizia OMS) indica un orizzonte futuro: un periodo citato nel
                 # record ("Between 1 January and 5 October") è il periodo dei dati, non un orizzonte
                 a["timeframe"] = None
+                # Il livello di rilevanza per l'Italia non è scritto in nessun record: non si mostra
+                a["italy_relevance"] = None
                 a.pop("predicted_impact", None)
                 a["id"] = self._make_slug(f"{kind}_{sid}") or "alert"
                 alerts.append(a)
