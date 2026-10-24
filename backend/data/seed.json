@@ -2775,28 +2775,6 @@
    "created_at": "2026-10-06T06:32:00.960345"
   },
   {
-   "id": "reg_sicilia_gvm_ACCREDITA",
-   "source": "reg_sicilia",
-   "target": "gvm",
-   "type": "ACCREDITA",
-   "fact": "GVM ha strutture accreditate con il servizio sanitario regionale siciliano.",
-   "risk_score": 35,
-   "source_doc": "",
-   "date": "2020-01",
-   "created_at": "2026-10-06T06:32:00.960345"
-  },
-  {
-   "id": "consip_pfizer_VINCE_APPALTO",
-   "source": "consip",
-   "target": "pfizer",
-   "type": "VINCE_APPALTO",
-   "fact": "Pfizer aggiudicataria di gare CONSIP per vaccini e antibiotici.",
-   "risk_score": 30,
-   "source_doc": "",
-   "date": "2023-01",
-   "created_at": "2026-10-06T06:32:00.960345"
-  },
-  {
    "id": "reg_sicilia_asp_me_CONTROLLA",
    "source": "reg_sicilia",
    "target": "asp_me",
@@ -2841,28 +2819,6 @@
    "risk_score": 15,
    "source_doc": "",
    "date": "2003-01",
-   "created_at": "2026-10-06T06:32:00.960345"
-  },
-  {
-   "id": "humanitas_aifa_REGOLA",
-   "source": "humanitas",
-   "target": "aifa",
-   "type": "REGOLA",
-   "fact": "AIFA certifica i centri Humanitas per sperimentazioni cliniche.",
-   "risk_score": 15,
-   "source_doc": "",
-   "date": "2010-01",
-   "created_at": "2026-10-06T06:32:00.960345"
-  },
-  {
-   "id": "pfizer_aifa_REGOLA",
-   "source": "pfizer",
-   "target": "aifa",
-   "type": "REGOLA",
-   "fact": "AIFA monitora e autorizza i farmaci Pfizer in Italia.",
-   "risk_score": 12,
-   "source_doc": "",
-   "date": "2004-01",
    "created_at": "2026-10-06T06:32:00.960345"
   },
   {

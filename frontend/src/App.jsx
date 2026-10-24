@@ -90,6 +90,15 @@ function shortLabel(s) { return s.length > LABEL_MAX ? s.slice(0, LABEL_MAX - 1)
 
 const NO_SOURCE = "Fonte da verificare"
 const SSN_STRUCTURE = "Struttura istituzionale del SSN"
+// Relazione di organizzazione tra enti del SSN senza documento (nessun evento da citare)
+const SSN_RELATION = "Struttura organizzativa del Servizio sanitario nazionale. Nessun documento associato: questa relazione descrive l'organizzazione, non un evento."
+// Regione Siciliana -> aziende sanitarie: riordino del SSR siciliano
+const SSR_SICILIA_RELATIONS = new Set(["reg_sicilia_asp_me_CONTROLLA", "reg_sicilia_aospme_CONTROLLA"])
+const SSR_SICILIA_RELATION = "Struttura organizzativa del SSR siciliano · L.R. 5/2009, art. 8. Nessun documento associato: questa relazione descrive l'organizzazione, non un evento."
+function structureText(r, nodeById) {
+  if (!isSsnStructure(r, nodeById)) return false
+  return SSR_SICILIA_RELATIONS.has(r.id) ? SSR_SICILIA_RELATION : SSN_RELATION
+}
 
 // Enti regolatori e organismi di risposta (OMS, ECDC, ministeri, AIFA, ISS, EMA, AGENAS...):
 // rispondono all'emergenza, non la subiscono, quindi restano nel grafo ma non nella classifica
@@ -1176,7 +1185,7 @@ export default function App() {
                     {r.risk_score != null && origin.kind !== "manual" && <div style={{fontSize:12,marginBottom:8}}>Rischio della relazione: <strong style={{fontWeight:500,color:riskColor(r.risk_score)}}>{r.risk_score}/100</strong></div>}
                     <div style={{fontSize:12,padding:"8px 10px",borderRadius:6,background:"var(--color-background-secondary)",lineHeight:1.5}}>
                       <strong style={{fontWeight:500}}>Fonte:</strong>{" "}
-                      <SourceLinks sources={relationSources(r, donIndex)} structure={isSsnStructure(r, nodeById) && `${SSN_STRUCTURE}: relazione di organizzazione`}/>
+                      <SourceLinks sources={relationSources(r, donIndex)} structure={structureText(r, nodeById)}/>
                       {origin.kind === "web" && r.type === "COMUNICA_SU" && <div style={{color:"var(--color-text-tertiary)"}}>Collegamento ricavato in automatico (senza AI): il documento cita l'ente.</div>}
                       {origin.kind === "who" && <div style={{color:"var(--color-text-tertiary)"}}>Relazione estratta dall'AI {relationSources(r, donIndex).length > 1 ? "da queste notizie" : "da questa notizia"}.</div>}
                     </div>
@@ -1239,7 +1248,7 @@ export default function App() {
                                 </div>
                               ) : (r.fact && <div style={{marginTop:4,color:"var(--color-text-primary)"}}>{r.fact}</div>)}
                               <div style={{marginTop:4,fontSize:11,color:"var(--color-text-tertiary)"}}>
-                                Fonte: <SourceLinks sources={relationSources(r, donIndex)} structure={isSsnStructure(r, nodeById) && `${SSN_STRUCTURE}: relazione di organizzazione`}/>
+                                Fonte: <SourceLinks sources={relationSources(r, donIndex)} structure={structureText(r, nodeById)}/>
                               </div>
                             </div>
                           )
