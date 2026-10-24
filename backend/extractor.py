@@ -113,7 +113,7 @@ Descrizione e impatto per l'Italia li compone il sistema con il testo del record
 le chiavi qui sotto.
 {rules}
 
-Genera da 1 a 3 alert, al massimo uno per record. Per ogni alert:
+Genera un alert per ciascun record, uno solo per record. Per ogni alert:
 - "source_id": l'id esatto del record da cui nasce (uno solo);
 - "title": al massimo 12 parole, solo fatti scritti nel record;
 - "severity": CRITICAL|HIGH|MEDIUM|LOW;
@@ -315,6 +315,11 @@ class EntityExtractor:
 
         return {"entities": list(all_entities.values()), "relations": all_relations, "errors": errors}
 
+    def _discard(self, reason: str):
+        """Citazione o alert scartato dal controllo sul record: nei log e nello stato dell'aggiornamento."""
+        print(f"[extractor] {reason}")
+        self.discarded.append(reason)
+
     @staticmethod
     def _latest_who(docs: List[Dict]) -> List[Dict]:
         """Ultima notizia OMS per evento: i bollettini precedenti sullo stesso evento sono superati.
@@ -340,6 +345,7 @@ class EntityExtractor:
         perché nessun record ne indica uno. Due chiamate piccole (richiami, notizie OMS): se una fallisce si solleva
         AIError e restano gli alert dell'aggiornamento precedente, mai un insieme a metà.
         """
+        self.discarded = []
         if not entities:
             raise AIError("grafo vuoto: nessuna entità da analizzare")
 
@@ -402,11 +408,11 @@ class EntityExtractor:
                         q = squash(q) if isinstance(q, str) else ""
                         pos = plain(source_text).find(plain(q)) if len(q) >= 20 else -1
                         if pos < 0:
-                            print(f"[extractor] citazione scartata, non presente nel documento {sid}: {q[:120]!r}")
+                            self._discard(f"citazione non presente nel documento {sid}: {q[:120]!r}")
                         else:
                             quotes.append(source_text[pos:pos + len(q)])
                     if not quotes:
-                        print(f"[extractor] alert scartato: nessuna citazione verificata nel documento {sid}")
+                        self._discard(f"alert scartato, nessuna citazione verificata nel documento {sid}")
                         continue
                     a["description"] = (f"OMS, Disease Outbreak News {sid} del {doc.get('published')}: "
                                         + " ".join(f"\"{q}\"" for q in quotes))
@@ -414,7 +420,7 @@ class EntityExtractor:
                                          else "Il documento OMS nomina l'Italia: vedi il testo citato e la fonte.")
                     a["entities_involved"] = []
                 else:
-                    print(f"[extractor] alert scartato: record di origine sconosciuto {sid!r} ({a.get('title')!r})")
+                    self._discard(f"alert scartato, record di origine sconosciuto {sid!r} ({a.get('title')!r})")
                     continue
                 # Nessun record (richiamo o notizia OMS) indica un orizzonte futuro: un periodo citato nel
                 # record ("Between 1 January and 5 October") è il periodo dei dati, non un orizzonte

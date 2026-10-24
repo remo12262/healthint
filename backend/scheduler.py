@@ -181,6 +181,7 @@ class Scheduler:
                 "counts": counts,
                 "source_errors": source_errors,
                 "alerts_error": alerts_error,
+                "alerts_discarded": getattr(self.extractor, "discarded", []),
                 "alerts_attempt": finished,
             }
             self.last_error = None
@@ -244,6 +245,7 @@ class Scheduler:
             "last_error": self.last_error,
             "source_errors": info.get("source_errors") or {},
             "alerts_error": info.get("alerts_error"),
+            "alerts_discarded": info.get("alerts_discarded") or [],
             "alerts_attempt": info.get("alerts_attempt"),
             "counts": info.get("counts") or {},
             "new": info.get("new"),
