@@ -120,7 +120,6 @@ Genera da 1 a 3 alert, al massimo uno per record. Per ogni alert:
 - "italy_relevance": ALTA|MEDIA|BASSA|NESSUNA;
 - "recommendation": al massimo 30 parole, verifiche concrete che usano solo i campi del record, senza nominare
   reparti, esami, setting o popolazioni che il record non nomina;
-- "timeframe": null, a meno che un orizzonte temporale sia scritto nel record: in quel caso copialo identico.
 Rispondi SOLO con JSON valido: una lista di oggetti con queste chiavi."""
 
 ALERT_RULES_RECALLS = """I record sono richiami FDA di farmaci e dispositivi con l'Italia nella distribuzione.
@@ -337,7 +336,7 @@ class EntityExtractor:
         Al modello vanno i record originali, non le relazioni del grafo estratte dall'AI. Un alert resta solo
         se nasce da un record passato; il sistema aggiunge tra virgolette il testo del record (product_description
         del richiamo, frase del documento OMS indicata dal modello e verificata) e toglie l'orizzonte temporale
-        se non è scritto nel record. Due chiamate piccole (richiami, notizie OMS): se una fallisce si solleva
+        perché nessun record ne indica uno. Due chiamate piccole (richiami, notizie OMS): se una fallisce si solleva
         AIError e restano gli alert dell'aggiornamento precedente, mai un insieme a metà.
         """
         if not entities:
@@ -405,9 +404,9 @@ class EntityExtractor:
                 else:
                     print(f"[extractor] alert scartato: record di origine sconosciuto {sid!r} ({a.get('title')!r})")
                     continue
-                # Orizzonte temporale solo se scritto nel record
-                if a.get("timeframe") and squash(str(a["timeframe"])).lower() not in source_text.lower():
-                    a["timeframe"] = None
+                # Nessun record (richiamo o notizia OMS) indica un orizzonte futuro: un periodo citato nel
+                # record ("Between 1 January and 5 October") è il periodo dei dati, non un orizzonte
+                a["timeframe"] = None
                 a.pop("predicted_impact", None)
                 a["id"] = self._make_slug(f"{kind}_{sid}") or "alert"
                 alerts.append(a)
