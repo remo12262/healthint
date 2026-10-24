@@ -109,36 +109,31 @@ a un campo di uno dei record qui sopra. Dove il record non dice una cosa, non la
 portata di un dato: non generalizzare il tipo di prodotto, non dedurre reparti, setting di cura, popolazioni di
 pazienti, aree geografiche, numeri, date o urgenze che il record non nomina.
 
+Descrizione e impatto per l'Italia li compone il sistema con il testo del record tra virgolette: tu scrivi solo
+le chiavi qui sotto.
 {rules}
 
 Genera da 1 a 3 alert, al massimo uno per record. Per ogni alert:
 - "source_id": l'id esatto del record da cui nasce (uno solo);
-- "title": al massimo 12 parole;
-- "description": al massimo 40 parole, solo fatti presenti nel record;
+- "title": al massimo 12 parole, solo fatti scritti nel record;
 - "severity": CRITICAL|HIGH|MEDIUM|LOW;
 - "italy_relevance": ALTA|MEDIA|BASSA|NESSUNA;
-- "italy_impact": al massimo 40 parole, solo ciò che il record dice sull'Italia;
-- "recommendation": al massimo 40 parole, verifiche concrete basate sui campi del record;
+- "recommendation": al massimo 30 parole, verifiche concrete che usano solo i campi del record, senza nominare
+  reparti, esami, setting o popolazioni che il record non nomina;
 - "timeframe": null, a meno che un orizzonte temporale sia scritto nel record: in quel caso copialo identico.
 Rispondi SOLO con JSON valido: una lista di oggetti con queste chiavi."""
 
 ALERT_RULES_RECALLS = """I record sono richiami FDA di farmaci e dispositivi con l'Italia nella distribuzione.
-- Il prodotto è quello descritto nel campo product_description: tipo di prodotto, reparti, setting e popolazione
-  devono essere coerenti con quel campo e con reason_for_recall, senza aggiungere altro. Se il campo non nomina
-  un reparto o una popolazione, non nominarli.
 - Nel titolo usa il nome del prodotto come è scritto in product_description, non una categoria più ampia.
-- Non riportare il testo di product_description: il sistema lo aggiunge tra virgolette all'alert.
-- In "italy_impact" scrivi che la distribuzione indicata dal record include l'Italia; niente ipotesi su quali
-  strutture lo usano.
 - In "recommendation" indica di verificare la presenza del prodotto con i codici del campo code_info."""
 
 ALERT_RULES_WHO = """I record sono le notizie OMS Disease Outbreak News più recenti, una per evento: usa solo il campo summary.
-- Aggiungi la chiave "quote": una frase del summary copiata identica, carattere per carattere e senza tradurla,
-  da cui deriva l'affermazione principale dell'alert. Il sistema scarta l'alert se la frase non è nel summary.
-- Numeri, date, paesi e zone solo se scritti nel summary.
-- In "italy_impact": se il summary non nomina l'Italia scrivi che il documento non riporta casi in Italia. Vie di
-  esposizione possibili (viaggi, rientri di operatori) solo come valutazione, in una frase che inizia con
-  "Valutazione dell'AI:"."""
+- Aggiungi la chiave "quotes": una o due frasi del summary copiate identiche, carattere per carattere e senza
+  tradurle, che contengono i fatti principali. Il sistema scarta l'alert se una frase non è nel summary."""
+
+# Impatto per l'Italia composto dal sistema: solo ciò che il record dice
+ITALY_IMPACT_RECALL = "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia."
+ITALY_IMPACT_WHO = "Il documento OMS non nomina l'Italia."
 
 
 class EntityExtractor:
@@ -390,18 +385,22 @@ class EntityExtractor:
                 if kind == "recall" and sid in recalls:
                     rec = recalls[sid]["record"]
                     source_text = squash(json.dumps(rec, ensure_ascii=False))
-                    a["description"] = (f"Prodotto secondo il richiamo FDA {sid}: \"{squash(rec['product_description'])}\" — "
-                                        + (a.get("description") or ""))
+                    a["description"] = (f"Richiamo FDA {sid}. Prodotto: \"{squash(rec['product_description'])}\" "
+                                        f"Motivo: \"{squash(rec.get('reason_for_recall'))}\"")
+                    a["italy_impact"] = ITALY_IMPACT_RECALL
                     a["entities_involved"] = [recalls[sid]["firm_id"]]
                 elif kind == "who" and sid in who:
                     doc = who[sid]
                     source_text = squash(doc["summary"])
-                    quote = squash(a.pop("quote", ""))
-                    if len(quote) < 20 or quote not in source_text:
-                        print(f"[extractor] alert scartato: citazione non presente nel documento {sid}: {quote[:120]!r}")
+                    quotes = [squash(q) for q in (a.pop("quotes", None) or [])[:2] if isinstance(q, str)]
+                    missing = [q for q in quotes if len(q) < 20 or q not in source_text]
+                    if not quotes or missing:
+                        print(f"[extractor] alert scartato: citazione non presente nel documento {sid}: {missing[:1]!r}")
                         continue
-                    a["description"] = (f"OMS, Disease Outbreak News {sid} del {doc.get('published')}: \"{quote}\" — "
-                                        + (a.get("description") or ""))
+                    a["description"] = (f"OMS, Disease Outbreak News {sid} del {doc.get('published')}: "
+                                        + " ".join(f"\"{q}\"" for q in quotes))
+                    a["italy_impact"] = (ITALY_IMPACT_WHO if not ITALY_RE.search(source_text)
+                                         else "Il documento OMS nomina l'Italia: vedi il testo citato e la fonte.")
                     a["entities_involved"] = []
                 else:
                     print(f"[extractor] alert scartato: record di origine sconosciuto {sid!r} ({a.get('title')!r})")
