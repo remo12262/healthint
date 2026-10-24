@@ -1,9 +1,9 @@
 {
  "version": 1,
- "exported_at": "2026-10-24T13:57:42.050476",
- "data_updated_at": "2026-10-24T13:57:41.832672",
+ "exported_at": "2026-10-24T15:19:42.799944",
+ "data_updated_at": "2026-10-24T15:19:42.452445",
  "refresh_info": {
-  "last_success": "2026-10-24T13:57:41.832672",
+  "last_success": "2026-10-24T15:19:42.452445",
   "contributed": [
    "openfda_drug",
    "openfda_device",
@@ -29,10 +29,10 @@
   "source_errors": {},
   "alerts_error": null,
   "alerts_discarded": [],
-  "alerts_attempt": "2026-10-24T13:57:41.832672"
+  "alerts_attempt": "2026-10-24T15:19:42.452445"
  },
  "signals": {
-  "generated_at": "2026-10-24T13:57:28.826859",
+  "generated_at": "2026-10-24T15:19:30.407553",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -269,13 +269,6 @@
     "summary": "In occasione della sua quarta Assemblea generale a Poznań, JACARDI, Joint Action europea coordinata dall’Istituto Superiore di Sanità (ISS), ha offerto un’occasione per condividere le esperienze delle persone e i risultati dei progetti pilota, favorendo momenti di confronto con d"
    },
    {
-    "title": "Chiusura Registro di monitoraggio XALKORI",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
-   },
-   {
     "title": "Chiusura Registro di monitoraggio COMETRIQ",
     "date": "2026-10-22",
     "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-cometriq",
@@ -283,18 +276,11 @@
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro COMETRIQ per una specifica indicazione terapeutica."
    },
    {
-    "title": "Chiusura Registri di monitoraggio ZYDELIG",
+    "title": "Chiusura Registro di monitoraggio XALKORI",
     "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registri-di-monitoraggio-zydelig",
+    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
     "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro ZYDELIG per specifiche indicazioni terapeutiche."
-   },
-   {
-    "title": "Chiusura Registro di monitoraggio FARYDAK",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-farydak",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro FARYDAK per una specifica indicazione terapeutica."
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
    },
    {
     "title": "Chiusura Registro di monitoraggio RAXONE",
@@ -302,6 +288,20 @@
     "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-raxone",
     "source": "AIFA – Notizie",
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro RAXONE per una specifica indicazione terapeutica."
+   },
+   {
+    "title": "Aggiornamento Registro di monitoraggio HETRONIFLY",
+    "date": "2026-10-22",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-hetronifly",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di Monitoraggio di HETRONIFLY (serplulimab) dedicato al monitoraggio di una specifica indicazione terapeutica."
+   },
+   {
+    "title": "Chiusura Registri di monitoraggio ZYDELIG",
+    "date": "2026-10-22",
+    "url": "https://www.aifa.gov.it/-/chiusura-registri-di-monitoraggio-zydelig",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro ZYDELIG per specifiche indicazioni terapeutiche."
    },
    {
     "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
@@ -379,7 +379,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T13:57:28.565134",
+   "updated_at": "2026-10-24T15:19:30.220658",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -391,7 +391,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T13:57:28.565134",
+   "updated_at": "2026-10-24T15:19:30.220658",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -403,7 +403,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -463,7 +463,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T13:57:28.565134",
+   "updated_at": "2026-10-24T15:19:30.220658",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -475,7 +475,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T13:57:28.565134",
+   "updated_at": "2026-10-24T15:19:30.220658",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -487,7 +487,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T13:57:28.565134",
+   "updated_at": "2026-10-24T15:19:30.220658",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -499,7 +499,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -514,7 +514,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Cardioroot Woven Collagen Coated Vascular Graft;  Model Numbers: 1. HEWROOT0024, 2. HEWROOT0026, 3. HEWROOT0028, 4. HEWR",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3258-2026 di classe II del 30/09/2026"
   },
   {
@@ -688,7 +688,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T13:57:28.565134",
+   "updated_at": "2026-10-24T15:19:30.220658",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -1380,7 +1380,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1392,7 +1392,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1404,7 +1404,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1416,7 +1416,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1428,7 +1428,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1440,7 +1440,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1452,7 +1452,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2419,7 +2419,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-0078-2027 di classe II del 14/10/2026"
   },
   {
@@ -2431,7 +2431,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-24T13:57:28.604771",
+   "updated_at": "2026-10-24T15:19:30.232712",
    "risk_basis": "Richiamo FDA Z-0082-2027 di classe II del 14/10/2026"
   },
   {
@@ -14503,29 +14503,29 @@
   {
    "id": "who_2026_don622",
    "title": "OMS: \"Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria\"",
-   "description": "OMS, Disease Outbreak News 2026-DON622 del 2026-10-23: \"As of 20 October 2026, a total of 9704 confirmed cases, including 4687 deaths (crude case fatality ratio: 48.3%), have been reported across 66 health zones in eight provinces.\" \"On 6 October 2026, the Ministry of Health of Kenya reported the first laboratory-confirmed imported case of BVD in Kenya in an individual who had travelled from the Democratic Republic of the Congo to Kenya via Uganda.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON622 del 2026-10-23: \"Since the publication of the previous Disease Outbreak News on 8 October 2026, the Bundibugyo virus disease (BVD) outbreak has expanded geographically in the Democratic Republic of the Congo, as well as in the African Region, with Kenya and Nigeria reporting imported cases.\" \"As of 20 October 2026, a total of 9704 confirmed cases, including 4687 deaths (crude case fatality ratio: 48.3%), have been reported across 66 health zones in eight provinces.\"",
    "severity": "CRITICAL",
    "entities_involved": "[]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
-   "recommendation": "Monitorare segnalazioni di casi sospetti con storia di viaggio da Repubblica Democratica del Congo, Kenya o Nigeria. Attivare protocolli di isolamento secondo linee guida nazionali.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Monitorare pazienti con febbre e sintomi respiratori provenienti da RDC, Kenya e Nigeria. Verificare anamnesi di viaggio.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
    "id": "who_middle_east_respiratory_synd",
    "title": "OMS: \"Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia\"",
-   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"MERS is a zoonotic viral respiratory disease for which dromedary camels serve as the primary animal reservoir and two cases reported direct contact with camels while six reported no known camel exposure.\"",
+   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"All eight cases were symptomatic, most commonly presenting with fever (6/8), dyspnea (5/8), and cough (4/8).\"",
    "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
-   "recommendation": "Rimanere allerta su pazienti con storia di viaggio dal Regno dell'Arabia Saudita con sintomi respiratori. Applicare misure di controllo dell'infezione secondo protocolli vigenti.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Identificare pazienti febbrili con dispnea e tosse provenienti dall'Arabia Saudita. Verificare contatti con cammelli.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14538,8 +14538,8 @@
    "italy_relevance": null,
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
-   "recommendation": "Segnalare caso sospetto di polmonite severa con storia di esposizione in ambienti di ricerca. Consultare autorità sanitarie nazionali per protocolli di risposta.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Segnalare decessi per polmonite grave con anamnesi di esposizione occupazionale in laboratorio o nella Federazione Russa.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14552,8 +14552,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Spectral CT modelli 728333, 728340, 728344, 728345. Controllare versioni software 5.0.X, 5.2.X, 5.4.X e numeri seriali elencati.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza in inventario dei modelli 728333, 728340, 728344, 728345 con versioni software 5.0.X, 5.2.X, 5.4.X e numeri seriali indicati nel codice.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14566,8 +14566,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Sperm Ab ELISA modello EIA-1826, lotto 320K046, UDI 04048474018264. Sospendere utilizzo fino a verifica.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza del modello EIA-1826, UDI 04048474018264, lotto 320K046 in inventario e consultare avviso ufficiale del fabbricante.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14580,8 +14580,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza VentStar Resus Neo parte MP00310, UDI 04048675422358, tutti i lotti. Controllare integrità fisica del dispositivo.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza del modello MP00310, UDI 04048675422358, tutti i lotti, e consultare avviso ufficiale del fabbricante per le azioni appropriate.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14594,8 +14594,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Ingenia 3.0T e 3.0T CX modelli 781342, 781377, 782103, 781271, versioni software R11, R12, R13. Controllare numeri seriali elencati.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza dei modelli 781342, 781377, 782103, 781271 con versioni software R11, R12, R13 e numeri seriali indicati nel codice.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14608,8 +14608,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza IPV HC S00009 e Phasitron P5-HC. Aggiornare etichette e manuali d'uso con le avvertenze specificate.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza dei modelli S00009, P5-HC con UDI indicati nel codice e consultare avviso ufficiale con aggiornamenti di etichettatura.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14622,8 +14622,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza MR 7700 modelli 782120, 782153, 782155, 782199, versioni software R11, R12, R13. Controllare numeri seriali elencati.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza dei modelli 782120, 782153, 782155, 782199 con versioni software R11, R12, R13 e numeri seriali indicati nel codice.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14636,8 +14636,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza IPV-2C S00002-C e Phasitron 5 P5. Aggiornare etichette e manuale istruzioni P20046 Rev A con le avvertenze specificate.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza dei modelli S00002-C, P5 con UDI e numero manuale P20046 Rev A indicati nel codice e consultare aggiornamenti di etichettatura.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   },
   {
@@ -14650,8 +14650,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Ingenia 1.5T, 1.5T CX, 1.5T S modelli 781315, 781341, 781396, 782115, 782140, 781262, 781347, versioni software R11, R12, R13.",
-   "created_at": "2026-10-24T13:57:41.832346",
+   "recommendation": "Verificare presenza dei modelli 781315, 781341, 781396, 782115, 782140, 781262, 781347 con versioni software R11, R12, R13 e numeri seriali indicati.",
+   "created_at": "2026-10-24T15:19:42.452168",
    "is_read": false
   }
  ]
