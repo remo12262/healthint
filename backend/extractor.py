@@ -133,6 +133,7 @@ ALERT_RULES_WHO = """I record sono le notizie OMS Disease Outbreak News più rec
 # Impatto per l'Italia composto dal sistema: solo ciò che il record dice
 ITALY_IMPACT_RECALL = "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia."
 ITALY_IMPACT_WHO = "Il documento OMS non nomina l'Italia."
+QUOTE_CHARS = str.maketrans({"’": "'", "‘": "'", "“": '"', "”": '"'})
 
 
 class EntityExtractor:
@@ -391,10 +392,21 @@ class EntityExtractor:
                 elif kind == "who" and sid in who:
                     doc = who[sid]
                     source_text = squash(doc["summary"])
-                    quotes = [squash(q) for q in (a.pop("quotes", None) or [])[:2] if isinstance(q, str)]
-                    missing = [q for q in quotes if len(q) < 20 or q not in source_text]
-                    if not quotes or missing:
-                        print(f"[extractor] alert scartato: citazione non presente nel documento {sid}: {missing[:1]!r}")
+                    raw = a.pop("quotes", None) or a.pop("quote", None) or []
+                    raw = [raw] if isinstance(raw, str) else raw
+                    # Confronto senza distinguere apostrofi e virgolette tipografiche (sostituzione carattere per
+                    # carattere): nell'alert va il testo preso dal documento, non quello scritto dal modello
+                    plain = lambda t: t.translate(QUOTE_CHARS)
+                    quotes = []
+                    for q in raw[:2]:
+                        q = squash(q) if isinstance(q, str) else ""
+                        pos = plain(source_text).find(plain(q)) if len(q) >= 20 else -1
+                        if pos < 0:
+                            print(f"[extractor] citazione scartata, non presente nel documento {sid}: {q[:120]!r}")
+                        else:
+                            quotes.append(source_text[pos:pos + len(q)])
+                    if not quotes:
+                        print(f"[extractor] alert scartato: nessuna citazione verificata nel documento {sid}")
                         continue
                     a["description"] = (f"OMS, Disease Outbreak News {sid} del {doc.get('published')}: "
                                         + " ".join(f"\"{q}\"" for q in quotes))
