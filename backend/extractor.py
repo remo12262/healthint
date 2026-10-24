@@ -121,7 +121,11 @@ Genera un alert per ciascun record, uno solo per record. Per ogni alert:
 Rispondi SOLO con JSON valido: una lista di oggetti con queste chiavi."""
 
 ALERT_RULES_RECALLS = """I record sono richiami FDA di farmaci e dispositivi con l'Italia nella distribuzione.
-- In "recommendation" indica di verificare la presenza del prodotto con i codici del campo code_info."""
+- In "recommendation" indica di verificare la presenza del prodotto con i codici del campo code_info.
+- Le raccomandazioni possono solo invitare a verificare la presenza del prodotto in inventario, a controllare
+  modelli, lotti e versioni elencati nel record, e a consultare l'avviso ufficiale del fabbricante o dell'autorità
+  competente. Non devono mai indicare di sospendere, sostituire, ritirare o modificare l'uso clinico di un
+  dispositivo o di un test: sono decisioni che il record non contiene e che spettano alla struttura sanitaria."""
 
 ALERT_RULES_WHO = """I record sono le notizie OMS Disease Outbreak News più recenti, una per evento: usa solo il campo summary.
 - Aggiungi la chiave "quotes": una o due frasi del summary copiate identiche, carattere per carattere e senza
