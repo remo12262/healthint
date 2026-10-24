@@ -129,11 +129,15 @@ ALERT_RULES_RECALLS = """I record sono richiami FDA di farmaci e dispositivi con
 
 ALERT_RULES_WHO = """I record sono le notizie OMS Disease Outbreak News più recenti, una per evento: usa solo il campo summary.
 - Aggiungi la chiave "quotes": una o due frasi del summary copiate identiche, carattere per carattere e senza
-  tradurle, che contengono i fatti principali. Il sistema scarta l'alert se una frase non è nel summary."""
+  tradurle, che contengono i fatti principali. Il sistema scarta l'alert se una frase non è nel summary.
+- Non scrivere la chiave "recommendation": la compone il sistema."""
 
 # Impatto per l'Italia composto dal sistema: solo ciò che il record dice
 ITALY_IMPACT_RECALL = "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia."
 ITALY_IMPACT_WHO = "Il documento OMS non nomina l'Italia."
+# Raccomandazione degli alert OMS composta dal sistema, sempre identica: niente sintomi, pazienti o misure
+RECOMMENDATION_WHO = ("Consultare il documento OMS {code} e le indicazioni del Ministero della Salute "
+                      "e dell'Istituto Superiore di Sanità.")
 FDA_CLASS_SEVERITY = {"Class I": "CRITICAL", "Class II": "HIGH", "Class III": "MEDIUM"}
 QUOTE_CHARS = str.maketrans({"’": "'", "‘": "'", "“": '"', "”": '"'})
 
@@ -427,6 +431,7 @@ class EntityExtractor:
                     a["italy_impact"] = (ITALY_IMPACT_WHO if not ITALY_RE.search(source_text)
                                          else "Il documento OMS nomina l'Italia: vedi il testo citato e la fonte.")
                     a["entities_involved"] = []
+                    a["recommendation"] = RECOMMENDATION_WHO.format(code=doc.get("don_id") or sid)
                 else:
                     self._discard(f"alert scartato, record di origine sconosciuto {sid!r} ({a.get('title')!r})")
                     continue

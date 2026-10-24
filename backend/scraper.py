@@ -194,7 +194,7 @@ class DataScraper:
                 r = await client.get(WHO_DON_API, params={
                     "$orderby": "PublicationDateAndTime desc",
                     "$top": 20,
-                    "$select": "Title,Summary,PublicationDateAndTime,UrlName",
+                    "$select": "Title,Summary,PublicationDateAndTime,UrlName,DonId",
                 })
                 r.raise_for_status()
                 items = r.json().get("value", [])
@@ -211,6 +211,7 @@ class DataScraper:
             summary = re.sub(r"\s+", " ", summary).strip()
             outbreaks.append({
                 "id": item.get("UrlName", ""),
+                "don_id": item.get("DonId") or "",
                 "title": item.get("Title", ""),
                 "summary": summary[:1500],
                 "url": WHO_DON_PAGE + item.get("UrlName", ""),
