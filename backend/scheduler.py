@@ -148,7 +148,7 @@ class Scheduler:
             edges = await self.db.get_edges()
             alerts_error = None
             try:
-                alerts = await self.extractor.generate_alerts(nodes, edges)
+                alerts = await self.extractor.generate_alerts(nodes, edges, data["who_outbreaks"])
                 await self.db.replace_alerts(alerts)
                 print(f"[scheduler] Generated {len(alerts)} alerts")
             except Exception as e:

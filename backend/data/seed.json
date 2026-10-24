@@ -2775,6 +2775,18 @@
    "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05554/SG",
    "risk_doc_date": "2026-10-24",
    "risk_assigned_at": "2026-10-24T12:58:45.642513"
+  },
+  {
+   "id": "maria_eleonora_hospital",
+   "label": "Casa di Cura Maria Eleonora Hospital S.r.l.",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "Sicilia",
+   "description": "Casa di cura accreditata con il Servizio sanitario regionale siciliano (D.D.G. Regione Siciliana n. 705 del 20/07/2021).",
+   "risk_score": 0,
+   "created_at": "2026-10-24T15:00:00",
+   "updated_at": "2026-10-24T15:00:00",
+   "risk_basis": "Valore assegnato manualmente"
   }
  ],
  "edges": [
@@ -6157,7 +6169,7 @@
    "source": "who_emergency_committee",
    "target": "country_cd",
    "type": "INDAGA_SU",
-   "fact": "WHO Emergency Committee ha dichiarato l'epidemia di Ebola in RDC come emergenza sanitaria pubblica di portata internazionale",
+   "fact": "Il documento OMS 2026-DON616 (28/08/2026) riporta: \"The outbreak remains a public health emergency of international concern, following the advice of Emergency Committee meeting convened on 18 August.\"",
    "risk_score": 95,
    "source_doc": "2026-DON616",
    "date": "2026-08-18",
@@ -6531,7 +6543,7 @@
    "source": "who_emergency_committee",
    "target": "evt_ebola_cd",
    "type": "REGOLA",
-   "fact": "WHO Emergency Committee ha dichiarato l'epidemia come emergenza sanitaria pubblica di rilevanza internazionale il 18 agosto 2026",
+   "fact": "Il documento OMS 2026-DON616 (28/08/2026) riporta: \"The outbreak remains a public health emergency of international concern, following the advice of Emergency Committee meeting convened on 18 August.\"",
    "risk_score": 99,
    "source_doc": "2026-DON616",
    "date": "2026-08-18",
@@ -6873,7 +6885,7 @@
    "source": "who_emergency_committee",
    "target": "evt_ebola_cd",
    "type": "INDAGA_SU",
-   "fact": "WHO Emergency Committee ha dichiarato l'epidemia di Ebola in RDC come emergenza sanitaria pubblica di interesse internazionale il 18 agosto 2026",
+   "fact": "Il documento OMS 2026-DON616 (28/08/2026) riporta: \"The outbreak remains a public health emergency of international concern, following the advice of Emergency Committee meeting convened on 18 August.\"",
    "risk_score": 95,
    "source_doc": "2026-DON616",
    "date": "2026-08-18",
@@ -7144,7 +7156,7 @@
    "source": "evt_ebola_cd",
    "target": "who_emergency_committee",
    "type": "INDAGA_SU",
-   "fact": "WHO Emergency Committee ha convocato riunione il 18 agosto 2026 per dichiarare il focolaio epidemico come Public Health Emergency of International Concern",
+   "fact": "Il documento OMS 2026-DON616 (28/08/2026) riporta: \"The outbreak remains a public health emergency of international concern, following the advice of Emergency Committee meeting convened on 18 August.\"",
    "risk_score": 92,
    "source_doc": "2026-DON616",
    "date": "2026-08",
@@ -14473,6 +14485,17 @@
    "doc_titles": {
     "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05554/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
    }
+  },
+  {
+   "id": "reg_sicilia_maria_eleonora_hospital_ACCREDITA",
+   "source": "reg_sicilia",
+   "target": "maria_eleonora_hospital",
+   "type": "ACCREDITA",
+   "fact": "La Regione Siciliana accredita la Casa di Cura Maria Eleonora Hospital S.r.l. (D.D.G. Regione Siciliana n. 705 del 20/07/2021).",
+   "risk_score": 0,
+   "source_doc": "",
+   "date": "2021-07-20",
+   "created_at": "2026-10-24T15:00:00"
   }
  ],
  "alerts": [

@@ -3,6 +3,7 @@ import asyncio
 import json
 import os
 import re
+from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 
 from limits import try_consume_ai_call
@@ -98,34 +99,46 @@ ALERT_MAX_TOKENS = 6000
 # Dati passati al modello per ciascuna chiamata degli alert
 ALERT_MAX_ITEMS = 8
 
-ALERT_PROMPT = """Analizza questi dati di un knowledge graph sanitario e genera alert per chi lavora nel Servizio Sanitario Nazionale italiano.
-{focus}
+ALERT_PROMPT = """Genera alert per chi lavora nel Servizio Sanitario Nazionale italiano a partire da questi record.
 
+RECORD:
 {data}
 
-Per ogni alert valuta in modo esplicito l'impatto sull'Italia e sul SSN:
-- per un focolaio all'estero indica le vie concrete con cui potrebbe riguardare l'Italia (viaggi e voli, rientri di operatori sanitari o cooperanti, sorveglianza ai punti di ingresso, preparazione di ospedali e laboratori di riferimento) e dì chiaramente se il rischio per l'Italia è basso;
-- per un richiamo di farmaci o dispositivi distribuiti in Italia indica quali strutture o pazienti italiani potrebbero essere coinvolti e cosa dovrebbero verificare farmacie ospedaliere e ingegneria clinica;
-- non inventare numeri, casi o date che non siano nei dati; se un'informazione manca, dillo.
+REGOLA GENERALE, con precedenza su ogni altra indicazione: ogni affermazione di fatto deve essere riconducibile
+a un campo di uno dei record qui sopra. Dove il record non dice una cosa, non la scrivi. Non ampliare mai la
+portata di un dato: non generalizzare il tipo di prodotto, non dedurre reparti, setting di cura, popolazioni di
+pazienti, aree geografiche, numeri, date o urgenze che il record non nomina.
 
-Genera da 1 a 3 alert, con testi brevi: "title" al massimo 12 parole, "description", "italy_impact" e "recommendation" al massimo 40 parole ciascuno, "predicted_impact" al massimo 25 parole, al massimo 4 "entities_involved".
-Formato JSON:
-[
-  {{
-    "id": "alert_slug",
-    "title": "Titolo breve alert",
-    "description": "Descrizione del rischio basata sui dati",
-    "severity": "CRITICAL|HIGH|MEDIUM|LOW",
-    "entities_involved": ["id1", "id2"],
-    "italy_relevance": "ALTA|MEDIA|BASSA|NESSUNA",
-    "italy_impact": "impatto concreto per l'Italia e il SSN, con le vie di esposizione",
-    "predicted_impact": "impatto atteso su pazienti e servizi",
-    "timeframe": "es. 3-6 mesi",
-    "recommendation": "azione consigliata alle autorità e alle aziende sanitarie italiane"
-  }}
-]
+{rules}
 
-Rispondi SOLO con JSON valido."""
+Genera da 1 a 3 alert, al massimo uno per record. Per ogni alert:
+- "source_id": l'id esatto del record da cui nasce (uno solo);
+- "title": al massimo 12 parole;
+- "description": al massimo 40 parole, solo fatti presenti nel record;
+- "severity": CRITICAL|HIGH|MEDIUM|LOW;
+- "italy_relevance": ALTA|MEDIA|BASSA|NESSUNA;
+- "italy_impact": al massimo 40 parole, solo ciò che il record dice sull'Italia;
+- "recommendation": al massimo 40 parole, verifiche concrete basate sui campi del record;
+- "timeframe": null, a meno che un orizzonte temporale sia scritto nel record: in quel caso copialo identico.
+Rispondi SOLO con JSON valido: una lista di oggetti con queste chiavi."""
+
+ALERT_RULES_RECALLS = """I record sono richiami FDA di farmaci e dispositivi con l'Italia nella distribuzione.
+- Il prodotto è quello descritto nel campo product_description: tipo di prodotto, reparti, setting e popolazione
+  devono essere coerenti con quel campo e con reason_for_recall, senza aggiungere altro. Se il campo non nomina
+  un reparto o una popolazione, non nominarli.
+- Nel titolo usa il nome del prodotto come è scritto in product_description, non una categoria più ampia.
+- Non riportare il testo di product_description: il sistema lo aggiunge tra virgolette all'alert.
+- In "italy_impact" scrivi che la distribuzione indicata dal record include l'Italia; niente ipotesi su quali
+  strutture lo usano.
+- In "recommendation" indica di verificare la presenza del prodotto con i codici del campo code_info."""
+
+ALERT_RULES_WHO = """I record sono le notizie OMS Disease Outbreak News più recenti, una per evento: usa solo il campo summary.
+- Aggiungi la chiave "quote": una frase del summary copiata identica, carattere per carattere e senza tradurla,
+  da cui deriva l'affermazione principale dell'alert. Il sistema scarta l'alert se la frase non è nel summary.
+- Numeri, date, paesi e zone solo se scritti nel summary.
+- In "italy_impact": se il summary non nomina l'Italia scrivi che il documento non riporta casi in Italia. Vie di
+  esposizione possibili (viaggi, rientri di operatori) solo come valutazione, in una frase che inizia con
+  "Valutazione dell'AI:"."""
 
 
 class EntityExtractor:
@@ -307,59 +320,105 @@ class EntityExtractor:
 
         return {"entities": list(all_entities.values()), "relations": all_relations, "errors": errors}
 
-    async def generate_alerts(self, entities: List[Dict], relations: List[Dict]) -> List[Dict]:
-        """Genera alert dal grafo con la valutazione dell'impatto sull'Italia. Solleva AIError se non riesce.
+    @staticmethod
+    def _latest_who(docs: List[Dict]) -> List[Dict]:
+        """Ultima notizia OMS per evento: i bollettini precedenti sullo stesso evento sono superati.
 
-        Due chiamate piccole invece di una grande (eventi sanitari, richiami distribuiti in Italia):
-        la risposta resta corta e non si tronca. Se una delle due fallisce si solleva AIError e
-        restano gli alert dell'aggiornamento precedente, mai un insieme a metà.
+        Solo notizie degli ultimi 45 giorni rispetto alla più recente. L'evento è la parte del titolo prima del paese ("Ebola disease caused by Bundibugyo virus, ..."/" - ...").
+        """
+        latest: Dict[str, Dict] = {}
+        newest = max((d.get("published") or "" for d in docs), default="")
+        oldest = (datetime.fromisoformat(newest) - timedelta(days=45)).date().isoformat() if newest else ""
+        for d in sorted(docs, key=lambda d: d.get("published") or "", reverse=True):
+            event = re.split(r" [-–] |, ", d.get("title", ""), maxsplit=1)[0].strip().lower()
+            if event and event not in latest and d.get("summary") and (d.get("published") or "") >= oldest:
+                latest[event] = d
+        return list(latest.values())[:4]
+
+    async def generate_alerts(self, entities: List[Dict], relations: List[Dict],
+                              who_docs: Optional[List[Dict]] = None) -> List[Dict]:
+        """Genera alert dai record delle fonti (richiami FDA, notizie OMS). Solleva AIError se non riesce.
+
+        Al modello vanno i record originali, non le relazioni del grafo estratte dall'AI. Un alert resta solo
+        se nasce da un record passato; il sistema aggiunge tra virgolette il testo del record (product_description
+        del richiamo, frase del documento OMS indicata dal modello e verificata) e toglie l'orizzonte temporale
+        se non è scritto nel record. Due chiamate piccole (richiami, notizie OMS): se una fallisce si solleva
+        AIError e restano gli alert dell'aggiornamento precedente, mai un insieme a metà.
         """
         if not entities:
             raise AIError("grafo vuoto: nessuna entità da analizzare")
 
-        # Richiami FDA più recenti con distribuzione in Italia (relazioni verso AIFA)
+        # Richiami FDA più recenti con distribuzione in Italia (relazioni verso AIFA), con il record openFDA
         italy_recalls = sorted(
-            [r for r in relations if str(r.get("id", "")).startswith("recall_") and r.get("target") == "aifa"],
+            [r for r in relations if str(r.get("id", "")).startswith("recall_") and r.get("target") == "aifa"
+             and isinstance(r.get("record"), dict) and r["record"].get("product_description")],
             key=lambda r: r.get("date") or "", reverse=True,
         )[:ALERT_MAX_ITEMS]
-        # Eventi e focolai: entità e relazioni ad alto rischio che non vengono dai richiami
-        events = {
-            "high_risk_entities": [
-                {k: e.get(k) for k in ("id", "label", "type", "region", "risk_score")}
-                for e in entities if e.get("risk_score", 0) > 60 and e.get("type") != "PharmaCompany"
-            ][:ALERT_MAX_ITEMS],
-            "high_risk_relations": [
-                {"source": r.get("source"), "target": r.get("target"), "type": r.get("type"),
-                 "fact": (r.get("fact") or "")[:200], "date": r.get("date")}
-                for r in relations if r.get("risk_score", 0) > 60 and not str(r.get("id", "")).startswith("recall_")
-            ][:ALERT_MAX_ITEMS],
-        }
-        groups = []
-        if events["high_risk_entities"] or events["high_risk_relations"]:
-            groups.append(("Concentrati su focolai ed eventi sanitari.", events))
-        if italy_recalls:
-            groups.append(("Concentrati sui richiami FDA di farmaci e dispositivi distribuiti in Italia.", {
-                "recent_recalls_distributed_in_italy": [
-                    {"firm": r.get("source"), "date": r.get("date"), "fact": (r.get("fact") or "")[:200]}
-                    for r in italy_recalls
-                ]}))
-        if not groups:
-            raise AIError("nessun dato ad alto rischio da analizzare")
+        recalls = {}
+        for r in italy_recalls:
+            rec = r["record"]
+            recalls[rec.get("recall_number") or r.get("source_doc")] = {
+                "firm_id": r.get("source"),
+                "code_info": (rec.get("code_info") or "")[:300],
+                "record": {k: rec.get(k) for k in ("recall_number", "recalling_firm", "classification", "product_type",
+                                                    "product_description", "reason_for_recall")},
+            }
+        who = {d["id"]: d for d in self._latest_who(who_docs or [])}
 
+        groups = []
+        if who:
+            groups.append(("who", ALERT_RULES_WHO, [
+                {"id": d["id"], "title": d.get("title"), "published": d.get("published"), "summary": d.get("summary")}
+                for d in who.values()]))
+        if recalls:
+            groups.append(("recall", ALERT_RULES_RECALLS, [{"id": k, **v["record"], "code_info": v["code_info"]}
+                                                                 for k, v in recalls.items()]))
+        if not groups:
+            raise AIError("nessun record da analizzare")
+
+        squash = lambda t: re.sub(r"\s+", " ", t or "").strip()
         alerts: List[Dict] = []
-        for focus, data in groups:
-            prompt = ALERT_PROMPT.format(focus=focus, data=json.dumps(data, indent=1, ensure_ascii=False))
+        for kind, rules, records in groups:
+            prompt = ALERT_PROMPT.format(rules=rules, data=json.dumps(records, indent=1, ensure_ascii=False))
             result = self._parse_json(await self._ask(prompt, ALERT_MAX_TOKENS))
             if not isinstance(result, list):
                 raise AIError(f"attesa una lista di alert, ricevuto {type(result).__name__}")
-            alerts += [a for a in result if isinstance(a, dict) and a.get("title")]
+            for a in result:
+                if not isinstance(a, dict) or not a.get("title"):
+                    continue
+                sid = a.get("source_id")
+                if kind == "recall" and sid in recalls:
+                    rec = recalls[sid]["record"]
+                    source_text = squash(json.dumps(rec, ensure_ascii=False))
+                    a["description"] = (f"Prodotto secondo il richiamo FDA {sid}: \"{squash(rec['product_description'])}\" — "
+                                        + (a.get("description") or ""))
+                    a["entities_involved"] = [recalls[sid]["firm_id"]]
+                elif kind == "who" and sid in who:
+                    doc = who[sid]
+                    source_text = squash(doc["summary"])
+                    quote = squash(a.pop("quote", ""))
+                    if len(quote) < 20 or quote not in source_text:
+                        print(f"[extractor] alert scartato: citazione non presente nel documento {sid}: {quote[:120]!r}")
+                        continue
+                    a["description"] = (f"OMS, Disease Outbreak News {sid} del {doc.get('published')}: \"{quote}\" — "
+                                        + (a.get("description") or ""))
+                    a["entities_involved"] = []
+                else:
+                    print(f"[extractor] alert scartato: record di origine sconosciuto {sid!r} ({a.get('title')!r})")
+                    continue
+                # Orizzonte temporale solo se scritto nel record
+                if a.get("timeframe") and squash(str(a["timeframe"])).lower() not in source_text.lower():
+                    a["timeframe"] = None
+                a.pop("predicted_impact", None)
+                a["id"] = self._make_slug(f"{kind}_{sid}") or "alert"
+                alerts.append(a)
         if not alerts:
             raise AIError("la risposta non contiene alert validi")
-        # Id unici anche se le due chiamate ne propongono uno uguale
+        # Id unici anche se due alert nascono dallo stesso record
         seen = set()
         for a in alerts:
-            aid, i = a.get("id") or "alert", 2
-            while a.get("id") in seen or not a.get("id"):
+            aid, i = a["id"], 2
+            while a["id"] in seen:
                 a["id"], i = f"{aid}_{i}", i + 1
             seen.add(a["id"])
         return alerts

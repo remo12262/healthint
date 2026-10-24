@@ -95,7 +95,12 @@ const SSN_RELATION = "Struttura organizzativa del Servizio sanitario nazionale. 
 // Regione Siciliana -> aziende sanitarie: riordino del SSR siciliano
 const SSR_SICILIA_RELATIONS = new Set(["reg_sicilia_asp_me_CONTROLLA", "reg_sicilia_aospme_CONTROLLA"])
 const SSR_SICILIA_RELATION = "Struttura organizzativa del SSR siciliano · L.R. 5/2009, art. 8. Nessun documento associato: questa relazione descrive l'organizzazione, non un evento."
+// Relazioni con un atto indicato a mano, senza link al documento
+const MANUAL_DOC_RELATIONS = {
+  reg_sicilia_maria_eleonora_hospital_ACCREDITA: "D.D.G. Regione Siciliana n. 705 del 20/07/2021 · riferimento inserito manualmente, senza link al documento",
+}
 function structureText(r, nodeById) {
+  if (MANUAL_DOC_RELATIONS[r.id]) return MANUAL_DOC_RELATIONS[r.id]
   if (!isSsnStructure(r, nodeById)) return false
   return SSR_SICILIA_RELATIONS.has(r.id) ? SSR_SICILIA_RELATION : SSN_RELATION
 }
