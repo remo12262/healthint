@@ -632,42 +632,6 @@
    "risk_basis": "Valore assegnato manualmente"
   },
   {
-   "id": "pfizer",
-   "label": "Pfizer",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": "US",
-   "description": "Multinazionale farmaceutica. Vaccini, oncologia, cardiologia.",
-   "risk_score": 30,
-   "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente"
-  },
-  {
-   "id": "roche",
-   "label": "Roche",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": "CH",
-   "description": "Farmaceutica svizzera leader in oncologia e diagnostica.",
-   "risk_score": 28,
-   "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente"
-  },
-  {
-   "id": "gvm",
-   "label": "GVM Care & Research",
-   "type": "PrivateGroup",
-   "domain": "health",
-   "region": "IT",
-   "description": "Gruppo privato ospedaliero italiano. Presenza in più regioni.",
-   "risk_score": 28,
-   "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente"
-  },
-  {
    "id": "aospme",
    "label": "AO Papardo Messina",
    "type": "HospitalNetwork",
@@ -692,18 +656,6 @@
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
-   "id": "humanitas",
-   "label": "Humanitas",
-   "type": "PrivateGroup",
-   "domain": "health",
-   "region": "Lombardia",
-   "description": "Gruppo ospedaliero privato. Ricerca e clinica ad alta specializzazione.",
-   "risk_score": 22,
-   "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente"
-  },
-  {
    "id": "consip",
    "label": "Consip",
    "type": "ProcurementBody",
@@ -720,30 +672,6 @@
    "full_name": "Consip S.p.A. – centrale acquisti nazionale",
    "website": "https://www.consip.it/",
    "italy": true
-  },
-  {
-   "id": "aouMe",
-   "label": "AOU G. Martino Messina",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": "Sicilia",
-   "description": "Azienda Ospedaliera Universitaria di Messina.",
-   "risk_score": 20,
-   "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente"
-  },
-  {
-   "id": "farmindustria",
-   "label": "Farmindustria",
-   "type": "ProcurementBody",
-   "domain": "health",
-   "region": "IT",
-   "description": "Associazione industria farmaceutica italiana.",
-   "risk_score": 20,
-   "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente"
   },
   {
    "id": "agenas",
@@ -967,21 +895,6 @@
    "risk_assigned_at": "2026-10-11T11:23:25.167923"
   },
   {
-   "id": "north_kivu_health_zone",
-   "label": "Zone Sanitarie Nord Kivu e aree colpite",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": "DRC",
-   "description": "Strutture sanitarie nelle 6 province colpite (Bas-Uélé, Haut-Uélé, Ituri, North Kivu, South Kivu, Tshopo)",
-   "risk_score": 92,
-   "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T09:31:52.975006",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-14T20:41:10.342252",
-   "risk_doc": "2026-DON617",
-   "risk_doc_date": "2026-09-10"
-  },
-  {
    "id": "who_emergency_committee",
    "label": "Comitato di emergenza OMS",
    "type": "RegulatorAgency",
@@ -1173,22 +1086,6 @@
    "risk_doc_date": "2026-08-14"
   },
   {
-   "id": "hz_buta",
-   "label": "Zona sanitaria di Buta",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": "DRC",
-   "description": "Zona sanitaria del Bas-Uélé province con caso confermato di Ebola",
-   "risk_score": 90,
-   "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-08T21:00:11.980138",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "aliases": [
-    "Zona Sanitaria di Buta"
-   ],
-   "risk_assigned_at": "2026-10-08T21:00:36.907228"
-  },
-  {
    "id": "prov_cd_sud_ubangi",
    "label": "Provincia di Sud-Ubangi (RDC)",
    "type": "RegionalAuthority",
@@ -1222,18 +1119,22 @@
   },
   {
    "id": "healthcare_settings_drc",
-   "label": "Healthcare Settings - DRC",
+   "label": "Strutture sanitarie – RDC",
    "type": "HospitalNetwork",
    "domain": "health",
    "region": "DRC",
-   "description": "Strutture sanitarie nella RDC a rischio di trasmissione di Ebola",
+   "description": "Rete ospedaliera della DRC con accesso tardivo ai pazienti e capacità diagnostica limitata nella gestione Ebola.",
    "risk_score": 97,
    "created_at": "2026-10-08T21:08:03.951757",
-   "updated_at": "2026-10-13T12:40:30.306772",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-13T12:40:59.208959",
    "risk_doc": "2026-DON617",
-   "risk_doc_date": "2026-09-10"
+   "risk_doc_date": "2026-09-10",
+   "aliases": [
+    "Health Facility Network - DRC",
+    "Healthcare Settings - DRC"
+   ]
   },
   {
    "id": "hz_kayna",
@@ -1280,7 +1181,7 @@
   },
   {
    "id": "apri_irkutsk",
-   "label": "Irkutsk Antiplague Research Institute (APRI)",
+   "label": "Istituto antipeste di Irkutsk (APRI)",
    "type": "ResearchInstitute",
    "domain": "health",
    "region": null,
@@ -1291,11 +1192,14 @@
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-14T20:41:10.342252",
    "risk_doc": "2026-DON620",
-   "risk_doc_date": "2026-10-10"
+   "risk_doc_date": "2026-10-10",
+   "aliases": [
+    "Irkutsk Antiplague Research Institute (APRI)"
+   ]
   },
   {
    "id": "irkutsk_oblast",
-   "label": "Irkutsk Oblast",
+   "label": "Oblast di Irkutsk",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": null,
@@ -1306,11 +1210,14 @@
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-14T20:41:10.342252",
    "risk_doc": "2026-DON620",
-   "risk_doc_date": "2026-10-10"
+   "risk_doc_date": "2026-10-10",
+   "aliases": [
+    "Irkutsk Oblast"
+   ]
   },
   {
    "id": "hospital_irkutsk",
-   "label": "Struttura Ospedaliera Irkutsk",
+   "label": "Struttura ospedaliera – Irkutsk",
    "type": "HospitalNetwork",
    "domain": "health",
    "region": null,
@@ -1320,7 +1227,9 @@
    "updated_at": "2026-10-18T15:23:47.514270",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
-    "Struttura Ospedaliera - Irkutsk"
+    "Healthcare Facility - Irkutsk",
+    "Struttura Ospedaliera - Irkutsk",
+    "Struttura Ospedaliera Irkutsk"
    ],
    "risk_assigned_at": "2026-10-15T20:19:40.755064",
    "risk_doc": "2026-DON620",
@@ -1328,18 +1237,22 @@
   },
   {
    "id": "irkutsk_oblast_health",
-   "label": "Autorità Sanitarie Irkutsk Oblast",
+   "label": "Autorità sanitarie dell'oblast di Irkutsk",
    "type": "RegionalAuthority",
    "domain": "health",
-   "region": null,
-   "description": "Autorità sanitaria regionale russa responsabile della gestione del focolaio",
+   "region": "Federazione Russa",
+   "description": "Autorità sanitarie regionali dell'Oblast di Irkutsk che hanno implementato misure di controllo",
    "risk_score": 45,
    "created_at": "2026-10-11T20:57:24.410019",
    "updated_at": "2026-10-18T15:23:47.514270",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-11T20:57:58.661999",
    "risk_doc": "2026-DON620",
-   "risk_doc_date": "2026-10-10"
+   "risk_doc_date": "2026-10-10",
+   "aliases": [
+    "Autorità Sanitarie Irkutsk Oblast",
+    "Irkutsk Oblast Health Authorities"
+   ]
   },
   {
    "id": "deceased_employee",
@@ -1350,26 +1263,34 @@
    "description": "Impiegato dell'APRI deceduto il 2 ottobre 2026 per polmonite severa con sospetta peste polmonare",
    "risk_score": 85,
    "created_at": "2026-10-12T13:06:19.150499",
-   "updated_at": "2026-10-14T20:40:28.510782",
+   "updated_at": "2026-10-16T19:55:52.584500",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-12T13:06:49.465268",
    "risk_doc": "2026-DON620",
-   "risk_doc_date": "2026-10-10"
+   "risk_doc_date": "2026-10-10",
+   "aliases": [
+    "Employee APRI"
+   ]
   },
   {
    "id": "drc_health_zones",
-   "label": "61 Zone Sanitarie colpite - Repubblica Democratica del Congo",
+   "label": "Zone sanitarie colpite – RDC",
    "type": "HospitalNetwork",
    "domain": "health",
    "region": "DRC",
-   "description": "Reti di strutture sanitarie nelle 61 zone sanitarie interessate dall'epidemia di Bundibugyo virus in sei province: Bas-Uélé, Haut-Uélé, Ituri, North Kivu, South Kivu, e Tshopo",
+   "description": "Zone sanitarie della Repubblica Democratica del Congo colpite dall'epidemia di Ebola (virus Bundibugyo). Il numero di zone è riportato nelle singole relazioni, con il documento OMS da cui proviene.",
    "risk_score": 95,
-   "created_at": "2026-10-12T23:36:45.294438",
-   "updated_at": "2026-10-14T10:08:06.100528",
+   "created_at": "2026-10-08T21:00:11.980138",
+   "updated_at": "2026-10-23T18:31:18.057559",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-12T23:37:22.941049",
    "risk_doc": "2026-DON617",
-   "risk_doc_date": "2026-09-10"
+   "risk_doc_date": "2026-09-10",
+   "aliases": [
+    "61 Zone Sanitarie colpite - Repubblica Democratica del Congo",
+    "Health Zones - DRC",
+    "Zone Sanitarie Nord Kivu e aree colpite"
+   ]
   },
   {
    "id": "percussionaire_corporation",
@@ -1456,21 +1377,6 @@
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
-   "id": "healthcare_facility_irkutsk",
-   "label": "Healthcare Facility - Irkutsk",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": null,
-   "description": "Struttura ospedaliera dove il paziente è stato ricoverato con polmonite grave",
-   "risk_score": 50,
-   "created_at": "2026-10-13T21:49:36.450559",
-   "updated_at": "2026-10-13T21:49:36.450559",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-13T21:50:08.527126",
-   "risk_doc": "2026-DON620",
-   "risk_doc_date": "2026-10-10"
-  },
-  {
    "id": "country_ru",
    "label": "Federazione Russa",
    "type": "RegionalAuthority",
@@ -1523,21 +1429,6 @@
    "risk_assigned_at": "2026-10-14T10:08:40.250844",
    "risk_doc": "2026-DON618",
    "risk_doc_date": "2026-10-15"
-  },
-  {
-   "id": "irkutsk_oblast_auth",
-   "label": "Irkutsk Oblast Health Authorities",
-   "type": "RegionalAuthority",
-   "domain": "health",
-   "region": "Irkutsk Oblast",
-   "description": "Autorità sanitarie regionali dell'Oblast di Irkutsk che hanno implementato misure di controllo",
-   "risk_score": 10,
-   "created_at": "2026-10-16T09:43:55.963074",
-   "updated_at": "2026-10-16T09:43:55.963074",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-16T09:44:35.866052",
-   "risk_doc": "2026-DON620",
-   "risk_doc_date": "2026-10-10"
   },
   {
    "id": "moh_sa",
@@ -1625,7 +1516,7 @@
   },
   {
    "id": "riyadh_region",
-   "label": "Riyadh",
+   "label": "Riad",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Saudi Arabia",
@@ -1636,7 +1527,10 @@
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-17T09:18:44.318679",
    "risk_doc": "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
-   "risk_doc_date": "2026-10-15"
+   "risk_doc_date": "2026-10-15",
+   "aliases": [
+    "Riyadh"
+   ]
   },
   {
    "id": "tabuk_region",
@@ -1670,7 +1564,7 @@
   },
   {
    "id": "dromedary_camel_reservoir",
-   "label": "Dromedary Camels",
+   "label": "Dromedari (serbatoio animale)",
    "type": "ResearchInstitute",
    "domain": "health",
    "region": "Saudi Arabia",
@@ -1681,22 +1575,10 @@
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_assigned_at": "2026-10-16T19:56:32.165391",
    "risk_doc": "middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
-   "risk_doc_date": "2026-10-15"
-  },
-  {
-   "id": "employee_apri",
-   "label": "Employee APRI",
-   "type": "Person",
-   "domain": "health",
-   "region": null,
-   "description": "Dipendente dell'Istituto Antiplague di Irkutsk, deceduto il 2 ottobre 2026 per polmonite grave",
-   "risk_score": 0,
-   "created_at": "2026-10-16T19:55:52.584500",
-   "updated_at": "2026-10-16T19:55:52.584500",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-16T19:56:32.165391",
-   "risk_doc": "2026-DON620",
-   "risk_doc_date": "2026-10-10"
+   "risk_doc_date": "2026-10-15",
+   "aliases": [
+    "Dromedary Camels"
+   ]
   },
   {
    "id": "moh_ke",
@@ -1736,19 +1618,6 @@
    "risk_doc_date": "2026-10-08"
   },
   {
-   "id": "drc_provinces_affected",
-   "label": "Six Provinces DRC",
-   "type": "RegionalAuthority",
-   "domain": "health",
-   "region": "Democratic Republic of the Congo",
-   "description": "Sei province della DRC coinvolte: Bas-Uélé, Haut-Uélé, Ituri, North Kivu, South Kivu, Tshopo con 61 zone sanitarie colpite",
-   "risk_score": 92,
-   "created_at": "2026-10-17T09:18:06.265505",
-   "updated_at": "2026-10-17T09:18:06.265505",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-17T09:18:44.318679"
-  },
-  {
    "id": "country_sa",
    "label": "Arabia Saudita",
    "type": "RegionalAuthority",
@@ -1768,18 +1637,21 @@
   },
   {
    "id": "affected_provinces_drc",
-   "label": "Province Colpite - DRC",
+   "label": "Province colpite – RDC",
    "type": "RegionalAuthority",
    "domain": "health",
-   "region": "Congo",
-   "description": "6 province su 26 della DRC colpite dall'epidemia: Bas-Uélé, Haut-Uélé, Ituri, Nord Kivu, Sud Kivu, Tshopo",
-   "risk_score": 88,
-   "created_at": "2026-10-18T09:31:52.975006",
-   "updated_at": "2026-10-18T09:31:52.975006",
+   "region": "Repubblica Democratica del Congo",
+   "description": "Province della Repubblica Democratica del Congo colpite dall'epidemia di Ebola (virus Bundibugyo). Le province sono riportate nelle singole relazioni, con il documento OMS da cui provengono.",
+   "risk_score": 92,
+   "created_at": "2026-10-17T09:18:06.265505",
+   "updated_at": "2026-10-23T17:07:09.049695",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-18T09:32:26.803806",
-   "risk_doc": "2026-DON617",
-   "risk_doc_date": "2026-09-10"
+   "risk_assigned_at": "2026-10-17T09:18:44.318679",
+   "aliases": [
+    "Ituri, North Kivu, South Kivu, Tshopo Provinces",
+    "Province Colpite - DRC",
+    "Six Provinces DRC"
+   ]
   },
   {
    "id": "conferenza_sr",
@@ -2202,111 +2074,6 @@
    "updated_at": "2026-10-18T15:38:53.728256"
   },
   {
-   "id": "farmaco_orfano_nuovo",
-   "label": "Farmaco orfano nuovo",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": null,
-   "description": "Nuovo farmaco orfano approvato per la rimborsabilità",
-   "risk_score": 0,
-   "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-18T19:24:58.559516",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "risk_doc_date": "2026-10-16"
-  },
-  {
-   "id": "estensioni_indicazione_pediatrico",
-   "label": "Estensioni indicazione pediatrico",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": null,
-   "description": "6 estensioni di indicazione terapeutica in ambito pediatrico approvate",
-   "risk_score": 0,
-   "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-18T19:24:58.559516",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "risk_doc_date": "2026-10-16"
-  },
-  {
-   "id": "farmaci_equivalenti",
-   "label": "Farmaci equivalenti",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": null,
-   "description": "3 farmaci equivalenti approvati per la rimborsabilità",
-   "risk_score": 0,
-   "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-18T19:24:58.559516",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "risk_doc_date": "2026-10-16"
-  },
-  {
-   "id": "oncologia_terapia",
-   "label": "Opzioni terapeutiche oncologia",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": null,
-   "description": "Nuove opzioni terapeutiche per oncologia approvate",
-   "risk_score": 0,
-   "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-18T19:24:58.559516",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "risk_doc_date": "2026-10-16"
-  },
-  {
-   "id": "hiv1_terapia",
-   "label": "Terapie HIV-1",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": null,
-   "description": "Nuove opzioni terapeutiche per infezione da HIV-1 approvate",
-   "risk_score": 0,
-   "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-18T19:24:58.559516",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "risk_doc_date": "2026-10-16"
-  },
-  {
-   "id": "salute_mentale_adolescenti",
-   "label": "Salute mentale adolescenti",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": null,
-   "description": "Nuove opzioni terapeutiche per salute mentale negli adolescenti approvate",
-   "risk_score": 0,
-   "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-18T19:24:58.559516",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "risk_doc_date": "2026-10-16"
-  },
-  {
-   "id": "malattie_rare_terapia",
-   "label": "Terapie malattie rare",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": null,
-   "description": "Nuove opzioni terapeutiche per malattie rare approvate",
-   "risk_score": 0,
-   "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-18T19:24:58.559516",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "risk_doc_date": "2026-10-16"
-  },
-  {
    "id": "evt_dengue",
    "label": "Epidemia di dengue",
    "type": "EpidemicEvent",
@@ -2485,29 +2252,17 @@
    "type": "PharmaCompany",
    "domain": "health",
    "region": "IT",
-   "description": "Azienda farmaceutica produttrice di Paracetamolo Zentiva Italia",
-   "risk_score": 15,
-   "created_at": "2026-10-21T20:36:03.052084",
-   "updated_at": "2026-10-21T20:36:03.052084",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-21T20:36:42.010023",
-   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
-   "risk_doc_date": "2026-10-21"
-  },
-  {
-   "id": "paracetamolo_zentiva",
-   "label": "Paracetamolo Zentiva Italia",
-   "type": "PharmaCompany",
-   "domain": "health",
-   "region": "IT",
-   "description": "Medicinale per uso umano - autorizzazione revocata su rinuncia",
+   "description": "Azienda farmaceutica, titolare del medicinale Paracetamolo Zentiva Italia (autorizzazione revocata su rinuncia, Gazzetta Ufficiale del 21/10/2026).",
    "risk_score": 20,
    "created_at": "2026-10-21T20:36:03.052084",
    "updated_at": "2026-10-21T20:36:03.052084",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "risk_assigned_at": "2026-10-21T20:36:42.010023",
    "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG",
-   "risk_doc_date": "2026-10-21"
+   "risk_doc_date": "2026-10-21",
+   "aliases": [
+    "Paracetamolo Zentiva Italia"
+   ]
   },
   {
    "id": "zentiva_generics",
@@ -2525,51 +2280,8 @@
    "risk_doc_date": "2026-10-21"
   },
   {
-   "id": "zika_cases",
-   "label": "Casi Zika Virus",
-   "type": "HealthEvent",
-   "domain": "health",
-   "region": "IT",
-   "description": "4 casi confermati di Zika virus, tutti associati a viaggi all'estero",
-   "risk_score": 25,
-   "created_at": "2026-10-22T20:33:10.769539",
-   "updated_at": "2026-10-22T20:33:10.769539",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_assigned_at": "2026-10-22T20:33:51.275926"
-  },
-  {
-   "id": "health_facility_network_drc",
-   "label": "Health Facility Network - DRC",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": "DRC",
-   "description": "Rete ospedaliera della DRC con accesso tardivo ai pazienti e capacità diagnostica limitata nella gestione Ebola.",
-   "risk_score": 88,
-   "created_at": "2026-10-23T17:07:09.049695",
-   "updated_at": "2026-10-23T17:07:09.049695",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-23T17:07:40.657041",
-   "risk_doc": "2026-DON621",
-   "risk_doc_date": "2026-09-25"
-  },
-  {
-   "id": "ituri_north_kivu_provinces",
-   "label": "Ituri, North Kivu, South Kivu, Tshopo Provinces",
-   "type": "RegionalAuthority",
-   "domain": "health",
-   "region": "DRC",
-   "description": "Province della DRC con zone sanitarie affette da epidemia Ebola Bundibugyo attiva.",
-   "risk_score": 92,
-   "created_at": "2026-10-23T17:07:09.049695",
-   "updated_at": "2026-10-23T17:07:09.049695",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_assigned_at": "2026-10-23T17:07:40.657041",
-   "risk_doc": "2026-DON621",
-   "risk_doc_date": "2026-09-25"
-  },
-  {
    "id": "gpei",
-   "label": "Global Polio Eradication Initiative",
+   "label": "Iniziativa globale per l'eradicazione della poliomielite (GPEI)",
    "type": "ResearchInstitute",
    "domain": "health",
    "region": null,
@@ -2580,7 +2292,10 @@
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "risk_assigned_at": "2026-10-23T17:07:40.657041",
    "risk_doc": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
-   "risk_doc_date": "2026-10-23"
+   "risk_doc_date": "2026-10-23",
+   "aliases": [
+    "Global Polio Eradication Initiative"
+   ]
   },
   {
    "id": "pakistan",
@@ -2689,7 +2404,7 @@
   },
   {
    "id": "nigeria_health",
-   "label": "Ministry of Health - Nigeria",
+   "label": "Ministero della Salute – Nigeria",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Nigeria",
@@ -2700,41 +2415,14 @@
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON622",
    "risk_doc_date": "2026-10-23",
-   "risk_assigned_at": "2026-10-23T18:31:18.057542"
-  },
-  {
-   "id": "health_zones_drc",
-   "label": "Health Zones - DRC",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": "Democratic Republic of the Congo",
-   "description": "66 zone sanitarie coinvolte in otto province della DRC",
-   "risk_score": 88,
-   "created_at": "2026-10-23T18:31:18.057559",
-   "updated_at": "2026-10-23T18:31:18.057559",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_doc": "2026-DON622",
-   "risk_doc_date": "2026-10-23",
-   "risk_assigned_at": "2026-10-23T18:31:18.057542"
-  },
-  {
-   "id": "kenya_treatment_center",
-   "label": "Treatment Centers - Kenya",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": "Kenya",
-   "description": "Centri di trattamento per i casi confermati di BVD in Kenya",
-   "risk_score": 70,
-   "created_at": "2026-10-23T18:31:18.057559",
-   "updated_at": "2026-10-23T18:31:18.057559",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_doc": "2026-DON622",
-   "risk_doc_date": "2026-10-23",
-   "risk_assigned_at": "2026-10-23T18:31:18.057542"
+   "risk_assigned_at": "2026-10-23T18:31:18.057542",
+   "aliases": [
+    "Ministry of Health - Nigeria"
+   ]
   },
   {
    "id": "nigeria_abuja_fc",
-   "label": "Federal Capital Territory Abuja",
+   "label": "Territorio della Capitale Federale (Abuja)",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Nigeria",
@@ -2745,11 +2433,14 @@
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON622",
    "risk_doc_date": "2026-10-23",
-   "risk_assigned_at": "2026-10-23T18:31:18.057542"
+   "risk_assigned_at": "2026-10-23T18:31:18.057542",
+   "aliases": [
+    "Federal Capital Territory Abuja"
+   ]
   },
   {
    "id": "uganda_transit",
-   "label": "Uganda Transit Point",
+   "label": "Punto di transito – Uganda",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Uganda",
@@ -2760,7 +2451,10 @@
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON622",
    "risk_doc_date": "2026-10-23",
-   "risk_assigned_at": "2026-10-23T18:31:18.057542"
+   "risk_assigned_at": "2026-10-23T18:31:18.057542",
+   "aliases": [
+    "Uganda Transit Point"
+   ]
   },
   {
    "id": "importazione_parallela_26a05554",
@@ -6155,17 +5849,6 @@
    ]
   },
   {
-   "id": "evt_ebola_cd_north_kivu_health_zone_RISCHIO_PER",
-   "source": "evt_ebola_cd",
-   "target": "north_kivu_health_zone",
-   "type": "RISCHIO_PER",
-   "fact": "L'epidemia colpisce direttamente le strutture sanitarie con ritardi nella rilevazione dei casi e problemi di accesso alle cure, favorendo la trasmissione nosocomiale",
-   "risk_score": 92,
-   "source_doc": "2026-DON617",
-   "date": "2026-09",
-   "created_at": "2026-10-08T21:00:11.980170"
-  },
-  {
    "id": "who_emergency_committee_country_cd_INDAGA_SU",
    "source": "who_emergency_committee",
    "target": "country_cd",
@@ -6521,7 +6204,11 @@
    "risk_score": 99,
    "source_doc": "2026-DON617",
    "date": "2026-09",
-   "created_at": "2026-10-08T21:08:03.951824"
+   "created_at": "2026-10-08T21:08:03.951824",
+   "source_docs": [
+    "2026-DON617",
+    "2026-DON621"
+   ]
   },
   {
    "id": "evt_ebola_cd_prov_cd_tshopo_RISCHIO_PER",
@@ -6919,8 +6606,8 @@
    "source": "apri_irkutsk",
    "target": "hospital_irkutsk",
    "type": "RISCHIO_PER",
-   "fact": "Esposizione occupazionale a laboratorio con patogeni ad alto rischio ha causato ricovero e sospetta morte per peste polmonare",
-   "risk_score": 82,
+   "fact": "Espositore occupazionale in laboratorio APRI con ospedalizzazione per polmonite grave, sospetto di peste polmonite",
+   "risk_score": 85,
    "source_doc": "2026-DON620",
    "date": "2026-09",
    "created_at": "2026-10-10T20:33:53.999519"
@@ -6984,17 +6671,6 @@
    "risk_score": 30,
    "source_doc": "2026-DON620",
    "date": "2026-09",
-   "created_at": "2026-10-11T11:22:50.867024"
-  },
-  {
-   "id": "country_cd_north_kivu_health_zone_RISCHIO_PER",
-   "source": "country_cd",
-   "target": "north_kivu_health_zone",
-   "type": "RISCHIO_PER",
-   "fact": "Espansione geografica dell'epidemia di Bundibugyo verso zona sanitaria di Alimbongo in North Kivu",
-   "risk_score": 86,
-   "source_doc": "2026-DON619",
-   "date": "2026-10",
    "created_at": "2026-10-11T11:22:50.867024"
   },
   {
@@ -7297,7 +6973,11 @@
    "risk_score": 98,
    "source_doc": "2026-DON617",
    "date": "2026-09",
-   "created_at": "2026-10-12T23:36:45.294497"
+   "created_at": "2026-10-08T21:00:11.980170",
+   "source_docs": [
+    "2026-DON617",
+    "2026-DON622"
+   ]
   },
   {
    "id": "ecdc_who_COLLABORA_CON",
@@ -8535,34 +8215,12 @@
    "created_at": "2026-10-13T12:40:30.306822"
   },
   {
-   "id": "apri_irkutsk_healthcare_facility_irkutsk_RISCHIO_PER",
-   "source": "apri_irkutsk",
-   "target": "healthcare_facility_irkutsk",
-   "type": "RISCHIO_PER",
-   "fact": "Espositore occupazionale in laboratorio APRI con ospedalizzazione per polmonite grave, sospetto di peste polmonite",
-   "risk_score": 85,
-   "source_doc": "2026-DON620",
-   "date": "2026-09",
-   "created_at": "2026-10-13T21:49:36.450608"
-  },
-  {
    "id": "nfp_ru_apri_irkutsk_CONTROLLA",
    "source": "nfp_ru",
    "target": "apri_irkutsk",
    "type": "CONTROLLA",
    "fact": "Le autorità russe confermano il decesso e riferiscono l'implementazione di misure preventive e di controllo secondo la legislazione sanitaria nazionale",
    "risk_score": 65,
-   "source_doc": "2026-DON620",
-   "date": "2026-10",
-   "created_at": "2026-10-13T21:49:36.450608"
-  },
-  {
-   "id": "irkutsk_oblast_healthcare_facility_irkutsk_REGOLA",
-   "source": "irkutsk_oblast",
-   "target": "healthcare_facility_irkutsk",
-   "type": "REGOLA",
-   "fact": "L'Oblast di Irkutsk ha istituito quarantena e misure di isolamento presso la struttura ospedaliera",
-   "risk_score": 40,
    "source_doc": "2026-DON620",
    "date": "2026-10",
    "created_at": "2026-10-13T21:49:36.450608"
@@ -8726,11 +8384,15 @@
    "source": "moh_cd",
    "target": "drc_health_zones",
    "type": "CONTROLLA",
-   "fact": "Il Ministero della Salute RDC gestisce e coordina risposta epidemiologica nelle zone colpite",
-   "risk_score": 75,
+   "fact": "Ministero DRC supervisiona 66 zone sanitarie con 9704 casi confermati",
+   "risk_score": 87,
    "source_doc": "2026-DON617",
    "date": "2026-09",
-   "created_at": "2026-10-14T10:08:06.100587"
+   "created_at": "2026-10-14T10:08:06.100587",
+   "source_docs": [
+    "2026-DON617",
+    "2026-DON622"
+   ]
   },
   {
    "id": "irkutsk_oblast_apri_irkutsk_CONTROLLA",
@@ -8741,17 +8403,6 @@
    "risk_score": 55,
    "source_doc": "2026-DON620",
    "date": "2026-10",
-   "created_at": "2026-10-14T19:34:08.781639"
-  },
-  {
-   "id": "country_cd_north_kivu_health_zone_CONTROLLA",
-   "source": "country_cd",
-   "target": "north_kivu_health_zone",
-   "type": "CONTROLLA",
-   "fact": "Espansione del focolaio di Bundibugyo virus alla zona sanitaria di Alimbongo in North Kivu, raggiungendo 64 zone sanitarie in 7 province",
-   "risk_score": 94,
-   "source_doc": "2026-DON619",
-   "date": "2026-10-06",
    "created_at": "2026-10-14T19:34:08.781639"
   },
   {
@@ -8920,28 +8571,6 @@
    "created_at": "2026-10-15T20:19:04.940519"
   },
   {
-   "id": "irkutsk_oblast_auth_apri_irkutsk_CONTROLLA",
-   "source": "irkutsk_oblast_auth",
-   "target": "apri_irkutsk",
-   "type": "CONTROLLA",
-   "fact": "Autorità regionali hanno implementato misure preventive e di controllo presso l'istituto di ricerca in conformità alla legislazione sanitaria nazionale",
-   "risk_score": 20,
-   "source_doc": "2026-DON620",
-   "date": "2026-10",
-   "created_at": "2026-10-16T09:43:55.963130"
-  },
-  {
-   "id": "irkutsk_oblast_auth_hospital_irkutsk_CONTROLLA",
-   "source": "irkutsk_oblast_auth",
-   "target": "hospital_irkutsk",
-   "type": "CONTROLLA",
-   "fact": "Istituiti quarantene e monitoraggio medico dei contatti presso la struttura ospedaliera",
-   "risk_score": 25,
-   "source_doc": "2026-DON620",
-   "date": "2026-09",
-   "created_at": "2026-10-16T09:43:55.963130"
-  },
-  {
    "id": "prov_cd_bas_uele_evt_ebola_cd_RISCHIO_PER",
    "source": "prov_cd_bas_uele",
    "target": "evt_ebola_cd",
@@ -9107,17 +8736,6 @@
    "created_at": "2026-10-16T19:55:52.584554"
   },
   {
-   "id": "employee_apri_apri_irkutsk_MEMBRO_DI",
-   "source": "employee_apri",
-   "target": "apri_irkutsk",
-   "type": "MEMBRO_DI",
-   "fact": "Dipendente dell'Istituto Antiplague di Irkutsk con esposizione occupazionale in laboratorio",
-   "risk_score": 75,
-   "source_doc": "2026-DON620",
-   "date": "2026-09",
-   "created_at": "2026-10-16T19:55:52.584554"
-  },
-  {
    "id": "country_cd_who_INDAGA_SU",
    "source": "country_cd",
    "target": "who",
@@ -9195,17 +8813,6 @@
    "created_at": "2026-10-17T09:18:06.265569"
   },
   {
-   "id": "north_kivu_health_zone_hz_alimbongo_RISCHIO_PER",
-   "source": "north_kivu_health_zone",
-   "target": "hz_alimbongo",
-   "type": "RISCHIO_PER",
-   "fact": "Espansione geografica del focolaio di Bundibugyo a nuova zona sanitaria di Alimbongo in Nord Kivu",
-   "risk_score": 90,
-   "source_doc": "2026-DON619",
-   "date": "2026-09-25",
-   "created_at": "2026-10-17T09:18:06.265569"
-  },
-  {
    "id": "country_sa_evt_mers_sa_INDAGA_SU",
    "source": "country_sa",
    "target": "evt_mers_sa",
@@ -9236,7 +8843,7 @@
    "risk_score": 45,
    "source_doc": "2026-DON620",
    "date": "2026-10",
-   "created_at": "2026-10-17T19:20:51.079377"
+   "created_at": "2026-10-16T09:43:55.963130"
   },
   {
    "id": "hz_kayna_prov_cd_nord_kivu_MEMBRO_DI",
@@ -9269,7 +8876,11 @@
    "risk_score": 94,
    "source_doc": "2026-DON617",
    "date": "2026-09",
-   "created_at": "2026-10-18T09:31:52.975054"
+   "created_at": "2026-10-18T09:31:52.975054",
+   "source_docs": [
+    "2026-DON617",
+    "2026-DON621"
+   ]
   },
   {
    "id": "nfp_ru_hospital_irkutsk_REGOLA",
@@ -10178,104 +9789,6 @@
    }
   },
   {
-   "id": "aifa_farmaco_orfano_nuovo_REGOLA",
-   "source": "aifa",
-   "target": "farmaco_orfano_nuovo",
-   "type": "REGOLA",
-   "fact": "AIFA approva la rimborsabilità del nuovo farmaco orfano",
-   "risk_score": 0,
-   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "date": null,
-   "created_at": "2026-10-18T19:24:58.566871",
-   "doc_titles": {
-    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
-   }
-  },
-  {
-   "id": "aifa_estensioni_indicazione_pediatrico_REGOLA",
-   "source": "aifa",
-   "target": "estensioni_indicazione_pediatrico",
-   "type": "REGOLA",
-   "fact": "AIFA approva 6 estensioni di indicazione terapeutica in ambito pediatrico",
-   "risk_score": 0,
-   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "date": null,
-   "created_at": "2026-10-18T19:24:58.566871",
-   "doc_titles": {
-    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
-   }
-  },
-  {
-   "id": "aifa_farmaci_equivalenti_REGOLA",
-   "source": "aifa",
-   "target": "farmaci_equivalenti",
-   "type": "REGOLA",
-   "fact": "AIFA approva 3 farmaci equivalenti per la rimborsabilità",
-   "risk_score": 0,
-   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "date": null,
-   "created_at": "2026-10-18T19:24:58.566871",
-   "doc_titles": {
-    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
-   }
-  },
-  {
-   "id": "aifa_oncologia_terapia_REGOLA",
-   "source": "aifa",
-   "target": "oncologia_terapia",
-   "type": "REGOLA",
-   "fact": "AIFA approva nuove opzioni terapeutiche per l'oncologia",
-   "risk_score": 0,
-   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "date": null,
-   "created_at": "2026-10-18T19:24:58.566871",
-   "doc_titles": {
-    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
-   }
-  },
-  {
-   "id": "aifa_hiv1_terapia_REGOLA",
-   "source": "aifa",
-   "target": "hiv1_terapia",
-   "type": "REGOLA",
-   "fact": "AIFA approva nuove opzioni terapeutiche per infezione da HIV-1",
-   "risk_score": 0,
-   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "date": null,
-   "created_at": "2026-10-18T19:24:58.566871",
-   "doc_titles": {
-    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
-   }
-  },
-  {
-   "id": "aifa_salute_mentale_adolescenti_REGOLA",
-   "source": "aifa",
-   "target": "salute_mentale_adolescenti",
-   "type": "REGOLA",
-   "fact": "AIFA approva nuove opzioni terapeutiche per salute mentale negli adolescenti",
-   "risk_score": 0,
-   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "date": null,
-   "created_at": "2026-10-18T19:24:58.566871",
-   "doc_titles": {
-    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
-   }
-  },
-  {
-   "id": "aifa_malattie_rare_terapia_REGOLA",
-   "source": "aifa",
-   "target": "malattie_rare_terapia",
-   "type": "REGOLA",
-   "fact": "AIFA approva nuove opzioni terapeutiche per malattie rare",
-   "risk_score": 0,
-   "source_doc": "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti",
-   "date": null,
-   "created_at": "2026-10-18T19:24:58.566871",
-   "doc_titles": {
-    "https://www.aifa.gov.it/-/cda-aifa-approva-rimborsabilita-nuovo-farmaco-orfano-6-estensioni-indicazione-anche-in-ambito-pediatrico-e-3-equivalenti": "AIFA – Comunicati stampa – Il CdA AIFA approva la rimborsabilità per un nuovo farmaco orfano, 6 estensioni di indicazione anche in ambito pediatrico e 3 equivalenti"
-   }
-  },
-  {
    "id": "iss_evt_dengue_INDAGA_SU",
    "source": "iss",
    "target": "evt_dengue",
@@ -10493,53 +10006,6 @@
    }
   },
   {
-   "id": "aifa_paracetamolo_zentiva_REGOLA",
-   "source": "aifa",
-   "target": "paracetamolo_zentiva",
-   "type": "REGOLA",
-   "fact": "AIFA revoca l'autorizzazione all'immissione in commercio del medicinale su rinuncia del produttore",
-   "risk_score": 25,
-   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
-   "date": null,
-   "created_at": "2026-10-21T20:36:03.066389",
-   "doc_titles": {
-    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
-   },
-   "source_docs": [
-    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
-    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG"
-   ]
-  },
-  {
-   "id": "zentiva_italia_paracetamolo_zentiva_FORNISCE",
-   "source": "zentiva_italia",
-   "target": "paracetamolo_zentiva",
-   "type": "FORNISCE",
-   "fact": "Zentiva Italia produce e distribuisce Paracetamolo Zentiva Italia - autorizzazione revocata",
-   "risk_score": 20,
-   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
-   "date": null,
-   "created_at": "2026-10-21T20:36:03.066389",
-   "doc_titles": {
-    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
-   }
-  },
-  {
-   "id": "zentiva_generics_paracetamolo_zentiva_FORNISCE",
-   "source": "zentiva_generics",
-   "target": "paracetamolo_zentiva",
-   "type": "FORNISCE",
-   "fact": "Zentiva Generics è titolare dell'autorizzazione al commercio del medicinale Paracetamolo Zentiva Generics",
-   "risk_score": 20,
-   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG",
-   "date": null,
-   "created_at": "2026-10-21T20:36:03.066389",
-   "doc_titles": {
-    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
-   }
-  },
-  {
    "id": "aifa_zentiva_generics_CONTROLLA",
    "source": "aifa",
    "target": "zentiva_generics",
@@ -10650,28 +10116,6 @@
    "doc_titles": {
     "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 363 casi confermati di Dengue, 30 di Chikungunya, 777 di West Nile"
    }
-  },
-  {
-   "id": "evt_ebola_cd_health_facility_network_drc_RISCHIO_PER",
-   "source": "evt_ebola_cd",
-   "target": "health_facility_network_drc",
-   "type": "RISCHIO_PER",
-   "fact": "Sistema sanitario DRC con carenze diagnostiche e ritardi nel trattamento dei casi Ebola.",
-   "risk_score": 91,
-   "source_doc": "2026-DON621",
-   "date": "2026-09",
-   "created_at": "2026-10-23T17:07:09.061486"
-  },
-  {
-   "id": "evt_ebola_cd_ituri_north_kivu_provinces_RISCHIO_PER",
-   "source": "evt_ebola_cd",
-   "target": "ituri_north_kivu_provinces",
-   "type": "RISCHIO_PER",
-   "fact": "Province Ituri, North Kivu, South Kivu e Tshopo con trasmissione comunitaria persistente.",
-   "risk_score": 94,
-   "source_doc": "2026-DON621",
-   "date": "2026-09",
-   "created_at": "2026-10-23T17:07:09.061486"
   },
   {
    "id": "country_ss_ecdc_RISCHIO_PER",
@@ -14361,28 +13805,6 @@
    }
   },
   {
-   "id": "moh_cd_health_zones_drc_CONTROLLA",
-   "source": "moh_cd",
-   "target": "health_zones_drc",
-   "type": "CONTROLLA",
-   "fact": "Ministero DRC supervisiona 66 zone sanitarie con 9704 casi confermati",
-   "risk_score": 87,
-   "source_doc": "2026-DON622",
-   "date": "2026-10",
-   "created_at": "2026-10-23T18:31:18.067816"
-  },
-  {
-   "id": "evt_ebola_cd_health_zones_drc_RISCHIO_PER",
-   "source": "evt_ebola_cd",
-   "target": "health_zones_drc",
-   "type": "RISCHIO_PER",
-   "fact": "Focolaio epidemico causa 4687 morti e trasmissione comunitaria elevata",
-   "risk_score": 96,
-   "source_doc": "2026-DON622",
-   "date": "2026-10",
-   "created_at": "2026-10-23T18:31:18.067816"
-  },
-  {
    "id": "moh_ke_evt_ebola_cd_INDAGA_SU",
    "source": "moh_ke",
    "target": "evt_ebola_cd",
@@ -14497,6 +13919,80 @@
    "source_doc": "",
    "date": "2021-07-20",
    "created_at": "2026-10-24T15:00:00"
+  },
+  {
+   "id": "country_cd_drc_health_zones_RISCHIO_PER",
+   "source": "country_cd",
+   "target": "drc_health_zones",
+   "type": "RISCHIO_PER",
+   "fact": "Espansione geografica dell'epidemia di Bundibugyo verso zona sanitaria di Alimbongo in North Kivu",
+   "risk_score": 86,
+   "source_doc": "2026-DON619",
+   "date": "2026-10",
+   "created_at": "2026-10-11T11:22:50.867024"
+  },
+  {
+   "id": "country_cd_drc_health_zones_CONTROLLA",
+   "source": "country_cd",
+   "target": "drc_health_zones",
+   "type": "CONTROLLA",
+   "fact": "Espansione del focolaio di Bundibugyo virus alla zona sanitaria di Alimbongo in North Kivu, raggiungendo 64 zone sanitarie in 7 province",
+   "risk_score": 94,
+   "source_doc": "2026-DON619",
+   "date": "2026-10-06",
+   "created_at": "2026-10-14T19:34:08.781639"
+  },
+  {
+   "id": "drc_health_zones_hz_alimbongo_RISCHIO_PER",
+   "source": "drc_health_zones",
+   "target": "hz_alimbongo",
+   "type": "RISCHIO_PER",
+   "fact": "Espansione geografica del focolaio di Bundibugyo a nuova zona sanitaria di Alimbongo in Nord Kivu",
+   "risk_score": 90,
+   "source_doc": "2026-DON619",
+   "date": "2026-09-25",
+   "created_at": "2026-10-17T09:18:06.265569"
+  },
+  {
+   "id": "aifa_zentiva_italia_REGOLA",
+   "source": "aifa",
+   "target": "zentiva_italia",
+   "type": "REGOLA",
+   "fact": "AIFA revoca l'autorizzazione all'immissione in commercio del medicinale su rinuncia del produttore",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
+   "date": null,
+   "created_at": "2026-10-21T20:36:03.066389",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   },
+   "source_docs": [
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05439/SG",
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05440/SG"
+   ]
+  },
+  {
+   "id": "irkutsk_oblast_hospital_irkutsk_REGOLA",
+   "source": "irkutsk_oblast",
+   "target": "hospital_irkutsk",
+   "type": "REGOLA",
+   "fact": "L'Oblast di Irkutsk ha istituito quarantena e misure di isolamento presso la struttura ospedaliera",
+   "risk_score": 40,
+   "source_doc": "2026-DON620",
+   "date": "2026-10",
+   "created_at": "2026-10-13T21:49:36.450608"
+  },
+  {
+   "id": "deceased_employee_apri_irkutsk_MEMBRO_DI",
+   "source": "deceased_employee",
+   "target": "apri_irkutsk",
+   "type": "MEMBRO_DI",
+   "fact": "Dipendente dell'Istituto Antiplague di Irkutsk con esposizione occupazionale in laboratorio",
+   "risk_score": 75,
+   "source_doc": "2026-DON620",
+   "date": "2026-09",
+   "created_at": "2026-10-16T19:55:52.584554"
   }
  ],
  "alerts": [
