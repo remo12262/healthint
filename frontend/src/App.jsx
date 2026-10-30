@@ -1002,7 +1002,7 @@ export default function App() {
           Grafo aggiornato al {updatedAt ? formatDateTime(updatedAt) : "—"}
         </span>
         {!(narrow && tab === "graph") && <span style={{fontSize:12,color:"#04342C"}}>
-          Aggiornamento solo a richiesta, con il pulsante «Aggiorna dati»: la data cambia quando entrano nuovi dati.
+          Dati aggiornati automaticamente ogni 24 ore: la data cambia quando entrano nuovi dati.
         </span>}
       </div>
 
