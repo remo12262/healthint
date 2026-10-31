@@ -1,24 +1,24 @@
 {
  "version": 1,
- "exported_at": "2026-10-24T20:09:22.122209",
- "data_updated_at": "2026-10-24T20:09:21.787895",
+ "exported_at": "2026-10-31T10:54:52.790656",
+ "data_updated_at": "2026-10-31T10:54:52.592108",
  "refresh_info": {
-  "last_success": "2026-10-24T20:09:21.787895",
+  "last_success": "2026-10-31T10:54:52.592108",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 0,
-   "edges": 0,
-   "alerts": 0
+   "nodes": 22,
+   "edges": 50,
+   "alerts": 8
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
-   "openfda_device": "2026-10-14",
+   "openfda_device": "2026-10-21",
    "who_outbreaks": "2026-10-23",
-   "italy": "2026-10-24"
+   "italy": "2026-10-30"
   },
   "counts": {
    "openfda_drug": 40,
@@ -28,11 +28,14 @@
   },
   "source_errors": {},
   "alerts_error": null,
-  "alerts_discarded": [],
-  "alerts_attempt": "2026-10-24T20:09:21.787895"
+  "alerts_discarded": [
+   "citazione non presente nel documento middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia: 'Two cases reported direct contact with camels while six reported no known camel exposure.'",
+   "citazione non presente nel documento 2026-DON620: 'The individual died on 2 October following hospitalization for severe pneumonia on 29 September, and pneumonic plague wa'"
+  ],
+  "alerts_attempt": "2026-10-31T10:54:52.592108"
  },
  "signals": {
-  "generated_at": "2026-10-24T20:09:09.694451",
+  "generated_at": "2026-10-31T10:54:41.421813",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -77,266 +80,266 @@
   ],
   "recalls": [
    {
-    "recall": "Z-0078-2027",
-    "class": "Class II",
-    "firm": "PHILIPS MEDICAL SYSTEMS",
-    "product": "Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model Numbers: 1. 728333 (U.S. and Outside U.",
-    "reason": "Software issues may affect the safety and performance of Spectral CT system(s). The issues may result in image artifacts, wrong slice thickness, or unintended system motion.",
-    "date": "2026-10-14",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0078-2027%22"
-   },
-   {
-    "recall": "Z-0082-2027",
-    "class": "Class II",
-    "firm": "DRG International, Inc.",
-    "product": "Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
-    "reason": "Potential for false negative patient results.",
-    "date": "2026-10-14",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0082-2027%22"
-   },
-   {
-    "recall": "Z-3309-2026",
-    "class": "Class II",
-    "firm": "Philips North America",
-    "product": "Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX);  Software Versions: R11, R12 and R13;",
-    "reason": "When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced  MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR  DICOM export is",
-    "date": "2026-10-07",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3309-2026%22"
-   },
-   {
-    "recall": "Z-3325-2026",
-    "class": "Class II",
-    "firm": "Percussionaire Corporation",
-    "product": "Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
-    "reason": "Labeling updated warning not to use Intrapulmonary percussive ventilation (IPV) in conjunction with volatile anesthetic delivery systems because IPV may alter controlled delivery of volatile anestheti",
-    "date": "2026-10-07",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3325-2026%22"
-   },
-   {
-    "recall": "Z-3313-2026",
-    "class": "Class II",
-    "firm": "Philips North America",
-    "product": "MR 7700;  Model number (REF): 1. 782120, 2. 782153, 3. 782155, 4. 782199;  Software Versions: R11, R12 and R13;",
-    "reason": "When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR  DICOM export is ",
-    "date": "2026-10-07",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3313-2026%22"
-   },
-   {
-    "recall": "Z-3322-2026",
-    "class": "Class II",
-    "firm": "Percussionaire Corporation",
-    "product": "Intrapulmonary Percussive Ventilation, IPV-2C, Product Number: S00002-C;  Phasitron 5, Product Number: P5 used with Instruction Manual",
-    "reason": "Labeling updated warning not to use Intrapulmonary percussive ventilation (IPV) in conjunction with volatile anesthetic delivery systems because IPV may alter controlled delivery of volatile anestheti",
-    "date": "2026-10-07",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3322-2026%22"
-   },
-   {
-    "recall": "Z-3308-2026",
-    "class": "Class II",
-    "firm": "Philips North America",
-    "product": "Ingenia 1.5T, 1.5T CX, and 1.5T S;  Model number (REF): 1. 781315 (1.5T), 2. 781341 (1.5T), 3. 781396 (1.5T), 4. 782115 (1.5T),  5. 782140 (1.5T), 6. 781262 (1.",
-    "reason": "When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced  MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR  DICOM export is",
-    "date": "2026-10-07",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3308-2026%22"
-   },
-   {
-    "recall": "Z-3318-2026",
-    "class": "Class II",
-    "firm": "Philips North America",
-    "product": "Evolution upgrade 1.5T amd Evolution upgrade 3.0T;  Model number (REF): 1. 782116 (1.5T), 2. 782148 (1.5T), 3. 782166 (1.5T), 4. 782201(1.5T), 5. 782117 (3.0T),",
-    "reason": "When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR  DICOM export is ",
-    "date": "2026-10-07",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3318-2026%22"
-   },
-   {
-    "recall": "Z-3272-2026",
-    "class": "Class II",
-    "firm": "Alere San Diego, Inc.",
-    "product": "Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's ICON 25 hCG, Model/ Part: FHC-202/43025;  ",
-    "reason": "hCG rapid tests may detect low levels of hCG below the stated assay sensitivity, which may result in false positive result.",
-    "date": "2026-10-07",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3272-2026%22"
-   },
-   {
-    "recall": "Z-3252-2026",
+    "recall": "Z-0002-2027",
     "class": "Class I",
-    "firm": "Draeger, Inc.",
-    "product": "VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resuscitation module.",
-    "reason": "Potential cracks in the hose, which could lead to leakage or the hose falling off.",
-    "date": "2026-10-07",
+    "firm": "Instrumentation Laboratory",
+    "product": "HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009802028. in vitro diagnostic (OUS only)",
+    "reason": "Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+    "date": "2026-10-21",
     "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3252-2026%22"
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0002-2027%22"
    },
    {
-    "recall": "Z-3316-2026",
+    "recall": "Z-0163-2027",
     "class": "Class II",
-    "firm": "Philips North America",
-    "product": "Upgrade dStream;  Model number (REF): 782127;   Software Versions: R11, R12 and R13;",
-    "reason": "When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR  DICOM export is ",
-    "date": "2026-10-07",
+    "firm": "Cook Incorporated",
+    "product": "Williams Cystoscopic Injection Needles, used for cystoscopic injection into the urethra, bladder neck, and bladder wall, Reference Part Number 090001-S26, Order",
+    "reason": "The female Luer lock adapter component in the affected device lots may not have been correctly seated due to misalignment and inadequate torquing during manufacturing. Potential events that may occur ",
+    "date": "2026-10-21",
     "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3316-2026%22"
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0163-2027%22"
    },
    {
-    "recall": "Z-3320-2026",
+    "recall": "Z-0160-2027",
     "class": "Class II",
-    "firm": "Percussionaire Corporation",
-    "product": "In-Line Valve, Product Number: P5-TEE",
-    "reason": "Labeling updated warning not to use Intrapulmonary percussive ventilation (IPV) in conjunction with volatile anesthetic delivery systems because IPV may alter controlled delivery of volatile anestheti",
-    "date": "2026-10-07",
+    "firm": "Beckman Coulter, Inc.",
+    "product": "DxU 840m Iris, REF: C76947;  DxU 850m Iris, REF: C49513",
+    "reason": "The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to prevent lamina fluid leakage; however, the check valve replacement was excluded f",
+    "date": "2026-10-21",
     "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-3320-2026%22"
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0160-2027%22"
+   },
+   {
+    "recall": "Z-0150-2027",
+    "class": "Class II",
+    "firm": "BioFire Diagnostics, LLC",
+    "product": "Generic Name: BioFire¿ Joint Infection (JI) Panel Generic Name: BioFire¿ Joint Infection (JI) Panel Model/Catalog Number: RFIT-ASY-0138 (30 Kit), RFIT-ASY-0135 ",
+    "reason": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0150-2027%22"
+   },
+   {
+    "recall": "Z-0001-2027",
+    "class": "Class I",
+    "firm": "Instrumentation Laboratory",
+    "product": "HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009800127. in vitro diagnostic",
+    "reason": "Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0001-2027%22"
+   },
+   {
+    "recall": "Z-0141-2027",
+    "class": "Class II",
+    "firm": "Cadwell Industries Inc",
+    "product": "Brand Name: IOMAX  Product Name: IOMAX Cortical Module  Model/Catalog Number: 190296-200  UDI-DI code: 00840067100653  Product Description: The IOMAX Cortical M",
+    "reason": "Stimulator device contains a defective printed circuit board assembly (PCBA) that may cause the device to unintentionally deliver electrical stimulation to the patient, or allow an unintended electric",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0141-2027%22"
+   },
+   {
+    "recall": "Z-0161-2027",
+    "class": "Class II",
+    "firm": "Beckman Coulter, Inc.",
+    "product": "IQ200 SPRINT, REF: 700-3322,700-3322RFB, 700-3325, 700-3326, B48997;  IQ200 SELECT, REF: 700-3340, 700-3345, 700-3347, B48998, C10684;  IQ200 ELITE, REF: 700-33",
+    "reason": "The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to prevent lamina fluid leakage; however, the check valve replacement was excluded f",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0161-2027%22"
+   },
+   {
+    "recall": "Z-0136-2027",
+    "class": "Class II",
+    "firm": "Jenavalve Technology Inc.",
+    "product": "JenaValve Trilogy Delivery Catheter, Size 27MM  REF: TRILOGY-DC-L",
+    "reason": "Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve device.",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0136-2027%22"
+   },
+   {
+    "recall": "Z-0135-2027",
+    "class": "Class II",
+    "firm": "Jenavalve Technology Inc.",
+    "product": "JenaValve Trilogy Delivery Catheter, Size 25MM  REF: TRILOGY-DC-M",
+    "reason": "Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve device.",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0135-2027%22"
+   },
+   {
+    "recall": "Z-0149-2027",
+    "class": "Class II",
+    "firm": "BioFire Diagnostics, LLC",
+    "product": "Generic Name: FilmArray¿ Pneumonia Panel plus Generic Name: FilmArray¿ Pneumonia Panel plus Model/Catalog Number: RFIT-ASY-0143 (30 Kit), RFIT-ASY-0142 (6 Kit) ",
+    "reason": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0149-2027%22"
+   },
+   {
+    "recall": "Z-0134-2027",
+    "class": "Class II",
+    "firm": "Jenavalve Technology Inc.",
+    "product": "JenaValve Trilogy Delivery Catheter, Size 23MM  REF: TRILOGY-DC-S",
+    "reason": "Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve device.",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0134-2027%22"
+   },
+   {
+    "recall": "Z-0148-2027",
+    "class": "Class II",
+    "firm": "BioFire Diagnostics, LLC",
+    "product": "Generic Name: FilmArray¿ Pneumonia Panel  Generic Name: FilmArray¿ Pneumonia Panel  Model/Catalog Number: RFIT-ASY-0144 (30 pack), RFIT-ASY-0145 (6 pack), FLM1-",
+    "reason": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "date": "2026-10-21",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0148-2027%22"
    }
   ],
   "italy": [
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-24",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05554/SG",
+    "date": "2026-10-30",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05620/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'importazione parallela di taluni medicinali per uso umano (26A05554)"
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di solifenacina succinato e tamsulosina cloridrato, «Solifenacina e Tamsulosina Doc». (26A05620)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-24",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05555/SG",
+    "date": "2026-10-30",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di liraglutide, «Liraglutide Medical Valley». (26A05555)"
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Sumatriptan Zentiva». (26A05657)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-24",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05556/SG",
+    "date": "2026-10-30",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di liraglutide, «Glanux» (26A05556)"
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Diclofenac Ratiopharm». (26A05658)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-24",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05557/SG",
+    "date": "2026-10-30",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05680/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di glicopirronio bromuro, indacaterolo maleato, «Dilabro». (26A05557)"
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Bisolvon» (26A05680)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-24",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05558/SG",
+    "date": "2026-10-30",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05681/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di vancomicina, «Vancomicina Noridem». (26A05558)"
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Topamax» (26A05681)"
    },
    {
-    "title": "Esiti runione Commissione Scientifica e Economica del Farmaco (CSE)",
-    "date": "2026-10-23",
-    "url": "https://www.aifa.gov.it/-/esiti-cse",
+    "title": "Aggiornamento dell’elenco dei farmaci innovativi al 30 settembre 2026",
+    "date": "2026-10-30",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-elenco-farmaci-innovativi-al-30-settembre-2026",
     "source": "AIFA – Notizie",
-    "summary": "L'Agenzia Italiana del Farmaco rende disponibile gli esiti dei lavori della riunione della Commissione Scientifica e Economica (CSE) del 12-16 ottobre 2026."
+    "summary": "L'AIFA pubblica l'elenco aggiornato dei medicinali che, a giudizio della Commissione Scientifica ed Economica, possiedono il requisito di innovatività terapeutica."
    },
    {
-    "title": "World Polio Day: l'eradicazione è a portata di mano, no a passi indietro",
-    "date": "2026-10-23",
-    "url": "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
-    "source": "ISS – Comunicati stampa",
-    "summary": "\"L'eradicazione della poliomielite è a portata di mano\". Lo ricordano gli esperti della Global Polio Eradication Initiative (GPEI) in occasione del World Polio Day, che si celebra ogni anno il 24 ottobre. I successi della vaccinazione, ricorda il sito dedicato alla giornata, sono"
-   },
-   {
-    "title": "HPV: un contest SITI per il miglior progetto per la diffusione della vaccinazione",
-    "date": "2026-10-23",
-    "url": "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Un contest lanciato dalla SItI. la Società Italiana di Igiene, Medicina Preventiva e Sanità Pubblica, cercherà il progetto più innovativo per aumentare la diffusione della vaccinazione contro l'HPV tra i più giovani. L'iniziativa, che si inserisce tra le attività previste da 'Tra"
-   },
-   {
-    "title": "Bollettino 181 fase 3",
-    "date": "2026-10-23",
-    "url": "https://www.iss.it/-/bollettino-181-fase-3",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Impatto • Al 21/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (373 ricoverati), stabile rispetto alla settimana precedente (0,6% al 14/10/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (12 ricoverati), risp"
-   },
-   {
-    "title": "Una vita dietro ogni azione: JACARDI mette le persone al centro della prevenzione delle malattie cardiovascolari e del diabete",
-    "date": "2026-10-23",
-    "url": "https://www.iss.it/-/una-vita-dietro-ogni-azione-jacardi-mette-le-persone-al-centro-della-prevenzione-delle-malattie-cardiovascolari-e-del-diabete",
-    "source": "ISS – Comunicati stampa",
-    "summary": "In occasione della sua quarta Assemblea generale a Poznań, JACARDI, Joint Action europea coordinata dall’Istituto Superiore di Sanità (ISS), ha offerto un’occasione per condividere le esperienze delle persone e i risultati dei progetti pilota, favorendo momenti di confronto con d"
-   },
-   {
-    "title": "Chiusura Registro di monitoraggio COMETRIQ",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-cometriq",
+    "title": "Aggiornamenti dal PRAC: riunione del 26-29 ottobre 2026",
+    "date": "2026-10-30",
+    "url": "https://www.aifa.gov.it/-/aggiornamenti-dal-prac-riunione-del-28-30-ottobre-2026",
     "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro COMETRIQ per una specifica indicazione terapeutica."
+    "summary": "Avviate revisioni di sicurezza sulle immunoglobuline umane normali e su Deanxit."
    },
    {
-    "title": "Chiusura Registro di monitoraggio XALKORI",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-xalkori",
+    "title": "Modalità di compilazione degli individual case safety reports (ICSRs) secondo lo standard ICH E2B (R3)",
+    "date": "2026-10-30",
+    "url": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
     "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro XALKORI per una specifica indicazione terapeutica."
+    "summary": "L’ Agenzia Italiana del Farmaco richiama l’attenzione dei titolari AIC alla corretta e uniforme compilazione dei campi degli ICSRs trasmessi secondo lo standard ICH E2B(R3) relativi al nome del medicinale e al principio attivo."
    },
    {
-    "title": "Chiusura Registro di monitoraggio RAXONE",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registro-di-monitoraggio-raxone",
+    "title": "Nota Informativa Importante di qualità su CAELYX/DOXIL",
+    "date": "2026-10-30",
+    "url": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-caelyx-doxil",
     "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro RAXONE per una specifica indicazione terapeutica."
+    "summary": "CAELYX/DOXIL (doxorubicin pegilated liposomal), 50 mg/25 mL (2 mg/mL) per iniezione, fiala a dose singola: Il tappo e la ghiera della fiala possono staccarsi durante la rimozione del cappuccio, compromettendo potenzialmente la sterilità e causando un’esposizione professionale inv"
    },
    {
-    "title": "Aggiornamento Registro di monitoraggio HETRONIFLY",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-hetronifly",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di Monitoraggio di HETRONIFLY (serplulimab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Chiusura Registri di monitoraggio ZYDELIG",
-    "date": "2026-10-22",
-    "url": "https://www.aifa.gov.it/-/chiusura-registri-di-monitoraggio-zydelig",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 22/10/2026, termina il monitoraggio del Registro ZYDELIG per specifiche indicazioni terapeutiche."
-   },
-   {
-    "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
-    "date": "2026-10-22",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2816-online-il-bollettino-trimestrale-agenas-sul-monitoraggio-delle-liste-di-attesa",
-    "source": "AGENAS – Notizie",
-    "summary": "Oltre due milioni di prenotazioni in più nei primi nove mesi del 2026 rispetto allo stesso periodo del 2025 e un miglioramento del rispetto dei tempi massimi di attesa per visite specialistiche ed esami diagnostici. Si conferma la tendenza positiva già evidenziata nel primo semes"
-   },
-   {
-    "title": "Antimicrobico resistenza: anche l'Iss tra i vincitori del 'data challenge' di Vivli con un progetto per sfruttare meglio i dati incompleti",
-    "date": "2026-10-22",
-    "url": "https://www.iss.it/-/antimicrobico-resistenza-anche-l-iss-tra-i-vincitori-del-data-challenge-di-vivli-con-un-progetto-per-sfruttare-meglio-i-dati-incompleti",
+    "title": "Bollettino 182 fase 3",
+    "date": "2026-10-30",
+    "url": "https://www.iss.it/-/bollettino-182-fase-3",
     "source": "ISS – Comunicati stampa",
-    "summary": "Vivli ha annunciato i sei team vincitori della \"Vivli AMR Surveillance Data Challenge\" del 2026, premiando ricerche che utilizzano dati di sorveglianza condivisi per affrontare questioni che spaziano dalle politiche nazionali sull'antimicrobico-resistenza (AMR) e la vaccinazione,"
+    "summary": "Impatto • Al 28/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (375 ricoverati), stabile rispetto alla settimana precedente (0,6% al 21/10/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (13 ricoverati), risp"
    },
    {
-    "title": "Promuovere la salute pubblica a scuola, 34 progetti Iss per la “Mappa della città educante” di Roma",
-    "date": "2026-10-22",
-    "url": "https://www.iss.it/-/promuovere-la-salute-pubblica-a-scuola-34-progetti-iss-per-la-mappa-della-citt%C3%A0-educante-di-roma",
+    "title": "RaraMente n. 118",
+    "date": "2026-10-30",
+    "url": "https://www.iss.it/-/raramente-n.-118",
     "source": "ISS – Comunicati stampa",
-    "summary": "Dalla prevenzione agli stili di vita all’inclusione alla cittadinanza scientifica, sono 34 quest’anno le proposte dell’Iss per il progetto ‘Mappa della Città Educante’ promosso da Roma Capitale per le scuole della città, che ogni anno offre un catalogo di iniziative didattico-for"
+    "summary": "In questo numero : Nonostante i progressi in ambito europeo (Ern, Orphanet, Erdera, Hta, dati sanitari), le iniziative sulle malattie rare restano frammentate e persistono disuguaglianze. Eurordis propone alla Commissione Ue un Piano d'Azione unico per connettere le politiche esi"
    },
    {
-    "title": "AIFA a Genova: il valore dell’innovazione farmaceutica al centro del confronto con le Regioni",
-    "date": "2026-10-16",
-    "url": "https://www.aifa.gov.it/-/aifa-genova-valore-innovazione-farmaceutica-al-centro-confronto-con-regioni",
+    "title": "Scoperto un nuovo gene della retinite pigmentosa, nuove risposte per le famiglie e nuove prospettive per la ricerca",
+    "date": "2026-10-30",
+    "url": "https://www.iss.it/-/scoperto-un-nuovo-gene-della-retinite-pigmentosa-nuove-risposte-per-le-famiglie-e-nuove-prospettive-per-la-ricerca",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Scoperto un nuovo gene della retinite pigmentosa, nuove risposte per le famiglie e nuove prospettive per la ricerca Un team internazionale coordinato da tre ricercatori italiani — Viviana Cordeddu dell’Istituto Superiore di Sanità, Marco Tartaglia dell’Ospedale Pediatrico Bambino"
+   },
+   {
+    "title": "Accesso ai Servizi Online AIFA: evoluzione digitale all’insegna della sicurezza e della semplificazione",
+    "date": "2026-10-29",
+    "url": "https://www.aifa.gov.it/-/accesso-ai-servizi-online-aifa-evoluzione-digitale-all-insegna-della-sicurezza-e-della-semplificazione",
+    "source": "AIFA – Notizie",
+    "summary": "L’Agenzia Italiana del Farmaco prosegue il percorso di efficientamento e digitalizzazione delle proprie infrastrutture introducendo importanti aggiornamenti per l’accesso alla Piattaforma dei Servizi Online."
+   },
+   {
+    "title": "Ripiano della spesa farmaceutica per acquisti diretti per l’anno 2025",
+    "date": "2026-10-29",
+    "url": "https://www.aifa.gov.it/-/ripiano-spesa-farmaceutica-per-acquisti-diretti-anno-2025",
+    "source": "AIFA – Notizie",
+    "summary": "L’Agenzia Italiana del Farmaco (AIFA), all’esito del contradditorio con le aziende farmaceutiche svolto nei mesi precedenti, ha adottato la determinazione n. 1531/2026, concernente l’attribuzione delle singole quote di ripiano della spesa farmaceutica per acquisti diretti per l’a"
+   },
+   {
+    "title": "AIFA avvia una valutazione dei Registri di monitoraggio di lunga durata",
+    "date": "2026-10-29",
+    "url": "https://www.aifa.gov.it/-/aifa-avvia-una-valutazione-dei-registri-di-monitoraggio-di-lunga-durata",
+    "source": "AIFA – Notizie",
+    "summary": "L'Agenzia Italiana del Farmaco (AIFA) ha avviato una revisione dei Registri di monitoraggio attivi da più anni."
+   },
+   {
+    "title": "Sarà rimborsata dal SSN la prima terapia genica topica per i “bambini farfalla”",
+    "date": "2026-10-29",
+    "url": "https://www.aifa.gov.it/-/rimborsata-dal-ssn-prima-terapia-genica-topica-per-i-bambini-farfalla",
     "source": "AIFA – Comunicati stampa",
-    "summary": "Si è svolto a Genova, presso il Palazzo Ducale, il convegno “Misurare il valore dell’innovazione - Dalla valutazione del farmaco agli esiti di salute”, organizzato dall'Agenzia Italiana del Farmaco (AIFA) con il patrocinio della Regione Liguria."
+    "summary": "Via libera dal CdA AIFA al trattamento topico dell'epidermolisi bollosa distrofica, la patologia nota anche come “sindrome dei bambini farfalla”, per l’estrema fragilità della pelle e delle mucose dei pazienti. Approvato anche il rimborso di farmaci per il tumore della cervice e "
    },
    {
-    "title": "AGENAS pubblica le Linee di indirizzo per la telemedicina nei Punti nascita e in Neonatologia",
-    "date": "2026-10-16",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2814-agenas-pubblica-le-linee-di-indirizzo-per-la-telemedicina-nei-punti-nascita-e-in-neonatologia",
+    "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
+    "date": "2026-10-29",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2913-programma-nazionale-hta-dispositivi-medici-2026-2028-agenas-promuove-cinque-infoday-territoriali",
     "source": "AGENAS – Notizie",
-    "summary": "AGENAS pubblica il documento “ Linee di indirizzo organizzative per l’implementazione della telemedicina e l’ottimizzazione dell’assistenza ai casi più complessi nell’ambito della Rete dei Punti nascita e della Neonatologia ”."
+    "summary": "Al via un ciclo di incontri che apre un percorso nazionale di accompagnamento all’attuazione del Programma Nazionale HTA Dispositivi Medici. Il primo appuntamento si terrà a a Roma il 4 novembre 2026."
+   },
+   {
+    "title": "Procura di Avellino e Istituto Superiore di Sanità: conclusa l’indagine sugli effetti sanitari delle potenziali fonti di contaminazione ambientale nel territorio irpino",
+    "date": "2026-10-29",
+    "url": "https://www.iss.it/-/procura-di-avellino-e-istituto-superiore-di-sanit%C3%A0-conclusa-l-indagine-sugli-effetti-sanitari-delle-potenziali-fonti-di-contaminazione-ambientale-nel-territorio-irpino",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Sono stati presentati oggi i risultati finali dell’Accordo di collaborazione scientifica tra la Procura della Repubblica di Avellino e l’Istituto Superiore di Sanità (ISS), sottoscritto nell’aprile 2024, finalizzato a condividere dati e informazioni per l’identificazione di possi"
+   },
+   {
+    "title": "Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
+    "date": "2026-10-29",
+    "url": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Dal 1 gennaio al 27 ottobre 2026 al sistema di sorveglianza nazionale coordinata dall’ISS risultano - 369 casi confermati di Dengue: 73 di questi sono autoctoni mentre tutti gli altri casi sono associati a viaggi all’estero (51% con luogo di esposizione Maldive), nessun decesso. "
+   },
+   {
+    "title": "Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani",
+    "date": "2026-10-28",
+    "url": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+    "source": "ISS – Comunicati stampa",
+    "summary": "In Italia le malattie del sistema circolatorio, tra cui l’ictus, rappresentano ancora la principale causa di morte. Nel 2023 sono state responsabili del 31% dei decessi, confermandosi la prima causa di morte tra le donne (33%) e la seconda tra gli uomini (28%). Un segnale positiv"
    },
    {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
@@ -367,7 +370,12 @@
   "https://www.iss.it/-/world-polio-day-l-eradicazione-%C3%A8-a-portata-di-mano-no-a-passi-indietro",
   "https://www.iss.it/-/hpv-un-contest-siti-per-il-miglior-progetto-per-la-diffusione-della-vaccinazione",
   "2026-DON622",
-  "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05554/SG"
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/24/26A05554/SG",
+  "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
+  "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+  "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani"
  ],
  "nodes": [
   {
@@ -379,7 +387,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T20:09:09.460823",
+   "updated_at": "2026-10-31T10:54:31.114056",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -391,7 +399,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T20:09:09.460823",
+   "updated_at": "2026-10-31T10:54:31.114056",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -463,7 +471,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T20:09:09.460823",
+   "updated_at": "2026-10-31T10:54:31.114056",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -475,7 +483,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T20:09:09.460823",
+   "updated_at": "2026-10-31T10:54:31.114056",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -487,7 +495,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T20:09:09.460823",
+   "updated_at": "2026-10-31T10:54:31.114056",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -499,7 +507,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -652,7 +660,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-24T20:09:09.460823",
+   "updated_at": "2026-10-31T10:54:31.114056",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -697,7 +705,7 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-24T12:58:45.642529",
+   "updated_at": "2026-10-31T10:54:41.096971",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -726,9 +734,9 @@
    "domain": "health",
    "region": "IT",
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
-   "risk_score": 15,
+   "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-23T17:07:17.861567",
+   "updated_at": "2026-10-31T10:54:41.096971",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -737,9 +745,9 @@
     "ISS - Istituto Superiore di Sanità",
     "Istituto Superiore di Sanità"
    ],
-   "risk_assigned_at": "2026-10-18T19:25:38.062427",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
-   "risk_doc_date": "2026-10-15"
+   "risk_assigned_at": "2026-10-31T10:54:41.096910",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "risk_doc_date": "2026-10-29"
   },
   {
    "id": "minsalute",
@@ -747,14 +755,17 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "IT",
-   "description": "Ministero della Salute italiano. Definisce LEA e politiche sanitarie.",
-   "risk_score": 10,
+   "description": "Istituzione nazionale italiana promotrice di iniziative sanità pubblica cardiovascolare.",
+   "risk_score": 35,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
-   "risk_basis": "Valore assegnato manualmente",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Ministero della Salute",
    "website": "https://www.salute.gov.it/",
-   "italy": true
+   "italy": true,
+   "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "risk_doc_date": "2026-10-29",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
   },
   {
    "id": "who",
@@ -1301,7 +1312,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1313,7 +1324,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1325,7 +1336,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1337,7 +1348,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1349,7 +1360,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1361,7 +1372,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1373,7 +1384,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2074,7 +2085,7 @@
    "updated_at": "2026-10-18T15:38:53.728256"
   },
   {
-   "id": "evt_dengue",
+   "id": "evt_dengue_it",
    "label": "Epidemia di dengue",
    "type": "EpidemicEvent",
    "domain": "health",
@@ -2082,9 +2093,10 @@
    "description": "5 focolai di trasmissione locale di Dengue in Italia, 70 casi autoctoni confermati",
    "risk_score": 72,
    "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-22T20:33:10.769539",
+   "updated_at": "2026-10-31T10:54:41.096971",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "aliases": [
+    "Epidemia di dengue – Italia",
     "Focolai Dengue Autoctoni"
    ],
    "disease": "dengue",
@@ -2093,27 +2105,29 @@
    "risk_doc_date": "2026-10-15"
   },
   {
-   "id": "evt_chikungunya",
+   "id": "evt_chikungunya_it",
    "label": "Epidemia di chikungunya",
    "type": "EpidemicEvent",
    "domain": "health",
    "region": "IT",
    "description": "30 casi confermati di Chikungunya, 1 autoctono, principalmente da viaggi esteri",
-   "risk_score": 45,
+   "risk_score": 58,
    "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-22T20:33:10.769539",
+   "updated_at": "2026-10-31T10:54:41.096971",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "aliases": [
     "Cluster Chikungunya",
+    "Epidemia di chikungunya – Italia",
+    "Focolaio Chikungunya",
     "Focolaio Chikungunya Autoctono"
    ],
    "disease": "chikungunya",
-   "risk_assigned_at": "2026-10-22T20:33:51.275926",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile",
-   "risk_doc_date": "2026-10-22"
+   "risk_assigned_at": "2026-10-31T10:54:41.096910",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "risk_doc_date": "2026-10-29"
   },
   {
-   "id": "evt_west_nile",
+   "id": "evt_west_nile_it",
    "label": "Epidemia di West Nile",
    "type": "EpidemicEvent",
    "domain": "health",
@@ -2121,11 +2135,13 @@
    "description": "777 casi confermati di West Nile Virus con 61 decessi e letalità del 14.7% nelle forme neuroinvasive",
    "risk_score": 85,
    "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-22T20:33:10.769539",
+   "updated_at": "2026-10-31T10:54:41.096971",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "aliases": [
     "Epidemia West Nile Virus",
-    "Epidemia West Nile Virus 2026"
+    "Epidemia West Nile Virus 2026",
+    "Epidemia di West Nile – Italia",
+    "Focolaio West Nile Virus"
    ],
    "disease": "west_nile",
    "risk_assigned_at": "2026-10-18T19:25:38.062427",
@@ -2186,7 +2202,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-0078-2027 di classe II del 14/10/2026"
   },
   {
@@ -2198,7 +2214,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-24T20:09:09.479315",
+   "updated_at": "2026-10-31T10:54:31.124117",
    "risk_basis": "Richiamo FDA Z-0082-2027 di classe II del 14/10/2026"
   },
   {
@@ -2240,7 +2256,7 @@
    "description": "Titolare dell'autorizzazione all'immissione in commercio del medicinale Carbamazepina Zentiva",
    "risk_score": 20,
    "created_at": "2026-10-21T20:36:03.052084",
-   "updated_at": "2026-10-21T20:36:03.052084",
+   "updated_at": "2026-10-31T10:54:41.096971",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "risk_assigned_at": "2026-10-21T20:36:42.010023",
    "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/21/26A05438/SG",
@@ -2482,6 +2498,273 @@
    "created_at": "2026-10-24T15:00:00",
    "updated_at": "2026-10-24T15:00:00",
    "risk_basis": "Valore assegnato manualmente"
+  },
+  {
+   "id": "instrumentation_laboratory",
+   "label": "Instrumentation Laboratory",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "United States",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009802028. in vitro diagnostic (OUS only)",
+   "risk_score": 85,
+   "created_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-10-31T10:54:31.124117",
+   "risk_basis": "Richiamo FDA Z-0002-2027 di classe I del 21/10/2026"
+  },
+  {
+   "id": "cook_incorporated",
+   "label": "Cook Incorporated",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "United States",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Williams Cystoscopic Injection Needles, used for cystoscopic injection into the urethra, bladder neck, and bladder wall,",
+   "risk_score": 55,
+   "created_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-10-31T10:54:31.124117",
+   "risk_basis": "Richiamo FDA Z-0163-2027 di classe II del 21/10/2026"
+  },
+  {
+   "id": "beckman_coulter_inc",
+   "label": "Beckman Coulter, Inc.",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "United States",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: DxU 840m Iris, REF: C76947;  DxU 850m Iris, REF: C49513",
+   "risk_score": 55,
+   "created_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-10-31T10:54:31.124117",
+   "risk_basis": "Richiamo FDA Z-0160-2027 di classe II del 21/10/2026"
+  },
+  {
+   "id": "biofire_diagnostics_llc",
+   "label": "BioFire Diagnostics, LLC",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "United States",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: BioFire¿ Joint Infection (JI) Panel Generic Name: BioFire¿ Joint Infection (JI) Panel Model/Catalog Number",
+   "risk_score": 55,
+   "created_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-10-31T10:54:31.124117",
+   "risk_basis": "Richiamo FDA Z-0150-2027 di classe II del 21/10/2026"
+  },
+  {
+   "id": "cadwell_industries_inc",
+   "label": "Cadwell Industries Inc",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "United States",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: IOMAX  Product Name: IOMAX Cortical Module  Model/Catalog Number: 190296-200  UDI-DI code: 00840067100653  P",
+   "risk_score": 55,
+   "created_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-10-31T10:54:31.124117",
+   "risk_basis": "Richiamo FDA Z-0141-2027 di classe II del 21/10/2026"
+  },
+  {
+   "id": "jenavalve_technology_inc",
+   "label": "Jenavalve Technology Inc.",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "United States",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: JenaValve Trilogy Delivery Catheter, Size 27MM  REF: TRILOGY-DC-L",
+   "risk_score": 55,
+   "created_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-10-31T10:54:31.124117",
+   "risk_basis": "Richiamo FDA Z-0136-2027 di classe II del 21/10/2026"
+  },
+  {
+   "id": "aic_holders",
+   "label": "Titolari AIC",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Aziende titolari di Autorizzazione all'Immissione in Commercio di medicinali.",
+   "risk_score": 15,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
+   "risk_doc_date": "2026-10-30",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "ich_e2b_r3",
+   "label": "Standard ICH E2B (R3)",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Standard internazionale per la trasmissione di rapporti individuali di sicurezza.",
+   "risk_score": 0,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
+   "risk_doc_date": "2026-10-30",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "sumatriptan_zentiva",
+   "label": "Sumatriptan Zentiva",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano contenente sumatriptan, autorizzazione revocata",
+   "risk_score": 15,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
+   "risk_doc_date": "2026-10-30",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "diclofenac_ratiopharm",
+   "label": "Diclofenac Ratiopharm",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "EU",
+   "description": "Medicinale per uso umano a base di diclofenac, prodotto da Ratiopharm.",
+   "risk_score": 15,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
+   "risk_doc_date": "2026-10-30",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "ratiopharm_company",
+   "label": "Ratiopharm",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "EU",
+   "description": "Azienda farmaceutica produttrice del medicinale Diclofenac Ratiopharm.",
+   "risk_score": 10,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
+   "risk_doc_date": "2026-10-30",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "regioni_italia",
+   "label": "Regioni Italiane",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Italia",
+   "description": "Autorità sanitarie regionali coinvolte nella risposta epidemiologica.",
+   "risk_score": 42,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "risk_doc_date": "2026-10-29",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "ospedale_nazionale",
+   "label": "Rete Ospedaliera Nazionale",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "Italia",
+   "description": "Strutture ospedaliere impegnate nella gestione dei casi confermati.",
+   "risk_score": 55,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "risk_doc_date": "2026-10-29",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "donatori_sangue",
+   "label": "Servizio Trasfusionale Nazionale",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "Italia",
+   "description": "Identificati 96 casi asintomatici di WNV tra donatori di sangue.",
+   "risk_score": 68,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "risk_doc_date": "2026-10-29",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "dipart_cardio_iss",
+   "label": "Dipartimento Malattie Cardiovascolari, Endocrino-metaboliche e Invecchiamento",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "Italy",
+   "description": "Dipartimento ISS specializzato in malattie cardiovascolari, endocrinologiche e invecchiamento.",
+   "risk_score": 0,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "risk_doc_date": "2026-10-28",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "progetto_cuore",
+   "label": "Progetto Cuore",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "Italy",
+   "description": "Programma nazionale di monitoraggio fattori rischio cardiovascolare nella popolazione adulta italiana.",
+   "risk_score": 0,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "risk_doc_date": "2026-10-28",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "jacardi",
+   "label": "Jacardi",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Joint Action europea per prevenzione malattie cardiovascolari e diabete coordinata da ISS.",
+   "risk_score": 0,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "risk_doc_date": "2026-10-28",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "autorita_europee_sanitarie",
+   "label": "Autorità Europee Sanitarie",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Istituzioni europee coinvolte nella regolazione prevenzione malattie cardiovascolari.",
+   "risk_score": 0,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "risk_doc_date": "2026-10-28",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "popolazione_italiana",
+   "label": "Popolazione Italiana",
+   "type": "Person",
+   "domain": "health",
+   "region": "Italy",
+   "description": "Soggetti adulti italiani monitorati per fattori rischio cardiovascolare e stili vita.",
+   "risk_score": 0,
+   "created_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-10-31T10:54:41.096971",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "risk_doc_date": "2026-10-28",
+   "risk_assigned_at": "2026-10-31T10:54:41.096910"
   }
  ],
  "edges": [
@@ -9701,8 +9984,13 @@
    "date": "2026-10-15",
    "created_at": "2026-10-18T19:24:50.964057",
    "doc_titles": {
+    "https://www.iss.it/-/procura-di-avellino-e-istituto-superiore-di-sanit%C3%A0-conclusa-l-indagine-sugli-effetti-sanitari-delle-potenziali-fonti-di-contaminazione-ambientale-nel-territorio-irpino": "ISS – Comunicati stampa – Procura di Avellino e Istituto Superiore di Sanità: conclusa l’indagine sugli effetti sanitari delle potenziali fonti di contaminazione ambientale nel territorio irpino",
     "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso": "ISS – Comunicati stampa – Sorveglianza Passi, in Italia il 43% degli adulti e il 54% degli over 65 è in eccesso di peso"
-   }
+   },
+   "source_docs": [
+    "https://www.iss.it/-/sorveglianza-passi-in-italia-il-43-degli-adulti-e-il-54-degli-over-65-%C3%A8-in-eccesso-di-peso",
+    "https://www.iss.it/-/procura-di-avellino-e-istituto-superiore-di-sanit%C3%A0-conclusa-l-indagine-sugli-effetti-sanitari-delle-potenziali-fonti-di-contaminazione-ambientale-nel-territorio-irpino"
+   ]
   },
   {
    "id": "iss_reg_molise_COMUNICA_SU",
@@ -9789,23 +10077,28 @@
    }
   },
   {
-   "id": "iss_evt_dengue_INDAGA_SU",
+   "id": "iss_evt_dengue_it_INDAGA_SU",
    "source": "iss",
-   "target": "evt_dengue",
+   "target": "evt_dengue_it",
    "type": "INDAGA_SU",
-   "fact": "ISS coordina sorveglianza dei 5 focolai autoctoni di Dengue con 70 casi confermati",
-   "risk_score": 65,
+   "fact": "ISS monitora 5 focolai di trasmissione locale autoctona di Dengue.",
+   "risk_score": 72,
    "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
    "date": "2026-01",
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
-   }
+   },
+   "source_docs": [
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile"
+   ]
   },
   {
-   "id": "iss_evt_west_nile_INDAGA_SU",
+   "id": "iss_evt_west_nile_it_INDAGA_SU",
    "source": "iss",
-   "target": "evt_west_nile",
+   "target": "evt_west_nile_it",
    "type": "INDAGA_SU",
    "fact": "ISS coordina sorveglianza dell'epidemia di West Nile Virus con 770 casi e 61 decessi",
    "risk_score": 78,
@@ -9813,26 +10106,36 @@
    "date": "2026-01",
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
-   }
+   },
+   "source_docs": [
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile"
+   ]
   },
   {
-   "id": "iss_evt_chikungunya_INDAGA_SU",
+   "id": "iss_evt_chikungunya_it_INDAGA_SU",
    "source": "iss",
-   "target": "evt_chikungunya",
+   "target": "evt_chikungunya_it",
    "type": "INDAGA_SU",
-   "fact": "ISS coordina sorveglianza del caso autoctono confermato di Chikungunya",
-   "risk_score": 45,
+   "fact": "ISS traccia caso autoctono di Chikungunya e epidemiologia trasmissione.",
+   "risk_score": 65,
    "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
    "date": "2026-01",
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
-   }
+   },
+   "source_docs": [
+    "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile"
+   ]
   },
   {
-   "id": "evt_dengue_italian_health_system_RISCHIO_PER",
-   "source": "evt_dengue",
+   "id": "evt_dengue_it_italian_health_system_RISCHIO_PER",
+   "source": "evt_dengue_it",
    "target": "italian_health_system",
    "type": "RISCHIO_PER",
    "fact": "5 focolai autoctoni di Dengue rappresentano rischio per il sistema sanitario nazionale",
@@ -9845,8 +10148,8 @@
    }
   },
   {
-   "id": "evt_west_nile_italian_health_system_RISCHIO_PER",
-   "source": "evt_west_nile",
+   "id": "evt_west_nile_it_italian_health_system_RISCHIO_PER",
+   "source": "evt_west_nile_it",
    "target": "italian_health_system",
    "type": "RISCHIO_PER",
    "fact": "Epidemia WNV attiva con 770 casi confermati, 61 decessi e form neuroinvasive critiche",
@@ -9859,8 +10162,8 @@
    }
   },
   {
-   "id": "evt_west_nile_blood_donation_system_RISCHIO_PER",
-   "source": "evt_west_nile",
+   "id": "evt_west_nile_it_blood_donation_system_RISCHIO_PER",
+   "source": "evt_west_nile_it",
    "target": "blood_donation_system",
    "type": "RISCHIO_PER",
    "fact": "West Nile Virus rappresenta rischio per la sicurezza trasfusionale con 95 casi asintomatici rilevati nei donatori",
@@ -10062,9 +10365,9 @@
    }
   },
   {
-   "id": "iss_evt_dengue_CONTROLLA",
+   "id": "iss_evt_dengue_it_CONTROLLA",
    "source": "iss",
-   "target": "evt_dengue",
+   "target": "evt_dengue_it",
    "type": "CONTROLLA",
    "fact": "ISS coordina il sistema di sorveglianza nazionale per i focolai autoctoni di Dengue",
    "risk_score": 35,
@@ -10076,9 +10379,9 @@
    }
   },
   {
-   "id": "iss_evt_west_nile_CONTROLLA",
+   "id": "iss_evt_west_nile_it_CONTROLLA",
    "source": "iss",
-   "target": "evt_west_nile",
+   "target": "evt_west_nile_it",
    "type": "CONTROLLA",
    "fact": "ISS monitora e coordina la risposta epidemiologica all'epidemia di West Nile Virus",
    "risk_score": 68,
@@ -10090,9 +10393,9 @@
    }
   },
   {
-   "id": "iss_evt_chikungunya_CONTROLLA",
+   "id": "iss_evt_chikungunya_it_CONTROLLA",
    "source": "iss",
-   "target": "evt_chikungunya",
+   "target": "evt_chikungunya_it",
    "type": "CONTROLLA",
    "fact": "ISS sorveglia casi confermati di Chikungunya nel territorio nazionale",
    "risk_score": 38,
@@ -10104,8 +10407,8 @@
    }
   },
   {
-   "id": "evt_dengue_blood_donation_system_RISCHIO_PER",
-   "source": "evt_dengue",
+   "id": "evt_dengue_it_blood_donation_system_RISCHIO_PER",
+   "source": "evt_dengue_it",
    "target": "blood_donation_system",
    "type": "RISCHIO_PER",
    "fact": "Focolai autoctoni di Dengue comportano potenziale rischio per donatori di sangue",
@@ -13993,6 +14296,1026 @@
    "source_doc": "2026-DON620",
    "date": "2026-09",
    "created_at": "2026-10-16T19:55:52.584554"
+  },
+  {
+   "id": "recall_Z-0002-2027",
+   "source": "instrumentation_laboratory",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-0002-2027: Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+   "risk_score": 85,
+   "source_doc": "Z-0002-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Bedford",
+    "state": "MA",
+    "country": "United States",
+    "classification": "Class I",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99843",
+    "recalling_firm": "Instrumentation Laboratory",
+    "address_1": "180 Hartwell Rd",
+    "address_2": "",
+    "postal_code": "01730-2443",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+    "distribution_pattern": "Worldwide - US Nationwide distribution in the states of AR, AZ, CA, CT, FL, GA, MA, MD, NJ, NY, PA, RI, TN, WA, WV and the countries of Austria, Belgium, Switzerland, Costa Rica, Czech Republic, Germany, Denmark, Spain, Finland, France, United Kingdom, Greece, India, Italy, Jordan, Japan, South Korea, Luxembourg, Latvia, Netherlands, Saudi Arabia, Sweden, Singapore.",
+    "recall_number": "Z-0002-2027",
+    "product_description": "HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009802028. in vitro diagnostic (OUS only)",
+    "product_quantity": "1,414 units",
+    "reason_for_recall": "Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+    "recall_initiation_date": "20260903",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "Part Number: 0009802028. UDI-DI: 08426950545774. Lot Number (Expiration Date): B40006 (01/16/2027), B38063 (11/01/2026).",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0002-2027_it",
+   "source": "instrumentation_laboratory",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-0002-2027: Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+   "risk_score": 85,
+   "source_doc": "Z-0002-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Bedford",
+    "state": "MA",
+    "country": "United States",
+    "classification": "Class I",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99843",
+    "recalling_firm": "Instrumentation Laboratory",
+    "address_1": "180 Hartwell Rd",
+    "address_2": "",
+    "postal_code": "01730-2443",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+    "distribution_pattern": "Worldwide - US Nationwide distribution in the states of AR, AZ, CA, CT, FL, GA, MA, MD, NJ, NY, PA, RI, TN, WA, WV and the countries of Austria, Belgium, Switzerland, Costa Rica, Czech Republic, Germany, Denmark, Spain, Finland, France, United Kingdom, Greece, India, Italy, Jordan, Japan, South Korea, Luxembourg, Latvia, Netherlands, Saudi Arabia, Sweden, Singapore.",
+    "recall_number": "Z-0002-2027",
+    "product_description": "HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009802028. in vitro diagnostic (OUS only)",
+    "product_quantity": "1,414 units",
+    "reason_for_recall": "Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+    "recall_initiation_date": "20260903",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "Part Number: 0009802028. UDI-DI: 08426950545774. Lot Number (Expiration Date): B40006 (01/16/2027), B38063 (11/01/2026).",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0163-2027",
+   "source": "cook_incorporated",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0163-2027: The female Luer lock adapter component in the affected device lots may not have been correctly seated due to misalignmen",
+   "risk_score": 55,
+   "source_doc": "Z-0163-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Bloomington",
+    "state": "IN",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99875",
+    "recalling_firm": "Cook Incorporated",
+    "address_1": "750 N Daniels Way",
+    "address_2": "",
+    "postal_code": "47404-9120",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "",
+    "distribution_pattern": "US States: FL, IL, NM, TX, WA. Canada, France, Germany, Italy, Spain, Switzerland.",
+    "recall_number": "Z-0163-2027",
+    "product_description": "Williams Cystoscopic Injection Needles, used for cystoscopic injection into the urethra, bladder neck, and bladder wall, Reference Part Number 090001-S26, Order Number (GPN) G16112",
+    "product_quantity": "97 units",
+    "reason_for_recall": "The female Luer lock adapter component in the affected device lots may not have been correctly seated due to misalignment and inadequate torquing during manufacturing. Potential events that may occur as a result of this issue include increased procedural time and inadequate treatment.",
+    "recall_initiation_date": "20260916",
+    "center_classification_date": "20261015",
+    "report_date": "20261021",
+    "code_info": "UDI-DI: 00827002161122; Lot Numbers: 16613606, 16951548, 16951548X",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0160-2027",
+   "source": "beckman_coulter_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0160-2027: The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to p",
+   "risk_score": 55,
+   "source_doc": "Z-0160-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Miami",
+    "state": "FL",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99832",
+    "recalling_firm": "Beckman Coulter, Inc.",
+    "address_1": "11800 Sw 147th Ave",
+    "address_2": "",
+    "postal_code": "33196-2500",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "",
+    "distribution_pattern": "Worldwide - US Nationwide distribution including in the states and territory of CA, NE, FL, NY, MA, MD, SC, WI, TX, OH, VA, PA, IL, NH, KS, GA, NC, IA, PR, TN, OR, UT, NJ, MI, CO, NM, MS, LA, RI, OK, WA, MO, ME, IN, CT, AZ, AR, MT, MN, ID, DE, AL, WV, DC, KY, NV, WY, ND, HI, AK, SD, VT, GU and the countries of Canada, Mexico, Switzerland, Panama, Ecuador, Japan, Hungary, Italy, Belgium, China, Germany, France, United Kingdom of Great Britain and Northern Ireland, Russian Federation, Singapore, Romania, Argentina, Israel, Spain, Belarus, Guatemala, Colombia, Qatar, Czechia, Reunion, Australia, United Arab Emirates, Poland, Croatia, Brazil, Slovakia, New Zealand, Saudi Arabia, Thailand, Republic of Korea, Serbia, Austria, Macao, Ukraine, India, Netherlands, Taiwan, South Africa, Sint Maarten, Bangladesh, Hong Kong, Viet Nam, Bahrain, Uganda, Lebanon, Morocco, Guadeloupe, Greece, Curacao, Republic of Moldova, Malaysia, Ghana, Indonesia, Lithuania, Portugal, Kazakhstan, Georgia, Philippines, Bosnia and Herzegovina, Libya, Kuwait, Oman, Jordan, Uzbekistan.",
+    "recall_number": "Z-0160-2027",
+    "product_description": "DxU 840m Iris, REF: C76947;  DxU 850m Iris, REF: C49513",
+    "product_quantity": "2,088",
+    "reason_for_recall": "The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to prevent lamina fluid leakage; however, the check valve replacement was excluded from the annual  preventive maintenance (PM) requirements without adequate reliability evaluation. When the check  valve is not replaced annually, it may allow lamina fluid to migrate internally and leak onto the table or floor,  potentially resulting in exposure to physical hazards (slip/fall), chemical hazards (lamina fluid exposure),  biohazardous exposure, property damage, and delayed patient results.",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261015",
+    "report_date": "20261021",
+    "code_info": "Product/UDI-DI:  DxU 840m/15099590748654, DxU 850m/15099590748647.  All Serial Numbers",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0160-2027_it",
+   "source": "beckman_coulter_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0160-2027: The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to p",
+   "risk_score": 55,
+   "source_doc": "Z-0160-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Miami",
+    "state": "FL",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99832",
+    "recalling_firm": "Beckman Coulter, Inc.",
+    "address_1": "11800 Sw 147th Ave",
+    "address_2": "",
+    "postal_code": "33196-2500",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "",
+    "distribution_pattern": "Worldwide - US Nationwide distribution including in the states and territory of CA, NE, FL, NY, MA, MD, SC, WI, TX, OH, VA, PA, IL, NH, KS, GA, NC, IA, PR, TN, OR, UT, NJ, MI, CO, NM, MS, LA, RI, OK, WA, MO, ME, IN, CT, AZ, AR, MT, MN, ID, DE, AL, WV, DC, KY, NV, WY, ND, HI, AK, SD, VT, GU and the countries of Canada, Mexico, Switzerland, Panama, Ecuador, Japan, Hungary, Italy, Belgium, China, Germany, France, United Kingdom of Great Britain and Northern Ireland, Russian Federation, Singapore, Romania, Argentina, Israel, Spain, Belarus, Guatemala, Colombia, Qatar, Czechia, Reunion, Australia, United Arab Emirates, Poland, Croatia, Brazil, Slovakia, New Zealand, Saudi Arabia, Thailand, Republic of Korea, Serbia, Austria, Macao, Ukraine, India, Netherlands, Taiwan, South Africa, Sint Maarten, Bangladesh, Hong Kong, Viet Nam, Bahrain, Uganda, Lebanon, Morocco, Guadeloupe, Greece, Curacao, Republic of Moldova, Malaysia, Ghana, Indonesia, Lithuania, Portugal, Kazakhstan, Georgia, Philippines, Bosnia and Herzegovina, Libya, Kuwait, Oman, Jordan, Uzbekistan.",
+    "recall_number": "Z-0160-2027",
+    "product_description": "DxU 840m Iris, REF: C76947;  DxU 850m Iris, REF: C49513",
+    "product_quantity": "2,088",
+    "reason_for_recall": "The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to prevent lamina fluid leakage; however, the check valve replacement was excluded from the annual  preventive maintenance (PM) requirements without adequate reliability evaluation. When the check  valve is not replaced annually, it may allow lamina fluid to migrate internally and leak onto the table or floor,  potentially resulting in exposure to physical hazards (slip/fall), chemical hazards (lamina fluid exposure),  biohazardous exposure, property damage, and delayed patient results.",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261015",
+    "report_date": "20261021",
+    "code_info": "Product/UDI-DI:  DxU 840m/15099590748654, DxU 850m/15099590748647.  All Serial Numbers",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0150-2027",
+   "source": "biofire_diagnostics_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0150-2027: Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positiv",
+   "risk_score": 55,
+   "source_doc": "Z-0150-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99592",
+    "recalling_firm": "BioFire Diagnostics, LLC",
+    "address_1": "515 S Colorow Dr",
+    "address_2": "",
+    "postal_code": "84108-1248",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - U.S. Nationwide distribution including in the states and territory of AK, AL, AR, AZ, CA, CO, CT, DC, FL, GA, GU, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, MS, MT, NC, ND, NE, NJ, NM, NV, NY, OH, OK, OR, PA, PR, SC, SD, TN, TX, UT, VA, WA, WI, WV, and WY. The countries of United Arab Emirates, Netherland Antilles, Argentina, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Bolivia, Canada, Switzerland, Chile, China, Colombia, Costa Rica, Czech Republic, Germany, Denmark, Dominican Republic, Algeria, Ecuador, Spain, Finland, France, United Kingdom, Greece, Guatemala, Hong Kong, Honduras, Croatia, Hungary, Indonesia, Israel, India, Italy, Japan, Korea, Lebanon, Sri Lanka, Lithuania, Mexico, Malaysia, Nicaragua, Panama, Peru, Philippines, Poland, Portugal, Paraguay, Romania, Serbia, Singapore, El Salvador, Thailand, Taiwan, Venezuela, Vietnam.",
+    "recall_number": "Z-0150-2027",
+    "product_description": "Generic Name: BioFire¿ Joint Infection (JI) Panel Generic Name: BioFire¿ Joint Infection (JI) Panel Model/Catalog Number: RFIT-ASY-0138 (30 Kit), RFIT-ASY-0135 (6 Kit) Software Version: N/A Product Description: Mulitple-type osteoarticular pathogen nucleic acid IVD, kit, nucleic acid technique (NAT) Component: N/A",
+    "product_quantity": "1,186",
+    "reason_for_recall": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261013",
+    "report_date": "20261021",
+    "code_info": "Lot Code: UDI Nos 00815381020192 (30 Kit), 00815381020208 (6 Kit); Model Nos RFIT-ASY-0138 (30 Kit), RFIT-ASY-0135 (6 Kit); Lot Numbers 0677326, 0806426, 0806526, 1289126, 1289226, 1405526, 1405626, 1413026, 1413426, 1413526, 1507826, 1613326, 1684726",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0150-2027_it",
+   "source": "biofire_diagnostics_llc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0150-2027: Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positiv",
+   "risk_score": 55,
+   "source_doc": "Z-0150-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99592",
+    "recalling_firm": "BioFire Diagnostics, LLC",
+    "address_1": "515 S Colorow Dr",
+    "address_2": "",
+    "postal_code": "84108-1248",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - U.S. Nationwide distribution including in the states and territory of AK, AL, AR, AZ, CA, CO, CT, DC, FL, GA, GU, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, MS, MT, NC, ND, NE, NJ, NM, NV, NY, OH, OK, OR, PA, PR, SC, SD, TN, TX, UT, VA, WA, WI, WV, and WY. The countries of United Arab Emirates, Netherland Antilles, Argentina, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Bolivia, Canada, Switzerland, Chile, China, Colombia, Costa Rica, Czech Republic, Germany, Denmark, Dominican Republic, Algeria, Ecuador, Spain, Finland, France, United Kingdom, Greece, Guatemala, Hong Kong, Honduras, Croatia, Hungary, Indonesia, Israel, India, Italy, Japan, Korea, Lebanon, Sri Lanka, Lithuania, Mexico, Malaysia, Nicaragua, Panama, Peru, Philippines, Poland, Portugal, Paraguay, Romania, Serbia, Singapore, El Salvador, Thailand, Taiwan, Venezuela, Vietnam.",
+    "recall_number": "Z-0150-2027",
+    "product_description": "Generic Name: BioFire¿ Joint Infection (JI) Panel Generic Name: BioFire¿ Joint Infection (JI) Panel Model/Catalog Number: RFIT-ASY-0138 (30 Kit), RFIT-ASY-0135 (6 Kit) Software Version: N/A Product Description: Mulitple-type osteoarticular pathogen nucleic acid IVD, kit, nucleic acid technique (NAT) Component: N/A",
+    "product_quantity": "1,186",
+    "reason_for_recall": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261013",
+    "report_date": "20261021",
+    "code_info": "Lot Code: UDI Nos 00815381020192 (30 Kit), 00815381020208 (6 Kit); Model Nos RFIT-ASY-0138 (30 Kit), RFIT-ASY-0135 (6 Kit); Lot Numbers 0677326, 0806426, 0806526, 1289126, 1289226, 1405526, 1405626, 1413026, 1413426, 1413526, 1507826, 1613326, 1684726",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0001-2027",
+   "source": "instrumentation_laboratory",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-0001-2027: Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+   "risk_score": 85,
+   "source_doc": "Z-0001-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Bedford",
+    "state": "MA",
+    "country": "United States",
+    "classification": "Class I",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99843",
+    "recalling_firm": "Instrumentation Laboratory",
+    "address_1": "180 Hartwell Rd",
+    "address_2": "",
+    "postal_code": "01730-2443",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+    "distribution_pattern": "Worldwide - US Nationwide distribution in the states of AR, AZ, CA, CT, FL, GA, MA, MD, NJ, NY, PA, RI, TN, WA, WV and the countries of Austria, Belgium, Switzerland, Costa Rica, Czech Republic, Germany, Denmark, Spain, Finland, France, United Kingdom, Greece, India, Italy, Jordan, Japan, South Korea, Luxembourg, Latvia, Netherlands, Saudi Arabia, Sweden, Singapore.",
+    "recall_number": "Z-0001-2027",
+    "product_description": "HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009800127. in vitro diagnostic",
+    "product_quantity": "434 units",
+    "reason_for_recall": "Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+    "recall_initiation_date": "20260903",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "Part Number: 0009800127.  UDI-DI: 08426951126545. Lot Number (Expiration Date): B40005 (01/16/2027), B38062 (11/01/2026).",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0001-2027_it",
+   "source": "instrumentation_laboratory",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class I] Z-0001-2027: Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+   "risk_score": 85,
+   "source_doc": "Z-0001-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Bedford",
+    "state": "MA",
+    "country": "United States",
+    "classification": "Class I",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99843",
+    "recalling_firm": "Instrumentation Laboratory",
+    "address_1": "180 Hartwell Rd",
+    "address_2": "",
+    "postal_code": "01730-2443",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Two or more of the following: Email, Fax, Letter, Press Release, Telephone, Visit",
+    "distribution_pattern": "Worldwide - US Nationwide distribution in the states of AR, AZ, CA, CT, FL, GA, MA, MD, NJ, NY, PA, RI, TN, WA, WV and the countries of Austria, Belgium, Switzerland, Costa Rica, Czech Republic, Germany, Denmark, Spain, Finland, France, United Kingdom, Greece, India, Italy, Jordan, Japan, South Korea, Luxembourg, Latvia, Netherlands, Saudi Arabia, Sweden, Singapore.",
+    "recall_number": "Z-0001-2027",
+    "product_description": "HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009800127. in vitro diagnostic",
+    "product_quantity": "434 units",
+    "reason_for_recall": "Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.",
+    "recall_initiation_date": "20260903",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "Part Number: 0009800127.  UDI-DI: 08426951126545. Lot Number (Expiration Date): B40005 (01/16/2027), B38062 (11/01/2026).",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0141-2027",
+   "source": "cadwell_industries_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0141-2027: Stimulator device contains a defective printed circuit board assembly (PCBA) that may cause the device to unintentionall",
+   "risk_score": 55,
+   "source_doc": "Z-0141-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Kennewick",
+    "state": "WA",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99774",
+    "recalling_firm": "Cadwell Industries Inc",
+    "address_1": "909 N Kellogg St",
+    "address_2": "",
+    "postal_code": "99336-7669",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - US Nationwide distribution in the state of TN and the countries of Spain, Vietnam, Malaysia, Saudi Arabia, Thailand, Israel, Mexico, Turkey, Oman, Colombia, Brazil, Belgium, Italy, South Africa, and Switzerland.",
+    "recall_number": "Z-0141-2027",
+    "product_description": "Brand Name: IOMAX  Product Name: IOMAX Cortical Module  Model/Catalog Number: 190296-200  UDI-DI code: 00840067100653  Product Description: The IOMAX Cortical Module contains a 16-channel amplifier, a low current electrical stimulator, a TCS stimulator, a visual stimulator and an auditory stimulator. The low current stimulator has one (1) constant current output pair with a current range of 0.01-20 mA. The TCS stimulator has nine (9) independent constant current/constant voltage outputs, with current range of 50-1500 mA and voltage range of 50-1000 V.  Component: Is the cortical component of the IOMAX system",
+    "product_quantity": "23",
+    "reason_for_recall": "Stimulator device contains a defective printed circuit board assembly (PCBA) that may cause the device to unintentionally deliver electrical stimulation to the patient, or allow an unintended electrical current to reach the patient.",
+    "recall_initiation_date": "20260818",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "Model/Catalog Number: 190296-200 UDI-DI code: 00840067100653 Lot Code: These devices are identified by the serial numbers listed below:  19029607AA0326007 19029607AA0226013 19029607AA0426028 19029607AA0226010 19029607AA0226007 19029607AA0326026 19029607AA0226015 19029607AA0326020 19029607AA0326018 19029607AA0326021 19029607AA0326022 19029607AA0226009 19029607AA0526022 19029607AA0326017 19029607AA0326027 19029607AA0326016 19029607AA0226016 19029607AA0326028 19029607AA0326024 19029607AA0326025 19029607AA0326023 19029607AA0326031 19029607AA0326006",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0141-2027_it",
+   "source": "cadwell_industries_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0141-2027: Stimulator device contains a defective printed circuit board assembly (PCBA) that may cause the device to unintentionall",
+   "risk_score": 55,
+   "source_doc": "Z-0141-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Kennewick",
+    "state": "WA",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99774",
+    "recalling_firm": "Cadwell Industries Inc",
+    "address_1": "909 N Kellogg St",
+    "address_2": "",
+    "postal_code": "99336-7669",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - US Nationwide distribution in the state of TN and the countries of Spain, Vietnam, Malaysia, Saudi Arabia, Thailand, Israel, Mexico, Turkey, Oman, Colombia, Brazil, Belgium, Italy, South Africa, and Switzerland.",
+    "recall_number": "Z-0141-2027",
+    "product_description": "Brand Name: IOMAX  Product Name: IOMAX Cortical Module  Model/Catalog Number: 190296-200  UDI-DI code: 00840067100653  Product Description: The IOMAX Cortical Module contains a 16-channel amplifier, a low current electrical stimulator, a TCS stimulator, a visual stimulator and an auditory stimulator. The low current stimulator has one (1) constant current output pair with a current range of 0.01-20 mA. The TCS stimulator has nine (9) independent constant current/constant voltage outputs, with current range of 50-1500 mA and voltage range of 50-1000 V.  Component: Is the cortical component of the IOMAX system",
+    "product_quantity": "23",
+    "reason_for_recall": "Stimulator device contains a defective printed circuit board assembly (PCBA) that may cause the device to unintentionally deliver electrical stimulation to the patient, or allow an unintended electrical current to reach the patient.",
+    "recall_initiation_date": "20260818",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "Model/Catalog Number: 190296-200 UDI-DI code: 00840067100653 Lot Code: These devices are identified by the serial numbers listed below:  19029607AA0326007 19029607AA0226013 19029607AA0426028 19029607AA0226010 19029607AA0226007 19029607AA0326026 19029607AA0226015 19029607AA0326020 19029607AA0326018 19029607AA0326021 19029607AA0326022 19029607AA0226009 19029607AA0526022 19029607AA0326017 19029607AA0326027 19029607AA0326016 19029607AA0226016 19029607AA0326028 19029607AA0326024 19029607AA0326025 19029607AA0326023 19029607AA0326031 19029607AA0326006",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0161-2027",
+   "source": "beckman_coulter_inc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0161-2027: The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to p",
+   "risk_score": 55,
+   "source_doc": "Z-0161-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Miami",
+    "state": "FL",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99832",
+    "recalling_firm": "Beckman Coulter, Inc.",
+    "address_1": "11800 Sw 147th Ave",
+    "address_2": "",
+    "postal_code": "33196-2500",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "",
+    "distribution_pattern": "Worldwide - US Nationwide distribution including in the states and territory of CA, NE, FL, NY, MA, MD, SC, WI, TX, OH, VA, PA, IL, NH, KS, GA, NC, IA, PR, TN, OR, UT, NJ, MI, CO, NM, MS, LA, RI, OK, WA, MO, ME, IN, CT, AZ, AR, MT, MN, ID, DE, AL, WV, DC, KY, NV, WY, ND, HI, AK, SD, VT, GU and the countries of Canada, Mexico, Switzerland, Panama, Ecuador, Japan, Hungary, Italy, Belgium, China, Germany, France, United Kingdom of Great Britain and Northern Ireland, Russian Federation, Singapore, Romania, Argentina, Israel, Spain, Belarus, Guatemala, Colombia, Qatar, Czechia, Reunion, Australia, United Arab Emirates, Poland, Croatia, Brazil, Slovakia, New Zealand, Saudi Arabia, Thailand, Republic of Korea, Serbia, Austria, Macao, Ukraine, India, Netherlands, Taiwan, South Africa, Sint Maarten, Bangladesh, Hong Kong, Viet Nam, Bahrain, Uganda, Lebanon, Morocco, Guadeloupe, Greece, Curacao, Republic of Moldova, Malaysia, Ghana, Indonesia, Lithuania, Portugal, Kazakhstan, Georgia, Philippines, Bosnia and Herzegovina, Libya, Kuwait, Oman, Jordan, Uzbekistan.",
+    "recall_number": "Z-0161-2027",
+    "product_description": "IQ200 SPRINT, REF: 700-3322,700-3322RFB, 700-3325, 700-3326, B48997;  IQ200 SELECT, REF: 700-3340, 700-3345, 700-3347, B48998, C10684;  IQ200 ELITE, REF: 700-3370, 700-3375, 700-3375RFB, 700-3376, B48999, C10683",
+    "product_quantity": "",
+    "reason_for_recall": "The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to prevent lamina fluid leakage; however, the check valve replacement was excluded from the annual  preventive maintenance (PM) requirements without adequate reliability evaluation. When the check  valve is not replaced annually, it may allow lamina fluid to migrate internally and leak onto the table or floor,  potentially resulting in exposure to physical hazards (slip/fall), chemical hazards (lamina fluid exposure),  biohazardous exposure, property damage, and delayed patient results.",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261015",
+    "report_date": "20261021",
+    "code_info": "Product/UDI-DI:  IQ200 SPRINT/10837461001256, IQ200 SELECT/10837461001300, IQ200 ELITE/10837461001355.  All Serial Numbers",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0161-2027_it",
+   "source": "beckman_coulter_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0161-2027: The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to p",
+   "risk_score": 55,
+   "source_doc": "Z-0161-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Miami",
+    "state": "FL",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99832",
+    "recalling_firm": "Beckman Coulter, Inc.",
+    "address_1": "11800 Sw 147th Ave",
+    "address_2": "",
+    "postal_code": "33196-2500",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "",
+    "distribution_pattern": "Worldwide - US Nationwide distribution including in the states and territory of CA, NE, FL, NY, MA, MD, SC, WI, TX, OH, VA, PA, IL, NH, KS, GA, NC, IA, PR, TN, OR, UT, NJ, MI, CO, NM, MS, LA, RI, OK, WA, MO, ME, IN, CT, AZ, AR, MT, MN, ID, DE, AL, WV, DC, KY, NV, WY, ND, HI, AK, SD, VT, GU and the countries of Canada, Mexico, Switzerland, Panama, Ecuador, Japan, Hungary, Italy, Belgium, China, Germany, France, United Kingdom of Great Britain and Northern Ireland, Russian Federation, Singapore, Romania, Argentina, Israel, Spain, Belarus, Guatemala, Colombia, Qatar, Czechia, Reunion, Australia, United Arab Emirates, Poland, Croatia, Brazil, Slovakia, New Zealand, Saudi Arabia, Thailand, Republic of Korea, Serbia, Austria, Macao, Ukraine, India, Netherlands, Taiwan, South Africa, Sint Maarten, Bangladesh, Hong Kong, Viet Nam, Bahrain, Uganda, Lebanon, Morocco, Guadeloupe, Greece, Curacao, Republic of Moldova, Malaysia, Ghana, Indonesia, Lithuania, Portugal, Kazakhstan, Georgia, Philippines, Bosnia and Herzegovina, Libya, Kuwait, Oman, Jordan, Uzbekistan.",
+    "recall_number": "Z-0161-2027",
+    "product_description": "IQ200 SPRINT, REF: 700-3322,700-3322RFB, 700-3325, 700-3326, B48997;  IQ200 SELECT, REF: 700-3340, 700-3345, 700-3347, B48998, C10684;  IQ200 ELITE, REF: 700-3370, 700-3375, 700-3375RFB, 700-3376, B48999, C10683",
+    "product_quantity": "",
+    "reason_for_recall": "The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement  to prevent lamina fluid leakage; however, the check valve replacement was excluded from the annual  preventive maintenance (PM) requirements without adequate reliability evaluation. When the check  valve is not replaced annually, it may allow lamina fluid to migrate internally and leak onto the table or floor,  potentially resulting in exposure to physical hazards (slip/fall), chemical hazards (lamina fluid exposure),  biohazardous exposure, property damage, and delayed patient results.",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261015",
+    "report_date": "20261021",
+    "code_info": "Product/UDI-DI:  IQ200 SPRINT/10837461001256, IQ200 SELECT/10837461001300, IQ200 ELITE/10837461001355.  All Serial Numbers",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0136-2027",
+   "source": "jenavalve_technology_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0136-2027: Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve devi",
+   "risk_score": 55,
+   "source_doc": "Z-0136-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Irvine",
+    "state": "CA",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99697",
+    "recalling_firm": "Jenavalve Technology Inc.",
+    "address_1": "4 Cromwell",
+    "address_2": "",
+    "postal_code": "92618-1816",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "US Nationwide distribution in the states of AZ, CA, FL, GA, IL, MA,  MD, MI, MN, MO, NY, OH, PA, SC, TX, UT, VA, WA and the countries of Germany, Denmark, Great Britain, Italy.",
+    "recall_number": "Z-0136-2027",
+    "product_description": "JenaValve Trilogy Delivery Catheter, Size 27MM  REF: TRILOGY-DC-L",
+    "product_quantity": "143 units",
+    "reason_for_recall": "Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve device.",
+    "recall_initiation_date": "20260731",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "GTIN - 00850000898158/ Lot: DS-040926-004, DS-041026-008, DS-041026-009, DS-042226-006, DS-042226-007, DS-051526-004, DS-051526-006, DS-060226-007, DS-060526-002, DS-060526-003, DS-060526-007",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0135-2027",
+   "source": "jenavalve_technology_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0135-2027: Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve devi",
+   "risk_score": 55,
+   "source_doc": "Z-0135-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Irvine",
+    "state": "CA",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99697",
+    "recalling_firm": "Jenavalve Technology Inc.",
+    "address_1": "4 Cromwell",
+    "address_2": "",
+    "postal_code": "92618-1816",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "US Nationwide distribution in the states of AZ, CA, FL, GA, IL, MA,  MD, MI, MN, MO, NY, OH, PA, SC, TX, UT, VA, WA and the countries of Germany, Denmark, Great Britain, Italy.",
+    "recall_number": "Z-0135-2027",
+    "product_description": "JenaValve Trilogy Delivery Catheter, Size 25MM  REF: TRILOGY-DC-M",
+    "product_quantity": "108 units",
+    "reason_for_recall": "Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve device.",
+    "recall_initiation_date": "20260731",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "GTIN - 00850000898141/Lot # DS-040826-005, DS-040926-002, DS-042326-001, DS-042826-007, DS-042926-008, DS-050826-005, DS-051526-001",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0149-2027",
+   "source": "biofire_diagnostics_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0149-2027: Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positiv",
+   "risk_score": 55,
+   "source_doc": "Z-0149-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99592",
+    "recalling_firm": "BioFire Diagnostics, LLC",
+    "address_1": "515 S Colorow Dr",
+    "address_2": "",
+    "postal_code": "84108-1248",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - U.S. Nationwide distribution including in the states and territory of AK, AL, AR, AZ, CA, CO, CT, DC, FL, GA, GU, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, MS, MT, NC, ND, NE, NJ, NM, NV, NY, OH, OK, OR, PA, PR, SC, SD, TN, TX, UT, VA, WA, WI, WV, and WY. The countries of United Arab Emirates, Netherland Antilles, Argentina, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Bolivia, Canada, Switzerland, Chile, China, Colombia, Costa Rica, Czech Republic, Germany, Denmark, Dominican Republic, Algeria, Ecuador, Spain, Finland, France, United Kingdom, Greece, Guatemala, Hong Kong, Honduras, Croatia, Hungary, Indonesia, Israel, India, Italy, Japan, Korea, Lebanon, Sri Lanka, Lithuania, Mexico, Malaysia, Nicaragua, Panama, Peru, Philippines, Poland, Portugal, Paraguay, Romania, Serbia, Singapore, El Salvador, Thailand, Taiwan, Venezuela, Vietnam.",
+    "recall_number": "Z-0149-2027",
+    "product_description": "Generic Name: FilmArray¿ Pneumonia Panel plus Generic Name: FilmArray¿ Pneumonia Panel plus Model/Catalog Number: RFIT-ASY-0143 (30 Kit), RFIT-ASY-0142 (6 Kit) Software Version: N/A Product Description: Multiple-type respiratory pathogen nucleic acid IVD, kit, nucleic acid technique (NAT) Component: N/A",
+    "product_quantity": "3,871",
+    "reason_for_recall": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261013",
+    "report_date": "20261021",
+    "code_info": "Lot Code: UDI Nos 00815381020314 (30 Kit), 00815381020321 (6 Kit); Model Nos RFIT-ASY-0143 (30 Kit), RFIT-ASY-0142 (6 Kit); Lot Numbers 0638426, 0638526, 0676426, 0676526, 0679726, 0804826, 0804926, 0805026, 0883126, 0922126, 0941426, 0941526, 0997926, 0998026, 1020626, 1020726, 1077326, 1105326, 1118926, 1119026, 1119526, 1219226, 1239726, 1286526, 1286626, 1287326, 1287426, 1346226, 1346326, 1346426, 1403026, 1403126, 1403226, 1419326, 1419426, 1437626, 1479026, 1560626, 1560726, 1611826, 1611926, 1656926, 1683826, 1859726",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0149-2027_it",
+   "source": "biofire_diagnostics_llc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0149-2027: Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positiv",
+   "risk_score": 55,
+   "source_doc": "Z-0149-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99592",
+    "recalling_firm": "BioFire Diagnostics, LLC",
+    "address_1": "515 S Colorow Dr",
+    "address_2": "",
+    "postal_code": "84108-1248",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - U.S. Nationwide distribution including in the states and territory of AK, AL, AR, AZ, CA, CO, CT, DC, FL, GA, GU, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, MS, MT, NC, ND, NE, NJ, NM, NV, NY, OH, OK, OR, PA, PR, SC, SD, TN, TX, UT, VA, WA, WI, WV, and WY. The countries of United Arab Emirates, Netherland Antilles, Argentina, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Bolivia, Canada, Switzerland, Chile, China, Colombia, Costa Rica, Czech Republic, Germany, Denmark, Dominican Republic, Algeria, Ecuador, Spain, Finland, France, United Kingdom, Greece, Guatemala, Hong Kong, Honduras, Croatia, Hungary, Indonesia, Israel, India, Italy, Japan, Korea, Lebanon, Sri Lanka, Lithuania, Mexico, Malaysia, Nicaragua, Panama, Peru, Philippines, Poland, Portugal, Paraguay, Romania, Serbia, Singapore, El Salvador, Thailand, Taiwan, Venezuela, Vietnam.",
+    "recall_number": "Z-0149-2027",
+    "product_description": "Generic Name: FilmArray¿ Pneumonia Panel plus Generic Name: FilmArray¿ Pneumonia Panel plus Model/Catalog Number: RFIT-ASY-0143 (30 Kit), RFIT-ASY-0142 (6 Kit) Software Version: N/A Product Description: Multiple-type respiratory pathogen nucleic acid IVD, kit, nucleic acid technique (NAT) Component: N/A",
+    "product_quantity": "3,871",
+    "reason_for_recall": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261013",
+    "report_date": "20261021",
+    "code_info": "Lot Code: UDI Nos 00815381020314 (30 Kit), 00815381020321 (6 Kit); Model Nos RFIT-ASY-0143 (30 Kit), RFIT-ASY-0142 (6 Kit); Lot Numbers 0638426, 0638526, 0676426, 0676526, 0679726, 0804826, 0804926, 0805026, 0883126, 0922126, 0941426, 0941526, 0997926, 0998026, 1020626, 1020726, 1077326, 1105326, 1118926, 1119026, 1119526, 1219226, 1239726, 1286526, 1286626, 1287326, 1287426, 1346226, 1346326, 1346426, 1403026, 1403126, 1403226, 1419326, 1419426, 1437626, 1479026, 1560626, 1560726, 1611826, 1611926, 1656926, 1683826, 1859726",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0134-2027",
+   "source": "jenavalve_technology_inc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0134-2027: Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve devi",
+   "risk_score": 55,
+   "source_doc": "Z-0134-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Irvine",
+    "state": "CA",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99697",
+    "recalling_firm": "Jenavalve Technology Inc.",
+    "address_1": "4 Cromwell",
+    "address_2": "",
+    "postal_code": "92618-1816",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "US Nationwide distribution in the states of AZ, CA, FL, GA, IL, MA,  MD, MI, MN, MO, NY, OH, PA, SC, TX, UT, VA, WA and the countries of Germany, Denmark, Great Britain, Italy.",
+    "recall_number": "Z-0134-2027",
+    "product_description": "JenaValve Trilogy Delivery Catheter, Size 23MM  REF: TRILOGY-DC-S",
+    "product_quantity": "111 units",
+    "reason_for_recall": "Delivery Catheter may  have sleeve liner separation that results in difficulty or inability  to  deploy heart valve device.",
+    "recall_initiation_date": "20260731",
+    "center_classification_date": "20261009",
+    "report_date": "20261021",
+    "code_info": "GTIN - 00850000898134/ Lot: DS-040826-003 DS-042326-003, DS-042726-006, DS-042826-005, DS-050426-007, DS-050626-002, DS-050626-006, DS-050626-009, DS-050726-005",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0148-2027",
+   "source": "biofire_diagnostics_llc",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0148-2027: Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positiv",
+   "risk_score": 55,
+   "source_doc": "Z-0148-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99592",
+    "recalling_firm": "BioFire Diagnostics, LLC",
+    "address_1": "515 S Colorow Dr",
+    "address_2": "",
+    "postal_code": "84108-1248",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - U.S. Nationwide distribution including in the states and territory of AK, AL, AR, AZ, CA, CO, CT, DC, FL, GA, GU, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, MS, MT, NC, ND, NE, NJ, NM, NV, NY, OH, OK, OR, PA, PR, SC, SD, TN, TX, UT, VA, WA, WI, WV, and WY. The countries of United Arab Emirates, Netherland Antilles, Argentina, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Bolivia, Canada, Switzerland, Chile, China, Colombia, Costa Rica, Czech Republic, Germany, Denmark, Dominican Republic, Algeria, Ecuador, Spain, Finland, France, United Kingdom, Greece, Guatemala, Hong Kong, Honduras, Croatia, Hungary, Indonesia, Israel, India, Italy, Japan, Korea, Lebanon, Sri Lanka, Lithuania, Mexico, Malaysia, Nicaragua, Panama, Peru, Philippines, Poland, Portugal, Paraguay, Romania, Serbia, Singapore, El Salvador, Thailand, Taiwan, Venezuela, Vietnam.",
+    "recall_number": "Z-0148-2027",
+    "product_description": "Generic Name: FilmArray¿ Pneumonia Panel  Generic Name: FilmArray¿ Pneumonia Panel  Model/Catalog Number: RFIT-ASY-0144 (30 pack), RFIT-ASY-0145 (6 pack), FLM1-ASY-0150 (Verification Kits). Verification kit lots (FLM1-ASY-0150) are a sales configuration that consume kits from panel lots (RFIT-ASY-0144).  Software Version: N/A  Product Description: Multiple-type respiratory pathogen nucleic acid IVD, kit, nucleic acid technique (NAT)  Component: N/A",
+    "product_quantity": "4,892",
+    "reason_for_recall": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261013",
+    "report_date": "20261021",
+    "code_info": "Lot Code: UDI nos 00815381020178 (30 pack), 00815381020185 (6 pack); Model Nos RFIT-PRT-0144 (30 pack), RFIT-ASY-0145 (6 pack), FLM1-ASY-0150 (Verification Kit); Lot Numbers 0638726, 0676626, 0676726, 0716526, 0727826, 0767926, 0804526, 0804626, 0860926, 0882826, 0882926, 0883026, 0914626, 0914726, 0914826, 0914926, 0969126, 0969726, 0978026, 0978126, 0978226, 0978326, 0997626, 0997826, VK0997826, 0999226, 1020826, 1020926, 1105426, 1119126, 1119226, 1119326, 1119426, 1151826, 1152326, 1152426, 1179726, 1219026, 1267526, 1286226, 1286326, 1286426, 1346126, 1402726, 1402826, 1402926, 1419126, 1419226, 1437526, 1478926, 1560326, 1560426, 1560526, 1630726, 1656826, 1683726, 1702326, 1708826",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0148-2027_it",
+   "source": "biofire_diagnostics_llc",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0148-2027: Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positiv",
+   "risk_score": 55,
+   "source_doc": "Z-0148-2027",
+   "date": "2026-10-21",
+   "created_at": "2026-10-31T10:54:31.217881",
+   "record": {
+    "status": "Ongoing",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "United States",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99592",
+    "recalling_firm": "BioFire Diagnostics, LLC",
+    "address_1": "515 S Colorow Dr",
+    "address_2": "",
+    "postal_code": "84108-1248",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide - U.S. Nationwide distribution including in the states and territory of AK, AL, AR, AZ, CA, CO, CT, DC, FL, GA, GU, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, MI, MN, MO, MS, MT, NC, ND, NE, NJ, NM, NV, NY, OH, OK, OR, PA, PR, SC, SD, TN, TX, UT, VA, WA, WI, WV, and WY. The countries of United Arab Emirates, Netherland Antilles, Argentina, Austria, Bosnia and Herzegovina, Belgium, Bulgaria, Bolivia, Canada, Switzerland, Chile, China, Colombia, Costa Rica, Czech Republic, Germany, Denmark, Dominican Republic, Algeria, Ecuador, Spain, Finland, France, United Kingdom, Greece, Guatemala, Hong Kong, Honduras, Croatia, Hungary, Indonesia, Israel, India, Italy, Japan, Korea, Lebanon, Sri Lanka, Lithuania, Mexico, Malaysia, Nicaragua, Panama, Peru, Philippines, Poland, Portugal, Paraguay, Romania, Serbia, Singapore, El Salvador, Thailand, Taiwan, Venezuela, Vietnam.",
+    "recall_number": "Z-0148-2027",
+    "product_description": "Generic Name: FilmArray¿ Pneumonia Panel  Generic Name: FilmArray¿ Pneumonia Panel  Model/Catalog Number: RFIT-ASY-0144 (30 pack), RFIT-ASY-0145 (6 pack), FLM1-ASY-0150 (Verification Kits). Verification kit lots (FLM1-ASY-0150) are a sales configuration that consume kits from panel lots (RFIT-ASY-0144).  Software Version: N/A  Product Description: Multiple-type respiratory pathogen nucleic acid IVD, kit, nucleic acid technique (NAT)  Component: N/A",
+    "product_quantity": "4,892",
+    "reason_for_recall": "Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results",
+    "recall_initiation_date": "20260812",
+    "center_classification_date": "20261013",
+    "report_date": "20261021",
+    "code_info": "Lot Code: UDI nos 00815381020178 (30 pack), 00815381020185 (6 pack); Model Nos RFIT-PRT-0144 (30 pack), RFIT-ASY-0145 (6 pack), FLM1-ASY-0150 (Verification Kit); Lot Numbers 0638726, 0676626, 0676726, 0716526, 0727826, 0767926, 0804526, 0804626, 0860926, 0882826, 0882926, 0883026, 0914626, 0914726, 0914826, 0914926, 0969126, 0969726, 0978026, 0978126, 0978226, 0978326, 0997626, 0997826, VK0997826, 0999226, 1020826, 1020926, 1105426, 1119126, 1119226, 1119326, 1119426, 1151826, 1152326, 1152426, 1179726, 1219026, 1267526, 1286226, 1286326, 1286426, 1346126, 1402726, 1402826, 1402926, 1419126, 1419226, 1437526, 1478926, 1560326, 1560426, 1560526, 1630726, 1656826, 1683726, 1702326, 1708826",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "aifa_aic_holders_REGOLA",
+   "source": "aifa",
+   "target": "aic_holders",
+   "type": "REGOLA",
+   "fact": "AIFA regola la compilazione corretta degli ICSRs secondo standard ICH E2B(R3).",
+   "risk_score": 20,
+   "source_doc": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3": "AIFA – Notizie – Modalità di compilazione degli individual case safety reports (ICSRs) secondo lo standard ICH E2B (R3)"
+   }
+  },
+  {
+   "id": "aic_holders_aifa_FORNISCE",
+   "source": "aic_holders",
+   "target": "aifa",
+   "type": "FORNISCE",
+   "fact": "Titolari AIC trasmettono rapporti di sicurezza individuali all'AIFA.",
+   "risk_score": 15,
+   "source_doc": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3": "AIFA – Notizie – Modalità di compilazione degli individual case safety reports (ICSRs) secondo lo standard ICH E2B (R3)"
+   }
+  },
+  {
+   "id": "ich_e2b_r3_aifa_REGOLA",
+   "source": "ich_e2b_r3",
+   "target": "aifa",
+   "type": "REGOLA",
+   "fact": "Standard ICH E2B(R3) definisce modalità di compilazione ICSRs presso AIFA.",
+   "risk_score": 10,
+   "source_doc": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3": "AIFA – Notizie – Modalità di compilazione degli individual case safety reports (ICSRs) secondo lo standard ICH E2B (R3)"
+   }
+  },
+  {
+   "id": "aifa_sumatriptan_zentiva_REGOLA",
+   "source": "aifa",
+   "target": "sumatriptan_zentiva",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio su rinuncia del produttore",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "zentiva_sumatriptan_zentiva_FORNISCE",
+   "source": "zentiva",
+   "target": "sumatriptan_zentiva",
+   "type": "FORNISCE",
+   "fact": "Zentiva produce e commercializza il medicinale Sumatriptan revocato",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "zentiva_aifa_COLLABORA_CON",
+   "source": "zentiva",
+   "target": "aifa",
+   "type": "COLLABORA_CON",
+   "fact": "Zentiva rinuncia all'autorizzazione in accordo con AIFA, ritirando prodotto dal mercato",
+   "risk_score": 10,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_diclofenac_ratiopharm_REGOLA",
+   "source": "aifa",
+   "target": "diclofenac_ratiopharm",
+   "type": "REGOLA",
+   "fact": "AIFA revoca l'autorizzazione all'immissione in commercio del medicinale su rinuncia.",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "ratiopharm_company_diclofenac_ratiopharm_FORNISCE",
+   "source": "ratiopharm_company",
+   "target": "diclofenac_ratiopharm",
+   "type": "FORNISCE",
+   "fact": "Ratiopharm produce e commercializza il medicinale Diclofenac Ratiopharm.",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "ratiopharm_company_aifa_MEMBRO_DI",
+   "source": "ratiopharm_company",
+   "target": "aifa",
+   "type": "MEMBRO_DI",
+   "fact": "Ratiopharm sottoposta a controllo normativo e autorizzazione da AIFA.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "minsalute_iss_REGOLA",
+   "source": "minsalute",
+   "target": "iss",
+   "type": "REGOLA",
+   "fact": "Ministero della Salute coordina attività di sorveglianza epidemiologica dell'ISS.",
+   "risk_score": 38,
+   "source_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile"
+   }
+  },
+  {
+   "id": "regioni_italia_ospedale_nazionale_CONTROLLA",
+   "source": "regioni_italia",
+   "target": "ospedale_nazionale",
+   "type": "CONTROLLA",
+   "fact": "Regioni sovrintendono risposta ospedaliera ai casi di arbovirosi.",
+   "risk_score": 48,
+   "source_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "date": "2026-10",
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile"
+   }
+  },
+  {
+   "id": "evt_west_nile_it_donatori_sangue_RISCHIO_PER",
+   "source": "evt_west_nile_it",
+   "target": "donatori_sangue",
+   "type": "RISCHIO_PER",
+   "fact": "96 donatori di sangue positivi al WNV rappresentano rischio contaminazione ematica.",
+   "risk_score": 82,
+   "source_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "date": "2026-10",
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile"
+   }
+  },
+  {
+   "id": "evt_west_nile_it_regioni_italia_RISCHIO_PER",
+   "source": "evt_west_nile_it",
+   "target": "regioni_italia",
+   "type": "RISCHIO_PER",
+   "fact": "Focolaio WNV con 61 decessi e forme neuroinvasive critico per sistema sanitario.",
+   "risk_score": 88,
+   "source_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "date": "2026-10",
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile"
+   }
+  },
+  {
+   "id": "minsalute_regioni_italia_REGOLA",
+   "source": "minsalute",
+   "target": "regioni_italia",
+   "type": "REGOLA",
+   "fact": "Ministero coordina protocolli di contenimento epidemico con autorità regionali.",
+   "risk_score": 42,
+   "source_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+   "date": "2026-10",
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile"
+   }
+  },
+  {
+   "id": "iss_dipart_cardio_iss_CONTROLLA",
+   "source": "iss",
+   "target": "dipart_cardio_iss",
+   "type": "CONTROLLA",
+   "fact": "ISS coordina Dipartimento Malattie Cardiovascolari per ricerca prevenzione.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani": "ISS – Comunicati stampa – Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani"
+   }
+  },
+  {
+   "id": "dipart_cardio_iss_progetto_cuore_COLLABORA_CON",
+   "source": "dipart_cardio_iss",
+   "target": "progetto_cuore",
+   "type": "COLLABORA_CON",
+   "fact": "Dipartimento coordina Progetto Cuore per monitoraggio fattori rischio cardiovascolare.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani": "ISS – Comunicati stampa – Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani"
+   }
+  },
+  {
+   "id": "dipart_cardio_iss_jacardi_COLLABORA_CON",
+   "source": "dipart_cardio_iss",
+   "target": "jacardi",
+   "type": "COLLABORA_CON",
+   "fact": "Dipartimento ISS coordina Jacardi iniziativa europea prevenzione cardiovascolare e diabete.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani": "ISS – Comunicati stampa – Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani"
+   }
+  },
+  {
+   "id": "progetto_cuore_popolazione_italiana_COLLABORA_CON",
+   "source": "progetto_cuore",
+   "target": "popolazione_italiana",
+   "type": "COLLABORA_CON",
+   "fact": "Progetto Cuore monitora stili vita e fattori rischio in popolazione adulta italiana.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani": "ISS – Comunicati stampa – Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani"
+   }
+  },
+  {
+   "id": "minsalute_progetto_cuore_FINANZIA",
+   "source": "minsalute",
+   "target": "progetto_cuore",
+   "type": "FINANZIA",
+   "fact": "Ministero Salute sostiene iniziative sanità pubblica per prevenzione cardiovascolare nazionale.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani": "ISS – Comunicati stampa – Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani"
+   }
+  },
+  {
+   "id": "autorita_europee_sanitarie_jacardi_REGOLA",
+   "source": "autorita_europee_sanitarie",
+   "target": "jacardi",
+   "type": "REGOLA",
+   "fact": "Autorità europee sovrintendono Jacardi per prevenzione malattie cardiovascolari europee.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+   "date": null,
+   "created_at": "2026-10-31T10:54:41.107986",
+   "doc_titles": {
+    "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani": "ISS – Comunicati stampa – Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani"
+   }
   }
  ],
  "alerts": [
@@ -14007,13 +15330,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON622 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
    "id": "who_middle_east_respiratory_synd",
    "title": "OMS: \"Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia\"",
-   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"MERS is a zoonotic viral respiratory disease for which dromedary camels serve as the primary animal reservoir and two cases reported direct contact with camels while six reported no known camel exposure.\"",
+   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\"",
    "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -14021,13 +15344,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON618 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
    "id": "who_2026_don620",
    "title": "OMS: \"Pneumonia of undetermined etiology - the Russian Federation\"",
-   "description": "OMS, Disease Outbreak News 2026-DON620 del 2026-10-10: \"On 2 October 2026, WHO became aware through media reports of the death of an employee of the Irkutsk Antiplague Research Institute (APRI) of Siberia and the Far East, the Russian Federation.\" \"According to these reports, the individual died on 2 October following hospitalization for severe pneumonia on 29 September, and pneumonic plague was suspected as the cause of death, following occupational exposure in laboratory settings.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON620 del 2026-10-10: \"On 2 October 2026, WHO became aware through media reports of the death of an employee of the Irkutsk Antiplague Research Institute (APRI) of Siberia and the Far East, the Russian Federation.\"",
    "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -14035,119 +15358,119 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON620 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
-   "id": "recall_z_0078_2027",
-   "title": "Richiamo FDA Class II: \"Spectral CT and Spectral CT 7500 RT\"",
-   "description": "Richiamo FDA Z-0078-2027. Prodotto: \"Spectral CT and Spectral CT 7500 RT; Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.); Model Numbers: 1. 728333 (U.S. and Outside U.S.), 2. 728340 (Outside U.S.), 3. 728344 (Outside U.S.), 4. 728345 (Outside U.S.);\" Motivo: \"Software issues may affect the safety and performance of Spectral CT system(s). The issues may result in image artifacts, wrong slice thickness, or unintended system motion.\"",
-   "severity": "HIGH",
-   "entities_involved": "[\"philips_medical_systems\"]",
-   "predicted_impact": null,
-   "italy_relevance": null,
-   "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
-   "timeframe": null,
-   "recommendation": "Verificare presenza dispositivi Spectral CT modelli 728333, 728340, 728344, 728345 con versioni software 5.0.X, 5.2.X, 5.4.X nei numeri seriali elencati nel codice info.",
-   "created_at": "2026-10-24T20:09:21.787639",
-   "is_read": false
-  },
-  {
-   "id": "recall_z_0082_2027",
-   "title": "Richiamo FDA Class II: \"Sperm Ab ELISA\"",
-   "description": "Richiamo FDA Z-0082-2027. Prodotto: \"Sperm Ab ELISA; Model/Catalog Number: EIA-1826; Product Description: Sperm Ab ELISA (96 well plate test);\" Motivo: \"Potential for false negative patient results.\"",
-   "severity": "HIGH",
-   "entities_involved": "[\"drg_international_inc\"]",
-   "predicted_impact": null,
-   "italy_relevance": null,
-   "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
-   "timeframe": null,
-   "recommendation": "Verificare presenza kit Sperm Ab ELISA modello EIA-1826 UDI 04048474018264 lotto 320K046 in inventario e consultare avviso ufficiale del fabbricante.",
-   "created_at": "2026-10-24T20:09:21.787639",
-   "is_read": false
-  },
-  {
-   "id": "recall_z_3252_2026",
-   "title": "Richiamo FDA Class I: \"VentStar Resus Neo\"",
-   "description": "Richiamo FDA Z-3252-2026. Prodotto: \"VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310 Disposable breathing circuit for use with a resuscitation module.\" Motivo: \"Potential cracks in the hose, which could lead to leakage or the hose falling off.\"",
+   "id": "recall_z_0002_2027",
+   "title": "Richiamo FDA Class I: \"HemoslL AcuStar HIT-lgG(PF-4)\"",
+   "description": "Richiamo FDA Z-0002-2027. Prodotto: \"HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009802028. in vitro diagnostic (OUS only)\" Motivo: \"Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.\"",
    "severity": "CRITICAL",
-   "entities_involved": "[\"draeger_inc\"]",
+   "entities_involved": "[\"instrumentation_laboratory\"]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza circuiti respiratori VentStar Resus Neo parte MP00310 UDI 04048675422358 tutti i lotti e consultare avviso ufficiale del fabbricante.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "recommendation": "Verificare presenza in inventario Part Number 0009802028, UDI-DI 08426950545774, lotti B40006 e B38063.",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
-   "id": "recall_z_3309_2026",
-   "title": "Richiamo FDA Class II: \"Ingenia 3.0T and 3.0T CX\"",
-   "description": "Richiamo FDA Z-3309-2026. Prodotto: \"Ingenia 3.0T and 3.0T CX; Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX); Software Versions: R11, R12 and R13;\" Motivo: \"When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR DICOM export is used in conjunction with third-party software for tractography (e.g. for mapping nerve fiber pathways in the brain), the software will not be able to correctly process the DTI data for reconstruction.\"",
-   "severity": "HIGH",
-   "entities_involved": "[\"philips_north_america\"]",
+   "id": "recall_z_0001_2027",
+   "title": "Richiamo FDA Class I: \"HemoslL AcuStar HIT-lgG(PF-4)\"",
+   "description": "Richiamo FDA Z-0001-2027. Prodotto: \"HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009800127. in vitro diagnostic\" Motivo: \"Potential for invalid calibration curve or negative mean bias of up to 47% with patient samples.\"",
+   "severity": "CRITICAL",
+   "entities_involved": "[\"instrumentation_laboratory\"]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza sistemi Ingenia 3.0T modelli 781342, 781377, 782103, 781271 con software R11, R12, R13 nei numeri seriali elencati nel codice info.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "recommendation": "Verificare presenza in inventario Part Number 0009800127, UDI-DI 08426951126545, lotti B40005 e B38062.",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
-   "id": "recall_z_3325_2026",
-   "title": "Richiamo FDA Class II: \"Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009\"",
-   "description": "Richiamo FDA Z-3325-2026. Prodotto: \"Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC\" Motivo: \"Labeling updated warning not to use Intrapulmonary percussive ventilation (IPV) in conjunction with volatile anesthetic delivery systems because IPV may alter controlled delivery of volatile anesthetic agents, resulting in deeper/lighter anesthetic effects that may result in hypertonia/hypotonia, tachycardia/ bradycardia, elevated intracranial pressure, awareness during anesthesia, oversedation\"",
+   "id": "recall_z_0163_2027",
+   "title": "Richiamo FDA Class II: \"Williams Cystoscopic Injection Needles, used for cystoscopic injection into the urethra, b\"",
+   "description": "Richiamo FDA Z-0163-2027. Prodotto: \"Williams Cystoscopic Injection Needles, used for cystoscopic injection into the urethra, bladder neck, and bladder wall, Reference Part Number 090001-S26, Order Number (GPN) G16112\" Motivo: \"The female Luer lock adapter component in the affected device lots may not have been correctly seated due to misalignment and inadequate torquing during manufacturing. Potential events that may occur as a result of this issue include increased procedural time and inadequate treatment.\"",
    "severity": "HIGH",
-   "entities_involved": "[\"percussionaire_corporation\"]",
+   "entities_involved": "[\"cook_incorporated\"]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza dispositivi IPV HC S00009 UDI 00849436000358 e Phasitron P5-HC UDI 00849436000525 e consultare avviso ufficiale del fabbricante.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "recommendation": "Verificare presenza in inventario Part Number 090001-S26, UDI-DI 00827002161122, lotti 16613606, 16951548, 16951548X.",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
-   "id": "recall_z_3313_2026",
-   "title": "Richiamo FDA Class II: \"MR 7700\"",
-   "description": "Richiamo FDA Z-3313-2026. Prodotto: \"MR 7700; Model number (REF): 1. 782120, 2. 782153, 3. 782155, 4. 782199; Software Versions: R11, R12 and R13;\" Motivo: \"When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR DICOM export is used in conjunction with third-party software for tractography (e.g. for mapping nerve fiber pathways in the brain), the software will not be able to correctly process the DTI data for reconstruction.\"",
+   "id": "recall_z_0160_2027",
+   "title": "Richiamo FDA Class II: \"DxU 840m Iris, REF: C76947\"",
+   "description": "Richiamo FDA Z-0160-2027. Prodotto: \"DxU 840m Iris, REF: C76947; DxU 850m Iris, REF: C49513\" Motivo: \"The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement to prevent lamina fluid leakage; however, the check valve replacement was excluded from the annual preventive maintenance (PM) requirements without adequate reliability evaluation. When the check valve is not replaced annually, it may allow lamina fluid to migrate internally and leak onto the table or floor, potentially resulting in exposure to physical hazards (slip/fall), chemical hazards (lamina fluid exposure), biohazardous exposure, property damage, and delayed patient results.\"",
    "severity": "HIGH",
-   "entities_involved": "[\"philips_north_america\"]",
+   "entities_involved": "[\"beckman_coulter_inc\"]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza sistema MR 7700 modello 782120 UDI 00884838104112 con software R11, R12, R13 nei numeri seriali elencati nel codice info.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "recommendation": "Verificare presenza in inventario DxU 840m Iris (UDI-DI 15099590748654) e DxU 850m Iris (UDI-DI 15099590748647), tutti i numeri seriali.",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
-   "id": "recall_z_3322_2026",
-   "title": "Richiamo FDA Class II: \"Intrapulmonary Percussive Ventilation, IPV-2C, Product Number: S00002-C\"",
-   "description": "Richiamo FDA Z-3322-2026. Prodotto: \"Intrapulmonary Percussive Ventilation, IPV-2C, Product Number: S00002-C; Phasitron 5, Product Number: P5 used with Instruction Manual\" Motivo: \"Labeling updated warning not to use Intrapulmonary percussive ventilation (IPV) in conjunction with volatile anesthetic delivery systems because IPV may alter controlled delivery of volatile anesthetic agents, resulting in deeper/lighter anesthetic effects that may result in hypertonia/hypotonia, tachycardia/ bradycardia, elevated intracranial pressure, awareness during anesthesia, oversedation\"",
+   "id": "recall_z_0150_2027",
+   "title": "Richiamo FDA Class II: \"Generic Name: BioFire¿ Joint Infection (JI) Panel Generic Name: BioFire¿ Joint Infection (\"",
+   "description": "Richiamo FDA Z-0150-2027. Prodotto: \"Generic Name: BioFire¿ Joint Infection (JI) Panel Generic Name: BioFire¿ Joint Infection (JI) Panel Model/Catalog Number: RFIT-ASY-0138 (30 Kit), RFIT-ASY-0135 (6 Kit) Software Version: N/A Product Description: Mulitple-type osteoarticular pathogen nucleic acid IVD, kit, nucleic acid technique (NAT) Component: N/A\" Motivo: \"Due to potential contaiminated of spefic lots of pneumonia and joint infection panels that could result in false positive results\"",
    "severity": "HIGH",
-   "entities_involved": "[\"percussionaire_corporation\"]",
+   "entities_involved": "[\"biofire_diagnostics_llc\"]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza dispositivi IPV-2C S00002-C e Phasitron 5 P5 con UDI elencati nel codice info e consultare avviso ufficiale del fabbricante.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "recommendation": "Verificare presenza lotti BioFire Joint Infection Panel: UDI 00815381020192, 00815381020208, lotti 0677326-1684726 come elencati.",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   },
   {
-   "id": "recall_z_3308_2026",
-   "title": "Richiamo FDA Class II: \"Ingenia 1.5T, 1.5T CX, and 1.5T S\"",
-   "description": "Richiamo FDA Z-3308-2026. Prodotto: \"Ingenia 1.5T, 1.5T CX, and 1.5T S; Model number (REF): 1. 781315 (1.5T), 2. 781341 (1.5T), 3. 781396 (1.5T), 4. 782115 (1.5T), 5. 782140 (1.5T), 6. 781262 (1.5T CX), 7. 781347 (1.5T S); Software Versions: R11, R12 and R13;\" Motivo: \"When exporting diffusion tensor imaging (DTI) scans from a MR system using the Enhanced MR DICOM format, the exports contain incorrect data (diffusion directions). If the Enhanced MR DICOM export is used in conjunction with third-party software for tractography (e.g. for mapping nerve fiber pathways in the brain), the software will not be able to correctly process the DTI data for reconstruction.\"",
+   "id": "recall_z_0141_2027",
+   "title": "Richiamo FDA Class II: \"Brand Name: IOMAX Product Name: IOMAX Cortical Module Model/Catalog Number: 190296-200 UDI\"",
+   "description": "Richiamo FDA Z-0141-2027. Prodotto: \"Brand Name: IOMAX Product Name: IOMAX Cortical Module Model/Catalog Number: 190296-200 UDI-DI code: 00840067100653 Product Description: The IOMAX Cortical Module contains a 16-channel amplifier, a low current electrical stimulator, a TCS stimulator, a visual stimulator and an auditory stimulator. The low current stimulator has one (1) constant current output pair with a current range of 0.01-20 mA. The TCS stimulator has nine (9) independent constant current/constant voltage outputs, with current range of 50-1500 mA and voltage range of 50-1000 V. Component: Is the cortical component of the IOMAX system\" Motivo: \"Stimulator device contains a defective printed circuit board assembly (PCBA) that may cause the device to unintentionally deliver electrical stimulation to the patient, or allow an unintended electrical current to reach the patient.\"",
    "severity": "HIGH",
-   "entities_involved": "[\"philips_north_america\"]",
+   "entities_involved": "[\"cadwell_industries_inc\"]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza sistemi Ingenia 1.5T modelli 781315, 781341, 781396, 782115, 782140, 781262, 781347 con software R11, R12, R13 nei numeri seriali elencati nel codice info.",
-   "created_at": "2026-10-24T20:09:21.787639",
+   "recommendation": "Verificare presenza IOMAX Cortical Module Model 190296-200, UDI-DI 00840067100653, numeri seriali come elencati nel record.",
+   "created_at": "2026-10-31T10:54:52.591845",
+   "is_read": false
+  },
+  {
+   "id": "recall_z_0161_2027",
+   "title": "Richiamo FDA Class II: \"IQ200 SPRINT, REF: 700-3322,700-3322RFB, 700-3325, 700-3326, B48997\"",
+   "description": "Richiamo FDA Z-0161-2027. Prodotto: \"IQ200 SPRINT, REF: 700-3322,700-3322RFB, 700-3325, 700-3326, B48997; IQ200 SELECT, REF: 700-3340, 700-3345, 700-3347, B48998, C10684; IQ200 ELITE, REF: 700-3370, 700-3375, 700-3375RFB, 700-3376, B48999, C10683\" Motivo: \"The rinse-line check valve has a shorter service lifespan than originally expected and requires annual replacement to prevent lamina fluid leakage; however, the check valve replacement was excluded from the annual preventive maintenance (PM) requirements without adequate reliability evaluation. When the check valve is not replaced annually, it may allow lamina fluid to migrate internally and leak onto the table or floor, potentially resulting in exposure to physical hazards (slip/fall), chemical hazards (lamina fluid exposure), biohazardous exposure, property damage, and delayed patient results.\"",
+   "severity": "HIGH",
+   "entities_involved": "[\"beckman_coulter_inc\"]",
+   "predicted_impact": null,
+   "italy_relevance": null,
+   "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
+   "timeframe": null,
+   "recommendation": "Verificare presenza IQ200 SPRINT/SPRINT (UDI-DI 10837461001256), SELECT (10837461001300), ELITE (10837461001355), tutti i numeri seriali.",
+   "created_at": "2026-10-31T10:54:52.591845",
+   "is_read": false
+  },
+  {
+   "id": "recall_z_0136_2027",
+   "title": "Richiamo FDA Class II: \"JenaValve Trilogy Delivery Catheter, Size 27MM REF: TRILOGY-DC-L\"",
+   "description": "Richiamo FDA Z-0136-2027. Prodotto: \"JenaValve Trilogy Delivery Catheter, Size 27MM REF: TRILOGY-DC-L\" Motivo: \"Delivery Catheter may have sleeve liner separation that results in difficulty or inability to deploy heart valve device.\"",
+   "severity": "HIGH",
+   "entities_involved": "[\"jenavalve_technology_inc\"]",
+   "predicted_impact": null,
+   "italy_relevance": null,
+   "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
+   "timeframe": null,
+   "recommendation": "Verificare presenza JenaValve Trilogy Delivery Catheter 27MM, GTIN 00850000898158, lotti DS-040926-004 a DS-060526-007 come elencati.",
+   "created_at": "2026-10-31T10:54:52.591845",
    "is_read": false
   }
  ]
