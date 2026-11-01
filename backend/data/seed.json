@@ -1,41 +1,41 @@
 {
  "version": 1,
- "exported_at": "2026-10-31T10:54:52.790656",
- "data_updated_at": "2026-10-31T10:54:52.592108",
+ "exported_at": "2026-11-01T11:50:36.322730",
+ "data_updated_at": "2026-11-01T11:50:36.138816",
  "refresh_info": {
-  "last_success": "2026-10-31T10:54:52.592108",
+  "last_success": "2026-11-01T11:50:36.138816",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 22,
-   "edges": 50,
-   "alerts": 8
+   "nodes": 7,
+   "edges": 10,
+   "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-10-21",
    "who_outbreaks": "2026-10-23",
-   "italy": "2026-10-30"
+   "italy": "2026-10-31"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 41
+   "italy": 25
   },
-  "source_errors": {},
+  "source_errors": {
+   "aifa_press": "HTTPStatusError: Server error '502 Bad Gateway' for url 'https://www.aifa.gov.it/o/feedrss/rss?structureId=93604&groupId=20142&companyId=20115&basePortalURL=https://www.aifa.gov.it&locale=it_IT&size=6&categoryId=104878'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502",
+   "aifa_news": "HTTPStatusError: Server error '502 Bad Gateway' for url 'https://www.aifa.gov.it/o/feedrss/rss?structureId=93604&groupId=20142&companyId=20115&basePortalURL=https://www.aifa.gov.it&locale=it_IT&size=10&excludeCategoryId=104878'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502"
+  },
   "alerts_error": null,
-  "alerts_discarded": [
-   "citazione non presente nel documento middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia: 'Two cases reported direct contact with camels while six reported no known camel exposure.'",
-   "citazione non presente nel documento 2026-DON620: 'The individual died on 2 October following hospitalization for severe pneumonia on 29 September, and pneumonic plague wa'"
-  ],
-  "alerts_attempt": "2026-10-31T10:54:52.592108"
+  "alerts_discarded": [],
+  "alerts_attempt": "2026-11-01T11:50:36.138816"
  },
  "signals": {
-  "generated_at": "2026-10-31T10:54:41.421813",
+  "generated_at": "2026-11-01T11:50:25.164611",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -203,66 +203,31 @@
   "italy": [
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-30",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05620/SG",
+    "date": "2026-10-31",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di solifenacina succinato e tamsulosina cloridrato, «Solifenacina e Tamsulosina Doc». (26A05620)"
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Voriconazolo Sandoz GmbH». (26A05651)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-30",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
+    "date": "2026-10-31",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Sumatriptan Zentiva». (26A05657)"
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Salbutamolo Sandoz». (26A05652)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-30",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
+    "date": "2026-10-31",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Diclofenac Ratiopharm». (26A05658)"
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Bortezomib Mylan». (26A05659)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-30",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05680/SG",
+    "date": "2026-10-31",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Bisolvon» (26A05680)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-10-30",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05681/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Topamax» (26A05681)"
-   },
-   {
-    "title": "Aggiornamento dell’elenco dei farmaci innovativi al 30 settembre 2026",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-elenco-farmaci-innovativi-al-30-settembre-2026",
-    "source": "AIFA – Notizie",
-    "summary": "L'AIFA pubblica l'elenco aggiornato dei medicinali che, a giudizio della Commissione Scientifica ed Economica, possiedono il requisito di innovatività terapeutica."
-   },
-   {
-    "title": "Aggiornamenti dal PRAC: riunione del 26-29 ottobre 2026",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/aggiornamenti-dal-prac-riunione-del-28-30-ottobre-2026",
-    "source": "AIFA – Notizie",
-    "summary": "Avviate revisioni di sicurezza sulle immunoglobuline umane normali e su Deanxit."
-   },
-   {
-    "title": "Modalità di compilazione degli individual case safety reports (ICSRs) secondo lo standard ICH E2B (R3)",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
-    "source": "AIFA – Notizie",
-    "summary": "L’ Agenzia Italiana del Farmaco richiama l’attenzione dei titolari AIC alla corretta e uniforme compilazione dei campi degli ICSRs trasmessi secondo lo standard ICH E2B(R3) relativi al nome del medicinale e al principio attivo."
-   },
-   {
-    "title": "Nota Informativa Importante di qualità su CAELYX/DOXIL",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-caelyx-doxil",
-    "source": "AIFA – Notizie",
-    "summary": "CAELYX/DOXIL (doxorubicin pegilated liposomal), 50 mg/25 mL (2 mg/mL) per iniezione, fiala a dose singola: Il tappo e la ghiera della fiala possono staccarsi durante la rimozione del cappuccio, compromettendo potenzialmente la sterilità e causando un’esposizione professionale inv"
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Doxorubicina Liposomiale Pegilata Dr. Reddy's». (26A05660)"
    },
    {
     "title": "Bollettino 182 fase 3",
@@ -284,34 +249,6 @@
     "url": "https://www.iss.it/-/scoperto-un-nuovo-gene-della-retinite-pigmentosa-nuove-risposte-per-le-famiglie-e-nuove-prospettive-per-la-ricerca",
     "source": "ISS – Comunicati stampa",
     "summary": "Scoperto un nuovo gene della retinite pigmentosa, nuove risposte per le famiglie e nuove prospettive per la ricerca Un team internazionale coordinato da tre ricercatori italiani — Viviana Cordeddu dell’Istituto Superiore di Sanità, Marco Tartaglia dell’Ospedale Pediatrico Bambino"
-   },
-   {
-    "title": "Accesso ai Servizi Online AIFA: evoluzione digitale all’insegna della sicurezza e della semplificazione",
-    "date": "2026-10-29",
-    "url": "https://www.aifa.gov.it/-/accesso-ai-servizi-online-aifa-evoluzione-digitale-all-insegna-della-sicurezza-e-della-semplificazione",
-    "source": "AIFA – Notizie",
-    "summary": "L’Agenzia Italiana del Farmaco prosegue il percorso di efficientamento e digitalizzazione delle proprie infrastrutture introducendo importanti aggiornamenti per l’accesso alla Piattaforma dei Servizi Online."
-   },
-   {
-    "title": "Ripiano della spesa farmaceutica per acquisti diretti per l’anno 2025",
-    "date": "2026-10-29",
-    "url": "https://www.aifa.gov.it/-/ripiano-spesa-farmaceutica-per-acquisti-diretti-anno-2025",
-    "source": "AIFA – Notizie",
-    "summary": "L’Agenzia Italiana del Farmaco (AIFA), all’esito del contradditorio con le aziende farmaceutiche svolto nei mesi precedenti, ha adottato la determinazione n. 1531/2026, concernente l’attribuzione delle singole quote di ripiano della spesa farmaceutica per acquisti diretti per l’a"
-   },
-   {
-    "title": "AIFA avvia una valutazione dei Registri di monitoraggio di lunga durata",
-    "date": "2026-10-29",
-    "url": "https://www.aifa.gov.it/-/aifa-avvia-una-valutazione-dei-registri-di-monitoraggio-di-lunga-durata",
-    "source": "AIFA – Notizie",
-    "summary": "L'Agenzia Italiana del Farmaco (AIFA) ha avviato una revisione dei Registri di monitoraggio attivi da più anni."
-   },
-   {
-    "title": "Sarà rimborsata dal SSN la prima terapia genica topica per i “bambini farfalla”",
-    "date": "2026-10-29",
-    "url": "https://www.aifa.gov.it/-/rimborsata-dal-ssn-prima-terapia-genica-topica-per-i-bambini-farfalla",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "Via libera dal CdA AIFA al trattamento topico dell'epidermolisi bollosa distrofica, la patologia nota anche come “sindrome dei bambini farfalla”, per l’estrema fragilità della pelle e delle mucose dei pazienti. Approvato anche il rimborso di farmaci per il tumore della cervice e "
    },
    {
     "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
@@ -340,6 +277,62 @@
     "url": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
     "source": "ISS – Comunicati stampa",
     "summary": "In Italia le malattie del sistema circolatorio, tra cui l’ictus, rappresentano ancora la principale causa di morte. Nel 2023 sono state responsabili del 31% dei decessi, confermandosi la prima causa di morte tra le donne (33%) e la seconda tra gli uomini (28%). Un segnale positiv"
+   },
+   {
+    "title": "Agenas istituisce l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore",
+    "date": "2026-10-26",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2911-agenas-istituisce-l%E2%80%99osservatorio-per-il-monitoraggio-e-l%E2%80%99implementazione-della-rete-di-cure-palliative-e-terapia-del-dolore",
+    "source": "AGENAS – Notizie",
+    "summary": "Agenas con Delibera del Direttore Generale n°334 del 14 ottobre 2026, ha istituito l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore, organismo deputato ad accompagnare Regioni e Province Autonome nel consolidamento di una r"
+   },
+   {
+    "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
+    "date": "2026-10-22",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2816-online-il-bollettino-trimestrale-agenas-sul-monitoraggio-delle-liste-di-attesa",
+    "source": "AGENAS – Notizie",
+    "summary": "Oltre due milioni di prenotazioni in più nei primi nove mesi del 2026 rispetto allo stesso periodo del 2025 e un miglioramento del rispetto dei tempi massimi di attesa per visite specialistiche ed esami diagnostici. Si conferma la tendenza positiva già evidenziata nel primo semes"
+   },
+   {
+    "title": "AGENAS pubblica le Linee di indirizzo per la telemedicina nei Punti nascita e in Neonatologia",
+    "date": "2026-10-16",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2814-agenas-pubblica-le-linee-di-indirizzo-per-la-telemedicina-nei-punti-nascita-e-in-neonatologia",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS pubblica il documento “ Linee di indirizzo organizzative per l’implementazione della telemedicina e l’ottimizzazione dell’assistenza ai casi più complessi nell’ambito della Rete dei Punti nascita e della Neonatologia ”."
+   },
+   {
+    "title": "Conclusi i lavori per la definizione dei Modelli di Riferimento per la definizione dei Percorsi Preventivi Diagnostici Terapeutici Assistenziali (PPDTA) su Diabete mellito, Asma grave e BPCO nell'adulto",
+    "date": "2026-10-15",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2813-conclusi-i-lavori-per-la-definizione-dei-modelli-di-riferimento-per-la-definizione-dei-percorsi-preventivi-diagnostici-terapeutici-assistenziali-ppdta-su-diabete-mellito,-asma-grave-e-bpco-nell-adulto",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS comunica il completamento dei lavori per la realizzazione dei Modelli di riferimento per la definizione di tre Percorsi Preventivi Diagnostici Terapeutici Assistenziali (PPDTA) dedicati al paziente adulto con Diabete Mellito, Asma Grave e BPCO in una prospettiva tecnico-sc"
+   },
+   {
+    "title": "Sanità Territoriale e Telemedicina: pubblicate le linee di indirizzo Agenas per l’erogazione dei servizi nelle farmacie convenzionate",
+    "date": "2026-09-10",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2801-sanit%C3%A0-territoriale-e-telemedicina-pubblicate-le-linee-di-indirizzo-agenas-per-l%E2%80%99erogazione-dei-servizi-nelle-farmacie-convenzionate",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS ha pubblicato in consultazione le “Linee di indirizzo per l'erogazione di servizi di telemedicina nelle farmacie convenzionate” ."
+   },
+   {
+    "title": "Protocollo d’Intesa AGENAS–Università di Udine per promuovere l’umanizzazione delle cure",
+    "date": "2026-09-08",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2800-protocollo-d%E2%80%99intesa-agenas%E2%80%93universit%C3%A0-di-udine-per-promuovere-l%E2%80%99umanizzazione-delle-cure",
+    "source": "AGENAS – Notizie",
+    "summary": "Agenas e l’Università di Udine hanno sottoscritto un Protocollo d’Intesa triennale per rafforzare la collaborazione scientifica, formativa e istituzionale sul tema dell’umanizzazione delle cure e della centralità della persona nei sistemi sanitari."
+   },
+   {
+    "title": "Case della Comunità: il documento AGENAS sulla partecipazione di pazienti, cittadini e comunità",
+    "date": "2026-09-08",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2802-case-della-comunit%C3%A0-il-documento-agenas-sulla-partecipazione-di-pazienti%2C-cittadini-e-comunit%C3%A0",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS rende disponibile il “ Documento di indirizzo contenente indicazioni per la promozione della partecipazione/co-produzione dei pazienti, dei cittadini e della comunità nell’ambito delle Case della Comunità ”."
+   },
+   {
+    "title": "Consultazione pubblica sul Documento di Indirizzo per lo sviluppo e la gestione della Teleradiologia",
+    "date": "2026-08-05",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2799-consultazione-pubblica-sul-documento-di-indirizzo-per-lo-sviluppo-e-la-gestione-della-teleradiologia",
+    "source": "AGENAS – Notizie",
+    "summary": "Dal 07 agosto 2026 è aperta la consultazione pubblica sul “Documento di Indirizzo per lo sviluppo e la gestione della Teleradiologia”, predisposto da un Gruppo di Lavoro istituito presso Agenas con delibera direttoriale n. 245 del 10 maggio 2024."
    },
    {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
@@ -375,7 +368,11 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05657/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/10/30/26A05658/SG",
   "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
-  "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani"
+  "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG"
  ],
  "nodes": [
   {
@@ -387,7 +384,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-31T10:54:31.114056",
+   "updated_at": "2026-11-01T11:50:19.543672",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -399,7 +396,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-31T10:54:31.114056",
+   "updated_at": "2026-11-01T11:50:19.543672",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -471,7 +468,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-31T10:54:31.114056",
+   "updated_at": "2026-11-01T11:50:19.543672",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -483,7 +480,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-31T10:54:31.114056",
+   "updated_at": "2026-11-01T11:50:19.543672",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -495,7 +492,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-31T10:54:31.114056",
+   "updated_at": "2026-11-01T11:50:19.543672",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -507,7 +504,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -660,7 +657,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-10-31T10:54:31.114056",
+   "updated_at": "2026-11-01T11:50:19.543672",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -705,7 +702,7 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-11-01T11:50:24.797890",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -1312,7 +1309,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Intrapulmonary Percussive Ventilation, IPV HC, Product Number: S00009; Phasitron, P5-HC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-3325-2026 di classe II del 07/10/2026"
   },
   {
@@ -1324,7 +1321,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Fisher Scientific Sure-Vue Serum/Urine hCG, Model/ Part: FHC-202/23900529, FHC-202/23900528;    Beckman Coulter Inc's IC",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-3272-2026 di classe II del 07/10/2026"
   },
   {
@@ -1336,7 +1333,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: VentStar Resus Neo. Neonatal. 25 Units per Box. Part Number: MP00310    Disposable breathing circuit for use with a resu",
    "risk_score": 85,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-3252-2026 di classe I del 07/10/2026"
   },
   {
@@ -1348,7 +1345,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NovaSeq 6000Dx including DRAGEN Server,  Catalog Number: 20068232;   Illumina DRAGEN Server for NextSeq 550Dx, Catalog N",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0068-2027 di classe II del 07/10/2026"
   },
   {
@@ -1360,7 +1357,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: PALACOS MV+G pro 40; PALACOS MV+G pro 80. Model/Catalog Number: 5081290; 5081291.    Radiopaque, poly(methyl methacrylat",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-3303-2026 di classe II del 07/10/2026"
   },
   {
@@ -1372,7 +1369,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Systems/units containing affected software/SQL  BECKMAN COULTER CHEMISTRY ANALYZER AU480  REF / UDI-DI code:  B96692 / 1",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-3332-2026 di classe II del 07/10/2026"
   },
   {
@@ -1384,7 +1381,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Revised C-Reactive Protein (RCRP);  Siemens Material Number (SMN): 11537223;",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -2085,7 +2082,7 @@
    "updated_at": "2026-10-18T15:38:53.728256"
   },
   {
-   "id": "evt_dengue_it",
+   "id": "evt_dengue",
    "label": "Epidemia di dengue",
    "type": "EpidemicEvent",
    "domain": "health",
@@ -2105,7 +2102,7 @@
    "risk_doc_date": "2026-10-15"
   },
   {
-   "id": "evt_chikungunya_it",
+   "id": "evt_chikungunya",
    "label": "Epidemia di chikungunya",
    "type": "EpidemicEvent",
    "domain": "health",
@@ -2127,7 +2124,7 @@
    "risk_doc_date": "2026-10-29"
   },
   {
-   "id": "evt_west_nile_it",
+   "id": "evt_west_nile",
    "label": "Epidemia di West Nile",
    "type": "EpidemicEvent",
    "domain": "health",
@@ -2202,7 +2199,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Spectral CT and Spectral CT 7500 RT;  Software Version Numbers: 5.2.X (U.S.); 5.0.X, 5.2.X, 5.4.X (Outside U.S.);  Model",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0078-2027 di classe II del 14/10/2026"
   },
   {
@@ -2214,7 +2211,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Sperm Ab ELISA;  Model/Catalog Number: EIA-1826;  Product Description: Sperm Ab ELISA (96 well plate test);",
    "risk_score": 55,
    "created_at": "2026-10-21T10:04:47.273882",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0082-2027 di classe II del 14/10/2026"
   },
   {
@@ -2508,7 +2505,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: HemoslL AcuStar HIT-lgG(PF-4). Part Number: 0009802028. in vitro diagnostic (OUS only)",
    "risk_score": 85,
    "created_at": "2026-10-31T10:54:31.124117",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0002-2027 di classe I del 21/10/2026"
   },
   {
@@ -2520,7 +2517,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Williams Cystoscopic Injection Needles, used for cystoscopic injection into the urethra, bladder neck, and bladder wall,",
    "risk_score": 55,
    "created_at": "2026-10-31T10:54:31.124117",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0163-2027 di classe II del 21/10/2026"
   },
   {
@@ -2532,7 +2529,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: DxU 840m Iris, REF: C76947;  DxU 850m Iris, REF: C49513",
    "risk_score": 55,
    "created_at": "2026-10-31T10:54:31.124117",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0160-2027 di classe II del 21/10/2026"
   },
   {
@@ -2544,7 +2541,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: BioFire¿ Joint Infection (JI) Panel Generic Name: BioFire¿ Joint Infection (JI) Panel Model/Catalog Number",
    "risk_score": 55,
    "created_at": "2026-10-31T10:54:31.124117",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0150-2027 di classe II del 21/10/2026"
   },
   {
@@ -2556,7 +2553,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: IOMAX  Product Name: IOMAX Cortical Module  Model/Catalog Number: 190296-200  UDI-DI code: 00840067100653  P",
    "risk_score": 55,
    "created_at": "2026-10-31T10:54:31.124117",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0141-2027 di classe II del 21/10/2026"
   },
   {
@@ -2568,7 +2565,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: JenaValve Trilogy Delivery Catheter, Size 27MM  REF: TRILOGY-DC-L",
    "risk_score": 55,
    "created_at": "2026-10-31T10:54:31.124117",
-   "updated_at": "2026-10-31T10:54:31.124117",
+   "updated_at": "2026-11-01T11:50:19.559592",
    "risk_basis": "Richiamo FDA Z-0136-2027 di classe II del 21/10/2026"
   },
   {
@@ -2765,6 +2762,114 @@
    "risk_doc": "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani",
    "risk_doc_date": "2026-10-28",
    "risk_assigned_at": "2026-10-31T10:54:41.096910"
+  },
+  {
+   "id": "sandoz_gmbh",
+   "label": "Sandoz GmbH",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "EU",
+   "description": "Azienda farmaceutica produttrice di medicinali generici e specialità farmaceutiche",
+   "risk_score": 15,
+   "created_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-01T11:50:24.797890",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
+   "risk_doc_date": "2026-10-31",
+   "risk_assigned_at": "2026-11-01T11:50:24.797839",
+   "aliases": [
+    "Sandoz"
+   ]
+  },
+  {
+   "id": "voriconazolo_sandoz",
+   "label": "Voriconazolo Sandoz",
+   "type": "Drug",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale antimicotico per uso umano autorizzato e revocato.",
+   "risk_score": 25,
+   "created_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-01T11:50:24.797890",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
+   "risk_doc_date": "2026-10-31",
+   "risk_assigned_at": "2026-11-01T11:50:24.797839"
+  },
+  {
+   "id": "salbutamolo_sandoz",
+   "label": "Salbutamolo Sandoz",
+   "type": "Medicine",
+   "domain": "health",
+   "region": "IT",
+   "description": "Medicinale per uso umano autorizzato alla commercializzazione in Italia, oggetto di revoca su rinuncia",
+   "risk_score": 45,
+   "created_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-01T11:50:24.797890",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG",
+   "risk_doc_date": "2026-10-31",
+   "risk_assigned_at": "2026-11-01T11:50:24.797839"
+  },
+  {
+   "id": "mylan_bortezomib",
+   "label": "Bortezomib Mylan",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale oncologico contenente Bortezomib prodotto da Mylan, oggetto di revoca autorizzazione.",
+   "risk_score": 15,
+   "created_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-01T11:50:24.797890",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG",
+   "risk_doc_date": "2026-10-31",
+   "risk_assigned_at": "2026-11-01T11:50:24.797839"
+  },
+  {
+   "id": "mylan",
+   "label": "Mylan",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Azienda farmaceutica produttrice del medicinale Bortezomib Mylan.",
+   "risk_score": 20,
+   "created_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-01T11:50:24.797890",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG",
+   "risk_doc_date": "2026-10-31",
+   "risk_assigned_at": "2026-11-01T11:50:24.797839"
+  },
+  {
+   "id": "dr_reddys",
+   "label": "Dr. Reddy's",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Azienda farmaceutica produttrice di medicinali generici e specialità",
+   "risk_score": 15,
+   "created_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-01T11:50:24.797890",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
+   "risk_doc_date": "2026-10-31",
+   "risk_assigned_at": "2026-11-01T11:50:24.797839"
+  },
+  {
+   "id": "doxorubicina_liposomiale_pegilata",
+   "label": "Doxorubicina Liposomiale Pegilata Dr. Reddy's",
+   "type": "Medicine",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale oncologico con autorizzazione revocata su rinuncia del produttore",
+   "risk_score": 25,
+   "created_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-01T11:50:24.797890",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
+   "risk_doc_date": "2026-10-31",
+   "risk_assigned_at": "2026-11-01T11:50:24.797839"
   }
  ],
  "edges": [
@@ -10077,9 +10182,9 @@
    }
   },
   {
-   "id": "iss_evt_dengue_it_INDAGA_SU",
+   "id": "iss_evt_dengue_INDAGA_SU",
    "source": "iss",
-   "target": "evt_dengue_it",
+   "target": "evt_dengue",
    "type": "INDAGA_SU",
    "fact": "ISS monitora 5 focolai di trasmissione locale autoctona di Dengue.",
    "risk_score": 72,
@@ -10096,9 +10201,9 @@
    ]
   },
   {
-   "id": "iss_evt_west_nile_it_INDAGA_SU",
+   "id": "iss_evt_west_nile_INDAGA_SU",
    "source": "iss",
-   "target": "evt_west_nile_it",
+   "target": "evt_west_nile",
    "type": "INDAGA_SU",
    "fact": "ISS coordina sorveglianza dell'epidemia di West Nile Virus con 770 casi e 61 decessi",
    "risk_score": 78,
@@ -10115,9 +10220,9 @@
    ]
   },
   {
-   "id": "iss_evt_chikungunya_it_INDAGA_SU",
+   "id": "iss_evt_chikungunya_INDAGA_SU",
    "source": "iss",
-   "target": "evt_chikungunya_it",
+   "target": "evt_chikungunya",
    "type": "INDAGA_SU",
    "fact": "ISS traccia caso autoctono di Chikungunya e epidemiologia trasmissione.",
    "risk_score": 65,
@@ -10134,8 +10239,8 @@
    ]
   },
   {
-   "id": "evt_dengue_it_italian_health_system_RISCHIO_PER",
-   "source": "evt_dengue_it",
+   "id": "evt_dengue_italian_health_system_RISCHIO_PER",
+   "source": "evt_dengue",
    "target": "italian_health_system",
    "type": "RISCHIO_PER",
    "fact": "5 focolai autoctoni di Dengue rappresentano rischio per il sistema sanitario nazionale",
@@ -10148,8 +10253,8 @@
    }
   },
   {
-   "id": "evt_west_nile_it_italian_health_system_RISCHIO_PER",
-   "source": "evt_west_nile_it",
+   "id": "evt_west_nile_italian_health_system_RISCHIO_PER",
+   "source": "evt_west_nile",
    "target": "italian_health_system",
    "type": "RISCHIO_PER",
    "fact": "Epidemia WNV attiva con 770 casi confermati, 61 decessi e form neuroinvasive critiche",
@@ -10162,8 +10267,8 @@
    }
   },
   {
-   "id": "evt_west_nile_it_blood_donation_system_RISCHIO_PER",
-   "source": "evt_west_nile_it",
+   "id": "evt_west_nile_blood_donation_system_RISCHIO_PER",
+   "source": "evt_west_nile",
    "target": "blood_donation_system",
    "type": "RISCHIO_PER",
    "fact": "West Nile Virus rappresenta rischio per la sicurezza trasfusionale con 95 casi asintomatici rilevati nei donatori",
@@ -10365,9 +10470,9 @@
    }
   },
   {
-   "id": "iss_evt_dengue_it_CONTROLLA",
+   "id": "iss_evt_dengue_CONTROLLA",
    "source": "iss",
-   "target": "evt_dengue_it",
+   "target": "evt_dengue",
    "type": "CONTROLLA",
    "fact": "ISS coordina il sistema di sorveglianza nazionale per i focolai autoctoni di Dengue",
    "risk_score": 35,
@@ -10379,9 +10484,9 @@
    }
   },
   {
-   "id": "iss_evt_west_nile_it_CONTROLLA",
+   "id": "iss_evt_west_nile_CONTROLLA",
    "source": "iss",
-   "target": "evt_west_nile_it",
+   "target": "evt_west_nile",
    "type": "CONTROLLA",
    "fact": "ISS monitora e coordina la risposta epidemiologica all'epidemia di West Nile Virus",
    "risk_score": 68,
@@ -10393,9 +10498,9 @@
    }
   },
   {
-   "id": "iss_evt_chikungunya_it_CONTROLLA",
+   "id": "iss_evt_chikungunya_CONTROLLA",
    "source": "iss",
-   "target": "evt_chikungunya_it",
+   "target": "evt_chikungunya",
    "type": "CONTROLLA",
    "fact": "ISS sorveglia casi confermati di Chikungunya nel territorio nazionale",
    "risk_score": 38,
@@ -10407,8 +10512,8 @@
    }
   },
   {
-   "id": "evt_dengue_it_blood_donation_system_RISCHIO_PER",
-   "source": "evt_dengue_it",
+   "id": "evt_dengue_blood_donation_system_RISCHIO_PER",
+   "source": "evt_dengue",
    "target": "blood_donation_system",
    "type": "RISCHIO_PER",
    "fact": "Focolai autoctoni di Dengue comportano potenziale rischio per donatori di sangue",
@@ -15192,8 +15297,8 @@
    }
   },
   {
-   "id": "evt_west_nile_it_donatori_sangue_RISCHIO_PER",
-   "source": "evt_west_nile_it",
+   "id": "evt_west_nile_donatori_sangue_RISCHIO_PER",
+   "source": "evt_west_nile",
    "target": "donatori_sangue",
    "type": "RISCHIO_PER",
    "fact": "96 donatori di sangue positivi al WNV rappresentano rischio contaminazione ematica.",
@@ -15206,8 +15311,8 @@
    }
   },
   {
-   "id": "evt_west_nile_it_regioni_italia_RISCHIO_PER",
-   "source": "evt_west_nile_it",
+   "id": "evt_west_nile_regioni_italia_RISCHIO_PER",
+   "source": "evt_west_nile",
    "target": "regioni_italia",
    "type": "RISCHIO_PER",
    "fact": "Focolaio WNV con 61 decessi e forme neuroinvasive critico per sistema sanitario.",
@@ -15316,6 +15421,151 @@
    "doc_titles": {
     "https://www.iss.it/-/giornata-mondiale-dell-ictus-ancora-troppo-sale-e-ipertensione-non-controllata-per-gli-italiani": "ISS – Comunicati stampa – Giornata mondiale dell’ictus, ancora troppo sale e ipertensione non controllata per gli italiani"
    }
+  },
+  {
+   "id": "aifa_sandoz_gmbh_REGOLA",
+   "source": "aifa",
+   "target": "sandoz_gmbh",
+   "type": "REGOLA",
+   "fact": "AIFA regola e autorizza i medicinali Sandoz al commercio in Italia",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   },
+   "source_docs": [
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG"
+   ]
+  },
+  {
+   "id": "aifa_voriconazolo_sandoz_REVOCA",
+   "source": "aifa",
+   "target": "voriconazolo_sandoz",
+   "type": "REVOCA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio di Voriconazolo Sandoz.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "sandoz_gmbh_voriconazolo_sandoz_FORNISCE",
+   "source": "sandoz_gmbh",
+   "target": "voriconazolo_sandoz",
+   "type": "FORNISCE",
+   "fact": "Sandoz GmbH produce e fornisce il medicinale Voriconazolo per uso umano.",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_salbutamolo_sandoz_REVOCA_AUTORIZZAZIONE",
+   "source": "aifa",
+   "target": "salbutamolo_sandoz",
+   "type": "REVOCA_AUTORIZZAZIONE",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio del farmaco",
+   "risk_score": 55,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "sandoz_gmbh_salbutamolo_sandoz_FORNISCE",
+   "source": "sandoz_gmbh",
+   "target": "salbutamolo_sandoz",
+   "type": "FORNISCE",
+   "fact": "Sandoz produttrice del medicinale Salbutamolo Sandoz ritirato dal commercio",
+   "risk_score": 40,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_mylan_bortezomib_REGOLA",
+   "source": "aifa",
+   "target": "mylan_bortezomib",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio di Bortezomib Mylan.",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "mylan_mylan_bortezomib_FORNISCE",
+   "source": "mylan",
+   "target": "mylan_bortezomib",
+   "type": "FORNISCE",
+   "fact": "Mylan produce e commercializza il medicinale Bortezomib per uso umano.",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_dr_reddys_REGOLA",
+   "source": "aifa",
+   "target": "dr_reddys",
+   "type": "REGOLA",
+   "fact": "AIFA regola autorizzazioni immissione in commercio medicinali Dr. Reddy's",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "dr_reddys_doxorubicina_liposomiale_pegilata_FORNISCE",
+   "source": "dr_reddys",
+   "target": "doxorubicina_liposomiale_pegilata",
+   "type": "FORNISCE",
+   "fact": "Dr. Reddy's produce e distribuisce Doxorubicina Liposomiale Pegilata",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_doxorubicina_liposomiale_pegilata_REGOLA",
+   "source": "aifa",
+   "target": "doxorubicina_liposomiale_pegilata",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione medicinale su rinuncia produttore",
+   "risk_score": 30,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
+   "date": null,
+   "created_at": "2026-11-01T11:50:24.856269",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
   }
  ],
  "alerts": [
@@ -15330,13 +15580,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON622 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
    "id": "who_middle_east_respiratory_synd",
    "title": "OMS: \"Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia\"",
-   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\"",
+   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"MERS is a zoonotic viral respiratory disease for which dromedary camels serve as the primary animal reservoir and two cases reported direct contact with camels while six reported no known camel exposure.\"",
    "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -15344,13 +15594,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON618 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
    "id": "who_2026_don620",
    "title": "OMS: \"Pneumonia of undetermined etiology - the Russian Federation\"",
-   "description": "OMS, Disease Outbreak News 2026-DON620 del 2026-10-10: \"On 2 October 2026, WHO became aware through media reports of the death of an employee of the Irkutsk Antiplague Research Institute (APRI) of Siberia and the Far East, the Russian Federation.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON620 del 2026-10-10: \"On 2 October 2026, WHO became aware through media reports of the death of an employee of the Irkutsk Antiplague Research Institute (APRI) of Siberia and the Far East, the Russian Federation.\" \"the individual died on 2 October following hospitalization for severe pneumonia on 29 September, and pneumonic plague was suspected as the cause of death, following occupational exposure in laboratory settings.\"",
    "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -15358,7 +15608,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON620 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15371,8 +15621,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario Part Number 0009802028, UDI-DI 08426950545774, lotti B40006 e B38063.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare presenza in inventario con Part Number 0009802028, UDI-DI 08426950545774, lotti B40006 e B38063.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15385,8 +15635,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario Part Number 0009800127, UDI-DI 08426951126545, lotti B40005 e B38062.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare presenza in inventario con Part Number 0009800127, UDI-DI 08426951126545, lotti B40005 e B38062.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15399,8 +15649,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario Part Number 090001-S26, UDI-DI 00827002161122, lotti 16613606, 16951548, 16951548X.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare presenza lotti 16613606, 16951548, 16951548X con UDI-DI 00827002161122 e Part Number 090001-S26.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15413,8 +15663,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario DxU 840m Iris (UDI-DI 15099590748654) e DxU 850m Iris (UDI-DI 15099590748647), tutti i numeri seriali.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare presenza modelli DxU 840m e DxU 850m con UDI-DI 15099590748654 e 15099590748647.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15427,8 +15677,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza lotti BioFire Joint Infection Panel: UDI 00815381020192, 00815381020208, lotti 0677326-1684726 come elencati.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare lotti 0677326, 0806426, 0806526, 1289126, 1289226, 1405526, 1405626, 1413026, 1413426, 1413526, 1507826, 1613326, 1684726.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15441,8 +15691,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza IOMAX Cortical Module Model 190296-200, UDI-DI 00840067100653, numeri seriali come elencati nel record.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare modello 190296-200, UDI-DI 00840067100653, con numeri seriali nel avviso del fabbricante.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15455,8 +15705,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza IQ200 SPRINT/SPRINT (UDI-DI 10837461001256), SELECT (10837461001300), ELITE (10837461001355), tutti i numeri seriali.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare modelli IQ200 SPRINT, SELECT, ELITE con UDI-DI 10837461001256, 10837461001300, 10837461001355.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   },
   {
@@ -15469,8 +15719,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza JenaValve Trilogy Delivery Catheter 27MM, GTIN 00850000898158, lotti DS-040926-004 a DS-060526-007 come elencati.",
-   "created_at": "2026-10-31T10:54:52.591845",
+   "recommendation": "Verificare lotti DS-040926-004, DS-041026-008/009, DS-042226-006/007, DS-051526-004/006, DS-060226-007, DS-060526-002/003/007.",
+   "created_at": "2026-11-01T11:50:36.138590",
    "is_read": false
   }
  ]
