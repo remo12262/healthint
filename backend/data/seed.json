@@ -1,39 +1,38 @@
 {
  "version": 1,
- "exported_at": "2026-11-03T12:46:02.540673",
- "data_updated_at": "2026-11-03T12:46:02.405426",
+ "exported_at": "2026-11-04T12:58:20.512662",
+ "data_updated_at": "2026-11-04T12:58:20.306632",
  "refresh_info": {
-  "last_success": "2026-11-03T12:46:02.405426",
+  "last_success": "2026-11-04T12:58:20.306632",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "italy",
-   "who_outbreaks"
+   "italy"
   ],
   "new": {
-   "nodes": 10,
-   "edges": 89,
-   "alerts": 9
+   "nodes": 3,
+   "edges": 5,
+   "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-10-28",
    "who_outbreaks": "2026-11-02",
-   "italy": "2026-11-02"
+   "italy": "2026-11-04"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 43
+   "italy": 44
   },
   "source_errors": {},
-  "alerts_error": null,
+  "alerts_error": "JSON non valido (Expecting ':' delimiter: line 6 column 3 (char 348)): '```json\\n[\\n  {\\n    \"source_id\": \"2026-DON623\",\\n    \"severity\": \"HIGH\",\\n    \"quotes\": \"On 20 October 2026, the National IHR Focal Point (NFP) of France notified WHO regarding the first documented human '",
   "alerts_discarded": [],
-  "alerts_attempt": "2026-11-03T12:46:02.405426"
+  "alerts_attempt": "2026-11-04T12:58:20.306632"
  },
  "signals": {
-  "generated_at": "2026-11-03T12:45:50.228185",
+  "generated_at": "2026-11-04T12:58:15.207977",
   "who": [
    {
     "title": "Shamonda virus in human - France",
@@ -200,39 +199,67 @@
   ],
   "italy": [
    {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-02",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/02/26A05661/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di bupropione, «Bupropione EG». (26A05661)"
+    "title": "Notifica dei provvedimenti - Ufficio Ispezioni e Autorizzazioni GMP Medicinali",
+    "date": "2026-11-04",
+    "url": "https://www.aifa.gov.it/-/notifica-dei-provvedimenti-ufficio-ispezioni-e-autorizzazioni-gmp-medicinali-124",
+    "source": "AIFA – Notizie",
+    "summary": "Modalità di notifica dei documenti prodotti dall’Ufficio Ispezioni e Autorizzazioni GMP Medicinali (prodotti in formato cartaceo e prodotti in formato elettronico e firmati digitalmente)."
+   },
+   {
+    "title": "Nota Informativa Importante di qualità su Respreeza",
+    "date": "2026-11-04",
+    "url": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
+    "source": "AIFA – Notizie",
+    "summary": "Respreeza (inibitore della proteinasi alfa-1 (umano)): rischio di mancata somministrazione della dose e potenziale infezione dovuta alla compromissione dell'integrità del flaconcino."
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-02",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/02/26A05662/SG",
+    "date": "2026-11-03",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05707/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di bupropione, «Bupropione Olpha». (26A05662)"
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Ducressa» (26A05707)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-02",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/02/26A05663/SG",
+    "date": "2026-11-03",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05708/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di paclitaxel, «Velquira». (26A05663)"
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Travocort». (26A05708)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-02",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/02/26A05691/SG",
+    "date": "2026-11-03",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05709/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di ezetimibe, «Ezetimibe Gena» (26A05691)"
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Efexor». (26A05709)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-02",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/02/26A05702/SG",
+    "date": "2026-11-03",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05710/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Emla» (26A05702)"
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Duspatal». (26A05710)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-03",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Amlodipina/Valsartan/Idroclorotiazide Mylan Pharma». (26A05712)"
+   },
+   {
+    "title": "Aggiornamento dell’elenco dei farmaci innovativi al 31 ottobre 2026",
+    "date": "2026-11-03",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-elenco-farmaci-innovativi-al-31-ottobre-2026",
+    "source": "AIFA – Notizie",
+    "summary": "L'AIFA pubblica l'elenco aggiornato dei medicinali che, a giudizio della Commissione Scientifica ed Economica, possiedono il requisito di innovatività terapeutica."
+   },
+   {
+    "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
+    "date": "2026-11-03",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
+    "source": "AGENAS – Notizie",
+    "summary": "Il prossimo 10 novembre 2026, dalle ore 10.00 alle 12.30, presso l'Auditorium AGENAS di Via Toscana 12 a Roma, si terrà il seminario “I dati della vita. Crescere, vivere, invecchiare: il valore pubblico dei dati sanitari”, promosso dall'Agenzia Nazionale per i Servizi Sanitari Re"
    },
    {
     "title": "Attivazione web e pubblicazione schede di monitoraggio Registro di monitoraggio NUCALA",
@@ -291,13 +318,6 @@
     "summary": "L’ Agenzia Italiana del Farmaco richiama l’attenzione dei titolari AIC alla corretta e uniforme compilazione dei campi degli ICSRs trasmessi secondo lo standard ICH E2B(R3) relativi al nome del medicinale e al principio attivo."
    },
    {
-    "title": "Nota Informativa Importante di qualità su CAELYX/DOXIL",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-caelyx-doxil",
-    "source": "AIFA – Notizie",
-    "summary": "CAELYX/DOXIL (doxorubicin pegilated liposomal), 50 mg/25 mL (2 mg/mL) per iniezione, fiala a dose singola: Il tappo e la ghiera della fiala possono staccarsi durante la rimozione del cappuccio, compromettendo potenzialmente la sterilità e causando un’esposizione professionale inv"
-   },
-   {
     "title": "Bollettino 182 fase 3",
     "date": "2026-10-30",
     "url": "https://www.iss.it/-/bollettino-182-fase-3",
@@ -317,27 +337,6 @@
     "url": "https://www.iss.it/-/scoperto-un-nuovo-gene-della-retinite-pigmentosa-nuove-risposte-per-le-famiglie-e-nuove-prospettive-per-la-ricerca",
     "source": "ISS – Comunicati stampa",
     "summary": "Scoperto un nuovo gene della retinite pigmentosa, nuove risposte per le famiglie e nuove prospettive per la ricerca Un team internazionale coordinato da tre ricercatori italiani — Viviana Cordeddu dell’Istituto Superiore di Sanità, Marco Tartaglia dell’Ospedale Pediatrico Bambino"
-   },
-   {
-    "title": "Accesso ai Servizi Online AIFA: evoluzione digitale all’insegna della sicurezza e della semplificazione",
-    "date": "2026-10-29",
-    "url": "https://www.aifa.gov.it/-/accesso-ai-servizi-online-aifa-evoluzione-digitale-all-insegna-della-sicurezza-e-della-semplificazione",
-    "source": "AIFA – Notizie",
-    "summary": "L’Agenzia Italiana del Farmaco prosegue il percorso di efficientamento e digitalizzazione delle proprie infrastrutture introducendo importanti aggiornamenti per l’accesso alla Piattaforma dei Servizi Online."
-   },
-   {
-    "title": "Sarà rimborsata dal SSN la prima terapia genica topica per i “bambini farfalla”",
-    "date": "2026-10-29",
-    "url": "https://www.aifa.gov.it/-/rimborsata-dal-ssn-prima-terapia-genica-topica-per-i-bambini-farfalla",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "Via libera dal CdA AIFA al trattamento topico dell'epidermolisi bollosa distrofica, la patologia nota anche come “sindrome dei bambini farfalla”, per l’estrema fragilità della pelle e delle mucose dei pazienti. Approvato anche il rimborso di farmaci per il tumore della cervice e "
-   },
-   {
-    "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
-    "date": "2026-10-29",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2913-programma-nazionale-hta-dispositivi-medici-2026-2028-agenas-promuove-cinque-infoday-territoriali",
-    "source": "AGENAS – Notizie",
-    "summary": "Al via un ciclo di incontri che apre un percorso nazionale di accompagnamento all’attuazione del Programma Nazionale HTA Dispositivi Medici. Il primo appuntamento si terrà a a Roma il 4 novembre 2026."
    },
    {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
@@ -378,7 +377,9 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05652/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05659/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
-  "2026-DON623"
+  "2026-DON623",
+  "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG"
  ],
  "nodes": [
   {
@@ -390,7 +391,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-03T12:45:36.976364",
+   "updated_at": "2026-11-04T12:58:09.655298",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -402,7 +403,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-03T12:45:36.976364",
+   "updated_at": "2026-11-04T12:58:09.655298",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -474,7 +475,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-03T12:45:36.976364",
+   "updated_at": "2026-11-04T12:58:09.655298",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -486,7 +487,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-03T12:45:36.976364",
+   "updated_at": "2026-11-04T12:58:09.655298",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -498,7 +499,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-03T12:45:36.976364",
+   "updated_at": "2026-11-04T12:58:09.655298",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -663,7 +664,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-03T12:45:36.976364",
+   "updated_at": "2026-11-04T12:58:09.655298",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -708,7 +709,7 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-04T12:58:14.707420",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -726,7 +727,7 @@
    "description": "European Medicines Agency. Autorizzazione farmaci a livello europeo.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-06T06:32:00.960345",
+   "updated_at": "2026-11-04T12:58:14.707420",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia europea per i medicinali (European Medicines Agency)"
   },
@@ -2887,7 +2888,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-03T12:45:37.030553",
+   "updated_at": "2026-11-04T12:58:09.718597",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2899,7 +2900,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-03T12:45:37.030553",
+   "updated_at": "2026-11-04T12:58:09.718597",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2911,7 +2912,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-03T12:45:37.030553",
+   "updated_at": "2026-11-04T12:58:09.718597",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3018,6 +3019,51 @@
    "risk_doc": "2026-DON623",
    "risk_doc_date": "2026-11-02",
    "risk_assigned_at": "2026-11-03T12:45:49.631594"
+  },
+  {
+   "id": "respreeza_drug",
+   "label": "Respreeza",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Inibitore della proteinasi alfa-1 (umano) con segnalazione di rischio qualità",
+   "risk_score": 75,
+   "created_at": "2026-11-04T12:58:14.707420",
+   "updated_at": "2026-11-04T12:58:14.707420",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
+   "risk_doc_date": "2026-11-04",
+   "risk_assigned_at": "2026-11-04T12:58:14.707400"
+  },
+  {
+   "id": "mylan_pharma",
+   "label": "Mylan Pharma",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Azienda farmaceutica titolare dell'autorizzazione al medicinale Amlodipina/Valsartan/Idroclorotiazide.",
+   "risk_score": 15,
+   "created_at": "2026-11-04T12:58:14.707420",
+   "updated_at": "2026-11-04T12:58:14.707420",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
+   "risk_doc_date": "2026-11-03",
+   "risk_assigned_at": "2026-11-04T12:58:14.707400"
+  },
+  {
+   "id": "amlodipina_valsartan_idroclorotiazide",
+   "label": "Amlodipina/Valsartan/Idroclorotiazide Mylan Pharma",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano a base di antiipertensivi in formulazione combinata.",
+   "risk_score": 10,
+   "created_at": "2026-11-04T12:58:14.707420",
+   "updated_at": "2026-11-04T12:58:14.707420",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
+   "risk_doc_date": "2026-11-03",
+   "risk_assigned_at": "2026-11-04T12:58:14.707400"
   }
  ],
  "edges": [
@@ -3084,11 +3130,14 @@
    "source": "aifa",
    "target": "ema",
    "type": "COLLABORA_CON",
-   "fact": "AIFA collabora con EMA per autorizzazioni centralizzate.",
-   "risk_score": 10,
-   "source_doc": "",
+   "fact": "AIFA collabora con EMA in sistema europeo farmacovigilanza",
+   "risk_score": 15,
+   "source_doc": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
    "date": "2004-11",
-   "created_at": "2026-10-06T06:32:00.960345"
+   "created_at": "2026-10-06T06:32:00.960345",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza": "AIFA – Notizie – Nota Informativa Importante di qualità su Respreeza"
+   }
   },
   {
    "id": "agenas_minsalute_MEMBRO_DI",
@@ -18729,6 +18778,76 @@
    "source_doc": "2026-DON623",
    "date": "2026-10",
    "created_at": "2026-11-03T12:45:49.735764"
+  },
+  {
+   "id": "agenas_reg_toscana_COMUNICA_SU",
+   "source": "agenas",
+   "target": "reg_toscana",
+   "type": "COMUNICA_SU",
+   "fact": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
+   "risk_score": 15,
+   "source_doc": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
+   "date": "2026-11-03",
+   "created_at": "2026-11-04T12:58:09.911323",
+   "doc_titles": {
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas": "AGENAS – Notizie – I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS"
+   }
+  },
+  {
+   "id": "respreeza_drug_aifa_RISCHIO_PER",
+   "source": "respreeza_drug",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "Segnalazione rischio mancata somministrazione dose e infezione da compromissione flaconcino",
+   "risk_score": 78,
+   "source_doc": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
+   "date": null,
+   "created_at": "2026-11-04T12:58:14.804971",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza": "AIFA – Notizie – Nota Informativa Importante di qualità su Respreeza"
+   }
+  },
+  {
+   "id": "respreeza_drug_ema_REGOLA",
+   "source": "respreeza_drug",
+   "target": "ema",
+   "type": "REGOLA",
+   "fact": "EMA regola autorizzazione e farmacovigilanza del prodotto Respreeza",
+   "risk_score": 45,
+   "source_doc": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
+   "date": null,
+   "created_at": "2026-11-04T12:58:14.804971",
+   "doc_titles": {
+    "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza": "AIFA – Notizie – Nota Informativa Importante di qualità su Respreeza"
+   }
+  },
+  {
+   "id": "aifa_mylan_pharma_REGOLA",
+   "source": "aifa",
+   "target": "mylan_pharma",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio del medicinale.",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
+   "date": null,
+   "created_at": "2026-11-04T12:58:14.804971",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "mylan_pharma_amlodipina_valsartan_idroclorotiazide_FORNISCE",
+   "source": "mylan_pharma",
+   "target": "amlodipina_valsartan_idroclorotiazide",
+   "type": "FORNISCE",
+   "fact": "Mylan Pharma produttore e titolare autorizzazione medicinale revocato.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
+   "date": null,
+   "created_at": "2026-11-04T12:58:14.804971",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
   }
  ],
  "alerts": [
