@@ -1,38 +1,38 @@
 {
  "version": 1,
- "exported_at": "2026-11-04T12:58:20.512662",
- "data_updated_at": "2026-11-04T12:58:20.306632",
+ "exported_at": "2026-11-05T13:09:42.259255",
+ "data_updated_at": "2026-11-05T13:09:41.931412",
  "refresh_info": {
-  "last_success": "2026-11-04T12:58:20.306632",
+  "last_success": "2026-11-05T13:09:41.931412",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 3,
-   "edges": 5,
+   "nodes": 8,
+   "edges": 15,
    "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-10-28",
    "who_outbreaks": "2026-11-02",
-   "italy": "2026-11-04"
+   "italy": "2026-11-05"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 44
+   "italy": 43
   },
   "source_errors": {},
-  "alerts_error": "JSON non valido (Expecting ':' delimiter: line 6 column 3 (char 348)): '```json\\n[\\n  {\\n    \"source_id\": \"2026-DON623\",\\n    \"severity\": \"HIGH\",\\n    \"quotes\": \"On 20 October 2026, the National IHR Focal Point (NFP) of France notified WHO regarding the first documented human '",
+  "alerts_error": null,
   "alerts_discarded": [],
-  "alerts_attempt": "2026-11-04T12:58:20.306632"
+  "alerts_attempt": "2026-11-05T13:09:41.931412"
  },
  "signals": {
-  "generated_at": "2026-11-04T12:58:15.207977",
+  "generated_at": "2026-11-05T13:09:30.549913",
   "who": [
    {
     "title": "Shamonda virus in human - France",
@@ -199,6 +199,62 @@
   ],
   "italy": [
    {
+    "title": "European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica",
+    "date": "2026-11-05",
+    "url": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Oggi, 5 novembre, si celebra la Giornata europea dei laboratori (European Laboratory Day). Per l’occasione, il Centro europeo per la prevenzione e il controllo delle malattie (ECDC) presenta nuove risorse per valorizzare il contributo dei laboratori di riferimento europei nella p"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-04",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05621/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di decitabina, «Decitabina Seacross». (26A05621)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-04",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05622/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di ruxolitinib, «Ruxolitinib Sandoz». (26A05622)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-04",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05623/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di ibuprofene, «Ibuprofene Sandoz BV». (26A05623)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-04",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05624/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di brinzolamide, «Brinzolamide Sandoz Gmbh». (26A05624)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-04",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05732/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di dolutegravir, «Dolutegravir Teva». (26A05732)"
+   },
+   {
+    "title": "Aggiornamento Registro di monitoraggio XOSPATA LMA",
+    "date": "2026-11-04",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-xospata-lma",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 04.11.2026, è aggiornato il registro di XOSPATA per una specifica indicazione terapeutica."
+   },
+   {
+    "title": "Aggiornamento scheda Multifarmaco di monitoraggio semplificato intravitreali anti VEGF RANLUSPEC",
+    "date": "2026-11-04",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-scheda-multifarmaco-di-monitoraggio-semplificato-intravitreali-anti-vegf-ranluspec",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 04.11.2026, è possibile selezionare, nella scheda multifarmaco di monitoraggio semplificato anti VEGF IVT, il medicinale RANLUSPEC (ranibizumab) per quattro specifiche indicazioni terape"
+   },
+   {
     "title": "Notifica dei provvedimenti - Ufficio Ispezioni e Autorizzazioni GMP Medicinali",
     "date": "2026-11-04",
     "url": "https://www.aifa.gov.it/-/notifica-dei-provvedimenti-ufficio-ispezioni-e-autorizzazioni-gmp-medicinali-124",
@@ -211,41 +267,6 @@
     "url": "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
     "source": "AIFA – Notizie",
     "summary": "Respreeza (inibitore della proteinasi alfa-1 (umano)): rischio di mancata somministrazione della dose e potenziale infezione dovuta alla compromissione dell'integrità del flaconcino."
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-03",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05707/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Ducressa» (26A05707)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-03",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05708/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Travocort». (26A05708)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-03",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05709/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Efexor». (26A05709)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-03",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05710/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Duspatal». (26A05710)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-03",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Amlodipina/Valsartan/Idroclorotiazide Mylan Pharma». (26A05712)"
    },
    {
     "title": "Aggiornamento dell’elenco dei farmaci innovativi al 31 ottobre 2026",
@@ -294,28 +315,7 @@
     "date": "2026-11-02",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2914-agenas-programma-nazionale-hta-dispositivi-medici-2026-2028-4-novembre-2026-primo-infoday-a-roma",
     "source": "AGENAS – Notizie",
-    "summary": "Il primo InfoDay si terrà mercoledì 4 novembre 2026, a partire dalle ore 9.00, presso la Sala Tirreno della Regione Lazio, in Piazza Oderico da Pordenone 15, a Roma."
-   },
-   {
-    "title": "Aggiornamento dell’elenco dei farmaci innovativi al 30 settembre 2026",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-elenco-farmaci-innovativi-al-30-settembre-2026",
-    "source": "AIFA – Notizie",
-    "summary": "L'AIFA pubblica l'elenco aggiornato dei medicinali che, a giudizio della Commissione Scientifica ed Economica, possiedono il requisito di innovatività terapeutica."
-   },
-   {
-    "title": "Aggiornamenti dal PRAC: riunione del 26-29 ottobre 2026",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/aggiornamenti-dal-prac-riunione-del-28-30-ottobre-2026",
-    "source": "AIFA – Notizie",
-    "summary": "Avviate revisioni di sicurezza sulle immunoglobuline umane normali e su Deanxit."
-   },
-   {
-    "title": "Modalità di compilazione degli individual case safety reports (ICSRs) secondo lo standard ICH E2B (R3)",
-    "date": "2026-10-30",
-    "url": "https://www.aifa.gov.it/-/modalita-compilazione-individual-case-safety-reports-icsrs-secondo-standard-ich-e2b-r3",
-    "source": "AIFA – Notizie",
-    "summary": "L’ Agenzia Italiana del Farmaco richiama l’attenzione dei titolari AIC alla corretta e uniforme compilazione dei campi degli ICSRs trasmessi secondo lo standard ICH E2B(R3) relativi al nome del medicinale e al principio attivo."
+    "summary": "Il primo InfoDay si è svolto mercoledì 4 novembre 2026, presso la Sala Tirreno della Regione Lazio, a Roma."
    },
    {
     "title": "Bollettino 182 fase 3",
@@ -329,7 +329,7 @@
     "date": "2026-10-30",
     "url": "https://www.iss.it/-/raramente-n.-118",
     "source": "ISS – Comunicati stampa",
-    "summary": "In questo numero : Nonostante i progressi in ambito europeo (Ern, Orphanet, Erdera, Hta, dati sanitari), le iniziative sulle malattie rare restano frammentate e persistono disuguaglianze. Eurordis propone alla Commissione Ue un Piano d'Azione unico per connettere le politiche esi"
+    "summary": "Edited 30/10/2026 In questo numero : Nonostante i progressi in ambito europeo (Ern, Orphanet, Erdera, Hta, dati sanitari), le iniziative sulle malattie rare restano frammentate e persistono disuguaglianze. Eurordis propone alla Commissione Ue un Piano d'Azione unico per connetter"
    },
    {
     "title": "Scoperto un nuovo gene della retinite pigmentosa, nuove risposte per le famiglie e nuove prospettive per la ricerca",
@@ -379,7 +379,11 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05660/SG",
   "2026-DON623",
   "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
-  "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG"
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
+  "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05745/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05746/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG"
  ],
  "nodes": [
   {
@@ -391,7 +395,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-04T12:58:09.655298",
+   "updated_at": "2026-11-05T13:09:18.992625",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -403,7 +407,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-04T12:58:09.655298",
+   "updated_at": "2026-11-05T13:09:18.992625",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -475,7 +479,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-04T12:58:09.655298",
+   "updated_at": "2026-11-05T13:09:18.992625",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -487,7 +491,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-04T12:58:09.655298",
+   "updated_at": "2026-11-05T13:09:18.992625",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -499,7 +503,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-04T12:58:09.655298",
+   "updated_at": "2026-11-05T13:09:18.992625",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -664,7 +668,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-04T12:58:09.655298",
+   "updated_at": "2026-11-05T13:09:18.992625",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -709,7 +713,7 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-04T12:58:14.707420",
+   "updated_at": "2026-11-05T13:09:30.120507",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -740,7 +744,7 @@
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-11-05T13:09:30.120507",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -1074,9 +1078,10 @@
    "description": "Agenzia europea di prevenzione e controllo malattie che monitora rischi epidemiologici transfrontalieri.",
    "risk_score": 65,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-23T17:07:09.049695",
+   "updated_at": "2026-11-05T13:09:30.120507",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
+    "Centro europeo per la prevenzione e il controllo delle malattie",
     "ECDC - Centro Europeo per la Prevenzione e il Controllo delle Malattie",
     "European Centre for Disease Prevention and Control"
    ],
@@ -2888,7 +2893,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-04T12:58:09.718597",
+   "updated_at": "2026-11-05T13:09:19.045510",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2900,7 +2905,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-04T12:58:09.718597",
+   "updated_at": "2026-11-05T13:09:19.045510",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2912,7 +2917,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-04T12:58:09.718597",
+   "updated_at": "2026-11-05T13:09:19.045510",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3064,6 +3069,126 @@
    "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG",
    "risk_doc_date": "2026-11-03",
    "risk_assigned_at": "2026-11-04T12:58:14.707400"
+  },
+  {
+   "id": "eurl_ph_hp",
+   "label": "Laboratorio EURL-PH per elminti e protozoi",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "Italia",
+   "description": "Laboratorio di riferimento europeo coordinato da ISS per elminti e protozoi.",
+   "risk_score": 0,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "risk_doc_date": "2026-11-05",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
+  },
+  {
+   "id": "eurl_ph_fwdb",
+   "label": "Laboratorio EURL-PH per batteri a trasmissione alimentare e idrica",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "Italia",
+   "description": "Laboratorio di riferimento europeo per batteri a trasmissione alimentare e idrica.",
+   "risk_score": 0,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "risk_doc_date": "2026-11-05",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
+  },
+  {
+   "id": "eurl_ph_legi",
+   "label": "Laboratorio EURL-PH per Legionella",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "Italia",
+   "description": "Laboratorio di riferimento europeo per Legionella affiliato a ISS.",
+   "risk_score": 0,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "risk_doc_date": "2026-11-05",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
+  },
+  {
+   "id": "eu_ref_labs",
+   "label": "Rete EU Reference Laboratories for Public Health",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "EU",
+   "description": "Rete europea di laboratori di riferimento per armonizzare capacità diagnostiche sanitarie transfrontaliere.",
+   "risk_score": 0,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "risk_doc_date": "2026-11-05",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
+  },
+  {
+   "id": "glucosamina_solfato_eg",
+   "label": "Glucosamina Solfato EG",
+   "type": "Farmaco",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano soggetto a revoca dell'autorizzazione all'immissione in commercio.",
+   "risk_score": 25,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05745/SG",
+   "risk_doc_date": "2026-11-04",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
+  },
+  {
+   "id": "atorvastatina_pensa",
+   "label": "Atorvastatina Pensa",
+   "type": "Pharmaceutical",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano con autorizzazione all'immissione in commercio revocata",
+   "risk_score": 15,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05746/SG",
+   "risk_doc_date": "2026-11-04",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
+  },
+  {
+   "id": "pensa_pharma",
+   "label": "Pensa Pharma",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Casa farmaceutica produttrice del medicinale Atorvastatina Pensa",
+   "risk_score": 10,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05746/SG",
+   "risk_doc_date": "2026-11-04",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
+  },
+  {
+   "id": "fondazione_banca_occhi_veneto",
+   "label": "Fondazione Banca degli Occhi del Veneto ETS",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "Veneto",
+   "description": "Ente che produceva medicinali per terapie avanzate su base non ripetitiva per uso umano.",
+   "risk_score": 75,
+   "created_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-05T13:09:30.120507",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG",
+   "risk_doc_date": "2026-11-04",
+   "risk_assigned_at": "2026-11-05T13:09:30.120476"
   }
  ],
  "edges": [
@@ -18848,6 +18973,216 @@
    "doc_titles": {
     "https://www.gazzettaufficiale.it/eli/id/2026/11/03/26A05712/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
    }
+  },
+  {
+   "id": "aifa_reg_veneto_COMUNICA_SU",
+   "source": "aifa",
+   "target": "reg_veneto",
+   "type": "COMUNICA_SU",
+   "fact": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO: Sospensione dell'autorizzazione alla produzione di medicinali per terapie avanzate preparati su base non ripetitiva per uso umano, rilasciata alla societa' Fondazione Banca degli occhi del Veneto ETS. (26A05747)",
+   "risk_score": 40,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG",
+   "date": "2026-11-04",
+   "created_at": "2026-11-05T13:09:19.148365",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "ecdc_eu_ref_labs_CONTROLLA",
+   "source": "ecdc",
+   "target": "eu_ref_labs",
+   "type": "CONTROLLA",
+   "fact": "ECDC coordina e supervisiona la rete europea di laboratori di riferimento per la salute pubblica.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "iss_eu_ref_labs_MEMBRO_DI",
+   "source": "iss",
+   "target": "eu_ref_labs",
+   "type": "MEMBRO_DI",
+   "fact": "ISS partecipa attivamente alla rete EURL-PH con tre laboratori di riferimento europei.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "iss_eurl_ph_hp_CONTROLLA",
+   "source": "iss",
+   "target": "eurl_ph_hp",
+   "type": "CONTROLLA",
+   "fact": "ISS coordina il laboratorio di riferimento europeo per elminti e protozoi.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "iss_eurl_ph_fwdb_FORNISCE",
+   "source": "iss",
+   "target": "eurl_ph_fwdb",
+   "type": "FORNISCE",
+   "fact": "ISS fornisce supporto tecnico-scientifico per il laboratorio batteri a trasmissione alimentare e idrica.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "iss_eurl_ph_legi_FORNISCE",
+   "source": "iss",
+   "target": "eurl_ph_legi",
+   "type": "FORNISCE",
+   "fact": "ISS fornisce supporto tecnico-scientifico per il laboratorio di riferimento Legionella.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "eurl_ph_hp_eu_ref_labs_MEMBRO_DI",
+   "source": "eurl_ph_hp",
+   "target": "eu_ref_labs",
+   "type": "MEMBRO_DI",
+   "fact": "Laboratorio elminti e protozoi è membro della rete europea di laboratori di riferimento.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "eurl_ph_fwdb_eu_ref_labs_MEMBRO_DI",
+   "source": "eurl_ph_fwdb",
+   "target": "eu_ref_labs",
+   "type": "MEMBRO_DI",
+   "fact": "Laboratorio batteri alimentari è membro della rete europea di laboratori di riferimento.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "eurl_ph_legi_eu_ref_labs_MEMBRO_DI",
+   "source": "eurl_ph_legi",
+   "target": "eu_ref_labs",
+   "type": "MEMBRO_DI",
+   "fact": "Laboratorio Legionella è membro della rete europea di laboratori di riferimento.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "eu_ref_labs_ecdc_COLLABORA_CON",
+   "source": "eu_ref_labs",
+   "target": "ecdc",
+   "type": "COLLABORA_CON",
+   "fact": "Laboratori di riferimento collaborano con ECDC per preparedness e risposta emergenze transfrontaliere.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica": "ISS – Comunicati stampa – European Laboratory Day: dalla preparedness alla risposta, i laboratori europei al servizio della salute pubblica"
+   }
+  },
+  {
+   "id": "aifa_glucosamina_solfato_eg_REGOLA",
+   "source": "aifa",
+   "target": "glucosamina_solfato_eg",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio del medicinale.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05745/SG",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05745/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_atorvastatina_pensa_REGOLA",
+   "source": "aifa",
+   "target": "atorvastatina_pensa",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio su rinuncia del produttore",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05746/SG",
+   "date": "2024",
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05746/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "pensa_pharma_atorvastatina_pensa_FORNISCE",
+   "source": "pensa_pharma",
+   "target": "atorvastatina_pensa",
+   "type": "FORNISCE",
+   "fact": "Pensa Pharma produce e distribuisce Atorvastatina Pensa nel mercato",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05746/SG",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05746/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_fondazione_banca_occhi_veneto_REGOLA",
+   "source": "aifa",
+   "target": "fondazione_banca_occhi_veneto",
+   "type": "REGOLA",
+   "fact": "AIFA regola e autorizza la produzione di medicinali per terapie avanzate della Fondazione.",
+   "risk_score": 0,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_fondazione_banca_occhi_veneto_RISCHIO_PER",
+   "source": "aifa",
+   "target": "fondazione_banca_occhi_veneto",
+   "type": "RISCHIO_PER",
+   "fact": "AIFA ha sospeso l'autorizzazione alla produzione per violazioni normative o difetti autorizzativi.",
+   "risk_score": 85,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG",
+   "date": null,
+   "created_at": "2026-11-05T13:09:30.141382",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/04/26A05747/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
   }
  ],
  "alerts": [
@@ -18862,7 +19197,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON623 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18876,7 +19211,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON622 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18890,7 +19225,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON618 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18904,7 +19239,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON620 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18917,8 +19252,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del microcatetere Direxion Material Number M001195290, lotti 38362172, 38362173, 38530450, 38595659. Consultare avviso fabbricante.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195290, UDI-DI 08714729839408, lotti 38362172, 38362173, 38530450, 38595659.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18931,8 +19266,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del microcatetere Direxion Material Number M001195440, lotti elencati nel code_info. Consultare avviso fabbricante.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195440, UDI-DI 08714729839514 e lotti elencati nel recall Z-0243-2027.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18945,8 +19280,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del microcatetere Direxion Material Number M001195750, lotti elencati nel code_info. Consultare avviso fabbricante.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195750, UDI-DI 08714729839729 e lotti elencati nel recall Z-0258-2027.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18959,8 +19294,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del microcatetere Direxion Material Number M001195280, lotti 38149679, 38323401, 38444072, 38506482, 38506491, 38560458, 38595645, 38810252, 38936816, 39140997, 39141264, 39189785, 39189791, 40482687, 40493382, 40512909.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195280, UDI-DI 08714729839392, lotti 38149679, 38323401, 38444072, 38506482, 38506491, 38560458, 38595645, 38810252, 38936816, 39140997, 39141264, 39189785, 39189791, 40482687, 40493382, 40512909.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18973,8 +19308,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del microcatetere Direxion Material Number M001195260, lotti 37818211, 37881104, 37942459, 38002443, 38224536, 38415913, 38595894, 38595895, 38629331, 38687224, 38904567, 38904568, 38916620, 38970937, 38990576, 38990842, 39027322.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195260, UDI-DI 08714729839378 e lotti elencati nel recall Z-0229-2027.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -18987,8 +19322,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare versione software MiniMed Go app 1.2.1 (MMT-8600 iOS, MMT-8601 Android). Consultare avviso fabbricante per configurazioni precedenti.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare versione software MiniMed Go app. Controllare modelli MMT-8600 (iOS) e MMT-8601 (Android) con software version 1.2.1.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -19001,8 +19336,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del microcatetere Direxion Material Number M001195840, lotti elencati nel code_info. Consultare avviso fabbricante.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195840, UDI-DI 08714729839774 e lotti elencati nel recall Z-0260-2027.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   },
   {
@@ -19015,8 +19350,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario estensioni percutanee InterStim modelli 3560022 e 3560030, lotti elencati nel code_info. Consultare avviso fabbricante.",
-   "created_at": "2026-11-03T12:46:02.405146",
+   "recommendation": "Verificare presenza InterStim Percutaneous Extensions modelli 3560022 e 3560030, UDI-DI 00763000203894, lotti elencati nel recall Z-0267-2027.",
+   "created_at": "2026-11-05T13:09:41.931106",
    "is_read": false
   }
  ]
