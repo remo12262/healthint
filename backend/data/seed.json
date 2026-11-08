@@ -1,19 +1,18 @@
 {
  "version": 1,
- "exported_at": "2026-11-07T11:43:16.123236",
- "data_updated_at": "2026-11-07T11:43:15.895419",
+ "exported_at": "2026-11-08T11:55:53.827926",
+ "data_updated_at": "2026-11-08T11:55:53.646435",
  "refresh_info": {
-  "last_success": "2026-11-07T11:43:15.895419",
+  "last_success": "2026-11-08T11:55:53.646435",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "italy",
-   "who_outbreaks"
+   "italy"
   ],
   "new": {
-   "nodes": 11,
-   "edges": 15,
-   "alerts": 1
+   "nodes": 9,
+   "edges": 23,
+   "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
@@ -28,15 +27,15 @@
    "italy": 28
   },
   "source_errors": {
-   "aifa_news": "ReadTimeout: ",
-   "aifa_press": "ReadTimeout: "
+   "aifa_press": "HTTPStatusError: Server error '502 Bad Gateway' for url 'https://www.aifa.gov.it/o/feedrss/rss?structureId=93604&groupId=20142&companyId=20115&basePortalURL=https://www.aifa.gov.it&locale=it_IT&size=6&categoryId=104878'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502",
+   "aifa_news": "HTTPStatusError: Server error '502 Bad Gateway' for url 'https://www.aifa.gov.it/o/feedrss/rss?structureId=93604&groupId=20142&companyId=20115&basePortalURL=https://www.aifa.gov.it&locale=it_IT&size=10&excludeCategoryId=104878'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502"
   },
   "alerts_error": null,
   "alerts_discarded": [],
-  "alerts_attempt": "2026-11-07T11:43:15.895419"
+  "alerts_attempt": "2026-11-08T11:55:53.646435"
  },
  "signals": {
-  "generated_at": "2026-11-07T11:43:05.917890",
+  "generated_at": "2026-11-08T11:55:41.253039",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -238,6 +237,13 @@
     "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Ketoprofene sale di lisina Zentiva Italia». (26A05794)"
    },
    {
+    "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
+    "date": "2026-11-07",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
+    "source": "AGENAS – Notizie",
+    "summary": "Il prossimo 10 novembre 2026, dalle ore 10.00 alle 12.30, presso l'Auditorium AGENAS di Via Toscana 12 a Roma, si terrà il seminario “I dati della vita. Crescere, vivere, invecchiare: il valore pubblico dei dati sanitari”, promosso dall'Agenzia Nazionale per i Servizi Sanitari Re"
+   },
+   {
     "title": "Telemedicina: AGENAS pubblica il documento \"Modello operativo per il rinnovo dei Piani Terapeutici in televisita\"",
     "date": "2026-11-06",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2916-telemedicina-agenas-pubblica-il-documento-modello-operativo-per-il-rinnovo-dei-piani-terapeutici-in-televisita",
@@ -264,13 +270,6 @@
     "url": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
     "source": "ISS – Comunicati stampa",
     "summary": "Oggi, 5 novembre, si celebra la Giornata europea dei laboratori (European Laboratory Day). Per l’occasione, il Centro europeo per la prevenzione e il controllo delle malattie (ECDC) presenta nuove risorse per valorizzare il contributo dei laboratori di riferimento europei nella p"
-   },
-   {
-    "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
-    "date": "2026-11-03",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
-    "source": "AGENAS – Notizie",
-    "summary": "Il prossimo 10 novembre 2026, dalle ore 10.00 alle 12.30, presso l'Auditorium AGENAS di Via Toscana 12 a Roma, si terrà il seminario “I dati della vita. Crescere, vivere, invecchiare: il valore pubblico dei dati sanitari”, promosso dall'Agenzia Nazionale per i Servizi Sanitari Re"
    },
    {
     "title": "AGENAS 4 novembre 2026 - A Roma il primo Infoday del Programma Nazionale HTA Dispositivi Medici 2026-2028",
@@ -393,7 +392,11 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05793/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05794/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05795/SG",
-  "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05796/SG"
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05796/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05797/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05799/SG",
+  "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile"
  ],
  "nodes": [
   {
@@ -405,7 +408,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-07T11:42:46.721827",
+   "updated_at": "2026-11-08T11:55:26.387566",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -417,7 +420,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-07T11:42:46.721827",
+   "updated_at": "2026-11-08T11:55:26.387566",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -489,7 +492,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-07T11:42:46.721827",
+   "updated_at": "2026-11-08T11:55:26.387566",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -501,7 +504,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-07T11:42:46.721827",
+   "updated_at": "2026-11-08T11:55:26.387566",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -513,7 +516,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-07T11:42:46.721827",
+   "updated_at": "2026-11-08T11:55:26.387566",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -678,7 +681,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-07T11:42:46.721827",
+   "updated_at": "2026-11-08T11:55:26.387566",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -723,7 +726,7 @@
    "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
    "risk_score": 10,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-07T11:43:05.341346",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Valore assegnato manualmente",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -754,7 +757,7 @@
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -776,14 +779,17 @@
    "description": "Istituzione nazionale italiana promotrice di iniziative sanità pubblica cardiovascolare.",
    "risk_score": 35,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Ministero della Salute",
    "website": "https://www.salute.gov.it/",
    "italy": true,
    "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
    "risk_doc_date": "2026-10-29",
-   "risk_assigned_at": "2026-10-31T10:54:41.096910"
+   "risk_assigned_at": "2026-10-31T10:54:41.096910",
+   "aliases": [
+    "Ministero della Salute Italia"
+   ]
   },
   {
    "id": "who",
@@ -2105,19 +2111,20 @@
    "updated_at": "2026-10-18T15:38:53.728256"
   },
   {
-   "id": "evt_dengue",
+   "id": "evt_dengue_it",
    "label": "Epidemia di dengue",
    "type": "EpidemicEvent",
    "domain": "health",
    "region": "IT",
-   "description": "5 focolai di trasmissione locale di Dengue in Italia, 70 casi autoctoni confermati",
+   "description": "376 casi confermati di Dengue, 76 autoctoni, 5 focolai di trasmissione locale identificati",
    "risk_score": 72,
    "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "aliases": [
     "Epidemia di dengue – Italia",
-    "Focolai Dengue Autoctoni"
+    "Focolai Dengue Autoctoni",
+    "Focolaio Dengue 2026"
    ],
    "disease": "dengue",
    "risk_assigned_at": "2026-10-18T19:25:38.062427",
@@ -2125,7 +2132,7 @@
    "risk_doc_date": "2026-10-15"
   },
   {
-   "id": "evt_chikungunya",
+   "id": "evt_chikungunya_it",
    "label": "Epidemia di chikungunya",
    "type": "EpidemicEvent",
    "domain": "health",
@@ -2133,12 +2140,13 @@
    "description": "30 casi confermati di Chikungunya, 1 autoctono, principalmente da viaggi esteri",
    "risk_score": 58,
    "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "aliases": [
     "Cluster Chikungunya",
     "Epidemia di chikungunya – Italia",
     "Focolaio Chikungunya",
+    "Focolaio Chikungunya 2026",
     "Focolaio Chikungunya Autoctono"
    ],
    "disease": "chikungunya",
@@ -2147,7 +2155,7 @@
    "risk_doc_date": "2026-10-29"
   },
   {
-   "id": "evt_west_nile",
+   "id": "evt_west_nile_it",
    "label": "Epidemia di West Nile",
    "type": "EpidemicEvent",
    "domain": "health",
@@ -2155,13 +2163,14 @@
    "description": "777 casi confermati di West Nile Virus con 61 decessi e letalità del 14.7% nelle forme neuroinvasive",
    "risk_score": 85,
    "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "aliases": [
     "Epidemia West Nile Virus",
     "Epidemia West Nile Virus 2026",
     "Epidemia di West Nile – Italia",
-    "Focolaio West Nile Virus"
+    "Focolaio West Nile Virus",
+    "Focolaio West Nile Virus 2026"
    ],
    "disease": "west_nile",
    "risk_assigned_at": "2026-10-18T19:25:38.062427",
@@ -2904,7 +2913,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-07T11:42:46.817447",
+   "updated_at": "2026-11-08T11:55:26.456284",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2916,7 +2925,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-07T11:42:46.817447",
+   "updated_at": "2026-11-08T11:55:26.456284",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2928,7 +2937,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-07T11:42:46.817447",
+   "updated_at": "2026-11-08T11:55:26.456284",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3466,10 +3475,10 @@
    "type": "PharmaCompany",
    "domain": "health",
    "region": null,
-   "description": "Casa farmaceutica produttrice di Ondansetron Accord.",
+   "description": "Produttore farmaceutico titolare dell'autorizzazione al naloxone.",
    "risk_score": 20,
    "created_at": "2026-11-07T11:43:05.341346",
-   "updated_at": "2026-11-07T11:43:05.341346",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05795/SG",
    "risk_doc_date": "2026-11-07",
@@ -3489,6 +3498,96 @@
    "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05796/SG",
    "risk_doc_date": "2026-11-07",
    "risk_assigned_at": "2026-11-07T11:43:05.341323"
+  },
+  {
+   "id": "kleder_26a05797",
+   "label": "Kleder (26A05797)",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano oggetto di revoca autorizzazione commercializzazione.",
+   "risk_score": 25,
+   "created_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-08T11:55:40.927099",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05797/SG",
+   "risk_doc_date": "2026-11-07",
+   "risk_assigned_at": "2026-11-08T11:55:40.927078"
+  },
+  {
+   "id": "naloxone_accord",
+   "label": "Naloxone Accord",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano a base di naloxone, oggetto di revoca autorizzazione.",
+   "risk_score": 15,
+   "created_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-08T11:55:40.927099",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG",
+   "risk_doc_date": "2026-11-07",
+   "risk_assigned_at": "2026-11-08T11:55:40.927078"
+  },
+  {
+   "id": "antispasmina_colica",
+   "label": "Antispasmina Colica",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano autorizzato in commercio, oggetto di revoca",
+   "risk_score": 45,
+   "created_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-08T11:55:40.927099",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05799/SG",
+   "risk_doc_date": "2026-11-07",
+   "risk_assigned_at": "2026-11-08T11:55:40.927078"
+  },
+  {
+   "id": "blood_bank_network_italy",
+   "label": "Rete Nazionale Donatori Sangue",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "Italy",
+   "description": "96 casi WNV asintomatici identificati in donatori sangue, rischio trasmissione trasfusionale",
+   "risk_score": 68,
+   "created_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-08T11:55:40.927099",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "risk_doc_date": "2026-11-06",
+   "risk_assigned_at": "2026-11-08T11:55:40.927078"
+  },
+  {
+   "id": "maldives_travel",
+   "label": "Maldive",
+   "type": "GeographicLocation",
+   "domain": "health",
+   "region": "Asia",
+   "description": "Luogo di esposizione principale per 51% casi Dengue importati e casi WNV",
+   "risk_score": 0,
+   "created_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-08T11:55:40.927099",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "risk_doc_date": "2026-11-06",
+   "risk_assigned_at": "2026-11-08T11:55:40.927078"
+  },
+  {
+   "id": "zika_cases_2026",
+   "label": "Zika Virus 2026",
+   "type": "HealthEvent",
+   "domain": "health",
+   "region": "Italy",
+   "description": "4 casi confermati Zika, tutti importati da viaggi estero, nessun decesso",
+   "risk_score": 35,
+   "created_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-08T11:55:40.927099",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "risk_doc_date": "2026-11-06",
+   "risk_assigned_at": "2026-11-08T11:55:40.927078"
   }
  ],
  "edges": [
@@ -9911,10 +10010,15 @@
    "risk_score": 10,
    "source_doc": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2012-06-28;106",
    "doc_titles": {
-    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2012-06-28;106": "D.Lgs. 28 giugno 2012, n. 106 – riorganizzazione degli enti vigilati dal Ministero della Salute (Normattiva)"
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2012-06-28;106": "D.Lgs. 28 giugno 2012, n. 106 – riorganizzazione degli enti vigilati dal Ministero della Salute (Normattiva)",
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile"
    },
    "date": null,
-   "created_at": "2026-10-18T15:38:53.728256"
+   "created_at": "2026-10-18T15:38:53.728256",
+   "source_docs": [
+    "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2012-06-28;106",
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile"
+   ]
   },
   {
    "id": "minsalute_agenas_CONTROLLA",
@@ -10767,9 +10871,9 @@
    }
   },
   {
-   "id": "iss_evt_dengue_INDAGA_SU",
+   "id": "iss_evt_dengue_it_INDAGA_SU",
    "source": "iss",
-   "target": "evt_dengue",
+   "target": "evt_dengue_it",
    "type": "INDAGA_SU",
    "fact": "ISS monitora 5 focolai di trasmissione locale autoctona di Dengue.",
    "risk_score": 72,
@@ -10777,37 +10881,41 @@
    "date": "2026-01",
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile",
     "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
    },
    "source_docs": [
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
-    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile"
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile"
    ]
   },
   {
-   "id": "iss_evt_west_nile_INDAGA_SU",
+   "id": "iss_evt_west_nile_it_INDAGA_SU",
    "source": "iss",
-   "target": "evt_west_nile",
+   "target": "evt_west_nile_it",
    "type": "INDAGA_SU",
-   "fact": "ISS coordina sorveglianza dell'epidemia di West Nile Virus con 770 casi e 61 decessi",
-   "risk_score": 78,
+   "fact": "ISS monitora epidemia WNV con 14 bollettini settimanali, 790 casi confermati",
+   "risk_score": 80,
    "source_doc": "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
    "date": "2026-01",
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile",
     "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
    },
    "source_docs": [
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
-    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile"
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile"
    ]
   },
   {
-   "id": "iss_evt_chikungunya_INDAGA_SU",
+   "id": "iss_evt_chikungunya_it_INDAGA_SU",
    "source": "iss",
-   "target": "evt_chikungunya",
+   "target": "evt_chikungunya_it",
    "type": "INDAGA_SU",
    "fact": "ISS traccia caso autoctono di Chikungunya e epidemiologia trasmissione.",
    "risk_score": 65,
@@ -10815,17 +10923,19 @@
    "date": "2026-01",
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile",
     "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
    },
    "source_docs": [
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
-    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile"
+    "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile"
    ]
   },
   {
-   "id": "evt_dengue_italian_health_system_RISCHIO_PER",
-   "source": "evt_dengue",
+   "id": "evt_dengue_it_italian_health_system_RISCHIO_PER",
+   "source": "evt_dengue_it",
    "target": "italian_health_system",
    "type": "RISCHIO_PER",
    "fact": "5 focolai autoctoni di Dengue rappresentano rischio per il sistema sanitario nazionale",
@@ -10838,8 +10948,8 @@
    }
   },
   {
-   "id": "evt_west_nile_italian_health_system_RISCHIO_PER",
-   "source": "evt_west_nile",
+   "id": "evt_west_nile_it_italian_health_system_RISCHIO_PER",
+   "source": "evt_west_nile_it",
    "target": "italian_health_system",
    "type": "RISCHIO_PER",
    "fact": "Epidemia WNV attiva con 770 casi confermati, 61 decessi e form neuroinvasive critiche",
@@ -10852,8 +10962,8 @@
    }
   },
   {
-   "id": "evt_west_nile_blood_donation_system_RISCHIO_PER",
-   "source": "evt_west_nile",
+   "id": "evt_west_nile_it_blood_donation_system_RISCHIO_PER",
+   "source": "evt_west_nile_it",
    "target": "blood_donation_system",
    "type": "RISCHIO_PER",
    "fact": "West Nile Virus rappresenta rischio per la sicurezza trasfusionale con 95 casi asintomatici rilevati nei donatori",
@@ -11055,9 +11165,9 @@
    }
   },
   {
-   "id": "iss_evt_dengue_CONTROLLA",
+   "id": "iss_evt_dengue_it_CONTROLLA",
    "source": "iss",
-   "target": "evt_dengue",
+   "target": "evt_dengue_it",
    "type": "CONTROLLA",
    "fact": "ISS coordina il sistema di sorveglianza nazionale per i focolai autoctoni di Dengue",
    "risk_score": 35,
@@ -11069,9 +11179,9 @@
    }
   },
   {
-   "id": "iss_evt_west_nile_CONTROLLA",
+   "id": "iss_evt_west_nile_it_CONTROLLA",
    "source": "iss",
-   "target": "evt_west_nile",
+   "target": "evt_west_nile_it",
    "type": "CONTROLLA",
    "fact": "ISS monitora e coordina la risposta epidemiologica all'epidemia di West Nile Virus",
    "risk_score": 68,
@@ -11083,9 +11193,9 @@
    }
   },
   {
-   "id": "iss_evt_chikungunya_CONTROLLA",
+   "id": "iss_evt_chikungunya_it_CONTROLLA",
    "source": "iss",
-   "target": "evt_chikungunya",
+   "target": "evt_chikungunya_it",
    "type": "CONTROLLA",
    "fact": "ISS sorveglia casi confermati di Chikungunya nel territorio nazionale",
    "risk_score": 38,
@@ -11097,8 +11207,8 @@
    }
   },
   {
-   "id": "evt_dengue_blood_donation_system_RISCHIO_PER",
-   "source": "evt_dengue",
+   "id": "evt_dengue_it_blood_donation_system_RISCHIO_PER",
+   "source": "evt_dengue_it",
    "target": "blood_donation_system",
    "type": "RISCHIO_PER",
    "fact": "Focolai autoctoni di Dengue comportano potenziale rischio per donatori di sangue",
@@ -15884,8 +15994,8 @@
    }
   },
   {
-   "id": "evt_west_nile_donatori_sangue_RISCHIO_PER",
-   "source": "evt_west_nile",
+   "id": "evt_west_nile_it_donatori_sangue_RISCHIO_PER",
+   "source": "evt_west_nile_it",
    "target": "donatori_sangue",
    "type": "RISCHIO_PER",
    "fact": "96 donatori di sangue positivi al WNV rappresentano rischio contaminazione ematica.",
@@ -15898,8 +16008,8 @@
    }
   },
   {
-   "id": "evt_west_nile_regioni_italia_RISCHIO_PER",
-   "source": "evt_west_nile",
+   "id": "evt_west_nile_it_regioni_italia_RISCHIO_PER",
+   "source": "evt_west_nile_it",
    "target": "regioni_italia",
    "type": "RISCHIO_PER",
    "fact": "Focolaio WNV con 61 decessi e forme neuroinvasive critico per sistema sanitario.",
@@ -19813,13 +19923,167 @@
    "doc_titles": {
     "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05796/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
    }
+  },
+  {
+   "id": "aifa_kleder_26a05797_REGOLA",
+   "source": "aifa",
+   "target": "kleder_26a05797",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio di Kleder su rinuncia.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05797/SG",
+   "date": null,
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05797/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_naloxone_accord_REGOLA",
+   "source": "aifa",
+   "target": "naloxone_accord",
+   "type": "REGOLA",
+   "fact": "AIFA revoca l'autorizzazione all'immissione in commercio del medicinale Naloxone Accord.",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG",
+   "date": null,
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "accord_pharma_naloxone_accord_FORNISCE",
+   "source": "accord_pharma",
+   "target": "naloxone_accord",
+   "type": "FORNISCE",
+   "fact": "Accord Healthcare produce e commercializza il medicinale Naloxone Accord.",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG",
+   "date": null,
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "accord_pharma_aifa_COLLABORA_CON",
+   "source": "accord_pharma",
+   "target": "aifa",
+   "type": "COLLABORA_CON",
+   "fact": "Accord Healthcare rinuncia all'autorizzazione su richiesta dell'AIFA.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG",
+   "date": null,
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_antispasmina_colica_REGOLA",
+   "source": "aifa",
+   "target": "antispasmina_colica",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio su rinuncia del titolare",
+   "risk_score": 35,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05799/SG",
+   "date": null,
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05799/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "evt_west_nile_it_blood_bank_network_italy_RISCHIO_PER",
+   "source": "evt_west_nile_it",
+   "target": "blood_bank_network_italy",
+   "type": "RISCHIO_PER",
+   "fact": "96 donatori asintomatici WNV-positivi rappresentano rischio trasmissione trasfusionale",
+   "risk_score": 75,
+   "source_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "date": "2026-11",
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile"
+   }
+  },
+  {
+   "id": "maldives_travel_evt_dengue_it_RISCHIO_PER",
+   "source": "maldives_travel",
+   "target": "evt_dengue_it",
+   "type": "RISCHIO_PER",
+   "fact": "51% casi dengue importati esposti alle Maldive, fonte principale infezioni esterne",
+   "risk_score": 45,
+   "source_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "date": "2026-01",
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile"
+   }
+  },
+  {
+   "id": "evt_dengue_it_evt_west_nile_it_COLLABORA_CON",
+   "source": "evt_dengue_it",
+   "target": "evt_west_nile_it",
+   "type": "COLLABORA_CON",
+   "fact": "Entrambe le epidemie richiedono risposta coordinata del sistema di sorveglianza nazionale",
+   "risk_score": 68,
+   "source_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "date": "2026-01",
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile"
+   }
+  },
+  {
+   "id": "evt_west_nile_it_minsalute_RISCHIO_PER",
+   "source": "evt_west_nile_it",
+   "target": "minsalute",
+   "type": "RISCHIO_PER",
+   "fact": "61 decessi e 14,3% letalità rappresentano rischio critico per salute pubblica italiana",
+   "risk_score": 88,
+   "source_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "date": "2026-11",
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile"
+   }
+  },
+  {
+   "id": "zika_cases_2026_iss_INDAGA_SU",
+   "source": "zika_cases_2026",
+   "target": "iss",
+   "type": "INDAGA_SU",
+   "fact": "ISS monitora 4 casi Zika importati nell'ambito sorveglianza arbovirosi",
+   "risk_score": 30,
+   "source_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "date": "2026-01",
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile"
+   }
+  },
+  {
+   "id": "evt_dengue_it_minsalute_RISCHIO_PER",
+   "source": "evt_dengue_it",
+   "target": "minsalute",
+   "type": "RISCHIO_PER",
+   "fact": "5 focolai trasmissione locale dengue richiedono intervento sanitario urgente",
+   "risk_score": 72,
+   "source_doc": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+   "date": "2026-11",
+   "created_at": "2026-11-08T11:55:40.948336",
+   "doc_titles": {
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile"
+   }
   }
  ],
  "alerts": [
   {
    "id": "who_2026_don625",
    "title": "OMS: \"Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria\"",
-   "description": "OMS, Disease Outbreak News 2026-DON625 del 2026-11-06: \"As of 3 November 2026, a total of 10 668 confirmed cases, including 5198 deaths (crude case fatality ratio: 48.7%), have been reported across 67 health zones in eight provinces\" \"two countries have medically evacuated confirmed cases among citizens: Switzerland and the United Kingdom of Great Britain and Northern Ireland\"",
+   "description": "OMS, Disease Outbreak News 2026-DON625 del 2026-11-06: \"As of 3 November 2026, a total of 10 668 confirmed cases, including 5198 deaths (crude case fatality ratio: 48.7%), have been reported across 67 health zones in eight provinces, with active transmission ongoing in 51 health zones.\" \"two countries have medically evacuated confirmed cases among citizens: Switzerland and the United Kingdom of Great Britain and Northern Ireland.\"",
    "severity": "CRITICAL",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -19827,13 +20091,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
    "id": "who_2026_don624",
    "title": "OMS: \"Yellow fever - WHO African Region\"",
-   "description": "OMS, Disease Outbreak News 2026-DON624 del 2026-11-06: \"Between 1 January and 12 October 2026, 67 confirmed cases, including 18 deaths, were recorded in nine countries in the Region: Burkina Faso, Cameroon, the Central African Republic, Côte d’Ivoire, Ghana, Guinea, Liberia, Nigeria and Togo\" \"On 27 October 2026, WHO assessed the overall public health risk associated with the current yellow fever situation as moderate at the regional level\"",
+   "description": "OMS, Disease Outbreak News 2026-DON624 del 2026-11-06: \"Between 1 January and 12 October 2026, 67 confirmed cases, including 18 deaths, were recorded in nine countries in the Region: Burkina Faso, Cameroon, the Central African Republic, Côte d’Ivoire, Ghana, Guinea, Liberia, Nigeria and Togo.\" \"On 27 October 2026, WHO assessed the overall public health risk associated with the current yellow fever situation as moderate at the regional level.\"",
    "severity": "MEDIUM",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -19841,13 +20105,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON624 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
    "id": "who_2026_don623",
    "title": "OMS: \"Shamonda virus in human - France\"",
-   "description": "OMS, Disease Outbreak News 2026-DON623 del 2026-11-02: \"On 20 October 2026, the National IHR Focal Point (NFP) of France notified WHO regarding the first documented human infection with Shamonda virus (SHAV)\" \"There is currently widespread SHAV circulation in animals in Europe, including outbreaks across much of France\"",
+   "description": "OMS, Disease Outbreak News 2026-DON623 del 2026-11-02: \"On 20 October 2026, the National IHR Focal Point (NFP) of France notified WHO regarding the first documented human infection with Shamonda virus (SHAV).\" \"There is currently widespread SHAV circulation in animals in Europe, including outbreaks across much of France.\"",
    "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -19855,13 +20119,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON623 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
    "id": "who_middle_east_respiratory_synd",
    "title": "OMS: \"Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia\"",
-   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death\" \"The cases appear to represent sporadic infections related to zoonotic spillover rather than a single outbreak cluster\"",
+   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"MERS is a zoonotic viral respiratory disease for which dromedary camels serve as the primary animal reservoir and two cases reported direct contact with camels while six reported no known camel exposure.\"",
    "severity": "MEDIUM",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -19869,7 +20133,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON618 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19882,8 +20146,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195290, UDI-DI 08714729839408, lotti 38362172, 38362173, 38530450, 38595659.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195290, lotti 38362172, 38362173, 38530450, 38595659.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19896,8 +20160,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195440, UDI-DI 08714729839514, lotti elencati nel campo code_info.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195440 con i lotti elencati nel codice info.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19910,8 +20174,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195750, UDI-DI 08714729839729, lotti elencati nel campo code_info.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195750 con i lotti elencati nel codice info.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19924,8 +20188,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195280, UDI-DI 08714729839392, lotti elencati nel campo code_info.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195280, lotti 38149679, 38323401, 38444072, 38506482, 38506491, 38560458, 38595645, 38810252, 38936816, 39140997, 39141264, 39189785, 39189791, 40482687, 40493382, 40512909.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19938,8 +20202,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195260, UDI-DI 08714729839378, lotti elencati nel campo code_info.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195260, lotti 37818211, 37881104, 37942459, 38002443, 38224536, 38415913, 38595894, 38595895, 38629331, 38687224, 38904567, 38904568, 38916620, 38970937, 38990576, 38990842, 39027322.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19952,8 +20216,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare versione software MiniMed Go App installata: modelli MMT-8600 iOS, MMT-8601 Android, versione 1.2.1.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare versione software MiniMed Go app 1.2.1 (MMT-8600 iOS e MMT-8601 Android) in uso presso la struttura.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19966,8 +20230,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195840, UDI-DI 08714729839774, lotti elencati nel campo code_info.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare presenza in inventario del Direxion Torqueable Microcatheter Material Number M001195840 con i lotti elencati nel codice info.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   },
   {
@@ -19980,8 +20244,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario InterStim Percutaneous Extensions modelli 3560022, 3560030, lotti elencati nel campo code_info.",
-   "created_at": "2026-11-07T11:43:15.895182",
+   "recommendation": "Verificare presenza in inventario InterStim Percutaneous Extensions modelli 3560022 e 3560030 con lotti elencati nel codice info.",
+   "created_at": "2026-11-08T11:55:53.646172",
    "is_read": false
   }
  ]
