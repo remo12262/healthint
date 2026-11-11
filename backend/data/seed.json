@@ -1,18 +1,18 @@
 {
  "version": 1,
- "exported_at": "2026-11-10T13:27:36.568723",
- "data_updated_at": "2026-11-10T13:27:36.302777",
+ "exported_at": "2026-11-11T12:42:25.849697",
+ "data_updated_at": "2026-11-11T12:42:25.672495",
  "refresh_info": {
-  "last_success": "2026-11-10T13:27:36.302777",
+  "last_success": "2026-11-11T12:42:25.672495",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 3,
-   "edges": 29,
-   "alerts": 8
+   "nodes": 0,
+   "edges": 0,
+   "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
@@ -24,15 +24,18 @@
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 46
+   "italy": 29
   },
-  "source_errors": {},
+  "source_errors": {
+   "aifa_news": "ReadTimeout: ",
+   "aifa_press": "ReadTimeout: "
+  },
   "alerts_error": null,
   "alerts_discarded": [],
-  "alerts_attempt": "2026-11-10T13:27:36.302777"
+  "alerts_attempt": "2026-11-11T12:42:25.672495"
  },
  "signals": {
-  "generated_at": "2026-11-10T13:27:24.721527",
+  "generated_at": "2026-11-11T12:42:14.305256",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -199,18 +202,39 @@
   ],
   "italy": [
    {
-    "title": "Chiarimenti sull’utilizzo delle fonti bibliografiche dei materiali promozionali dei medicinali",
+    "title": "MINISTERO DELLA SALUTE - DECRETO 13 ottobre 2026",
     "date": "2026-11-10",
-    "url": "https://www.aifa.gov.it/-/chiarimenti-utilizzo-fonti-bibliografiche-materiali-promozionali-medicinali",
-    "source": "AIFA – Notizie",
-    "summary": "Il Documento è stato redatto dall’Ufficio Informazione sui Medicinali e Vigilanza sulla Pubblicità (UIMVP) con l’obiettivo di fornire alle Aziende alcuni chiarimenti in merito all’utilizzo delle fonti bibliografiche all’interno dei materiali promozionali."
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05853/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica del decreto 14 gennaio 2025, con il quale e' stato istituito il Tavolo settoriale nell'ambito sanitario al fine di assicurare l'attuazione della direttiva (UE) 2022/2025. (26A05853)"
    },
    {
-    "title": "Proroga autorizzazione transitoria all’uso di apteni per patch test in assenza di alternative cliniche in commercio",
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
     "date": "2026-11-10",
-    "url": "https://www.aifa.gov.it/-/proroga-autorizzazione-transitoria-uso-apteni-patch-test-assenza-alternative-cliniche-in-commercio",
-    "source": "AIFA – Notizie",
-    "summary": "Pubblicata la Determina DTS n. 60/2026 del 5 novembre 2026 che proroga di ulteriori 36 mesi il termine fissato al 16 Novembre 2026 della Determina DG n. 442 del 13 Novembre 2023."
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05827/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Depakin» (26A05827)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-10",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05828/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Nasonex» (26A05828)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-10",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05829/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Congescor» (26A05829)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-10",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05830/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Congescor» (26A05830)"
    },
    {
     "title": "La qualità dell’aria nelle strutture sanitarie deve essere parte della prevenzione: all’Iss la terza Conferenza europea",
@@ -218,34 +242,6 @@
     "url": "https://www.iss.it/-/la-qualit%C3%A0-dell-aria-nelle-strutture-sanitarie-deve-essere-parte-della-prevenzione-all-iss-la-terza-conferenza-europea",
     "source": "ISS – Comunicati stampa",
     "summary": "A Roma esperti e decisori a confronto per portare la qualità dell’aria indoor al centro della prevenzione e delle politiche sanitarie. Il percorso internazionale partito nel 2023 punta al 2028, con la presentazione di una risoluzione alla World Health Assembly La qualità dell’ari"
-   },
-   {
-    "title": "MINISTERO DELLA SALUTE - DECRETO 20 ottobre 2026",
-    "date": "2026-11-09",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/09/26A05848/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Conferma del riconoscimento del carattere scientifico dell'IRCCS di diritto privato «MultiMedica S.p.a.», in Milano, nell'area tematica di afferenza «cardiologia-pneumologia». (26A05848)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-09",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/09/26A05802/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Proroga dell'implementazione degli stampati del medicinale per uso umano, a base di magaldrato, «Riopan» (26A05802)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-09",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/09/26A05820/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di macitentan, «Macitentan Reig Jofre». (26A05820)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-09",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/09/26A05822/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Rinnovo dell'autorizzazione all'immissione in commercio del medicinale per uso umano, a base di rosuvastatina e ezetimibe, «Maoris». (26A05822)"
    },
    {
     "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
@@ -262,55 +258,6 @@
     "summary": "AGENAS ha pubblicato l’aggiornamento all’anno 2025 del monitoraggio della Mobilità Sanitaria Interregionale, con l’analisi delle principali dinamiche dei flussi di pazienti nel nostro Paese, riferite sia ai ricoveri ospedalieri sia alla specialistica ambulatoriale."
    },
    {
-    "title": "Spesa farmaceutica gennaio-aprile 2026: monitoraggio AIFA",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/spesa-farmaceutica-gennaio-aprile-2026-monitoraggio-aifa",
-    "source": "AIFA – Notizie",
-    "summary": "Nei primi quattro mesi del 2026 la spesa farmaceutica pubblica complessiva (convenzionata, acquisti diretti e ossigeno) ammonta a 9.036,9 milioni di euro, registrando un’incidenza sul FSN (valore provvisorio 2026 comunicato dal MdS con nota prot. n. 12829 del 27 luglio 2026) pari"
-   },
-   {
-    "title": "Ordine del giorno riunione Commissione Scientifica e Economica del Farmaco (CSE)",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/ordine-giorno-riunione-commissione-scientifica-economica-farmaco-cse-1",
-    "source": "AIFA – Notizie",
-    "summary": "L'Agenzia Italiana del Farmaco rende disponibile l'ordine del giorno dei lavori della riunione della Commissione Scientifica e Economica (CSE) del 9-13 novembre 2026."
-   },
-   {
-    "title": "Aggiornamento Registro di monitoraggio LUNSUMIO",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-lunsumio",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 06/11/2026, è stato aggiornato il Registro di Lunsumio (mosunetuzumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Aggiornamento Registri di monitoraggio TEVIMBRA",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registri-di-monitoraggio-tevimbra",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 06/11/2026, sono stati aggiornati i Registri di Tevimbra (tislelizumab) dedicati al monitoraggio di specifiche indicazioni terapeutiche."
-   },
-   {
-    "title": "Aggiornamento Registro di monitoraggio Rybrevant (amivantamab) carcinoma polmonare non a piccole cellule (NSCLC)",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-rybrevant-amivantamab-carcinoma-polmonare-non-a-piccole-cellule-nsclc-",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di Rybrevant (amivantamab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Aggiornamento Registro di monitoraggio Imfinzi neoadiuvante/adiuvante NSCLC",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-imfinzi-neoadiuvante/adiuvante-nsclc",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di IMFINZI (durvalumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Aggiornamento Registri di monitoraggio Enhertu",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registri-di-monitoraggio-enhertu",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 06/11/2026, sono stati aggiornati i Registri di Enhertu (trastuzumab deruxtecan) dedicati al monitoraggio di specifiche indicazioni terapeutiche."
-   },
-   {
     "title": "Telemedicina: AGENAS pubblica il documento \"Modello operativo per il rinnovo dei Piani Terapeutici in televisita\"",
     "date": "2026-11-06",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2916-telemedicina-agenas-pubblica-il-documento-modello-operativo-per-il-rinnovo-dei-piani-terapeutici-in-televisita",
@@ -322,7 +269,7 @@
     "date": "2026-11-06",
     "url": "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
     "source": "ISS – Comunicati stampa",
-    "summary": "Edited 06/11/2026 Dal 1 gennaio al 03 novembre 2026 al sistema di sorveglianza nazionale coordinata dall’ISS risultano - 376 casi confermati di Dengue (76 autoctoni mentre tutti gli altri associati a viaggi all’estero, 51% con luogo di esposizione Maldive, nessun decesso). I casi"
+    "summary": "Dal 1 gennaio al 03 novembre 2026 al sistema di sorveglianza nazionale coordinata dall’ISS risultano - 376 casi confermati di Dengue (76 autoctoni mentre tutti gli altri associati a viaggi all’estero, 51% con luogo di esposizione Maldive, nessun decesso). I casi autoctoni sono ri"
    },
    {
     "title": "Bollettino 183 fase 3",
@@ -337,6 +284,62 @@
     "url": "https://www.iss.it/-/european-laboratory-day-i-laboratori-europei-al-servizio-della-salute-pubblica",
     "source": "ISS – Comunicati stampa",
     "summary": "Oggi, 5 novembre, si celebra la Giornata europea dei laboratori (European Laboratory Day). Per l’occasione, il Centro europeo per la prevenzione e il controllo delle malattie (ECDC) presenta nuove risorse per valorizzare il contributo dei laboratori di riferimento europei nella p"
+   },
+   {
+    "title": "AGENAS 4 novembre 2026 - A Roma il primo Infoday del Programma Nazionale HTA Dispositivi Medici 2026-2028",
+    "date": "2026-11-02",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2914-agenas-programma-nazionale-hta-dispositivi-medici-2026-2028-4-novembre-2026-primo-infoday-a-roma",
+    "source": "AGENAS – Notizie",
+    "summary": "Il primo InfoDay si è svolto mercoledì 4 novembre 2026, presso la Sala Tirreno della Regione Lazio, a Roma."
+   },
+   {
+    "title": "Bollettino 182 fase 3",
+    "date": "2026-10-30",
+    "url": "https://www.iss.it/-/bollettino-182-fase-3",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Impatto • Al 28/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (375 ricoverati), stabile rispetto alla settimana precedente (0,6% al 21/10/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (13 ricoverati), risp"
+   },
+   {
+    "title": "RaraMente n. 118",
+    "date": "2026-10-30",
+    "url": "https://www.iss.it/-/raramente-n.-118",
+    "source": "ISS – Comunicati stampa",
+    "summary": "In questo numero : Nonostante i progressi in ambito europeo (Ern, Orphanet, Erdera, Hta, dati sanitari), le iniziative sulle malattie rare restano frammentate e persistono disuguaglianze. Eurordis propone alla Commissione Ue un Piano d'Azione unico per connettere le politiche esi"
+   },
+   {
+    "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
+    "date": "2026-10-29",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2913-programma-nazionale-hta-dispositivi-medici-2026-2028-agenas-promuove-cinque-infoday-territoriali",
+    "source": "AGENAS – Notizie",
+    "summary": "Al via un ciclo di incontri che apre un percorso nazionale di accompagnamento all’attuazione del Programma Nazionale HTA Dispositivi Medici. Il primo appuntamento si terrà a a Roma il 4 novembre 2026."
+   },
+   {
+    "title": "Agenas istituisce l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore",
+    "date": "2026-10-26",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2911-agenas-istituisce-l%E2%80%99osservatorio-per-il-monitoraggio-e-l%E2%80%99implementazione-della-rete-di-cure-palliative-e-terapia-del-dolore",
+    "source": "AGENAS – Notizie",
+    "summary": "Agenas con Delibera del Direttore Generale n°334 del 14 ottobre 2026, ha istituito l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore, organismo deputato ad accompagnare Regioni e Province Autonome nel consolidamento di una r"
+   },
+   {
+    "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
+    "date": "2026-10-22",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2816-online-il-bollettino-trimestrale-agenas-sul-monitoraggio-delle-liste-di-attesa",
+    "source": "AGENAS – Notizie",
+    "summary": "Oltre due milioni di prenotazioni in più nei primi nove mesi del 2026 rispetto allo stesso periodo del 2025 e un miglioramento del rispetto dei tempi massimi di attesa per visite specialistiche ed esami diagnostici. Si conferma la tendenza positiva già evidenziata nel primo semes"
+   },
+   {
+    "title": "AGENAS pubblica le Linee di indirizzo per la telemedicina nei Punti nascita e in Neonatologia",
+    "date": "2026-10-16",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2814-agenas-pubblica-le-linee-di-indirizzo-per-la-telemedicina-nei-punti-nascita-e-in-neonatologia",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS pubblica il documento “ Linee di indirizzo organizzative per l’implementazione della telemedicina e l’ottimizzazione dell’assistenza ai casi più complessi nell’ambito della Rete dei Punti nascita e della Neonatologia ”."
+   },
+   {
+    "title": "Conclusi i lavori per la definizione dei Modelli di Riferimento per la definizione dei Percorsi Preventivi Diagnostici Terapeutici Assistenziali (PPDTA) su Diabete mellito, Asma grave e BPCO nell'adulto",
+    "date": "2026-10-15",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2813-conclusi-i-lavori-per-la-definizione-dei-modelli-di-riferimento-per-la-definizione-dei-percorsi-preventivi-diagnostici-terapeutici-assistenziali-ppdta-su-diabete-mellito,-asma-grave-e-bpco-nell-adulto",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS comunica il completamento dei lavori per la realizzazione dei Modelli di riferimento per la definizione di tre Percorsi Preventivi Diagnostici Terapeutici Assistenziali (PPDTA) dedicati al paziente adulto con Diabete Mellito, Asma Grave e BPCO in una prospettiva tecnico-sc"
    },
    {
     "title": "RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026",
@@ -405,7 +408,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-10T13:27:23.884980",
+   "updated_at": "2026-11-11T12:42:13.718091",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -417,7 +420,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-10T13:27:23.884980",
+   "updated_at": "2026-11-11T12:42:13.718091",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -429,7 +432,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -489,7 +492,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-10T13:27:23.884980",
+   "updated_at": "2026-11-11T12:42:13.718091",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -501,7 +504,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-10T13:27:23.884980",
+   "updated_at": "2026-11-11T12:42:13.718091",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -513,7 +516,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-10T13:27:23.884980",
+   "updated_at": "2026-11-11T12:42:13.718091",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -525,7 +528,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -678,7 +681,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-10T13:27:23.884980",
+   "updated_at": "2026-11-11T12:42:13.718091",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -2910,7 +2913,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2922,7 +2925,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2934,7 +2937,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3595,7 +3598,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3607,7 +3610,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3619,7 +3622,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-10T13:27:24.020926",
+   "updated_at": "2026-11-11T12:42:13.802869",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
   }
  ],
@@ -21197,21 +21200,21 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
    "id": "who_2026_don624",
    "title": "OMS: \"Yellow fever - WHO African Region\"",
-   "description": "OMS, Disease Outbreak News 2026-DON624 del 2026-11-06: \"Between 1 January and 12 October 2026, 67 confirmed cases, including 18 deaths, were recorded in nine countries in the Region: Burkina Faso, Cameroon, the Central African Republic, Côte d’Ivoire, Ghana, Guinea, Liberia, Nigeria and Togo.\" \"Frequent cross-border population movement, the presence of competent mosquito vectors, and uneven vaccination coverage increase the risk of further transmission and geographic spread.\"",
-   "severity": "HIGH",
+   "description": "OMS, Disease Outbreak News 2026-DON624 del 2026-11-06: \"Between 1 January and 12 October 2026, 67 confirmed cases, including 18 deaths, were recorded in nine countries in the Region: Burkina Faso, Cameroon, the Central African Republic, Côte d’Ivoire, Ghana, Guinea, Liberia, Nigeria and Togo.\" \"On 27 October 2026, WHO assessed the overall public health risk associated with the current yellow fever situation as moderate at the regional level.\"",
+   "severity": "MEDIUM",
    "entities_involved": "[]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON624 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21225,13 +21228,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON623 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
    "id": "who_middle_east_respiratory_synd",
    "title": "OMS: \"Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia\"",
-   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"The cases appear to represent sporadic infections related to zoonotic spillover rather than a single outbreak cluster.\"",
+   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"MERS is a zoonotic viral respiratory disease for which dromedary camels serve as the primary animal reservoir and two cases reported direct contact with camels while six reported no known camel exposure.\"",
    "severity": "MEDIUM",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -21239,7 +21242,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON618 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21252,8 +21255,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Automated Impella Controller codici prodotto 0042-0000-US/UK/EU/IN/CA e numeri seriali IC1014-IC1238 in inventario.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza Automated Impella Controller codici 0042-0000-US/UK/EU/IN/CA e numeri seriali elencati nel record. Consultare avviso fabbricante Abiomed.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21266,8 +21269,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Optical Controller codici prodotto 0042-0010-US/UK/EU/IN e numeri seriali IC6962-IC8541 in inventario.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza Impella Optical Controller codici 0042-0010-US/UK/EU/IN e numeri seriali elencati nel record. Consultare avviso fabbricante Abiomed.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21280,8 +21283,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Connect Optical AIC codici prodotto 0042-0040-US/UK/EU/CA e numeri seriali IC8024-IC10097 in inventario.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza Impella Connect Optical AIC codici 0042-0040-US/UK/EU/CA e numeri seriali elencati nel record. Consultare avviso fabbricante Abiomed.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21294,8 +21297,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza OmniaSecure Model 3930M lead codici 3930M74/3930M79 e numeri seriali CDD401008V-CDD404095V in inventario.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza OmniaSecure Model 3930M lead codici UDI-DI e numeri seriali elencati nel record. Consultare avviso fabbricante Medtronic.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21308,8 +21311,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M12 modello 722227 con UDI specificati in inventario e configurazione SSD installati.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza Philips Azurion 5 M12 modello 722227 con UDI elencati nel record. Consultare avviso fabbricante Philips.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21322,8 +21325,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M20 modelli 722228/722281 con UDI specificati in inventario e configurazione SSD installati.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza Philips Azurion 5 M20 modelli 722228, 722281 con UDI elencati nel record. Consultare avviso fabbricante Philips.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21336,8 +21339,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion S modello 722285 UDI (01)00884838125681(21)7 in inventario e configurazione SSD installati.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza Philips Azurion S modello 722285 con UDI elencato nel record. Consultare avviso fabbricante Philips.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   },
   {
@@ -21350,8 +21353,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 7 B20 modelli 722068/722226 con UDI specificati in inventario e configurazione SSD installati.",
-   "created_at": "2026-11-10T13:27:36.302458",
+   "recommendation": "Verificare presenza Philips Azurion 7 B20 modelli 722068, 722226 con UDI elencati nel record. Consultare avviso fabbricante Philips.",
+   "created_at": "2026-11-11T12:42:25.672174",
    "is_read": false
   }
  ]
