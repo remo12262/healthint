@@ -1,30 +1,30 @@
 {
  "version": 1,
- "exported_at": "2026-11-11T12:42:25.849697",
- "data_updated_at": "2026-11-11T12:42:25.672495",
+ "exported_at": "2026-11-12T13:45:30.170344",
+ "data_updated_at": "2026-11-12T13:45:29.987598",
  "refresh_info": {
-  "last_success": "2026-11-11T12:42:25.672495",
+  "last_success": "2026-11-12T13:45:29.987598",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 0,
-   "edges": 0,
+   "nodes": 7,
+   "edges": 11,
    "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-11-04",
    "who_outbreaks": "2026-11-06",
-   "italy": "2026-11-10"
+   "italy": "2026-11-11"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 29
+   "italy": 33
   },
   "source_errors": {
    "aifa_news": "ReadTimeout: ",
@@ -32,10 +32,10 @@
   },
   "alerts_error": null,
   "alerts_discarded": [],
-  "alerts_attempt": "2026-11-11T12:42:25.672495"
+  "alerts_attempt": "2026-11-12T13:45:29.987598"
  },
  "signals": {
-  "generated_at": "2026-11-11T12:42:14.305256",
+  "generated_at": "2026-11-12T13:45:19.212385",
   "who": [
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
@@ -202,39 +202,67 @@
   ],
   "italy": [
    {
-    "title": "MINISTERO DELLA SALUTE - DECRETO 13 ottobre 2026",
-    "date": "2026-11-10",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05853/SG",
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-11",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05844/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Modifica del decreto 14 gennaio 2025, con il quale e' stato istituito il Tavolo settoriale nell'ambito sanitario al fine di assicurare l'attuazione della direttiva (UE) 2022/2025. (26A05853)"
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di tossoide tetanico, «Tetana» (26A05844)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-10",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05827/SG",
+    "date": "2026-11-11",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05860/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Depakin» (26A05827)"
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di ruxolitinib, «Ruxolitinib G. L. Pharma». (26A05860)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-10",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05828/SG",
+    "date": "2026-11-11",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05861/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Nasonex» (26A05828)"
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di empagliflozin, «Empagliflozin Tecnigen». (26A05861)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-10",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05829/SG",
+    "date": "2026-11-11",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05863/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Congescor» (26A05829)"
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Zoely» (26A05863)"
    },
    {
     "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-10",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/10/26A05830/SG",
+    "date": "2026-11-11",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05864/SG",
     "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Congescor» (26A05830)"
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Indusil» (26A05864)"
+   },
+   {
+    "title": "AGENAS aggiorna il monitoraggio della Mobilità Sanitaria Interregionale",
+    "date": "2026-11-11",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2917-agenas-aggiorna-il-monitoraggio-della-mobilit%C3%A0-sanitaria-interregionale",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS ha pubblicato l’aggiornamento all’anno 2025 del monitoraggio della Mobilità Sanitaria Interregionale, con l’analisi delle principali dinamiche dei flussi di pazienti nel nostro Paese, riferite sia ai ricoveri ospedalieri sia alla specialistica ambulatoriale."
+   },
+   {
+    "title": "Telemedicina: AGENAS pubblica il documento \"Modello operativo per il rinnovo dei Piani Terapeutici in televisita\"",
+    "date": "2026-11-11",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2916-telemedicina-agenas-pubblica-il-documento-modello-operativo-per-il-rinnovo-dei-piani-terapeutici-in-televisita",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS ha pubblicato sulla Piattaforma Nazionale di Telemedicina (PNT) il «Modello operativo per il rinnovo dei Piani Terapeutici in televisita». Il documento serve a supportare Regioni e Aziende sanitarie nella definizione e nell’implementazione di percorsi clinico-organizzativi"
+   },
+   {
+    "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
+    "date": "2026-11-11",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
+    "source": "AGENAS – Notizie",
+    "summary": "Il 10 novembre 2026 si è tenuto il seminario “I dati della vita. Crescere, vivere, invecchiare: il valore pubblico dei dati sanitari” presso l'Auditorium AGENAS, a Roma, promosso dall'Agenzia Nazionale per i Servizi Sanitari Regionali in occasione della Giornata mondiale della sc"
+   },
+   {
+    "title": "Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota",
+    "date": "2026-11-11",
+    "url": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Si avvicina il lancio, previsto per il prossimo anno, di Epi+ – una piattaforma multilingue di sorveglianza basata sugli eventi, concepita per aiutare i Paesi a individuare e valutare le minacce emergenti per la salute pubblica – con il Centro europeo per la prevenzione e il cont"
    },
    {
     "title": "La qualità dell’aria nelle strutture sanitarie deve essere parte della prevenzione: all’Iss la terza Conferenza europea",
@@ -242,27 +270,6 @@
     "url": "https://www.iss.it/-/la-qualit%C3%A0-dell-aria-nelle-strutture-sanitarie-deve-essere-parte-della-prevenzione-all-iss-la-terza-conferenza-europea",
     "source": "ISS – Comunicati stampa",
     "summary": "A Roma esperti e decisori a confronto per portare la qualità dell’aria indoor al centro della prevenzione e delle politiche sanitarie. Il percorso internazionale partito nel 2023 punta al 2028, con la presentazione di una risoluzione alla World Health Assembly La qualità dell’ari"
-   },
-   {
-    "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
-    "date": "2026-11-09",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
-    "source": "AGENAS – Notizie",
-    "summary": "Il 10 novembre 2026 si è tenuto il seminario “I dati della vita. Crescere, vivere, invecchiare: il valore pubblico dei dati sanitari” presso l'Auditorium AGENAS, a Roma, promosso dall'Agenzia Nazionale per i Servizi Sanitari Regionali in occasione della Giornata mondiale della sc"
-   },
-   {
-    "title": "AGENAS aggiorna il monitoraggio della Mobilità Sanitaria Interregionale",
-    "date": "2026-11-09",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2917-agenas-aggiorna-il-monitoraggio-della-mobilit%C3%A0-sanitaria-interregionale",
-    "source": "AGENAS – Notizie",
-    "summary": "AGENAS ha pubblicato l’aggiornamento all’anno 2025 del monitoraggio della Mobilità Sanitaria Interregionale, con l’analisi delle principali dinamiche dei flussi di pazienti nel nostro Paese, riferite sia ai ricoveri ospedalieri sia alla specialistica ambulatoriale."
-   },
-   {
-    "title": "Telemedicina: AGENAS pubblica il documento \"Modello operativo per il rinnovo dei Piani Terapeutici in televisita\"",
-    "date": "2026-11-06",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2916-telemedicina-agenas-pubblica-il-documento-modello-operativo-per-il-rinnovo-dei-piani-terapeutici-in-televisita",
-    "source": "AGENAS – Notizie",
-    "summary": "AGENAS ha pubblicato sulla Piattaforma Nazionale di Telemedicina (PNT) il «Modello operativo per il rinnovo dei Piani Terapeutici in televisita». Il documento serve a supportare Regioni e Aziende sanitarie nella definizione e nell’implementazione di percorsi clinico-organizzativi"
    },
    {
     "title": "Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile",
@@ -298,13 +305,6 @@
     "url": "https://www.iss.it/-/bollettino-182-fase-3",
     "source": "ISS – Comunicati stampa",
     "summary": "Impatto • Al 28/10/2026 l’occupazione dei posti letto in area medica è pari a 0,6% (375 ricoverati), stabile rispetto alla settimana precedente (0,6% al 21/10/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,1% (13 ricoverati), risp"
-   },
-   {
-    "title": "RaraMente n. 118",
-    "date": "2026-10-30",
-    "url": "https://www.iss.it/-/raramente-n.-118",
-    "source": "ISS – Comunicati stampa",
-    "summary": "In questo numero : Nonostante i progressi in ambito europeo (Ern, Orphanet, Erdera, Hta, dati sanitari), le iniziative sulle malattie rare restano frammentate e persistono disuguaglianze. Eurordis propone alla Commissione Ue un Piano d'Azione unico per connettere le politiche esi"
    },
    {
     "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
@@ -396,7 +396,10 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05797/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05798/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/07/26A05799/SG",
-  "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile"
+  "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05864/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
+  "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota"
  ],
  "nodes": [
   {
@@ -408,7 +411,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-11T12:42:13.718091",
+   "updated_at": "2026-11-12T13:45:08.011458",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -420,7 +423,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-11T12:42:13.718091",
+   "updated_at": "2026-11-12T13:45:08.011458",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -432,7 +435,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -492,7 +495,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-11T12:42:13.718091",
+   "updated_at": "2026-11-12T13:45:08.011458",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -504,7 +507,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-11T12:42:13.718091",
+   "updated_at": "2026-11-12T13:45:08.011458",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -516,7 +519,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-11T12:42:13.718091",
+   "updated_at": "2026-11-12T13:45:08.011458",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -528,7 +531,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -681,7 +684,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-11T12:42:13.718091",
+   "updated_at": "2026-11-12T13:45:08.011458",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -723,17 +726,20 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "IT",
-   "description": "Agenzia Italiana del Farmaco. Autorizza e monitora farmaci in Italia.",
-   "risk_score": 10,
+   "description": "Ente regolatorio nazionale italiano per autorizzazione e controllo medicinali",
+   "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-08T11:55:40.927099",
-   "risk_basis": "Valore assegnato manualmente",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
    "italy": true,
    "aliases": [
     "Agenzia Italiana del Farmaco"
-   ]
+   ],
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
   },
   {
    "id": "ema",
@@ -757,7 +763,7 @@
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-12T13:45:18.872422",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -779,7 +785,7 @@
    "description": "Istituzione nazionale italiana promotrice di iniziative sanità pubblica cardiovascolare.",
    "risk_score": 35,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-08T11:55:40.927099",
+   "updated_at": "2026-11-12T13:45:18.872422",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Ministero della Salute",
    "website": "https://www.salute.gov.it/",
@@ -1094,11 +1100,12 @@
    "description": "Agenzia europea di prevenzione e controllo malattie che monitora rischi epidemiologici transfrontalieri.",
    "risk_score": 65,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-05T13:09:30.120507",
+   "updated_at": "2026-11-12T13:45:18.872422",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Centro europeo per la prevenzione e il controllo delle malattie",
     "ECDC - Centro Europeo per la Prevenzione e il Controllo delle Malattie",
+    "ECDC - Centro europeo per la prevenzione e il controllo delle malattie",
     "European Centre for Disease Prevention and Control"
    ],
    "full_name": "Centro europeo per la prevenzione e il controllo delle malattie",
@@ -2913,7 +2920,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2925,7 +2932,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2937,7 +2944,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3598,7 +3605,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3610,7 +3617,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3622,8 +3629,113 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-11T12:42:13.802869",
+   "updated_at": "2026-11-12T13:45:08.112119",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
+  },
+  {
+   "id": "indusil",
+   "label": "Indusil",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano con autorizzazione all'immissione in commercio revocata su rinuncia.",
+   "risk_score": 15,
+   "created_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05864/SG",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
+  },
+  {
+   "id": "trazodone_eg",
+   "label": "Trazodone EG",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "IT",
+   "description": "Medicinale per uso umano con autorizzazione revocata su rinuncia",
+   "risk_score": 35,
+   "created_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
+  },
+  {
+   "id": "eg_pharma",
+   "label": "EG - Società Italiana Generici",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "IT",
+   "description": "Titolare autorizzazione immissione in commercio del medicinale Trazodone EG",
+   "risk_score": 40,
+   "created_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
+  },
+  {
+   "id": "epi_plus",
+   "label": "Epi+",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "EU",
+   "description": "Piattaforma multilingue di sorveglianza epidemiologica basata su eventi",
+   "risk_score": 10,
+   "created_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
+  },
+  {
+   "id": "epipulse",
+   "label": "EpiPulse",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "EU",
+   "description": "Piattaforma ECDC per condivisione e discussione di segnali epidemici tra Stati",
+   "risk_score": 8,
+   "created_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
+  },
+  {
+   "id": "stati_membri_ue",
+   "label": "Stati Membri UE/SEE",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "EU",
+   "description": "Paesi partecipanti al programma pilota di sorveglianza epidemiologica",
+   "risk_score": 5,
+   "created_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
+  },
+  {
+   "id": "autorità_sanità_pubblica",
+   "label": "Autorità di Sanità Pubblica Europee",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Organismi nazionali di sanità pubblica coinvolti in Epi+",
+   "risk_score": 8,
+   "created_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-12T13:45:18.872422",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "risk_doc_date": "2026-11-11",
+   "risk_assigned_at": "2026-11-12T13:45:18.872392"
   }
  ],
  "edges": [
@@ -21186,6 +21298,160 @@
     "code_info": "1. Model Number: 722064. UDI Numbers: (01)00884838085282(21)258, (01)00884838085282(21)229, (01)00884838085282(21)291, (01)00884838085282(21)64, (01)00884838085282(21)218, (01)00884838085282(21)335, (01)00884838085282(21)161, (01)00884838085282(21)169, (01)00884838085282(21)297, (01)00884838085282(21)479, (01)00884838085282(21)190, (01)00884838085282(21)268, (01)00884838085282(21)220, (01)00884838085282(21)375, (01)00884838085282(21)173, (01)00884838085282(21)359, (01)00884838085282(21)256, (01)00884838085282(21)290, (01)00884838085282(21)502, (01)00884838085282(21)130, (01)00884838085282(21)157, (01)00884838085282(21)264, (01)00884838085282(21)60, (01)00884838085282(21)263, (01)00884838085282(21)253, (01)00884838085282(21)254, (01)00884838085282(21)280, (01)00884838085282(21)9, (01)00884838085282(21)102, (01)00884838085282(21)467, (01)00884838085282(21)421, (01)00884838085282(21)510, (01)00884838085282(21)345, (01)00884838085282(21)212, (01)00884838085282(21)266, (01)00884838085282(21)180, (01)00884838085282(21)185, (01)00884838085282(21)193, (01)00884838085282(21)214, (01)00884838085282(21)271, (01)00884838085282(21)213, (01)00884838085282(21)431, (01)00884838085282(21)246, (01)00884838085282(21)354, (01)00884838085282(21)374, (01)00884838085282(21)106, (01)00884838085282(21)58, (01)00884838085282(21)231, (01)00884838085282(21)287, (01)00884838085282(21)44, (01)00884838085282(21)176, (01)00884838085282(21)149, (01)00884838085282(21)197, (01)00884838085282(21)289, (01)00884838085282(21)288, (01)00884838085282(21)150, (01)00884838085282(21)233, (01)00884838085282(21)230, (01)00884838085282(21)380, (01)00884838085282(21)448, (01)00884838085282(21)82, (01)00884838085282(21)323, (01)00884838085282(21)35, (01)00884838085282(21)55, (01)00884838085282(21)278, (01)00884838085282(21)66, (01)00884838085282(21)45, (01)00884838085282(21)40, (01)00884838085282(21)125, (01)00884838085282(21)484, (01)00884838085282(21)36, (01)00884838085282(21)104, (01)00884838085282(21)155, (01)00884838085282(21)422, (01)00884838085282(21)132, (01)00884838085282(21)67, (01)00884838085282(21)183, (01)00884838085282(21)439, (01)00884838085282(21)446, (01)00884838085282(21)138, (01)00884838085282(21)321, (01)00884838085282(21)293, (01)00884838085282(21)292, (01)00884838085282(21)379, (01)00884838085282(21)151, (01)00884838085282(21)237, (01)00884838085282(21)5, (01)00884838085282(21)520, (01)00884838085282(21)519, (01)00884838085282(21)208, (01)00884838085282(21)462, (01)00884838085282(21)342, (01)00884838085282(21)57, (01)00884838085282(21)222, (01)00884838085282(21)391, (01)00884838085282(21)98, (01)00884838085282(21)441, (01)00884838085282(21)320, (01)00884838085282(21)494, (01)00884838085282(21)65, (01)00884838085282(21)87, (01)00884838085282(21)109, (01)00884838085282(21)75, (01)00884838085282(21)46, (01)00884838085282(21)101, (01)00884838085282(21)311, (01)00884838085282(21)442, (01)00884838085282(21)485, (01)00884838085282(21)121, (01)00884838085282(21)68, (01)00884838085282(21)384, (01)00884838085282(21)91, (01)00884838085282(21)252, (01)00884838085282(21)74, (01)00884838085282(21)73, (01)00884838085282(21)124, (01)00884838085282(21)191, (01)00884838085282(21)122, (01)00884838085282(21)119, (01)00884838085282(21)309, (01)00884838085282(21)400, (01)00884838085282(21)251, (01)00884838085282(21)480, (01)00884838085282(21)387, (01)00884838085282(21)111, (01)00884838085282(21)11, (01)00884838085282(21)147, (01)00884838085282(21)509, (01)00884838085282(21)454, (01)00884838085282(21)478, (01)00884838085282(21)262, (01)00884838085282(21)491, (01)00884838085282(21)133, (01)00884838085282(21)476, (01)00884838085282(21)337, (01)00884838085282(21)275, (01)00884838085282(21)468, (01)00884838085282(21)412, (01)00884838085282(21)508, (01)00884838085282(21)414, (01)00884838085282(21)405, (01)00884838085282(21)396, (01)00884838085282(21)247, (01)00884838085282(21)310, (01)00884838085282(21)517, (01)00884838085282(21)394, (01)00884838085282(21)432, (01)00884838085282(21)504, (01)00884838085282(21)426, (01)00884838085282(21)304, (01)00884838085282(21)469, (01)00884838085282(21)340, (01)00884838085282(21)393, (01)00884838085282(21)343, (01)00884838085282(21)458, (01)00884838085282(21)322, (01)00884838085282(21)444, (01)00884838085282(21)395, (01)00884838085282(21)385, (01)00884838085282(21)505, (01)00884838085282(21)472, (01)00884838085282(21)514, (01)00884838085282(21)236, (01)00884838085282(21)471, (01)00884838085282(21)401, (01)00884838085282(21)234, (01)00884838085282(21)503, (01)00884838085282(21)407, (01)00884838085282(21)470, (01)00884838085282(21)498, (01)00884838085282(21)413, (01)00884838085282(21)440, (01)00884838085282(21)463, (01)00884838085282(21)330, (01)00884838085282(21)475, (01)00884838085282(21)473, (01)00884838085282(21)501, (01)00884838085282(21)308, (01)00884838085282(21)225, (01)00884838085282(21)483, (01)00884838085282(21)474, (01)00884838085282(21)344, (01)00884838085282(21)389, (01)00884838085282(21)492, (01)00884838085282(21)324, (01)00884838085282(21)265, (01)00884838085282(21)235, (01)00884838085282(21)120, (01)00884838085282(21)496, (01)00884838085282(21)427, (01)00884838085282(21)341, (01)00884838085282(21)100, (01)00884838085282(21)123, (01)00884838085282(21)177, (01)00884838085282(21)250, (01)00884838085282(21)174, (01)00884838085282(21)452, (01)00884838085282(21)168, (01)00884838085282(21)447, (01)00884838085282(21)182, (01)00884838085282(21)198, (01)00884838085282(21)206, (01)00884838085282(21)312, (01)00884838085282(21)403, (01)00884838085282(21)386, (01)00884838085282(21)397, (01)00884838085282(21)500, (01)00884838085282(21)226, (01)00884838085282(21)408, (01)00884838085282(21)43, (01)00884838085282(21)381, (01)00884838085282(21)488, (01)00884838085282(21)416, (01)00884838085282(21)80, (01)00884838085282(21)12, (01)00884838085282(21)404, (01)00884838085282(21)285, (01)00884838085282(21)515, (01)00884838085282(21)449, (01)00884838085282(21)477, (01)00884838085282(21)338, (01)00884838085282(21)215, (01)00884838085282(21)164, (01)00884838085282(21)114, (01)00884838085282(21)144, (01)00884838085282(21)327, (01)00884838085282(21)227, (01)00884838085282(21)295, (01)00884838085282(21)294, (01)00884838085282(21)319, (01)00884838085282(21)241, (01)00884838085282(21)126, (01)00884838085282(21)92, (01)00884838085282(21)284, (01)00884838085282(21)175, (01)00884838085282(21)419, (01)00884838085282(21)372, (01)00884838085282(21)429, (01)00884838085282(21)296, (01)00884838085282(21)172, (01)00884838085282(21)283, (01)00884838085282(21)357, (01)00884838085282(21)306, (01)00884838085282(21)437, (01)00884838085282(21)210, (01)00884838085282(21)315, (01)00884838085282(21)134, (01)00884838085282(21)255, (01)00884838085282(21)207, (01)00884838085282(21)192, (01)00884838085282(21)116, (01)00884838085282(21)221, (01)00884838085282(21)189, (01)00884838085282(21)117, (01)00884838085282(21)313, (01)00884838085282(21)187, (01)00884838085282(21)166, (01)00884838085282(21)96, (01)00884838085282(21)135, (01)00884838085282(21)108. Serial Numbers: 258, 229, 291, 64, 218, 335, 161, 169, 297, 479, 190, 268, 220, 375, 173, 359, 256, 290, 502, 130, 157, 264, 60, 263, 253, 254, 280, 9, 102, 467, 421, 510, 345, 212, 266, 180, 185, 193, 214, 271, 213, 431, 246, 354, 374, 106, 58, 231, 287, 44, 176, 149, 197, 289, 288, 150, 233, 230, 380, 448, 82, 323, 35, 55, 278, 66, 45, 40, 125, 484, 36, 104, 155, 422, 132, 67, 183, 439, 446, 138, 321, 293, 292, 379, 151, 237, 5, 520, 519, 208, 462, 342, 57, 222, 391, 98, 441, 320, 494, 65, 87, 109, 75, 46, 101, 311, 442, 485, 121, 68, 384, 91, 252, 74, 73, 124, 191, 122, 119, 309, 400, 251, 480, 387, 111, 11, 147, 509, 454, 478, 262, 491, 133, 476, 337, 275, 468, 412, 508, 414, 405, 396, 247, 310, 517, 394, 432, 504, 426, 304, 469, 340, 393, 343, 458, 322, 444, 395, 385, 505, 472, 514, 236, 471, 401, 234, 503, 407, 470, 498, 413, 440, 463, 330, 475, 473, 501, 308, 225, 483, 474, 344, 389, 492, 324, 265, 235, 120, 496, 427, 341, 100, 123, 177, 250, 174, 452, 168, 447, 182, 198, 206, 312, 403, 386, 397, 500, 226, 408, 43, 381, 488, 416, 80, 12, 404, 285, 515, 449, 477, 338, 215, 164, 114, 144, 327, 227, 295, 294, 319, 241, 126, 92, 284, 175, 419, 372, 429, 296, 172, 283, 357, 306, 437, 210, 315, 134, 255, 207, 192, 116, 221, 189, 117, 313, 187, 166, 96, 135, 108.   2. Model Number: 722222. UDI Numbers: (01)00884838099210(21)226, (01)00884838099210(21)55, (01)00884838099210(21)44, (01)00884838099210(21)262, (01)00884838099210(21)37, (01)00884838099210(21)318, (01)00884838099210(21)395, (01)00884838099210(21)269, (01)00884838099210(21)304, (01)00884838099210(21)316, (01)00884838099210(21)307, (01)00884838099210(21)320, (01)00884838099210(21)344, (01)00884838099210(21)343, (01)00884838099210(21)230, (01)00884838099210(21)340, (01)00884838099210(21)346, (01)00884838099210(21)174, (01)00884838099210(21)338, (01)00884838099210(21)345, (01)00884838099210(21)362, (01)00884838099210(21)323, (01)00884838099210(21)336, (01)00884838099210(21)339, (01)00884838099210(21)308, (01)00884838099210(21)182, (01)00884838099210(21)390, (01)00884838099210(21)56, (01)00884838099210(21)312, (01)00884838099210(21)368, (01)00884838099210(21)172, (01)00884838099210(21)151, (01)00884838099210(21)138, (01)00884838099210(21)141, (01)00884838099210(21)384, (01)00884838099210(21)224, (01)00884838099210(21)386, (01)00884838099210(21)383, (01)00884838099210(21)351, (01)00884838099210(21)88, (01)00884838099210(21)210, (01)00884838099210(21)372, (01)00884838099210(21)89, (01)00884838099210(21)373, (01)00884838099210(21)361, (01)00884838099210(21)102, (01)00884838099210(21)118, (01)00884838099210(21)119, (01)00884838099210(21)209, (01)00884838099210(21)331, (01)00884838099210(21)145, (01)00884838099210(21)108, (01)00884838099210(21)48, (01)00884838099210(21)4, (01)00884838099210(21)305, (01)00884838099210(21)80, (01)00884838099210(21)83, (01)00884838099210(21)47, (01)00884838099210(21)222, (01)00884838099210(21)389, (01)00884838099210(21)134, (01)00884838099210(21)369, (01)00884838099210(21)266, (01)00884838099210(21)245, (01)00884838099210(21)335, (01)00884838099210(21)11, (01)00884838099210(21)66, (01)00884838099210(21)50, (01)00884838099210(21)353, (01)00884838099210(21)278, (01)00884838099210(21)82, (01)00884838099210(21)76, (01)00884838099210(21)319, (01)00884838099210(21)106, (01)00884838099210(21)287, (01)00884838099210(21)178, (01)00884838099210(21)117, (01)00884838099210(21)213, (01)00884838099210(21)215, (01)00884838099210(21)104, (01)00884838099210(21)142, (01)00884838099210(21)105, (01)00884838099210(21)251, (01)00884838099210(21)252, (01)00884838099210(21)250, (01)00884838099210(21)183, (01)00884838099210(21)375, (01)00884838099210(21)228, (01)00884838099210(21)322, (01)00884838099210(21)189, (01)00884838099210(21)364, (01)00884838099210(21)333, (01)00884838099210(21)190, (01)00884838099210(21)169, (01)00884838099210(21)219, (01)00884838099210(21)282, (01)00884838099210(21)225, (01)00884838099210(21)166, (01)00884838099210(21)161, (01)00884838099210(21)16, (01)00884838099210(21)396, (01)00884838099210(21)370, (01)00884838099210(21)374, (01)00884838099210(21)115, (01)00884838099210(21)54, (01)00884838099210(21)173, (01)00884838099210(21)90, (01)00884838099210(21)13, (01)00884838099210(21)288, (01)00884838099210(21)289, (01)00884838099210(21)294, (01)00884838099210(21)291, (01)00884838099210(21)292, (01)00884838099210(21)290, (01)00884838099210(21)295, (01)00884838099210(21)186, (01)00884838099210(21)181, (01)00884838099210(21)315, (01)00884838099210(21)354, (01)00884838099210(21)184, (01)00884838099210(21)180, (01)00884838099210(21)284, (01)00884838099210(21)214, (01)00884838099210(21)276, (01)00884838099210(21)116, (01)00884838099210(21)73, (01)00884838099210(21)157, (01)00884838099210(21)135, (01)00884838099210(21)159, (01)00884838099210(21)158, (01)00884838099210(21)78, (01)00884838099210(21)125, (01)00884838099210(21)218, (01)00884838099210(21)126. Serial Numbers: 226, 55, 44, 262, 37, 318, 395, 269, 304, 316, 307, 320, 344, 343, 230, 340, 346, 174, 338, 345, 362, 323, 336, 339, 308, 182, 390, 56, 312, 368, 172, 151, 138, 141, 384, 224, 386, 383, 351, 88, 210, 372, 89, 373, 361, 102, 118, 119, 209, 331, 145, 108, 48, 4, 305, 80, 83, 47, 222, 389, 134, 369, 266, 245, 335, 11, 66, 50, 353, 278, 82, 76, 319, 106, 287, 178, 117, 213, 215, 104, 142, 105, 251, 252, 250, 183, 375, 228, 322, 189, 364, 333, 190, 169, 219, 282, 225, 166, 161, 16, 396, 370, 374, 115, 54, 173, 90, 13, 288, 289, 294, 291, 292, 290, 295, 186, 181, 315, 354, 184, 180, 284, 214, 276, 116, 73, 157, 135, 159, 158, 78, 125, 218, 126.  3. Model Number: 722280. UDI Numbers: (01)00884838103276(21)43, (01)00884838103276(21)179, (01)00884838103276(21)229, (01)00884838103276(21)249, (01)00884838103276(21)65, (01)00884838103276(21)76, (01)00884838103276(21)232, (01)00884838103276(21)113, (01)00884838103276(21)167, (01)00884838103276(21)290, (01)00884838103276(21)165, (01)00884838103276(21)80, (01)00884838103276(21)128, (01)00884838103276(21)278, (01)00884838103276(21)44, (01)00884838103276(21)240, (01)00884838103276(21)246, (01)00884838103276(21)295, (01)00884838103276(21)66, (01)00884838103276(21)175, (01)00884838103276(21)34, (01)00884838103276(21)79, (01)00884838103276(21)130, (01)00884838103276(21)48, (01)00884838103276(21)52, (01)00884838103276(21)141, (01)00884838103276(21)131, (01)00884838103276(21)189, (01)00884838103276(21)223, (01)00884838103276(21)87, (01)00884838103276(21)139, (01)00884838103276(21)259, (01)00884838103276(21)218, (01)00884838103276(21)188, (01)00884838103276(21)30, (01)00884838103276(21)96, (01)00884838103276(21)171, (01)00884838103276(21)118, (01)00884838103276(21)280, (01)00884838103276(21)21, (01)00884838103276(21)284, (01)00884838103276(21)220, (01)00884838103276(21)133, (01)00884838103276(21)38, (01)00884838103276(21)243, (01)00884838103276(21)69, (01)00884838103276(21)210, (01)00884838103276(21)127, (01)00884838103276(21)222, (01)00884838103276(21)144, (01)00884838103276(21)142, (01)00884838103276(21)143, (01)00884838103276(21)198, (01)00884838103276(21)253, (01)00884838103276(21)71, (01)00884838103276(21)241, (01)00884838103276(21)152, (01)00884838103276(21)247, (01)00884838103276(21)17, (01)00884838103276(21)260, (01)00884838103276(21)208, (01)00884838103276(21)46, (01)00884838103276(21)273, (01)00884838103276(21)283, (01)00884838103276(21)235, (01)00884838103276(21)234, (01)00884838103276(21)91, (01)00884838103276(21)277, (01)00884838103276(21)276, (01)00884838103276(21)106, (01)00884838103276(21)258, (01)00884838103276(21)120, (01)00884838103276(21)54, (01)00884838103276(21)216, (01)00884838103276(21)19, (01)00884838103276(21)93, (01)00884838103276(21)24, (01)00884838103276(21)129, (01)00884838103276(21)219, (01)00884838103276(21)88, (01)00884838103276(21)86, (01)00884838103276(21)170, (01)00884838103276(21)102, (01)00884838103276(21)287, (01)00884838103276(21)39, (01)00884838103276(21)99, (01)00884838103276(21)47, (01)00884838103276(21)101, (01)00884838103276(21)42, (01)00884838103276(21)33, (01)00884838103276(21)250, (01)00884838103276(21)239, (01)00884838103276(21)248, (01)00884838103276(21)108, (01)00884838103276(21)119, (01)00884838103276(21)205, (01)00884838103276(21)63, (01)00884838103276(21)261, (01)00884838103276(21)255, (01)00884838103276(21)212, (01)00884838103276(21)84, (01)00884838103276(21)145, (01)00884838103276(21)221, (01)00884838103276(21)36, (01)00884838103276(21)59, (01)00884838103276(21)196, (01)00884838103276(21)110, (01)00884838103276(21)199, (01)00884838103276(21)264, (01)00884838103276(21)140, (01)00884838103276(21)68, (01)00884838103276(21)117, (01)00884838103276(21)257, (01)00884838103276(21)286, (01)00884838103276(21)60, (01)00884838103276(21)103, (01)00884838103276(21)160, (01)00884838103276(21)81, (01)00884838103276(21)114, (01)00884838103276(21)137, (01)00884838103276(21)58, (01)00884838103276(21)35, (01)00884838103276(21)83, (01)00884838103276(21)22, (01)00884838103276(21)94. Serial Numbers: 43, 179, 229, 249, 65, 76, 232, 113, 167, 290, 165, 80, 128, 278, 44, 240, 246, 295, 66, 175, 34, 79, 130, 48, 52, 141, 131, 189, 223, 87, 139, 259, 218, 188, 30, 96, 171, 118, 280, 21, 284, 220, 133, 38, 243, 69, 210, 127, 222, 144, 142, 143, 198, 253, 71, 241, 152, 247, 17, 260, 208, 46, 273, 283, 235, 234, 91, 277, 276, 106, 258, 120, 54, 216, 19, 93, 24, 129, 219, 88, 86, 170, 102, 287, 39, 99, 47, 101, 42, 33, 250, 239, 248, 108, 119, 205, 63, 261, 255, 212, 84, 145, 221, 36, 59, 196, 110, 199, 264, 140, 68, 117, 257, 286, 60, 103, 160, 81, 114, 137, 58, 35, 83, 22, 94.",
     "more_code_info": ""
    }
+  },
+  {
+   "id": "aifa_indusil_REGOLA",
+   "source": "aifa",
+   "target": "indusil",
+   "type": "REGOLA",
+   "fact": "AIFA ha revocato l'autorizzazione all'immissione in commercio di Indusil su rinuncia.",
+   "risk_score": 10,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05864/SG",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05864/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_trazodone_eg_REGOLA",
+   "source": "aifa",
+   "target": "trazodone_eg",
+   "type": "REGOLA",
+   "fact": "AIFA autorizza e controlla immissione in commercio del medicinale Trazodone EG",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_eg_pharma_REVOCA_AUTORIZZAZIONE",
+   "source": "aifa",
+   "target": "eg_pharma",
+   "type": "REVOCA_AUTORIZZAZIONE",
+   "fact": "AIFA revoca autorizzazione su rinuncia del titolare autorizzazione EG",
+   "risk_score": 45,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "eg_pharma_trazodone_eg_FORNISCE",
+   "source": "eg_pharma",
+   "target": "trazodone_eg",
+   "type": "FORNISCE",
+   "fact": "EG titolare autorizzazione medicinale Trazodone EG revocato",
+   "risk_score": 35,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "ecdc_epi_plus_FINANZIA",
+   "source": "ecdc",
+   "target": "epi_plus",
+   "type": "FINANZIA",
+   "fact": "ECDC ha sviluppato e finanzia la piattaforma Epi+ per la sorveglianza epidemiologica",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
+   }
+  },
+  {
+   "id": "iss_epi_plus_COLLABORA_CON",
+   "source": "iss",
+   "target": "epi_plus",
+   "type": "COLLABORA_CON",
+   "fact": "ISS collabora con ECDC nella formazione e implementazione di Epi+ in Italia",
+   "risk_score": 12,
+   "source_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
+   }
+  },
+  {
+   "id": "ecdc_stati_membri_ue_COORDINA",
+   "source": "ecdc",
+   "target": "stati_membri_ue",
+   "type": "COORDINA",
+   "fact": "ECDC coordina sviluppo e implementazione di Epi+ con gli Stati membri UE/SEE",
+   "risk_score": 10,
+   "source_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
+   }
+  },
+  {
+   "id": "epi_plus_epipulse_COLLABORA_CON",
+   "source": "epi_plus",
+   "target": "epipulse",
+   "type": "COLLABORA_CON",
+   "fact": "Epi+ è interoperabile e integra la piattaforma EpiPulse dell'ECDC per condivisione segnali",
+   "risk_score": 8,
+   "source_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
+   }
+  },
+  {
+   "id": "iss_autorità_sanità_pubblica_REGOLA",
+   "source": "iss",
+   "target": "autorità_sanità_pubblica",
+   "type": "REGOLA",
+   "fact": "ISS coordina le autorità di sanità pubblica italiane nella sorveglianza epidemiologica",
+   "risk_score": 10,
+   "source_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
+   }
+  },
+  {
+   "id": "ecdc_autorità_sanità_pubblica_FORNISCE",
+   "source": "ecdc",
+   "target": "autorità_sanità_pubblica",
+   "type": "FORNISCE",
+   "fact": "ECDC fornisce codice sorgente di Epi+ alle autorità sanitarie europee per adattamento locale",
+   "risk_score": 12,
+   "source_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "date": null,
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
+   }
+  },
+  {
+   "id": "iss_ecdc_COLLABORA_CON",
+   "source": "iss",
+   "target": "ecdc",
+   "type": "COLLABORA_CON",
+   "fact": "ISS organizza corso formazione con ECDC per 40 epidemiologi italiani su Epi+",
+   "risk_score": 8,
+   "source_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+   "date": "2024",
+   "created_at": "2026-11-12T13:45:18.903233",
+   "doc_titles": {
+    "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
+   }
   }
  ],
  "alerts": [
@@ -21200,7 +21466,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21214,7 +21480,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON624 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21228,13 +21494,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON623 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
    "id": "who_middle_east_respiratory_synd",
    "title": "OMS: \"Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia\"",
-   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"MERS is a zoonotic viral respiratory disease for which dromedary camels serve as the primary animal reservoir and two cases reported direct contact with camels while six reported no known camel exposure.\"",
+   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"The cases appear to represent sporadic infections related to zoonotic spillover rather than a single outbreak cluster.\"",
    "severity": "MEDIUM",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -21242,7 +21508,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON618 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21255,8 +21521,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Automated Impella Controller codici 0042-0000-US/UK/EU/IN/CA e numeri seriali elencati nel record. Consultare avviso fabbricante Abiomed.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare inventario per product code 0042-0000-US/UK/EU/IN/CA e serial number IC1014-IC1238. Consultare avviso ufficiale Abiomed.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21269,8 +21535,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Optical Controller codici 0042-0010-US/UK/EU/IN e numeri seriali elencati nel record. Consultare avviso fabbricante Abiomed.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare inventario per product code 0042-0010-US/UK/EU/IN e serial number IC6962-IC8335. Consultare avviso ufficiale Abiomed.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21283,8 +21549,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Connect Optical AIC codici 0042-0040-US/UK/EU/CA e numeri seriali elencati nel record. Consultare avviso fabbricante Abiomed.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare inventario per product code 0042-0040-US/UK/EU/CA e serial number IC8024-IC10097. Consultare avviso ufficiale Abiomed.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21297,8 +21563,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza OmniaSecure Model 3930M lead codici UDI-DI e numeri seriali elencati nel record. Consultare avviso fabbricante Medtronic.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare presenza modello 3930M74/3930M79 con UDI-DI e serial number CDD401008V-CDD404095V. Consultare avviso ufficiale Medtronic.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21311,8 +21577,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M12 modello 722227 con UDI elencati nel record. Consultare avviso fabbricante Philips.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare inventario Philips Azurion 5 M12 modello 722227 con UDI elencati. Consultare avviso ufficiale Philips.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21325,8 +21591,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M20 modelli 722228, 722281 con UDI elencati nel record. Consultare avviso fabbricante Philips.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare inventario Philips Azurion 5 M20 modelli 722228/722281 con UDI elencati. Consultare avviso ufficiale Philips.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21339,8 +21605,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion S modello 722285 con UDI elencato nel record. Consultare avviso fabbricante Philips.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare inventario Philips Azurion S modello 722285 con UDI (01)00884838125681(21)7. Consultare avviso ufficiale Philips.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   },
   {
@@ -21353,8 +21619,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 7 B20 modelli 722068, 722226 con UDI elencati nel record. Consultare avviso fabbricante Philips.",
-   "created_at": "2026-11-11T12:42:25.672174",
+   "recommendation": "Verificare inventario Philips Azurion 7 B20 modelli 722068/722226 con UDI elencati. Consultare avviso ufficiale Philips.",
+   "created_at": "2026-11-12T13:45:29.987280",
    "is_read": false
   }
  ]
