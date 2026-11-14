@@ -1,41 +1,49 @@
 {
  "version": 1,
- "exported_at": "2026-11-13T13:03:24.843270",
- "data_updated_at": "2026-11-13T13:03:24.667268",
+ "exported_at": "2026-11-14T12:08:38.783597",
+ "data_updated_at": "2026-11-14T12:08:38.642211",
  "refresh_info": {
-  "last_success": "2026-11-13T13:03:24.667268",
+  "last_success": "2026-11-14T12:08:38.642211",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "italy"
+   "italy",
+   "who_outbreaks"
   ],
   "new": {
-   "nodes": 0,
-   "edges": 0,
-   "alerts": 0
+   "nodes": 8,
+   "edges": 11,
+   "alerts": 1
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-11-04",
-   "who_outbreaks": "2026-11-06",
-   "italy": "2026-11-13"
+   "who_outbreaks": "2026-11-13",
+   "italy": "2026-11-14"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 34
+   "italy": 35
   },
   "source_errors": {
    "iss_press": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)"
   },
   "alerts_error": null,
-  "alerts_discarded": [],
-  "alerts_attempt": "2026-11-13T13:03:24.667268"
+  "alerts_discarded": [
+   "citazione non presente nel documento 2026-DON625: 'The high-level transmission in the Democratic Republic of the Congo indicates a continued need for readiness in the regi'"
+  ],
+  "alerts_attempt": "2026-11-14T12:08:38.642211"
  },
  "signals": {
-  "generated_at": "2026-11-13T13:03:13.615232",
+  "generated_at": "2026-11-14T12:08:29.330463",
   "who": [
+   {
+    "title": "Middle East respiratory syndrome (MERS) – Qatar",
+    "date": "2026-11-13",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON626"
+   },
    {
     "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
     "date": "2026-11-06",
@@ -70,11 +78,6 @@
     "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
     "date": "2026-10-08",
     "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619"
-   },
-   {
-    "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
-    "date": "2026-09-25",
-    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON621"
    }
   ],
   "recalls": [
@@ -201,6 +204,20 @@
   ],
   "italy": [
    {
+    "title": "MINISTERO DELLA SALUTE - DECRETO 30 luglio 2026",
+    "date": "2026-11-14",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/14/26A05935/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Aggiornamento della definizione di utilizzazioni minori di interesse agricolo ai sensi dell'articolo 3, punto 26, del regolamento (CE) n. 1107/2009. (26A05935)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-14",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/14/26A05941/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Verzenios» (26A05941)"
+   },
+   {
     "title": "RespiVirNet: ultimo rapporto settimanale del 13 novembre 2026",
     "date": "2026-11-13",
     "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
@@ -208,18 +225,11 @@
     "summary": "Ripartono le attività di sorveglianza integrata RespiVirNet dei virus influenzali e degli altri virus respiratori, per la stagione 2026-2027 e, con la settimana 2026-45, riprende la pubblicazione dei bollettini settimanali che includono i dati dall’inizio della stagione. In quest"
    },
    {
-    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 5 novembre 2026",
-    "date": "2026-11-12",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/12/26A05918/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Proroga del termine fissato al 16 novembre 2026, di cui all'articolo 1, comma 1, della determina n. DG 442/2023 del 13 novembre 2023, concernente il rinnovo dell'autorizzazione in via transitoria all'uso di apteni per patch test in assenza di alternative cliniche in commercio. (D"
-   },
-   {
     "title": "AGENAS – Programma Nazionale HTA Dispositivi Medici 2026-2028: 13 novembre 2026, secondo InfoDay a Verona",
     "date": "2026-11-12",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2929-agenas-%E2%80%93-programma-nazionale-hta-dispositivi-medici-2026-2028-13-novembre-2026%2C-secondo-infoday-a-verona",
     "source": "AGENAS – Notizie",
-    "summary": "Si terrà domani, venerdì 13 novembre 2026, dalle ore 9.00, presso l’Aula convegni del Centro culturale «A. Marani», in via San Camillo de Lellis 2/4 a Verona, il secondo InfoDay del Programma Nazionale HTA Dispositivi Medici 2026-2028, dedicato al tema «L’HTA nei territori: dalle"
+    "summary": "Prosegue il percorso di confronto promosso da AGENAS per accompagnare l’attuazione del Programma Nazionale HTA Dispositivi Medici (PNHTA-DM) 2026-2028 e rafforzare l’integrazione della valutazione delle tecnologie sanitarie nei processi decisionali del Servizio sanitario nazional"
    },
    {
     "title": "AGENAS aggiorna il monitoraggio della Mobilità Sanitaria Interregionale",
@@ -297,13 +307,6 @@
     "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-imfinzi-neoadiuvante/adiuvante-nsclc",
     "source": "AIFA – Notizie",
     "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di IMFINZI (durvalumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Aggiornamento Registri di monitoraggio Enhertu",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registri-di-monitoraggio-enhertu",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 06/11/2026, sono stati aggiornati i Registri di Enhertu (trastuzumab deruxtecan) dedicati al monitoraggio di specifiche indicazioni terapeutiche."
    },
    {
     "title": "#MedSafetyWeek 2026: AIFA aderisce alla campagna di comunicazione internazionale per sensibilizzare sull’importanza della segnalazione dei sospetti effetti indesiderati dei farmaci",
@@ -391,7 +394,8 @@
   "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05864/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
-  "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota"
+  "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
+  "2026-DON626"
  ],
  "nodes": [
   {
@@ -403,7 +407,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-13T13:03:13.107169",
+   "updated_at": "2026-11-14T12:08:16.817398",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -415,7 +419,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-13T13:03:13.107169",
+   "updated_at": "2026-11-14T12:08:16.817398",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -427,7 +431,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -487,7 +491,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-13T13:03:13.107169",
+   "updated_at": "2026-11-14T12:08:16.817398",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -499,7 +503,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-13T13:03:13.107169",
+   "updated_at": "2026-11-14T12:08:16.817398",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -511,7 +515,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-13T13:03:13.107169",
+   "updated_at": "2026-11-14T12:08:16.817398",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -523,7 +527,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -676,7 +680,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-13T13:03:13.107169",
+   "updated_at": "2026-11-14T12:08:16.817398",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -798,7 +802,7 @@
    "description": "Agenzia internazionale che monitora e coordina la risposta alla epidemia di Ebola in Repubblica Democratica del Congo",
    "risk_score": 75,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-07T11:43:01.223451",
+   "updated_at": "2026-11-14T12:08:28.816332",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "WHO",
@@ -2912,7 +2916,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2924,7 +2928,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2936,7 +2940,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3597,7 +3601,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3609,7 +3613,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3621,7 +3625,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-13T13:03:13.211503",
+   "updated_at": "2026-11-14T12:08:16.923210",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
   },
   {
@@ -3728,6 +3732,126 @@
    "risk_doc": "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
    "risk_doc_date": "2026-11-11",
    "risk_assigned_at": "2026-11-12T13:45:18.872392"
+  },
+  {
+   "id": "qatar_ihr_focal",
+   "label": "National IHR Focal Point - Qatar",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": null,
+   "description": "Punto focale nazionale del Qatar per il Regolamento Sanitario Internazionale presso l'OMS.",
+   "risk_score": 10,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "qatar_state",
+   "label": "State of Qatar",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": null,
+   "description": "Autorità sanitaria nazionale del Qatar responsabile della gestione epidemiologica MERS.",
+   "risk_score": 25,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "mers_cov",
+   "label": "MERS-CoV (Middle East Respiratory Syndrome)",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": null,
+   "description": "Patogeno virale zoonotico trasmesso da cammelli dromedari agli umani.",
+   "risk_score": 72,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "qatar_hospitals",
+   "label": "Strutture Ospedaliere Qatar",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": null,
+   "description": "Ospedali che hanno ospedalizzato e dimesso i due pazienti MERS confermati.",
+   "risk_score": 55,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "patient_1",
+   "label": "Paziente 1 (MERS Qatar)",
+   "type": "Person",
+   "domain": "health",
+   "region": null,
+   "description": "Uomo over 50 con condizioni mediche sottostanti e esposizione occupazionale a cammelli dromedari.",
+   "risk_score": 60,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "patient_2",
+   "label": "Paziente 2 (MERS Qatar)",
+   "type": "Person",
+   "domain": "health",
+   "region": null,
+   "description": "Uomo over 50 con condizioni mediche sottostanti ed esposizione lavorativa a cammelli dromedari.",
+   "risk_score": 60,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "dromedary_farms",
+   "label": "Allevamenti Dromedari Qatar",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": null,
+   "description": "Due fattorie geographicamente separate dove i pazienti avevano esposizione occupazionale a cammelli.",
+   "risk_score": 68,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "contacts_group",
+   "label": "Gruppo Contatti (99 persone)",
+   "type": "Person",
+   "domain": "health",
+   "region": null,
+   "description": "Contatti dei due pazienti MERS identificati, testati e monitorati per 14 giorni.",
+   "risk_score": 45,
+   "created_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-14T12:08:28.816332",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON626",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-14T12:08:28.816313"
   }
  ],
  "edges": [
@@ -21444,13 +21568,148 @@
    "doc_titles": {
     "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota": "ISS – Comunicati stampa – Proseguono i preparativi per il lancio di una nuova piattaforma di sorveglianza della salute pubblica in nove paesi pilota"
    }
+  },
+  {
+   "id": "qatar_ihr_focal_who_INDAGA_SU",
+   "source": "qatar_ihr_focal",
+   "target": "who",
+   "type": "INDAGA_SU",
+   "fact": "Focal Point Qatar notifica WHO di due casi confermati MERS il 29 ottobre 2026.",
+   "risk_score": 50,
+   "source_doc": "2026-DON626",
+   "date": "2026-10",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "qatar_state_qatar_hospitals_CONTROLLA",
+   "source": "qatar_state",
+   "target": "qatar_hospitals",
+   "type": "CONTROLLA",
+   "fact": "Qatar gestisce ricovero e dimissione dei pazienti MERS nelle strutture ospedaliere nazionali.",
+   "risk_score": 35,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "mers_cov_patient_1_RISCHIO_PER",
+   "source": "mers_cov",
+   "target": "patient_1",
+   "type": "RISCHIO_PER",
+   "fact": "Paziente 1 confermato positivo MERS-CoV con trasmissione zoonotica da cammelli dromedari.",
+   "risk_score": 75,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "mers_cov_patient_2_RISCHIO_PER",
+   "source": "mers_cov",
+   "target": "patient_2",
+   "type": "RISCHIO_PER",
+   "fact": "Paziente 2 confermato positivo MERS-CoV con trasmissione zoonotica da cammelli dromedari.",
+   "risk_score": 75,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "dromedary_farms_patient_1_RISCHIO_PER",
+   "source": "dromedary_farms",
+   "target": "patient_1",
+   "type": "RISCHIO_PER",
+   "fact": "Fattoria dromedari fonte di esposizione e trasmissione MERS al paziente 1.",
+   "risk_score": 70,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "dromedary_farms_patient_2_RISCHIO_PER",
+   "source": "dromedary_farms",
+   "target": "patient_2",
+   "type": "RISCHIO_PER",
+   "fact": "Fattoria dromedari (diversa) fonte di esposizione e trasmissione MERS al paziente 2.",
+   "risk_score": 70,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "patient_1_qatar_hospitals_ACCREDITA",
+   "source": "patient_1",
+   "target": "qatar_hospitals",
+   "type": "ACCREDITA",
+   "fact": "Paziente 1 ospedalizzato e successivamente dimesso in condizioni stabili.",
+   "risk_score": 30,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "patient_2_qatar_hospitals_ACCREDITA",
+   "source": "patient_2",
+   "target": "qatar_hospitals",
+   "type": "ACCREDITA",
+   "fact": "Paziente 2 ospedalizzato e successivamente dimesso in condizioni stabili.",
+   "risk_score": 30,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "patient_1_contacts_group_RISCHIO_PER",
+   "source": "patient_1",
+   "target": "contacts_group",
+   "type": "RISCHIO_PER",
+   "fact": "99 contatti del paziente 1 identificati, testati negativi per MERS-CoV, monitorati 14 giorni.",
+   "risk_score": 40,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "patient_2_contacts_group_RISCHIO_PER",
+   "source": "patient_2",
+   "target": "contacts_group",
+   "type": "RISCHIO_PER",
+   "fact": "99 contatti del paziente 2 identificati, testati negativi per MERS-CoV, monitorati 14 giorni.",
+   "risk_score": 40,
+   "source_doc": "2026-DON626",
+   "date": "2026-08",
+   "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "qatar_state_who_COLLABORA_CON",
+   "source": "qatar_state",
+   "target": "who",
+   "type": "COLLABORA_CON",
+   "fact": "Qatar collabora con WHO per sorveglianza e monitoraggio epidemiologico dei casi MERS.",
+   "risk_score": 25,
+   "source_doc": "2026-DON626",
+   "date": "2026-10",
+   "created_at": "2026-11-14T12:08:28.933434"
   }
  ],
  "alerts": [
   {
+   "id": "who_2026_don626",
+   "title": "OMS: \"Middle East respiratory syndrome (MERS) – Qatar\"",
+   "description": "OMS, Disease Outbreak News 2026-DON626 del 2026-11-13: \"On 29 October 2026, the National International Health Regulations (IHR) Focal Point of the State of Qatar notified the World Health Organization (WHO) of two laboratory-confirmed cases of Middle East respiratory syndrome (MERS).\" \"Both patients were men aged over 50 years with underlying medical conditions and occupational exposure to dromedary camels.\"",
+   "severity": "MEDIUM",
+   "entities_involved": "[]",
+   "predicted_impact": null,
+   "italy_relevance": null,
+   "italy_impact": "Il documento OMS non nomina l'Italia.",
+   "timeframe": null,
+   "recommendation": "Consultare il documento OMS 2026-DON626 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
+   "created_at": "2026-11-14T12:08:38.641987",
+   "is_read": false
+  },
+  {
    "id": "who_2026_don625",
    "title": "OMS: \"Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria\"",
-   "description": "OMS, Disease Outbreak News 2026-DON625 del 2026-11-06: \"Since the publication of the previous Disease Outbreak News on 23 October 2026, the Bundibugyo virus disease (BVD) outbreak has expanded geographically in the Democratic Republic of the Congo.\" \"As of 3 November 2026, a total of 10 668 confirmed cases, including 5198 deaths (crude case fatality ratio: 48.7%), have been reported across 67 health zones in eight provinces, with active transmission ongoing in 51 health zones.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON625 del 2026-11-06: \"As of 3 November 2026, a total of 10 668 confirmed cases, including 5198 deaths (crude case fatality ratio: 48.7%), have been reported across 67 health zones in eight provinces, with active transmission ongoing in 51 health zones.\"",
    "severity": "CRITICAL",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -21458,13 +21717,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
    "id": "who_2026_don624",
    "title": "OMS: \"Yellow fever - WHO African Region\"",
-   "description": "OMS, Disease Outbreak News 2026-DON624 del 2026-11-06: \"Yellow fever transmission continues in the WHO African Region, with recent outbreak activity concentrated in parts of West Africa.\" \"Between 1 January and 12 October 2026, 67 confirmed cases, including 18 deaths, were recorded in nine countries in the Region: Burkina Faso, Cameroon, the Central African Republic, Côte d’Ivoire, Ghana, Guinea, Liberia, Nigeria and Togo.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON624 del 2026-11-06: \"Between 1 January and 12 October 2026, 67 confirmed cases, including 18 deaths, were recorded in nine countries in the Region: Burkina Faso, Cameroon, the Central African Republic, Côte d’Ivoire, Ghana, Guinea, Liberia, Nigeria and Togo.\" \"Occupational and environmental exposures, including work in or near forested areas, mining activities, and other outdoor occupations, are important risk factors for yellow fever infection.\"",
    "severity": "MEDIUM",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -21472,13 +21731,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON624 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
    "id": "who_2026_don623",
    "title": "OMS: \"Shamonda virus in human - France\"",
-   "description": "OMS, Disease Outbreak News 2026-DON623 del 2026-11-02: \"On 20 October 2026, the National IHR Focal Point (NFP) of France notified WHO regarding the first documented human infection with Shamonda virus (SHAV).\" \"SHAV is recognized primarily as an animal-associated virus, like the closely related Schmallenberg virus circulating in Europe, with no previously documented human infections.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON623 del 2026-11-02: \"On 20 October 2026, the National IHR Focal Point (NFP) of France notified WHO regarding the first documented human infection with Shamonda virus (SHAV).\" \"There is currently widespread SHAV circulation in animals in Europe, including outbreaks across much of France.\"",
    "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -21486,21 +21745,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON623 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-13T13:03:24.667006",
-   "is_read": false
-  },
-  {
-   "id": "who_middle_east_respiratory_synd",
-   "title": "OMS: \"Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia\"",
-   "description": "OMS, Disease Outbreak News middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia del 2026-10-15: \"Between 1 January and 5 October 2026, the Kingdom of Saudi Arabia reported eight laboratory-confirmed cases of Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection, including one death.\" \"MERS is a zoonotic viral respiratory disease for which dromedary camels serve as the primary animal reservoir and two cases reported direct contact with camels while six reported no known camel exposure.\"",
-   "severity": "MEDIUM",
-   "entities_involved": "[]",
-   "predicted_impact": null,
-   "italy_relevance": null,
-   "italy_impact": "Il documento OMS non nomina l'Italia.",
-   "timeframe": null,
-   "recommendation": "Consultare il documento OMS 2026-DON618 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21513,8 +21758,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Automated Impella Controller (codici 0042-0000-US/UK/EU/IN/CA) con numeri seriali IC1014-IC1238 in inventario.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza Automated Impella Controller codici prodotto 0042-0000-US/UK/EU/IN/CA nei numeri seriali IC1014-IC1238 inventariati.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21527,8 +21772,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Optical Controller (codici 0042-0010-US/UK/EU/IN) con numeri seriali IC6962-IC8335 in inventario.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza Impella Optical Controller codici prodotto 0042-0010-US/UK/EU/IN nei numeri seriali IC6962-IC8335 inventariati.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21541,8 +21786,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Connect Optical AIC (codici 0042-0040-US/UK/EU/CA) con numeri seriali IC8024-IC10097 in inventario.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza Impella Connect Optical AIC codici prodotto 0042-0040-US/UK/EU/CA nei numeri seriali IC8024-IC10097 inventariati.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21555,8 +21800,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza lead OmniaSecure Model 3930M (3930M74, 3930M79) con numeri seriali CDD401008V-CDD404095V in inventario.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza lead OmniaSecure Model 3930M codici 3930M74/3930M79 nei numeri seriali CDD401008V-CDD404095V inventariati.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21569,8 +21814,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M12 (modello 722227) consultando gli UDI forniti nei documenti ufficiali del fabbricante.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza Philips Azurion 5 M12 modello 722227 nei numeri UDI elencati in inventario.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21583,8 +21828,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M20 (modelli 722228, 722281) consultando gli UDI forniti nei documenti ufficiali del fabbricante.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza Philips Azurion 5 M20 modelli 722228/722281 nei numeri UDI elencati in inventario.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21597,8 +21842,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion S (modello 722285, UDI 00884838125681) in inventario.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza Philips Azurion S modello 722285 UDI (01)00884838125681(21)7 in inventario.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   },
   {
@@ -21611,8 +21856,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 7 B20 (modelli 722068, 722226) consultando gli UDI forniti nei documenti ufficiali del fabbricante.",
-   "created_at": "2026-11-13T13:03:24.667006",
+   "recommendation": "Verificare presenza Philips Azurion 7 B20 modelli 722068/722226 nei numeri UDI elencati in inventario.",
+   "created_at": "2026-11-14T12:08:38.641987",
    "is_read": false
   }
  ]
