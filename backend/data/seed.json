@@ -1,42 +1,40 @@
 {
  "version": 1,
- "exported_at": "2026-11-15T12:42:33.895112",
- "data_updated_at": "2026-11-15T12:42:33.758595",
+ "exported_at": "2026-11-16T13:35:57.620931",
+ "data_updated_at": "2026-11-16T13:35:57.405146",
  "refresh_info": {
-  "last_success": "2026-11-15T12:42:33.758595",
+  "last_success": "2026-11-16T13:35:57.405146",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 0,
-   "edges": 0,
+   "nodes": 6,
+   "edges": 11,
    "alerts": 0
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-11-04",
    "who_outbreaks": "2026-11-13",
-   "italy": "2026-11-14"
+   "italy": "2026-11-16"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 35
+   "italy": 41
   },
-  "source_errors": {
-   "iss_press": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)"
-  },
+  "source_errors": {},
   "alerts_error": null,
   "alerts_discarded": [
    "citazione non presente nel documento 2026-DON625: 'The high-level transmission in the Democratic Republic of the Congo indicates a continued need for readiness in the regi'"
   ],
-  "alerts_attempt": "2026-11-15T12:42:33.758595"
+  "alerts_attempt": "2026-11-16T13:35:57.405146"
  },
  "signals": {
-  "generated_at": "2026-11-15T12:42:24.964095",
+  "generated_at": "2026-11-16T13:35:48.709629",
   "who": [
    {
     "title": "Middle East respiratory syndrome (MERS) – Qatar",
@@ -203,6 +201,34 @@
   ],
   "italy": [
    {
+    "title": "Cessata commercializzazione di Emend (aprepitant)",
+    "date": "2026-11-16",
+    "url": "https://www.aifa.gov.it/-/cessata-commercializzazione-di-emend-aprepitant-",
+    "source": "AIFA – Notizie",
+    "summary": "Cessazione definitiva della commercializzazione in Italia di EMEND (aprepitant) 125 mg + 80 mg 1 capsula rigida (125 mg) + 2 capsule rigide (80 mg) in blister uso orale (AIC 036167068)."
+   },
+   {
+    "title": "AGENAS investe in nuove competenze: aperte le selezioni per professionisti della sanità digitale e funzionari in diversi ambiti",
+    "date": "2026-11-16",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2930-agenas-investe-in-nuove-competenze-aperte-le-selezioni-per-professionisti-della-sanit%C3%A0-digitale-e-funzionari-in-diversi-ambiti",
+    "source": "AGENAS – Notizie",
+    "summary": "Dalla cybersecurity all'intelligenza artificiale, dall'analisi dei dati alle competenze economiche, giuridiche e ingegneristiche: nuove opportunità professionali per contribuire all'innovazione del Servizio sanitario nazionale."
+   },
+   {
+    "title": "Dieta mediterranea, cinque consigli per mangiare bene anche quando si ha poco tempo",
+    "date": "2026-11-16",
+    "url": "https://www.iss.it/-/dieta-mediterranea-cinque-consigli-per-mangiare-bene-anche-quando-si-ha-poco-tempo",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Avere poco tempo per cucinare, fare la spesa online e pranzare spesso fuori casa non significa dover rinunciare alla dieta mediterranea. Seguire questo modello alimentare anche quando i ritmi quotidiani sono intensi è possibile, a patto di organizzare le scelte con semplicità e v"
+   },
+   {
+    "title": "Bollettino 184 fase 3",
+    "date": "2026-11-16",
+    "url": "https://www.iss.it/-/bollettino-184-fase-3",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Impatto • All’ 11/11/2026 l’occupazione dei posti letto in area medica è pari a 0,8% (495 ricoverati), in lieve aumento rispetto alla settimana precedente (0,7% al 04/11/2026) (tab.1, fig.1). Stabile l’occupazione dei posti letto in terapia intensiva, pari a 0,2% (14 ricoverati),"
+   },
+   {
     "title": "MINISTERO DELLA SALUTE - DECRETO 30 luglio 2026",
     "date": "2026-11-14",
     "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/14/26A05935/SG",
@@ -217,6 +243,27 @@
     "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Verzenios» (26A05941)"
    },
    {
+    "title": "Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia",
+    "date": "2026-11-13",
+    "url": "https://www.iss.it/-/diabete26",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Il lavoro dell’Iss su screening, registri e percorsi di cura per una migliore gestione Il 14 novembre si celebra la Giornata mondiale del diabete, che nel 2026 pone l’attenzione sul tema “Early action on diabetes” (Azione precoce sul diabete), richiamando l’importanza di agire te"
+   },
+   {
+    "title": "Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati",
+    "date": "2026-11-13",
+    "url": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Riprende con la pubblicazione del primo bollettino l’attività della sorveglianza RespiVirNet, che monitora l’andamento dei virus respiratori invernali sia per la parte epidemiologica che per quella virologica. La raccolta dei dati avviene sulla piattaforma messa a punto dall’Iss "
+   },
+   {
+    "title": "RaraMente n. 119",
+    "date": "2026-11-13",
+    "url": "https://www.iss.it/-/raramente-n.-119",
+    "source": "ISS – Comunicati stampa",
+    "summary": "In questo numero : È stato creato un Registro nazionale sulla spina bifida, grazie alla collaborazione tra Associazione dei pazienti Asbi e Istituto Superiore di Sanità. In uno studio sono stati analizzati i dati di oltre mille persone in diversi centri italiani, per studiare meg"
+   },
+   {
     "title": "RespiVirNet: ultimo rapporto settimanale del 13 novembre 2026",
     "date": "2026-11-13",
     "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
@@ -229,6 +276,13 @@
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2929-agenas-%E2%80%93-programma-nazionale-hta-dispositivi-medici-2026-2028-13-novembre-2026%2C-secondo-infoday-a-verona",
     "source": "AGENAS – Notizie",
     "summary": "Prosegue il percorso di confronto promosso da AGENAS per accompagnare l’attuazione del Programma Nazionale HTA Dispositivi Medici (PNHTA-DM) 2026-2028 e rafforzare l’integrazione della valutazione delle tecnologie sanitarie nei processi decisionali del Servizio sanitario nazional"
+   },
+   {
+    "title": "Diabete tipo 1: quasi 2.500 bambini da 1 a 5 anni già sottoposti a screening con lo studio Baby D1Ce",
+    "date": "2026-11-12",
+    "url": "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Edited 12/11/2026 Anticipare lo screening del diabete di tipo 1 e della celiachia ai bambini più piccoli, nella fascia d'età in cui l'esordio del diabete con chetoacidosi è più frequente e più grave. È l'obiettivo di Baby D1Ce, lo studio promosso da Istituto Superiore di Sanità ("
    },
    {
     "title": "AGENAS aggiorna il monitoraggio della Mobilità Sanitaria Interregionale",
@@ -285,62 +339,6 @@
     "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-lunsumio",
     "source": "AIFA – Notizie",
     "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 06/11/2026, è stato aggiornato il Registro di Lunsumio (mosunetuzumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Aggiornamento Registri di monitoraggio TEVIMBRA",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registri-di-monitoraggio-tevimbra",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 06/11/2026, sono stati aggiornati i Registri di Tevimbra (tislelizumab) dedicati al monitoraggio di specifiche indicazioni terapeutiche."
-   },
-   {
-    "title": "Aggiornamento Registro di monitoraggio Rybrevant (amivantamab) carcinoma polmonare non a piccole cellule (NSCLC)",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-rybrevant-amivantamab-carcinoma-polmonare-non-a-piccole-cellule-nsclc-",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di Rybrevant (amivantamab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "Aggiornamento Registro di monitoraggio Imfinzi neoadiuvante/adiuvante NSCLC",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-imfinzi-neoadiuvante/adiuvante-nsclc",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è stato aggiornato il Registro di IMFINZI (durvalumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
-   },
-   {
-    "title": "#MedSafetyWeek 2026: AIFA aderisce alla campagna di comunicazione internazionale per sensibilizzare sull’importanza della segnalazione dei sospetti effetti indesiderati dei farmaci",
-    "date": "2026-11-02",
-    "url": "https://www.aifa.gov.it/-/medsafetyweek-2026-aifa-aderisce-campagna-comunicazione-internazionale-sensibilizzare-importanza-segnalazione-sospetti-effetti-indesiderati-farmaci",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "La campagna globale #MedSafetyWeek di quest’anno, in programma dal 2 all’8 novembre, lancia un messaggio chiaro: «Non ignorare i sospetti effetti indesiderati dei farmaci, segnalali sempre», per contribuire a proteggere tutti da eventuali danni."
-   },
-   {
-    "title": "AGENAS 4 novembre 2026 - A Roma il primo Infoday del Programma Nazionale HTA Dispositivi Medici 2026-2028",
-    "date": "2026-11-02",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2914-agenas-programma-nazionale-hta-dispositivi-medici-2026-2028-4-novembre-2026-primo-infoday-a-roma",
-    "source": "AGENAS – Notizie",
-    "summary": "Il primo InfoDay si è svolto mercoledì 4 novembre 2026, presso la Sala Tirreno della Regione Lazio, a Roma."
-   },
-   {
-    "title": "Sarà rimborsata dal SSN la prima terapia genica topica per i “bambini farfalla”",
-    "date": "2026-10-29",
-    "url": "https://www.aifa.gov.it/-/rimborsata-dal-ssn-prima-terapia-genica-topica-per-i-bambini-farfalla",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "Via libera dal CdA AIFA al trattamento topico dell'epidermolisi bollosa distrofica, la patologia nota anche come “sindrome dei bambini farfalla”, per l’estrema fragilità della pelle e delle mucose dei pazienti. Approvato anche il rimborso di farmaci per il tumore della cervice e "
-   },
-   {
-    "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
-    "date": "2026-10-29",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2913-programma-nazionale-hta-dispositivi-medici-2026-2028-agenas-promuove-cinque-infoday-territoriali",
-    "source": "AGENAS – Notizie",
-    "summary": "Al via un ciclo di incontri che apre un percorso nazionale di accompagnamento all’attuazione del Programma Nazionale HTA Dispositivi Medici. Il primo appuntamento si terrà a a Roma il 4 novembre 2026."
-   },
-   {
-    "title": "Agenas istituisce l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore",
-    "date": "2026-10-26",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2911-agenas-istituisce-l%E2%80%99osservatorio-per-il-monitoraggio-e-l%E2%80%99implementazione-della-rete-di-cure-palliative-e-terapia-del-dolore",
-    "source": "AGENAS – Notizie",
-    "summary": "Agenas con Delibera del Direttore Generale n°334 del 14 ottobre 2026, ha istituito l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore, organismo deputato ad accompagnare Regioni e Province Autonome nel consolidamento di una r"
    }
   ]
  },
@@ -394,7 +392,9 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05864/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/11/26A05865/SG",
   "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
-  "2026-DON626"
+  "2026-DON626",
+  "https://www.iss.it/-/diabete26",
+  "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati"
  ],
  "nodes": [
   {
@@ -406,7 +406,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-15T12:42:24.402780",
+   "updated_at": "2026-11-16T13:35:40.803019",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -418,7 +418,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-15T12:42:24.402780",
+   "updated_at": "2026-11-16T13:35:40.803019",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -430,7 +430,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -490,7 +490,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-15T12:42:24.402780",
+   "updated_at": "2026-11-16T13:35:40.803019",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -502,7 +502,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-15T12:42:24.402780",
+   "updated_at": "2026-11-16T13:35:40.803019",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -514,7 +514,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-15T12:42:24.402780",
+   "updated_at": "2026-11-16T13:35:40.803019",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -526,7 +526,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -679,7 +679,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-15T12:42:24.402780",
+   "updated_at": "2026-11-16T13:35:40.803019",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -758,7 +758,7 @@
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-16T13:35:48.393254",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -780,7 +780,7 @@
    "description": "Istituzione nazionale italiana promotrice di iniziative sanità pubblica cardiovascolare.",
    "risk_score": 35,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-12T13:45:18.872422",
+   "updated_at": "2026-11-16T13:35:48.393254",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Ministero della Salute",
    "website": "https://www.salute.gov.it/",
@@ -801,9 +801,10 @@
    "description": "Agenzia internazionale che monitora e coordina la risposta alla epidemia di Ebola in Repubblica Democratica del Congo",
    "risk_score": 75,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-14T12:08:28.816332",
+   "updated_at": "2026-11-16T13:35:48.393254",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
+    "Organizzazione Mondiale della Sanità",
     "WHO",
     "WHO - Organizzazione Mondiale della Sanità",
     "WHO - World Health Organization",
@@ -2684,10 +2685,10 @@
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Italia",
-   "description": "Autorità sanitarie regionali coinvolte nella risposta epidemiologica.",
+   "description": "Forniscono dati per sorveglianza RespiVirNet, hanno sospeso invio per problemi normativi.",
    "risk_score": 42,
    "created_at": "2026-10-31T10:54:41.096971",
-   "updated_at": "2026-10-31T10:54:41.096971",
+   "updated_at": "2026-11-16T13:35:48.393254",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "risk_doc": "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
    "risk_doc_date": "2026-10-29",
@@ -2915,7 +2916,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2927,7 +2928,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2939,7 +2940,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3600,7 +3601,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3612,7 +3613,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3624,7 +3625,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-15T12:42:24.466029",
+   "updated_at": "2026-11-16T13:35:40.906387",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
   },
   {
@@ -3851,6 +3852,96 @@
    "risk_doc": "2026-DON626",
    "risk_doc_date": "2026-11-13",
    "risk_assigned_at": "2026-11-14T12:08:28.816313"
+  },
+  {
+   "id": "diabete_malattia",
+   "label": "Diabete",
+   "type": "Person",
+   "domain": "health",
+   "region": null,
+   "description": "Malattia metabolica cronica richiede diagnosi precoce e gestione clinica multidisciplinare.",
+   "risk_score": 15,
+   "created_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-16T13:35:48.393254",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/diabete26",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-16T13:35:48.393233"
+  },
+  {
+   "id": "screening_diabete",
+   "label": "Screening Diabete",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "IT",
+   "description": "Programmi di riconoscimento precoce e diagnosi della malattia diabetica.",
+   "risk_score": 5,
+   "created_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-16T13:35:48.393254",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/diabete26",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-16T13:35:48.393233"
+  },
+  {
+   "id": "registri_diabete",
+   "label": "Registri Diabete",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "IT",
+   "description": "Database epidemiologici per monitoraggio prevalenza e incidenza del diabete.",
+   "risk_score": 5,
+   "created_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-16T13:35:48.393254",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/diabete26",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-16T13:35:48.393233"
+  },
+  {
+   "id": "percorsi_cura_diabete",
+   "label": "Percorsi di Cura Diabete",
+   "type": "ProcurementBody",
+   "domain": "health",
+   "region": "IT",
+   "description": "Protocolli clinici per gestione integrata e continuità assistenziale diabete.",
+   "risk_score": 10,
+   "created_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-16T13:35:48.393254",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/diabete26",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-16T13:35:48.393233"
+  },
+  {
+   "id": "garante_privacy",
+   "label": "Garante della Privacy",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Supervisiona conformità normativa nella raccolta dati RespiVirNet.",
+   "risk_score": 25,
+   "created_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-16T13:35:48.393254",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-16T13:35:48.393233"
+  },
+  {
+   "id": "respirvinet",
+   "label": "RespiVirNet",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "IT",
+   "description": "Sistema di sorveglianza epidemiologica e virologica per virus respiratori invernali.",
+   "risk_score": 10,
+   "created_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-16T13:35:48.393254",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+   "risk_doc_date": "2026-11-13",
+   "risk_assigned_at": "2026-11-16T13:35:48.393233"
   }
  ],
  "edges": [
@@ -3953,11 +4044,14 @@
    "source": "iss",
    "target": "minsalute",
    "type": "COLLABORA_CON",
-   "fact": "ISS fornisce supporto scientifico al Ministero della Salute.",
-   "risk_score": 8,
-   "source_doc": "",
+   "fact": "ISS e Ministero coordinano per adeguare sorveglianza a regolamenti europei.",
+   "risk_score": 20,
+   "source_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
    "date": "1958-01",
-   "created_at": "2026-10-06T06:32:00.960345"
+   "created_at": "2026-10-06T06:32:00.960345",
+   "doc_titles": {
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati"
+   }
   },
   {
    "id": "recall_D-0285-2025",
@@ -11130,8 +11224,15 @@
    "date": "2026-03-06",
    "created_at": "2026-10-18T19:24:50.964057",
    "doc_titles": {
+    "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce": "ISS – Comunicati stampa – Diabete tipo 1: quasi 2.500 bambini da 1 a 5 anni già sottoposti a screening con lo studio Baby D1Ce",
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati",
     "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx": "ISS – RespiVirNet – RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026"
-   }
+   },
+   "source_docs": [
+    "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+    "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce"
+   ]
   },
   {
    "id": "iss_evt_dengue_INDAGA_SU",
@@ -21688,6 +21789,160 @@
    "source_doc": "2026-DON626",
    "date": "2026-10",
    "created_at": "2026-11-14T12:08:28.933434"
+  },
+  {
+   "id": "iss_screening_diabete_FINANZIA",
+   "source": "iss",
+   "target": "screening_diabete",
+   "type": "FINANZIA",
+   "fact": "ISS sviluppa programmi di screening per riconoscimento precoce diabete.",
+   "risk_score": 5,
+   "source_doc": "https://www.iss.it/-/diabete26",
+   "date": "2026",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/diabete26": "ISS – Comunicati stampa – Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia"
+   }
+  },
+  {
+   "id": "iss_registri_diabete_FINANZIA",
+   "source": "iss",
+   "target": "registri_diabete",
+   "type": "FINANZIA",
+   "fact": "ISS gestisce registri epidemiologici sulla prevalenza diabete in Italia.",
+   "risk_score": 5,
+   "source_doc": "https://www.iss.it/-/diabete26",
+   "date": "2026",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/diabete26": "ISS – Comunicati stampa – Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia"
+   }
+  },
+  {
+   "id": "iss_percorsi_cura_diabete_FINANZIA",
+   "source": "iss",
+   "target": "percorsi_cura_diabete",
+   "type": "FINANZIA",
+   "fact": "ISS definisce percorsi clinici standardizzati per migliore gestione diabete.",
+   "risk_score": 5,
+   "source_doc": "https://www.iss.it/-/diabete26",
+   "date": "2026",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/diabete26": "ISS – Comunicati stampa – Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia"
+   }
+  },
+  {
+   "id": "who_iss_COLLABORA_CON",
+   "source": "who",
+   "target": "iss",
+   "type": "COLLABORA_CON",
+   "fact": "OMS e ISS collaborano su obiettivi mondiali diabete e diagnosi precoce.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/diabete26",
+   "date": "2026",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/diabete26": "ISS – Comunicati stampa – Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia"
+   }
+  },
+  {
+   "id": "diabete_malattia_screening_diabete_RISCHIO_PER",
+   "source": "diabete_malattia",
+   "target": "screening_diabete",
+   "type": "RISCHIO_PER",
+   "fact": "Mancata diagnosi precoce diabete rappresenta rischio per complicanze severe.",
+   "risk_score": 35,
+   "source_doc": "https://www.iss.it/-/diabete26",
+   "date": null,
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/diabete26": "ISS – Comunicati stampa – Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia"
+   }
+  },
+  {
+   "id": "who_diabete_malattia_REGOLA",
+   "source": "who",
+   "target": "diabete_malattia",
+   "type": "REGOLA",
+   "fact": "OMS stabilisce linee guida mondiali per diagnosi e gestione diabete.",
+   "risk_score": 0,
+   "source_doc": "https://www.iss.it/-/diabete26",
+   "date": null,
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/diabete26": "ISS – Comunicati stampa – Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia"
+   }
+  },
+  {
+   "id": "iss_respirvinet_CONTROLLA",
+   "source": "iss",
+   "target": "respirvinet",
+   "type": "CONTROLLA",
+   "fact": "ISS gestisce piattaforma dati e monitora sorveglianza RespiVirNet.",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+   "date": "2025-11",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati"
+   }
+  },
+  {
+   "id": "regioni_italia_respirvinet_FORNISCE",
+   "source": "regioni_italia",
+   "target": "respirvinet",
+   "type": "FORNISCE",
+   "fact": "Regioni inviano dati epidemiologici a RespiVirNet per monitoraggio virus respiratori.",
+   "risk_score": 30,
+   "source_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+   "date": "2025-11",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati"
+   }
+  },
+  {
+   "id": "minsalute_iss_COLLABORA_CON",
+   "source": "minsalute",
+   "target": "iss",
+   "type": "COLLABORA_CON",
+   "fact": "Ministero collabora con ISS per risolvere problemi normativi della piattaforma.",
+   "risk_score": 20,
+   "source_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+   "date": "2025-11",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati"
+   }
+  },
+  {
+   "id": "garante_privacy_iss_REGOLA",
+   "source": "garante_privacy",
+   "target": "iss",
+   "type": "REGOLA",
+   "fact": "Garante Privacy supervisiona raccolta dati e conformità normativa.",
+   "risk_score": 25,
+   "source_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+   "date": "2025-11",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati"
+   }
+  },
+  {
+   "id": "regioni_italia_minsalute_RISCHIO_PER",
+   "source": "regioni_italia",
+   "target": "minsalute",
+   "type": "RISCHIO_PER",
+   "fact": "Interruzione invio dati da Regioni compromette monitoraggio epidemiologico nazionale.",
+   "risk_score": 45,
+   "source_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+   "date": "2025-11",
+   "created_at": "2026-11-16T13:35:48.408478",
+   "doc_titles": {
+    "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati"
+   }
   }
  ],
  "alerts": [
@@ -21702,7 +21957,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON626 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21716,7 +21971,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21730,7 +21985,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON624 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21744,7 +21999,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON623 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21757,8 +22012,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei dispositivi Automated Impella Controller con i codici prodotto e numeri seriali elencati nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario dei modelli 0042-0000-US/UK/EU/IN/CA con i numeri seriali IC1014-IC1238 elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21771,8 +22026,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei dispositivi Impella Optical Controller con i codici prodotto e numeri seriali elencati nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario dei modelli 0042-0010-US/UK/EU/IN con i numeri seriali IC6962-IC8335 elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21785,8 +22040,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei dispositivi Impella Connect Optical AIC con i codici prodotto e numeri seriali elencati nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario dei modelli 0042-0040-US/UK/EU/CA con i numeri seriali IC8024-IC10097 elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21799,8 +22054,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei lead OmniaSecure Model 3930M con i codici UDI e numeri seriali elencati nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario del modello 3930M con i numeri seriali CDD401008V-CDD404095V elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21813,8 +22068,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei sistemi Philips Azurion 5 M12 (modello 722227) con i numeri UDI elencati nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario del modello Philips Azurion 5 M12 (722227) con i codici UDI elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21827,8 +22082,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei sistemi Philips Azurion 5 M20 (modelli 722228, 722281) con i numeri UDI elencati nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario dei modelli Philips Azurion 5 M20 (722228, 722281) con i codici UDI elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21841,8 +22096,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del sistema Philips Azurion S (modello 722285) con il numero UDI e seriale elencato nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario del modello Philips Azurion S (722285) con il codice UDI e numero seriale elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   },
   {
@@ -21855,8 +22110,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei sistemi Philips Azurion 7 B20 (modelli 722068, 722226) con i numeri UDI elencati nel record.",
-   "created_at": "2026-11-15T12:42:33.758196",
+   "recommendation": "Verificare presenza in inventario dei modelli Philips Azurion 7 B20 (722068, 722226) con i codici UDI elencati nel record.",
+   "created_at": "2026-11-16T13:35:57.404872",
    "is_read": false
   }
  ]
