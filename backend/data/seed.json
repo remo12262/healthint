@@ -1,40 +1,40 @@
 {
  "version": 1,
- "exported_at": "2026-11-16T13:35:57.620931",
- "data_updated_at": "2026-11-16T13:35:57.405146",
+ "exported_at": "2026-11-17T14:20:36.404518",
+ "data_updated_at": "2026-11-17T14:20:36.198700",
  "refresh_info": {
-  "last_success": "2026-11-16T13:35:57.405146",
+  "last_success": "2026-11-17T14:20:36.198700",
   "contributed": [
    "openfda_drug",
    "openfda_device",
    "italy"
   ],
   "new": {
-   "nodes": 6,
-   "edges": 11,
-   "alerts": 0
+   "nodes": 7,
+   "edges": 10,
+   "alerts": 1
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
-   "openfda_device": "2026-11-04",
+   "openfda_device": "2026-11-11",
    "who_outbreaks": "2026-11-13",
-   "italy": "2026-11-16"
+   "italy": "2026-11-17"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 41
+   "italy": 40
   },
   "source_errors": {},
   "alerts_error": null,
   "alerts_discarded": [
    "citazione non presente nel documento 2026-DON625: 'The high-level transmission in the Democratic Republic of the Congo indicates a continued need for readiness in the regi'"
   ],
-  "alerts_attempt": "2026-11-16T13:35:57.405146"
+  "alerts_attempt": "2026-11-17T14:20:36.198700"
  },
  "signals": {
-  "generated_at": "2026-11-16T13:35:48.709629",
+  "generated_at": "2026-11-17T14:20:25.773550",
   "who": [
    {
     "title": "Middle East respiratory syndrome (MERS) – Qatar",
@@ -78,6 +78,16 @@
    }
   ],
   "recalls": [
+   {
+    "recall": "Z-0319-2027",
+    "class": "Class II",
+    "firm": "NATUS MEDICAL INCORPORATED",
+    "product": "Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011",
+    "reason": "The device may be unable to correctly format its internal memory. When the internal memory cannot be correctly formatted, previously recorded studies may remain on the device and may be updated with i",
+    "date": "2026-11-11",
+    "kind": "device",
+    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0319-2027%22"
+   },
    {
     "recall": "Z-0285-2027",
     "class": "Class II",
@@ -187,19 +197,58 @@
     "date": "2026-11-04",
     "kind": "device",
     "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0314-2027%22"
-   },
-   {
-    "recall": "Z-0292-2027",
-    "class": "Class II",
-    "firm": "PHILIPS MEDICAL SYSTEMS NEDERLAND B.V.",
-    "product": "Philips Azurion 3 M12. Model Numbers: 722063, 722221.",
-    "reason": "Solid-State Drives (SSDs) that are not specified in the Medical Device File may have been installed in various PCs. These SSDs may have different performance characteristics, which may include reduced",
-    "date": "2026-11-04",
-    "kind": "device",
-    "url": "https://api.fda.gov/device/enforcement.json?search=recall_number:%22Z-0292-2027%22"
    }
   ],
   "italy": [
+   {
+    "title": "2 dicembre - AGENAS presenta i risultati del Programma Nazionale Esiti 2026",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026",
+    "source": "AGENAS – Notizie",
+    "summary": "Mercoledì 2 dicembre 2026, dalle ore 10.00, presso l’Auditorium Cosimo Piccinno del Ministero della Salute, in Lungotevere Ripa 1 a Roma, AGENAS presenterà i risultati dell’edizione 2026 del Programma Nazionale Esiti (PNE), su dati 2025."
+   },
+   {
+    "title": "Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa",
+    "date": "2026-11-17",
+    "url": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Domani la giornata europea sull’uso consapevole degli antibiotici, primo caso in Italia di streptococco B resistente alla penicillina Restano in generale sempre alti i tassi di antibioticoresistenza in Italia, anche se si vedono segnali di miglioramento. Risale leggermente anche "
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-16",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/16/26A05913/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di liraglutide, «Rondit» (26A05913)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-16",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/16/26A05914/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di mesalazina, «Azzavix» (26A05914)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-16",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/16/26A05915/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di eribulina, «Eribulina Hikma» (26A05915)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-16",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/16/26A05946/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di xilometazolina cloridrato, «Vivin Naso Chiuso». (26A05946)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-16",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/16/26A05947/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di liraglutide, «Liramed» (26A05947)"
+   },
    {
     "title": "Cessata commercializzazione di Emend (aprepitant)",
     "date": "2026-11-16",
@@ -227,20 +276,6 @@
     "url": "https://www.iss.it/-/bollettino-184-fase-3",
     "source": "ISS – Comunicati stampa",
     "summary": "Impatto • All’ 11/11/2026 l’occupazione dei posti letto in area medica è pari a 0,8% (495 ricoverati), in lieve aumento rispetto alla settimana precedente (0,7% al 04/11/2026) (tab.1, fig.1). Stabile l’occupazione dei posti letto in terapia intensiva, pari a 0,2% (14 ricoverati),"
-   },
-   {
-    "title": "MINISTERO DELLA SALUTE - DECRETO 30 luglio 2026",
-    "date": "2026-11-14",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/14/26A05935/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Aggiornamento della definizione di utilizzazioni minori di interesse agricolo ai sensi dell'articolo 3, punto 26, del regolamento (CE) n. 1107/2009. (26A05935)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-14",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/14/26A05941/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Verzenios» (26A05941)"
    },
    {
     "title": "Giornata mondiale del diabete: agire tempestivamente per riconoscere e curare la malattia",
@@ -278,13 +313,6 @@
     "summary": "Prosegue il percorso di confronto promosso da AGENAS per accompagnare l’attuazione del Programma Nazionale HTA Dispositivi Medici (PNHTA-DM) 2026-2028 e rafforzare l’integrazione della valutazione delle tecnologie sanitarie nei processi decisionali del Servizio sanitario nazional"
    },
    {
-    "title": "Diabete tipo 1: quasi 2.500 bambini da 1 a 5 anni già sottoposti a screening con lo studio Baby D1Ce",
-    "date": "2026-11-12",
-    "url": "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Edited 12/11/2026 Anticipare lo screening del diabete di tipo 1 e della celiachia ai bambini più piccoli, nella fascia d'età in cui l'esordio del diabete con chetoacidosi è più frequente e più grave. È l'obiettivo di Baby D1Ce, lo studio promosso da Istituto Superiore di Sanità ("
-   },
-   {
     "title": "AGENAS aggiorna il monitoraggio della Mobilità Sanitaria Interregionale",
     "date": "2026-11-11",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2917-agenas-aggiorna-il-monitoraggio-della-mobilit%C3%A0-sanitaria-interregionale",
@@ -311,34 +339,6 @@
     "url": "https://www.aifa.gov.it/-/chiarimenti-utilizzo-fonti-bibliografiche-materiali-promozionali-medicinali",
     "source": "AIFA – Notizie",
     "summary": "Il Documento è stato redatto dall’Ufficio Informazione sui Medicinali e Vigilanza sulla Pubblicità (UIMVP) con l’obiettivo di fornire alle Aziende alcuni chiarimenti in merito all’utilizzo delle fonti bibliografiche all’interno dei materiali promozionali."
-   },
-   {
-    "title": "Proroga autorizzazione transitoria all’uso di apteni per patch test in assenza di alternative cliniche in commercio",
-    "date": "2026-11-10",
-    "url": "https://www.aifa.gov.it/-/proroga-autorizzazione-transitoria-uso-apteni-patch-test-assenza-alternative-cliniche-in-commercio",
-    "source": "AIFA – Notizie",
-    "summary": "Pubblicata la Determina DTS n. 60/2026 del 5 novembre 2026 che proroga di ulteriori 36 mesi il termine fissato al 16 Novembre 2026 della Determina DG n. 442 del 13 Novembre 2023."
-   },
-   {
-    "title": "Spesa farmaceutica gennaio-aprile 2026: monitoraggio AIFA",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/spesa-farmaceutica-gennaio-aprile-2026-monitoraggio-aifa",
-    "source": "AIFA – Notizie",
-    "summary": "Nei primi quattro mesi del 2026 la spesa farmaceutica pubblica complessiva (convenzionata, acquisti diretti e ossigeno) ammonta a 9.036,9 milioni di euro, registrando un’incidenza sul FSN (valore provvisorio 2026 comunicato dal MdS con nota prot. n. 12829 del 27 luglio 2026) pari"
-   },
-   {
-    "title": "Ordine del giorno riunione Commissione Scientifica e Economica del Farmaco (CSE)",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/ordine-giorno-riunione-commissione-scientifica-economica-farmaco-cse-1",
-    "source": "AIFA – Notizie",
-    "summary": "L'Agenzia Italiana del Farmaco rende disponibile l'ordine del giorno dei lavori della riunione della Commissione Scientifica e Economica (CSE) del 9-13 novembre 2026."
-   },
-   {
-    "title": "Aggiornamento Registro di monitoraggio LUNSUMIO",
-    "date": "2026-11-06",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-registro-di-monitoraggio-lunsumio",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 06/11/2026, è stato aggiornato il Registro di Lunsumio (mosunetuzumab) dedicato al monitoraggio di una specifica indicazione terapeutica."
    }
   ]
  },
@@ -394,7 +394,8 @@
   "https://www.iss.it/-/proseguono-i-preparativi-per-il-lancio-di-una-nuova-piattaforma-di-sorveglianza-della-salute-pubblica-in-nove-paesi-pilota",
   "2026-DON626",
   "https://www.iss.it/-/diabete26",
-  "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati"
+  "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
+  "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa"
  ],
  "nodes": [
   {
@@ -406,7 +407,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-16T13:35:40.803019",
+   "updated_at": "2026-11-17T14:20:15.909245",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -418,7 +419,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-16T13:35:40.803019",
+   "updated_at": "2026-11-17T14:20:15.909245",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -430,7 +431,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -490,7 +491,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-16T13:35:40.803019",
+   "updated_at": "2026-11-17T14:20:15.909245",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -502,7 +503,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-16T13:35:40.803019",
+   "updated_at": "2026-11-17T14:20:15.909245",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -514,7 +515,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-16T13:35:40.803019",
+   "updated_at": "2026-11-17T14:20:15.909245",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -526,7 +527,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -679,7 +680,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-16T13:35:40.803019",
+   "updated_at": "2026-11-17T14:20:15.909245",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -758,7 +759,7 @@
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-17T14:20:25.281194",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -801,7 +802,7 @@
    "description": "Agenzia internazionale che monitora e coordina la risposta alla epidemia di Ebola in Repubblica Democratica del Congo",
    "risk_score": 75,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-16T13:35:48.393254",
+   "updated_at": "2026-11-17T14:20:25.281194",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Organizzazione Mondiale della Sanità",
@@ -2916,7 +2917,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2928,7 +2929,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2940,7 +2941,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3601,7 +3602,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3613,7 +3614,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3625,7 +3626,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-16T13:35:40.906387",
+   "updated_at": "2026-11-17T14:20:16.066044",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
   },
   {
@@ -3942,6 +3943,108 @@
    "risk_doc": "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
    "risk_doc_date": "2026-11-13",
    "risk_assigned_at": "2026-11-16T13:35:48.393233"
+  },
+  {
+   "id": "natus_medical_incorporated",
+   "label": "NATUS MEDICAL INCORPORATED",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "Canada",
+   "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011",
+   "risk_score": 55,
+   "created_at": "2026-11-17T14:20:16.066044",
+   "updated_at": "2026-11-17T14:20:16.066044",
+   "risk_basis": "Richiamo FDA Z-0319-2027 di classe II del 11/11/2026"
+  },
+  {
+   "id": "anna_teresa_palamara",
+   "label": "Anna Teresa Palamara",
+   "type": "Person",
+   "domain": "health",
+   "region": null,
+   "description": "Direttore Dipartimento Malattie Infettive ISS",
+   "risk_score": 5,
+   "created_at": "2026-11-17T14:20:25.281194",
+   "updated_at": "2026-11-17T14:20:25.281194",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "risk_doc_date": "2026-11-17",
+   "risk_assigned_at": "2026-11-17T14:20:25.281177"
+  },
+  {
+   "id": "ospedali_italia",
+   "label": "Ospedali Italia",
+   "type": "HospitalNetwork",
+   "domain": "health",
+   "region": "IT",
+   "description": "Sistema ospedaliero italiano",
+   "risk_score": 55,
+   "created_at": "2026-11-17T14:20:25.281194",
+   "updated_at": "2026-11-17T14:20:25.281194",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "risk_doc_date": "2026-11-17",
+   "risk_assigned_at": "2026-11-17T14:20:25.281177"
+  },
+  {
+   "id": "streptococcus_b_resistente",
+   "label": "Streptococcus B resistente alla penicillina",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "IT",
+   "description": "Nuovo ceppo batterico resistente documentato in Italia",
+   "risk_score": 75,
+   "created_at": "2026-11-17T14:20:25.281194",
+   "updated_at": "2026-11-17T14:20:25.281194",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "risk_doc_date": "2026-11-17",
+   "risk_assigned_at": "2026-11-17T14:20:25.281177"
+  },
+  {
+   "id": "antibiotico_resistenza",
+   "label": "Antibiotico-resistenza",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "IT",
+   "description": "Problema sanitario critico a tassi elevati in Italia",
+   "risk_score": 70,
+   "created_at": "2026-11-17T14:20:25.281194",
+   "updated_at": "2026-11-17T14:20:25.281194",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "risk_doc_date": "2026-11-17",
+   "risk_assigned_at": "2026-11-17T14:20:25.281177"
+  },
+  {
+   "id": "acque_reflue_monitoraggio",
+   "label": "Sorveglianza antimicrobico-resistenza acque",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "EU",
+   "description": "Programma ricerca su resistenza nei geni e batteri ambientali",
+   "risk_score": 45,
+   "created_at": "2026-11-17T14:20:25.281194",
+   "updated_at": "2026-11-17T14:20:25.281194",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "risk_doc_date": "2026-11-17",
+   "risk_assigned_at": "2026-11-17T14:20:25.281177"
+  },
+  {
+   "id": "eaad_2024",
+   "label": "Giornata Europea Uso Consapevole Antibiotici",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "EU",
+   "description": "Evento annuale di sensibilizzazione sulla resistenza antimicrobica",
+   "risk_score": 20,
+   "created_at": "2026-11-17T14:20:25.281194",
+   "updated_at": "2026-11-17T14:20:25.281194",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "risk_doc_date": "2026-11-17",
+   "risk_assigned_at": "2026-11-17T14:20:25.281177"
   }
  ],
  "edges": [
@@ -4098,18 +4201,8 @@
      "substance_name": [
       "FILGRASTIM"
      ],
-     "rxcui": [
-      "727535",
-      "727537",
-      "727544",
-      "727545",
-      "1649944",
-      "1649946",
-      "1649963",
-      "1649964"
-     ],
      "spl_id": [
-      "7cedb5f4-cfdd-46a5-836d-e5384c65a224"
+      "7e2a1b99-5ac7-4803-9c39-bc4445dc7212"
      ],
      "spl_set_id": [
       "97cc73cc-b5b7-458a-a933-77b00523e193"
@@ -4132,10 +4225,6 @@
      ],
      "is_original_packager": [
       true
-     ],
-     "upc": [
-      "0355513546102",
-      "0355513530101"
      ],
      "nui": [
       "M0024696",
@@ -4219,18 +4308,8 @@
      "substance_name": [
       "FILGRASTIM"
      ],
-     "rxcui": [
-      "727535",
-      "727537",
-      "727544",
-      "727545",
-      "1649944",
-      "1649946",
-      "1649963",
-      "1649964"
-     ],
      "spl_id": [
-      "7cedb5f4-cfdd-46a5-836d-e5384c65a224"
+      "7e2a1b99-5ac7-4803-9c39-bc4445dc7212"
      ],
      "spl_set_id": [
       "97cc73cc-b5b7-458a-a933-77b00523e193"
@@ -4253,10 +4332,6 @@
      ],
      "is_original_packager": [
       true
-     ],
-     "upc": [
-      "0355513546102",
-      "0355513530101"
      ],
      "nui": [
       "M0024696",
@@ -4602,7 +4677,54 @@
     "state": "MD",
     "country": "United States",
     "classification": "Class III",
-    "openfda": {},
+    "openfda": {
+     "application_number": [
+      "NDA200740"
+     ],
+     "brand_name": [
+      "CYSTARAN"
+     ],
+     "generic_name": [
+      "CYSTEAMINE HYDROCHLORIDE"
+     ],
+     "manufacturer_name": [
+      "Leadiant Biosciences, Inc."
+     ],
+     "product_ndc": [
+      "54482-020",
+      "54482-035"
+     ],
+     "product_type": [
+      "HUMAN PRESCRIPTION DRUG"
+     ],
+     "route": [
+      "OPHTHALMIC"
+     ],
+     "substance_name": [
+      "CYSTEAMINE HYDROCHLORIDE"
+     ],
+     "rxcui": [
+      "1313780",
+      "1313785"
+     ],
+     "spl_id": [
+      "e1abf849-2b93-40c8-831f-cdf83c2cd8ac"
+     ],
+     "spl_set_id": [
+      "b98ee838-ed23-42a9-93b5-72579e490fba"
+     ],
+     "package_ndc": [
+      "54482-020-01",
+      "54482-020-02",
+      "54482-035-02"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "unii": [
+      "IF1B771SVB"
+     ]
+    },
     "product_type": "Drugs",
     "event_id": "86525",
     "recalling_firm": "Leadiant Biosciences, Inc.",
@@ -11210,8 +11332,13 @@
    "date": "2026-07-13",
    "created_at": "2026-10-18T19:24:50.964057",
    "doc_titles": {
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026": "AGENAS – Notizie – 2 dicembre - AGENAS presenta i risultati del Programma Nazionale Esiti 2026",
     "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2793-ricerca-corrente-agenas-2025-2027": "AGENAS – Notizie – Ricerca Corrente Agenas 2025-2027 - Al via il nuovo programma per rafforzare qualità dell'assistenza, innovazione e rete degli IRCCS"
-   }
+   },
+   "source_docs": [
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2793-ricerca-corrente-agenas-2025-2027",
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026"
+   ]
   },
   {
    "id": "iss_minsalute_COMUNICA_SU",
@@ -11224,8 +11351,8 @@
    "date": "2026-03-06",
    "created_at": "2026-10-18T19:24:50.964057",
    "doc_titles": {
-    "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce": "ISS – Comunicati stampa – Diabete tipo 1: quasi 2.500 bambini da 1 a 5 anni già sottoposti a screening con lo studio Baby D1Ce",
     "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati",
+    "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce": "ISS – Comunicati stampa – Diabete tipo 1: quasi 2.500 bambini da 1 a 5 anni già sottoposti a screening con lo studio Baby D1Ce",
     "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx": "ISS – RespiVirNet – RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026"
    },
    "source_docs": [
@@ -21943,6 +22070,192 @@
    "doc_titles": {
     "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati"
    }
+  },
+  {
+   "id": "recall_Z-0319-2027",
+   "source": "natus_medical_incorporated",
+   "target": "ema",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0319-2027: The device may be unable to correctly format its internal memory. When the internal memory cannot be correctly formatted",
+   "risk_score": 55,
+   "source_doc": "Z-0319-2027",
+   "date": "2026-11-11",
+   "created_at": "2026-11-17T14:20:16.169624",
+   "record": {
+    "status": "Ongoing",
+    "city": "Oakville",
+    "state": "",
+    "country": "Canada",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99941",
+    "recalling_firm": "NATUS MEDICAL INCORPORATED",
+    "address_1": "2568 Bristol Cir",
+    "address_2": "",
+    "postal_code": "N/A",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide distribution - US Nationwide and the countries of Canada, China, Italy, Portugal.",
+    "recall_number": "Z-0319-2027",
+    "product_description": "Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011",
+    "product_quantity": "288 units",
+    "reason_for_recall": "The device may be unable to correctly format its internal memory. When the internal memory cannot be correctly formatted, previously recorded studies may remain on the device and may be updated with incorrect patient information from a subsequent study. The issue may also prevent studies from initiating recording successfully or may cause recordings to end prematurely, resulting in incomplete or unavailable diagnostic data and the potential need to repeat a patient study.",
+    "recall_initiation_date": "20260929",
+    "center_classification_date": "20261030",
+    "report_date": "20261111",
+    "code_info": "UDI-DI: 00382830023764; Serial Numbers: EBMPG-C1013678 EBMPG-C1013679 EBMPG-C1013682 EBMPG-C1013690 EBMPG-C1013691 EBMPG-C1013697 EBMPG-C1013700 EBMPG-C1013701 EBMPG-C1013703 EBMPG-C1013704 EBMPG-C1013707 EBMPG-C1013708 EBMPG-C1013748 EBMPG-C1013778 EBMPG-C1013779 EBMPG-C1013876 EBMPG-C1013566 EBMPG-C1013620 EBMPG-C1013632 EBMPG-C1013594 EBMPG-C1013596 EBMPG-C1013597 EBMPG-C1013599 EBMPG-C1013602 EBMPG-C1013614 EBMPG-C1013615 EBMPG-C1013617 EBMPG-C1013618 EBMPG-C1013414 EBMPG-C1013415 EBMPG-C1013416 EBMPG-C1013417 EBMPG-C1013448 EBMPG-C1013418 EBMPG-C1013591 EBMPG-C1013621 EBMPG-C1013629 EBMPG-C1013634 EBMPG-C1013636 EBMPG-C1013637 EBMPG-C1013643 EBMPG-C1013648 EBMPG-C1013655 EBMPG-C1013665 EBMPG-C1013609 EBMPG-C1013650 EBMPG-C1013652 EBMPG-C1013666 EBMPG-C1013670 EBMPG-C1013649 EBMPG-C1013293 EBMPG-C1013376 EBMPG-C1013387 EBMPG-C1013392 EBMPG-C1013398 EBMPG-C1013616 EBMPG-C1013633 EBMPG-C1013630 EBMPG-C1013638 EBMPG-C1013627 EBMPG-C1013541 EBMPG-C1013661 EBMPG-C1013667 EBMPG-C1013495 EBMPG-C1013572 EBMPG-C1013577 EBMPG-C1013578 EBMPG-C1013595 EBMPG-C1013610 EBMPG-C1013642 EBMPG-C1013653 EBMPG-C1013723 EBMPG-C1013734 EBMPG-C1013587 EBMPG-C1013590 EBMPG-C1013606 EBMPG-C1013611 EBMPG-C1013613 EBMPG-C1013641 EBMPG-C1013676 EBMPG-C1013542 EBMPG-C1013574 EBMPG-C1013583 EBMPG-C1013584 EBMPG-C1013672 EBMPG-C1013673 EBMPG-C1013680 EBMPG-C1013681 EBMPG-C1013683 EBMPG-C1013685 EBMPG-C1013686 EBMPG-C1013687 EBMPG-C1013688 EBMPG-C1013689 EBMPG-C1013693 EBMPG-C1013694 EBMPG-C1013695 EBMPG-C1013696 EBMPG-C1013706 EBMPG-C1013684 EBMPG-C1013698 EBMPG-C1013710 EBMPG-C1013712 EBMPG-C1013713 EBMPG-C1013714 EBMPG-C1013715 EBMPG-C1013716 EBMPG-C1013717 EBMPG-C1013718 EBMPG-C1013659 EBMPG-C1013728 EBMPG-C1013739 EBMPG-C1013426 EBMPG-C1013428 EBMPG-C1013429 EBMPG-C1013431 EBMPG-C1013442 EBMPG-C1013441 EBMPG-C1013607 EBMPG-C1013639 EBMPG-C1013646 EBMPG-C1013459 EBMPG-C1013467 EBMPG-C1013472 EBMPG-C1013476 EBMPG-C1013478 EBMPG-C1013612 EBMPG-C1013668 EBMPG-C1013635 EBMPG-C1013738 EBMPG-C1013731 EBMPG-C1013845 EBMPG-C1013422 EBMPG-C1013424 EBMPG-C1013434 EBMPG-C1013436 EBMPG-C1013437 EBMPG-C1013438 EBMPG-C1013447 EBMPG-C1013452 EBMPG-C1013453 EBMPG-C1013455 EBMPG-C1013460 EBMPG-C1013462 EBMPG-C1013464 EBMPG-C1013466 EBMPG-C1013471 EBMPG-C1013474 EBMPG-C1013475 EBMPG-C1013480 EBMPG-C1013482 EBMPG-C1013522 EBMPG-C1013586 EBMPG-C1013592 EBMPG-C1013579 EBMPG-C1013600 EBMPG-C1013619 EBMPG-C1013654 EBMPG-C1013598 EBMPG-C1013601 EBMPG-C1013603 EBMPG-C1013605 EBMPG-C1013721 EBMPG-C1013846 EBMPG-C1013465 EBMPG-C1013477 EBMPG-C1013479 EBMPG-C1013498 EBMPG-C1013504 EBMPG-C1013624 EBMPG-C1013737 EBMPG-C1013483 EBMPG-C1013484 EBMPG-C1013485 EBMPG-C1013486 EBMPG-C1013487 EBMPG-C1013488 EBMPG-C1013489 EBMPG-C1013490 EBMPG-C1013491 EBMPG-C1013492 EBMPG-C1013493 EBMPG-C1013494 EBMPG-C1013496 EBMPG-C1013499 EBMPG-C1013503 EBMPG-C1013543 EBMPG-C1013582 EBMPG-C1013581 EBMPG-C1013664 EBMPG-C1013608 EBMPG-C1013580 EBMPG-C1013724 EBMPG-C1013575 EBMPG-C1013589 EBMPG-C1013651 EBMPG-C1013726 EBMPG-C1013705 EBMPG-C1013456 EBMPG-C1013458 EBMPG-C1013468 EBMPG-C1013469 EBMPG-C1013473 EBMPG-C1013709 EBMPG-C1013481 EBMPG-C1013463 EBMPG-C1013720 EBMPG-C1013644 EBMPG-C1013625 EBMPG-C1013640 EBMPG-C1013675 EBMPG-C1013719 EBMPG-C1013732 EBMPG-C1013722 EBMPG-C1013735 EBMPG-C1013573 EBMPG-C1013576 EBMPG-C1013588 EBMPG-C1013593 EBMPG-C1013425 EBMPG-C1013427 EBMPG-C1013430 EBMPG-C1013432 EBMPG-C1013433 EBMPG-C1013444 EBMPG-C1013445 EBMPG-C1013423 EBMPG-C1013470 EBMPG-C1013505 EBMPG-C1013506 EBMPG-C1013507 EBMPG-C1013508 EBMPG-C1013509 EBMPG-C1013510 EBMPG-C1013511 EBMPG-C1013512 EBMPG-C1013513 EBMPG-C1013514 EBMPG-C1013515 EBMPG-C1013516 EBMPG-C1013517 EBMPG-C1013518 EBMPG-C1013519 EBMPG-C1013520 EBMPG-C1013521 EBMPG-C1013523 EBMPG-C1013538 EBMPG-C1013585 EBMPG-C1013440 EBMPG-C1013443 EBMPG-C1013656 EBMPG-C1013622 EBMPG-C1013725",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "recall_Z-0319-2027_it",
+   "source": "natus_medical_incorporated",
+   "target": "aifa",
+   "type": "RISCHIO_PER",
+   "fact": "[Class II] Z-0319-2027: The device may be unable to correctly format its internal memory. When the internal memory cannot be correctly formatted",
+   "risk_score": 55,
+   "source_doc": "Z-0319-2027",
+   "date": "2026-11-11",
+   "created_at": "2026-11-17T14:20:16.169624",
+   "record": {
+    "status": "Ongoing",
+    "city": "Oakville",
+    "state": "",
+    "country": "Canada",
+    "classification": "Class II",
+    "openfda": {},
+    "product_type": "Devices",
+    "event_id": "99941",
+    "recalling_firm": "NATUS MEDICAL INCORPORATED",
+    "address_1": "2568 Bristol Cir",
+    "address_2": "",
+    "postal_code": "N/A",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "initial_firm_notification": "Letter",
+    "distribution_pattern": "Worldwide distribution - US Nationwide and the countries of Canada, China, Italy, Portugal.",
+    "recall_number": "Z-0319-2027",
+    "product_description": "Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011",
+    "product_quantity": "288 units",
+    "reason_for_recall": "The device may be unable to correctly format its internal memory. When the internal memory cannot be correctly formatted, previously recorded studies may remain on the device and may be updated with incorrect patient information from a subsequent study. The issue may also prevent studies from initiating recording successfully or may cause recordings to end prematurely, resulting in incomplete or unavailable diagnostic data and the potential need to repeat a patient study.",
+    "recall_initiation_date": "20260929",
+    "center_classification_date": "20261030",
+    "report_date": "20261111",
+    "code_info": "UDI-DI: 00382830023764; Serial Numbers: EBMPG-C1013678 EBMPG-C1013679 EBMPG-C1013682 EBMPG-C1013690 EBMPG-C1013691 EBMPG-C1013697 EBMPG-C1013700 EBMPG-C1013701 EBMPG-C1013703 EBMPG-C1013704 EBMPG-C1013707 EBMPG-C1013708 EBMPG-C1013748 EBMPG-C1013778 EBMPG-C1013779 EBMPG-C1013876 EBMPG-C1013566 EBMPG-C1013620 EBMPG-C1013632 EBMPG-C1013594 EBMPG-C1013596 EBMPG-C1013597 EBMPG-C1013599 EBMPG-C1013602 EBMPG-C1013614 EBMPG-C1013615 EBMPG-C1013617 EBMPG-C1013618 EBMPG-C1013414 EBMPG-C1013415 EBMPG-C1013416 EBMPG-C1013417 EBMPG-C1013448 EBMPG-C1013418 EBMPG-C1013591 EBMPG-C1013621 EBMPG-C1013629 EBMPG-C1013634 EBMPG-C1013636 EBMPG-C1013637 EBMPG-C1013643 EBMPG-C1013648 EBMPG-C1013655 EBMPG-C1013665 EBMPG-C1013609 EBMPG-C1013650 EBMPG-C1013652 EBMPG-C1013666 EBMPG-C1013670 EBMPG-C1013649 EBMPG-C1013293 EBMPG-C1013376 EBMPG-C1013387 EBMPG-C1013392 EBMPG-C1013398 EBMPG-C1013616 EBMPG-C1013633 EBMPG-C1013630 EBMPG-C1013638 EBMPG-C1013627 EBMPG-C1013541 EBMPG-C1013661 EBMPG-C1013667 EBMPG-C1013495 EBMPG-C1013572 EBMPG-C1013577 EBMPG-C1013578 EBMPG-C1013595 EBMPG-C1013610 EBMPG-C1013642 EBMPG-C1013653 EBMPG-C1013723 EBMPG-C1013734 EBMPG-C1013587 EBMPG-C1013590 EBMPG-C1013606 EBMPG-C1013611 EBMPG-C1013613 EBMPG-C1013641 EBMPG-C1013676 EBMPG-C1013542 EBMPG-C1013574 EBMPG-C1013583 EBMPG-C1013584 EBMPG-C1013672 EBMPG-C1013673 EBMPG-C1013680 EBMPG-C1013681 EBMPG-C1013683 EBMPG-C1013685 EBMPG-C1013686 EBMPG-C1013687 EBMPG-C1013688 EBMPG-C1013689 EBMPG-C1013693 EBMPG-C1013694 EBMPG-C1013695 EBMPG-C1013696 EBMPG-C1013706 EBMPG-C1013684 EBMPG-C1013698 EBMPG-C1013710 EBMPG-C1013712 EBMPG-C1013713 EBMPG-C1013714 EBMPG-C1013715 EBMPG-C1013716 EBMPG-C1013717 EBMPG-C1013718 EBMPG-C1013659 EBMPG-C1013728 EBMPG-C1013739 EBMPG-C1013426 EBMPG-C1013428 EBMPG-C1013429 EBMPG-C1013431 EBMPG-C1013442 EBMPG-C1013441 EBMPG-C1013607 EBMPG-C1013639 EBMPG-C1013646 EBMPG-C1013459 EBMPG-C1013467 EBMPG-C1013472 EBMPG-C1013476 EBMPG-C1013478 EBMPG-C1013612 EBMPG-C1013668 EBMPG-C1013635 EBMPG-C1013738 EBMPG-C1013731 EBMPG-C1013845 EBMPG-C1013422 EBMPG-C1013424 EBMPG-C1013434 EBMPG-C1013436 EBMPG-C1013437 EBMPG-C1013438 EBMPG-C1013447 EBMPG-C1013452 EBMPG-C1013453 EBMPG-C1013455 EBMPG-C1013460 EBMPG-C1013462 EBMPG-C1013464 EBMPG-C1013466 EBMPG-C1013471 EBMPG-C1013474 EBMPG-C1013475 EBMPG-C1013480 EBMPG-C1013482 EBMPG-C1013522 EBMPG-C1013586 EBMPG-C1013592 EBMPG-C1013579 EBMPG-C1013600 EBMPG-C1013619 EBMPG-C1013654 EBMPG-C1013598 EBMPG-C1013601 EBMPG-C1013603 EBMPG-C1013605 EBMPG-C1013721 EBMPG-C1013846 EBMPG-C1013465 EBMPG-C1013477 EBMPG-C1013479 EBMPG-C1013498 EBMPG-C1013504 EBMPG-C1013624 EBMPG-C1013737 EBMPG-C1013483 EBMPG-C1013484 EBMPG-C1013485 EBMPG-C1013486 EBMPG-C1013487 EBMPG-C1013488 EBMPG-C1013489 EBMPG-C1013490 EBMPG-C1013491 EBMPG-C1013492 EBMPG-C1013493 EBMPG-C1013494 EBMPG-C1013496 EBMPG-C1013499 EBMPG-C1013503 EBMPG-C1013543 EBMPG-C1013582 EBMPG-C1013581 EBMPG-C1013664 EBMPG-C1013608 EBMPG-C1013580 EBMPG-C1013724 EBMPG-C1013575 EBMPG-C1013589 EBMPG-C1013651 EBMPG-C1013726 EBMPG-C1013705 EBMPG-C1013456 EBMPG-C1013458 EBMPG-C1013468 EBMPG-C1013469 EBMPG-C1013473 EBMPG-C1013709 EBMPG-C1013481 EBMPG-C1013463 EBMPG-C1013720 EBMPG-C1013644 EBMPG-C1013625 EBMPG-C1013640 EBMPG-C1013675 EBMPG-C1013719 EBMPG-C1013732 EBMPG-C1013722 EBMPG-C1013735 EBMPG-C1013573 EBMPG-C1013576 EBMPG-C1013588 EBMPG-C1013593 EBMPG-C1013425 EBMPG-C1013427 EBMPG-C1013430 EBMPG-C1013432 EBMPG-C1013433 EBMPG-C1013444 EBMPG-C1013445 EBMPG-C1013423 EBMPG-C1013470 EBMPG-C1013505 EBMPG-C1013506 EBMPG-C1013507 EBMPG-C1013508 EBMPG-C1013509 EBMPG-C1013510 EBMPG-C1013511 EBMPG-C1013512 EBMPG-C1013513 EBMPG-C1013514 EBMPG-C1013515 EBMPG-C1013516 EBMPG-C1013517 EBMPG-C1013518 EBMPG-C1013519 EBMPG-C1013520 EBMPG-C1013521 EBMPG-C1013523 EBMPG-C1013538 EBMPG-C1013585 EBMPG-C1013440 EBMPG-C1013443 EBMPG-C1013656 EBMPG-C1013622 EBMPG-C1013725",
+    "more_code_info": ""
+   }
+  },
+  {
+   "id": "iss_ospedali_italia_CONTROLLA",
+   "source": "iss",
+   "target": "ospedali_italia",
+   "type": "CONTROLLA",
+   "fact": "ISS sorveglia e monitora tassi antibiotico-resistenza ospedali italiani",
+   "risk_score": 25,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": null,
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
+  },
+  {
+   "id": "anna_teresa_palamara_iss_MEMBRO_DI",
+   "source": "anna_teresa_palamara",
+   "target": "iss",
+   "type": "MEMBRO_DI",
+   "fact": "Direttore Dipartimento Malattie Infettive presso ISS",
+   "risk_score": 5,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": null,
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
+  },
+  {
+   "id": "iss_streptococcus_b_resistente_INDAGA_SU",
+   "source": "iss",
+   "target": "streptococcus_b_resistente",
+   "type": "INDAGA_SU",
+   "fact": "ISS ha documentato primo caso italiano di streptococco B resistente penicillina",
+   "risk_score": 60,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": null,
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
+  },
+  {
+   "id": "ospedali_italia_antibiotico_resistenza_RISCHIO_PER",
+   "source": "ospedali_italia",
+   "target": "antibiotico_resistenza",
+   "type": "RISCHIO_PER",
+   "fact": "Alti tassi antibiotico-resistenza rappresentano rischio critico per strutture ospedaliere",
+   "risk_score": 75,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": null,
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
+  },
+  {
+   "id": "iss_acque_reflue_monitoraggio_FINANZIA",
+   "source": "iss",
+   "target": "acque_reflue_monitoraggio",
+   "type": "FINANZIA",
+   "fact": "ISS conduce ricerca sorveglianza antimicrobico-resistenza acque reflue superficiali",
+   "risk_score": 35,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": null,
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
+  },
+  {
+   "id": "who_ospedali_italia_REGOLA",
+   "source": "who",
+   "target": "ospedali_italia",
+   "type": "REGOLA",
+   "fact": "OMS raccomanda tassi igiene mani e strategie contrasto resistenza agli ospedali",
+   "risk_score": 20,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": null,
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
+  },
+  {
+   "id": "iss_eaad_2024_COLLABORA_CON",
+   "source": "iss",
+   "target": "eaad_2024",
+   "type": "COLLABORA_CON",
+   "fact": "ISS organizza webinar europeo con 350 partecipanti per EAAD novembre",
+   "risk_score": 15,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": "2024-11",
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
+  },
+  {
+   "id": "streptococcus_b_resistente_ospedali_italia_RISCHIO_PER",
+   "source": "streptococcus_b_resistente",
+   "target": "ospedali_italia",
+   "type": "RISCHIO_PER",
+   "fact": "Nuovo ceppo resistente rappresenta rischio epidemiologico critico per ospedali",
+   "risk_score": 80,
+   "source_doc": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+   "date": null,
+   "created_at": "2026-11-17T14:20:25.465691",
+   "doc_titles": {
+    "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa": "ISS – Comunicati stampa – Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa"
+   }
   }
  ],
  "alerts": [
@@ -21957,7 +22270,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON626 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -21971,7 +22284,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -21985,7 +22298,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON624 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -21999,7 +22312,21 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON623 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "created_at": "2026-11-17T14:20:36.198417",
+   "is_read": false
+  },
+  {
+   "id": "recall_z_0319_2027",
+   "title": "Richiamo FDA Class II: \"Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011\"",
+   "description": "Richiamo FDA Z-0319-2027. Prodotto: \"Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011\" Motivo: \"The device may be unable to correctly format its internal memory. When the internal memory cannot be correctly formatted, previously recorded studies may remain on the device and may be updated with incorrect patient information from a subsequent study. The issue may also prevent studies from initiating recording successfully or may cause recordings to end prematurely, resulting in incomplete or unavailable diagnostic data and the potential need to repeat a patient study.\"",
+   "severity": "HIGH",
+   "entities_involved": "[\"natus_medical_incorporated\"]",
+   "predicted_impact": null,
+   "italy_relevance": null,
+   "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
+   "timeframe": null,
+   "recommendation": "Verificare presenza dispositivo Embletta MPR PG Model 2003011 in inventario. Controllare numeri seriali elencati nel record e UDI-DI 00382830023764.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -22012,8 +22339,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei modelli 0042-0000-US/UK/EU/IN/CA con i numeri seriali IC1014-IC1238 elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "recommendation": "Verificare presenza Automated Impella Controller nei sistemi. Controllare codici prodotto 0042-0000 e numeri seriali IC1014-IC1238 indicati nel record.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -22026,8 +22353,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei modelli 0042-0010-US/UK/EU/IN con i numeri seriali IC6962-IC8335 elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "recommendation": "Verificare presenza Impella Optical Controller nei sistemi. Controllare codici prodotto 0042-0010 e numeri seriali IC6962-IC8335 indicati nel record.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -22040,8 +22367,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei modelli 0042-0040-US/UK/EU/CA con i numeri seriali IC8024-IC10097 elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "recommendation": "Verificare presenza Impella Connect Optical AIC nei sistemi. Controllare codici prodotto 0042-0040 e numeri seriali IC8024-IC10097 indicati nel record.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -22054,8 +22381,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del modello 3930M con i numeri seriali CDD401008V-CDD404095V elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "recommendation": "Verificare presenza lead OmniaSecure Model 3930M in inventario. Controllare modelli 3930M74 e 3930M79, numeri seriali e UDI indicati nel record.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -22068,8 +22395,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del modello Philips Azurion 5 M12 (722227) con i codici UDI elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "recommendation": "Verificare presenza Philips Azurion 5 M12 Model 722227 in inventario. Controllare UDI e numeri seriali specificati nel record.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -22082,8 +22409,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei modelli Philips Azurion 5 M20 (722228, 722281) con i codici UDI elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "recommendation": "Verificare presenza Philips Azurion 5 M20 Model 722228 e 722281 in inventario. Controllare UDI e numeri seriali specificati nel record.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   },
   {
@@ -22096,22 +22423,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario del modello Philips Azurion S (722285) con il codice UDI e numero seriale elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
-   "is_read": false
-  },
-  {
-   "id": "recall_z_0297_2027",
-   "title": "Richiamo FDA Class II: \"Philips Azurion 7 B20\"",
-   "description": "Richiamo FDA Z-0297-2027. Prodotto: \"Philips Azurion 7 B20. Model Numbers: 722068, 722226.\" Motivo: \"Solid-State Drives (SSDs) that are not specified in the Medical Device File may have been installed in various PCs. These SSDs may have different performance characteristics, which may include reduced reliability over time such as loss of imaging functionality or motorized movement, a blank or black display, and/or the inability to store newly acquired images or access previously acquired images.\"",
-   "severity": "HIGH",
-   "entities_involved": "[\"philips_medical_systems_nederlan\"]",
-   "predicted_impact": null,
-   "italy_relevance": null,
-   "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
-   "timeframe": null,
-   "recommendation": "Verificare presenza in inventario dei modelli Philips Azurion 7 B20 (722068, 722226) con i codici UDI elencati nel record.",
-   "created_at": "2026-11-16T13:35:57.404872",
+   "recommendation": "Verificare presenza Philips Azurion S Model 722285 in inventario. Controllare UDI e numero seriale specificati nel record.",
+   "created_at": "2026-11-17T14:20:36.198417",
    "is_read": false
   }
  ]
