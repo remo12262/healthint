@@ -1,39 +1,48 @@
 {
  "version": 1,
- "exported_at": "2026-11-20T13:58:59.641600",
- "data_updated_at": "2026-11-20T13:58:59.517246",
+ "exported_at": "2026-11-21T13:27:27.692735",
+ "data_updated_at": "2026-11-21T13:27:27.529945",
  "refresh_info": {
-  "last_success": "2026-11-20T13:58:59.517246",
+  "last_success": "2026-11-21T13:27:27.529945",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "italy"
+   "italy",
+   "who_outbreaks"
   ],
   "new": {
-   "nodes": 3,
-   "edges": 8,
-   "alerts": 0
+   "nodes": 6,
+   "edges": 13,
+   "alerts": 1
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-11-11",
-   "who_outbreaks": "2026-11-17",
-   "italy": "2026-11-20"
+   "who_outbreaks": "2026-11-20",
+   "italy": "2026-11-21"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 42
+   "italy": 23
   },
-  "source_errors": {},
+  "source_errors": {
+   "aifa_news": "ReadTimeout: ",
+   "aifa_press": "ReadTimeout: "
+  },
   "alerts_error": null,
   "alerts_discarded": [],
-  "alerts_attempt": "2026-11-20T13:58:59.517246"
+  "alerts_attempt": "2026-11-21T13:27:27.529945"
  },
  "signals": {
-  "generated_at": "2026-11-20T13:58:49.592726",
+  "generated_at": "2026-11-21T13:27:17.117139",
   "who": [
+   {
+    "title": "Ebola disease caused by Bundibugyo virus- Democratic Republic of the Congo, Kenya and Nigeria",
+    "date": "2026-11-20",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON630"
+   },
    {
     "title": "Chikungunya virus disease - Switzerland",
     "date": "2026-11-17",
@@ -68,11 +77,6 @@
     "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
     "date": "2026-10-15",
     "url": "https://www.who.int/emergencies/disease-outbreak-news/item/middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia"
-   },
-   {
-    "title": "Pneumonia of undetermined etiology - the Russian Federation",
-    "date": "2026-10-10",
-    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620"
    }
   ],
   "recalls": [
@@ -199,18 +203,39 @@
   ],
   "italy": [
    {
-    "title": "Esiti runione Commissione Scientifica e Economica del Farmaco (CSE)",
-    "date": "2026-11-20",
-    "url": "https://www.aifa.gov.it/-/esiti-runione-commissione-scientifica-e-economica-del-farmaco-cse-23",
-    "source": "AIFA – Notizie",
-    "summary": "L'Agenzia Italiana del Farmaco rende disponibile gli esiti dei lavori della riunione della Commissione Scientifica e Economica (CSE) del 9-13 novembre 2026."
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'importazione parallela di taluni medicinali per uso umano. (26A05990)"
    },
    {
-    "title": "Ordine del giorno riunione straordinaria Commissione Scientifica e Economica del Farmaco (CSE)",
-    "date": "2026-11-20",
-    "url": "https://www.aifa.gov.it/-/ordine-del-giorno-riunione-straordinaria-commissione-scientifica-e-economica-del-farmaco-cse-11",
-    "source": "AIFA – Notizie",
-    "summary": "L'Agenzia Italiana del Farmaco rende disponibile l'ordine del giorno dei lavori della riunione straordinaria della Commissione Scientifica e Economica (CSE) del 20 novembre 2026."
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05991/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Rocuronio Accord». (26A05991)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05992/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Lansocel» (26A05992)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05993/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'importazione parallela del medicinale per uso umano «Imodium» (26A05993)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-21",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A06036/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'importazione parallela del medicinale per uso umano «Lansox» (26A06036)"
    },
    {
     "title": "Sorveglianza RespiVirNet, in leggera crescita i casi di Infezioni Respiratorie Acute",
@@ -227,83 +252,6 @@
     "summary": "In questa stagione, la raccolta dei dati avviene attraverso la piattaforma RespiVirNet dell’ISS che è stata appositamente modificata per acquisire dati privi di identificativi personali. Questo comporta alcune limitazioni che riducono in parte la qualità dei dati pur consentendo "
    },
    {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-19",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/19/26A06002/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Macmiror Complex» (26A06002)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-19",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/19/26A06003/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Fenistil» (26A06003)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-19",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/19/26A06004/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Maalox Plus» (26A06004)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-19",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/19/26A06005/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Airtal» (26A06005)"
-   },
-   {
-    "title": "AIFA incontra delegazione ufficiale del Regno d’Arabia Saudita",
-    "date": "2026-11-19",
-    "url": "https://www.aifa.gov.it/-/aifa-incontra-delegazione-ufficiale-regno-arabia-saudita",
-    "source": "AIFA – Notizie",
-    "summary": "L’Agenzia Italiana del Farmaco ha ospitato una delegazione del Regno d’Arabia Saudita, guidata dal Ministro della salute Fahad A. Al-Jalajel."
-   },
-   {
-    "title": "Aggiornamento scheda Multifarmaco di monitoraggio semplificato intravitreali anti VEGF YESAFILI",
-    "date": "2026-11-19",
-    "url": "https://www.aifa.gov.it/-/aggiornamento-scheda-multifarmaco-monitoraggio-semplificato-intravitreali-anti-vegf-yesafili",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che, a partire dal 19.11.2026 è possibile selezionare, nella scheda multifarmaco di monitoraggio semplificato anti VEGF IVT, il medicinale YESAFILI (aflibercept) per quattro specifiche indicazioni terapeut"
-   },
-   {
-    "title": "Attivazione web Registro di monitoraggio ZIIHERA",
-    "date": "2026-11-19",
-    "url": "https://www.aifa.gov.it/-/attivazione-web-registro-di-monitoraggio-ziihera",
-    "source": "AIFA – Notizie",
-    "summary": "Si informano gli utenti dei Registri Farmaci sottoposti a Monitoraggio che, a partire dal 19/11/2026 è possibile utilizzare il medicinale ZIIHERA (zanidatamab) mediante registro di monitoraggio per una specifica indicazione ammessa alla rimborsabilità."
-   },
-   {
-    "title": "Avviso per il conferimento di incarichi di fascia retributiva S1 e S2/S3, diversi dalla struttura complessa, ai dirigenti sanitari dell’AIFA",
-    "date": "2026-11-19",
-    "url": "https://www.aifa.gov.it/-/avviso-conferimento-incarichi-fascia-retributiva-s1-s2-s3-diversi-struttura-complessa-dirigenti-sanitari-aifa",
-    "source": "AIFA – Notizie",
-    "summary": "Avviso, per il conferimento di n. 244 incarichi - di fascia retributiva S1 e S2/S3 - diversi dalla struttura complessa, conferibili ai dirigenti sanitari dell’AIFA e ai dirigenti sanitari di altra amministrazione in comando presso l’AIFA."
-   },
-   {
-    "title": "Notifica dei provvedimenti - Ufficio Ispezioni e Autorizzazioni GMP Medicinali",
-    "date": "2026-11-19",
-    "url": "https://www.aifa.gov.it/-/notifica-dei-provvedimenti-ufficio-ispezioni-e-autorizzazioni-gmp-medicinali-125",
-    "source": "AIFA – Notizie",
-    "summary": "Modalità di notifica dei documenti prodotti dall’Ufficio Ispezioni e Autorizzazioni GMP Medicinali (prodotti in formato cartaceo e prodotti in formato elettronico e firmati digitalmente)."
-   },
-   {
-    "title": "Spesa farmaceutica gennaio-giugno 2026: monitoraggio AIFA",
-    "date": "2026-11-19",
-    "url": "https://www.aifa.gov.it/-/spesa-farmaceutica-gennaio-giugno-2026-monitoraggio-aifa",
-    "source": "AIFA – Notizie",
-    "summary": "Nei primi sei mesi del 2026 la spesa farmaceutica pubblica complessiva (convenzionata, acquisti diretti e ossigeno) ammonta a 13.417,6 milioni di euro, registrando un’incidenza sul FSN (valore provvisorio 2026 comunicato dal MdS con nota prot. n. 12829 del 27 luglio 2026) pari al"
-   },
-   {
-    "title": "Il CdA AIFA approva la rimborsabilità di un farmaco orfano per una malattia renale, di 3 nuove molecole, di 5 estensioni di indicazione terapeutica e di 2 equivalenti",
-    "date": "2026-11-19",
-    "url": "https://www.aifa.gov.it/-/cda-aifa-18novembre2026-approva-nuove-rimborsabilita",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "Via libera a trattamenti per nefropatie rare, angioedema ereditario, asma severo, sintomi correlati alle terapie oncologiche ed estensioni pediatriche e infettivologiche."
-   },
-   {
     "title": "Il 2 dicembre il convegno 'Il network della cooperazione internazionale per la salute globale'",
     "date": "2026-11-19",
     "url": "https://www.iss.it/-/il-2-dicembre-il-convegno-il-network-della-cooperazione%C2%A0internazionale-per-la-salute-globale-",
@@ -311,25 +259,11 @@
     "summary": "Da anni il Centro Nazionale per la Salute Globale (CNSG) dell’Istituto Superiore di Sanità lavora per migliorare la salute delle popolazioni, ridurre le disuguaglianze e sviluppare sistemi sanitari più equi, inclusivi e sostenibili. Lo fa offrendo supporto tecnico-scientifico ai "
    },
    {
-    "title": "Richiamo alle indicazioni sulle modalità di pagamento della tariffa per la relazione annuale di sicurezza (Annual Safety Report, ASR)",
-    "date": "2026-11-18",
-    "url": "https://www.aifa.gov.it/-/richiamo-indicazioni-modalita-pagamento-tariffa-relazione-annuale-sicurezza-asr",
-    "source": "AIFA – Notizie",
-    "summary": "In considerazione delle richieste di chiarimento pervenute in merito alla regolarizzazione dei pagamenti per la valutazione degli ASR, indicate nel comunicato del 22 luglio 2026, si forniscono ulteriori indicazioni."
-   },
-   {
-    "title": "La campagna AIFA per l’uso consapevole degli antibiotici in collaborazione con il Ministero della Salute",
-    "date": "2026-11-18",
-    "url": "https://www.aifa.gov.it/-/campagna-aifa-per-uso-consapevole-antibiotici-in-collaborazione-con-ministero-salute",
-    "source": "AIFA – Comunicati stampa",
-    "summary": "“Te lo direbbe anche un bambino” è il messaggio della campagna 2026 dell’Agenzia Italiana del Farmaco realizzata in collaborazione con il Ministero della Salute per promuovere l’uso consapevole degli antibiotici e contrastare l’antibiotico-resistenza."
-   },
-   {
     "title": "20 novembre – Evento ECM | Bilancio del mandato della Commissione Nazionale per la Formazione Continua 2023–2026 e sfide per il futuro",
     "date": "2026-11-18",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2933-20-novembre-%E2%80%93-evento-ecm-bilancio-del-mandato-della-commissione-nazionale-per-la-formazione-continua-2023%E2%80%932026-e-sfide-per-il-futuro",
     "source": "AGENAS – Notizie",
-    "summary": "Il prossimo 20 novembre 2026, presso il Centro Congressi Auditorium della Tecnica di Roma, si terrà l’evento ECM dedicato al bilancio delle attività svolte dalla Commissione Nazionale per la Formazione Continua (CNFC) nel mandato 2023–2026 e alle prospettive future del sistema di"
+    "summary": "Si è svolto il 20 novembre 2026 a Roma l’evento dedicato al bilancio del mandato della Commissione nazionale per la formazione continua. Il Direttore generale di AGENAS Angelo Tanese ha proposto quattro direttrici per l’evoluzione del sistema ECM."
    },
    {
     "title": "AGENAS 19 novembre - A Napoli il terzo Infoday del Programma Nazionale HTA Dispositivi Medici 2026-2028",
@@ -337,6 +271,76 @@
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2932-agenas-19-novembre-a-napoli-il-terzo-infoday-del-programma-nazionale-hta-dispositivi-medici-2026-2028",
     "source": "AGENAS – Notizie",
     "summary": "Il terzo InfoDay del Programma Nazionale HTA Dispositivi Medici 2026-2028si è svolto giovedì 19 novembre 2026, presso il Salone Salvatore Moriello dell’Azienda Ospedaliera di Rilievo Nazionale «Antonio Cardarelli», a Napoli."
+   },
+   {
+    "title": "AGENAS investe in nuove competenze: aperte le selezioni per professionisti della sanità digitale e funzionari in diversi ambiti",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2930-agenas-investe-in-nuove-competenze-aperte-le-selezioni-per-professionisti-della-sanit%C3%A0-digitale-e-funzionari-in-diversi-ambiti",
+    "source": "AGENAS – Notizie",
+    "summary": "Dalla cybersecurity all'intelligenza artificiale, dall'analisi dei dati alle competenze economiche, giuridiche e ingegneristiche: nuove opportunità professionali per contribuire all'innovazione del Servizio sanitario nazionale."
+   },
+   {
+    "title": "2 dicembre - AGENAS presenta i risultati del Programma Nazionale Esiti 2026",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026",
+    "source": "AGENAS – Notizie",
+    "summary": "Mercoledì 2 dicembre 2026, dalle ore 10.00, presso l’Auditorium Cosimo Piccinno del Ministero della Salute, in Lungotevere Ripa 1 a Roma, AGENAS presenterà i risultati dell’edizione 2026 del Programma Nazionale Esiti (PNE), su dati 2025."
+   },
+   {
+    "title": "AGENAS aggiorna il monitoraggio della Mobilità Sanitaria Interregionale",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2917-agenas-aggiorna-il-monitoraggio-della-mobilit%C3%A0-sanitaria-interregionale",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS ha pubblicato l’aggiornamento all’anno 2025 del monitoraggio della Mobilità Sanitaria Interregionale, con l’analisi delle principali dinamiche dei flussi di pazienti nel nostro Paese, riferite sia ai ricoveri ospedalieri sia alla specialistica ambulatoriale."
+   },
+   {
+    "title": "Telemedicina: AGENAS pubblica il documento \"Modello operativo per il rinnovo dei Piani Terapeutici in televisita\"",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2916-telemedicina-agenas-pubblica-il-documento-modello-operativo-per-il-rinnovo-dei-piani-terapeutici-in-televisita",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS ha pubblicato sulla Piattaforma Nazionale di Telemedicina (PNT) il «Modello operativo per il rinnovo dei Piani Terapeutici in televisita». Il documento serve a supportare Regioni e Aziende sanitarie nella definizione e nell’implementazione di percorsi clinico-organizzativi"
+   },
+   {
+    "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
+    "source": "AGENAS – Notizie",
+    "summary": "Il 10 novembre 2026 si è tenuto il seminario “I dati della vita. Crescere, vivere, invecchiare: il valore pubblico dei dati sanitari” presso l'Auditorium AGENAS, a Roma, promosso dall'Agenzia Nazionale per i Servizi Sanitari Regionali in occasione della Giornata mondiale della sc"
+   },
+   {
+    "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2913-programma-nazionale-hta-dispositivi-medici-2026-2028-agenas-promuove-cinque-infoday-territoriali",
+    "source": "AGENAS – Notizie",
+    "summary": "Al via un ciclo di incontri che apre un percorso nazionale di accompagnamento all’attuazione del Programma Nazionale HTA Dispositivi Medici. Il primo appuntamento si terrà a a Roma il 4 novembre 2026."
+   },
+   {
+    "title": "Agenas istituisce l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2911-agenas-istituisce-l%E2%80%99osservatorio-per-il-monitoraggio-e-l%E2%80%99implementazione-della-rete-di-cure-palliative-e-terapia-del-dolore",
+    "source": "AGENAS – Notizie",
+    "summary": "Agenas con Delibera del Direttore Generale n°334 del 14 ottobre 2026, ha istituito l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore, organismo deputato ad accompagnare Regioni e Province Autonome nel consolidamento di una r"
+   },
+   {
+    "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
+    "date": "2026-11-17",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2816-online-il-bollettino-trimestrale-agenas-sul-monitoraggio-delle-liste-di-attesa",
+    "source": "AGENAS – Notizie",
+    "summary": "Oltre due milioni di prenotazioni in più nei primi nove mesi del 2026 rispetto allo stesso periodo del 2025 e un miglioramento del rispetto dei tempi massimi di attesa per visite specialistiche ed esami diagnostici. Si conferma la tendenza positiva già evidenziata nel primo semes"
+   },
+   {
+    "title": "Antibiotico-resistenza, in Italia tassi sempre alti; ecco come ‘viaggia’ un batterio resistente in Europa",
+    "date": "2026-11-17",
+    "url": "https://www.iss.it/-/antibiotico-resistenza-in-italia-tassi-sempre-alti-ecco-come-viaggia-un-batterio-resistente-in-europa",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Domani la giornata europea sull’uso consapevole degli antibiotici, primo caso in Italia di streptococco B resistente alla penicillina Restano in generale sempre alti i tassi di antibioticoresistenza in Italia, anche se si vedono segnali di miglioramento. Risale leggermente anche "
+   },
+   {
+    "title": "Dieta mediterranea, cinque consigli per mangiare bene anche quando si ha poco tempo",
+    "date": "2026-11-16",
+    "url": "https://www.iss.it/-/dieta-mediterranea-cinque-consigli-per-mangiare-bene-anche-quando-si-ha-poco-tempo",
+    "source": "ISS – Comunicati stampa",
+    "summary": "Avere poco tempo per cucinare, fare la spesa online e pranzare spesso fuori casa non significa dover rinunciare alla dieta mediterranea. Seguire questo modello alimentare anche quando i ritmi quotidiani sono intensi è possibile, a patto di organizzare le scelte con semplicità e v"
    }
   ]
  },
@@ -399,7 +403,12 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/11/18/26A05998/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/18/26A05999/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/18/26A06000/SG",
-  "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute"
+  "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute",
+  "2026-DON630",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05991/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05992/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05993/SG"
  ],
  "nodes": [
   {
@@ -411,7 +420,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-20T13:58:41.631500",
+   "updated_at": "2026-11-21T13:26:56.880136",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -423,7 +432,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-20T13:58:41.631500",
+   "updated_at": "2026-11-21T13:26:56.880136",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -435,7 +444,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -495,7 +504,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-20T13:58:41.631500",
+   "updated_at": "2026-11-21T13:26:56.880136",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -507,7 +516,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-20T13:58:41.631500",
+   "updated_at": "2026-11-21T13:26:56.880136",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -519,7 +528,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-20T13:58:41.631500",
+   "updated_at": "2026-11-21T13:26:56.880136",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -531,7 +540,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -684,7 +693,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-20T13:58:41.631500",
+   "updated_at": "2026-11-21T13:26:56.880136",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -726,10 +735,10 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "IT",
-   "description": "Autorità nazionale italiana per l'autorizzazione e la sorveglianza dei medicinali.",
+   "description": "Agenzia nazionale italiana competente per l'autorizzazione e la vigilanza su medicinali.",
    "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-19T14:23:17.380927",
+   "updated_at": "2026-11-21T13:27:16.747708",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -747,15 +756,18 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "EU",
-   "description": "Agenzia europea dei medicinali responsabile valutazione farmaci europei",
+   "description": "Agenzia europea del farmaco per autorizzazione medicinali a livello comunitario.",
    "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-18T13:55:24.254749",
+   "updated_at": "2026-11-21T13:27:16.747708",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Agenzia europea per i medicinali (European Medicines Agency)",
    "risk_doc": "https://www.aifa.gov.it/-/richiamo-indicazioni-modalita-pagamento-tariffa-relazione-annuale-sicurezza-asr",
    "risk_doc_date": "2026-11-18",
-   "risk_assigned_at": "2026-11-18T13:55:24.254733"
+   "risk_assigned_at": "2026-11-18T13:55:24.254733",
+   "aliases": [
+    "European Medicines Agency"
+   ]
   },
   {
    "id": "iss",
@@ -809,7 +821,7 @@
    "description": "Agenzia internazionale che monitora e coordina la risposta alla epidemia di Ebola in Repubblica Democratica del Congo",
    "risk_score": 75,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-17T14:20:25.281194",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Organizzazione Mondiale della Sanità",
@@ -830,7 +842,7 @@
    "description": "Autorità sanitaria della Repubblica Democratica del Congo responsabile della gestione dell'epidemia di Ebola Bundibugyo",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-07T11:43:01.223451",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Democratic Republic of the Congo",
@@ -849,7 +861,7 @@
    "description": "Sistema sanitario del Kenya che ha ospedalizzato caso importato confermato di virus Bundibugyo",
    "risk_score": 85,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-07T11:43:01.223451",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Kenya - Health Authority",
@@ -903,7 +915,7 @@
    "description": "Focolaio epidemico di Ebola causato da virus Bundibugyo nella Repubblica Democratica del Congo con 5794 casi confermati e 2786 decessi (CFR 48.1%) a partire dal 26 agosto 2026, diffuso in 60 zone sanitarie e 6 province",
    "risk_score": 100,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-07T11:43:01.223451",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Bundibugyo Virus Disease Outbreak",
@@ -912,6 +924,7 @@
     "Bundibugyo Virus Outbreak - DRC 2026",
     "Bundibugyo Virus Outbreak DRC",
     "Bundibugyo virus disease",
+    "Ebola Bundibugyo Virus",
     "Epidemia Bundibugyo - Repubblica Democratica del Congo",
     "Epidemia Ebola - RDC 2026",
     "Epidemia Ebola Bundibugyo - RDC",
@@ -989,9 +1002,10 @@
    "description": "Provincia della RDC colpita dall'epidemia, con focolai in zone sanitarie di Biena, Manguredjipa e Mutwanga",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
+    "Nord Kivu Province",
     "North Kivu Health Zone",
     "North Kivu Province",
     "Provincia North Kivu"
@@ -1027,7 +1041,7 @@
    "description": "Provincia della Repubblica Democratica del Congo con focolaio epidemico attivo di Ebola Bundibugyo",
    "risk_score": 98,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-10-18T15:23:47.514270",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Ituri",
@@ -2925,7 +2939,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2937,7 +2951,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2949,7 +2963,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3353,13 +3367,13 @@
    "domain": "health",
    "region": "Nigeria",
    "description": "Sistema sanitario della Nigeria coinvolto in monitoraggio cross-border per epidemia Bundibugyo.",
-   "risk_score": 40,
+   "risk_score": 65,
    "created_at": "2026-11-07T11:43:01.223451",
-   "updated_at": "2026-11-07T11:43:01.223451",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_doc": "2026-DON625",
-   "risk_doc_date": "2026-11-06",
-   "risk_assigned_at": "2026-11-07T11:43:01.223429"
+   "risk_doc": "2026-DON630",
+   "risk_doc_date": "2026-11-20",
+   "risk_assigned_at": "2026-11-21T13:27:12.512519"
   },
   {
    "id": "switzerland_health",
@@ -3412,10 +3426,10 @@
    "type": "HospitalNetwork",
    "domain": "health",
    "region": "DRC",
-   "description": "Centri di trattamento della RDC che registrano 335 decessi in comunità vs 177 nei centri.",
+   "description": "Centri dedicati per il trattamento di pazienti Ebola nella Repubblica Democratica del Congo.",
    "risk_score": 85,
    "created_at": "2026-11-07T11:43:01.223451",
-   "updated_at": "2026-11-07T11:43:01.223451",
+   "updated_at": "2026-11-21T13:27:12.512537",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON625",
    "risk_doc_date": "2026-11-06",
@@ -3610,7 +3624,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3622,7 +3636,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3634,7 +3648,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
   },
   {
@@ -3961,7 +3975,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011",
    "risk_score": 55,
    "created_at": "2026-11-17T14:20:16.066044",
-   "updated_at": "2026-11-20T13:58:41.781919",
+   "updated_at": "2026-11-21T13:26:57.010862",
    "risk_basis": "Richiamo FDA Z-0319-2027 di classe II del 11/11/2026"
   },
   {
@@ -4248,6 +4262,96 @@
    "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute",
    "risk_doc_date": "2026-11-20",
    "risk_assigned_at": "2026-11-20T13:58:49.131036"
+  },
+  {
+   "id": "regional_cross_border_surveillance",
+   "label": "Regional Cross-Border Surveillance",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": null,
+   "description": "Sistema di sorveglianza transfrontaliera per monitorare la diffusione del virus.",
+   "risk_score": 70,
+   "created_at": "2026-11-21T13:27:12.512537",
+   "updated_at": "2026-11-21T13:27:12.512537",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON630",
+   "risk_doc_date": "2026-11-20",
+   "risk_assigned_at": "2026-11-21T13:27:12.512519"
+  },
+  {
+   "id": "points_of_entry",
+   "label": "Points of Entry Monitoring",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": null,
+   "description": "Controllo ai punti di ingresso per prevenire diffusione transfrontaliera.",
+   "risk_score": 60,
+   "created_at": "2026-11-21T13:27:12.512537",
+   "updated_at": "2026-11-21T13:27:12.512537",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON630",
+   "risk_doc_date": "2026-11-20",
+   "risk_assigned_at": "2026-11-21T13:27:12.512519"
+  },
+  {
+   "id": "importazione_parallela_medicinali",
+   "label": "Importazione Parallela Medicinali",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": "EU",
+   "description": "Importatori paralleli di medicinali autorizzati dalla competente autorità regolatoria.",
+   "risk_score": 25,
+   "created_at": "2026-11-21T13:27:16.747708",
+   "updated_at": "2026-11-21T13:27:16.747708",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG",
+   "risk_doc_date": "2026-11-21",
+   "risk_assigned_at": "2026-11-21T13:27:16.747691"
+  },
+  {
+   "id": "rocuronio_accord",
+   "label": "Rocuronio Accord",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano a base di rocuronio, titolare autorizzazione all'immissione in commercio.",
+   "risk_score": 15,
+   "created_at": "2026-11-21T13:27:16.747708",
+   "updated_at": "2026-11-21T13:27:16.747708",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05991/SG",
+   "risk_doc_date": "2026-11-21",
+   "risk_assigned_at": "2026-11-21T13:27:16.747691"
+  },
+  {
+   "id": "lansocel_26a05992",
+   "label": "Lansocel",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano sottoposto a revoca autorizzazione commercio",
+   "risk_score": 25,
+   "created_at": "2026-11-21T13:27:16.747708",
+   "updated_at": "2026-11-21T13:27:16.747708",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05992/SG",
+   "risk_doc_date": "2026-11-21",
+   "risk_assigned_at": "2026-11-21T13:27:16.747691"
+  },
+  {
+   "id": "imodium_26a05993",
+   "label": "Imodium (26A05993)",
+   "type": "Pharmaceutical",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano oggetto di revoca autorizzazione importazione parallela.",
+   "risk_score": 15,
+   "created_at": "2026-11-21T13:27:16.747708",
+   "updated_at": "2026-11-21T13:27:16.747708",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05993/SG",
+   "risk_doc_date": "2026-11-21",
+   "risk_assigned_at": "2026-11-21T13:27:16.747691"
   }
  ],
  "edges": [
@@ -4320,12 +4424,14 @@
    "date": "2004-11",
    "created_at": "2026-10-06T06:32:00.960345",
    "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
     "https://www.aifa.gov.it/-/richiamo-indicazioni-modalita-pagamento-tariffa-relazione-annuale-sicurezza-asr": "AIFA – Notizie – Richiamo alle indicazioni sulle modalità di pagamento della tariffa per la relazione annuale di sicurezza (Annual Safety Report, ASR)",
     "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza": "AIFA – Notizie – Nota Informativa Importante di qualità su Respreeza"
    },
    "source_docs": [
     "https://www.aifa.gov.it/-/nota-informativa-importante-qualita-respreeza",
-    "https://www.aifa.gov.it/-/richiamo-indicazioni-modalita-pagamento-tariffa-relazione-annuale-sicurezza-asr"
+    "https://www.aifa.gov.it/-/richiamo-indicazioni-modalita-pagamento-tariffa-relazione-annuale-sicurezza-asr",
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG"
    ]
   },
   {
@@ -7515,7 +7621,8 @@
    "source_docs": [
     "2026-DON619",
     "2026-DON618",
-    "2026-DON625"
+    "2026-DON625",
+    "2026-DON630"
    ]
   },
   {
@@ -7810,7 +7917,8 @@
     "2026-DON616",
     "2026-DON618",
     "2026-DON621",
-    "2026-DON625"
+    "2026-DON625",
+    "2026-DON630"
    ]
   },
   {
@@ -7825,7 +7933,8 @@
    "created_at": "2026-10-08T21:08:03.951824",
    "source_docs": [
     "2026-DON619",
-    "2026-DON625"
+    "2026-DON625",
+    "2026-DON630"
    ]
   },
   {
@@ -22740,9 +22849,178 @@
    "doc_titles": {
     "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, in leggera crescita i casi di Infezioni Respiratorie Acute"
    }
+  },
+  {
+   "id": "evt_ebola_cd_nigeria_health_system_RISCHIO_PER",
+   "source": "evt_ebola_cd",
+   "target": "nigeria_health_system",
+   "type": "RISCHIO_PER",
+   "fact": "Virus Ebola rappresenta rischio per Nigeria con sorveglianza attiva in corso.",
+   "risk_score": 65,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "prov_cd_ituri_treatment_centres_drc_COLLABORA_CON",
+   "source": "prov_cd_ituri",
+   "target": "treatment_centres_drc",
+   "type": "COLLABORA_CON",
+   "fact": "Centri di trattamento operano in Ituri per gestione casi confermati Ebola.",
+   "risk_score": 85,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "prov_cd_nord_kivu_treatment_centres_drc_COLLABORA_CON",
+   "source": "prov_cd_nord_kivu",
+   "target": "treatment_centres_drc",
+   "type": "COLLABORA_CON",
+   "fact": "Centri di trattamento operano in Nord Kivu per gestione casi confermati Ebola.",
+   "risk_score": 85,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "country_cd_regional_cross_border_surveillance_COLLABORA_CON",
+   "source": "country_cd",
+   "target": "regional_cross_border_surveillance",
+   "type": "COLLABORA_CON",
+   "fact": "DRC implementa sorveglianza transfrontaliera per prevenire diffusione regionale.",
+   "risk_score": 75,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "country_ke_regional_cross_border_surveillance_COLLABORA_CON",
+   "source": "country_ke",
+   "target": "regional_cross_border_surveillance",
+   "type": "COLLABORA_CON",
+   "fact": "Kenya partecipa a sorveglianza transfrontaliera coordinata con DRC.",
+   "risk_score": 70,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "nigeria_health_system_regional_cross_border_surveillance_COLLABORA_CON",
+   "source": "nigeria_health_system",
+   "target": "regional_cross_border_surveillance",
+   "type": "COLLABORA_CON",
+   "fact": "Nigeria partecipa a sorveglianza transfrontaliera coordinata con DRC.",
+   "risk_score": 70,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "country_cd_points_of_entry_REGOLA",
+   "source": "country_cd",
+   "target": "points_of_entry",
+   "type": "REGOLA",
+   "fact": "DRC attua monitoraggio ai punti di ingresso per controllo diffusione virale.",
+   "risk_score": 65,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "treatment_centres_drc_evt_ebola_cd_RISCHIO_PER",
+   "source": "treatment_centres_drc",
+   "target": "evt_ebola_cd",
+   "type": "RISCHIO_PER",
+   "fact": "Alta proporzione morti in comunità evidenzia insufficienza accesso ai centri di trattamento.",
+   "risk_score": 90,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "who_regional_cross_border_surveillance_REGOLA",
+   "source": "who",
+   "target": "regional_cross_border_surveillance",
+   "type": "REGOLA",
+   "fact": "WHO coordina e monitora sistema di sorveglianza transfrontaliera regionale.",
+   "risk_score": 60,
+   "source_doc": "2026-DON630",
+   "date": "2026-11",
+   "created_at": "2026-11-21T13:27:12.708295"
+  },
+  {
+   "id": "aifa_importazione_parallela_medicinali_REGOLA",
+   "source": "aifa",
+   "target": "importazione_parallela_medicinali",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'importazione parallela di taluni medicinali per uso umano su rinuncia.",
+   "risk_score": 35,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG",
+   "date": null,
+   "created_at": "2026-11-21T13:27:16.811606",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_rocuronio_accord_REGOLA",
+   "source": "aifa",
+   "target": "rocuronio_accord",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio del medicinale Rocuronio Accord.",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05991/SG",
+   "date": null,
+   "created_at": "2026-11-21T13:27:16.811606",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05991/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_lansocel_26a05992_REGOLA",
+   "source": "aifa",
+   "target": "lansocel_26a05992",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'immissione in commercio del medicinale Lansocel",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05992/SG",
+   "date": null,
+   "created_at": "2026-11-21T13:27:16.811606",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05992/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_imodium_26a05993_REGOLA",
+   "source": "aifa",
+   "target": "imodium_26a05993",
+   "type": "REGOLA",
+   "fact": "AIFA revoca su rinuncia l'autorizzazione all'importazione parallela di Imodium.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05993/SG",
+   "date": null,
+   "created_at": "2026-11-21T13:27:16.811606",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05993/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
   }
  ],
  "alerts": [
+  {
+   "id": "who_2026_don630",
+   "title": "OMS: \"Ebola disease caused by Bundibugyo virus- Democratic Republic of the Congo, Kenya and Nigeria\"",
+   "description": "OMS, Disease Outbreak News 2026-DON630 del 2026-11-20: \"As of 17 November 2026, a total of 11 613 confirmed cases, including 5678 deaths (crude case fatality ratio: 48.9%), have been reported across 68 health zones in eight provinces, with active transmission ongoing in 48 health zones.\" \"The high proportion of deaths occurring in communities, meaning outside of dedicated treatment centres, especially among young children, continues to highlight challenges in early case detection and timely access to appropriate care.\"",
+   "severity": "CRITICAL",
+   "entities_involved": "[]",
+   "predicted_impact": null,
+   "italy_relevance": null,
+   "italy_impact": "Il documento OMS non nomina l'Italia.",
+   "timeframe": null,
+   "recommendation": "Consultare il documento OMS 2026-DON630 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
+   "created_at": "2026-11-21T13:27:27.529628",
+   "is_read": false
+  },
   {
    "id": "who_2026_don627",
    "title": "OMS: \"Chikungunya virus disease - Switzerland\"",
@@ -22754,27 +23032,27 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON627 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
    "id": "who_2026_don626",
    "title": "OMS: \"Middle East respiratory syndrome (MERS) – Qatar\"",
-   "description": "OMS, Disease Outbreak News 2026-DON626 del 2026-11-13: \"On 29 October 2026, the National International Health Regulations (IHR) Focal Point of the State of Qatar notified the World Health Organization (WHO) of two laboratory-confirmed cases of Middle East respiratory syndrome (MERS).\" \"Both patients were men aged over 50 years with underlying medical conditions and occupational exposure to dromedary camels.\"",
-   "severity": "MEDIUM",
+   "description": "OMS, Disease Outbreak News 2026-DON626 del 2026-11-13: \"On 29 October 2026, the National International Health Regulations (IHR) Focal Point of the State of Qatar notified the World Health Organization (WHO) of two laboratory-confirmed cases of Middle East respiratory syndrome (MERS).\" \"MERS is a viral zoonotic infection, principally transmitted to humans through direct or indirect contact with infected dromedary camels.\"",
+   "severity": "HIGH",
    "entities_involved": "[]",
    "predicted_impact": null,
    "italy_relevance": null,
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON626 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
    "id": "who_2026_don625",
    "title": "OMS: \"Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria\"",
-   "description": "OMS, Disease Outbreak News 2026-DON625 del 2026-11-06: \"As of 3 November 2026, a total of 10 668 confirmed cases, including 5198 deaths (crude case fatality ratio: 48.7%), have been reported across 67 health zones in eight provinces, with active transmission ongoing in 51 health zones.\" \"two countries have medically evacuated confirmed cases among citizens: Switzerland and the United Kingdom of Great Britain and Northern Ireland.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON625 del 2026-11-06: \"As of 3 November 2026, a total of 10 668 confirmed cases, including 5198 deaths (crude case fatality ratio: 48.7%), have been reported across 67 health zones in eight provinces, with active transmission ongoing in 51 health zones.\" \"The high proportion of deaths occurring in communities, especially among young children, continues to highlight challenges in early case detection and timely access to appropriate care.\"",
    "severity": "CRITICAL",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -22782,21 +23060,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-20T13:58:59.517002",
-   "is_read": false
-  },
-  {
-   "id": "who_2026_don624",
-   "title": "OMS: \"Yellow fever - WHO African Region\"",
-   "description": "OMS, Disease Outbreak News 2026-DON624 del 2026-11-06: \"Yellow fever transmission continues in the WHO African Region, with recent outbreak activity concentrated in parts of West Africa.\" \"Between 1 January and 12 October 2026, 67 confirmed cases, including 18 deaths, were recorded in nine countries in the Region: Burkina Faso, Cameroon, the Central African Republic, Côte d’Ivoire, Ghana, Guinea, Liberia, Nigeria and Togo.\"",
-   "severity": "MEDIUM",
-   "entities_involved": "[]",
-   "predicted_impact": null,
-   "italy_relevance": null,
-   "italy_impact": "Il documento OMS non nomina l'Italia.",
-   "timeframe": null,
-   "recommendation": "Consultare il documento OMS 2026-DON624 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22809,8 +23073,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza dispositivo Embletta MPR PG Multi Parameter Recorder modello 2003011 con numeri seriali elencati nel codice info e UDI 00382830023764.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza in inventario di Embletta MPR Model 2003011 con numeri seriali elencati. Consultare avviso ufficiale NATUS MEDICAL INCORPORATED.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22823,8 +23087,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Automated Impella Controller con codici prodotto 0042-0000 e numeri seriali indicati nel codice info.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza Automated Impella Controller con codici prodotto e numeri seriali indicati. Consultare avviso ufficiale Abiomed, Inc.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22837,8 +23101,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Optical Controller con codici prodotto 0042-0010 e numeri seriali indicati nel codice info.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza Impella Optical Controller con codici prodotto e numeri seriali indicati. Consultare avviso ufficiale Abiomed, Inc.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22851,8 +23115,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Impella Connect Optical AIC con codici prodotto 0042-0040 e numeri seriali indicati nel codice info.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza Impella Connect Optical AIC con codici prodotto e numeri seriali indicati. Consultare avviso ufficiale Abiomed, Inc.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22865,8 +23129,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza lead OmniaSecure Model 3930M con numeri seriali e UDI elencati nel codice info.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza OmniaSecure Model 3930M con UDI-DI e numeri seriali elencati. Consultare avviso ufficiale Medtronic, Inc.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22879,8 +23143,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M12 modello 722227 con UDI nel codice info.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza Philips Azurion 5 M12 Model 722227 con UDI indicati. Consultare avviso ufficiale PHILIPS MEDICAL SYSTEMS NEDERLAND B.V.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22893,8 +23157,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion 5 M20 modelli 722228 e 722281 con UDI nel codice info.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza Philips Azurion 5 M20 Models 722228, 722281 con UDI indicati. Consultare avviso ufficiale PHILIPS MEDICAL SYSTEMS NEDERLAND B.V.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   },
   {
@@ -22907,8 +23171,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza Philips Azurion S modello 722285 con UDI e numero seriale nel codice info.",
-   "created_at": "2026-11-20T13:58:59.517002",
+   "recommendation": "Verificare presenza Philips Azurion S Model 722285 con UDI indicato. Consultare avviso ufficiale PHILIPS MEDICAL SYSTEMS NEDERLAND B.V.",
+   "created_at": "2026-11-21T13:27:27.529628",
    "is_read": false
   }
  ]
