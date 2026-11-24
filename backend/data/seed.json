@@ -1,42 +1,52 @@
 {
  "version": 1,
- "exported_at": "2026-11-23T15:56:12.552925",
- "data_updated_at": "2026-11-23T15:56:12.371176",
+ "exported_at": "2026-11-24T15:49:27.604317",
+ "data_updated_at": "2026-11-24T15:49:27.386239",
  "refresh_info": {
-  "last_success": "2026-11-23T15:56:12.371176",
+  "last_success": "2026-11-24T15:49:27.386239",
   "contributed": [
    "openfda_drug",
    "openfda_device",
-   "italy"
+   "italy",
+   "who_outbreaks"
   ],
   "new": {
-   "nodes": 3,
-   "edges": 6,
-   "alerts": 0
+   "nodes": 17,
+   "edges": 22,
+   "alerts": 2
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-11-11",
-   "who_outbreaks": "2026-11-20",
-   "italy": "2026-11-23"
+   "who_outbreaks": "2026-11-24",
+   "italy": "2026-11-24"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 23
+   "italy": 47
   },
-  "source_errors": {
-   "aifa_press": "ReadTimeout: ",
-   "aifa_news": "ReadTimeout: "
-  },
+  "source_errors": {},
   "alerts_error": null,
-  "alerts_discarded": [],
-  "alerts_attempt": "2026-11-23T15:56:12.371176"
+  "alerts_discarded": [
+   "citazione non presente nel documento 2026-DON630: 'The high-level transmission in the Democratic Republic of the Congo calls for continued need for readiness in the region'"
+  ],
+  "alerts_attempt": "2026-11-24T15:49:27.386239"
  },
  "signals": {
-  "generated_at": "2026-11-23T15:56:03.604523",
+  "generated_at": "2026-11-24T15:49:17.329393",
   "who": [
+   {
+    "title": "Influenza A(H5N1) - United States of America",
+    "date": "2026-11-24",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON629"
+   },
+   {
+    "title": "Circulating vaccine-derived poliovirus type 1 – Syrian Arab Republic",
+    "date": "2026-11-23",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON628"
+   },
    {
     "title": "Ebola disease caused by Bundibugyo virus- Democratic Republic of the Congo, Kenya and Nigeria",
     "date": "2026-11-20",
@@ -66,16 +76,6 @@
     "title": "Shamonda virus in human - France",
     "date": "2026-11-02",
     "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON623"
-   },
-   {
-    "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
-    "date": "2026-10-23",
-    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622"
-   },
-   {
-    "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
-    "date": "2026-10-15",
-    "url": "https://www.who.int/emergencies/disease-outbreak-news/item/middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia"
    }
   ],
   "recalls": [
@@ -202,6 +202,104 @@
   ],
   "italy": [
    {
+    "title": "Tabelle farmaci di classe A e H al 31/07/2026",
+    "date": "2026-11-24",
+    "url": "https://www.aifa.gov.it/-/tabelle-farmaci-di-classe-a-e-h-al-31-07-2026",
+    "source": "AIFA – Notizie",
+    "summary": "AIFA rende disponibili per tutti gli Operatori sanitari le tabelle contenenti l’elenco dei farmaci di fascia A e H, dispensati dal Servizio sanitario Nazionale, ordinati rispettivamente per principio attivo e per nome commerciale."
+   },
+   {
+    "title": "La sanità territoriale, dai dati ai servizi: presente e futuro di Case e Ospedali della Comunità",
+    "date": "2026-11-24",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2936-la-sanit%C3%A0-territoriale%2C-dai-dati-ai-servizi-presente-e-futuro-di-case-e-ospedali-della-comunit%C3%A0",
+    "source": "AGENAS – Notizie",
+    "summary": "Il 25 novembre al Ministero della Salute la presentazione del Report di monitoraggio AGENAS sull’attuazione del DM 77/2022"
+   },
+   {
+    "title": "Demenze: la prevenzione può evitare 33mila casi, agire su 11 fattori di rischio",
+    "date": "2026-11-24",
+    "url": "https://www.iss.it/-/demenze-la-prevenzione-pu%C3%B2-evitare-33mila-casi-agire-su-11-fattori-di-rischio",
+    "source": "ISS – Comunicati stampa",
+    "summary": "All’Iss il convegno sulla gestione integrata, in primo piano il nuovo Piano Nazionale S ono 33mila i casi di demenza prevenibili nelle prossime decadi se si agisce sugli 11 fattori di rischio principali per questa condizione. La stima eseguita dall’Istituto Superiore di Sanità è "
+   },
+   {
+    "title": "L’alcol può alimentare la violenza contro le donne, l'Iss rilancia la campagna dell'Oms Europa",
+    "date": "2026-11-24",
+    "url": "https://www.iss.it/-/l-alcol-pu%C3%B2-alimentare-la-violenza-contro-le-donne-l-iss-rilancia-la-campagna-dell-oms-europa",
+    "source": "ISS – Comunicati stampa",
+    "summary": "In occasione della giornata per l’eliminazione della violenza contro le donne \"“Alcohol and Violence Against Women” L'alcol può alimentare la violenza contro le donne e rendere gli episodi oltre che più frequenti anche più intensi e gravi. E’ per questo che domani l’Istituto Supe"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 17 novembre 2026",
+    "date": "2026-11-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06168/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica alla determina n. 143090/2018 relativa all'inserimento del medicinale Anakinra (Kineret) nell'elenco istituito, ai sensi della legge n. 648/1996, per il trattamento della pericardite idiopatica ricorrente cortico-dipendente e colchicina-resistente. (Determina n. 1644/202"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 17 novembre 2026",
+    "date": "2026-11-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06169/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Modifica alla determina n. 1750/2025 relativa all'inserimento del medicinale Abraxane nell'elenco istituito, ai sensi della legge n. 648/1996, per il trattamento di carcinomi ginecologici e mammari in pazienti che hanno mostrato reazione di ipersensibilita' alla terapia standard "
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 17 novembre 2026",
+    "date": "2026-11-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06170/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Inserimento del medicinale Sirolimus (Rapamune) nell'elenco istituito, ai sensi della legge n. 648/1996, per il trattamento di pazienti con diagnosi di Sindrome linfoproliferativa autoimmune (ALPS) o di Sindrome ALPS-like, di eta' ≥12 mesi e <40 anni, intolleranti o resistenti ai"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 17 novembre 2026",
+    "date": "2026-11-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06171/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Inserimento del medicinale Pasireotide (Signifor Lar) nell'elenco istituito, ai sensi della legge n. 648/1996, per il trattamento di pazienti affetti da tumori neuroendocrini di origine polmonare o timica, ben differenziati (carcinoide tipico o atipico, corrispondente a grado 1 o"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - DETERMINA 17 novembre 2026",
+    "date": "2026-11-23",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06172/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Inserimento del medicinale Immunoglobina endovenosa nell'elenco istituito, ai sensi della legge n. 648/1996, per il trattamento di pazienti affetti da pemfigo volgare moderato-grave non controllato. (Determina n. 1648/2026). (26A06172)"
+   },
+   {
+    "title": "Comunicazione AIFA su Barbesaclone 25 mg",
+    "date": "2026-11-23",
+    "url": "https://www.aifa.gov.it/-/comunicazione-aifa-su-barbesaclone-25-mg-7",
+    "source": "AIFA – Notizie",
+    "summary": "Nuove e importanti informazioni relative alla produzione e alla distribuzione del medicinale a denominazione generica Barbesaclone 25mg compresse rivestite - PROROGA SCADENZA."
+   },
+   {
+    "title": "Esiti runione straordinaria Commissione Scientifica e Economica del Farmaco (CSE)",
+    "date": "2026-11-23",
+    "url": "https://www.aifa.gov.it/-/esiti-runione-straordinaria-commissione-scientifica-e-economica-del-farmaco-cse-4",
+    "source": "AIFA – Notizie",
+    "summary": "L'Agenzia Italiana del Farmaco rende disponibile gli esiti dei lavori della riunione straordinaria della Commissione Scientifica e Economica (CSE) del 20 novembre 2026."
+   },
+   {
+    "title": "Ordine del giorno riunione straordinaria Commissione Scientifica e Economica del Farmaco (CSE)",
+    "date": "2026-11-23",
+    "url": "https://www.aifa.gov.it/-/ordine-del-giorno-riunione-straordinaria-commissione-scientifica-e-economica-del-farmaco-cse-12",
+    "source": "AIFA – Notizie",
+    "summary": "L'Agenzia Italiana del Farmaco rende disponibile l'ordine del giorno dei lavori della riunione straordinaria della Commissione Scientifica e Economica (CSE) del 23 novembre 2026."
+   },
+   {
+    "title": "Aggiornamento Registri CASGEVY_ SCD e TDT",
+    "date": "2026-11-23",
+    "url": "https://www.aifa.gov.it/-/aggiornamento-registri-casgevy_-scd-e-tdt",
+    "source": "AIFA – Notizie",
+    "summary": "Si informano gli utenti dei Registri dei Farmaci sottoposti a Monitoraggio che è disponibile un aggiornamento dei registri di CASGEVY per specifiche indicazioni terapeutiche."
+   },
+   {
+    "title": "L’App AIFA Medicinali si rinnova",
+    "date": "2026-11-23",
+    "url": "https://www.aifa.gov.it/-/app_aifa_medicinali_si_rinnova",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "Gestione dei farmaci più semplice, promemoria ancora più personalizzati, possibilità di condividere le informazioni con familiari e caregiver e accesso diretto ai contenuti ufficiali dell’Agenzia: la versione aggiornata dell’App AIFA Medicinali introduce nuove funzionalità e migl"
+   },
+   {
     "title": "2 dicembre - AGENAS presenta i risultati del Programma Nazionale Esiti 2026",
     "date": "2026-11-23",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026",
@@ -244,102 +342,11 @@
     "summary": "Il terzo InfoDay del Programma Nazionale HTA Dispositivi Medici 2026-2028si è svolto giovedì 19 novembre 2026, presso il Salone Salvatore Moriello dell’Azienda Ospedaliera di Rilievo Nazionale «Antonio Cardarelli», a Napoli."
    },
    {
-    "title": "I dati della vita: il valore pubblico dei dati sanitari al centro del confronto promosso da AGENAS",
-    "date": "2026-11-23",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2915-i-dati-della-vita-il-valore-pubblico-dei-dati-sanitari-al-centro-del-confronto-promosso-da-agenas",
-    "source": "AGENAS – Notizie",
-    "summary": "Il 10 novembre 2026 si è tenuto il seminario “I dati della vita. Crescere, vivere, invecchiare: il valore pubblico dei dati sanitari” presso l'Auditorium AGENAS, a Roma, promosso dall'Agenzia Nazionale per i Servizi Sanitari Regionali in occasione della Giornata mondiale della sc"
-   },
-   {
-    "title": "Malattie parassitarie, in Europa circa 9mila casi l’anno di echinococcosi, toxoplasmosi, trichinellosi e malaria; in Iss il primo meeting del Laboratorio Europeo di Riferimento",
-    "date": "2026-11-23",
-    "url": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Si è tenuto il 10 e 11 novembre 2026, presso l’Aula Pocchiari dell’Istituto Superiore di Sanità, il primo meeting annuale dell’EURL-PH-HP (European Union Reference Laboratory for Public Health on Helminths and Protozoa), il Laboratorio dell’Unione Europea di Riferimento per la sa"
-   },
-   {
-    "title": "Bollettino 185 fase 3",
-    "date": "2026-11-23",
-    "url": "https://www.iss.it/-/bollettino-185-fase-3",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Impatto • Al 18/11/2026 l’occupazione dei posti letto in area medica è pari a 0,8% (493 ricoverati), stabile rispetto alla settimana precedente (0,8% all’11/11/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,2% (16 ricoverati), ris"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-21",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05990/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'importazione parallela di taluni medicinali per uso umano. (26A05990)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-21",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05991/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Rocuronio Accord». (26A05991)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-21",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05992/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Lansocel» (26A05992)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-21",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05993/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'importazione parallela del medicinale per uso umano «Imodium» (26A05993)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-21",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A06036/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Revoca, su rinuncia, dell'autorizzazione all'importazione parallela del medicinale per uso umano «Lansox» (26A06036)"
-   },
-   {
-    "title": "Sorveglianza RespiVirNet, in leggera crescita i casi di Infezioni Respiratorie Acute",
-    "date": "2026-11-20",
-    "url": "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Crescono leggermente i casi di infezioni respiratorie acute (Ari) stimati dalla sorveglianza RespiVirNet questa settimana, che nel periodo dal 9 al 15 novembre ha stimato circa 487mila casi (erano 475mila nella settimana precedente) attribuibili ai diversi virus circolanti, da qu"
-   },
-   {
     "title": "RespiVirNet: ultimo rapporto settimanale del 20 novembre 2026",
     "date": "2026-11-20",
     "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
     "source": "ISS – RespiVirNet",
     "summary": "In questa stagione, la raccolta dei dati avviene attraverso la piattaforma RespiVirNet dell’ISS che è stata appositamente modificata per acquisire dati privi di identificativi personali. Questo comporta alcune limitazioni che riducono in parte la qualità dei dati pur consentendo "
-   },
-   {
-    "title": "Il 2 dicembre il convegno 'Il network della cooperazione internazionale per la salute globale'",
-    "date": "2026-11-19",
-    "url": "https://www.iss.it/-/il-2-dicembre-il-convegno-il-network-della-cooperazione%C2%A0internazionale-per-la-salute-globale-",
-    "source": "ISS – Comunicati stampa",
-    "summary": "Da anni il Centro Nazionale per la Salute Globale (CNSG) dell’Istituto Superiore di Sanità lavora per migliorare la salute delle popolazioni, ridurre le disuguaglianze e sviluppare sistemi sanitari più equi, inclusivi e sostenibili. Lo fa offrendo supporto tecnico-scientifico ai "
-   },
-   {
-    "title": "Programma Nazionale HTA Dispositivi Medici 2026-2028: AGENAS promuove cinque InfoDay territoriali",
-    "date": "2026-11-17",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2913-programma-nazionale-hta-dispositivi-medici-2026-2028-agenas-promuove-cinque-infoday-territoriali",
-    "source": "AGENAS – Notizie",
-    "summary": "Al via un ciclo di incontri che apre un percorso nazionale di accompagnamento all’attuazione del Programma Nazionale HTA Dispositivi Medici. Il primo appuntamento si terrà a a Roma il 4 novembre 2026."
-   },
-   {
-    "title": "Agenas istituisce l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore",
-    "date": "2026-11-17",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2911-agenas-istituisce-l%E2%80%99osservatorio-per-il-monitoraggio-e-l%E2%80%99implementazione-della-rete-di-cure-palliative-e-terapia-del-dolore",
-    "source": "AGENAS – Notizie",
-    "summary": "Agenas con Delibera del Direttore Generale n°334 del 14 ottobre 2026, ha istituito l’Osservatorio per il monitoraggio e l’implementazione della Rete di Cure Palliative e Terapia del dolore, organismo deputato ad accompagnare Regioni e Province Autonome nel consolidamento di una r"
-   },
-   {
-    "title": "Online il Bollettino trimestrale AGENAS sul monitoraggio delle Liste di Attesa",
-    "date": "2026-11-17",
-    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2816-online-il-bollettino-trimestrale-agenas-sul-monitoraggio-delle-liste-di-attesa",
-    "source": "AGENAS – Notizie",
-    "summary": "Oltre due milioni di prenotazioni in più nei primi nove mesi del 2026 rispetto allo stesso periodo del 2025 e un miglioramento del rispetto dei tempi massimi di attesa per visite specialistiche ed esami diagnostici. Si conferma la tendenza positiva già evidenziata nel primo semes"
    }
   ]
  },
@@ -410,7 +417,11 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A05993/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A06036/SG",
   "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A06051/SG",
-  "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento"
+  "2026-DON629",
+  "2026-DON628",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06077/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06079/SG"
  ],
  "nodes": [
   {
@@ -422,7 +433,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-23T15:55:54.233174",
+   "updated_at": "2026-11-24T15:48:58.540684",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -434,7 +445,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-23T15:55:54.233174",
+   "updated_at": "2026-11-24T15:48:58.540684",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -446,7 +457,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -506,7 +517,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-23T15:55:54.233174",
+   "updated_at": "2026-11-24T15:48:58.540684",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -518,7 +529,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-23T15:55:54.233174",
+   "updated_at": "2026-11-24T15:48:58.540684",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -530,7 +541,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-23T15:55:54.233174",
+   "updated_at": "2026-11-24T15:48:58.540684",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -542,7 +553,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -695,7 +706,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-23T15:55:54.233174",
+   "updated_at": "2026-11-24T15:48:58.540684",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -737,10 +748,10 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "IT",
-   "description": "Agenzia nazionale italiana competente per l'autorizzazione e la vigilanza su medicinali.",
+   "description": "Autorità nazionale italiana competente in materia di autorizzazione e sorveglianza dei medicinali.",
    "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-22T13:18:21.916193",
+   "updated_at": "2026-11-24T15:49:16.659362",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -761,7 +772,7 @@
    "description": "Agenzia europea del farmaco per autorizzazione medicinali a livello comunitario.",
    "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-23T15:56:03.179167",
+   "updated_at": "2026-11-21T13:27:16.747708",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Agenzia europea per i medicinali (European Medicines Agency)",
    "risk_doc": "https://www.aifa.gov.it/-/richiamo-indicazioni-modalita-pagamento-tariffa-relazione-annuale-sicurezza-asr",
@@ -780,7 +791,7 @@
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-23T15:56:03.179167",
+   "updated_at": "2026-11-20T13:58:49.131055",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -823,7 +834,7 @@
    "description": "Agenzia internazionale che monitora e coordina la risposta alla epidemia di Ebola in Repubblica Democratica del Congo",
    "risk_score": 75,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-23T15:56:03.179167",
+   "updated_at": "2026-11-24T15:49:11.630901",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Organizzazione Mondiale della Sanità",
@@ -2833,7 +2844,7 @@
    "description": "Azienda farmaceutica produttrice di medicinali generici e specialità farmaceutiche",
    "risk_score": 15,
    "created_at": "2026-11-01T11:50:24.797890",
-   "updated_at": "2026-11-01T11:50:24.797890",
+   "updated_at": "2026-11-24T15:49:16.659362",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/10/31/26A05651/SG",
    "risk_doc_date": "2026-10-31",
@@ -2941,7 +2952,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2953,7 +2964,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2965,7 +2976,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3626,7 +3637,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3638,7 +3649,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3650,7 +3661,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
   },
   {
@@ -3977,7 +3988,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011",
    "risk_score": 55,
    "created_at": "2026-11-17T14:20:16.066044",
-   "updated_at": "2026-11-23T15:55:54.399804",
+   "updated_at": "2026-11-24T15:48:58.735620",
    "risk_basis": "Richiamo FDA Z-0319-2027 di classe II del 11/11/2026"
   },
   {
@@ -4401,49 +4412,266 @@
    "risk_assigned_at": "2026-11-22T13:18:21.916176"
   },
   {
-   "id": "phas_sweden",
-   "label": "Agenzia per la Salute Pubblica Svedese (PHAS)",
+   "id": "country_us",
+   "label": "Stati Uniti",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Stati Uniti",
+   "description": "Sistema sanitario USA che gestisce sorveglianza epidemiologica attraverso IHR National Focal Point.",
+   "risk_score": 25,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON629",
+   "risk_doc_date": "2026-11-24",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829",
+   "aliases": [
+    "United States of America - Health System"
+   ]
+  },
+  {
+   "id": "washington_state",
+   "label": "Washington State",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "USA",
+   "description": "Stato americano dove rilevati tre casi confermati di influenza A(H5N1) in lavoratori agricoli.",
+   "risk_score": 65,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON629",
+   "risk_doc_date": "2026-11-24",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "yakima_county",
+   "label": "Yakima County Dairy Farms",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "USA",
+   "description": "Contea dell'allevamento bovino con rilevamento virus HPAI A(H5N1) in bestiame.",
+   "risk_score": 75,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON629",
+   "risk_doc_date": "2026-11-24",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "evt_avian_flu",
+   "label": "Epidemia di influenza aviaria",
+   "type": "EpidemicEvent",
+   "domain": "health",
+   "region": null,
+   "description": "Virus altamente patogeno in animali con trasmissione zoonotica all'uomo confermata.",
+   "risk_score": 85,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON629",
+   "risk_doc_date": "2026-11-24",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829",
+   "aliases": [
+    "Influenza A(H5N1) Virus"
+   ],
+   "disease": "avian_flu"
+  },
+  {
+   "id": "dairy_cattle",
+   "label": "Dairy Cattle Population",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "USA",
+   "description": "Bestiame infetto che rappresenta fonte diretta di contagio a lavoratori agricoli.",
+   "risk_score": 70,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON629",
+   "risk_doc_date": "2026-11-24",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "farm_workers",
+   "label": "Dairy Farm Workers",
+   "type": "Person",
+   "domain": "health",
+   "region": "USA",
+   "description": "Tre adulti lavoratori agricoli con infezione confermata A(H5N1), incluso un decesso.",
+   "risk_score": 80,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON629",
+   "risk_doc_date": "2026-11-24",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "syria_moh",
+   "label": "Ministero della Salute Siria",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Syria",
+   "description": "Autorità sanitaria nazionale che gestisce risposta epidemiologica all'outbreak di cVDPV1.",
+   "risk_score": 45,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "deir_ez_zor",
+   "label": "Deir Ez Zor Governorate",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Syria",
+   "description": "Governatorato siriano epicentro dell'outbreak di poliomielite vaccine-derived type 1.",
+   "risk_score": 85,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "al_mayadin",
+   "label": "Al-Mayadin District",
+   "type": "RegionalAuthority",
+   "domain": "health",
+   "region": "Syria",
+   "description": "Distretto in Deir Ez Zor dove identificato cluster iniziale di 4 casi AFP.",
+   "risk_score": 80,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "cvdpv1_strain",
+   "label": "cVDPV1 Circulating Strain",
+   "type": "ResearchInstitute",
+   "domain": "health",
+   "region": "Syria",
+   "description": "Ceppo virale vaccine-derived confermato attraverso analisi genetica con trasmissione person-to-person.",
+   "risk_score": 90,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "emergency_ops_centre",
+   "label": "Emergency Operations Centre",
    "type": "RegulatorAgency",
    "domain": "health",
-   "region": "EU",
-   "description": "Agenzia svedese collabora con ISS su parassiti europei",
-   "risk_score": 0,
-   "created_at": "2026-11-23T15:56:03.179167",
-   "updated_at": "2026-11-23T15:56:03.179167",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
+   "region": "Syria",
+   "description": "Centro operativo attivato per coordinare risposta nazionale all'outbreak di poliomielite.",
+   "risk_score": 25,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
    "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-23T15:56:03.179150"
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
   },
   {
-   "id": "eurl_ph_hp_2",
-   "label": "EURL-PH-HP",
+   "id": "afp_surveillance",
+   "label": "AFP Surveillance System",
    "type": "ResearchInstitute",
    "domain": "health",
-   "region": "EU",
-   "description": "Laboratorio Europeo di Riferimento per elminti e protozoi",
-   "risk_score": 0,
-   "created_at": "2026-11-23T15:56:03.179167",
-   "updated_at": "2026-11-23T15:56:03.179167",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
+   "region": "Syria",
+   "description": "Sistema di sorveglianza rafforzato per acute flaccid paralysis e rilevamento poliovirus.",
+   "risk_score": 20,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
    "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-23T15:56:03.179150"
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
   },
   {
-   "id": "iss_malattie_infettive",
-   "label": "Dipartimento Malattie Infettive ISS",
+   "id": "environmental_lab",
+   "label": "Al-Mayadin Environmental Laboratory",
    "type": "ResearchInstitute",
    "domain": "health",
-   "region": "Lazio",
-   "description": "Dipartimento ISS che coordina il laboratorio europeo di riferimento",
-   "risk_score": 0,
-   "created_at": "2026-11-23T15:56:03.179167",
-   "updated_at": "2026-11-23T15:56:03.179167",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
+   "region": "Syria",
+   "description": "Laboratorio che rilevò VDPV1 ambientale precedente a febbraio 2026, non correlato ceppo attuale.",
+   "risk_score": 30,
+   "created_at": "2026-11-24T15:49:11.630901",
+   "updated_at": "2026-11-24T15:49:11.630901",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
    "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-23T15:56:03.179150"
+   "risk_assigned_at": "2026-11-24T15:49:11.630829"
+  },
+  {
+   "id": "sugammadex_sandoz",
+   "label": "Sugammadex Sandoz",
+   "type": "Drug",
+   "domain": "health",
+   "region": "IT",
+   "description": "Medicinale per uso umano ritirato dal mercato italiano per rinuncia dell'autorizzazione.",
+   "risk_score": 25,
+   "created_at": "2026-11-24T15:49:16.659362",
+   "updated_at": "2026-11-24T15:49:16.659362",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06077/SG",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:16.659337"
+  },
+  {
+   "id": "bosutinib_eg",
+   "label": "Bosutinib EG",
+   "type": "Drug",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano sottoposto a revoca dell'autorizzazione all'immissione in commercio su rinuncia.",
+   "risk_score": 15,
+   "created_at": "2026-11-24T15:49:16.659362",
+   "updated_at": "2026-11-24T15:49:16.659362",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:16.659337"
+  },
+  {
+   "id": "eg_generici",
+   "label": "EG - Generici",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Azienda farmaceutica titolare dell'autorizzazione al commercio di Bosutinib EG.",
+   "risk_score": 20,
+   "created_at": "2026-11-24T15:49:16.659362",
+   "updated_at": "2026-11-24T15:49:16.659362",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:16.659337"
+  },
+  {
+   "id": "zirtec_26a06079",
+   "label": "Zirtec (26A06079)",
+   "type": "Farmaco",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano oggetto di revoca autorizzazione importazione parallela.",
+   "risk_score": 15,
+   "created_at": "2026-11-24T15:49:16.659362",
+   "updated_at": "2026-11-24T15:49:16.659362",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06079/SG",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-24T15:49:16.659337"
   }
  ],
  "edges": [
@@ -11742,11 +11970,13 @@
    "created_at": "2026-10-18T19:24:50.964057",
    "doc_titles": {
     "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026": "AGENAS – Notizie – 2 dicembre - AGENAS presenta i risultati del Programma Nazionale Esiti 2026",
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2936-la-sanit%C3%A0-territoriale%2C-dai-dati-ai-servizi-presente-e-futuro-di-case-e-ospedali-della-comunit%C3%A0": "AGENAS – Notizie – La sanità territoriale, dai dati ai servizi: presente e futuro di Case e Ospedali della Comunità",
     "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2793-ricerca-corrente-agenas-2025-2027": "AGENAS – Notizie – Ricerca Corrente Agenas 2025-2027 - Al via il nuovo programma per rafforzare qualità dell'assistenza, innovazione e rete degli IRCCS"
    },
    "source_docs": [
     "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2793-ricerca-corrente-agenas-2025-2027",
-    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026"
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2931-2-dicembre-agenas-presenta-i-risultati-del-programma-nazionale-esiti-2026",
+    "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2936-la-sanit%C3%A0-territoriale%2C-dai-dati-ai-servizi-presente-e-futuro-di-case-e-ospedali-della-comunit%C3%A0"
    ]
   },
   {
@@ -11760,6 +11990,7 @@
    "date": "2026-03-06",
    "created_at": "2026-10-18T19:24:50.964057",
    "doc_titles": {
+    "https://www.iss.it/-/demenze-la-prevenzione-pu%C3%B2-evitare-33mila-casi-agire-su-11-fattori-di-rischio": "ISS – Comunicati stampa – Demenze: la prevenzione può evitare 33mila casi, agire su 11 fattori di rischio",
     "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati": "ISS – Comunicati stampa – Riprende la sorveglianza RespiVirNet dopo la modifica della piattaforma di raccolta dati",
     "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce": "ISS – Comunicati stampa – Diabete tipo 1: quasi 2.500 bambini da 1 a 5 anni già sottoposti a screening con lo studio Baby D1Ce",
     "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx": "ISS – RespiVirNet – RespiVirNet: ultimo rapporto settimanale del 6 marzo 2026"
@@ -11767,7 +11998,8 @@
    "source_docs": [
     "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
     "https://www.iss.it/-/riprende-la-sorveglianza-respivirnet-dopo-la-modifica-della-piattaforma-di-raccolta-dati",
-    "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce"
+    "https://www.iss.it/-/diabete-tipo-1-quasi-2.500-bambini-da-1-a-5-anni-gi%C3%A0-sottoposti-a-screening-con-lo-studio-baby-d1ce",
+    "https://www.iss.it/-/demenze-la-prevenzione-pu%C3%B2-evitare-33mila-casi-agire-su-11-fattori-di-rischio"
    ]
   },
   {
@@ -23140,95 +23372,299 @@
    }
   },
   {
-   "id": "iss_eurl_ph_hp_2_CONTROLLA",
-   "source": "iss",
-   "target": "eurl_ph_hp_2",
-   "type": "CONTROLLA",
-   "fact": "ISS coordina il Laboratorio Europeo di Riferimento EURL-PH-HP",
-   "risk_score": 0,
-   "source_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
-   "date": "2026-11",
-   "created_at": "2026-11-23T15:56:03.298817",
-   "doc_titles": {
-    "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento": "ISS – Comunicati stampa – Malattie parassitarie, in Europa circa 9mila casi l’anno di echinococcosi, toxoplasmosi, trichinellosi e malaria; in Iss il primo meeting del Laboratorio Europeo di Riferimento"
-   }
+   "id": "country_us_who_INDAGA_SU",
+   "source": "country_us",
+   "target": "who",
+   "type": "INDAGA_SU",
+   "fact": "USA notifica WHO di tre casi umani confermati A(H5N1) tramite IHR National Focal Point.",
+   "risk_score": 70,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
   },
   {
-   "id": "iss_malattie_infettive_eurl_ph_hp_2_MEMBRO_DI",
-   "source": "iss_malattie_infettive",
-   "target": "eurl_ph_hp_2",
+   "id": "evt_avian_flu_farm_workers_RISCHIO_PER",
+   "source": "evt_avian_flu",
+   "target": "farm_workers",
+   "type": "RISCHIO_PER",
+   "fact": "Virus A(H5N1) trasmesso da bestiame infetto a lavoratori agricoli con infezione confermata.",
+   "risk_score": 85,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "dairy_cattle_farm_workers_RISCHIO_PER",
+   "source": "dairy_cattle",
+   "target": "farm_workers",
+   "type": "RISCHIO_PER",
+   "fact": "Bestiame bovino infetto in Yakima County rappresenta fonte diretta di contagio zoonotico.",
+   "risk_score": 80,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "yakima_county_washington_state_MEMBRO_DI",
+   "source": "yakima_county",
+   "target": "washington_state",
    "type": "MEMBRO_DI",
-   "fact": "Dipartimento Malattie Infettive ISS coordina EURL-PH-HP",
-   "risk_score": 0,
-   "source_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
-   "date": "2026-11",
-   "created_at": "2026-11-23T15:56:03.298817",
-   "doc_titles": {
-    "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento": "ISS – Comunicati stampa – Malattie parassitarie, in Europa circa 9mila casi l’anno di echinococcosi, toxoplasmosi, trichinellosi e malaria; in Iss il primo meeting del Laboratorio Europeo di Riferimento"
-   }
+   "fact": "Contea agricola con focolaio HPAI A(H5N1) localizzata in Washington State.",
+   "risk_score": 75,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
   },
   {
-   "id": "phas_sweden_eurl_ph_hp_2_COLLABORA_CON",
-   "source": "phas_sweden",
-   "target": "eurl_ph_hp_2",
-   "type": "COLLABORA_CON",
-   "fact": "PHAS collabora con ISS nella gestione del laboratorio europeo",
-   "risk_score": 0,
-   "source_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
-   "date": "2026-11",
-   "created_at": "2026-11-23T15:56:03.298817",
-   "doc_titles": {
-    "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento": "ISS – Comunicati stampa – Malattie parassitarie, in Europa circa 9mila casi l’anno di echinococcosi, toxoplasmosi, trichinellosi e malaria; in Iss il primo meeting del Laboratorio Europeo di Riferimento"
-   }
+   "id": "washington_state_country_us_MEMBRO_DI",
+   "source": "washington_state",
+   "target": "country_us",
+   "type": "MEMBRO_DI",
+   "fact": "Stato federale americano che segnala focolaio epidemico attivo a livello nazionale.",
+   "risk_score": 65,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
   },
   {
-   "id": "iss_phas_sweden_COLLABORA_CON",
-   "source": "iss",
-   "target": "phas_sweden",
-   "type": "COLLABORA_CON",
-   "fact": "ISS collabora con agenzia svedese su diagnostica parassitaria europea",
-   "risk_score": 0,
-   "source_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
-   "date": "2026-11",
-   "created_at": "2026-11-23T15:56:03.298817",
-   "doc_titles": {
-    "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento": "ISS – Comunicati stampa – Malattie parassitarie, in Europa circa 9mila casi l’anno di echinococcosi, toxoplasmosi, trichinellosi e malaria; in Iss il primo meeting del Laboratorio Europeo di Riferimento"
-   }
-  },
-  {
-   "id": "iss_ema_REGOLA",
-   "source": "iss",
-   "target": "ema",
-   "type": "REGOLA",
-   "fact": "EMA supervisiona standard diagnostici europei coordonati da ISS",
-   "risk_score": 15,
-   "source_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
-   "date": "2026-11",
-   "created_at": "2026-11-23T15:56:03.298817",
-   "doc_titles": {
-    "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento": "ISS – Comunicati stampa – Malattie parassitarie, in Europa circa 9mila casi l’anno di echinococcosi, toxoplasmosi, trichinellosi e malaria; in Iss il primo meeting del Laboratorio Europeo di Riferimento"
-   }
-  },
-  {
-   "id": "who_iss_REGOLA",
+   "id": "who_evt_avian_flu_REGOLA",
    "source": "who",
-   "target": "iss",
+   "target": "evt_avian_flu",
    "type": "REGOLA",
-   "fact": "WHO supervisiona protocolli diagnostici internazionali dell'ISS",
-   "risk_score": 10,
-   "source_doc": "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento",
+   "fact": "WHO valuta rischio A(H5N1) basso per popolazione generale, moderato per esposti occupazionali.",
+   "risk_score": 60,
+   "source_doc": "2026-DON629",
    "date": "2026-11",
-   "created_at": "2026-11-23T15:56:03.298817",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "farm_workers_yakima_county_MEMBRO_DI",
+   "source": "farm_workers",
+   "target": "yakima_county",
+   "type": "MEMBRO_DI",
+   "fact": "Tre lavoratori adulti occupati in allevamenti bovini di Yakima County infettati da A(H5N1).",
+   "risk_score": 80,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "evt_avian_flu_dairy_cattle_RISCHIO_PER",
+   "source": "evt_avian_flu",
+   "target": "dairy_cattle",
+   "type": "RISCHIO_PER",
+   "fact": "Virus altamente patogeno in animali rilevato recentemente in bestiame lattiero-caseario dello Stato.",
+   "risk_score": 75,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "who_syria_moh_COLLABORA_CON",
+   "source": "who",
+   "target": "syria_moh",
+   "type": "COLLABORA_CON",
+   "fact": "WHO supporta autorità sanitarie siriane nel coordinamento risposta epidemiologica.",
+   "risk_score": 20,
+   "source_doc": "2026-DON628",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "deir_ez_zor_cvdpv1_strain_RISCHIO_PER",
+   "source": "deir_ez_zor",
+   "target": "cvdpv1_strain",
+   "type": "RISCHIO_PER",
+   "fact": "Governatorato di Deir Ez Zor interessato da circolazione attiva cVDPV1 con trasmissione confermata.",
+   "risk_score": 88,
+   "source_doc": "2026-DON628",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "al_mayadin_cvdpv1_strain_RISCHIO_PER",
+   "source": "al_mayadin",
+   "target": "cvdpv1_strain",
+   "type": "RISCHIO_PER",
+   "fact": "Distretto Al-Mayadin epicentro cluster iniziale con 3 casi confermati cVDPV1.",
+   "risk_score": 85,
+   "source_doc": "2026-DON628",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "emergency_ops_centre_deir_ez_zor_CONTROLLA",
+   "source": "emergency_ops_centre",
+   "target": "deir_ez_zor",
+   "type": "CONTROLLA",
+   "fact": "Centro operativo coordina misure di risposta rapida vaccinazione e sorveglianza attiva.",
+   "risk_score": 35,
+   "source_doc": "2026-DON628",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "cvdpv1_strain_afp_surveillance_INDAGA_SU",
+   "source": "cvdpv1_strain",
+   "target": "afp_surveillance",
+   "type": "INDAGA_SU",
+   "fact": "Sistema di sorveglianza AFP rafforzato per rilevamento e tracciamento casi cVDPV1.",
+   "risk_score": 25,
+   "source_doc": "2026-DON628",
+   "date": "2026-11",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "environmental_lab_cvdpv1_strain_INDAGA_SU",
+   "source": "environmental_lab",
+   "target": "cvdpv1_strain",
+   "type": "INDAGA_SU",
+   "fact": "Laboratorio confermò ceppo attuale non correlato geneticamente a rilevamento precedente febbraio 2026.",
+   "risk_score": 15,
+   "source_doc": "2026-DON628",
+   "date": "2026-11",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "syria_moh_afp_surveillance_CONTROLLA",
+   "source": "syria_moh",
+   "target": "afp_surveillance",
+   "type": "CONTROLLA",
+   "fact": "Autorità sanitaria gestisce sorveglianza rafforzata per AFP e rilevamento poliovirus vaccine-derived.",
+   "risk_score": 30,
+   "source_doc": "2026-DON628",
+   "date": "2026-11",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "who_deir_ez_zor_COLLABORA_CON",
+   "source": "who",
+   "target": "deir_ez_zor",
+   "type": "COLLABORA_CON",
+   "fact": "WHO fornisce supporto tecnico per risposta coordinata all'outbreak in governatorato colpito.",
+   "risk_score": 25,
+   "source_doc": "2026-DON628",
+   "date": "2026-10",
+   "created_at": "2026-11-24T15:49:11.733895"
+  },
+  {
+   "id": "aifa_sugammadex_sandoz_REGOLA",
+   "source": "aifa",
+   "target": "sugammadex_sandoz",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio su rinuncia della ditta.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06077/SG",
+   "date": "2024",
+   "created_at": "2026-11-24T15:49:16.737155",
    "doc_titles": {
-    "https://www.iss.it/-/malattie-parassitarie-in-europa-circa-9mila-casi-l-anno-di-echinococcosi-toxoplasmosi-trichinellosi-e-malaria-in-iss-il-primo-meeting-del-laboratorio-europeo-di-riferimento": "ISS – Comunicati stampa – Malattie parassitarie, in Europa circa 9mila casi l’anno di echinococcosi, toxoplasmosi, trichinellosi e malaria; in Iss il primo meeting del Laboratorio Europeo di Riferimento"
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06077/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "sandoz_gmbh_sugammadex_sandoz_FORNISCE",
+   "source": "sandoz_gmbh",
+   "target": "sugammadex_sandoz",
+   "type": "FORNISCE",
+   "fact": "Sandoz produce e commercializza Sugammadex; ritira il medicinale dal mercato italiano.",
+   "risk_score": 25,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06077/SG",
+   "date": "2024",
+   "created_at": "2026-11-24T15:49:16.737155",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06077/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_bosutinib_eg_REGOLA",
+   "source": "aifa",
+   "target": "bosutinib_eg",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio di Bosutinib EG su rinuncia del titolare.",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG",
+   "date": null,
+   "created_at": "2026-11-24T15:49:16.737155",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "eg_generici_bosutinib_eg_FORNISCE",
+   "source": "eg_generici",
+   "target": "bosutinib_eg",
+   "type": "FORNISCE",
+   "fact": "EG Generici titolare autorizzazione commercializzazione Bosutinib EG, rinuncia autorizzazione.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG",
+   "date": null,
+   "created_at": "2026-11-24T15:49:16.737155",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_eg_generici_CONTROLLA",
+   "source": "aifa",
+   "target": "eg_generici",
+   "type": "CONTROLLA",
+   "fact": "AIFA supervisiona e regola autorizzazioni farmacologiche di aziende come EG Generici.",
+   "risk_score": 10,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG",
+   "date": null,
+   "created_at": "2026-11-24T15:49:16.737155",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06078/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_zirtec_26a06079_REGOLA",
+   "source": "aifa",
+   "target": "zirtec_26a06079",
+   "type": "REGOLA",
+   "fact": "AIFA ha revocato su rinuncia l'autorizzazione all'importazione parallela del medicinale Zirtec.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06079/SG",
+   "date": null,
+   "created_at": "2026-11-24T15:49:16.737155",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/23/26A06079/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
    }
   }
  ],
  "alerts": [
   {
+   "id": "who_2026_don629",
+   "title": "OMS: \"Influenza A(H5N1) - United States of America\"",
+   "description": "OMS, Disease Outbreak News 2026-DON629 del 2026-11-24: \"Between 16 October and 4 November 2026, the United States of America, through its International Health Regulations (IHR) National Focal Point, notified WHO of three laboratory-confirmed human infections with influenza A(H5) virus in Washington State.\" \"For individuals with occupational exposure to these viruses, the risk of infection is considered low to moderate.\"",
+   "severity": "HIGH",
+   "entities_involved": "[]",
+   "predicted_impact": null,
+   "italy_relevance": null,
+   "italy_impact": "Il documento OMS non nomina l'Italia.",
+   "timeframe": null,
+   "recommendation": "Consultare il documento OMS 2026-DON629 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
+   "created_at": "2026-11-24T15:49:27.385977",
+   "is_read": false
+  },
+  {
+   "id": "who_2026_don628",
+   "title": "OMS: \"Circulating vaccine-derived poliovirus type 1 – Syrian Arab Republic\"",
+   "description": "OMS, Disease Outbreak News 2026-DON628 del 2026-11-23: \"As of 13 November 2026, three confirmed cases of circulating vaccine-derived poliovirus type 1 (cVDPV1) have been reported.\" \"Genetic analysis confirmed that the cVDPV1 isolates detected are genetically linked, providing evidence of person-to-person transmission.\"",
+   "severity": "HIGH",
+   "entities_involved": "[]",
+   "predicted_impact": null,
+   "italy_relevance": null,
+   "italy_impact": "Il documento OMS non nomina l'Italia.",
+   "timeframe": null,
+   "recommendation": "Consultare il documento OMS 2026-DON628 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
+   "created_at": "2026-11-24T15:49:27.385977",
+   "is_read": false
+  },
+  {
    "id": "who_2026_don630",
    "title": "OMS: \"Ebola disease caused by Bundibugyo virus- Democratic Republic of the Congo, Kenya and Nigeria\"",
-   "description": "OMS, Disease Outbreak News 2026-DON630 del 2026-11-20: \"As of 17 November 2026, a total of 11 613 confirmed cases, including 5678 deaths (crude case fatality ratio: 48.9%), have been reported across 68 health zones in eight provinces, with active transmission ongoing in 48 health zones.\" \"The high proportion of deaths occurring in communities, meaning outside of dedicated treatment centres, especially among young children, continues to highlight challenges in early case detection and timely access to appropriate care.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON630 del 2026-11-20: \"As of 17 November 2026, a total of 11 613 confirmed cases, including 5678 deaths (crude case fatality ratio: 48.9%), have been reported across 68 health zones in eight provinces, with active transmission ongoing in 48 health zones.\"",
    "severity": "CRITICAL",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -23236,13 +23672,13 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON630 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
    "id": "who_2026_don627",
    "title": "OMS: \"Chikungunya virus disease - Switzerland\"",
-   "description": "OMS, Disease Outbreak News 2026-DON627 del 2026-11-17: \"On 4 November 2026, health authorities in the canton of Ticino, Switzerland, in coordination with federal authorities, reported four locally acquired cases of chikungunya virus disease. These are the first reported locally acquired chikungunya cases in Switzerland.\" \"The Asian tiger mosquito (Aedes albopictus), a competent vector for chikungunya virus, is established in several Swiss cantons, including Ticino.\"",
+   "description": "OMS, Disease Outbreak News 2026-DON627 del 2026-11-17: \"On 4 November 2026, health authorities in the canton of Ticino, Switzerland, in coordination with federal authorities, reported four locally acquired cases of chikungunya virus disease.\" \"The Asian tiger mosquito (Aedes albopictus), a competent vector for chikungunya virus, is established in several Swiss cantons, including Ticino.\"",
    "severity": "MEDIUM",
    "entities_involved": "[]",
    "predicted_impact": null,
@@ -23250,35 +23686,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON627 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-23T15:56:12.370850",
-   "is_read": false
-  },
-  {
-   "id": "who_2026_don626",
-   "title": "OMS: \"Middle East respiratory syndrome (MERS) – Qatar\"",
-   "description": "OMS, Disease Outbreak News 2026-DON626 del 2026-11-13: \"On 29 October 2026, the National International Health Regulations (IHR) Focal Point of the State of Qatar notified the World Health Organization (WHO) of two laboratory-confirmed cases of Middle East respiratory syndrome (MERS).\" \"MERS is a viral zoonotic infection, principally transmitted to humans through direct or indirect contact with infected dromedary camels.\"",
-   "severity": "HIGH",
-   "entities_involved": "[]",
-   "predicted_impact": null,
-   "italy_relevance": null,
-   "italy_impact": "Il documento OMS non nomina l'Italia.",
-   "timeframe": null,
-   "recommendation": "Consultare il documento OMS 2026-DON626 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-23T15:56:12.370850",
-   "is_read": false
-  },
-  {
-   "id": "who_2026_don625",
-   "title": "OMS: \"Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria\"",
-   "description": "OMS, Disease Outbreak News 2026-DON625 del 2026-11-06: \"As of 3 November 2026, a total of 10 668 confirmed cases, including 5198 deaths (crude case fatality ratio: 48.7%), have been reported across 67 health zones in eight provinces, with active transmission ongoing in 51 health zones.\" \"The high proportion of deaths occurring in communities, especially among young children, continues to highlight challenges in early case detection and timely access to appropriate care.\"",
-   "severity": "CRITICAL",
-   "entities_involved": "[]",
-   "predicted_impact": null,
-   "italy_relevance": null,
-   "italy_impact": "Il documento OMS non nomina l'Italia.",
-   "timeframe": null,
-   "recommendation": "Consultare il documento OMS 2026-DON625 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23291,8 +23699,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di Embletta MPR PG Sleep Monitor modello 2003011 con i numeri di serie elencati nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di Embletta MPR PG Sleep Monitor modello 2003011 con i numeri seriali indicati nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23305,8 +23713,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di Automated Impella Controller con i codici prodotto e numeri di serie indicati nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di Automated Impella Controller con codici prodotto e UDI indicati nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23319,8 +23727,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di Impella Optical Controller con i codici prodotto e numeri di serie indicati nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di Impella Optical Controller con codici prodotto e UDI indicati nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23333,8 +23741,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di Impella Connect Optical AIC con i codici prodotto e numeri di serie indicati nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di Impella Connect Optical AIC con codici prodotto e UDI indicati nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23347,8 +23755,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di OmniaSecure Model 3930M lead con i numeri di serie elencati nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di OmniaSecure Model 3930M lead con UDI-DI e numeri seriali indicati nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23361,8 +23769,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di Philips Azurion 5 M12 modello 722227 con gli UDI specificati nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di Philips Azurion 5 M12 modello 722227 con UDI indicati nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23375,8 +23783,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di Philips Azurion 5 M20 modelli 722228 e 722281 con gli UDI specificati nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di Philips Azurion 5 M20 modelli 722228 e 722281 con UDI indicati nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   },
   {
@@ -23389,8 +23797,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza in inventario di Philips Azurion S modello 722285 con l'UDI specificato nel campo code_info.",
-   "created_at": "2026-11-23T15:56:12.370850",
+   "recommendation": "Verificare presenza in inventario di Philips Azurion S modello 722285 con UDI indicato nel campo code_info.",
+   "created_at": "2026-11-24T15:49:27.385977",
    "is_read": false
   }
  ]
