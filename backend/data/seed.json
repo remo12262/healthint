@@ -1,9 +1,9 @@
 {
  "version": 1,
- "exported_at": "2026-11-27T14:59:58.561984",
- "data_updated_at": "2026-11-27T14:59:58.359059",
+ "exported_at": "2026-11-28T14:09:05.904980",
+ "data_updated_at": "2026-11-28T14:09:05.718345",
  "refresh_info": {
-  "last_success": "2026-11-27T14:59:58.359059",
+  "last_success": "2026-11-28T14:09:05.718345",
   "contributed": [
    "openfda_drug",
    "openfda_device",
@@ -11,31 +11,31 @@
    "who_outbreaks"
   ],
   "new": {
-   "nodes": 29,
-   "edges": 63,
+   "nodes": 22,
+   "edges": 51,
    "alerts": 10
   },
   "latest_at_source": {
    "openfda_drug": "2025-03-26",
    "openfda_device": "2026-11-18",
    "who_outbreaks": "2026-11-24",
-   "italy": "2026-11-27"
+   "italy": "2026-11-28"
   },
   "counts": {
    "openfda_drug": 40,
    "openfda_device": 40,
    "who_outbreaks": 20,
-   "italy": 42
+   "italy": 41
   },
   "source_errors": {},
   "alerts_error": null,
   "alerts_discarded": [
    "citazione non presente nel documento 2026-DON630: 'The high-level transmission in the Democratic Republic of the Congo calls for continued need for readiness in the region'"
   ],
-  "alerts_attempt": "2026-11-27T14:59:58.359059"
+  "alerts_attempt": "2026-11-28T14:09:05.718345"
  },
  "signals": {
-  "generated_at": "2026-11-27T14:59:47.339421",
+  "generated_at": "2026-11-28T14:08:54.730103",
   "who": [
    {
     "title": "Influenza A(H5N1) - United States of America",
@@ -202,6 +202,41 @@
   ],
   "italy": [
    {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-28",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06164/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di paliperidone, «Paliperidone Viatris». (26A06164)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-28",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06165/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di esomeprazolo, «Esomeprazolo Aurobindo Italia». (26A06165)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-28",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06166/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di teduglutide, «Teduglutide Cipla». (26A06166)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-28",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06174/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Autorizzazione all'immissione in commercio del medicinale per uso umano, a base di fidaxomicina, «Fidaxomicina Sun». (26A06174)"
+   },
+   {
+    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
+    "date": "2026-11-28",
+    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG",
+    "source": "Gazzetta Ufficiale",
+    "summary": "Revoca, su rinuncia, dell'autorizzazione all'immissione in commercio del medicinale per uso umano «Risperidone Grindeks». (26A06175)"
+   },
+   {
     "title": "Esiti runione straordinaria Commissione Scientifica e Economica del Farmaco (CSE)",
     "date": "2026-11-27",
     "url": "https://www.aifa.gov.it/-/esiti-runione-straordinaria-commissione-scientifica-e-economica-del-farmaco-cse-6",
@@ -220,7 +255,7 @@
     "date": "2026-11-27",
     "url": "https://www.iss.it/-/bollettino-186-fase-3",
     "source": "ISS – Comunicati stampa",
-    "summary": "Edited 27/11/2026 Impatto • Al 25/11/2026 l’occupazione dei posti letto in area medica è pari a 0,8% (522 ricoverati), stabile rispetto alla settimana precedente (0,8% al 18/11/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,2% (19"
+    "summary": "Impatto • Al 25/11/2026 l’occupazione dei posti letto in area medica è pari a 0,8% (522 ricoverati), stabile rispetto alla settimana precedente (0,8% al 18/11/2026) (tab.1, fig.1). Stabile anche l’occupazione dei posti letto in terapia intensiva, pari a 0,2% (19 ricoverati), risp"
    },
    {
     "title": "Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile",
@@ -235,41 +270,6 @@
     "url": "https://respivirnet.iss.it/pagine/rapportoInflunet.aspx",
     "source": "ISS – RespiVirNet",
     "summary": "In questa stagione, la raccolta dei dati avviene attraverso la piattaforma RespiVirNet dell’ISS che è stata appositamente modificata per acquisire dati privi di identificativi personali. Questo comporta alcune limitazioni che riducono in parte la qualità dei dati pur consentendo "
-   },
-   {
-    "title": "MINISTERO DELLA SALUTE - DECRETO 18 novembre 2026",
-    "date": "2026-11-26",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06141/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Determinazione delle quantita' di sostanze stupefacenti e psicotrope che possono essere fabbricate e messe in vendita, in Italia e all'estero, nel corso dell'anno 2027. (26A06141)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-26",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06108/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Adempas» (26A06108)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-26",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06109/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Verzenios» (26A06109)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-26",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06129/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Vagifem» (26A06129)"
-   },
-   {
-    "title": "AGENZIA ITALIANA DEL FARMACO - COMUNICATO",
-    "date": "2026-11-26",
-    "url": "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06130/SG",
-    "source": "Gazzetta Ufficiale",
-    "summary": "Autorizzazione all'importazione parallela del medicinale per uso umano «Nurofen Febbre e Dolore» (26A06130)"
    },
    {
     "title": "Esiti runione straordinaria Commissione Scientifica e Economica del Farmaco (CSE)",
@@ -300,13 +300,6 @@
     "summary": "L'Agenzia Italiana del Farmaco rende disponibile l'ordine del giorno dei lavori della riunione straordinaria della Commissione Scientifica e Economica (CSE) del 26 novembre 2026."
    },
    {
-    "title": "Tabelle farmaci di classe A e H al 31/07/2026",
-    "date": "2026-11-24",
-    "url": "https://www.aifa.gov.it/-/tabelle-farmaci-di-classe-a-e-h-al-31-07-2026",
-    "source": "AIFA – Notizie",
-    "summary": "AIFA rende disponibili per tutti gli Operatori sanitari le tabelle contenenti l’elenco dei farmaci di fascia A e H, dispensati dal Servizio sanitario Nazionale, ordinati rispettivamente per principio attivo e per nome commerciale."
-   },
-   {
     "title": "Monitoraggio AGENAS sul DM 77: presentato l'ottavo Report su Case e Ospedali di Comunità",
     "date": "2026-11-24",
     "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2936-la-sanit%C3%A0-territoriale%2C-dai-dati-ai-servizi-presente-e-futuro-di-case-e-ospedali-della-comunit%C3%A0",
@@ -328,18 +321,25 @@
     "summary": "In occasione della giornata per l’eliminazione della violenza contro le donne \"“Alcohol and Violence Against Women” L'alcol può alimentare la violenza contro le donne e rendere gli episodi oltre che più frequenti anche più intensi e gravi. La revisione sistematica della letteratu"
    },
    {
-    "title": "Comunicazione AIFA su Barbesaclone 25 mg",
+    "title": "L’App AIFA Medicinali si rinnova",
     "date": "2026-11-23",
-    "url": "https://www.aifa.gov.it/-/comunicazione-aifa-su-barbesaclone-25-mg-7",
-    "source": "AIFA – Notizie",
-    "summary": "Nuove e importanti informazioni relative alla produzione e alla distribuzione del medicinale a denominazione generica Barbesaclone 25mg compresse rivestite - PROROGA SCADENZA."
+    "url": "https://www.aifa.gov.it/-/app_aifa_medicinali_si_rinnova",
+    "source": "AIFA – Comunicati stampa",
+    "summary": "Gestione dei farmaci più semplice, promemoria ancora più personalizzati, possibilità di condividere le informazioni con familiari e caregiver e accesso diretto ai contenuti ufficiali dell’Agenzia: la versione aggiornata dell’App AIFA Medicinali introduce nuove funzionalità e migl"
    },
    {
-    "title": "Esiti runione straordinaria Commissione Scientifica e Economica del Farmaco (CSE)",
+    "title": "AGENAS investe in nuove competenze: aperte le selezioni per professionisti della sanità digitale e funzionari in diversi ambiti",
     "date": "2026-11-23",
-    "url": "https://www.aifa.gov.it/-/esiti-runione-straordinaria-commissione-scientifica-e-economica-del-farmaco-cse-4",
-    "source": "AIFA – Notizie",
-    "summary": "L'Agenzia Italiana del Farmaco rende disponibile gli esiti dei lavori della riunione straordinaria della Commissione Scientifica e Economica (CSE) del 20 novembre 2026."
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2930-agenas-investe-in-nuove-competenze-aperte-le-selezioni-per-professionisti-della-sanit%C3%A0-digitale-e-funzionari-in-diversi-ambiti",
+    "source": "AGENAS – Notizie",
+    "summary": "Dalla cybersecurity all'intelligenza artificiale, dall'analisi dei dati alle competenze economiche, giuridiche e ingegneristiche: nuove opportunità professionali per contribuire all'innovazione del Servizio sanitario nazionale."
+   },
+   {
+    "title": "AGENAS aggiorna il monitoraggio della Mobilità Sanitaria Interregionale",
+    "date": "2026-11-23",
+    "url": "https://www.agenas.gov.it/aree-tematiche/comunicazione/primo-piano/2917-agenas-aggiorna-il-monitoraggio-della-mobilit%C3%A0-sanitaria-interregionale",
+    "source": "AGENAS – Notizie",
+    "summary": "AGENAS ha pubblicato l’aggiornamento all’anno 2025 del monitoraggio della Mobilità Sanitaria Interregionale, con l’analisi delle principali dinamiche dei flussi di pazienti nel nostro Paese, riferite sia ai ricoveri ospedalieri sia alla specialistica ambulatoriale."
    }
   ]
  },
@@ -412,9 +412,9 @@
   "https://www.gazzettaufficiale.it/eli/id/2026/11/21/26A06051/SG",
   "2026-DON629",
   "2026-DON628",
-  "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-  "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-  "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06132/SG"
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06176/SG",
+  "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06194/SG"
  ],
  "nodes": [
   {
@@ -426,7 +426,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Dr. Berne's Organic Castor Oil Eye Drops, Net WT 30 mL/1 fl oz bottle, Distributed by: Dr. Berne's Whole Health Products",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-27T14:59:19.938542",
+   "updated_at": "2026-11-28T14:08:37.229891",
    "risk_basis": "Richiamo FDA D-0037-2024 di classe I del 11/10/2023"
   },
   {
@@ -438,7 +438,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Vy&Tea (Vietnamese Labeling with a green leaf and a bird underneath) 15/KLT 45.0G (15 tea sachets per box), Manufactured",
    "risk_score": 42,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-27T14:59:19.938542",
+   "updated_at": "2026-11-28T14:08:37.229891",
    "risk_basis": "Richiamo FDA D-0749-2021 di classe I del 11/08/2021"
   },
   {
@@ -450,7 +450,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Automated Impella Controller (AIC) with the below product descriptions and corresponding Product Codes.     1. Impella C",
    "risk_score": 85,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-3148-2026 di classe I del 23/09/2026"
   },
   {
@@ -510,7 +510,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Neupogen (filgrastim) For Injection, 300mcg/1 mL, 1 mL Single Dose Vials, Rx Only, For Subcutaneous or Intravenous Use O",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-27T14:59:19.938542",
+   "updated_at": "2026-11-28T14:08:37.229891",
    "risk_basis": "Richiamo FDA D-0285-2025 di classe II del 26/03/2025"
   },
   {
@@ -522,7 +522,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Humanrace Suncare, Ozone Face Protection Daily Moisturizer, Broad Spectrum Sunscreen SPF 30, packaged as a 53mL (1.8 fl ",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-27T14:59:19.938542",
+   "updated_at": "2026-11-28T14:08:37.229891",
    "risk_basis": "Richiamo FDA D-1175-2023 di classe II del 27/09/2023"
   },
   {
@@ -534,7 +534,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Edema Off, Distributed by Herbal Doctor Remedies Alhambra, CA 91801-7081 USA, 1(800) 600-0808",
    "risk_score": 28,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-27T14:59:19.938542",
+   "updated_at": "2026-11-28T14:08:37.229891",
    "risk_basis": "Richiamo FDA D-1122-2020 di classe II del 15/04/2020"
   },
   {
@@ -546,7 +546,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Ingenia 3.0T and 3.0T CX;  Model number (REF): 1. 781342 (3.0T), 2. 781377 (3.0T), 3. 782103 (3.0T), 4. 781271 (3.0T CX)",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-3233-2026 di classe II del 30/09/2026",
    "aliases": [
     "Philips North America Llc"
@@ -585,7 +585,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips EPIQ series and Affiniti series Diagnostic Ultrasound Systems with the Auto Measure licensed Option with Softwar",
    "risk_score": 55,
    "created_at": "2026-10-06T06:32:01.598135",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-3249-2026 di classe II del 30/09/2026"
   },
   {
@@ -699,7 +699,7 @@
    "description": "Azienda farmaceutica con recall in Italia/UE. Prodotto: Cystaran (cysteamine ophthalmic solution) 0.44%, For Ophthalmic Use Only, 15 mL bottle, Sterile, Rx Only,  Manufactured ",
    "risk_score": 12,
    "created_at": "2026-10-06T06:32:01.597560",
-   "updated_at": "2026-11-27T14:59:19.938542",
+   "updated_at": "2026-11-28T14:08:37.229891",
    "risk_basis": "Richiamo FDA D-0034-2021 di classe III del 21/10/2020"
   },
   {
@@ -744,7 +744,7 @@
    "description": "Agenzia nazionale italiana competente per l'autorizzazione e la vigilanza su medicinali.",
    "risk_score": 15,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-27T14:59:46.679248",
+   "updated_at": "2026-11-28T14:08:54.208604",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Agenzia Italiana del Farmaco",
    "website": "https://www.aifa.gov.it/",
@@ -784,7 +784,7 @@
    "description": "Ente di ricerca e controllo sanitario italiano, partner nel progetto Traguardo Zero e nella giuria del contest.",
    "risk_score": 45,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-27T14:59:46.679248",
+   "updated_at": "2026-11-20T13:58:49.131055",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Istituto Superiore di Sanità",
    "website": "https://www.iss.it/",
@@ -806,7 +806,7 @@
    "description": "Istituzione nazionale italiana promotrice di iniziative sanità pubblica cardiovascolare.",
    "risk_score": 35,
    "created_at": "2026-10-06T06:32:00.960345",
-   "updated_at": "2026-11-27T14:59:46.679248",
+   "updated_at": "2026-11-20T13:58:49.131055",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "full_name": "Ministero della Salute",
    "website": "https://www.salute.gov.it/",
@@ -827,7 +827,7 @@
    "description": "Agenzia internazionale che monitora e coordina la risposta alla epidemia di Ebola in Repubblica Democratica del Congo",
    "risk_score": 75,
    "created_at": "2026-10-08T21:00:11.980138",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "aliases": [
     "Organizzazione Mondiale della Sanità",
@@ -1441,7 +1441,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Atellica CH Total Protein_2 (TP_2);  Siemens Material Number (SMN): 1. 11645755 (3700 tests), 2. 11537228 (7400 tests);",
    "risk_score": 55,
    "created_at": "2026-10-13T12:40:15.296927",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-3335-2026 di classe II del 07/10/2026"
   },
   {
@@ -1954,15 +1954,12 @@
    "region": "Toscana",
    "website": "https://www.regione.toscana.it/",
    "domain": "health",
-   "description": "Autorità regionale coinvolta nella gestione del focolaio di Dengue a Piombino.",
-   "risk_score": 45,
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "description": "Regione Toscana",
+   "risk_score": 10,
+   "risk_basis": "Ente del nucleo fisso italiano: rischio non stimato",
    "italy": true,
    "created_at": "2026-10-18T15:38:53.728256",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
+   "updated_at": "2026-10-18T15:38:53.728256"
   },
   {
    "id": "reg_umbria",
@@ -2150,17 +2147,15 @@
    "type": "EpidemicEvent",
    "domain": "health",
    "region": "IT",
-   "description": "Focolaio di trasmissione locale di Dengue in comune costiero della Toscana agosto-ottobre 2026.",
+   "description": "376 casi confermati di Dengue, 76 autoctoni, 5 focolai di trasmissione locale identificati",
    "risk_score": 72,
    "created_at": "2026-10-18T19:24:58.559516",
-   "updated_at": "2026-11-27T14:59:46.679248",
+   "updated_at": "2026-11-08T11:55:40.927099",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
    "aliases": [
-    "Dengue - Focolaio Attivo",
     "Epidemia di dengue – Italia",
     "Focolai Dengue Autoctoni",
-    "Focolaio Dengue 2026",
-    "Focolaio Dengue Piombino"
+    "Focolaio Dengue 2026"
    ],
    "disease": "dengue",
    "risk_assigned_at": "2026-10-18T19:25:38.062427",
@@ -2950,7 +2945,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Direxion Torqueable Microcatheter, NGMC/SINGLE/021/SWAN/1RO/105;  Material Number: M001195290",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0232-2027 di classe II del 28/10/2026"
   },
   {
@@ -2962,7 +2957,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Generic Name: MiniMed Go App  Generic Name: MiniMed Go App  Model/Catalog Number: MMT-8600 (iOS), MMT-8601 (Android)  So",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0265-2027 di classe II del 28/10/2026"
   },
   {
@@ -2974,7 +2969,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: InterStim Percutaneous Extensions     EXT 3560022 ISTM II PERC\t  \t3560022  \t  EXT 3560030 ISTM MICRO PERC\t  \t3560030",
    "risk_score": 55,
    "created_at": "2026-11-03T12:45:37.030553",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0267-2027 di classe II del 28/10/2026"
   },
   {
@@ -3635,7 +3630,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OmniaSecure Model 3930M,    LEAD 3930M74 74 CM DF4 MR  3930M74    LEAD 3930M79 79 CM DF4 MR  3930M79    The Medtronic Om",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0285-2027 di classe II del 04/11/2026"
   },
   {
@@ -3647,7 +3642,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Philips Azurion 5 M12. Model Number: 722227.",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0294-2027 di classe II del 04/11/2026"
   },
   {
@@ -3659,7 +3654,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Precision Pointer Electromagnetic (8000-050-001)",
    "risk_score": 55,
    "created_at": "2026-11-10T13:27:24.020926",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0314-2027 di classe II del 04/11/2026"
   },
   {
@@ -3969,13 +3964,13 @@
    "domain": "health",
    "region": "IT",
    "description": "Sistema di sorveglianza nazionale per infezioni respiratorie acute e virus respiratori",
-   "risk_score": 45,
+   "risk_score": 25,
    "created_at": "2026-11-16T13:35:48.393254",
-   "updated_at": "2026-11-27T14:59:46.679248",
+   "updated_at": "2026-11-20T13:58:49.131055",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
+   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute",
+   "risk_doc_date": "2026-11-20",
+   "risk_assigned_at": "2026-11-20T13:58:49.131036"
   },
   {
    "id": "natus_medical_incorporated",
@@ -3986,7 +3981,7 @@
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Embletta MPR PG Multi Parameter Recorder Sleep Monitor, Model/Catalog Number: 2003011",
    "risk_score": 55,
    "created_at": "2026-11-17T14:20:16.066044",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0319-2027 di classe II del 11/11/2026"
   },
   {
@@ -4250,14 +4245,14 @@
    "type": "HospitalNetwork",
    "domain": "health",
    "region": null,
-   "description": "Sistema di monitoraggio campioni virologici ospedalieri per patogeni respiratori",
-   "risk_score": 50,
+   "description": "Campioni virologici raccolti dalle strutture ospedaliere sentinella",
+   "risk_score": 40,
    "created_at": "2026-11-20T13:58:49.131055",
-   "updated_at": "2026-11-27T14:59:46.679248",
+   "updated_at": "2026-11-20T13:58:49.131055",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
+   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute",
+   "risk_doc_date": "2026-11-20",
+   "risk_assigned_at": "2026-11-20T13:58:49.131036"
   },
   {
    "id": "comunita_assistiti",
@@ -4417,8 +4412,8 @@
    "region": "United States",
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: ACUSON Orgin ICE Ultrasound Imaging System  REF: 11669400",
    "risk_score": 55,
-   "created_at": "2026-11-27T14:59:20.044721",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "created_at": "2026-11-28T14:08:37.420900",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0393-2027 di classe II del 18/11/2026"
   },
   {
@@ -4429,8 +4424,8 @@
    "region": "United States",
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: OCS Liver System for organ transport   OCS Solution Delivery Cassettes   Model/Catalog Number: 1467     Product Descript",
    "risk_score": 55,
-   "created_at": "2026-11-27T14:59:20.044721",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "created_at": "2026-11-28T14:08:37.420900",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0391-2027 di classe II del 18/11/2026"
   },
   {
@@ -4441,8 +4436,8 @@
    "region": "United States",
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Horizon QDR X-Ray Bone Densitometer;  Models: 1. Horizon W, 2. Horizon-WI;",
    "risk_score": 55,
-   "created_at": "2026-11-27T14:59:20.044721",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "created_at": "2026-11-28T14:08:37.420900",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0423-2027 di classe II del 18/11/2026"
   },
   {
@@ -4453,8 +4448,8 @@
    "region": "United States",
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: NITINOL K-WIRE BLUNT;  Catalog/Part Number: 48280232; used in spinal surgery",
    "risk_score": 55,
-   "created_at": "2026-11-27T14:59:20.044721",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "created_at": "2026-11-28T14:08:37.420900",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0440-2027 di classe II del 18/11/2026"
   },
   {
@@ -4465,8 +4460,8 @@
    "region": "United States",
    "description": "Azienda dispositivi medici con recall in Italia/UE. Prodotto: Brand Name: GOREÂ¿ VIABAHNÂ¿ Endoprosthesis with Heparin Bioactive Surface, GOREÂ¿ VIABAHNÂ¿ Endoprosthesis with PROPATE",
    "risk_score": 55,
-   "created_at": "2026-11-27T14:59:20.044721",
-   "updated_at": "2026-11-27T14:59:20.044721",
+   "created_at": "2026-11-28T14:08:37.420900",
+   "updated_at": "2026-11-28T14:08:37.420900",
    "risk_basis": "Richiamo FDA Z-0360-2027 di classe II del 18/11/2026"
   },
   {
@@ -4475,14 +4470,14 @@
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Stati Uniti",
-   "description": "Sistema sanitario nazionale USA responsabile della notifica epidemiologica",
-   "risk_score": 0,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "description": "Sistema sanitario nazionale USA che segnala casi di influenza A(H5N1) a WHO.",
+   "risk_score": 45,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON629",
    "risk_doc_date": "2026-11-24",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086",
+   "risk_assigned_at": "2026-11-28T14:08:49.624588",
    "aliases": [
     "United States of America - Health System"
    ]
@@ -4493,14 +4488,14 @@
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "USA",
-   "description": "Stato USA dove sono stati riportati tre casi confermati di H5N1 umano",
-   "risk_score": 75,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "description": "Stato dove rilevati tre casi confermati di influenza A(H5N1) in lavoratori farm lattiero-caseari.",
+   "risk_score": 70,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON629",
    "risk_doc_date": "2026-11-24",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
    "id": "yakima_county",
@@ -4508,44 +4503,29 @@
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "USA",
-   "description": "Contea di Washington dove fattorie lattiero-casearie hanno virus H5N1 nei bovini",
-   "risk_score": 80,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "description": "Contea di Washington con focolaio H5N1 in bestiame e casi umani correlati.",
+   "risk_score": 75,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON629",
    "risk_doc_date": "2026-11-24",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "h5n1_virus",
-   "label": "Influenza A(H5N1)",
-   "type": "RegulatorAgency",
-   "domain": "health",
-   "region": null,
-   "description": "Virus dell'influenza aviaria altamente patogeno rilevato nei bovini e umani",
-   "risk_score": 85,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_doc": "2026-DON629",
-   "risk_doc_date": "2026-11-24",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
-  },
-  {
-   "id": "dairy_farms",
-   "label": "Dairy Cattle Farms Yakima",
+   "id": "dairy_farms_yakima",
+   "label": "Dairy Cattle Farms - Yakima County",
    "type": "HospitalNetwork",
    "domain": "health",
    "region": "USA",
-   "description": "Fattorie lattiero-casearie infette in Yakima County con H5N1 nei bovini",
-   "risk_score": 82,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "description": "Allevamenti lattiero-caseari colpiti da influenza aviaria altamente patogena A(H5N1).",
+   "risk_score": 80,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON629",
    "risk_doc_date": "2026-11-24",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
    "id": "nfp_us",
@@ -4553,287 +4533,197 @@
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "Stati Uniti",
-   "description": "Punto focale nazionale USA per il regolamento sanitario internazionale",
-   "risk_score": 0,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "description": "Punto focale nazionale USA per il regolamento internazionale sulla sanità che notifica WHO.",
+   "risk_score": 20,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON629",
    "risk_doc_date": "2026-11-24",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086",
+   "risk_assigned_at": "2026-11-28T14:08:49.624588",
    "aliases": [
-    "IHR National Focal Point USA"
+    "IHR National Focal Point - USA"
    ]
   },
   {
-   "id": "exposed_workers",
-   "label": "Occupationally Exposed Workers",
+   "id": "h5n1_virus",
+   "label": "Influenza A(H5N1)",
    "type": "Person",
    "domain": "health",
-   "region": "USA",
-   "description": "Tre adulti lavoratori agricoli confermati positivi H5N1 con un decesso",
-   "risk_score": 78,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "region": null,
+   "description": "Virus dell'influenza aviaria altamente patogeno in circolazione tra bovini e umani USA.",
+   "risk_score": 85,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON629",
    "risk_doc_date": "2026-11-24",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "syria_health_authority",
-   "label": "Syrian Arab Republic National Health Authority",
+   "id": "siria_health",
+   "label": "Autorità Sanitarie Nazionali Siriane",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Syria",
-   "description": "Autorità sanitaria nazionale siriana responsabile risposta epidemiologica",
+   "description": "Autorità sanitarie nazionali della Repubblica Araba Siriana responsabili controllo epidemie",
    "risk_score": 75,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON628",
    "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "deir_ez_zor_governorate",
+   "id": "deir_ez_zor",
    "label": "Deir Ez Zor Governorate",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Syria",
-   "description": "Governatorato siriano colpito da focolaio di poliomielite vaccinale",
+   "description": "Provincia della Siria colpita da focolaio di poliomielite da virus vaccinale",
    "risk_score": 85,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON628",
    "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "al_mayadin_district",
+   "id": "al_mayadin",
    "label": "Al-Mayadin District",
    "type": "RegionalAuthority",
    "domain": "health",
    "region": "Syria",
-   "description": "Distretto epicentro del focolaio di poliomielite vaccinale circolante",
+   "description": "Distretto epicentro del focolaio con almeno 4 casi AFP confermati cVDPV1",
    "risk_score": 90,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON628",
    "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "cvdpv1_outbreak",
-   "label": "cVDPV1 Outbreak October 2026",
-   "type": "ResearchInstitute",
+   "id": "cVDPV1_pathogen",
+   "label": "Circulating Vaccine-Derived Poliovirus Type 1",
+   "type": "Person",
    "domain": "health",
-   "region": "Syria",
-   "description": "Focolaio di poliomielite vaccinale derivata con trasmissione interumana confermata",
+   "region": null,
+   "description": "Agente patogeno emergente con trasmissione interumana confermata geneticamente",
    "risk_score": 95,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
    "risk_basis": "Stima dell'AI dalle notizie OMS",
    "risk_doc": "2026-DON628",
    "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "emergency_operations_centre",
-   "label": "Emergency Operations Centre Syria",
+   "id": "emergency_ops_centre",
+   "label": "Emergency Operations Centre",
    "type": "RegulatorAgency",
    "domain": "health",
    "region": "Syria",
-   "description": "Centro operativo emergenze attivato per coordinare risposta epidemiologica",
-   "risk_score": 60,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_doc": "2026-DON628",
-   "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
-  },
-  {
-   "id": "routine_immunization_services",
-   "label": "Routine Immunization Services Syria",
-   "type": "RegionalAuthority",
-   "domain": "health",
-   "region": "Syria",
-   "description": "Servizi di immunizzazione di routine da rafforzare durante epidemia",
-   "risk_score": 70,
-   "created_at": "2026-11-27T14:59:32.011111",
-   "updated_at": "2026-11-27T14:59:32.011111",
-   "risk_basis": "Stima dell'AI dalle notizie OMS",
-   "risk_doc": "2026-DON628",
-   "risk_doc_date": "2026-11-23",
-   "risk_assigned_at": "2026-11-27T14:59:32.011086"
-  },
-  {
-   "id": "pronto_soccorso_nazionale",
-   "label": "Rete Pronto Soccorso Nazionale",
-   "type": "HospitalNetwork",
-   "domain": "health",
-   "region": null,
-   "description": "Strutture di emergenza-urgenza coinvolte in sorveglianza accessi respiratori",
-   "risk_score": 55,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "flusso_comunita",
-   "label": "Flusso Comunità",
-   "type": "ResearchInstitute",
-   "domain": "health",
-   "region": null,
-   "description": "Rete sentinella di medici di medicina generale per sorveglianza sindromica",
-   "risk_score": 35,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "virus_influenzali",
-   "label": "Virus Influenzali",
-   "type": "Person",
-   "domain": "health",
-   "region": null,
-   "description": "Patogeni respiratori in circolazione con positività 8,4% nei campioni analizzati",
-   "risk_score": 70,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "sars_cov2",
-   "label": "SARS-CoV-2",
-   "type": "Person",
-   "domain": "health",
-   "region": null,
-   "description": "Coronavirus circolante tra i virus respiratori monitorati dalla sorveglianza",
-   "risk_score": 65,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "eurosurveillance",
-   "label": "Eurosurveillance",
-   "type": "ResearchInstitute",
-   "domain": "health",
-   "region": null,
-   "description": "Rivista scientifica che pubblica la descrizione del focolaio toscano di Dengue.",
-   "risk_score": 0,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "lancet_rh",
-   "label": "Lancet Regional Health",
-   "type": "ResearchInstitute",
-   "domain": "health",
-   "region": null,
-   "description": "Rivista che pubblica descrizione sistema sorveglianza West Nile virus.",
-   "risk_score": 0,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "chikungunya_virus",
-   "label": "Chikungunya - Sorveglianza",
-   "type": "RegulatorAgency",
-   "domain": "health",
-   "region": null,
-   "description": "31 casi confermati, 1 autoctono, monitoraggio nazionale attivo.",
-   "risk_score": 35,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "zika_virus",
-   "label": "Zika Virus - Sorveglianza",
-   "type": "RegulatorAgency",
-   "domain": "health",
-   "region": null,
-   "description": "4 casi confermati tutti importati da viaggi estero, monitoraggio basso rischio.",
+   "description": "Centro operativo di emergenza attivato per coordinare risposta epidemiologica nazionale",
    "risk_score": 20,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "maldive_esposizione",
-   "label": "Maldive - Zona Esposizione",
+   "id": "afp_surveillance",
+   "label": "AFP Surveillance System",
+   "type": "RegulatorAgency",
+   "domain": "health",
+   "region": "Syria",
+   "description": "Sistema di sorveglianza rafforzato per paralisi flaccida acuta in Siria",
+   "risk_score": 30,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
+  },
+  {
+   "id": "immunization_services",
+   "label": "Routine Immunization Services",
    "type": "RegionalAuthority",
    "domain": "health",
-   "region": null,
-   "description": "50% dei casi Dengue importati provengono dalle Maldive.",
-   "risk_score": 15,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
+   "region": "Syria",
+   "description": "Servizi di immunizzazione di routine da rafforzare nelle comunità colpite",
+   "risk_score": 55,
+   "created_at": "2026-11-28T14:08:49.624607",
+   "updated_at": "2026-11-28T14:08:49.624607",
+   "risk_basis": "Stima dell'AI dalle notizie OMS",
+   "risk_doc": "2026-DON628",
+   "risk_doc_date": "2026-11-23",
+   "risk_assigned_at": "2026-11-28T14:08:49.624588"
   },
   {
-   "id": "seychelles_esposizione",
-   "label": "Seychelles - Zona Esposizione",
-   "type": "RegionalAuthority",
-   "domain": "health",
-   "region": null,
-   "description": "34% dei casi Chikungunya importati provengono dalle Seychelles.",
-   "risk_score": 15,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
-   "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "risk_doc_date": "2026-11-27",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
-  },
-  {
-   "id": "levofolene_26a06132",
-   "label": "Levofolene (26A06132)",
+   "id": "grindeks",
+   "label": "Grindeks",
    "type": "PharmaCompany",
    "domain": "health",
-   "region": "IT",
-   "description": "Medicinale per uso umano sottoposto a revoca dell'autorizzazione all'immissione in commercio.",
+   "region": null,
+   "description": "Azienda farmaceutica produttrice del medicinale Risperidone Grindeks.",
    "risk_score": 15,
-   "created_at": "2026-11-27T14:59:46.679248",
-   "updated_at": "2026-11-27T14:59:46.679248",
+   "created_at": "2026-11-28T14:08:54.208604",
+   "updated_at": "2026-11-28T14:08:54.208604",
    "risk_basis": "Stima dell'AI dalle fonti italiane",
-   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06132/SG",
-   "risk_doc_date": "2026-11-26",
-   "risk_assigned_at": "2026-11-27T14:59:46.679220"
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG",
+   "risk_doc_date": "2026-11-28",
+   "risk_assigned_at": "2026-11-28T14:08:54.208586"
+  },
+  {
+   "id": "risperidone_grindeks",
+   "label": "Risperidone Grindeks",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano a base di risperidone, autorizzazione revocata su rinuncia.",
+   "risk_score": 25,
+   "created_at": "2026-11-28T14:08:54.208604",
+   "updated_at": "2026-11-28T14:08:54.208604",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG",
+   "risk_doc_date": "2026-11-28",
+   "risk_assigned_at": "2026-11-28T14:08:54.208586"
+  },
+  {
+   "id": "amlodipina_pensa",
+   "label": "Amlodipina Pensa",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Medicinale per uso umano a base di amlodipina, oggetto di revoca autorizzazione commercio.",
+   "risk_score": 25,
+   "created_at": "2026-11-28T14:08:54.208604",
+   "updated_at": "2026-11-28T14:08:54.208604",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06176/SG",
+   "risk_doc_date": "2026-11-28",
+   "risk_assigned_at": "2026-11-28T14:08:54.208586"
+  },
+  {
+   "id": "importazione_parallela_26a06194",
+   "label": "Autorizzazione Importazione Parallela 26A06194",
+   "type": "PharmaCompany",
+   "domain": "health",
+   "region": null,
+   "description": "Importatore parallelo di medicinali per uso umano con autorizzazione revocata su rinuncia.",
+   "risk_score": 15,
+   "created_at": "2026-11-28T14:08:54.208604",
+   "updated_at": "2026-11-28T14:08:54.208604",
+   "risk_basis": "Stima dell'AI dalle fonti italiane",
+   "risk_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06194/SG",
+   "risk_doc_date": "2026-11-28",
+   "risk_assigned_at": "2026-11-28T14:08:54.208586"
   }
  ],
  "edges": [
@@ -12195,7 +12085,6 @@
    "date": "2026-01",
    "created_at": "2026-10-18T19:24:58.566871",
    "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile",
     "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 376 casi confermati di Dengue, 30 di Chikungunya, 790 di West Nile",
     "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 369 casi confermati di Dengue, 30 di Chikungunya, 787 di West Nile",
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 357 casi confermati di Dengue, 30 di Chikungunya, 770 di West Nile"
@@ -12203,8 +12092,7 @@
    "source_docs": [
     "https://www.iss.it/-/arbovirosi-357-casi-confermati-di-dengue-30-di-chikungunya-770-di-west-nile",
     "https://www.iss.it/-/arbovirosi-369-casi-confermati-di-dengue-30-di-chikungunya-787-di-west-nile",
-    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile",
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile"
+    "https://www.iss.it/-/arbovirosi-376-casi-confermati-di-dengue-30-di-chikungunya-790-di-west-nile"
    ]
   },
   {
@@ -12485,19 +12373,14 @@
    "source": "iss",
    "target": "evt_dengue",
    "type": "CONTROLLA",
-   "fact": "ISS coordina sorveglianza nazionale e monitora focolaio toscano di Dengue.",
-   "risk_score": 55,
+   "fact": "ISS coordina il sistema di sorveglianza nazionale per i focolai autoctoni di Dengue",
+   "risk_score": 35,
    "source_doc": "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile",
    "date": "2026-01",
    "created_at": "2026-10-22T20:33:10.780480",
    "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile",
     "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile": "ISS – Comunicati stampa – Arbovirosi: 363 casi confermati di Dengue, 30 di Chikungunya, 777 di West Nile"
-   },
-   "source_docs": [
-    "https://www.iss.it/-/arbovirosi-363-casi-confermati-di-dengue-30-di-chikungunya-777-di-west-nile",
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile"
-   ]
+   }
   },
   {
    "id": "iss_evt_west_nile_CONTROLLA",
@@ -23270,19 +23153,14 @@
    "source": "iss",
    "target": "minsalute",
    "type": "CONTROLLA",
-   "fact": "ISS risponde al Ministero della Salute per politiche epidemiologiche",
-   "risk_score": 20,
+   "fact": "ISS referente tecnico del Ministero della Salute per epidemiologia",
+   "risk_score": 15,
    "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute",
    "date": null,
    "created_at": "2026-11-20T13:58:49.281053",
    "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute",
     "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, in leggera crescita i casi di Infezioni Respiratorie Acute"
-   },
-   "source_docs": [
-    "https://www.iss.it/-/sorveglianza-respivirnet-in-leggera-crescita-i-casi-di-infezioni-respiratorie-acute",
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute"
-   ]
+   }
   },
   {
    "id": "respirvinet_flusso_ospedaliero_INDAGA_SU",
@@ -23574,7 +23452,7 @@
    "risk_score": 55,
    "source_doc": "Z-0393-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -23611,7 +23489,7 @@
    "risk_score": 55,
    "source_doc": "Z-0393-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -23648,7 +23526,7 @@
    "risk_score": 55,
    "source_doc": "Z-0391-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23685,7 +23563,7 @@
    "risk_score": 55,
    "source_doc": "Z-0391-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23722,7 +23600,7 @@
    "risk_score": 55,
    "source_doc": "Z-0389-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23759,7 +23637,7 @@
    "risk_score": 55,
    "source_doc": "Z-0389-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23796,7 +23674,7 @@
    "risk_score": 55,
    "source_doc": "Z-0390-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23833,7 +23711,7 @@
    "risk_score": 55,
    "source_doc": "Z-0390-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23870,7 +23748,7 @@
    "risk_score": 55,
    "source_doc": "Z-0428-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Bothell",
@@ -23907,7 +23785,7 @@
    "risk_score": 55,
    "source_doc": "Z-0386-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23944,7 +23822,7 @@
    "risk_score": 55,
    "source_doc": "Z-0386-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -23981,7 +23859,7 @@
    "risk_score": 55,
    "source_doc": "Z-0385-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -24018,7 +23896,7 @@
    "risk_score": 55,
    "source_doc": "Z-0385-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -24055,7 +23933,7 @@
    "risk_score": 55,
    "source_doc": "Z-0365-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Tarrytown",
@@ -24092,7 +23970,7 @@
    "risk_score": 55,
    "source_doc": "Z-0365-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Tarrytown",
@@ -24129,7 +24007,7 @@
    "risk_score": 55,
    "source_doc": "Z-0384-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -24166,7 +24044,7 @@
    "risk_score": 55,
    "source_doc": "Z-0384-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Andover",
@@ -24203,7 +24081,7 @@
    "risk_score": 55,
    "source_doc": "Z-0364-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Tarrytown",
@@ -24240,7 +24118,7 @@
    "risk_score": 55,
    "source_doc": "Z-0364-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Tarrytown",
@@ -24277,7 +24155,7 @@
    "risk_score": 55,
    "source_doc": "Z-0392-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -24314,7 +24192,7 @@
    "risk_score": 55,
    "source_doc": "Z-0392-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -24351,7 +24229,7 @@
    "risk_score": 55,
    "source_doc": "Z-0395-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -24388,7 +24266,7 @@
    "risk_score": 55,
    "source_doc": "Z-0395-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -24425,7 +24303,7 @@
    "risk_score": 55,
    "source_doc": "Z-0423-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Marlborough",
@@ -24462,7 +24340,7 @@
    "risk_score": 55,
    "source_doc": "Z-0423-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Marlborough",
@@ -24499,7 +24377,7 @@
    "risk_score": 55,
    "source_doc": "Z-0440-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "New York",
@@ -24536,7 +24414,7 @@
    "risk_score": 55,
    "source_doc": "Z-0440-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "New York",
@@ -24573,7 +24451,7 @@
    "risk_score": 55,
    "source_doc": "Z-0360-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Flagstaff",
@@ -24610,7 +24488,7 @@
    "risk_score": 55,
    "source_doc": "Z-0360-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Flagstaff",
@@ -24647,7 +24525,7 @@
    "risk_score": 55,
    "source_doc": "Z-0394-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -24684,7 +24562,7 @@
    "risk_score": 55,
    "source_doc": "Z-0394-2027",
    "date": "2026-11-18",
-   "created_at": "2026-11-27T14:59:20.234561",
+   "created_at": "2026-11-28T14:08:37.530617",
    "record": {
     "status": "Ongoing",
     "city": "Issaquah",
@@ -24721,395 +24599,233 @@
    "risk_score": 40,
    "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
    "date": "2026-11-27",
-   "created_at": "2026-11-27T14:59:20.240032",
+   "created_at": "2026-11-28T14:08:37.620679",
    "doc_titles": {
     "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
    }
-  },
-  {
-   "id": "washington_state_h5n1_virus_RISCHIO_PER",
-   "source": "washington_state",
-   "target": "h5n1_virus",
-   "type": "RISCHIO_PER",
-   "fact": "Focolaio attivo di H5N1 con tre casi umani confermati e un decesso",
-   "risk_score": 85,
-   "source_doc": "2026-DON629",
-   "date": "2026-10",
-   "created_at": "2026-11-27T14:59:32.137777"
-  },
-  {
-   "id": "dairy_farms_h5n1_virus_RISCHIO_PER",
-   "source": "dairy_farms",
-   "target": "h5n1_virus",
-   "type": "RISCHIO_PER",
-   "fact": "Virus H5N1 altamente patogeno rilevato nei bovini delle fattorie lattiero-casearie",
-   "risk_score": 82,
-   "source_doc": "2026-DON629",
-   "date": "2026-10",
-   "created_at": "2026-11-27T14:59:32.137777"
-  },
-  {
-   "id": "exposed_workers_h5n1_virus_RISCHIO_PER",
-   "source": "exposed_workers",
-   "target": "h5n1_virus",
-   "type": "RISCHIO_PER",
-   "fact": "Contaminazione da bestiame infetto con un decesso tra i lavoratori agricoli",
-   "risk_score": 80,
-   "source_doc": "2026-DON629",
-   "date": "2026-10",
-   "created_at": "2026-11-27T14:59:32.137777"
   },
   {
    "id": "nfp_us_who_INDAGA_SU",
    "source": "nfp_us",
    "target": "who",
    "type": "INDAGA_SU",
-   "fact": "Notifica obbligatoria a WHO di infezione umana da sottotipo nuovo di influenza A",
-   "risk_score": 0,
+   "fact": "USA notifica WHO di tre casi umani confermati H5N1 secondo IHR 2005.",
+   "risk_score": 65,
    "source_doc": "2026-DON629",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "date": "2026-10",
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "country_us_washington_state_CONTROLLA",
-   "source": "country_us",
-   "target": "washington_state",
+   "id": "washington_state_yakima_county_CONTROLLA",
+   "source": "washington_state",
+   "target": "yakima_county",
    "type": "CONTROLLA",
-   "fact": "Sistema sanitario nazionale supervisiona monitoraggio e indagine epidemiologica",
-   "risk_score": 15,
+   "fact": "Washington State supervisiona contea di Yakima dove rilevati casi H5N1 e bestiame infetto.",
+   "risk_score": 70,
    "source_doc": "2026-DON629",
    "date": "2026-10",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "yakima_county_exposed_workers_RISCHIO_PER",
-   "source": "yakima_county",
-   "target": "exposed_workers",
+   "id": "dairy_farms_yakima_h5n1_virus_RISCHIO_PER",
+   "source": "dairy_farms_yakima",
+   "target": "h5n1_virus",
    "type": "RISCHIO_PER",
-   "fact": "Luogo di lavoro con contaminazione virale in ambiente lattiero-caseario",
-   "risk_score": 78,
+   "fact": "Allevamenti Yakima sono focolaio attivo di HPAI A(H5N1) con trasmissione zoonotica a umani.",
+   "risk_score": 85,
    "source_doc": "2026-DON629",
    "date": "2026-10",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "who_washington_state_INDAGA_SU",
-   "source": "who",
-   "target": "washington_state",
-   "type": "INDAGA_SU",
-   "fact": "WHO monitora strettamente i virus e la situazione epidemiologica globale",
-   "risk_score": 10,
+   "id": "h5n1_virus_country_us_RISCHIO_PER",
+   "source": "h5n1_virus",
+   "target": "country_us",
+   "type": "RISCHIO_PER",
+   "fact": "Virus H5N1 rappresenta rischio epidemiologico moderato per popolazione occupazionalmente esposta USA.",
+   "risk_score": 70,
    "source_doc": "2026-DON629",
    "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "dairy_farms_exposed_workers_RISCHIO_PER",
-   "source": "dairy_farms",
-   "target": "exposed_workers",
-   "type": "RISCHIO_PER",
-   "fact": "Esposizione occupazionale diretta a bovini infetti con H5N1",
-   "risk_score": 79,
+   "id": "washington_state_who_COLLABORA_CON",
+   "source": "washington_state",
+   "target": "who",
+   "type": "COLLABORA_CON",
+   "fact": "Washington State collabora con WHO per monitoraggio epidemiologico e gestione focolaio H5N1.",
+   "risk_score": 55,
    "source_doc": "2026-DON629",
    "date": "2026-10",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "cvdpv1_outbreak_al_mayadin_district_RISCHIO_PER",
-   "source": "cvdpv1_outbreak",
-   "target": "al_mayadin_district",
+   "id": "yakima_county_dairy_farms_yakima_CONTROLLA",
+   "source": "yakima_county",
+   "target": "dairy_farms_yakima",
+   "type": "CONTROLLA",
+   "fact": "Yakima County supervisiona allevamenti lattiero-caseari colpiti da influenza aviaria.",
+   "risk_score": 65,
+   "source_doc": "2026-DON629",
+   "date": "2026-10",
+   "created_at": "2026-11-28T14:08:49.730832"
+  },
+  {
+   "id": "cVDPV1_pathogen_deir_ez_zor_RISCHIO_PER",
+   "source": "cVDPV1_pathogen",
+   "target": "deir_ez_zor",
    "type": "RISCHIO_PER",
-   "fact": "Focolaio di poliomielite vaccinale circolante identificato in Al-Mayadin",
+   "fact": "Virus vaccinale derivato causa focolaio con trasmissione interumana in provincia",
    "risk_score": 95,
    "source_doc": "2026-DON628",
    "date": "2026-10",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "cvdpv1_outbreak_deir_ez_zor_governorate_RISCHIO_PER",
-   "source": "cvdpv1_outbreak",
-   "target": "deir_ez_zor_governorate",
+   "id": "cVDPV1_pathogen_al_mayadin_RISCHIO_PER",
+   "source": "cVDPV1_pathogen",
+   "target": "al_mayadin",
    "type": "RISCHIO_PER",
-   "fact": "Dodici ulteriori casi di paralisi flaccida acuta segnalati nel governatorato",
+   "fact": "Cluster iniziale di 4 casi AFP con 3 confermati e isolati geneticamente correlati",
    "risk_score": 90,
    "source_doc": "2026-DON628",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "date": "2026-10",
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "who_syria_health_authority_COLLABORA_CON",
+   "id": "siria_health_emergency_ops_centre_CONTROLLA",
+   "source": "siria_health",
+   "target": "emergency_ops_centre",
+   "type": "CONTROLLA",
+   "fact": "Autorità nazionali attivano centro operativo per coordinare risposta epidemiologica",
+   "risk_score": 20,
+   "source_doc": "2026-DON628",
+   "date": "2026-11",
+   "created_at": "2026-11-28T14:08:49.730832"
+  },
+  {
+   "id": "who_siria_health_COLLABORA_CON",
    "source": "who",
-   "target": "syria_health_authority",
+   "target": "siria_health",
    "type": "COLLABORA_CON",
-   "fact": "WHO supporta autorità nazionali coordinamento risposta epidemiologica",
+   "fact": "OMS supporta autorità nazionali nella coordinazione della risposta al focolaio",
+   "risk_score": 15,
+   "source_doc": "2026-DON628",
+   "date": "2026-11",
+   "created_at": "2026-11-28T14:08:49.730832"
+  },
+  {
+   "id": "siria_health_immunization_services_FINANZIA",
+   "source": "siria_health",
+   "target": "immunization_services",
+   "type": "FINANZIA",
+   "fact": "Rafforza servizi di vaccinazione routine nelle comunità colpite del Governorato",
+   "risk_score": 35,
+   "source_doc": "2026-DON628",
+   "date": "2026-11",
+   "created_at": "2026-11-28T14:08:49.730832"
+  },
+  {
+   "id": "emergency_ops_centre_afp_surveillance_CONTROLLA",
+   "source": "emergency_ops_centre",
+   "target": "afp_surveillance",
+   "type": "CONTROLLA",
+   "fact": "Implementa sorveglianza rafforzata della paralisi flaccida acuta in Siria",
    "risk_score": 25,
    "source_doc": "2026-DON628",
    "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "emergency_operations_centre_cvdpv1_outbreak_INDAGA_SU",
-   "source": "emergency_operations_centre",
-   "target": "cvdpv1_outbreak",
-   "type": "INDAGA_SU",
-   "fact": "Centro operazioni coordina indagini epidemiologiche e di laboratorio",
-   "risk_score": 40,
+   "id": "siria_health_afp_surveillance_REGOLA",
+   "source": "siria_health",
+   "target": "afp_surveillance",
+   "type": "REGOLA",
+   "fact": "Autorità nazionali regolano e coordinano sistema di sorveglianza AFP attivo",
+   "risk_score": 20,
    "source_doc": "2026-DON628",
    "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "deir_ez_zor_governorate_routine_immunization_services_CONTROLLA",
-   "source": "deir_ez_zor_governorate",
-   "target": "routine_immunization_services",
+   "id": "deir_ez_zor_al_mayadin_CONTROLLA",
+   "source": "deir_ez_zor",
+   "target": "al_mayadin",
    "type": "CONTROLLA",
-   "fact": "Governatorato responsabile rafforzamento servizi immunizzazione di routine",
-   "risk_score": 65,
-   "source_doc": "2026-DON628",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
-  },
-  {
-   "id": "cvdpv1_outbreak_routine_immunization_services_RISCHIO_PER",
-   "source": "cvdpv1_outbreak",
-   "target": "routine_immunization_services",
-   "type": "RISCHIO_PER",
-   "fact": "Epidemia di poliomielite vaccinale minaccia accesso servizi sanitari essenziali",
+   "fact": "Governorato contiene distretto epicentro con trasmissione confermata di cVDPV1",
    "risk_score": 85,
    "source_doc": "2026-DON628",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
-  },
-  {
-   "id": "who_cvdpv1_outbreak_INDAGA_SU",
-   "source": "who",
-   "target": "cvdpv1_outbreak",
-   "type": "INDAGA_SU",
-   "fact": "WHO supporta indagini genetiche e epidemiologiche per trasmissione interumana",
-   "risk_score": 35,
-   "source_doc": "2026-DON628",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
-  },
-  {
-   "id": "syria_health_authority_emergency_operations_centre_CONTROLLA",
-   "source": "syria_health_authority",
-   "target": "emergency_operations_centre",
-   "type": "CONTROLLA",
-   "fact": "Autorità sanitaria nazionale attiva centro operazioni emergenze",
-   "risk_score": 55,
-   "source_doc": "2026-DON628",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:32.137777"
-  },
-  {
-   "id": "respirvinet_iss_MEMBRO_DI",
-   "source": "respirvinet",
-   "target": "iss",
-   "type": "MEMBRO_DI",
-   "fact": "RespiVirNet è sorveglianza gestita dall'ISS a livello nazionale",
-   "risk_score": 15,
-   "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute"
-   }
-  },
-  {
-   "id": "respirvinet_flusso_ospedaliero_COLLABORA_CON",
-   "source": "respirvinet",
-   "target": "flusso_ospedaliero",
-   "type": "COLLABORA_CON",
-   "fact": "RespiVirNet integra dati virologici dal flusso ospedaliero per analisi",
-   "risk_score": 40,
-   "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute"
-   }
-  },
-  {
-   "id": "respirvinet_flusso_comunita_COLLABORA_CON",
-   "source": "respirvinet",
-   "target": "flusso_comunita",
-   "type": "COLLABORA_CON",
-   "fact": "RespiVirNet monitora comunità attraverso rete sentinella medici generici",
-   "risk_score": 35,
-   "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute"
-   }
-  },
-  {
-   "id": "pronto_soccorso_nazionale_respirvinet_FORNISCE",
-   "source": "pronto_soccorso_nazionale",
-   "target": "respirvinet",
-   "type": "FORNISCE",
-   "fact": "Pronto soccorso fornisce dati accessi e ricoveri per sindromi respiratorie",
-   "risk_score": 50,
-   "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute"
-   }
-  },
-  {
-   "id": "virus_influenzali_pronto_soccorso_nazionale_RISCHIO_PER",
-   "source": "virus_influenzali",
-   "target": "pronto_soccorso_nazionale",
-   "type": "RISCHIO_PER",
-   "fact": "Influenza circolante 8,4% rappresenta rischio moderato per strutture ospedaliere",
-   "risk_score": 65,
-   "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute"
-   }
-  },
-  {
-   "id": "sars_cov2_flusso_comunita_RISCHIO_PER",
-   "source": "sars_cov2",
-   "target": "flusso_comunita",
-   "type": "RISCHIO_PER",
-   "fact": "SARS-CoV-2 continua circolare in comunità con monitoraggio attivo",
-   "risk_score": 60,
-   "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute"
-   }
-  },
-  {
-   "id": "respirvinet_minsalute_FORNISCE",
-   "source": "respirvinet",
-   "target": "minsalute",
-   "type": "FORNISCE",
-   "fact": "RespiVirNet fornisce bollettini epidemiologici settimanali al Ministero",
-   "risk_score": 25,
-   "source_doc": "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute",
-   "date": "2026-11",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/sorveglianza-respivirnet-nell-ultima-settimana-532mila-casi-di-infezioni-respiratorie-acute": "ISS – Comunicati stampa – Sorveglianza RespiVirNet, nell'ultima settimana 532mila casi di Infezioni Respiratorie Acute"
-   }
-  },
-  {
-   "id": "reg_toscana_evt_dengue_REGOLA",
-   "source": "reg_toscana",
-   "target": "evt_dengue",
-   "type": "REGOLA",
-   "fact": "Regione Toscana implementa misure sanità pubblica per contenimento focolaio.",
-   "risk_score": 65,
-   "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "date": "2026-08",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
-   }
-  },
-  {
-   "id": "iss_chikungunya_virus_INDAGA_SU",
-   "source": "iss",
-   "target": "chikungunya_virus",
-   "type": "INDAGA_SU",
-   "fact": "ISS sorveglia 31 casi confermati di Chikungunya incluso 1 caso autoctono.",
-   "risk_score": 40,
-   "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "date": "2026-01",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
-   }
-  },
-  {
-   "id": "iss_zika_virus_INDAGA_SU",
-   "source": "iss",
-   "target": "zika_virus",
-   "type": "INDAGA_SU",
-   "fact": "ISS monitora 4 casi Zika virus tutti importati da viaggi estero.",
-   "risk_score": 25,
-   "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "date": "2026-01",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
-   }
-  },
-  {
-   "id": "eurosurveillance_evt_dengue_COLLABORA_CON",
-   "source": "eurosurveillance",
-   "target": "evt_dengue",
-   "type": "COLLABORA_CON",
-   "fact": "Eurosurveillance pubblica descrizione scientifica del focolaio toscano di Dengue.",
-   "risk_score": 20,
-   "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
    "date": "2026-10",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
-   }
+   "created_at": "2026-11-28T14:08:49.730832"
   },
   {
-   "id": "lancet_rh_iss_COLLABORA_CON",
-   "source": "lancet_rh",
-   "target": "iss",
-   "type": "COLLABORA_CON",
-   "fact": "Lancet Regional Health pubblica sistema sorveglianza West Nile coordinato ISS.",
-   "risk_score": 15,
-   "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "date": "2026-10",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
-   }
-  },
-  {
-   "id": "maldive_esposizione_evt_dengue_RISCHIO_PER",
-   "source": "maldive_esposizione",
-   "target": "evt_dengue",
-   "type": "RISCHIO_PER",
-   "fact": "Maldive sono fonte del 50% dei casi Dengue importati in Italia.",
-   "risk_score": 35,
-   "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "date": "2026-01",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
-   }
-  },
-  {
-   "id": "seychelles_esposizione_chikungunya_virus_RISCHIO_PER",
-   "source": "seychelles_esposizione",
-   "target": "chikungunya_virus",
-   "type": "RISCHIO_PER",
-   "fact": "Seychelles sono fonte del 34% dei casi Chikungunya importati in Italia.",
-   "risk_score": 30,
-   "source_doc": "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile",
-   "date": "2026-01",
-   "created_at": "2026-11-27T14:59:46.834551",
-   "doc_titles": {
-    "https://www.iss.it/-/arbovirosi-388-casi-di-dengue-su-eurosurveillance-la-descrizione-del-focolaio-toscano-lancet-regional-health-pubblica-la-descrizione-del-sistema-di-sorveglianza-west-nile": "ISS – Comunicati stampa – Arbovirosi: 388 casi di Dengue, su Eurosurveillance la descrizione del focolaio toscano; Lancet Regional Health pubblica la descrizione del sistema di sorveglianza West Nile"
-   }
-  },
-  {
-   "id": "aifa_levofolene_26a06132_REGOLA",
+   "id": "aifa_risperidone_grindeks_REGOLA",
    "source": "aifa",
-   "target": "levofolene_26a06132",
+   "target": "risperidone_grindeks",
    "type": "REGOLA",
-   "fact": "AIFA revoca, su rinuncia, l'autorizzazione all'immissione in commercio del medicinale Levofolene.",
-   "risk_score": 25,
-   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06132/SG",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio del medicinale su rinuncia produttore.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG",
    "date": null,
-   "created_at": "2026-11-27T14:59:46.834551",
+   "created_at": "2026-11-28T14:08:54.229162",
    "doc_titles": {
-    "https://www.gazzettaufficiale.it/eli/id/2026/11/26/26A06132/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "grindeks_risperidone_grindeks_FORNISCE",
+   "source": "grindeks",
+   "target": "risperidone_grindeks",
+   "type": "FORNISCE",
+   "fact": "Grindeks produce e commercializza il medicinale Risperidone per uso umano.",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG",
+   "date": null,
+   "created_at": "2026-11-28T14:08:54.229162",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "grindeks_aifa_COLLABORA_CON",
+   "source": "grindeks",
+   "target": "aifa",
+   "type": "COLLABORA_CON",
+   "fact": "Grindeks rinuncia a autorizzazione medicinale presso AIFA, gestione amministrativa regolare.",
+   "risk_score": 10,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG",
+   "date": null,
+   "created_at": "2026-11-28T14:08:54.229162",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06175/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_amlodipina_pensa_REGOLA",
+   "source": "aifa",
+   "target": "amlodipina_pensa",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'immissione in commercio del farmaco Amlodipina Pensa su rinuncia.",
+   "risk_score": 15,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06176/SG",
+   "date": null,
+   "created_at": "2026-11-28T14:08:54.229162",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06176/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
+   }
+  },
+  {
+   "id": "aifa_importazione_parallela_26a06194_REGOLA",
+   "source": "aifa",
+   "target": "importazione_parallela_26a06194",
+   "type": "REGOLA",
+   "fact": "AIFA revoca autorizzazione all'importazione parallela su rinuncia del titolare autorizzativo.",
+   "risk_score": 20,
+   "source_doc": "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06194/SG",
+   "date": null,
+   "created_at": "2026-11-28T14:08:54.229162",
+   "doc_titles": {
+    "https://www.gazzettaufficiale.it/eli/id/2026/11/28/26A06194/SG": "Gazzetta Ufficiale – AGENZIA ITALIANA DEL FARMACO - COMUNICATO"
    }
   }
  ],
@@ -25125,7 +24841,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON629 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25139,7 +24855,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON628 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25153,7 +24869,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON630 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25167,7 +24883,7 @@
    "italy_impact": "Il documento OMS non nomina l'Italia.",
    "timeframe": null,
    "recommendation": "Consultare il documento OMS 2026-DON627 e le indicazioni del Ministero della Salute e dell'Istituto Superiore di Sanità.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25181,7 +24897,7 @@
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
    "recommendation": "Verificare presenza di ACUSON Origin ICE Ultrasound Imaging System REF 11669400 con software versione 4.0 (VD10A) in inventario.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25194,8 +24910,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza di OCS Solution Delivery Cassettes modello 1467 con i lotti specificati e date di scadenza nel 2028 in inventario.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "recommendation": "Verificare presenza di OCS Solution Delivery Cassettes modello 1467 con i lotti specificati e date di scadenza fino ottobre-novembre 2028.",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25208,8 +24924,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza di OCS Liver Perfusion Set modello 3200 con numeri seriali da 4470-3-18076 a 4470-3-20343 in inventario.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "recommendation": "Verificare presenza di OCS Liver Perfusion Set modello 3200 con numeri seriali da 4470-3-18076 a 4470-3-20343.",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25222,8 +24938,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza di OCS Liver Solution Infusion Set modello 3457 con i lotti specificati e date di scadenza nel 2028 in inventario.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "recommendation": "Verificare presenza di OCS Liver Solution Infusion Set modello 3457 con i lotti specificati e date di scadenza dicembre 2028.",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25236,8 +24952,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza di Philips EPIQ e Affiniti series Diagnostic Ultrasound Systems con Auto Measure Option, software versioni 9.0 e 9.0.1, modelli elencati.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "recommendation": "Verificare presenza di Philips EPIQ e Affiniti Diagnostic Ultrasound Systems con Auto Measure Option e software versioni 9.0 o 9.0.1.",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25250,8 +24966,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza di OCS Heart Instrumentation Tool Set modello 1401 con lotti 3664-7-722242 e 3636-9-722243, scadenza 2027-01-31.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "recommendation": "Verificare presenza di OCS Heart Instrumentation Tool Set modello 1401 con lotti 3664-7-722242 e 3636-9-722243, scadenza gennaio 2027.",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25264,8 +24980,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza di OCS Liver Perfusion Set modello 3200 con numeri seriali 4470-2-17530 e 4470-2-15571 in inventario.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "recommendation": "Verificare presenza di OCS Liver Perfusion Set modello 3200 con numeri seriali 4470-2-17530 e 4470-2-15571 nei lotti specificati.",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   },
   {
@@ -25278,8 +24994,8 @@
    "italy_relevance": null,
    "italy_impact": "La distribuzione indicata nel record FDA (campo distribution_pattern) include l'Italia.",
    "timeframe": null,
-   "recommendation": "Verificare presenza di Atellica CH Total Protein_2 reagenti SMN 11645755 e 11537228 con tutti i lotti in inventario.",
-   "created_at": "2026-11-27T14:59:58.358667",
+   "recommendation": "Verificare presenza di Atellica CH Total Protein_2 Siemens Material Number 11645755 e 11537228 con i rispettivi UDI-DI, tutti i lotti.",
+   "created_at": "2026-11-28T14:09:05.718009",
    "is_read": false
   }
  ]
